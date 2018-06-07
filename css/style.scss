@@ -1,0 +1,1382 @@
+// debug mode
+//* { border: solid 1px red; }
+
+// Set custom font
+@font-face {
+  font-family: "bodoni-bold";
+  src: url("../fonts/BodoniFLF-Bold.ttf");
+  font-weight: bold; 
+}
+
+
+@font-face {
+  font-family: "helvetica neue";
+  src: url("../fonts/HelveticaNeue-ThinCond.ttf");
+  font-weight: lighter; 
+}
+
+
+// Define font family
+$fon-fam-pri: 'Titillium Web', sans-serif; // primary font
+$fon-fam-sec: 'bodoni-bold'; // secondary font
+$fon-fam-ter: 'helvetica neue'; // 
+
+
+// Set color variables
+$pri-col: #003064 ; // Dark blue
+$sec-col: #00519B ; // Bright blue
+$ter-col: #DAE1ED ; // Light blue
+$qua-col: #2CBCAF ; // Bright green
+$qui-col: #CCE9f5 ; // Brighter blue
+$sen-col: #00519b ; // 90% Dark blue
+$sep-col: #C3C12C ; // Grass green
+
+
+$lit-col: white;
+$dar-col: black;
+$mid-col: #333333; // light gray
+
+// Define container sizes for responsive views
+$container-size-xxl: 1500px; // desktop and beyond
+$container-size-xl: 1366px; // desktop and beyond
+$container-size-l: 1200px; // laptop
+$container-size-ml: 1000px; // border between desktop/tablet
+$container-size-m: 768px; // tablet
+$container-size-s: 480px; // mobile
+$container-size-xs: 200px; // minimum size
+
+// page margins
+$margin-size-s: 1rem; // tiny margin
+$margin-size-m: 2rem; // small margin
+$margin-size-l: 5vw; // big dynamic margin
+
+
+
+/* General elements */
+body, html {
+	font-family: $fon-fam-pri;
+	height: 100%;
+	min-height: 100%;
+	margin: 0;
+	padding: 0;
+	font-size: 1em;
+	color: $pri-col;
+}
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+h1, h2, h3, h4, h5 {
+	font-family: $fon-fam-sec;
+	font-weight: bold;
+	color: $pri-col;
+}
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	color: $dar-col;
+	text-decoration: underline;
+	font-size: 1.3rem;
+}
+
+select { outline: none; }
+
+textarea:focus, 
+input:focus {
+    outline: none;
+}
+
+/* General layout elements */
+.page-wrapper {
+	display: flex;
+	width: 100%;
+	height: auto; // never 100%, this breaks stuff
+	max-width: $container-size-xxl;
+	margin: 0 auto;
+	flex-direction: column;
+	padding-bottom: 3rem;
+}
+
+/* Page template specific */
+
+
+
+.primary-nav {
+	display: flex;
+	align-items: center;
+	position: relative;
+	@media only screen and (max-width: $container-size-m) {
+		height: 6rem;
+		padding-left: 1rem;
+	}
+	.logo-container {
+		margin-top: 2rem;
+		max-width: 13rem;
+		padding-left: $margin-size-m;
+		@media only screen and (max-width: $container-size-m) {
+			margin-left: 0;
+			padding-left: $margin-size-s;
+		}
+		img {
+			width: 100%;
+		}
+		.desktop-logo {
+			display: block;
+			width: 11rem; // Firefox fix
+			@media only screen and (max-width: $container-size-m) {
+				display: none;
+			}
+		}
+		.mobile-beeldmerk {
+			display: none;
+			@media only screen and (max-width: $container-size-m) {
+				display: block;
+				width: 100%;
+				padding-top: 0;
+				padding-left: 0;
+				padding-bottom: 2rem;
+				margin-bottom: 0;
+			}
+
+		}
+	}
+
+	nav {
+		margin-left: auto;
+		font-weight: 600;
+		font-size: 1.2rem;
+		@media only screen and (max-width: $container-size-m) {
+			display: none;
+			margin-left: 0;
+			position: absolute;
+			background-color: $qua-col;
+			width: 100%;
+			height: auto;
+			color: $lit-col;
+			top: 6rem;
+			z-index: 99;
+			text-align: center;
+			padding-top: 2rem;
+			padding-bottom: 2rem;
+			transition: height 0.3s;
+			height: 0;
+			&.open {
+				display: block;
+				transition: all 0.3s;
+				height: auto;
+			}
+		}
+
+		> ul {
+			margin-right: 4rem;
+			@media only screen and (max-width: $container-size-m) {
+				margin-right: 0;
+			}
+
+			> li {
+				display: inline-flex;
+				margin-right: 1.3rem;
+				@media only screen and (max-width: $container-size-m) {
+					display: block;
+					font-size: 2rem;
+					margin-right: 0;
+					padding-top: 1rem;
+					padding-bottom: 1rem;
+					font-weight: bold;
+
+				}
+
+				@media only screen and (max-width: $container-size-l) {
+					margin-right: 0.5rem;
+				}
+
+				> a {
+					text-decoration: none;
+					padding-left: 1rem;
+					padding-right: 1rem;
+					padding-top: 0.5rem;
+					padding-bottom: 0.5rem;
+					color: $pri-col;
+					@media only screen and (max-width: $container-size-m) {
+						color: $lit-col;
+					}
+
+					&.open {
+						color: $lit-col;
+						background-color: $qua-col;						
+					}
+
+					&:hover {
+						color: $lit-col;
+						background-color: $qua-col;
+					}
+					@media only screen and (max-width: $container-size-l) {
+						font-size: 1rem;
+					}
+
+
+				}
+
+
+			}
+		}
+	}
+
+	.mobile-toggle {
+		width: 3rem;
+		margin-left: auto;
+		margin-right: $margin-size-m;
+		display: none;
+		cursor: pointer;
+		@media only screen and (max-width: $container-size-m) {
+			display: block;
+
+		}
+
+		img {
+			width: 100%;
+		}
+		.hamburger-icon {
+			display: none;
+			&.open {
+				@media only screen and (max-width: $container-size-m) {
+					display: block;
+				}
+			}
+		}
+
+		.close-icon {
+			display: none;
+			&.open {
+				@media only screen and (max-width: $container-size-m) {
+					display: block;
+				}
+			}
+		}
+	}
+
+// sub-menu for desktop
+.hover-menu-wrapper {
+	background-color: $qua-col;
+	width: auto;
+	height: auto;
+	flex-direction: row;
+	flex-wrap: wrap;
+	position: absolute;
+	z-index: 50;
+	padding-left: 4rem;
+	padding-right: 4rem;
+	padding-top: 3rem;
+	padding-bottom: 2rem;
+	margin-top: 2.45rem;
+	margin-right: 4rem;
+	//display: flex;
+
+	display: none; // toggle with JS
+
+	// IE11 temp fix
+	@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+	    margin-left: -6.2rem;
+	}
+
+	&.open {
+		display: flex;
+	}
+
+
+	@media only screen and (max-width: $container-size-m) {
+		display: none;
+	}
+
+	li {
+		color: $lit-col;
+		width: 33.333%;
+		margin-bottom: 3rem;
+
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		
+		a {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			color: $lit-col;
+			text-decoration: none;
+			font-size: 1.3rem;
+
+			svg {
+				fill: $pri-col;
+				width: 4rem;
+				height: 4rem;
+				padding-left: 0.5rem;
+				padding-right: 0.5rem;
+				margin-bottom: 1rem;
+			}
+
+			&:hover {
+				color: $lit-col;
+				svg {
+					fill: $lit-col;
+				}
+			}
+		}
+	}
+
+}
+
+
+}
+
+
+
+
+/* Homepage template ----------------------------------------------- */
+.homepage-wrapper {
+	display: flex;
+	position: relative;
+	overflow-x: hidden;
+
+	header {
+		display: flex;
+		justify-content: flex-end;
+		align-items: baseline;
+		position: relative;
+		margin-top: 0rem;
+		margin-bottom: 1rem;
+		padding-bottom: 0.5rem;
+		@media only screen and (max-width: $container-size-m) {
+			margin-top: 0;
+			margin-bottom: 5em;
+			margin-bottom: 0;
+			padding-bottom: 0;
+		}
+
+
+		.header-image {
+			display: flex;
+			width: 100vw;
+			position: relative;
+			align-self: center;
+			margin-left: -15rem;
+			margin-top: -4rem;
+			margin-right: 5rem;
+			@media only screen and (max-width: $container-size-m) {
+				position: absolute;
+				margin-left: 0;
+				margin-top: 0;
+				margin-right: 0;
+				width: 100%;
+				top: 0;
+				display: none;
+			}
+
+			z-index: 4;
+			img {
+				width: 100%;
+				height: auto;
+				align-self: flex-end;
+				@media only screen and (max-width: $container-size-m) {
+					align-self: flex-start;
+					
+				}
+
+			}
+		}
+		
+		.header-overlay-wrapper {
+			display: flex;
+			flex-direction: column;
+			width: 70vw;
+			height: auto;
+			position: relative;
+			
+			margin-left: 5rem;
+			margin-top: 3rem;
+			margin-bottom: 7rem;
+			padding-left: 5rem;
+			padding-right: 5rem;			
+			@media only screen and (max-width: $container-size-m) {
+				margin-left: 0;
+				margin-right: 0;
+				margin-top: 0;
+				margin-bottom: 0;
+				padding-left: 2rem;
+				padding-right: 2rem;
+				padding-bottom: 3rem;
+				width: 100%;
+				animation-name: none !important;
+				background-image: url("../resources/homepage-header.jpg");
+				background-size: cover;
+				background-position: 100% 50%;
+				position: relative;
+
+				&:after {
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					content: " ";
+					z-index: 3;
+					background-color: rgba(221, 232, 234, 0.7);
+				}
+
+			}
+
+			z-index: 5;
+			background-color: rgba(221, 232, 234, 0.7);
+			h1 {
+				z-index: 4;
+				font-size: 3.5rem;
+				@media only screen and (max-width: $container-size-l) {
+					font-size: 2rem;
+				}
+			}
+
+			a {
+				color: $sec-col;
+				padding-top: 0.3rem;
+				padding-bottom: 0.3rem;
+				margin-bottom: 1rem;
+				font-size: 1.1em;
+				text-decoration: none;
+				font-weight: 600;
+				z-index: 4;
+				&:hover {
+					text-decoration: underline;
+					color: $pri-col;
+				}
+			}
+
+			.meer-jack-frenken {
+				position: absolute;
+				bottom: -4rem;
+				color: $pri-col;
+				@media only screen and (max-width: $container-size-m) {
+					display: none;
+				}
+
+			}
+		}
+	}
+
+	.service-bar {
+		background-color: $pri-col;
+		color: $lit-col;
+		display: flex;
+		width: auto;
+		height: auto;
+		margin-right: 8vw;
+		z-index: 3;
+		@media only screen and (max-width: $container-size-m) {
+			width: 100%;
+			margin-right: 0;
+		}
+
+		.service-quote {
+			h2 {
+				font-size: 3rem;
+				color: $lit-col;
+				margin-left: 4rem;
+				margin-right: 1rem;
+				@media only screen and (max-width: $container-size-l) {
+					font-size: 2rem;
+				}
+				@media only screen and (max-width: $container-size-m) {
+					display: none;
+				}
+			}
+		}
+
+		.anchor {
+			display: block;
+			position: relative;
+			top: -55px;
+			visibility: hidden;
+		}
+		.service-wrapper {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			margin-left: auto;
+			margin-right: 3rem;
+			padding-top: 1rem;
+			padding-bottom: 1rem;
+			justify-content: flex-end;
+
+			@media only screen and (max-width: $container-size-m) {
+				margin-right: 0;
+				margin-left: 0;
+				padding-top: 3rem;
+				padding-bottom: 2rem;
+				padding-left: 2rem;
+				padding-right: 2rem;
+				justify-content: space-between;
+				width: 100%;
+			}
+
+			a {
+				margin-left: 1rem;
+				color: $lit-col;
+				text-decoration: none;
+				font-size: 1rem;
+				margin-left: 4rem;
+				
+				@media only screen and (max-width: $container-size-l) {
+					margin-left: 3rem;
+				}
+
+				@media only screen and (max-width: $container-size-ml) {
+					margin-left: 2rem;
+				}
+
+				@media only screen and (max-width: $container-size-m) {
+					margin-left: 0;
+					width: 50%;
+				}
+
+				&:first-of-type {
+					margin-left: 0;
+				}
+
+				&:hover {
+					text-decoration: underline;
+					.icon-svg {
+					//	fill: red;
+
+					}
+				}
+				
+				.service-item {
+					width: 4rem;
+					
+					@media only screen and (max-width: $container-size-l) {
+						width: 2.5rem;
+						margin-left: 1.5rem;
+					}
+
+					@media only screen and (max-width: $container-size-m) {
+						margin-left: 0;
+						width: 100%;
+					}
+
+
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+
+					
+					p {
+						text-align: center;
+						font-weight: bold;
+					}
+
+					svg {
+						&.icon-svg {
+							width: 100%;
+							height: 5rem;
+							fill: $ter-col;
+							@media only screen and (max-width: $container-size-l) {
+								width: 4rem;	
+							}
+
+							&:hover {
+								fill: $lit-col;
+							}
+						}
+					}
+
+
+				}
+
+			}
+		}
+
+	}
+
+	.search-filter-wrapper {
+		display: flex;
+		flex-direction: row;
+		position: relative;
+		//height: 100%;
+		padding-top: 7rem;
+		padding-bottom: 5rem;
+		margin-left: 10rem;
+		@media only screen and (max-width: $container-size-m) {
+			margin-left: 2rem;
+			padding-left: 0;
+			width: 100%;
+			padding-right: 0;
+		}
+
+		@media only screen and (max-width: $container-size-l) {
+			margin-left: 0;
+		}
+
+		margin-top: -8.1rem;
+		padding-left: 5rem;
+		padding-right: 3rem;
+		z-index:2;
+		background-color: $ter-col;
+		@media only screen and (max-width: $container-size-m) {
+			padding-bottom: 0;
+		}
+		
+		.search-filter-container {
+			background-color: $lit-col;
+			padding-left: 3rem;
+			margin-top: 1.1rem;
+			display: flex;
+			flex-direction: row;
+			@media only screen and (max-width: $container-size-m) {
+				padding-left: 1rem;
+				width: 100%;
+				padding-left: 0;
+				margin-bottom: 0;
+				padding-bottom: 0;
+				background-color: $lit-col;
+			}
+			
+			@media only screen and (max-width: $container-size-m) {
+				flex-direction: column;
+			}
+
+			height: 100%;
+			align-items: center;
+
+			.search-text {
+				font-size: 1.2rem;
+				font-weight: bold;
+				margin-right: 5vw;
+				@media only screen and (max-width: $container-size-xl) {
+					margin-right: 3vw;
+				}
+				
+				@media only screen and (max-width: $container-size-l) {
+					margin-right: 1vw;
+				}
+
+
+				@media only screen and (max-width: $container-size-m) {
+					width: 100%;
+					margin-right: 0;
+					margin-left: 3.5rem;
+					margin-top: 2rem;
+					margin-bottom: 1rem;
+					br {
+						display: none;
+					}
+				}
+
+
+			}
+
+			.search-filter-bar {
+				font-size: 1.2rem;
+				margin-right: 1vw;
+				padding-top: 1rem;
+				padding-bottom: 1rem;
+				padding-left: 2rem;
+				padding-right: 2rem;
+				width: 100%;
+				@media only screen and (max-width: $container-size-xl) {
+					font-size: 1rem;
+					margin-right: 0.3vw;
+				}
+				
+				@media only screen and (max-width: $container-size-l) {
+					font-size: 0.9rem;
+					line-height: 2.5rem;
+					padding-right: 0;
+				}
+
+				@media only screen and (max-width: $container-size-m) {
+					padding-right: $margin-size-m;
+				}
+
+				
+
+				.select-wrapper {
+					display: inline-block; 
+					position: relative;
+					@media only screen and (max-width: $container-size-m) {
+						width: 100%;
+					}
+
+					select {
+						border: none;
+						border-bottom: dotted 3px $pri-col;
+						margin-right: 2rem;
+						padding-right: 0.4rem;
+						min-width: 8rem;
+						-webkit-appearance: none; // chrome / safari
+						-moz-appearance: none;  // firefox
+						&::-ms-expand { display: none; } // IE11
+
+						position: relative;
+						font-weight: lighter;
+						color: $pri-col;
+						background-color: white; // overwrite default
+
+						@media only screen and (max-width: $container-size-xl) {
+							min-width: 6rem;
+						}
+
+						padding-bottom: 0.3rem;
+						@media only screen and (max-width: $container-size-m) {
+							width: 100% !important;
+							min-width: 100%;
+							display: block;
+							margin-bottom: 2rem;
+							font-size: 1.3rem;
+						}
+					}
+
+					&:after {
+						position: absolute;
+						right: 2rem;
+						top: 0.5rem;
+						content:" ";
+						width: 0.4rem;
+						height: 0.4rem;
+						border-right: 1px solid $dar-col;
+						border-bottom: 1px solid $dar-col;
+						transform: rotate(45deg);
+
+						@media only screen and (max-width: $container-size-l) {
+							right: 1rem;
+						}
+
+						@media only screen and (max-width: $container-size-m) {
+							top: 0.2rem;
+							right: 1rem;
+							width: 0.5rem;
+							height: 0.5rem;
+						}
+
+
+						
+					}
+				}
+
+				input {
+					border: none;
+					border-bottom: dotted 3px $pri-col;
+					margin-right: 2rem;
+					width: auto;
+					width: 8rem;
+					min-width: 8rem;
+					font-weight: lighter;
+					color: $pri-col;
+					@media only screen and (max-width: $container-size-m) {
+						width: 100% !important;
+						min-width: 100%;
+						display: block;
+						margin-bottom: 2rem;
+						font-size: 1.3rem;
+					}
+
+					@media only screen and (max-width: $container-size-xl) {
+						min-width: 6rem;
+						width: 6rem;
+					}
+					padding-bottom: 0.3rem;
+					&::placeholder {
+						color: $ter-col;
+					}
+				}
+			}
+
+		}
+
+		.search-filter-button {
+
+			color: $lit-col;
+			width: 6rem; 
+			height: 100%;
+			font-size: 1.5rem;
+			@media only screen and (max-width: $container-size-m) {
+				width: 100%;
+				padding-left: 2rem;
+				padding-right: 2rem;
+				display: none;
+			}
+
+
+			input {
+				background-color: $qua-col;
+				border: none;
+				color: $lit-col;
+				height: 100%;
+				width: 100%;
+				padding-top: 2rem;
+				padding-bottom: 2rem;
+				border-radius: 0;
+
+				@media only screen and (max-width: $container-size-m) {
+					padding-top: 1rem;
+					padding-bottom: 1rem;
+				}
+
+				display: flex;
+				text-align: center;
+				justify-content: center;
+				&:hover {
+					background-color: $pri-col;
+					cursor: pointer;
+				}
+			}
+		}
+
+		.search-filter-button-mobile {
+			display: none; 
+			@media only screen and (max-width: $container-size-m) {
+				width: 100%;
+				padding-left: $margin-size-m;
+				padding-right: $margin-size-m;
+				display: flex;
+				a {
+				display: flex;
+				background-color: $qua-col;
+				color: $lit-col;
+				width: 100%;
+				padding-left: 2rem;
+				padding-right: 2rem;
+				padding-top: 1.5rem;
+				padding-bottom: 1.5rem;
+				text-decoration: none;
+				font-weight: bold;
+				&:hover {
+					background-color: $qui-col;
+				}
+					span {
+						margin-left: auto;
+					}
+				}
+			}
+		}
+
+	}
+
+	.cta-banner-mobile {
+		display: none;
+		margin-top: 4rem;
+		@media only screen and (max-width: $container-size-m) {
+			display: block;
+			width: 100%;
+		}
+
+	}
+
+	.cta-banner {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		height: auto;
+		position: relative;
+		min-height: 18rem;
+		margin-top: 4rem;
+		background-image: url("../resources/cta-banner.jpg");
+		background-size: cover;
+		background-repeat: none;
+		background-position: center;
+		padding-right: 5rem;
+		align-items: flex-end;
+		@media only screen and (max-width: $container-size-m) {
+			padding-bottom: 0;
+			padding-left: 2rem;
+			padding-right: 2rem;
+			background-image: none;
+			margin-top: 0;
+			min-height: 0;
+			background-color: $ter-col;
+		}
+
+		.cta-text-wrapper {
+			@media only screen and (max-width: $container-size-m) {
+				margin-left: 0;		
+				width: 100%;		
+			}
+
+			h3 {
+				font-size: 3.5rem;
+				margin-right: 1rem;
+				margin-bottom: 0;
+				@media only screen and (max-width: $container-size-m) {
+					font-size: 2rem;
+					margin-right: 0;
+				}
+
+			}
+
+			p {
+				margin-right: 1rem;
+				font-size: 1.8rem;
+				@media only screen and (max-width: $container-size-m) {
+					margin-right: 0;
+					margin-top: 0.5rem;
+					font-size: 1.3rem;
+				}
+
+			}
+		}
+
+		a {
+			text-decoration: none;
+			background-color: $qua-col;
+			color: $lit-col;
+			font-weight: bold;
+			padding-left: 2rem;
+			padding-right: 2rem;
+			padding-top: 1.5rem;
+			padding-bottom: 1.5rem;
+			height: auto;
+			align-self: flex-end;
+			position: absolute;
+			bottom: -2.5rem;
+			@media only screen and (max-width: $container-size-m) {
+				width: 100%;
+				position: relative;
+				bottom: -2rem;;
+
+			}
+
+			@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+				right: 6rem; // IE11 fix
+			}
+
+			&:hover {
+				background-color: $pri-col;
+			}
+		}
+
+	}
+
+	.items-wrapper {
+		width: 100%;
+		height: auto;
+		display: flex;
+		//flex-shrink: 0;
+		margin-top: 5rem;
+		margin-bottom: 4rem;
+		
+		.items-container {
+			display: flex;
+			height: 100%;
+			width: 100%;
+			margin-left: 12vw;
+			margin-right: 12vw;
+			@media only screen and (max-width: $container-size-l) {
+				margin-left: 5vw;
+				margin-right: 5vw;
+			}
+
+			@media only screen and (max-width: $container-size-m) {
+				margin-left: 0;
+				margin-right: 0;
+			}
+
+			justify-content: space-around;
+			flex-wrap: wrap;
+
+			.item-container {
+				display: flex;
+				// height: 100%;
+				// @media only screen and (max-width: $container-size-m) {
+				// 	width: 100%;
+				// }
+
+				flex-direction: column;
+				position: relative;
+				margin-bottom: auto;
+				@media only screen and (max-width: $container-size-m) {
+					width: 100%;
+					margin-bottom: 2rem;
+				}
+
+				a {
+					text-decoration: none;
+					&:hover {
+						text-decoration: underline;
+					}
+				}
+				.item-image {
+					height: 20rem;
+					width: 25rem;
+					@media only screen and (max-width: $container-size-m) {
+					 width: 100%;
+					}
+
+					background-image: url("../resources/item-thumb.jpg");
+					overflow: hidden;
+					background-size: cover;
+					background-position-x: center;
+					background-position-y: center;
+					flex-shrink: 0;
+
+				}
+				.item-title {
+					position: absolute;
+					bottom: -5rem;
+
+					@media only screen and (max-width: $container-size-m) {
+						font-weight: bold;
+						font-size: 1.3rem;
+						padding-left: $margin-size-m;
+						padding-right: $margin-size-m;
+					}
+
+				}
+				.item-button {
+					position: absolute;
+					bottom: 0;
+					right: -2rem;
+					padding-top: 2rem;
+					padding-bottom: 2rem;
+					padding-left: 2rem;
+					padding-right: 2rem;
+					background: $sep-col;
+					color: $lit-col;
+					text-decoration: none;
+					@media only screen and (max-width: $container-size-m) {
+						right: 0;
+					}
+					&:hover {
+						background-color: $pri-col;
+						text-decoration: none;
+					}
+				}
+				&:last-of-type{
+					margin-top: 3rem;
+					@media only screen and (max-width: $container-size-m) {
+						margin-top: 4rem;
+					}
+
+					.item-image {
+						background-image: url("../resources/item-thumb2.jpg");
+					}
+					@media only screen and (max-width: $container-size-m) {
+						.item-title {
+							bottom: -5rem;
+						}
+					}
+				}
+
+			}
+		}
+
+	}
+
+	.quote-wrapper {
+		min-height: 20rem;
+		height: auto;
+		margin-top: 4rem;
+		padding-bottom: 4rem;
+		background-color: $qui-col;
+
+		.quote-beeldmerk {
+			width: 100%;
+			text-align: center;
+			position: relative;
+			height: 4rem;
+			overflow: visible;
+			margin-bottom: 1rem;
+			@media only screen and (max-width: $container-size-m) {
+				margin-bottom: 1rem;
+			}
+			top: -2rem;
+			user-select: none;
+		}
+
+		h4 {
+			font-size: 3rem;
+			margin-top: 1rem;
+			@media only screen and (max-width: $container-size-m) {
+				margin-top: 0;
+				font-size: 2.5rem;
+				padding-left: $margin-size-m;
+				padding-right: $margin-size-m;
+				font-weight: lighter;
+			}
+
+			font-family: $fon-fam-ter;
+			font-weight: normal;
+			color: $dar-col;
+			text-align: center;
+		}
+	
+	}
+
+	.primary-footer {
+		min-height: 10rem;
+		height: auto;
+		width: calc(100% - 4rem);
+		display: flex;
+		flex-shrink: 0;
+		flex-direction: column;
+		align-self: flex-end;
+		background-color: $sen-col;
+		color: $lit-col;
+		margin-top: -4rem;
+		padding-left: 2rem;
+		padding-right: 2rem;
+		padding-top: 2rem;
+		padding-bottom: 3rem;
+		font-size: 1rem;
+		position: relative;
+		@media only screen and (max-width: $container-size-m) {
+			width: 100%;
+		}
+
+		a {
+			color: $lit-col;
+			text-decoration: none;
+			font-size: 1rem;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+
+		.phone-icon {
+			width: 3rem;
+			position: absolute;
+			right: 2rem;
+			top: -1px;
+			@media only screen and (max-width: $container-size-m) {
+				width: 4rem;
+
+			}
+			img {
+				width: 100%;
+			}
+		}
+
+		.footer-row-1 {
+			display: flex;
+			flex: 1;
+			flex-direction: row;
+			@media only screen and (max-width: $container-size-m) {
+				flex-direction: column-reverse;
+				font-size: 1.3rem;
+			}
+
+
+			
+			.footer-links-wrapper {
+				width: 100%;
+				display: flex;
+				flex: 1;
+				flex-direction: row;
+				@media only screen and (max-width: $container-size-m) {
+					flex-direction: column;
+				}
+
+				.footer-links-col-1 {
+					margin-right: 2rem;
+					a {
+						color: $ter-col;
+					}
+					@media only screen and (max-width: $container-size-m) {
+						font-size: 1.3rem;
+						margin-right: 0;
+						a {
+							font-size: 1.5rem;
+						}
+					}
+
+				}
+
+				.footer-links-col-2 {
+					a {
+						color: $ter-col;
+					}
+					@media only screen and (max-width: $container-size-m) {
+						margin-right: 0;
+
+						a {
+							font-size: 1.5rem;
+						}
+					}
+				}
+
+			}
+			
+			.footer-contact-wrapper {
+				flex: 1;
+				align-items: center;
+				text-align: right;
+				margin-top: 1rem;
+				@media only screen and (max-width: $container-size-m) {
+					text-align: left;
+					margin-bottom: 3rem;
+					margin-top: 2rem;
+				}
+				@media only screen and (max-width: $container-size-s) {
+					margin-top: 2rem;
+				}
+
+				.contact-phone {
+					a {
+						font-size: 2.3rem !important;
+						font-weight: bold;
+
+						@media only screen and (max-width: $container-size-m) {
+							font-size: 2rem;
+							text-align: right;
+						}
+
+						margin-bottom: 0.3rem;
+					}
+				}
+
+				a {
+					@media only screen and (max-width: $container-size-m) {
+						display: block;
+						width: 100%;
+						text-align: right;
+					}
+				}
+			}
+		}
+
+		.footer-row-2 {
+			flex: 1;
+			margin-top: 2rem;
+			a {
+				align-items: center;
+				display: flex;
+				color: $ter-col;
+			}
+			@media only screen and (max-width: $container-size-m) {
+				margin-top: 4rem;
+				white-space: nowrap;
+				a {
+					align-items: center;
+					display: flex;
+					font-size: 1.2rem;
+				}
+			}
+
+			.nvm-logo {
+				width: 1.3rem;
+				margin-right: 1rem;
+				@media only screen and (max-width: $container-size-m) {
+					width: 1.3rem;
+					margin-right: 1rem;
+				}
+			}
+			.rating {
+				color: $qua-col;
+				font-weight: bold;
+				margin-left: 0.3rem;
+				margin-right: 0.3rem;
+			}
+			
+			@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+				display: none; // IE11 fix temp
+			}
+		}
+
+	}
+
+	.secondary-footer {
+		display: flex;
+		color: $ter-col;
+		margin-left: 4rem;
+		align-items: center;
+		flex-wrap: wrap;
+		@media only screen and (max-width: $container-size-m) {
+			margin-left: 0;
+			width: 100%;
+			padding-left: 2rem;
+			align-items: baseline;
+			flex-direction: column-reverse;
+		}
+		.links-wrapper {
+			@media only screen and (max-width: $container-size-m) {
+				margin-top: 2rem;
+			}
+
+			span {
+				margin-right: 1rem;
+				@media only screen and (max-width: $container-size-m) {
+					display: block;
+					font-size: 1.2rem;
+					margin-bottom: 1rem;
+				}
+			}
+			a {
+				color: inherit;
+				font-size: inherit;
+				margin-right: 1rem;
+				text-decoration: none;
+				margin-right: 2rem;
+				@media only screen and (max-width: $container-size-m) {
+					display: block;
+					font-size: 1.2rem;
+					margin-bottom: 1rem;
+				}
+				&:hover {
+					text-decoration: underline;
+				}
+
+				.entity {
+					@media only screen and (max-width: $container-size-m) {
+					display: none;
+					}
+				}
+			}
+		}
+
+
+		.social-links {
+			margin-left: auto;
+			@media only screen and (max-width: $container-size-m) {
+				margin-top: 0;
+			}
+
+			a {
+				width: 3rem;
+				display: inline-block;
+				margin-right: 0;
+
+				img {
+					width: 100%;
+					height: auto;
+				}
+			}
+
+		}
+
+	}
+
+
+
+}
+
+
+
+/* mediaquery example
+@media only screen and (max-width: $container-size-s) {
+
+}
+
+
+/* IE 11 only example
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+	justify-content: space-around; // IE11 fix
+}
+
+*/ 
