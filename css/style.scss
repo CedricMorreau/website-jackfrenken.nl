@@ -1378,7 +1378,8 @@ input:focus {
 	position: relative;
 
 	@media only screen and (max-width: $container-size-m) {
-		flex-direction: column;
+		flex-direction: column-reverse;
+		margin-top: 0;
 	}
 
 	.header-title-wrapper {
@@ -1386,6 +1387,10 @@ input:focus {
 		flex-shrink: 0;
 		flex-grow: 0;
 		flex-basis: 20rem;
+		@media only screen and (max-width: $container-size-m) {
+			flex-basis: 0;
+		}
+
 		.header-title {
 
 			padding-left: 8rem;
@@ -1398,6 +1403,16 @@ input:focus {
 			top: 50%;
     		transform: translate(0, -50%);
     		max-width: 50rem;
+  			@media only screen and (max-width: $container-size-m) {
+				position: relative;
+				top: 0;
+				transform: none;
+				padding-left: $margin-size-s;
+				padding-right: $margin-size-s;
+				padding-top: 1rem;
+				padding-bottom: 2rem;
+  			}
+
 			.title-category {
 				font-weight: bold;
 			}
@@ -1406,9 +1421,15 @@ input:focus {
 				font-size: 3rem;
 				padding-top: 0;
 				margin-top: 0;
+	  			@media only screen and (max-width: $container-size-m) {
+	  				word-break: break-word;
+	  				font-size: 2rem;
+	  			}
+
 			}
 
 		}
+
 	}
 	
 	.content-image {
@@ -1420,6 +1441,13 @@ input:focus {
 		height: 28rem;
 		padding-top: 2rem;
 		padding-bottom: 2rem;
+		@media only screen and (max-width: $container-size-m) {
+			padding-top: 0;
+			padding-bottom: 0;
+			height: 30vh;
+			background-position: 100% 50%;
+		}
+
 
 	}
 
@@ -1434,7 +1462,9 @@ input:focus {
 	margin-top: 3rem;
 	margin-bottom: 3rem;
 	@media only screen and (max-width: $container-size-m) {
-		flex-direction: column;
+		flex-direction: column-reverse;
+		margin-top: 2rem;
+		margin-bottom: 1rem;
 	}
 	
 	.column-sidebar {
@@ -1443,6 +1473,11 @@ input:focus {
 		flex-grow: 0;
 		flex-basis: 20rem;
 		padding-right: 5rem;
+		@media only screen and (max-width: $container-size-m) {
+			padding-left: $margin-size-s;
+			padding-right: $margin-size-s;
+		}
+
 
 
 		.sidebar-nav {
@@ -1450,6 +1485,9 @@ input:focus {
 			margin-bottom: 3rem;
 			font-weight: bold;
 			line-height: 1.5rem;
+			@media only screen and (max-width: $container-size-m) {
+				margin-left: 0;
+			}
 
 			li {
 				&.active {
@@ -1475,6 +1513,11 @@ input:focus {
 			padding-right: 2rem;
 			padding-top: 1.5rem;
 			padding-bottom:0.5rem;
+			@media only screen and (max-width: $container-size-m) {
+				margin-left: 0;
+				padding-left: $margin-size-s;
+			}
+
 			h3 {
 				margin-top: 0;
 				a {
@@ -1507,10 +1550,20 @@ input:focus {
 
 		.content-wrapper {
 			padding-right: 15rem;
+			@media only screen and (max-width: $container-size-m) {
+				padding-left: $margin-size-s;
+				padding-right: $margin-size-s;
+			}
+			
 			h2 {
 				font-size: 3rem;
 				margin-top: 0;
 				padding-top: 0;
+				@media only screen and (max-width: $container-size-m) {
+					margin-top: 2rem;
+					font-size: 2rem;
+					word-break: break-word;
+				}
 			}
 
 			.intro {
@@ -1530,6 +1583,12 @@ input:focus {
 				padding-bottom: 0.3rem;
 				padding-left: 1.5rem;
 				padding-right: 1.5rem;
+				@media only screen and (max-width: $container-size-m) {
+					width: 100%;
+					display: block;
+					text-align: center;
+				}
+
 				.arrow {
 					margin-left: 2rem;
 				}
