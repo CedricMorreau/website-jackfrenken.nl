@@ -31,7 +31,7 @@
 
 		</div>
 		
-		<?php include("inc/footer-scripting.php"); ?>
+		<?php include("../inc/footer-scripting.php"); ?>
 
 	</body>
 
