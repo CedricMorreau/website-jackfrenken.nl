@@ -1,8 +1,10 @@
 <div class="primary-nav">
 
 	<div class="logo-container">
-		<img src="/resources/logo.svg" alt="Jack Frenken logo" class="desktop-logo" />
-		<img src="/resources/logo_jf_landscape.svg" alt="Jack Frenken beeldmerk" class="mobile-beeldmerk" />
+		<a href="/">
+			<img src="/resources/logo.svg" alt="Jack Frenken logo" class="desktop-logo" />
+			<img src="/resources/logo_jf_landscape.svg" alt="Jack Frenken beeldmerk" class="mobile-beeldmerk" />
+		</a>
 	</div>
 
 
