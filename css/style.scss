@@ -389,24 +389,30 @@ input:focus {
 					text-decoration: underline;
 				}
 			}
-			.item-image {
-				height: 20rem;
-				width: 25rem;
-				@media only screen and (max-width: $container-size-m) {
-				 width: 100%;
-				}
+			
+			.item-image-wrapper {
+				position: relative;
+				.item-image {
+					height: 20rem;
+					width: 25rem;
+					@media only screen and (max-width: $container-size-m) {
+					 width: 100%;
+					}
 
-				background-image: url("../resources/item-thumb.jpg");
-				overflow: hidden;
-				background-size: cover;
-				background-position-x: center;
-				background-position-y: center;
-				flex-shrink: 0;
+					background-image: url("../resources/item-thumb.jpg");
+					overflow: hidden;
+					background-size: cover;
+					background-position-x: center;
+					background-position-y: center;
+					flex-shrink: 0;
 
+				}				
 			}
+
+
 			.item-title {
-				position: absolute;
-				bottom: -5rem;
+				position: relative;
+				
 
 				@media only screen and (max-width: $container-size-m) {
 					font-weight: bold;
@@ -1633,6 +1639,10 @@ input:focus {
 						margin-right: 0;
 						.item-container {
 							margin-bottom: 5rem;
+							@media only screen and (max-width: $container-size-m) {
+								margin-bottom: 1rem;
+							}
+
 							&:nth-child(even) {
 								margin-top: 3rem;
 							}

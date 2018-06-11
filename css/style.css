@@ -304,22 +304,23 @@ input:focus {
         text-decoration: none; }
         .items-wrapper .items-container .item-container a:hover {
           text-decoration: underline; }
-      .items-wrapper .items-container .item-container .item-image {
-        height: 20rem;
-        width: 25rem;
-        background-image: url("../resources/item-thumb.jpg");
-        overflow: hidden;
-        background-size: cover;
-        background-position-x: center;
-        background-position-y: center;
-        -ms-flex-negative: 0;
-            flex-shrink: 0; }
-        @media only screen and (max-width: 768px) {
-          .items-wrapper .items-container .item-container .item-image {
-            width: 100%; } }
+      .items-wrapper .items-container .item-container .item-image-wrapper {
+        position: relative; }
+        .items-wrapper .items-container .item-container .item-image-wrapper .item-image {
+          height: 20rem;
+          width: 25rem;
+          background-image: url("../resources/item-thumb.jpg");
+          overflow: hidden;
+          background-size: cover;
+          background-position-x: center;
+          background-position-y: center;
+          -ms-flex-negative: 0;
+              flex-shrink: 0; }
+          @media only screen and (max-width: 768px) {
+            .items-wrapper .items-container .item-container .item-image-wrapper .item-image {
+              width: 100%; } }
       .items-wrapper .items-container .item-container .item-title {
-        position: absolute;
-        bottom: -5rem; }
+        position: relative; }
         @media only screen and (max-width: 768px) {
           .items-wrapper .items-container .item-container .item-title {
             font-weight: bold;
@@ -1401,6 +1402,9 @@ input:focus {
       margin-right: 0; }
       .actueel-overzicht .column-content .column-content .content-wrapper .items-wrapper .items-container .item-container {
         margin-bottom: 5rem; }
+        @media only screen and (max-width: 768px) {
+          .actueel-overzicht .column-content .column-content .content-wrapper .items-wrapper .items-container .item-container {
+            margin-bottom: 1rem; } }
         .actueel-overzicht .column-content .column-content .content-wrapper .items-wrapper .items-container .item-container:nth-child(even) {
           margin-top: 3rem; }
 
@@ -1484,4 +1488,5 @@ input:focus {
 }
 
 */
+
 /*# sourceMappingURL=style.css.map */

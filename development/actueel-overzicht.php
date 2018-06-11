@@ -52,19 +52,24 @@
 							<div class="items-container">
 								<?php $x = 1;  while($x <= 2) { ?>
 									<div class="item-container">
-										<div class="item-image">
-											&nbsp;
+										<div class="item-image-wrapper">
+											<div class="item-image">
+												&nbsp;
+											</div>
+											<a href="#" class="item-button">&xrarr;</a>
 										</div>
-										<a href="#" class="item-button">&xrarr;</a>
+										
 										<p class="item-title"><a href="#">Verkoop Neldervelt gestart!</a></p>
 
 									</div>
 
 									<div class="item-container">
-										<div class="item-image">
-											&nbsp;
+										<div class="item-image-wrapper">
+											<div class="item-image">
+												&nbsp;
+											</div>
+											<a href="#" class="item-button">&xrarr;</a>
 										</div>
-										<a href="#" class="item-button">&xrarr;</a>
 										<p class="item-title"><a href="#">Nog enkele appartementen te huur!</a></p>
 
 									</div>
