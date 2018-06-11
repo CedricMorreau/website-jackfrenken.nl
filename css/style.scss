@@ -1492,6 +1492,9 @@ input:focus {
 			li {
 				&.active {
 					color: $qua-col;
+					a {
+						color: $qua-col;
+					}
 				}
 
 				a {
@@ -1550,6 +1553,10 @@ input:focus {
 
 		.content-wrapper {
 			padding-right: 15rem;
+			@media only screen and (max-width: $container-size-l) {
+				padding-right: $margin-size-m;
+			}
+
 			@media only screen and (max-width: $container-size-m) {
 				padding-left: $margin-size-s;
 				padding-right: $margin-size-s;
