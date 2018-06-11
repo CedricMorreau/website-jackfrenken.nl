@@ -114,6 +114,7 @@ input:focus {
         height: auto;
         color: white;
         top: 6rem;
+        left: 0;
         z-index: 99;
         text-align: center;
         padding-top: 2rem;

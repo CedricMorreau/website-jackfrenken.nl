@@ -50,7 +50,7 @@
 						<section class="items-wrapper">
 							
 							<div class="items-container">
-								<?php $x = 1;  while($x <= 5) { ?>
+								<?php $x = 1;  while($x <= 2) { ?>
 									<div class="item-container">
 										<div class="item-image">
 											&nbsp;

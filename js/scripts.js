@@ -7,7 +7,7 @@ $('.mobile-toggle').click(function() {
 	$('.hamburger-icon').toggleClass('open');
 	$('.close-icon').toggleClass('open');
 	$('.primary-nav nav').toggleClass('open');
-	$('.primary-nav nav').toggleClass('animated fadeIn');
+	$('.primary-nav nav').toggleClass('animated fadeIn faster');
 });
 
 // open/close submenu on hover/mouseout
@@ -22,7 +22,7 @@ if (screen.width >= 768) {
 		function() {
 			$( this ).children("a").removeClass( "open" );
 			$( this ).children("ul").removeClass( "open" );
-			$( this ).children("ul").addClass( "animated FadeOut" );
+			$( this ).children("ul").addClass( "animated FadeOut faster" );
 		}
 
 	);
