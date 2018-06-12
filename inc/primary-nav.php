@@ -14,6 +14,9 @@
 	</div>
 
 	<nav>
+	
+		<?php echo $template->cmsData('page][navigation/1/active/' . $template->findHighestParent()); ?>
+	
 		<ul>
 			<li><a href="#" class="taphover">Aanbod</a>
 				<ul class="hover-menu-wrapper">

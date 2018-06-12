@@ -1,0 +1,82 @@
+RewriteEngine on
+
+RewriteRule ^(development)($|/) - [L]
+
+#RewriteCond %{HTTP_HOST} !^www\. [NC]
+#RewriteRule ^(.*)$ http://www.jackfrenken.nl/$1 [L,R=301]
+
+#RewriteCond %{HTTPS} off
+#RewriteRule ^(.*)$ https://www.jackfrenken.nl/$1 [L,R=301]
+
+RewriteRule ^media/(.*)/(.*)$ cms/inc/handleImages.php?hash=$1
+
+# PDF download
+RewriteRule ^pdf/(.*) inc/pdf-download.php?id=$1 [L,QSA]
+
+# Onderstaande rule is een tijdelijke fix. Error-redirecting dient te worden disabled in DA
+RewriteRule 404.shtml /
+
+# RewriteCond %{REQUEST_FILENAME} !^(.+)\.html$
+RewriteCond %{REQUEST_FILENAME} !^(.+)\.htm$
+RewriteCond %{REQUEST_FILENAME} !^(.+)\.css$
+RewriteCond %{REQUEST_FILENAME} !^(.+)\.js$
+RewriteCond %{REQUEST_FILENAME} !^(.+)\.php$
+RewriteCond %{REQUEST_FILENAME} !^(.+)\.jpg$
+RewriteCond %{REQUEST_FILENAME} !^(.+)\.jpeg$
+RewriteCond %{REQUEST_FILENAME} !^(.+)\.png$
+RewriteCond %{REQUEST_FILENAME} !^(.+)\.pdf$
+RewriteCond %{REQUEST_FILENAME} !^(.+)\.gif$
+RewriteCond %{REQUEST_FILENAME} !^(.+)\.bmp$
+RewriteCond %{REQUEST_FILENAME} !^(.+)\.svg$
+RewriteCond %{REQUEST_FILENAME} !^(.+)\.xml$
+RewriteCond %{REQUEST_FILENAME} !^(.+)\.swf$
+RewriteCond %{REQUEST_FILENAME} !^(.+)\.mp4$
+RewriteCond %{REQUEST_FILENAME} !^(.+)\.ico$
+RewriteCond %{REQUEST_FILENAME} !^(.+)\.doc$
+RewriteCond %{REQUEST_FILENAME} !^(.+)\.docx$
+RewriteCond %{REQUEST_FILENAME} !^(.+)\.ppt$
+RewriteCond %{REQUEST_FILENAME} !^(.+)\.pptx$
+RewriteCond %{REQUEST_FILENAME} !^(.+)\.woff$
+RewriteCond %{REQUEST_FILENAME} !^(.+)\.woff2$
+RewriteCond %{REQUEST_FILENAME} !^(.+)\.vcf$
+RewriteCond %{REQUEST_FILENAME} !^(.+)\.ico$
+RewriteCond %{REQUEST_FILENAME} !^(.+)\.csv$
+RewriteCond %{REQUEST_FILENAME} !^(.+)\.ttf$
+# RewriteCond %{REQUEST_FILENAME} !^(.+)\.HTML$
+RewriteCond %{REQUEST_FILENAME} !^(.+)\.HTM$
+RewriteCond %{REQUEST_FILENAME} !^(.+)\.CSS$
+RewriteCond %{REQUEST_FILENAME} !^(.+)\.JS$
+RewriteCond %{REQUEST_FILENAME} !^(.+)\.PHP$
+RewriteCond %{REQUEST_FILENAME} !^(.+)\.JPG$
+RewriteCond %{REQUEST_FILENAME} !^(.+)\.JPEG$
+RewriteCond %{REQUEST_FILENAME} !^(.+)\.PNG$
+RewriteCond %{REQUEST_FILENAME} !^(.+)\.PDF$
+RewriteCond %{REQUEST_FILENAME} !^(.+)\.GIF$
+RewriteCond %{REQUEST_FILENAME} !^(.+)\.BMP$
+RewriteCond %{REQUEST_FILENAME} !^(.+)\.SVG$
+RewriteCond %{REQUEST_FILENAME} !^(.+)\.XML$
+RewriteCond %{REQUEST_FILENAME} !^(.+)\.SWF$
+RewriteCond %{REQUEST_FILENAME} !^(.+)\.MP4$
+RewriteCond %{REQUEST_FILENAME} !^(.+)\.ICO$
+RewriteCond %{REQUEST_FILENAME} !^(.+)\.DOC$
+RewriteCond %{REQUEST_FILENAME} !^(.+)\.DOCX$
+RewriteCond %{REQUEST_FILENAME} !^(.+)\.PPT$
+RewriteCond %{REQUEST_FILENAME} !^(.+)\.PPTX$
+RewriteCond %{REQUEST_FILENAME} !^(.+)\.WOFF$
+RewriteCond %{REQUEST_FILENAME} !^(.+)\.WOFF2$
+RewriteCond %{REQUEST_FILENAME} !^(.+)\.VCF$
+RewriteCond %{REQUEST_FILENAME} !^(.+)\.CSV$
+RewriteCond %{REQUEST_FILENAME} !^(.+)\.TTF$
+
+RewriteRule (.*)$ /index.php?page=$1 [L,QSA]
+
+# Set Expires Headers
+<FilesMatch "\.(ico|pdf|flv|jpg|jpeg|png|gif|js|css|swf|svg)$">
+Header set Expires "Thu, 15 Jan 2100 20:00:00 GMT"
+</FilesMatch>
+
+# Set the cache-control max-age
+# 1 year
+<FilesMatch "\.(ico|pdf|flv|jpg|jpeg|png|gif|js|css|swf|svg)$">
+Header set Cache-Control "max-age=31449600, public"
+</FilesMatch>
