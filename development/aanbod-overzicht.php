@@ -31,7 +31,7 @@
 
 					<div class="content-wrapper">
 					
-					<?php $x = 1;  while($x <= 10) {
+					<?php $x = 1;  while($x <= 5) {
 						include ("../inc/aanbod-blok.php");
 					$x++;	} ?>
 					

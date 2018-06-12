@@ -1551,7 +1551,7 @@ input:focus {
       @media only screen and (max-width: 768px) {
         .sidebar-filtering .select-wrapper:after {
           top: 0.2rem;
-          right: 1rem;
+          right: 0;
           width: 0.5rem;
           height: 0.5rem; } }
   .sidebar-filtering .more-filters {
@@ -1672,32 +1672,33 @@ input:focus {
       background: rgba(0, 0, 0, 0); }
       .item-wrapper .item-image .hover-overlay:hover {
         background: rgba(255, 255, 255, 0.15); }
-    .item-wrapper .item-image .image-label {
-      position: absolute;
-      top: 0;
-      right: 0;
-      font-weight: bold;
-      padding-left: 1.5rem;
-      padding-right: 1.5rem;
-      padding-top: 1.5rem;
-      padding-bottom: 1.5rem;
-      color: white;
-      z-index: 7; }
-      @media only screen and (max-width: 768px) {
-        .item-wrapper .item-image .image-label {
-          font-size: 1rem;
-          padding-top: 1rem;
-          padding-bottom: 1rem;
-          padding-left: 1rem;
-          padding-right: 1rem; } }
-      .item-wrapper .item-image .image-label.status-new {
-        background-color: #2CBCAF; }
-      .item-wrapper .item-image .image-label.status-sold {
-        background-color: #003064; }
-      .item-wrapper .item-image .image-label.status-soldsubject {
-        background-color: #003064; }
-      .item-wrapper .item-image .image-label.status-loweredprice {
-        background-color: #2CBCAF; }
+
+.image-label {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-weight: bold;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  color: white;
+  z-index: 7; }
+  @media only screen and (max-width: 768px) {
+    .image-label {
+      font-size: 1rem;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      padding-left: 1rem;
+      padding-right: 1rem; } }
+  .image-label.status-new {
+    background-color: #2CBCAF; }
+  .image-label.status-sold {
+    background-color: #003064; }
+  .image-label.status-soldsubject {
+    background-color: #003064; }
+  .image-label.status-loweredprice {
+    background-color: #2CBCAF; }
 
 .banner-wrapper {
   background-color: #003064;
@@ -1751,6 +1752,19 @@ input:focus {
     text-decoration: none; }
     .banner-wrapper a:hover {
       color: #CCE9f5; }
+
+.aanbod-detail .banner-wrapper {
+  margin-right: 0;
+  margin-left: 4rem; }
+.aanbod-detail .scroll-down {
+  color: #003064;
+  text-decoration: none;
+  margin-top: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .aanbod-detail .scroll-down:hover {
+    text-decoration: underline; }
 
 /* mediaquery example
 @media only screen and (max-width: $container-size-s) {

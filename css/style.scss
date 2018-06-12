@@ -1814,7 +1814,7 @@ input:focus {
 
 		@media only screen and (max-width: $container-size-m) {
 			top: 0.2rem;
-			right: 1rem;
+			right: 0;
 			width: 0.5rem;
 			height: 0.5rem;
 		}
@@ -1975,7 +1975,14 @@ input:focus {
 				background: rgba(255, 255, 255, 0.15);	
 			}
 		}
-		.image-label {
+		
+
+	}
+
+}
+
+
+.image-label {
 			position: absolute;
 			top: 0;
 			right: 0;
@@ -2013,10 +2020,6 @@ input:focus {
 			}
 
 		}
-
-	}
-
-}
 
 .banner-wrapper {
 	background-color: $pri-col;
@@ -2069,6 +2072,29 @@ input:focus {
 	}
 
 }
+
+
+
+.aanbod-detail {
+
+	.banner-wrapper {
+		margin-right: 0;
+		margin-left: 4rem;
+	}
+
+	.scroll-down {
+		color: $pri-col;
+		text-decoration: none;
+		margin-top: 4rem;
+		display: flex;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+}
+
 
 /* mediaquery example
 @media only screen and (max-width: $container-size-s) {
