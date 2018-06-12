@@ -24,14 +24,19 @@
 			<div class="column-content">
 				
 				<div class="column-sidebar">
+				
+					<?php include("../inc/sidebar-nav.php"); ?>
+				
+					<?php include("../inc/widget.php"); ?>
 
-				<?php include("../inc/aanbod-filtering.php"); ?>
+					<a href="aanbod-overzicht.php" class="back-link">&xlarr; Terug naar overzicht</a>
 
 				</div>
 
 				<div class="column-content">
 
 					<div class="content-wrapper">
+						<a id="content" class="anchor"></a>
 						<h2>Beschrijving</h2>
 						<p class="intro">
 							U zoekt rust, ruimte, de mogelijkheid om een bedrijf aan huis te starten, of gewoon een lekker groot

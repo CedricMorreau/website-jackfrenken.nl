@@ -1449,6 +1449,7 @@ input:focus {
 		height: 28rem;
 		padding-top: 2rem;
 		padding-bottom: 2rem;
+		margin-right: 6rem;
 		@media only screen and (max-width: $container-size-m) {
 			padding-top: 0;
 			padding-bottom: 0;
@@ -1480,14 +1481,15 @@ input:focus {
 		flex-grow: 0;
 		flex-basis: 20rem;
 		padding-right: 5rem;
-		@media only screen and (max-width: $container-size-m) {
-			padding-left: $margin-size-s;
-			padding-right: $margin-size-s;
-		}
 
 		@media only screen and (max-width: $container-size-xl) {
 			padding-left: $margin-size-m;
 			padding-right: $margin-size-m;
+		}
+
+		@media only screen and (max-width: $container-size-m) {
+			padding-left: $margin-size-s;
+			padding-right: $margin-size-s;
 		}
 
 
@@ -1981,6 +1983,29 @@ input:focus {
 
 }
 
+.back-link {
+	text-decoration: none;
+	font-size: 1rem;
+	color: $pri-col;
+	margin-left: 4rem;
+	margin-top: 3rem;
+	display: flex;
+	font-weight: bold;
+	@media only screen and (max-width: $container-size-m) {
+		margin-left: 0;
+		margin-top: 2rem;
+		margin-bottom: 2rem;
+	}
+
+}
+
+.anchor {
+	display: block;
+	position: relative;
+	top: -2rem;
+	visibility: hidden;
+}
+
 
 .image-label {
 			position: absolute;
@@ -2073,13 +2098,17 @@ input:focus {
 
 }
 
-
+/* Aanbod detail template ----------------------------------------- */
 
 .aanbod-detail {
 
 	.banner-wrapper {
-		margin-right: 0;
+		margin-right: 15rem;
 		margin-left: 4rem;
+		@media only screen and (max-width: $container-size-m) {
+			margin-left: 0;
+			margin-right: 0;
+		}
 	}
 
 	.scroll-down {
@@ -2087,6 +2116,10 @@ input:focus {
 		text-decoration: none;
 		margin-top: 4rem;
 		display: flex;
+		@media only screen and (max-width: $container-size-m) {
+			display: none;
+		}
+
 
 		&:hover {
 			text-decoration: underline;

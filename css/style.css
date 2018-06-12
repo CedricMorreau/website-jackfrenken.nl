@@ -1253,7 +1253,8 @@ input:focus {
     background-image: url("../resources/homepage-header.jpg");
     height: 28rem;
     padding-top: 2rem;
-    padding-bottom: 2rem; }
+    padding-bottom: 2rem;
+    margin-right: 6rem; }
     @media only screen and (max-width: 768px) {
       .column-header .content-image {
         padding-top: 0;
@@ -1293,14 +1294,14 @@ input:focus {
     -ms-flex-preferred-size: 20rem;
         flex-basis: 20rem;
     padding-right: 5rem; }
-    @media only screen and (max-width: 768px) {
-      .column-content .column-sidebar {
-        padding-left: 1rem;
-        padding-right: 1rem; } }
     @media only screen and (max-width: 1366px) {
       .column-content .column-sidebar {
         padding-left: 2rem;
         padding-right: 2rem; } }
+    @media only screen and (max-width: 768px) {
+      .column-content .column-sidebar {
+        padding-left: 1rem;
+        padding-right: 1rem; } }
     .column-content .column-sidebar .sidebar-nav {
       margin-left: 4rem;
       margin-bottom: 3rem;
@@ -1673,6 +1674,28 @@ input:focus {
       .item-wrapper .item-image .hover-overlay:hover {
         background: rgba(255, 255, 255, 0.15); }
 
+.back-link {
+  text-decoration: none;
+  font-size: 1rem;
+  color: #003064;
+  margin-left: 4rem;
+  margin-top: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: bold; }
+  @media only screen and (max-width: 768px) {
+    .back-link {
+      margin-left: 0;
+      margin-top: 2rem;
+      margin-bottom: 2rem; } }
+
+.anchor {
+  display: block;
+  position: relative;
+  top: -2rem;
+  visibility: hidden; }
+
 .image-label {
   position: absolute;
   top: 0;
@@ -1753,9 +1776,14 @@ input:focus {
     .banner-wrapper a:hover {
       color: #CCE9f5; }
 
+/* Aanbod detail template ----------------------------------------- */
 .aanbod-detail .banner-wrapper {
-  margin-right: 0;
+  margin-right: 15rem;
   margin-left: 4rem; }
+  @media only screen and (max-width: 768px) {
+    .aanbod-detail .banner-wrapper {
+      margin-left: 0;
+      margin-right: 0; } }
 .aanbod-detail .scroll-down {
   color: #003064;
   text-decoration: none;
@@ -1763,6 +1791,9 @@ input:focus {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
+  @media only screen and (max-width: 768px) {
+    .aanbod-detail .scroll-down {
+      display: none; } }
   .aanbod-detail .scroll-down:hover {
     text-decoration: underline; }
 
@@ -1779,4 +1810,5 @@ input:focus {
 }
 
 */
+
 /*# sourceMappingURL=style.css.map */
