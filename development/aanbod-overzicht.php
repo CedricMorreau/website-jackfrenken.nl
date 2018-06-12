@@ -19,35 +19,24 @@
 
 			<?php include("../inc/primary-nav.php"); ?>
 
-			<?php include("../inc/2-col-header.php"); ?>
-
 			<div class="column-content">
 				
 				<div class="column-sidebar">
 
-				<?php include("../inc/sidebar-nav.php"); ?>
-
-				<?php include("../inc/widget.php"); ?>
+				<?php include("../inc/aanbod-filtering.php"); ?>
 
 				</div>
 
 				<div class="column-content">
 
 					<div class="content-wrapper">
-						<section class="items-wrapper">
-							
-							<div class="items-container">
-								
-								<?php $x = 1;  while($x <= 5) {
-
-									include("../inc/actueel-blokken.php");
-								
-								$x++;	} ?>
-
-							</div>
-
-						</section>
-
+					
+					<?php $x = 1;  while($x <= 10) {
+						include ("../inc/aanbod-blok.php");
+					$x++;	} ?>
+					
+					<?php include("../inc/aanbod-banner.php"); ?>
+					
 					<?php include("../inc/paging.php"); ?>
 					</div>
 
