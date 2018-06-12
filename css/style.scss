@@ -380,6 +380,7 @@ input:focus {
 			margin-bottom: auto;
 			@media only screen and (max-width: $container-size-m) {
 				width: 100%;
+				margin-top: 0;
 				margin-bottom: 2rem;
 			}
 
@@ -412,7 +413,7 @@ input:focus {
 
 			.item-title {
 				position: relative;
-				
+				font-weight: bold;
 
 				@media only screen and (max-width: $container-size-m) {
 					font-weight: bold;
@@ -425,11 +426,11 @@ input:focus {
 			.item-button {
 				position: absolute;
 				bottom: 0;
-				right: -2rem;
-				padding-top: 2rem;
-				padding-bottom: 2rem;
-				padding-left: 2rem;
-				padding-right: 2rem;
+				right: -3rem;
+				padding-top: 2.5rem;
+				padding-bottom: 2.5rem;
+				padding-left: 2.5rem;
+				padding-right: 2.5rem;
 				background: $sep-col;
 				color: $lit-col;
 				text-decoration: none;
@@ -444,7 +445,7 @@ input:focus {
 			&:last-of-type{
 				margin-top: 3rem;
 				@media only screen and (max-width: $container-size-m) {
-					margin-top: 4rem;
+					margin-top: 0;
 				}
 
 				.item-image {
@@ -452,7 +453,7 @@ input:focus {
 				}
 				@media only screen and (max-width: $container-size-m) {
 					.item-title {
-						bottom: -5rem;
+						bottom: 0;
 					}
 				}
 			}
@@ -1629,6 +1630,7 @@ input:focus {
 				width: 100%;
 
 				.items-wrapper {
+					margin-top: 0;
 					margin-left: 0;
 					margin-right: 0;
 					@media only screen and (max-width: $container-size-m) {
@@ -1638,13 +1640,13 @@ input:focus {
 						margin-left: 0;
 						margin-right: 0;
 						.item-container {
-							margin-bottom: 5rem;
+							margin-bottom: 3rem;
 							@media only screen and (max-width: $container-size-m) {
 								margin-bottom: 1rem;
 							}
 
 							&:nth-child(even) {
-								margin-top: 3rem;
+								margin-top: 4rem;
 							}
 						}
 					}
