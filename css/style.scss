@@ -1487,6 +1487,7 @@ input:focus {
 
 		@media only screen and (max-width: $container-size-xl) {
 			padding-left: $margin-size-m;
+			padding-right: $margin-size-m;
 		}
 
 
@@ -1862,6 +1863,7 @@ input:focus {
 	}
 	@media only screen and (max-width: $container-size-m) {
 		margin-right: 0;
+		margin-bottom: 3rem;
 	}
 
 	.item-description {
@@ -1880,16 +1882,23 @@ input:focus {
 			width: calc(100% + 4rem);
 			overflow: visible;
 			z-index: 5;
+			@media only screen and (max-width: $container-size-xl) {
+				padding-top: 2rem;
+				padding-bottom: 2rem;
+			}
+
 			@media only screen and (max-width: $container-size-l) {
 				width: 100%;
 				position: relative;
 			}
 
-
-			@media only screen and (max-width: $container-size-xl) {
-				padding-top: 2rem;
-				padding-bottom: 2rem;
+			@media only screen and (max-width: $container-size-m) {
+				padding-left: $margin-size-s;
+				padding-right: $margin-size-s;
 			}
+
+
+
 
 
 			.item-title {
@@ -2040,6 +2049,7 @@ input:focus {
 			margin-right: 0;
 		}
 		@media only screen and (max-width: $container-size-m) {
+			margin-top: 0;
 			margin-bottom: 2rem;
 			font-size: 2rem;
 		}
