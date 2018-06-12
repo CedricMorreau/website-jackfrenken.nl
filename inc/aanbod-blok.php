@@ -1,4 +1,5 @@
 <div class="item-wrapper">
+	
 	<div class="item-description">
 		<div class="item-overlay-wrapper">
 			
@@ -13,7 +14,7 @@
 			<p class="item-bold-title">
 				<a href="">Grathemerweg 40</a>
 			</p>
-			
+
 			<p class="item-sub-subtitle">Eensgezinswoning, vrijstaande woning met zwembad en dakterras.</p>
 
 			<p>Woonoppervlak: 215 m<sup>2</sup></p>
@@ -28,4 +29,5 @@
 			<div class="hover-overlay"></div>
 		</a>
 	</div>
+
 </div>
