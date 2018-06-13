@@ -1777,6 +1777,18 @@ input:focus {
       color: #CCE9f5; }
 
 /* Aanbod detail template ----------------------------------------- */
+.aanbod-detail .content-image {
+  background-image: none;
+  height: auto;
+  padding-top: 0;
+  padding-bottom: 0; }
+  .aanbod-detail .content-image .image-container {
+    height: 100%; }
+    .aanbod-detail .content-image .image-container .rsFullscreenBtn {
+      top: initial;
+      right: 0rem;
+      bottom: 3px;
+      background-color: #003064; }
 .aanbod-detail .banner-wrapper {
   margin-right: 15rem;
   margin-left: 4rem; }

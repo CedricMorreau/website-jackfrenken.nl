@@ -17,9 +17,9 @@
 	<body>
 		<div class="page-wrapper aanbod-detail">
 
-			<?php include("../inc/primary-nav.php"); ?>
+			<?php include("../inc_dev/primary-nav.php"); ?>
 
-			<?php include("../inc/aanbod-header.php"); ?>
+			<?php include("../inc_dev/aanbod-header.php"); ?>
 
 			<div class="column-content">
 				
@@ -68,16 +68,56 @@
 				</div>
 			</div>
 
-			<?php include("../inc/aanbod-banner.php"); ?>
+			<?php include("../inc_dev/aanbod-banner.php"); ?>
 
-			<?php include("../inc/footer.php"); ?>
+			<?php include("../inc_dev/footer.php"); ?>
 
 		</div>
 		
-		<?php include("../inc/footer-scripting.php"); ?>
+		<?php include("../inc_dev/footer-scripting.php"); ?>
 
-		<script>
+		<link rel="stylesheet" type="text/css" href="../js/royalslider/royalslider/royalslider.css">
+		<link rel="stylesheet" type="text/css" href="../js/royalslider/royalslider/skins/minimal-white/rs-minimal-white.css">
 
+		<script type="text/javascript" src="../js/royalslider/royalslider/jquery.royalslider.min.js"></script>
+		
+		<script type="text/javascript">
+		
+			// Start royalslider
+			$(document).ready(function($) {
+			  $('#royal-slider').royalSlider({
+				  	autoHeight: true,
+				    arrowsNav: false,
+				    fadeinLoadedSlide: false,
+					fullscreen: {
+						enabled: true,
+						nativeFS: false,
+						buttonFS: true,
+						controlsInside: true
+					},
+				    controlNavigationSpacing: 0,
+				    controlNavigation: 'thumbnails',
+				    thumbs: {
+				        orientation: 'horizonal',
+				        appendSpan: true
+				    },
+				    imageScaleMode: 'fill',
+				    imageAlignCenter: false,
+				    loop: false,
+				    loopRewind: true,
+				    numImagesToPreload: 3,
+				    keyboardNavEnabled: true,
+				    usePreloader: true,
+				    transitionType: 'fade',
+				    transitionSpeed: 100
+
+			
+				});
+
+			});
+		
+			// EINDE ROYALSLIDER
+			
 		</script>
 	</body>
 

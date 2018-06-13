@@ -11,7 +11,7 @@
 	
 	<div class="phone-icon">
 		<a href="tel:0475335225">
-			<img src="/resources/icon-telefoon.svg" alt="telefoon">
+			<img src="../resources/icon-telefoon.svg" alt="telefoon">
 		</a>
 	</div>
 

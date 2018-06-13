@@ -11,6 +11,15 @@
 	</div>
 
 	<div class="content-image">
+		<div class="image-container">
+		
+			<div id="royal-slider" class="royalSlider rsMinW visibleNearby">
+						
+					<a class="rsImg" href="#" data-rsTmb="#" data-rsBigImg="../resources/aanbod-thumb-1.jpg"></a>
+			
+			</div>
+		
+		</div>
 		<div class="image-label status-sold">Nieuw!</div>
 
 	</div>

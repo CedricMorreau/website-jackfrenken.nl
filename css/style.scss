@@ -2102,6 +2102,22 @@ input:focus {
 
 .aanbod-detail {
 
+	.content-image {
+		background-image: none;
+		height: auto;
+		padding-top: 0;
+		padding-bottom: 0;
+		.image-container {
+			height: 100%;
+			.rsFullscreenBtn {
+				top: initial;
+				right: 0rem;
+				bottom: 3px;
+				background-color: $pri-col;
+			}
+		}
+	}
+
 	.banner-wrapper {
 		margin-right: 15rem;
 		margin-left: 4rem;
@@ -2110,6 +2126,8 @@ input:focus {
 			margin-right: 0;
 		}
 	}
+
+
 
 	.scroll-down {
 		color: $pri-col;

@@ -17,7 +17,7 @@
 	<body>
 		<div class="page-wrapper actueel-overzicht">
 
-			<?php include("../inc/primary-nav.php"); ?>
+			<?php include("../inc_dev/primary-nav.php"); ?>
 
 			<?php include("../inc/2-col-header.php"); ?>
 
