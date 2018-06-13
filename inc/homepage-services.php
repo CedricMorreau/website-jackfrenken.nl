@@ -7,7 +7,7 @@
 	
 	<div class="service-wrapper">
 		
-		<a href="#">
+		<a href="<?php echo $template->findPermalink(33, 1); ?>">
 			<div class="service-item">
 				
 				<svg class="icon-svg" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
@@ -19,7 +19,7 @@
 			</div>
 		</a>
 
-		<a href="#">
+		<a href="<?php echo $template->findPermalink(34, 1); ?>">
 			<div class="service-item">
 				<svg class="icon-svg" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
 
@@ -31,7 +31,7 @@
 			</div>
 		</a>
 
-		<a href="#">
+		<a href="<?php echo $template->findPermalink(35, 1); ?>">
 			<div class="service-item">
 				<svg class="icon-svg" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
 
@@ -45,7 +45,7 @@
 			</div>
 		</a>
 
-		<a href="#">
+		<a href="<?php echo $template->findPermalink(36, 1); ?>">
 			<div class="service-item">
 				<svg class="icon-svg" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
 
@@ -57,7 +57,7 @@
 			</div>
 		</a>
 
-		<a href="#">
+		<a href="<?php echo $template->findPermalink(37, 1); ?>">
 			<div class="service-item">
 				<svg class="icon-svg" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
 
@@ -70,7 +70,7 @@
 			</div>
 		</a>
 		
-		<a href="#">
+		<a href="<?php echo $template->findPermalink(61, 1); ?>">
 			<div class="service-item">
 				<svg class="icon-svg" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
 				  <path class="st0" d="M3.1 35c-.6 0-1 .4-1 .8V48c0 .5.5.8 1 .8h4.8c.6 0 1-.4 1-.8V35.8c0-.5-.5-.8-1-.8H3.1zm4.7 15H3.1C2 50 1 49.2 1 48V35.8c0-1 .9-2 2.1-2h4.8c1.1 0 2.1.8 2.1 2V48c0 1.1-1.1 2-2.2 2"/>
@@ -121,54 +121,30 @@
 
 				<div class="select-wrapper">
 					<select>
-						<option value="0" selected="">Prijs vanaf</option>
-						<option value="">€ 0,-</option>
-						<option value="50000">€ 50.000</option>
-						<option value="100000">€ 100.000</option>
-						<option value="150000">€ 150.000</option>
-						<option value="200000">€ 200.000</option>
-						<option value="250000">€ 250.000</option>
-						<option value="300000">€ 300.000</option>
-						<option value="350000">€ 350.000</option>
-						<option value="400000">€ 400.000</option>
-						<option value="450000">€ 450.000</option>
-						<option value="500000">€ 500.000</option>
-						<option value="550000">€ 550.000</option>
-						<option value="600000">€ 600.000</option>
-						<option value="650000">€ 650.000</option>
-						<option value="700000">€ 700.000</option>
-						<option value="750000">€ 750.000</option>
-						<option value="800000">€ 800.000</option>
-						<option value="850000">€ 850.000</option>
-						<option value="900000">€ 900.000</option>
-						<option value="950000">€ 950.000</option>
+						<option value="" selected="">Prijs vanaf</option>						
+						<?php
+						
+						for ($i = 0; $i <= 950000; $i += 50000) {
+							
+							echo '<option value="' . $i . '">&euro; ' . number_format($i, 0, ',', '.') . '</option>';
+						}
+						
+						?>
 					</select>
 				</div>
 				
 				<div class="select-wrapper">
 					<select>
-						<option value="0" selected="">Prijs tot</option>
-						<option value="50000">€ 50.000</option>
-						<option value="100000">€ 100.000</option>
-						<option value="150000">€ 150.000</option>
-						<option value="200000">€ 200.000</option>
-						<option value="250000">€ 250.000</option>
-						<option value="300000">€ 300.000</option>
-						<option value="350000">€ 350.000</option>
-						<option value="400000">€ 400.000</option>
-						<option value="450000">€ 450.000</option>
-						<option value="500000">€ 500.000</option>
-						<option value="550000">€ 550.000</option>
-						<option value="600000">€ 600.000</option>
-						<option value="650000">€ 650.000</option>
-						<option value="700000">€ 700.000</option>
-						<option value="750000">€ 750.000</option>
-						<option value="800000">€ 800.000</option>
-						<option value="850000">€ 850.000</option>
-						<option value="900000">€ 900.000</option>
-						<option value="950000">€ 950.000</option>
-						<option value="1000000">€ 1000.000</option>
-						<option value="">Onbeperkt</option>
+						<option value="" selected="">Prijs tot</option>			
+						<?php
+						
+						for ($i = 50000; $i <= 1000000; $i += 50000) {
+							
+							echo '<option value="' . $i . '">&euro; ' . number_format($i, 0, ',', '.') . '</option>';
+						}
+						
+						?>
+						<option value="max">Onbeperkt</option>
 					</select>
 				</div>
 			</form>
