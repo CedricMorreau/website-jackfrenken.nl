@@ -872,15 +872,15 @@ class Templates {
 				$dataRel = array();
 				
 				foreach ( $navData as $key => $val ) {
+
+					$extraClass = ($val['depth'] != 0) ? ' class="hover-menu-wrapper"' : '';
 					
 					if ($val['depth'] != $lastDepth) {
 						
 						if ($val['depth'] > $lastDepth) {
 							
-							if ($data[1] == 2 || $data[1] == 3)
-								$ulStructure .= '<ul class="hover-menu-wrapper">';
-							else
-								$ulStructure .= '<ul>';
+							$ulStructure .= '<ul' . $extraClass . '>';
+							
 							$dataRel[] = $val['mod_pa_id'];
 						}
 						else {
@@ -1003,11 +1003,20 @@ class Templates {
 					
 					if (isset($data[2], $data[3]) && $data[2] == 'special' && $data[3] == 'bubbles') {
 						
-						$ulStructure .= '<li' . $classLi . '><a href="' . $url . $aAction . '" title="' . $val['mod_pa_nav'] . '"' . $target . '' . $extraAttr . '><span class="bubble"><span>&nbsp;</span></span><span class="text">' . $val['mod_pa_nav'] . '</span></a>';
+						$ulStructure .= '<li' . $classLi . '>';
+						
+						$ulStructure .= '<a href="' . $url . $aAction . '" title="' . $val['mod_pa_nav'] . '"' . $target . '' . $extraAttr . '><span class="bubble"><span>&nbsp;</span></span><span class="text">' . $val['mod_pa_nav'] . '</span></a>';
 					}
 					else {
 						
-						$ulStructure .= '<li' . $classLi . '><a href="' . $url . $aAction . '" title="' . $val['mod_pa_nav'] . '"' . $target . '' . $extraAttr . '>&nbsp;' . $val['mod_pa_nav'] . '</a>';
+						$ulStructure .= '<li' . $classLi . '><a href="' . $url . $aAction . '" title="' . $val['mod_pa_nav'] . '"' . $target . '' . $extraAttr . '>';
+						
+						if (file_exists($documentRoot . 'inc/svg-nav/' . $val['mod_pa_admin_value'] . '.php')) {
+							
+							include($documentRoot . 'inc/svg-nav/' . $val['mod_pa_admin_value'] . '.php');
+						}
+						
+						$ulStructure .= '&nbsp;' . $val['mod_pa_nav'] . '</a>';
 					}
 					
 					if (isset($isDir) && $isDir)
