@@ -767,7 +767,7 @@ class Templates {
 			}
 			
 			// Now build the nav
-			$ulStructure = '<ul>' . PHP_EOL;
+			$ulStructure = '<ul class="sidebar-nav">' . PHP_EOL;
 			
 			$orderArray = array();
 			
@@ -836,7 +836,7 @@ class Templates {
 						$active = str_replace('active', 'active sub', $active);
 				}
 				
-				$ulStructure .= '<li><a' . $active . ' href="' . $url . '" title="' . $val['mod_pa_nav'] . '"' . $target . '>' . $val['mod_pa_nav'] . '</a></li>' . PHP_EOL;
+				$ulStructure .= '<li' . $active . '><a href="' . $url . '" title="' . $val['mod_pa_nav'] . '"' . $target . '>' . $val['mod_pa_nav'] . '</a></li>' . PHP_EOL;
 			}
 			
 			$ulStructure .= '</ul>';
