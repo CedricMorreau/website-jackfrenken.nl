@@ -776,17 +776,17 @@ class Templates {
 			
 			foreach ( $navData as $key => $val ) {
 				
-				if ($prevDepth != $val['depth']) {
-					
-					$sortDepth ++;
-					
-					$prevDepth = $val['depth'];
-				}
-				
-				$key = $val['mod_pa_sortOrder'];
-				
 				if ($val['mod_pa_left'] > $foundLeft && $val['mod_pa_right'] < $foundRight) {
+				
+					if ($prevDepth != $val['depth']) {
+						
+						$sortDepth ++;
+						
+						$prevDepth = $val['depth'];
+					}
 					
+					$key = $val['mod_pa_sortOrder'];
+						
 					$orderArray[$sortDepth . '_' . $key] = $val;
 				}
 			}
