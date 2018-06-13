@@ -1,3 +1,11 @@
+<meta charset="utf-8">
+<title>Jack Frenken Makelaars en adviseurs</title>
+<meta property="og:site_name" content="Jack Frenken Makelaars en adviseurs">
+<meta property="og:title" content="Jack Frenken Makelaars en adviseurs">
+<meta property="og:description" content="Jack Frenken Makelaars en adviseurs">
+<meta name="description" content="Jack Frenken Makelaars en adviseurs">
+<meta name="author" content="Pixelplus Interactieve Media">
+	  	
 <!-- Favicon -->
 <link rel="shortcut icon" href="favicon.ico?v=1" type="image/ico">
 <!-- Enable responsive view -->

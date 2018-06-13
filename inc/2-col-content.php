@@ -1,14 +1,8 @@
 <div class="column-content">
 	
 	<div class="column-sidebar">
-
-		<ul class="sidebar-nav">
-			<li><a href="#">Een huis verkopen</a></li>
-			<li><a href="#">Een huis verkopen</a></li>
-			<li class="active"><a href="">Een huis verkopen &xrarr;</a></li>
-			<li><a href="#">Een huis verkopen</a></li>
-			<li><a href="#">Een huis verkopen</a></li>
-		</ul>
+	
+		<?php echo $template->cmsData('page][navigation/2/subnav/' . $template->findHighestParent() . '/active/' . $template->getPageId()); ?>
 
 		<div class="sidebar-widget">
 			<h3>

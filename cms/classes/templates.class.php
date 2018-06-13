@@ -767,7 +767,7 @@ class Templates {
 			}
 			
 			// Now build the nav
-			$ulStructure = '<ul>' . PHP_EOL;
+			$ulStructure = '<ul class="sidebar-nav">' . PHP_EOL;
 			
 			$orderArray = array();
 			
@@ -776,17 +776,17 @@ class Templates {
 			
 			foreach ( $navData as $key => $val ) {
 				
-				if ($prevDepth != $val['depth']) {
-					
-					$sortDepth ++;
-					
-					$prevDepth = $val['depth'];
-				}
-				
-				$key = $val['mod_pa_sortOrder'];
-				
 				if ($val['mod_pa_left'] > $foundLeft && $val['mod_pa_right'] < $foundRight) {
+				
+					if ($prevDepth != $val['depth']) {
+						
+						$sortDepth ++;
+						
+						$prevDepth = $val['depth'];
+					}
 					
+					$key = $val['mod_pa_sortOrder'];
+						
 					$orderArray[$sortDepth . '_' . $key] = $val;
 				}
 			}
@@ -836,7 +836,7 @@ class Templates {
 						$active = str_replace('active', 'active sub', $active);
 				}
 				
-				$ulStructure .= '<li><a' . $active . ' href="' . $url . '" title="' . $val['mod_pa_nav'] . '"' . $target . '>' . $val['mod_pa_nav'] . '</a></li>' . PHP_EOL;
+				$ulStructure .= '<li' . $active . '><a href="' . $url . '" title="' . $val['mod_pa_nav'] . '"' . $target . '>' . $val['mod_pa_nav'] . '</a></li>' . PHP_EOL;
 			}
 			
 			$ulStructure .= '</ul>';
