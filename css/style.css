@@ -1950,6 +1950,29 @@ input:focus {
     .contact .location-wrapper .location-photo img {
       width: 100%;
       height: auto; }
+.contact .social-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .contact .social-wrapper .social-items {
+    margin-left: auto;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .contact .social-wrapper .social-items a {
+      width: 3rem;
+      display: inline-block;
+      margin-right: 0; }
+      .contact .social-wrapper .social-items a img {
+        width: 100%;
+        height: auto; }
 
 /* Contact form overlay --------------------------------- */
 .a-fadeIn {

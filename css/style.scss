@@ -2305,6 +2305,7 @@ input:focus {
 			}
 
 		}
+		
 		.location-photo {
 			flex: 3;
 			img {
@@ -2312,7 +2313,29 @@ input:focus {
 				height: auto;
 			}
 		}
+
 	}
+
+	.social-wrapper {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		.social-items {
+			margin-left: auto;
+			align-items: center;
+			a {
+				width: 3rem;
+				display: inline-block;
+				margin-right: 0;
+				img {
+					width: 100%;
+					height: auto;
+				}
+			}
+		}
+	}
+
+
 
 
 }

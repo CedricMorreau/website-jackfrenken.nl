@@ -39,6 +39,7 @@
 				<div class="close-overlay-text" data-hook="Contact-closetwo" title="Sluiten">&#xd7; Sluiten</div>
 			</form>
 		</div>
+		
 		<div id="bedankt-melding" style="display: none;">
 		
 			<h2>Bedankt voor uw bericht</h2>
