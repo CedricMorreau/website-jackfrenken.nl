@@ -1218,7 +1218,7 @@ input:focus {
       padding-right: 8rem;
       padding-top: 3rem;
       padding-bottom: 5rem;
-      z-index: 5;
+      z-index: 15;
       background-color: rgba(221, 232, 234, 0.7);
       position: absolute;
       top: 50%;
