@@ -87,7 +87,7 @@
 			$(document).ready(function($) {
 			  $('#royal-slider').royalSlider({
 				  	autoHeight: true,
-				    arrowsNav: false,
+				    arrowsNav: true,
 				    fadeinLoadedSlide: false,
 					fullscreen: {
 						enabled: true,
@@ -96,11 +96,8 @@
 						controlsInside: true
 					},
 				    controlNavigationSpacing: 0,
-				    controlNavigation: 'thumbnails',
-				    thumbs: {
-				        orientation: 'horizonal',
-				        appendSpan: true
-				    },
+				    arrowsNavAutoHide: false,
+				    controlNavigation: 'none',
 				    imageScaleMode: 'fill',
 				    imageAlignCenter: false,
 				    loop: false,

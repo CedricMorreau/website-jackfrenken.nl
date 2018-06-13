@@ -24,12 +24,13 @@ $fon-fam-ter: 'helvetica neue'; //
 
 // Set color variables
 $pri-col: #003064 ; // Dark blue
-$sec-col: #00519B ; // Bright blue
+$sec-col: #00519B ; // Mid blue
 $ter-col: #DAE1ED ; // Light blue
 $qua-col: #2CBCAF ; // Bright green
 $qui-col: #CCE9f5 ; // Brighter blue
 $sen-col: #00519b ; // 90% Dark blue
 $sep-col: #C3C12C ; // Grass green
+$oct-col: #0091D1 ; // Bright blue
 
 
 $lit-col: white;
@@ -125,6 +126,7 @@ input:focus {
 		padding-left: $margin-size-m;
 		@media only screen and (max-width: $container-size-m) {
 			margin-left: 0;
+			margin-right: 1rem;
 			padding-left: $margin-size-s;
 		}
 		img {
@@ -1873,12 +1875,12 @@ input:focus {
 		position: relative;
 
 		.item-overlay-wrapper {	
-			background-color: rgba(221, 232, 234, 0.7);
+			background-color: rgba(218, 225, 237, 0.8);
 			color: $pri-col;
 			padding-top: 3rem;
 			padding-bottom: 5rem;
 			padding-left: 3rem;
-			padding-right: 1rem;
+			padding-right: 2rem;
 			position: absolute;
 			bottom: 0;
 			width: calc(100% + 4rem);
@@ -2008,46 +2010,46 @@ input:focus {
 
 
 .image-label {
-			position: absolute;
-			top: 0;
-			right: 0;
-			font-weight: bold;
-			padding-left: 1.5rem;
-			padding-right: 1.5rem;
-			padding-top: 1.5rem;
-			padding-bottom: 1.5rem;
-			color: $lit-col;
-			z-index: 7;
-			@media only screen and (max-width: $container-size-m) {
-				font-size: 1rem;
-				padding-top: 1rem;
-				padding-bottom: 1rem;
-				padding-left: 1rem;
-				padding-right: 1rem;
-			}
+	position: absolute;
+	top: 0;
+	right: 0;
+	font-weight: bold;
+	padding-left: 1.5rem;
+	padding-right: 1.5rem;
+	padding-top: 1.5rem;
+	padding-bottom: 1.5rem;
+	color: $lit-col;
+	z-index: 7;
+	@media only screen and (max-width: $container-size-m) {
+		font-size: 1rem;
+		padding-top: 0.7rem;
+		padding-bottom: 0.7rem;
+		padding-left: 0.7rem;
+		padding-right: 0.7rem;
+	}
 
-			&.status-new {
-				background-color: $qua-col;
+	&.status-new {
+		background-color: $qua-col;
 
-			}
-			
-			&.status-sold {
-				background-color: $pri-col;
+	}
+	
+	&.status-sold {
+		background-color: $pri-col;
 
-			}
-			
-			&.status-soldsubject {
-				background-color: $pri-col;
-			}
+	}
+	
+	&.status-soldsubject {
+		background-color: $pri-col;
+	}
 
-			&.status-loweredprice {
-				background-color: $qua-col;
-			}
+	&.status-loweredprice {
+		background-color: $qua-col;
+	}
 
-		}
+}
 
 .banner-wrapper {
-	background-color: $pri-col;
+	background-color: $oct-col;
 	color: $lit-col;
 	height: auto;
 	display: flex;
@@ -2101,7 +2103,11 @@ input:focus {
 /* Aanbod detail template ----------------------------------------- */
 
 .aanbod-detail {
-
+	.column-header {
+		.header-title {
+			background-color: rgba(218, 225, 237, 0.8);
+		}
+	}
 	.content-image {
 		background-image: none;
 		height: auto;
@@ -2109,11 +2115,80 @@ input:focus {
 		padding-bottom: 0;
 		.image-container {
 			height: 100%;
+			@media only screen and (max-width: $container-size-m) {
+				margin-bottom: 1rem;
+			}
+			.rsArrowLeft {
+				right: 10rem;
+				height: 5rem;
+				width: 5rem;
+				bottom: 3px;
+				.rsArrowIcn {
+					background-image: none !important;
+					background-color: rgba(0,48,100, 0.1);
+					padding: 0;
+					margin: 0;
+					width: 100%;
+					height: 100%;
+					&:hover {
+						background-color: $pri-col;
+					}
+					&:after {
+						content: "\2190";
+						text-align: center;
+						color: $lit-col;
+						display: block;
+						line-height: 4.5rem;
+					}
+				}
+			}
+
+			.rsArrowRight {
+				height: 5rem;
+				width: 5rem;
+				right: 5rem;
+				bottom: 3px;
+
+				.rsArrowIcn {
+					background-image: none !important;
+					background-color: $oct-col;
+					padding: 0;
+					margin: 0;
+					width: 100%;
+					height: 100%;
+					&:hover {
+						background-color: $pri-col;
+					}
+					&:after {
+						content: "\2192";
+						text-align: center;
+						color: $lit-col;
+						display: block;
+						line-height: 4.5rem;
+					}
+				}
+			}
+
 			.rsFullscreenBtn {
+				display: flex;
+				align-items: center;
 				top: initial;
 				right: 0rem;
 				bottom: 3px;
-				background-color: $pri-col;
+				height: 5rem;
+				width: 5rem;
+				background-color: $ter-col;
+				justify-content: center;
+				.rsFullscreenIcn {
+					&:hover {
+						background-color: $pri-col;
+						opacity: 1 !important;
+					}
+				}
+
+				&:hover {
+					background-color: $pri-col;
+				}
 			}
 		}
 	}
