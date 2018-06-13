@@ -1210,8 +1210,8 @@ input:focus {
     -webkit-box-flex: 0;
         -ms-flex-positive: 0;
             flex-grow: 0;
-    -ms-flex-preferred-size: 20rem;
-        flex-basis: 20rem; }
+    -ms-flex-preferred-size: 25rem;
+        flex-basis: 25rem; }
     @media only screen and (max-width: 768px) {
       .column-header .header-title-wrapper {
         -ms-flex-preferred-size: 0;
@@ -1317,8 +1317,8 @@ input:focus {
     -webkit-box-flex: 0;
         -ms-flex-positive: 0;
             flex-grow: 0;
-    -ms-flex-preferred-size: 20rem;
-        flex-basis: 20rem;
+    -ms-flex-preferred-size: 25rem;
+        flex-basis: 25rem;
     padding-right: 5rem; }
     @media only screen and (max-width: 768px) {
       .column-content .column-sidebar {
@@ -1383,7 +1383,7 @@ input:focus {
     line-height: 1.8rem;
     margin-top: 0; }
     .column-content .column-content .content-wrapper {
-      padding-right: 15rem; }
+      padding-right: 13rem; }
       @media only screen and (max-width: 1200px) {
         .column-content .column-content .content-wrapper {
           padding-right: 2rem; } }
@@ -1911,6 +1911,261 @@ input:focus {
       margin-right: 0; } }
 
 /* Actueel detail ---------------------------------------------- */
+/* Contact ---------------------------------------------------- */
+.contact .content-image {
+  padding-top: 0;
+  padding-bottom: 0;
+  background-image: none;
+  height: auto; }
+.contact .location-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 5rem; }
+  @media only screen and (max-width: 768px) {
+    .contact .location-wrapper {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: reverse;
+          -ms-flex-direction: column-reverse;
+              flex-direction: column-reverse; } }
+  .contact .location-wrapper:last-of-type {
+    margin-bottom: 0; }
+  .contact .location-wrapper .location-details {
+    -webkit-box-flex: 2;
+        -ms-flex: 2;
+            flex: 2; }
+    .contact .location-wrapper .location-details .times-table {
+      border-collapse: collapse;
+      margin-bottom: 1em;
+      margin-left: -0.5rem; }
+      .contact .location-wrapper .location-details .times-table td {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem; }
+      .contact .location-wrapper .location-details .times-table .today {
+        background-color: #DAE1ED; }
+  .contact .location-wrapper .location-photo {
+    -webkit-box-flex: 3;
+        -ms-flex: 3;
+            flex: 3; }
+    .contact .location-wrapper .location-photo img {
+      width: 100%;
+      height: auto; }
+
+/* Contact form overlay --------------------------------- */
+.a-fadeIn {
+  -webkit-animation: fadeIn .25s forwards;
+          animation: fadeIn .25s forwards; }
+
+.a-fadeOut {
+  -webkit-animation: fadeOut .25s;
+          animation: fadeOut .25s; }
+
+.a-fadeDown {
+  -webkit-animation: fadeDown .25s;
+          animation: fadeDown .25s; }
+
+.error {
+  border-color: #00519B !important; }
+
+#bedankt-melding {
+  text-align: center; }
+
+.contact-overlay-wrapper {
+  display: none;
+  background-color: #DAE1ED;
+  z-index: 99;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  color: #003064; }
+  .contact-overlay-wrapper.Contact--show {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    overflow: scroll; }
+  .contact-overlay-wrapper .contact-overlay-container {
+    width: 60vw;
+    padding-top: 5vh;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 100%; }
+    @media only screen and (max-width: 768px) {
+      .contact-overlay-wrapper .contact-overlay-container {
+        width: 70vw; } }
+    @media only screen and (max-width: 480px) {
+      .contact-overlay-wrapper .contact-overlay-container {
+        width: 80vw; } }
+    .contact-overlay-wrapper .contact-overlay-container .contact-content-wrapper {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      margin-bottom: 2rem; }
+      .contact-overlay-wrapper .contact-overlay-container .contact-content-wrapper h2 {
+        -webkit-box-flex: 2;
+            -ms-flex: 2;
+                flex: 2; }
+      .contact-overlay-wrapper .contact-overlay-container .contact-content-wrapper form {
+        -webkit-box-flex: 3;
+            -ms-flex: 3;
+                flex: 3; }
+    .contact-overlay-wrapper .contact-overlay-container h2 {
+      font-size: 4em;
+      margin-right: 1em;
+      margin-top: 0;
+      color: #003064;
+      text-align: right; }
+      @media only screen and (max-width: 480px) {
+        .contact-overlay-wrapper .contact-overlay-container h2 {
+          font-size: 1.5em; } }
+    .contact-overlay-wrapper .contact-overlay-container .label-wrapper {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row; }
+      .contact-overlay-wrapper .contact-overlay-container .label-wrapper input {
+        -webkit-box-flex: 2;
+            -ms-flex: 2;
+                flex: 2; }
+      .contact-overlay-wrapper .contact-overlay-container .label-wrapper label {
+        -webkit-box-flex: 1;
+            -ms-flex: 1;
+                flex: 1;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        font-weight: bold;
+        border: solid 1px white;
+        border-right: 0;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        -ms-flex-negative: 0;
+            flex-shrink: 0;
+        -webkit-box-flex: 0;
+            -ms-flex-positive: 0;
+                flex-grow: 0;
+        -ms-flex-preferred-size: 10rem;
+            flex-basis: 10rem; }
+    .contact-overlay-wrapper .contact-overlay-container input {
+      display: block;
+      border-color: white;
+      background-color: #DAE1ED;
+      color: #003064;
+      font-family: "Titillium Web", sans-serif;
+      font-weight: bold;
+      width: 100%;
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+      border-radius: 0;
+      border: solid 1px white;
+      padding-left: 1em;
+      padding-top: 0.5em;
+      padding-right: 1em;
+      padding-bottom: 1em; }
+      .contact-overlay-wrapper .contact-overlay-container input::-webkit-input-placeholder {
+        color: #003064;
+        font-family: "bodoni-bold";
+        font-weight: normal; }
+      .contact-overlay-wrapper .contact-overlay-container input:-ms-input-placeholder {
+        color: #003064;
+        font-family: "bodoni-bold";
+        font-weight: normal; }
+      .contact-overlay-wrapper .contact-overlay-container input::-ms-input-placeholder {
+        color: #003064;
+        font-family: "bodoni-bold";
+        font-weight: normal; }
+      .contact-overlay-wrapper .contact-overlay-container input::placeholder {
+        color: #003064;
+        font-family: "bodoni-bold";
+        font-weight: normal; }
+      .contact-overlay-wrapper .contact-overlay-container input[type="submit"] {
+        margin-top: 1em;
+        background-color: #2CBCAF;
+        color: white;
+        border: none; }
+        .contact-overlay-wrapper .contact-overlay-container input[type="submit"]:hover {
+          color: white;
+          background-color: #003064;
+          cursor: pointer;
+          border: none; }
+    .contact-overlay-wrapper .contact-overlay-container textarea {
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+      width: 100%;
+      height: 15rem;
+      -webkit-appearance: none;
+      padding-left: 1em;
+      padding-right: 1em;
+      padding-top: 0.5em;
+      padding-bottom: 0.5em;
+      background: #DAE1ED;
+      border-color: white;
+      border: solid 1px white;
+      color: #003064;
+      font-family: "Titillium Web", sans-serif;
+      font-weight: normal; }
+      @media only screen and (max-width: 480px) {
+        .contact-overlay-wrapper .contact-overlay-container textarea {
+          height: 7em; } }
+      .contact-overlay-wrapper .contact-overlay-container textarea::-webkit-input-placeholder {
+        color: #003064;
+        font-family: "Titillium Web", sans-serif;
+        font-weight: bold; }
+      .contact-overlay-wrapper .contact-overlay-container textarea:-ms-input-placeholder {
+        color: #003064;
+        font-family: "Titillium Web", sans-serif;
+        font-weight: bold; }
+      .contact-overlay-wrapper .contact-overlay-container textarea::-ms-input-placeholder {
+        color: #003064;
+        font-family: "Titillium Web", sans-serif;
+        font-weight: bold; }
+      .contact-overlay-wrapper .contact-overlay-container textarea::placeholder {
+        color: #003064;
+        font-family: "Titillium Web", sans-serif;
+        font-weight: bold; }
+    .contact-overlay-wrapper .contact-overlay-container .close-overlay {
+      position: absolute;
+      right: 2em;
+      top: 2em;
+      fill: #003064;
+      text-decoration: none;
+      width: 2em;
+      height: 2em; }
+      .contact-overlay-wrapper .contact-overlay-container .close-overlay:hover {
+        fill: #2CBCAF;
+        cursor: pointer; }
+    .contact-overlay-wrapper .contact-overlay-container .close-overlay-text {
+      text-align: center;
+      text-decoration: none;
+      margin-top: 1rem;
+      padding-bottom: 2em; }
+      @media only screen and (max-width: 480px) {
+        .contact-overlay-wrapper .contact-overlay-container .close-overlay-text {
+          margin-top: 3vh; } }
+      .contact-overlay-wrapper .contact-overlay-container .close-overlay-text:hover {
+        color: #2CBCAF;
+        cursor: pointer; }
+
 /* mediaquery example
 @media only screen and (max-width: $container-size-s) {
 

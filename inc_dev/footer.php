@@ -1,3 +1,5 @@
+<?php include("../inc_dev/contact-overlay.php"); ?>
+
 <section class="quote-wrapper">
 	<div class="quote-beeldmerk">
 		<img src="/resources/jf_beeldmerk-s.png">

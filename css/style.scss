@@ -31,7 +31,9 @@ $qui-col: #CCE9f5 ; // Brighter blue
 $sen-col: #00519b ; // 90% Dark blue
 $sep-col: #C3C12C ; // Grass green
 $oct-col: #0091D1 ; // Bright blue
+$non-col: #DAE1ED ; // Lila overlay color
 
+$overlay-col: rgba(218, 225, 237, 0.8); // overlay RGBA color
 $overlay-col: rgba(218, 225, 237, 0.8); // overlay RGBA color
 
 
@@ -1400,7 +1402,7 @@ input:focus {
 		flex: 1;
 		flex-shrink: 0;
 		flex-grow: 0;
-		flex-basis: 20rem;
+		flex-basis: 25rem;
 		@media only screen and (max-width: $container-size-m) {
 			flex-basis: 0;
 		}
@@ -1508,7 +1510,7 @@ input:focus {
 		flex: 1;
 		flex-shrink: 0;
 		flex-grow: 0;
-		flex-basis: 20rem;
+		flex-basis: 25rem;
 		@media only screen and (max-width: $container-size-m) {
 			flex-basis: 0;
 		}
@@ -1599,7 +1601,7 @@ input:focus {
 		margin-top: 0;
 
 		.content-wrapper {
-			padding-right: 15rem;
+			padding-right: 13rem;
 			@media only screen and (max-width: $container-size-l) {
 				padding-right: $margin-size-m;
 			}
@@ -2265,6 +2267,250 @@ input:focus {
 /* Actueel detail ---------------------------------------------- */
 
 
+/* Contact ---------------------------------------------------- */
+
+.contact {
+	.content-image {
+		padding-top: 0;
+		padding-bottom: 0;
+		background-image: none;
+		height: auto;
+	}
+
+	.location-wrapper {
+		display: flex;
+		@media only screen and (max-width: $container-size-m) {
+			flex-direction: column-reverse;
+		}
+
+		margin-bottom: 5rem;
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+		
+		.location-details {
+			flex: 2;
+			.times-table {
+				border-collapse: collapse;
+				margin-bottom: 1em;
+				margin-left: -0.5rem;
+				td {
+					padding-left: 0.5rem;
+					padding-right: 0.5rem;
+				}
+				.today {
+					background-color: $ter-col;
+
+				}
+			}
+
+		}
+		.location-photo {
+			flex: 3;
+			img {
+				width: 100%;
+				height: auto;
+			}
+		}
+	}
+
+
+}
+/* Contact form overlay --------------------------------- */
+
+.a-fadeIn {
+	animation: fadeIn .25s forwards;
+}
+
+.a-fadeOut {
+	animation: fadeOut .25s;
+}
+
+
+.a-fadeDown {
+	animation: fadeDown .25s;
+}
+
+.error {
+	border-color: $sec-col !important; 
+}
+
+#bedankt-melding {
+	text-align: center;
+}
+
+.contact-overlay-wrapper {
+	display: none; // Toggle with JS
+	//display: block; // debug mode
+	background-color: $non-col;
+	z-index: 99;
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	color: $pri-col;
+	// needed for js toggle
+	&.Contact--show {
+		display: flex;
+		flex-direction: column;
+		overflow: scroll;
+	}
+	
+	.contact-overlay-container {
+		width: 60vw;
+		padding-top: 5vh;
+		@media only screen and (max-width: $container-size-m) {
+			width: 70vw;
+		}
+
+		@media only screen and (max-width: $container-size-s) {
+			width: 80vw;
+		}
+
+		margin: 0 auto;
+		display: flex;
+		align-items: center;
+		height: 100%;
+		.contact-content-wrapper {
+			display: flex;
+			flex-direction: row;
+			margin-bottom: 2rem;	
+			h2 {
+				flex: 2;
+			}
+			form {
+				flex: 3;
+			}
+		}
+
+		h2 {
+			font-size: 4em;
+			margin-right: 1em;
+			margin-top: 0;
+			color: $pri-col;
+			text-align: right;
+			@media only screen and (max-width: $container-size-s) {
+				font-size: 1.5em;
+			}
+		}
+		.label-wrapper {
+			display: flex;
+			flex-direction: row;
+			input {
+				flex: 2;
+			}
+			label {
+				flex: 1;
+				display: flex;
+				align-items: center;
+				font-weight: bold;
+				border: solid 1px $lit-col;
+				border-right: 0;
+				padding-left: 1rem;
+				padding-right: 1rem;
+				flex-shrink: 0;
+				flex-grow: 0;
+				flex-basis: 10rem;
+			}
+		}
+
+		input {
+			display: block;
+			border-color: $lit-col;
+			background-color: $non-col;
+			color: $pri-col;
+			font-family: $fon-fam-pri;
+			font-weight: bold;
+			width: 100%;
+			box-sizing: border-box;
+			border-radius: 0;
+			border: solid 1px $lit-col;
+			padding-left: 1em;
+			padding-top: 0.5em;
+			padding-right: 1em;
+			padding-bottom: 1em;
+
+			&::placeholder {
+				color: $pri-col;
+				font-family: $fon-fam-sec;
+				font-weight: normal;
+			}
+
+			&[type="submit"] {
+				margin-top: 1em;
+				background-color: $qua-col;
+				color: $lit-col;
+				border: none;
+
+				&:hover{
+					color: $lit-col;
+					background-color: $pri-col;
+					cursor: pointer;
+					border: none;
+				}
+			}
+		}
+
+		textarea {
+			box-sizing: border-box;
+			width: 100%;
+			height: 15rem;
+			-webkit-appearance: none;
+			@media only screen and (max-width: $container-size-s) {
+				height: 7em;
+			}
+			padding-left: 1em;
+			padding-right: 1em;
+			padding-top: 0.5em;
+			padding-bottom: 0.5em;
+			background: $non-col;
+			border-color: $lit-col;
+			border: solid 1px $lit-col;
+			color: $pri-col;
+			font-family: $fon-fam-pri;
+			font-weight: normal;
+
+			&::placeholder {
+				color: $pri-col;
+				font-family: $fon-fam-pri;
+				font-weight: bold;
+			}
+
+		}
+
+
+		.close-overlay{
+			position: absolute;
+			right: 2em;
+			top: 2em;
+			fill: $pri-col;
+			text-decoration: none;
+
+			&:hover {
+				fill: $qua-col;
+				cursor: pointer;
+			}
+
+			width: 2em;
+			height: 2em;
+		}
+
+		.close-overlay-text {
+			text-align: center;
+			text-decoration: none;
+			margin-top: 1rem;
+			padding-bottom: 2em;
+			@media only screen and (max-width: $container-size-s) {
+				margin-top: 3vh;
+			}
+			&:hover {
+				color: $qua-col;
+				cursor: pointer;
+			}
+		}
+	}
+}
 
 /* mediaquery example
 @media only screen and (max-width: $container-size-s) {
