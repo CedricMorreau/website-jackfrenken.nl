@@ -3,9 +3,10 @@
 		<div class="item-image">
 			&nbsp;
 		</div>
-		<a href="#" class="item-button">&xrarr;</a>
+		<div class="hover-overlay"></div>
+		<a href="actueel-detail.php" class="item-button">&xrarr;</a>
 	</div>
 	
-	<p class="item-title"><a href="#">Verkoop Neldervelt gestart!</a></p>
+	<p class="item-title"><a href="actueel-detail.php">Verkoop Neldervelt gestart!</a></p>
 
 </div>

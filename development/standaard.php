@@ -17,18 +17,18 @@
 	<body>
 		<div class="page-wrapper">
 
-			<?php include("../inc/primary-nav.php"); ?>
+			<?php include("../inc_dev/primary-nav.php"); ?>
 
 			<?php include("../inc/2-col-header.php"); ?>
 
 			<?php include("../inc/2-col-content.php"); ?>
 
 
-			<?php include("../inc/footer.php"); ?>
+			<?php include("../inc_dev/footer.php"); ?>
 
 		</div>
 		
-		<?php include("../inc/footer-scripting.php"); ?>
+		<?php include("../inc_dev/footer-scripting.php"); ?>
 
 		<script>
 
