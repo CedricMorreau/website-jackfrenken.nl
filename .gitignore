@@ -1,0 +1,15 @@
+# Eclipse zaken
+.project
+.buildpath
+.settings/*
+
+# Exclude cache folder
+data/cache/auto/*
+data/cache/banners/dynamic/*
+cms/data/
+upload/
+
+# Exclude OS files
+.DS_Store
+.DS_Store?
+Thumbs.db
