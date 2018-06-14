@@ -2230,8 +2230,98 @@ input:focus {
         cursor: pointer; }
 
 /* Zoekersformulier -------------------------------------- */
+.zoekersformulier .column-content .column-content .content-wrapper {
+  margin-right: 0;
+  padding-right: 0;
+  width: 100%; }
+.zoekersformulier form {
+  width: 100%;
+  font-size: 0; }
+.zoekersformulier input {
+  font-size: 1rem; }
+.zoekersformulier select {
+  font-size: 1rem; }
+.zoekersformulier label {
+  font-size: 1rem; }
 .zoekersformulier .subtitle {
   font-weight: bold; }
+.zoekersformulier .title-row-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem; }
+  .zoekersformulier .title-row-wrapper .title-text {
+    -webkit-box-flex: 0;
+        -ms-flex-positive: 0;
+            flex-grow: 0;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    -ms-flex: 0;
+        flex: 0;
+    font-size: 1rem;
+    font-weight: bold;
+    white-space: nowrap;
+    margin-right: 1.5rem; }
+  .zoekersformulier .title-row-wrapper .title-line {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    -ms-flex: 2;
+        flex: 2;
+    height: 2px;
+    background-color: #003064; }
+.zoekersformulier .name-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .zoekersformulier .name-row label {
+    margin-right: 1rem; }
+.zoekersformulier .contactgegevens-row div {
+  display: inline; }
+.zoekersformulier .contactgegevens-row a {
+  font-size: 1rem; }
+.zoekersformulier .plaats-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .zoekersformulier .plaats-row select {
+    width: 100%; }
+  .zoekersformulier .plaats-row .control-arrows-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row; }
+    .zoekersformulier .plaats-row .control-arrows-wrapper div {
+      -webkit-box-flex: 1;
+          -ms-flex: 1;
+              flex: 1; }
+      .zoekersformulier .plaats-row .control-arrows-wrapper div a {
+        text-decoration: none; }
+.zoekersformulier .form-item {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-right: 1rem; }
+  .zoekersformulier .form-item:last-of-type {
+    margin-right: 0; }
+.zoekersformulier .size10 {
+  width: 10%; }
+.zoekersformulier .size15 {
+  width: 15%; }
+.zoekersformulier .size20 {
+  width: 20%; }
+.zoekersformulier .size25 {
+  width: 25%; }
+.zoekersformulier .size30 {
+  width: 30%; }
+.zoekersformulier .size40 {
+  width: 40%; }
 
 /* mediaquery example
 @media only screen and (max-width: $container-size-s) {
@@ -2246,4 +2336,5 @@ input:focus {
 }
 
 */
+
 /*# sourceMappingURL=style.css.map */
