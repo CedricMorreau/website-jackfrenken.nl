@@ -4,15 +4,15 @@
 		<div class="item-overlay-wrapper">
 			
 			<p class="item-title">
-				<a href="aanbod-detail.php">Kelpen-Oler</a>
+				<a href="<?php echo $template->findPermalink(38, 1); ?>">Kelpen-Oler</a>
 			</p>
 			
 			<p class="item-subtitle">
-				<a href="aanbod-detail.php">Vraagprijs &euro; 259.500,- k.k.</a>
+				<a href="<?php echo $template->findPermalink(38, 1); ?>">Vraagprijs &euro; 259.500,- k.k.</a>
 			</p>
 
 			<p class="item-bold-title">
-				<a href="aanbod-detail.php">Grathemerweg 40</a>
+				<a href="<?php echo $template->findPermalink(38, 1); ?>">Grathemerweg 40</a>
 			</p>
 
 			<p class="item-sub-subtitle">Eensgezinswoning, vrijstaande woning met zwembad en dakterras.</p>
@@ -23,8 +23,8 @@
 	</div>
 
 	<div class="item-image">
-		<a href="aanbod-detail.php">
-			<img src="../resources/aanbod-thumb-1.jpg">
+		<a href="<?php echo $template->findPermalink(38, 1); ?>">
+			<img src="<?php echo $dynamicRoot; ?>resources/aanbod-thumb-1.jpg">
 			<div class="image-label status-sold">Nieuw!</div>
 			<div class="hover-overlay"></div>
 		</a>

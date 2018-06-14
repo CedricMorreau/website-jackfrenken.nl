@@ -15,7 +15,7 @@
 		
 			<div id="royal-slider" class="royalSlider rsMinW visibleNearby">
 						
-					<a class="rsImg" href="#" data-rsTmb="#" data-rsBigImg="../resources/aanbod-thumb-1.jpg"></a>
+					<a class="rsImg" href="#" data-rsTmb="#" data-rsBigImg="<?php echo $dynamicRoot; ?>resources/aanbod-thumb-1.jpg"></a>
 			
 			</div>
 		
