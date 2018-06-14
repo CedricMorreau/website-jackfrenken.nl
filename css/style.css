@@ -919,7 +919,7 @@ input:focus {
 .quote-wrapper {
   min-height: 20rem;
   height: auto;
-  margin-top: 4rem;
+  margin-top: 3rem;
   padding-bottom: 4rem;
   background-color: #CCE9f5; }
   .quote-wrapper .quote-beeldmerk {
@@ -1157,7 +1157,7 @@ input:focus {
     font-size: inherit;
     margin-right: 1rem;
     text-decoration: none;
-    margin-right: 2rem; }
+    margin-right: 0.5rem; }
     @media only screen and (max-width: 768px) {
       .secondary-footer .links-wrapper a {
         display: block;
@@ -1227,7 +1227,8 @@ input:focus {
       top: 50%;
       -webkit-transform: translate(0, -50%);
               transform: translate(0, -50%);
-      max-width: 50rem; }
+      max-width: 50rem;
+      min-width: 40rem; }
       @media only screen and (max-width: 768px) {
         .column-header .header-title-wrapper .header-title {
           position: relative;
@@ -1292,7 +1293,7 @@ input:focus {
       -ms-flex-direction: row;
           flex-direction: row;
   margin-top: 3rem;
-  margin-bottom: 3rem; }
+  margin-bottom: 1rem; }
   @media only screen and (max-width: 768px) {
     .column-content {
       -webkit-box-orient: vertical;
@@ -1336,7 +1337,8 @@ input:focus {
       margin-left: 4rem;
       margin-bottom: 3rem;
       font-weight: bold;
-      line-height: 2rem; }
+      line-height: 2rem;
+      list-style: none; }
       @media only screen and (max-width: 768px) {
         .column-content .column-sidebar .sidebar-nav {
           margin-left: 0; } }
@@ -1344,6 +1346,8 @@ input:focus {
         color: #2CBCAF; }
         .column-content .column-sidebar .sidebar-nav li.active a {
           color: #2CBCAF; }
+      .column-content .column-sidebar .sidebar-nav li.sub {
+        margin-left: 1.5rem; }
       .column-content .column-sidebar .sidebar-nav li a {
         text-decoration: none;
         white-space: nowrap;
@@ -1353,17 +1357,23 @@ input:focus {
           color: #2CBCAF; }
     .column-content .column-sidebar .sidebar-widget {
       margin-left: 4rem;
+      margin-bottom: 2rem;
       background: #0091D1;
       padding-left: 2rem;
       padding-right: 2rem;
       padding-top: 1.5rem;
-      padding-bottom: 0.5rem; }
+      padding-bottom: 0.5rem;
+      color: white; }
       @media only screen and (max-width: 768px) {
         .column-content .column-sidebar .sidebar-widget {
           margin-left: 0;
           padding-left: 1rem; } }
+      .column-content .column-sidebar .sidebar-widget:last-of-type {
+        margin-bottom: 0; }
       .column-content .column-sidebar .sidebar-widget h3 {
-        margin-top: 0; }
+        margin-top: 0;
+        color: white;
+        font-size: 1.5rem; }
         .column-content .column-sidebar .sidebar-widget h3 a {
           font-size: 1.5rem;
           color: white;
@@ -1392,7 +1402,7 @@ input:focus {
           padding-left: 1rem;
           padding-right: 1rem; } }
       .column-content .column-content .content-wrapper h2 {
-        font-size: 3rem;
+        font-size: 2.5rem;
         line-height: 3rem;
         margin-top: 0;
         padding-top: 0; }
@@ -1401,14 +1411,27 @@ input:focus {
             margin-top: 2rem;
             font-size: 2rem;
             word-break: break-word; } }
+      .column-content .column-content .content-wrapper h3 {
+        font-size: 1.5rem;
+        padding-bottom: 0;
+        margin-bottom: 0; }
       .column-content .column-content .content-wrapper .intro {
         font-weight: bold; }
       .column-content .column-content .content-wrapper p ul {
-        margin-left: 1rem;
-        font-weight: bold; }
+        margin-left: 1rem; }
+      .column-content .column-content .content-wrapper p a {
+        font-size: inherit; }
+        .column-content .column-content .content-wrapper p a:hover {
+          color: #2CBCAF; }
       .column-content .column-content .content-wrapper ul {
-        margin-left: 1rem;
-        font-weight: bold; }
+        margin-left: 1rem; }
+      .column-content .column-content .content-wrapper hr {
+        color: #CCE9f5;
+        border-color: #CCE9f5;
+        background-color: #CCE9f5;
+        height: 1px;
+        outline: 0;
+        border: none; }
       .column-content .column-content .content-wrapper .attention-block {
         background-color: #DAE1ED;
         padding-top: 3rem;
@@ -1432,8 +1455,8 @@ input:focus {
         background: #2CBCAF;
         color: white;
         text-decoration: none;
-        padding-top: 0.3rem;
-        padding-bottom: 0.3rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
         padding-left: 1.5rem;
         padding-right: 1.5rem; }
         @media only screen and (max-width: 768px) {
@@ -1444,7 +1467,8 @@ input:focus {
         .column-content .column-content .content-wrapper .cta-button .arrow {
           margin-left: 2rem; }
         .column-content .column-content .content-wrapper .cta-button:hover {
-          background-color: #003064; }
+          background-color: #003064;
+          color: white; }
 
 /* Actueel overzicht ------------------------------- */
 .actueel-overzicht .column-content .column-content .content-wrapper {

@@ -1101,7 +1101,7 @@ input:focus {
 .quote-wrapper {
 	min-height: 20rem;
 	height: auto;
-	margin-top: 4rem;
+	margin-top: 3rem;
 	padding-bottom: 4rem;
 	background-color: $qui-col;
 
@@ -1342,7 +1342,7 @@ input:focus {
 			font-size: inherit;
 			margin-right: 1rem;
 			text-decoration: none;
-			margin-right: 2rem;
+			margin-right: 0.5rem;
 			@media only screen and (max-width: $container-size-m) {
 				display: block;
 				font-size: 1.2rem;
@@ -1419,6 +1419,8 @@ input:focus {
 			top: 50%;
     		transform: translate(0, -50%);
     		max-width: 50rem;
+   			min-width: 40rem;
+
   			@media only screen and (max-width: $container-size-m) {
 				position: relative;
 				top: 0;
@@ -1497,7 +1499,7 @@ input:focus {
 	height: auto;
 	flex-direction: row;
 	margin-top: 3rem;
-	margin-bottom: 3rem;
+	margin-bottom: 1rem;
 	@media only screen and (max-width: $container-size-m) {
 		flex-direction: column-reverse;
 		margin-top: 2rem;
@@ -1533,6 +1535,7 @@ input:focus {
 			margin-bottom: 3rem;
 			font-weight: bold;
 			line-height: 2rem;
+			list-style: none;
 
 			@media only screen and (max-width: $container-size-m) {
 				margin-left: 0;
@@ -1544,6 +1547,10 @@ input:focus {
 					a {
 						color: $qua-col;
 					}
+				}
+
+				&.sub {
+					margin-left: 1.5rem;
 				}
 
 				a {
@@ -1560,18 +1567,26 @@ input:focus {
 
 		.sidebar-widget {
 			margin-left: 4rem;
+			margin-bottom: 2rem;
 			background: $oct-col;
 			padding-left: 2rem;
 			padding-right: 2rem;
 			padding-top: 1.5rem;
 			padding-bottom:0.5rem;
+			color: $lit-col;
 			@media only screen and (max-width: $container-size-m) {
 				margin-left: 0;
 				padding-left: $margin-size-s;
 			}
 
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+
 			h3 {
 				margin-top: 0;
+				color: $lit-col;
+				font-size: 1.5rem;
 				a {
 					font-size: 1.5rem;
 					color: $lit-col;
@@ -1612,7 +1627,7 @@ input:focus {
 			}
 			
 			h2 {
-				font-size: 3rem;
+				font-size: 2.5rem;
 				line-height: 3rem;
 				margin-top: 0;
 				padding-top: 0;
@@ -1621,6 +1636,12 @@ input:focus {
 					font-size: 2rem;
 					word-break: break-word;
 				}
+			}
+
+			h3 {
+				font-size: 1.5rem;
+				padding-bottom: 0;
+				margin-bottom: 0;
 			}
 
 			.intro {
@@ -1632,13 +1653,26 @@ input:focus {
 			p {
 				ul {
 					margin-left: 1rem;
-					font-weight: bold;
+				}
+				a {
+					font-size: inherit;
+					&:hover {
+						color: $qua-col;
+					}
 				}
 			}
 			
 			ul {
 				margin-left: 1rem;
-				font-weight: bold;
+			}
+
+			hr {
+				color: $qui-col;
+				border-color: $qui-col;
+				background-color: $qui-col;
+				height: 1px;
+				outline: 0;
+				border: none;
 			}
 			
 			.attention-block {
@@ -1668,8 +1702,8 @@ input:focus {
 				background: $qua-col;
 				color: $lit-col;
 				text-decoration: none;
-				padding-top: 0.3rem;
-				padding-bottom: 0.3rem;
+				padding-top: 0.5rem;
+				padding-bottom: 0.5rem;
 				padding-left: 1.5rem;
 				padding-right: 1.5rem;
 				@media only screen and (max-width: $container-size-m) {
@@ -1684,6 +1718,7 @@ input:focus {
 
 				&:hover {
 					background-color: $pri-col;
+					color: $lit-col;
 				}
 			}
 		}
