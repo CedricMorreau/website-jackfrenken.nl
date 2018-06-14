@@ -1393,6 +1393,7 @@ input:focus {
           padding-right: 1rem; } }
       .column-content .column-content .content-wrapper h2 {
         font-size: 3rem;
+        line-height: 3rem;
         margin-top: 0;
         padding-top: 0; }
         @media only screen and (max-width: 768px) {
@@ -1925,9 +1926,9 @@ input:focus {
   @media only screen and (max-width: 768px) {
     .contact .location-wrapper {
       -webkit-box-orient: vertical;
-      -webkit-box-direction: reverse;
-          -ms-flex-direction: column-reverse;
-              flex-direction: column-reverse; } }
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; } }
   .contact .location-wrapper:last-of-type {
     margin-bottom: 0; }
   .contact .location-wrapper .location-details {
@@ -1960,12 +1961,32 @@ input:focus {
           flex-direction: row;
   -webkit-box-align: center;
       -ms-flex-align: center;
-          align-items: center; }
+          align-items: center;
+  font-weight: bold; }
+  @media only screen and (max-width: 768px) {
+    .contact .social-wrapper {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      text-align: left;
+      -webkit-box-align: start;
+          -ms-flex-align: start;
+              align-items: flex-start; } }
   .contact .social-wrapper .social-items {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     margin-left: auto;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center; }
+    @media only screen and (max-width: 768px) {
+      .contact .social-wrapper .social-items {
+        margin-left: 0;
+        margin-top: 1rem; } }
+    .contact .social-wrapper .social-items span {
+      margin-right: 1rem; }
     .contact .social-wrapper .social-items a {
       width: 3rem;
       display: inline-block;
@@ -2051,7 +2072,8 @@ input:focus {
       margin-right: 1em;
       margin-top: 0;
       color: #003064;
-      text-align: right; }
+      text-align: right;
+      line-height: 3rem; }
       @media only screen and (max-width: 480px) {
         .contact-overlay-wrapper .contact-overlay-container h2 {
           font-size: 1.5em; } }

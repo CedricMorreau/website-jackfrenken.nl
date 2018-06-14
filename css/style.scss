@@ -1613,6 +1613,7 @@ input:focus {
 			
 			h2 {
 				font-size: 3rem;
+				line-height: 3rem;
 				margin-top: 0;
 				padding-top: 0;
 				@media only screen and (max-width: $container-size-m) {
@@ -2270,6 +2271,7 @@ input:focus {
 /* Contact ---------------------------------------------------- */
 
 .contact {
+
 	.content-image {
 		padding-top: 0;
 		padding-bottom: 0;
@@ -2280,7 +2282,7 @@ input:focus {
 	.location-wrapper {
 		display: flex;
 		@media only screen and (max-width: $container-size-m) {
-			flex-direction: column-reverse;
+			flex-direction: column;
 		}
 
 		margin-bottom: 5rem;
@@ -2320,9 +2322,26 @@ input:focus {
 		display: flex;
 		flex-direction: row;
 		align-items: center;
+		font-weight: bold;
+		@media only screen and (max-width: $container-size-m) {
+			flex-direction: column;
+			text-align: left;
+			align-items: flex-start;
+		}
+
 		.social-items {
+			display: flex;
 			margin-left: auto;
 			align-items: center;
+			@media only screen and (max-width: $container-size-m) {
+				margin-left: 0;
+				margin-top: 1rem;
+			}
+
+			span {
+				margin-right: 1rem;
+			}
+
 			a {
 				width: 3rem;
 				display: inline-block;
@@ -2333,6 +2352,7 @@ input:focus {
 				}
 			}
 		}
+
 	}
 
 
@@ -2413,6 +2433,8 @@ input:focus {
 			margin-top: 0;
 			color: $pri-col;
 			text-align: right;
+			line-height: 3rem;
+
 			@media only screen and (max-width: $container-size-s) {
 				font-size: 1.5em;
 			}

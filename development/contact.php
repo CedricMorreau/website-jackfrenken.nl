@@ -37,7 +37,7 @@
 						
 						<div class="location-wrapper">
 							<div class="location-details">
-								<h2>Locatie roermond</h2>
+								<h2>Locatie Roermond</h2>
 								<p>
 									<a href="https://goo.gl/maps/GV5NHHQMrQC2" target="_blank">
 									Graaf Reinaldstraat 1<br>
@@ -96,7 +96,7 @@
 
 						<div class="location-wrapper">
 							<div class="location-details">
-								<h2>Locatie roermond</h2>
+								<h2>Locatie Roermond</h2>
 								<p>
 									<a href="https://goo.gl/maps/GV5NHHQMrQC2" target="_blank">
 									Graaf Reinaldstraat 1<br>
@@ -153,7 +153,7 @@
 
 						<div class="social-wrapper">
 							<div>Kvk-nummer: 13030522</div>
-							<div class="social-items">Volg ons: 		
+							<div class="social-items"><span>Volg ons:</span>
 								<a href="https://www.facebook.com/jackfrenken" title="Facebook"><img src="/resources/social_facebook.svg" alt="Facebook"></a>
 
 								<a href="https://twitter.com/JackFrenkenNVM"><img src="/resources/social_twitter.svg" alt="Twitter" title="Twitter"></a>
