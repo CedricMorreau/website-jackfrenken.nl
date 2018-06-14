@@ -190,7 +190,6 @@ input:focus {
 			@media only screen and (max-width: $container-size-m) {
 				margin-right: 0;
 			}
-
 			> li {
 				display: inline-flex;
 				margin-right: 1.3rem;
@@ -235,6 +234,123 @@ input:focus {
 
 				}
 
+				> ul {
+					background-color: $qua-col;
+					width: auto;
+					height: auto;
+					flex-direction: column;
+					flex-wrap: wrap;
+					position: absolute;
+					z-index: 50;
+					padding-left: 4rem;
+					padding-right: 4rem;
+					padding-top: 3rem;
+					padding-bottom: 2rem;
+					margin-top: 2.45rem;
+					margin-right: 4rem;
+					//display: flex;
+					display: none; // toggle with JS
+					
+					&.open {
+						display: flex;
+					}
+
+					li {
+						color: $lit-col;
+						width: 100%;
+						margin-bottom: 2rem;
+
+						display: flex;
+						flex-direction: column;
+						align-items: center;
+						
+						a {
+							display: flex;
+							flex-direction: column;
+							align-items: center;
+							color: $lit-col;
+							text-decoration: none;
+							font-size: 1.3rem;
+						}
+					}
+
+					@media only screen and (max-width: $container-size-m) {
+						display: none;
+					}
+					
+					// &.menu-44 {
+					// 	display: flex; // debug
+					// }
+
+					&.menu-33 {
+						background-color: $qua-col;
+						width: auto;
+						height: auto;
+						flex-direction: row;
+						flex-wrap: wrap;
+						position: absolute;
+						z-index: 50;
+						padding-left: 4rem;
+						padding-right: 4rem;
+						padding-top: 3rem;
+						padding-bottom: 2rem;
+						margin-top: 2.45rem;
+						margin-right: 4rem;
+						//display: flex;
+
+						display: none; // toggle with JS
+
+						// IE11 temp fix
+						@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+						    margin-left: -6.2rem;
+						}
+
+						&.open {
+							display: flex;
+						}
+
+
+						@media only screen and (max-width: $container-size-m) {
+							display: none;
+						}
+
+						li {
+							color: $lit-col;
+							width: 33.333%;
+							margin-bottom: 3rem;
+
+							display: flex;
+							flex-direction: column;
+							align-items: center;
+							
+							a {
+								display: flex;
+								flex-direction: column;
+								align-items: center;
+								color: $lit-col;
+								text-decoration: none;
+								font-size: 1.3rem;
+
+								svg {
+									fill: $pri-col;
+									width: 4rem;
+									height: 4rem;
+									padding-left: 0.5rem;
+									padding-right: 0.5rem;
+									margin-bottom: 1rem;
+								}
+
+								&:hover {
+									color: $lit-col;
+									svg {
+										fill: $lit-col;
+									}
+								}
+							}
+						}
+
+					}
+				}
 
 			}
 		}
@@ -273,75 +389,6 @@ input:focus {
 		}
 	}
 
-// sub-menu for desktop
-.hover-menu-wrapper {
-	background-color: $qua-col;
-	width: auto;
-	height: auto;
-	flex-direction: row;
-	flex-wrap: wrap;
-	position: absolute;
-	z-index: 50;
-	padding-left: 4rem;
-	padding-right: 4rem;
-	padding-top: 3rem;
-	padding-bottom: 2rem;
-	margin-top: 2.45rem;
-	margin-right: 4rem;
-	//display: flex;
-
-	display: none; // toggle with JS
-
-	// IE11 temp fix
-	@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-	    margin-left: -6.2rem;
-	}
-
-	&.open {
-		display: flex;
-	}
-
-
-	@media only screen and (max-width: $container-size-m) {
-		display: none;
-	}
-
-	li {
-		color: $lit-col;
-		width: 33.333%;
-		margin-bottom: 3rem;
-
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		
-		a {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			color: $lit-col;
-			text-decoration: none;
-			font-size: 1.3rem;
-
-			svg {
-				fill: $pri-col;
-				width: 4rem;
-				height: 4rem;
-				padding-left: 0.5rem;
-				padding-right: 0.5rem;
-				margin-bottom: 1rem;
-			}
-
-			&:hover {
-				color: $lit-col;
-				svg {
-					fill: $lit-col;
-				}
-			}
-		}
-	}
-
-}
 
 
 }
