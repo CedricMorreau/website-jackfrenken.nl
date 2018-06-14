@@ -38,7 +38,7 @@
 	
 	?>
 
-	<div class="content-image"<?php echo $sfeerbeeld; ?>>
+	<div class="content-image" style="background-image: url(<?php echo $sfeerbeeld; ?>);">
 		<!-- bg img -->
 	</div>
 	
