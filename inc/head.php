@@ -7,7 +7,7 @@
 <meta name="author" content="Pixelplus Interactieve Media">
 	  	
 <!-- Favicon -->
-<link rel="shortcut icon" href="favicon.ico?v=1" type="image/ico">
+<link rel="shortcut icon" href="<?php echo $dynamicRoot; ?>favicon.ico?v=1" type="image/ico">
 <!-- Enable responsive view -->
 <meta name="viewport" content="width=device-width">
 <!-- Force IE to behave -->
