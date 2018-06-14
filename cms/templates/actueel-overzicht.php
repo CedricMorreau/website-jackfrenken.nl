@@ -151,7 +151,7 @@ function isActive($name) {
 											
 											$values = Content::getArticleValues($val['mod_co_id'], $cms, $template->getCurrentLanguage());
 											
-											$url = $template->getPermaLink($template->getCurrentLanguage()) . '/' . $val['cms_per_link'] . '.html';
+											$url = $template->getPermaLink($template->getCurrentLanguage()) . '/' . $val['cms_per_link'];
 											
 											$date = new PP_DateTime($values['wk_pubDate']);
 											
@@ -176,9 +176,15 @@ function isActive($name) {
 											
 											$values = Content::getArticleValues($val['mod_co_id'], $cms, $template->getCurrentLanguage());
 											
-											$url = $template->getPermaLink($template->getCurrentLanguage()) . '/' . $val['cms_per_link'] . '.html';
+											$url = $template->getPermaLink($template->getCurrentLanguage()) . '/' . $val['cms_per_link'];
 											
 											$date = new PP_DateTime($values['art_pubDate']);
+											
+											// Add thumb
+											if (strpos($values['art_overviewPhoto'], '?') !== false)
+												$values['art_overviewPhoto'] .= '&thumb=1';
+											else 
+												$values['art_overviewPhoto'] .= '?thumb=1';
 											
 											?>
 											
@@ -199,12 +205,22 @@ function isActive($name) {
 										}
 									}
 								}
+								else {
+									
+									echo '<p>Er zijn geen berichten beschikbaar.</p>';
+								}
 								
 								?>
 
 							</div>
 
 						</section>
+						
+						<?php
+						
+						if ($totalPages > 1) {
+							
+						?>
 
 						<div class="paging-wrapper">
 	
@@ -226,8 +242,6 @@ function isActive($name) {
 							
 							$pagingClass = new PP_Paging($totalPages, $perPage, $page, $dynamicRoot . $template->getPermaLink($template->getCurrentLanguage()) . '&type=' . $_GET['type']);
 							
-							if ($totalPages > 1) {
-							
 							?>
 							
 							<div class="numbers-wrapper">
@@ -244,10 +258,10 @@ function isActive($name) {
 								
 <!-- 								<div class="next"><a href="#">&xrarr;</a></div> -->
 							</div>
-						
-							<?php } ?>
 							
 						</div>
+						
+						<?php } ?>
 					</div>
 
 
