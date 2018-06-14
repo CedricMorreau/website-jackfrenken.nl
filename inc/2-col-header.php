@@ -10,7 +10,15 @@
 
 	<div class="header-title-wrapper">
 		<div class="header-title">
+			<?php
+			
+// 			if ($template->getPageDataMulti('navTitle') != $navName[0]['mod_pa_nav']) {
+				
+			?>
+			
 			<p class="title-category"><?php echo $navName[0]['mod_pa_nav']; ?></p>
+			
+			<?php //} ?>
 			<h1>
 			<?php 
 		
@@ -31,6 +39,12 @@
 	?>
 
 	<div class="content-image"<?php echo $sfeerbeeld; ?>>
+		<!-- bg img -->
+	</div>
+	
+	<?php } else { ?>
+	
+	<div class="content-image">
 		<!-- bg img -->
 	</div>
 	
