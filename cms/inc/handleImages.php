@@ -8,11 +8,16 @@ if (isset($_GET['hash'])) {
     $image = $cms['database']->prepare("SELECT * FROM `tbl_mod_media` WHERE `mod_me_hash`=? LIMIT 1", "s", array($_GET['hash']));
     
     if (count($image) > 0) {
+    	
+    	if (isset($_GET['thumb']) && is_numeric($_GET['thumb']))
+    		$fileName = $documentRoot . 'upload/media/' . $image[0]['mod_me_folderId'] . '/' . $image[0]['mod_me_hash'] . '_thumb_' . $_GET['thumb'] . '.' . $image[0]['mod_me_extension'];
+    	else 
+    		$fileName = $documentRoot . 'upload/media/' . $image[0]['mod_me_folderId'] . '/' . $image[0]['mod_me_hash'] . '.' . $image[0]['mod_me_extension'];
         
-        if (file_exists($documentRoot . 'upload/media/' . $image[0]['mod_me_folderId'] . '/' . $image[0]['mod_me_hash'] . '.' . $image[0]['mod_me_extension'])) {
+    	if (file_exists($fileName)) {
 
             // Grab last modified
-            $lastModified = filemtime($documentRoot . 'upload/media/' . $image[0]['mod_me_folderId'] . '/' . $image[0]['mod_me_hash'] . '.' . $image[0]['mod_me_extension']);
+    		$lastModified = filemtime($fileName);
             $lastModifiedRead = date("D, d M Y H:i:s \G\M\T", $lastModified);
         
             // Kick in headers
@@ -106,11 +111,11 @@ if (isset($_GET['hash'])) {
             	if (!empty($image[0]['mod_me_extraOne']) || !empty($image[0]['mod_me_extraTwo'])) {
             
             		if (strtolower($image[0]['mod_me_extension']) == 'jpg' || strtolower($image[0]['mod_me_extension']) == 'jpeg')
-		            	$im = imagecreatefromjpeg($documentRoot . 'upload/media/' . $image[0]['mod_me_folderId'] . '/' . $image[0]['mod_me_hash'] . '.' . $image[0]['mod_me_extension']);
+            			$im = imagecreatefromjpeg($fileName);
 	            	elseif (strtolower($image[0]['mod_me_extension']) == 'png')
-	            		$im = imagecreatefrompng($documentRoot . 'upload/media/' . $image[0]['mod_me_folderId'] . '/' . $image[0]['mod_me_hash'] . '.' . $image[0]['mod_me_extension']);
+	            		$im = imagecreatefrompng($fileName);
             		elseif (strtolower($image[0]['mod_me_extension']) == 'gif')
-            			$im = imagecreatefromgif($documentRoot . 'upload/media/' . $image[0]['mod_me_folderId'] . '/' . $image[0]['mod_me_hash'] . '.' . $image[0]['mod_me_extension']);
+            			$im = imagecreatefromgif($fileName);
 		            
 		            function shadow_text($im, $size, $x, $y, $font, $text)
 		            {
@@ -170,7 +175,7 @@ if (isset($_GET['hash'])) {
             	}
             }
 
-            readfile($documentRoot . 'upload/media/' . $image[0]['mod_me_folderId'] . '/' . $image[0]['mod_me_hash'] . '.' . $image[0]['mod_me_extension']);
+            readfile($fileName);
         }
     }
 }

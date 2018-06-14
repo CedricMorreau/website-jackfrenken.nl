@@ -1,16 +1,37 @@
 <div class="column-header">
+
+	<?php
+	
+	// Get nav name of highest parent
+	$pageId = $template->findHighestParent();	
+	$navName = $cms['database']->prepare("SELECT `mod_pa_nav` FROM `tbl_mod_pages` WHERE `mod_pa_id`=?", "i", array($pageId));
+	
+	?>
+
 	<div class="header-title-wrapper">
 		<div class="header-title">
-			<p class="title-category">Diensten</p>
-			<h1>Bedijfsmakelaardij</h1>
+			<p class="title-category"><?php echo $navName[0]['mod_pa_nav']; ?></p>
+			<h1>
+			
+			<?php echo $values['art_title']; ?>
+			
+			</h1>
+			
+			<?php
+			
+			if (!empty($values['art_intro'])) {
 
+			?>
+			
 			<p class="title-description">
-				In de nieuwe skyline van Roermond verrijst Manhattan, de exclusieve en spraakmakende urban residence met 39 luxe penthouses en appartementen.
+				<?php echo $values['art_intro']; ?>
 			</p>
+			
+			<?php } ?>
 		</div>
 	</div>
 
-	<div class="content-image">
+	<div class="content-image" style="background-image: url(<?php echo $values['art_overviewPhoto']; ?>);">
 		<!-- bg img -->
 	</div>
 
