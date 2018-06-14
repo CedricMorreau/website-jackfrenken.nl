@@ -2597,14 +2597,27 @@ input:focus {
 	form {
 		width: 100%;
 		font-size: 0;
+		// * {
+		// 	border: solid 1px red;
+		// }
 	}
 
 	input {
 		font-size: 1rem;
+		padding-top: 0.5rem;
+		padding-bottom: 0.5rem;
+		border: solid 1px $ter-col;
+		color: $pri-col;
+		&::placeholder {
+
+		}
 	}
 
 	select {
 		font-size: 1rem;
+		padding-top: 0.5rem;
+		padding-bottom: 0.5rem;
+		border: solid 1px $ter-col;
 	}
 
 	label {
@@ -2619,13 +2632,13 @@ input:focus {
 	.title-row-wrapper {
 		display: flex;
 		align-items: center;
-		margin-top: 1rem;
+		margin-top: 2rem;
 		margin-bottom: 1rem;
 		.title-text {
 			flex-grow: 0;
 			flex-shrink: 0;
 			flex: 0;
-			font-size: 1rem;
+			font-size: 1.2rem;
 			font-weight: bold;
 			white-space: nowrap;
 			margin-right: 1.5rem;
@@ -2665,23 +2678,35 @@ input:focus {
 		.control-arrows-wrapper {
 			display: flex;
 			flex-direction: row;
+			text-align: center;
 			div {
 				flex: 1;
 				a {
 					text-decoration: none;
+					text-align: center;
 				}
 			}
 
 		}
 	}
 
+	.financieel-row {
+		display: flex;
+	}
+
 	.form-item {
 		padding-left: 1rem;
 		padding-right: 1rem;
 		margin-right: 1rem;
+		font-size: 1rem;
+		&:first-of-type {
+			margin-left: 0;
+		}
+
 		&:last-of-type {
 			margin-right: 0;
 		}
+
 
 	}
 
