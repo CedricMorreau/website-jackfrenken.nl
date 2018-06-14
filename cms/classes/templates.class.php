@@ -873,13 +873,13 @@ class Templates {
 				
 				foreach ( $navData as $key => $val ) {
 
-					$extraClass = ($val['depth'] != 0) ? ' class="hover-menu-wrapper"' : '';
+					$extraClass = ($val['depth'] != 0) ? ' hover-menu-wrapper' : '';
 					
 					if ($val['depth'] != $lastDepth) {
 						
 						if ($val['depth'] > $lastDepth) {
 							
-							$ulStructure .= '<ul' . $extraClass . '>';
+							$ulStructure .= '<ul class="menu-' . $val['mod_pa_id'] . $extraClass . '">';
 							
 							$dataRel[] = $val['mod_pa_id'];
 						}
