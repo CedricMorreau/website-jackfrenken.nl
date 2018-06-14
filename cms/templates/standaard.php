@@ -1,3 +1,10 @@
+<?php
+
+$template->cmsData('page][section/sfeerbeeld');
+$sfeerbeeld = trim($template->getCustomVar('sfeerbeeld'));
+
+?>
+
 <!doctype html>
 
 <html lang="nl">

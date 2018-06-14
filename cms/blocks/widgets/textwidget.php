@@ -22,74 +22,37 @@ if (count($widgetData) > 0) {
 			$dataArray = $this->getArticleValues($article[0]['mod_co_id']);
 		}
 		
-		if (isset($dataArray['widget_status'][7])) {
+		if (isset($dataArray['widget_status'][3])) {
 		
 		$url = $this->buildDynamicUrl($dataArray['widget_landingPage'], 2);
 		
-		// Determine color
-		$color = 'blue';
-		
-		if (count($dataArray['widget_color']) > 0) {
-			
-			$colorValue = array_values($dataArray['widget_color'])[0];
-			
-			switch (strtolower($colorValue)) {
-				
-				case 'blauw':
-					
-					$color = 'blue';
-					
-					break;
-					
-				case 'groen':
-					
-					$color = 'green';
-					
-					break;
-					
-				case 'paars':
-					
-					$color = 'purple';
-					
-					break;
-					
-				case 'rood':
-					
-					$color = 'red';
-					
-					break;
-					
-				default:
-					
-					$color = 'blue';
-			}
-		}
-		
 		?>
-					
-<div class="article-container-sidebar-problem <?php echo $color; ?>">
+		
+<div class="sidebar-widget">
 
-	<img src="/resources/arrow-down.svg" alt="arrow-down">
-	<h3>
-		<?php echo $dataArray['widget_title']; ?>
-	</h3>
-	
 	<?php
 	
 	if ($url != '') {
-	
+		
 	?>
-	
-	<a href="<?php echo $url; ?>">
-		<?php echo $dataArray['widget_text']; ?>
-	</a>
+
+	<h3>
+		<a href="<?php echo $url; ?>"><?php echo $dataArray['widget_title']; ?></a>
+	</h3>
+	<p>
+		<a href="<?php echo $url; ?>"><?php echo $dataArray['widget_text']; ?></a>
+	</p>
 	
 	<?php } else { ?>
 	
-	<?php echo $dataArray['widget_text']; ?>
+	<h3>
+		<?php echo $dataArray['widget_title']; ?>
+	</h3>
+	<p>
+		<?php echo $dataArray['widget_text']; ?>
+	</p>
 	
 	<?php } ?>
-	
 </div>
 					
 		<?php
