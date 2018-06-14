@@ -224,23 +224,10 @@ input:focus {
             .primary-nav nav > ul > li > ul {
               display: none; } }
           .primary-nav nav > ul > li > ul.menu-33 {
-            background-color: #2CBCAF;
-            width: auto;
-            height: auto;
             -webkit-box-orient: horizontal;
             -webkit-box-direction: normal;
                 -ms-flex-direction: row;
                     flex-direction: row;
-            -ms-flex-wrap: wrap;
-                flex-wrap: wrap;
-            position: absolute;
-            z-index: 50;
-            padding-left: 4rem;
-            padding-right: 4rem;
-            padding-top: 3rem;
-            padding-bottom: 2rem;
-            margin-top: 2.45rem;
-            margin-right: 4rem;
             display: none; }
             @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
               .primary-nav nav > ul > li > ul.menu-33 {
@@ -1447,7 +1434,8 @@ input:focus {
     line-height: 1.8rem;
     margin-top: 0; }
     .column-content .column-content .content-wrapper {
-      padding-right: 13rem; }
+      padding-right: 13rem;
+      width: 100%; }
       @media only screen and (max-width: 1200px) {
         .column-content .column-content .content-wrapper {
           padding-right: 2rem; } }
@@ -2417,6 +2405,16 @@ input:focus {
 .zoekersformulier .size40 {
   width: 40%; }
 
+/* Partners ----------------------------------------------- */
+.partners-table td {
+  width: 25%;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem; }
+  .partners-table td img {
+    width: auto;
+    max-width: 70%;
+    height: auto; }
+
 /* mediaquery example
 @media only screen and (max-width: $container-size-s) {
 
@@ -2430,4 +2428,5 @@ input:focus {
 }
 
 */
+
 /*# sourceMappingURL=style.css.map */

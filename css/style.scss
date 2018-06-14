@@ -283,19 +283,7 @@ input:focus {
 					// }
 
 					&.menu-33 {
-						background-color: $qua-col;
-						width: auto;
-						height: auto;
 						flex-direction: row;
-						flex-wrap: wrap;
-						position: absolute;
-						z-index: 50;
-						padding-left: 4rem;
-						padding-right: 4rem;
-						padding-top: 3rem;
-						padding-bottom: 2rem;
-						margin-top: 2.45rem;
-						margin-right: 4rem;
 						//display: flex;
 
 						display: none; // toggle with JS
@@ -1664,6 +1652,7 @@ input:focus {
 
 		.content-wrapper {
 			padding-right: 13rem;
+			width: 100%;
 			@media only screen and (max-width: $container-size-l) {
 				padding-right: $margin-size-m;
 			}
@@ -2818,6 +2807,22 @@ input:focus {
 
 
 
+}
+
+
+/* Partners ----------------------------------------------- */
+
+.partners-table {
+	td {
+		width: 25%;
+		padding-left: 0.5rem;
+		padding-right: 0.5rem;
+		img {
+			width: auto;
+			max-width: 70%;
+			height: auto;
+		}
+	}
 }
 
 /* mediaquery example
