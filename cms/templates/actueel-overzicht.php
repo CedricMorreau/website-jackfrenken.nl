@@ -222,16 +222,30 @@ function isActive($name) {
 								Resultaten <span class="bold"><?php echo $pageStart; ?> t/m <?php echo $pageEnd; ?></span> van <span class="bold"><?php echo $totalActueel; ?></span>
 							</div>
 							
+							<?php
+							
+							$pagingClass = new PP_Paging($totalPages, $perPage, $page, $dynamicRoot . $template->getPermaLink($template->getCurrentLanguage()) . '&type=' . $_GET['type']);
+							
+							if ($totalPages > 1) {
+							
+							?>
+							
 							<div class="numbers-wrapper">
-								<span><a href="#">1</a></span>
-								<span class="active">2</span>
-								<span><a href="#">3</a></span>
-								<span class="no-link">...</span>
-								<span><a href="#">9</a></span>
+							
+								<?php echo $pagingClass->displayLeft('&xlarr;'); ?>
+								<?php echo $pagingClass->displayPages(); ?>
+								<?php echo $pagingClass->displayRight('&xrarr;'); ?>
+							
+<!-- 								<span><a href="#">1</a></span> -->
+<!-- 								<span class="active">2</span> -->
+<!-- 								<span><a href="#">3</a></span> -->
+<!-- 								<span class="no-link">...</span> -->
+<!-- 								<span><a href="#">9</a></span> -->
 								
-								<div class="next"><a href="#">&xrarr;</a></div>
+<!-- 								<div class="next"><a href="#">&xrarr;</a></div> -->
 							</div>
 						
+							<?php } ?>
 							
 						</div>
 					</div>
