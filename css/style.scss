@@ -1627,6 +1627,8 @@ input:focus {
 				font-weight: bold;
 			}
 
+
+
 			p {
 				ul {
 					margin-left: 1rem;
@@ -1637,6 +1639,28 @@ input:focus {
 			ul {
 				margin-left: 1rem;
 				font-weight: bold;
+			}
+			
+			.attention-block {
+				background-color: $non-col;	
+				padding-top: 3rem;
+				padding-bottom: 3rem;
+				padding-left: 3rem;
+				padding-right: 3rem;
+				font-size: 2.3rem;
+				line-height: 2.5rem;
+				font-family: $fon-fam-sec;
+				p {
+					margin-top: 0;
+				}
+				ul {
+					list-style-position: inside;
+					margin-left: 1rem;
+					font-size: 1.2rem;
+					font-family: $fon-fam-pri;
+					font-weight: bold;
+					line-height: 1.7rem;
+				}
 			}
 
 			.cta-button {
@@ -2555,6 +2579,16 @@ input:focus {
 			}
 		}
 	}
+}
+
+
+/* Zoekersformulier -------------------------------------- */
+
+.zoekersformulier {
+	.subtitle {
+		font-weight: bold;
+	}
+
 }
 
 /* mediaquery example

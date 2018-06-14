@@ -1409,6 +1409,24 @@ input:focus {
       .column-content .column-content .content-wrapper ul {
         margin-left: 1rem;
         font-weight: bold; }
+      .column-content .column-content .content-wrapper .attention-block {
+        background-color: #DAE1ED;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        padding-left: 3rem;
+        padding-right: 3rem;
+        font-size: 2.3rem;
+        line-height: 2.5rem;
+        font-family: "bodoni-bold"; }
+        .column-content .column-content .content-wrapper .attention-block p {
+          margin-top: 0; }
+        .column-content .column-content .content-wrapper .attention-block ul {
+          list-style-position: inside;
+          margin-left: 1rem;
+          font-size: 1.2rem;
+          font-family: "Titillium Web", sans-serif;
+          font-weight: bold;
+          line-height: 1.7rem; }
       .column-content .column-content .content-wrapper .cta-button {
         font-size: 1.1rem;
         background: #2CBCAF;
@@ -2211,6 +2229,10 @@ input:focus {
         color: #2CBCAF;
         cursor: pointer; }
 
+/* Zoekersformulier -------------------------------------- */
+.zoekersformulier .subtitle {
+  font-weight: bold; }
+
 /* mediaquery example
 @media only screen and (max-width: $container-size-s) {
 
@@ -2224,5 +2246,4 @@ input:focus {
 }
 
 */
-
 /*# sourceMappingURL=style.css.map */
