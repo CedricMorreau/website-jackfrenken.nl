@@ -144,6 +144,9 @@ input:focus {
         display: -ms-inline-flexbox;
         display: inline-flex;
         margin-right: 1.3rem; }
+        @media only screen and (max-width: 1200px) {
+          .primary-nav nav > ul > li {
+            margin-right: 0; } }
         @media only screen and (max-width: 768px) {
           .primary-nav nav > ul > li {
             display: block;
@@ -1343,6 +1346,9 @@ input:focus {
     padding-top: 2rem;
     padding-bottom: 2rem;
     margin-right: 6rem; }
+    @media only screen and (max-width: 1200px) {
+      .column-header .content-image {
+        margin-right: 0 !important; } }
     @media only screen and (max-width: 768px) {
       .column-header .content-image {
         padding-top: 0;

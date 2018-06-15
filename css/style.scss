@@ -200,6 +200,10 @@ input:focus {
 			> li {
 				display: inline-flex;
 				margin-right: 1.3rem;
+				@media only screen and (max-width: $container-size-l) {
+					margin-right: 0;
+				}
+
 				@media only screen and (max-width: $container-size-m) {
 					display: block;
 					font-size: 2rem;
@@ -1558,6 +1562,9 @@ input:focus {
 		padding-top: 2rem;
 		padding-bottom: 2rem;
 		margin-right: 6rem;
+		@media only screen and (max-width: $container-size-l) {
+			margin-right: 0 !important;
+		}
 		@media only screen and (max-width: $container-size-m) {
 			padding-top: 0;
 			padding-bottom: 0;
