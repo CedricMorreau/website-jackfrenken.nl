@@ -1377,8 +1377,8 @@ input:focus {
     padding-right: 5rem; }
     @media only screen and (max-width: 768px) {
       .column-content .column-sidebar {
-        -ms-flex-preferred-size: none;
-            flex-basis: none; } }
+        -ms-flex-preferred-size: auto;
+            flex-basis: auto; } }
     @media only screen and (max-width: 1366px) {
       .column-content .column-sidebar {
         padding-left: 2rem;
@@ -1490,6 +1490,9 @@ input:focus {
           color: #2CBCAF; }
       .column-content .column-content .content-wrapper ul {
         margin-left: 1rem; }
+      .column-content .column-content .content-wrapper img {
+        max-width: 100%;
+        height: auto; }
       .column-content .column-content .content-wrapper hr {
         color: #CCE9f5;
         border-color: #CCE9f5;
@@ -2032,6 +2035,18 @@ input:focus {
       margin-right: 0; } }
 
 /* Actueel detail ---------------------------------------------- */
+.actueel-detail .header-title {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  bottom: none; }
+.actueel-detail .content-image {
+  height: 35rem; }
+  @media only screen and (max-width: 768px) {
+    .actueel-detail .content-image {
+      height: 18rem; } }
+
 /* Contact ---------------------------------------------------- */
 .contact .content-image {
   padding-top: 0;

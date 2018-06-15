@@ -1575,7 +1575,7 @@ input:focus {
 		flex-grow: 0;
 		flex-basis: 25rem;
 		@media only screen and (max-width: $container-size-m) {
-			flex-basis: none;
+			flex-basis: auto;
 		}
 		padding-right: 5rem;
 
@@ -1738,6 +1738,11 @@ input:focus {
 			
 			ul {
 				margin-left: 1rem;
+			}
+			
+			img {
+				max-width: 100%;
+				height: auto;
 			}
 
 			hr {
@@ -2319,6 +2324,7 @@ input:focus {
 		min-height: 30rem;
 		padding-top: 0;
 		padding-bottom: 0;
+
 		.image-container {
 			height: 100%;
 			@media only screen and (max-width: $container-size-m) {
@@ -2412,6 +2418,21 @@ input:focus {
 
 
 /* Actueel detail ---------------------------------------------- */
+
+.actueel-detail {
+	.header-title {
+		position: relative;
+  		top: 50%;
+  		transform: translateY(-50%);
+  		bottom: none;
+	}
+	.content-image {
+		height: 35rem;
+		@media only screen and (max-width: $container-size-m) {
+			height: 18rem;
+		}
+	}
+}
 
 
 /* Contact ---------------------------------------------------- */
