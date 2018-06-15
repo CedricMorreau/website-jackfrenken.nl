@@ -38,8 +38,8 @@
 	</div>
 
 	<div class="footer-row-2">
-		<a href="#">
-			<img src="<?php echo $dynamicRoot; ?>resources/nvm-logo-lit.svg" class="nvm-logo" alt="NVM logo">Wij scoren <span class="rating">8,1</span> op Funda &rarr;
+		<a href="<?php echo $template->findPermalink(48, 1); ?>">
+			<img src="<?php echo $dynamicRoot; ?>resources/nvm-logo-lit.svg" class="nvm-logo" alt="NVM logo">Wij scoren <span class="rating">8,3</span> op Funda &rarr;
 		</a>
 	</div>
 
@@ -89,3 +89,5 @@
 
 	</div>
 </footer>
+
+<?php include("inc/contact-overlay.php"); ?>

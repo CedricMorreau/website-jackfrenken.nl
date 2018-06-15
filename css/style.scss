@@ -72,6 +72,13 @@ html {
   box-sizing: border-box;
 }
 
+body.u-overflow-hidden, 
+html.u-overflow-hidden {
+	overflow: hidden;
+	position: fixed;
+}
+
+
 *, *:before, *:after {
   box-sizing: inherit;
 }
@@ -247,6 +254,10 @@ input:focus {
 					padding-top: 3rem;
 					padding-bottom: 2rem;
 					margin-top: 2.45rem;
+					@media only screen and (max-width: $container-size-l) {
+						margin-top: 2.15rem;
+					}
+
 					margin-right: 4rem;
 					//display: flex;
 					display: none; // toggle with JS
@@ -271,6 +282,9 @@ input:focus {
 							color: $lit-col;
 							text-decoration: none;
 							font-size: 1.3rem;
+							@media only screen and (max-width: $container-size-l) {
+								font-size: 1rem;
+							}
 						}
 					}
 
@@ -318,7 +332,9 @@ input:focus {
 								color: $lit-col;
 								text-decoration: none;
 								font-size: 1.3rem;
-
+								@media only screen and (max-width: $container-size-l) {
+									font-size: 1rem;
+								}
 								svg {
 									fill: $pri-col;
 									width: 4rem;
@@ -2444,15 +2460,38 @@ input:focus {
 		padding-bottom: 0;
 		background-image: none;
 		height: auto;
+		@media only screen and (max-width: $container-size-m) {
+			height: auto !important;
+		}
+
+	}
+
+	.header-title {
+		position: relative;
+  		top: 50%;
+  		transform: translateY(-50%);
+  		bottom: unset !important;
+	}
+	.content-image {
+		height: 35rem;
+		@media only screen and (max-width: $container-size-m) {
+			height: 18rem;
+		}
+	}
+	
+	.column-content {
+		padding-top: 1rem;
 	}
 
 	.location-wrapper {
 		display: flex;
-		@media only screen and (max-width: $container-size-m) {
-			flex-direction: column;
-		}
+		margin-bottom: 4rem;
 
-		margin-bottom: 5rem;
+		@media only screen and (max-width: $container-size-ml) {
+			flex-direction: column-reverse;
+			margin-bottom: 2rem;
+		}
+		
 		&:last-of-type {
 			margin-bottom: 0;
 		}
@@ -2490,6 +2529,7 @@ input:focus {
 		flex-direction: row;
 		align-items: center;
 		font-weight: bold;
+		
 		@media only screen and (max-width: $container-size-m) {
 			flex-direction: column;
 			text-align: left;
@@ -2500,6 +2540,7 @@ input:focus {
 			display: flex;
 			margin-left: auto;
 			align-items: center;
+			
 			@media only screen and (max-width: $container-size-m) {
 				margin-left: 0;
 				margin-top: 1rem;
@@ -2518,14 +2559,14 @@ input:focus {
 					height: auto;
 				}
 			}
+
 		}
 
 	}
 
 
-
-
 }
+
 /* Contact form overlay --------------------------------- */
 
 .a-fadeIn {
@@ -2535,7 +2576,6 @@ input:focus {
 .a-fadeOut {
 	animation: fadeOut .25s;
 }
-
 
 .a-fadeDown {
 	animation: fadeDown .25s;
@@ -2575,7 +2615,7 @@ input:focus {
 		}
 
 		@media only screen and (max-width: $container-size-s) {
-			width: 80vw;
+			width: 90vw;
 		}
 
 		margin: 0 auto;
@@ -2585,9 +2625,18 @@ input:focus {
 		.contact-content-wrapper {
 			display: flex;
 			flex-direction: row;
+			@media only screen and (max-width: $container-size-m) {
+				flex-direction: column;
+			}
+
 			margin-bottom: 2rem;	
 			h2 {
 				flex: 2;
+				line-height: 3.5rem;
+				@media only screen and (max-width: $container-size-m) {
+					font-size: 4rem;
+				}
+
 			}
 			form {
 				flex: 3;
