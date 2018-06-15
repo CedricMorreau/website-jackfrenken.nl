@@ -1,7 +1,9 @@
 <div class="item-container">
 	<div class="item-image-wrapper">
 		<div class="item-image">
-			&nbsp;
+			<a href="">
+				&nbsp;
+			</a>
 		</div>
 		<a href="#" class="item-button">&xrarr;</a>
 	</div>

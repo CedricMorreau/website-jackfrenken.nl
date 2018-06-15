@@ -435,6 +435,15 @@ input:focus {
 			
 			.item-image-wrapper {
 				position: relative;
+
+				.hover-overlay {
+					a {
+						width: 100%;
+						height: 100%;
+						display: flex;
+					}
+				}
+
 				.item-image {
 					height: 20rem;
 					width: 25rem;
@@ -448,7 +457,6 @@ input:focus {
 					background-position-x: center;
 					background-position-y: center;
 					flex-shrink: 0;
-
 				}				
 			}
 
@@ -482,9 +490,11 @@ input:focus {
 				}
 				&:hover {
 					background-color: $pri-col;
+					color: $lit-col;
 					text-decoration: none;
 				}
 			}
+			
 			&:last-of-type{
 				margin-top: 3rem;
 				@media only screen and (max-width: $container-size-m) {
@@ -1471,6 +1481,9 @@ input:focus {
    			min-width: 40rem;
 
   			@media only screen and (max-width: $container-size-m) {
+				min-width: 0;
+				max-width: none;
+				width: 100%;
 				position: relative;
 				top: 0;
 				transform: none;
@@ -1563,7 +1576,7 @@ input:focus {
 		flex-grow: 0;
 		flex-basis: 25rem;
 		@media only screen and (max-width: $container-size-m) {
-			flex-basis: 0;
+			flex-basis: none;
 		}
 		padding-right: 5rem;
 
@@ -1698,7 +1711,12 @@ input:focus {
 				font-weight: bold;
 			}
 
-
+			a {
+				font-size: inherit;
+				&:hover {
+					color: $qua-col;
+				}
+			}
 
 			p {
 				ul {
@@ -1756,9 +1774,15 @@ input:focus {
 				padding-bottom: 0.5rem;
 				padding-left: 1.5rem;
 				padding-right: 1.5rem;
+				display: inline-flex;
+				align-items: center;
+				.icon {
+					margin-right: 1rem;
+					width: 1.5rem;
+					height: 1.5rem;
+				}
 				@media only screen and (max-width: $container-size-m) {
 					width: 100%;
-					display: block;
 					text-align: center;
 				}
 
@@ -2278,8 +2302,9 @@ input:focus {
 		}
 	}
 	.content-image {
-		background-image: none;
+		// background-image: none;
 		height: auto;
+		min-height: 30rem;
 		padding-top: 0;
 		padding-bottom: 0;
 		.image-container {

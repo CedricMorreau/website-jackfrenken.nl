@@ -26,6 +26,9 @@ if (count($actueel) > 0) {
 				<div class="item-image" style="background-image: url(<?php echo $values['art_overviewPhoto']; ?>);">
 					&nbsp;
 				</div>
+				<div class="hover-overlay">
+					<a href="<?php echo $url; ?>"></a>
+				</div>
 				<a href="<?php echo $url; ?>" class="item-button">&xrarr;</a>
 			</div>
 			
