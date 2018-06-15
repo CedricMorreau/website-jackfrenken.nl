@@ -46,12 +46,10 @@ function isActive($name) {
 
 			<?php include($documentRoot . "inc/primary-nav.php"); ?>
 
-			<?php include($documentRoot . "inc/2-col-header.php"); ?>
-
 			<div class="column-content">
 				
 				<div class="column-sidebar">
-
+					<h1 class="sidebar-title">Actualiteiten</h1>
 					<ul class="sidebar-nav">
 					
 						<?php

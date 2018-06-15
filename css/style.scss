@@ -445,8 +445,8 @@ input:focus {
 				}
 
 				.item-image {
-					height: 20rem;
-					width: 25rem;
+					height: 18rem;
+					width: 23rem;
 					@media only screen and (max-width: $container-size-m) {
 					 width: 100%;
 					}
@@ -478,10 +478,10 @@ input:focus {
 				bottom: 0;
 				right: -3rem;
 				z-index: 5;
-				padding-top: 2.5rem;
-				padding-bottom: 2.5rem;
-				padding-left: 2.5rem;
-				padding-right: 2.5rem;
+				padding-top: 2.3rem;
+				padding-bottom: 2.3rem;
+				padding-left: 2.3rem;
+				padding-right: 2.3rem;
 				background: $sep-col;
 				color: $lit-col;
 				text-decoration: none;
@@ -1470,13 +1470,12 @@ input:focus {
 
 			padding-left: 6rem;
 			padding-right: 6rem;
-			padding-top: 3rem;
-			padding-bottom: 5rem;
+			padding-top: 2rem;
+			padding-bottom: 2rem;
 			z-index: 15;
 			background-color: $overlay-col;
 			position: absolute;
-			top: 50%;
-    		transform: translate(0, -50%);
+			bottom: 0;
     		max-width: 50rem;
    			min-width: 40rem;
 
@@ -1539,7 +1538,7 @@ input:focus {
 		background-size: cover;
 		background-position: 50% 50%;
 		background-image: url("../resources/homepage-header.jpg");
-		height: 28rem;
+		height: 19rem;
 		padding-top: 2rem;
 		padding-bottom: 2rem;
 		margin-right: 6rem;
@@ -1590,7 +1589,14 @@ input:focus {
 			padding-right: $margin-size-s;
 		}
 
+		.sidebar-title {
+			font-size: 3rem;
+			margin-left: 1rem;
+			@media only screen and (max-width: $container-size-l) {
+				font-size: 2rem;
+			}
 
+		}
 
 		.sidebar-nav {
 			margin-left: 4rem;
@@ -1825,13 +1831,19 @@ input:focus {
 						margin-right: 0;
 						.item-container {
 							margin-bottom: 3rem;
+							&:nth-child(even) {
+								margin-top: 4rem;
+							}
+							
+							@media only screen and (max-width: $container-size-l) {								
+								margin-top: 0 !important;
+								margin-bottom: 1rem;
+							}
+
 							@media only screen and (max-width: $container-size-m) {
 								margin-bottom: 1rem;
 							}
 
-							&:nth-child(even) {
-								margin-top: 4rem;
-							}
 						}
 					}
 				}
