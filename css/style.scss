@@ -1407,10 +1407,24 @@ input:focus {
 			display: inline-block;
 			margin-right: 0;
 
-			img {
-				width: 100%;
-				height: auto;
+			.fb-icon {
+				fill: #3b5997;
 			}
+
+			.tw-icon {
+				fill: #089fe8;
+			}
+			.in-icon {
+				fill: #0077b4; 
+			}
+
+			svg {
+				&:hover {
+					fill: $pri-col;
+				}
+			}
+
+
 		}
 
 	}

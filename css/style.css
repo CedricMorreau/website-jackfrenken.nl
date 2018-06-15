@@ -1218,9 +1218,14 @@ input:focus {
       width: 3rem;
       display: inline-block;
       margin-right: 0; }
-      .secondary-footer .social-links a img {
-        width: 100%;
-        height: auto; }
+      .secondary-footer .social-links a .fb-icon {
+        fill: #3b5997; }
+      .secondary-footer .social-links a .tw-icon {
+        fill: #089fe8; }
+      .secondary-footer .social-links a .in-icon {
+        fill: #0077b4; }
+      .secondary-footer .social-links a svg:hover {
+        fill: #003064; }
 
 /* 2col layout  --------------------------------------*/
 .column-header {
@@ -2428,5 +2433,4 @@ input:focus {
 }
 
 */
-
 /*# sourceMappingURL=style.css.map */
