@@ -34,7 +34,7 @@ $oct-col: #0091D1 ; // Bright blue
 $non-col: #DAE1ED ; // Lila overlay color
 
 $overlay-col: rgba(218, 225, 237, 0.8); // overlay RGBA color
-$overlay-col: rgba(218, 225, 237, 0.8); // overlay RGBA color
+$overlay-col-sec: rgba(218, 225, 237, 0.9); // overlay RGBA color
 
 
 $lit-col: white;
@@ -276,7 +276,6 @@ input:focus {
 						padding-left: 0;
 						padding-right: 0;
 						width: 100%;
-						border: solid 1px red;
 						align-items: center;
 					}
 					
@@ -322,7 +321,6 @@ input:focus {
 						// IE11 temp fix
 						@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
 						    margin-left: -6.2rem;
-						    border: solid 1px red;
 						}
 
 						&.open {
@@ -481,7 +479,6 @@ input:focus {
 			
 			.item-image-wrapper {
 				position: relative;
-
 				.hover-overlay {
 					a {
 						width: 100%;
@@ -493,8 +490,14 @@ input:focus {
 				.item-image {
 					height: 18rem;
 					width: 23rem;
+					@media only screen and (max-width: $container-size-l) {
+						height: 10rem;
+						width: 15rem;
+					}
+
 					@media only screen and (max-width: $container-size-m) {
-					 width: 100%;
+						width: 100%;
+						height: 15rem;
 					}
 
 					background-image: url("../resources/item-thumb.jpg");
@@ -964,12 +967,6 @@ input:focus {
 							display: block;
 							margin-bottom: 2rem;
 							font-size: 1.3rem;
-						}
-						option {
-							border: solid 1px red;
-							padding-left: 1rem;
-							padding-right: 1rem;
-							text-indent: 10px;
 						}
 					}
 
@@ -1516,6 +1513,9 @@ input:focus {
 		flex-shrink: 0;
 		flex-grow: 0;
 		flex-basis: 25rem;
+		@media only screen and (max-width: $container-size-l) {
+			flex-basis: 20rem;
+		}
 		@media only screen and (max-width: $container-size-m) {
 			flex-basis: 0;
 		}
@@ -1532,10 +1532,11 @@ input:focus {
 			bottom: 0;
     		max-width: 50rem;
    			min-width: 40rem;
-
   			@media only screen and (max-width: $container-size-m) {
 				min-width: 0;
 				max-width: none;
+  				min-width: 100% !important;
+  				max-width: 100% !important;
 				width: 100%;
 				position: relative;
 				top: 0;
@@ -1631,17 +1632,19 @@ input:focus {
 		flex-shrink: 0;
 		flex-grow: 0;
 		flex-basis: 25rem;
-		@media only screen and (max-width: $container-size-m) {
-			flex-basis: auto;
-		}
 		padding-right: 5rem;
-
+		
 		@media only screen and (max-width: $container-size-xl) {
 			padding-left: $margin-size-m;
 			padding-right: $margin-size-m;
 		}
+		
+		@media only screen and (max-width: $container-size-l) {
+			flex-basis: 20rem;
+		}
 
 		@media only screen and (max-width: $container-size-m) {
+			flex-basis: auto;
 			padding-left: $margin-size-s;
 			padding-right: $margin-size-s;
 		}
@@ -1707,29 +1710,24 @@ input:focus {
 			&:last-of-type {
 				margin-bottom: 0;
 			}
+			
+			a {
+				text-decoration: none;
+				color: $lit-col;
+				text-decoration: none;
+				&:hover {
+					text-decoration: underline;
+				}
+			}
 
 			h3 {
 				margin-top: 0;
 				color: $lit-col;
 				font-size: 1.5rem;
-				a {
-					font-size: 1.5rem;
-					color: $lit-col;
-					text-decoration: none;
-					&:hover {
-						text-decoration: underline;
-					}
-				}
 			}
 			p {
-				a {
+				color: $lit-col;
 					font-size: 1rem;
-					color: $lit-col;
-					text-decoration: none;
-					&:hover {
-						text-decoration: underline;
-					}
-				}
 			}
 		}
 
@@ -1892,18 +1890,29 @@ input:focus {
 						margin-left: 0;
 						margin-right: 0;
 						.item-container {
+
 							margin-bottom: 3rem;
 							&:nth-child(even) {
 								margin-top: 4rem;
+							}
+							&:hover {
+								.item-button {
+									background-color: $qua-col;
+								}
+								.hover-overlay {
+									background: rgba(255, 255, 255, 0.15);
+								}
 							}
 							
 							@media only screen and (max-width: $container-size-l) {								
 								margin-top: 0 !important;
 								margin-bottom: 1rem;
+								margin-right: 3rem;
 							}
 
 							@media only screen and (max-width: $container-size-m) {
 								margin-bottom: 1rem;
+								margin-right: 0;
 							}
 
 						}
@@ -2001,16 +2010,44 @@ input:focus {
 /* Aanbod overzicht  -------------------------------------------  */
 .aanbod-overzicht {
 	.column-content {
+		
 		.content-wrapper {
 			margin-right: 0;
 			padding-right: 0;
+			
 			.item-wrapper {
 				margin-right: 0;
+				a {
+					text-decoration: none;
+					&:hover {
+						text-decoration: underline;
+					}
+				}	
+				.item-image {
+					position: relative;
+
+					a {
+						display: flex;
+						text-decoration: none;
+
+						img {
+							max-width: 100%;
+							height: auto;
+							min-width: 100%;
+							align-self: center;
+						}
+
+					}
+				}
+
 			}
+
 		}
+
 		.banner-wrapper {
 			margin-right: 0;
 		}
+
 	}
 
 	.filter-wrapper {
@@ -2144,7 +2181,7 @@ input:focus {
 	@media only screen and (max-width: $container-size-xl) {
 		margin-right: 3rem;
 	}
-	@media only screen and (max-width: $container-size-l) {
+	@media only screen and (max-width: $container-size-ml) {
 		margin-right: 1rem;
 		flex-direction: column-reverse;
 	}
@@ -2152,117 +2189,135 @@ input:focus {
 		margin-right: 0;
 		margin-bottom: 3rem;
 	}
-
-	.item-description {
+	
+	> a {
 		flex: 1;
 		position: relative;
+	
+		&:hover {
+			.hover-overlay {
+				background: rgba(255, 255, 255, 0.1);	
+				transition: background 0.3s ease-in-out;
 
-		.item-overlay-wrapper {	
-			background-color: $overlay-col;
-			color: $pri-col;
-			padding-top: 3rem;
-			padding-bottom: 5rem;
-			padding-left: 3rem;
-			padding-right: 2rem;
-			position: absolute;
-			bottom: 0;
-			width: calc(100% + 4rem);
-			overflow: visible;
-			z-index: 5;
-			@media only screen and (max-width: $container-size-xl) {
+			}
+		}
+
+		.item-description {
+			.item-overlay-wrapper {	
+				background-color: $overlay-col;
+				color: $pri-col;
 				padding-top: 2rem;
 				padding-bottom: 2rem;
-			}
+				padding-left: 3rem;
+				padding-right: 2rem;
+				position: absolute;
+				bottom: 0;
+				width: calc(100% + 4rem);
+				overflow: visible;
+				z-index: 5;
+				@media only screen and (max-width: $container-size-xl) {
+					padding-top: 2rem;
+					padding-bottom: 2rem;
+					width: calc(100% + 4rem);
+				}
 
-			@media only screen and (max-width: $container-size-l) {
+				@media only screen and (max-width: $container-size-l) {
+					width: calc(100% + 12rem);
+
+				}
+
+				@media only screen and (max-width: $container-size-ml) {
+					width: 100%;
+					position: relative;
+				}
+
+				@media only screen and (max-width: $container-size-m) {
+					padding-left: $margin-size-s;
+					padding-right: $margin-size-s;
+				}
+
+				&:hover {
+					background: $overlay-col-sec;
+					transition: background 0.3s ease-in-out;
+				}
+
+				.item-title {
+					font-weight: bold;
+					font-size: 1.3rem;
+					padding-bottom: 0;
+					margin-bottom: 0.5rem;
+					a {
+						text-decoration: none;
+						&:hover {
+							text-decoration: underline
+						}
+					}
+				}
+
+				.item-subtitle {
+					font-size: 1.3rem;
+					margin-top: 0;
+					a {
+						text-decoration: none;
+						&:hover {
+							text-decoration: underline
+						}
+					}
+				}
+
+				.item-bold-title {
+					font-weight: bold;
+					margin-top: 1.5rem;
+					margin-bottom: 0;
+					padding-bottom: 0;
+					a {
+						text-decoration: none;
+						&:hover {
+							text-decoration: underline
+						}
+					}
+
+				}
+
+				.item-sub-subtitle {
+					margin-bottom: 1.5rem;
+				}
+
+				p {
+					margin-top: 0;
+					margin-bottom: 0;
+				}
+
+			}
+		}
+
+		.item-image {
+			position: relative;
+			flex: 2;
+			line-height: 0;
+
+			img {
 				width: 100%;
-				position: relative;
 			}
-
-			@media only screen and (max-width: $container-size-m) {
-				padding-left: $margin-size-s;
-				padding-right: $margin-size-s;
-			}
-
-
-
-
-
-			.item-title {
-				font-weight: bold;
-				font-size: 1.3rem;
-				padding-bottom: 0;
-				margin-bottom: 0.5rem;
-				a {
-					text-decoration: none;
-					&:hover {
-						text-decoration: underline
-					}
+			
+			.hover-overlay {
+				width: 100%;
+				height: 100%;
+				display: block;
+				position: absolute;
+				top: 0;
+				left: 0;
+				cursor: pointer;
+				z-index: 6;
+				transition: all 0.3s ease-in-out;
+				background: rgba(0, 0, 0, 0);	
+				&:hover {
+					background: rgba(255, 255, 255, 0.15);	
 				}
 			}
-
-			.item-subtitle {
-				font-size: 1.3rem;
-				margin-top: 0;
-				a {
-					text-decoration: none;
-					&:hover {
-						text-decoration: underline
-					}
-				}
-			}
-
-			.item-bold-title {
-				font-weight: bold;
-				margin-top: 1.5rem;
-				margin-bottom: 0;
-				padding-bottom: 0;
-				a {
-					text-decoration: none;
-					&:hover {
-						text-decoration: underline
-					}
-				}
-
-			}
-
-			.item-sub-subtitle {
-				margin-bottom: 1.5rem;
-			}
-
-			p {
-				margin-top: 0;
-				margin-bottom: 0;
-			}
+			
 
 		}
-	}
-
-	.item-image {
-		position: relative;
-		flex: 2;
-		line-height: 0;
-
-		img {
-			width: 100%;
-		}
-		
-		.hover-overlay {
-			width: 100%;
-			height: 100%;
-			display: block;
-			position: absolute;
-			top: 0;
-			left: 0;
-			cursor: pointer;
-			z-index: 6;
-			transition: all 0.3s ease-in-out;
-			background: rgba(0, 0, 0, 0);	
-			&:hover {
-				background: rgba(255, 255, 255, 0.15);	
-			}
-		}
-		
 
 	}
 
@@ -2321,6 +2376,7 @@ input:focus {
 	padding-bottom: 1.5rem;
 	color: $lit-col;
 	z-index: 7;
+	
 	@media only screen and (max-width: $container-size-m) {
 		font-size: 1rem;
 		padding-top: 0.7rem;
@@ -2546,6 +2602,8 @@ input:focus {
   		top: 50%;
   		transform: translateY(-50%);
   		bottom: unset !important;
+  		max-width: 33rem !important;
+  		min-width: 33rem !important;
 	}
 	.content-image {
 		height: 35rem;
@@ -2864,9 +2922,6 @@ input:focus {
 	form {
 		width: 100%;
 		font-size: 0;
-		// * {
-		// 	border: solid 1px red;
-		// }
 	}
 
 	input {

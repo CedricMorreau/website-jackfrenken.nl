@@ -79,6 +79,7 @@ function isActive($name) {
 					
 					$extraSql .= ' AND EXISTS(SELECT `mod_cv_value` FROM `tbl_mod_articleContentValues` WHERE `mod_cv_articleId`=`mod_co_id` AND `mod_cv_attributeId`=20 AND `mod_cv_attributeValueId`=7)';
 				}
+
 				elseif ($_GET['type'] == 'columns') {
 					
 					$extraSql .= ' AND EXISTS(SELECT `mod_cv_value` FROM `tbl_mod_articleContentValues` WHERE `mod_cv_articleId`=`mod_co_id` AND `mod_cv_attributeId`=20 AND `mod_cv_attributeValueId`=8)';
@@ -187,18 +188,19 @@ function isActive($name) {
 											?>
 											
 											<div class="item-container">
-												<div class="item-image-wrapper">
-													<div class="item-image" style="background-image: url(<?php echo $values['art_overviewPhoto']; ?>);">
-														
+												<a href="<?php echo $url; ?>">
+													<div class="item-image-wrapper">
+														<div class="item-image" style="background-image: url(<?php echo $values['art_overviewPhoto']; ?>);">
+															
+														</div>
+														<div class="hover-overlay">
+															
+														</div>
+														<div href="<?php echo $url; ?>" class="item-button">&xrarr;</div>
 													</div>
-													<div class="hover-overlay">
-														<a href="<?php echo $url; ?>"></a>
-													</div>
-													<a href="<?php echo $url; ?>" class="item-button">&xrarr;</a>
-												</div>
-												
-												<p class="item-title"><a href="<?php echo $url; ?>"><?php echo $values['art_title']; ?></a></p>
-											
+													
+													<p class="item-title"><?php echo $values['art_title']; ?></p>
+												</a>
 											</div>
 											
 											<?php

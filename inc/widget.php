@@ -1,8 +1,10 @@
 <div class="sidebar-widget">
+	<a href="">
 	<h3>
-		<a href="">Schrijf u in als zoeker!</a>
+		Schrijf u in als zoeker!
 	</h3>
 	<p>
-		<a href="">De woning van uw dromen nog niet kunnen vinden? Wij zoeken graag met u mee &xrarr;</a>
+		De woning van uw dromen nog niet kunnen vinden? Wij zoeken graag met u mee &xrarr;
 	</p>
+	</a>
 </div>
