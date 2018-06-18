@@ -124,7 +124,7 @@ input:focus {
         left: 0;
         z-index: 99;
         text-align: center;
-        padding-top: 2rem;
+        padding-top: 0;
         padding-bottom: 2rem;
         -webkit-transition: height 0.3s;
         transition: height 0.3s;
@@ -146,18 +146,15 @@ input:focus {
         margin-right: 1.3rem; }
         @media only screen and (max-width: 1200px) {
           .primary-nav nav > ul > li {
-            margin-right: 0; } }
+            margin-right: 0.5rem; } }
         @media only screen and (max-width: 768px) {
           .primary-nav nav > ul > li {
             display: block;
-            font-size: 2rem;
+            font-size: 3rem;
             margin-right: 0;
             padding-top: 1rem;
-            padding-bottom: 1rem;
+            padding-bottom: 0;
             font-weight: bold; } }
-        @media only screen and (max-width: 1200px) {
-          .primary-nav nav > ul > li {
-            margin-right: 0.5rem; } }
         .primary-nav nav > ul > li > a {
           text-decoration: none;
           padding-left: 1rem;
@@ -165,18 +162,19 @@ input:focus {
           padding-top: 0.5rem;
           padding-bottom: 0.5rem;
           color: #003064; }
+          @media only screen and (max-width: 1200px) {
+            .primary-nav nav > ul > li > a {
+              font-size: 1rem; } }
           @media only screen and (max-width: 768px) {
             .primary-nav nav > ul > li > a {
-              color: white; } }
+              color: white;
+              font-size: 2rem; } }
           .primary-nav nav > ul > li > a.open {
             color: white;
             background-color: #2CBCAF; }
           .primary-nav nav > ul > li > a:hover {
             color: white;
             background-color: #2CBCAF; }
-          @media only screen and (max-width: 1200px) {
-            .primary-nav nav > ul > li > a {
-              font-size: 1rem; } }
         .primary-nav nav > ul > li > ul {
           background-color: #2CBCAF;
           width: auto;
@@ -199,6 +197,16 @@ input:focus {
           @media only screen and (max-width: 1200px) {
             .primary-nav nav > ul > li > ul {
               margin-top: 2.15rem; } }
+          @media only screen and (max-width: 768px) {
+            .primary-nav nav > ul > li > ul {
+              position: relative;
+              margin-top: 0;
+              padding-top: 1rem;
+              padding-bottom: 0;
+              display: block;
+              padding-left: 0;
+              padding-right: 0;
+              width: 100%; } }
           .primary-nav nav > ul > li > ul.open {
             display: -webkit-box;
             display: -ms-flexbox;
@@ -206,7 +214,6 @@ input:focus {
           .primary-nav nav > ul > li > ul li {
             color: white;
             width: 100%;
-            margin-bottom: 2rem;
             display: -webkit-box;
             display: -ms-flexbox;
             display: flex;
@@ -216,7 +223,11 @@ input:focus {
                     flex-direction: column;
             -webkit-box-align: center;
                 -ms-flex-align: center;
-                    align-items: center; }
+                    align-items: center;
+            margin-bottom: 2rem; }
+            @media only screen and (max-width: 768px) {
+              .primary-nav nav > ul > li > ul li {
+                margin-bottom: 1rem; } }
             .primary-nav nav > ul > li > ul li a {
               display: -webkit-box;
               display: -ms-flexbox;
@@ -234,9 +245,6 @@ input:focus {
               @media only screen and (max-width: 1200px) {
                 .primary-nav nav > ul > li > ul li a {
                   font-size: 1rem; } }
-          @media only screen and (max-width: 768px) {
-            .primary-nav nav > ul > li > ul {
-              display: none; } }
           .primary-nav nav > ul > li > ul.menu-33 {
             -webkit-box-orient: horizontal;
             -webkit-box-direction: normal;
@@ -252,7 +260,8 @@ input:focus {
               display: flex; }
             @media only screen and (max-width: 768px) {
               .primary-nav nav > ul > li > ul.menu-33 {
-                display: none; } }
+                display: block;
+                width: 100%; } }
             .primary-nav nav > ul > li > ul.menu-33 li {
               color: white;
               width: 33.333%;
@@ -267,6 +276,10 @@ input:focus {
               -webkit-box-align: center;
                   -ms-flex-align: center;
                       align-items: center; }
+              @media only screen and (max-width: 768px) {
+                .primary-nav nav > ul > li > ul.menu-33 li {
+                  width: 100%;
+                  margin-bottom: 1rem; } }
               .primary-nav nav > ul > li > ul.menu-33 li a {
                 display: -webkit-box;
                 display: -ms-flexbox;
@@ -291,6 +304,9 @@ input:focus {
                   padding-left: 0.5rem;
                   padding-right: 0.5rem;
                   margin-bottom: 1rem; }
+                  @media only screen and (max-width: 768px) {
+                    .primary-nav nav > ul > li > ul.menu-33 li a svg {
+                      display: none; } }
                 .primary-nav nav > ul > li > ul.menu-33 li a:hover {
                   color: white; }
                   .primary-nav nav > ul > li > ul.menu-33 li a:hover svg {
@@ -601,7 +617,7 @@ input:focus {
           margin-right: 0;
           margin-left: 0;
           padding-top: 3rem;
-          padding-bottom: 2rem;
+          padding-bottom: 0;
           padding-left: 2rem;
           padding-right: 2rem;
           -webkit-box-pack: justify;
@@ -1526,7 +1542,7 @@ input:focus {
         padding-bottom: 3rem;
         padding-left: 3rem;
         padding-right: 3rem;
-        font-size: 2.3rem;
+        font-size: 1.8rem;
         line-height: 2.5rem;
         font-family: "bodoni-bold"; }
         .column-content .column-content .content-wrapper .attention-block p {
@@ -1664,6 +1680,8 @@ input:focus {
           background: #DAE1ED; }
 
 /* Aanbod overzicht  -------------------------------------------  */
+.aanbod-overzicht .item-wrapper {
+  margin-right: 0; }
 @media only screen and (max-width: 768px) {
   .aanbod-overzicht .filter-wrapper {
     display: none; } }
@@ -2540,4 +2558,5 @@ input:focus {
 }
 
 */
+
 /*# sourceMappingURL=style.css.map */
