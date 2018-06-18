@@ -1664,6 +1664,16 @@ input:focus {
           background: #DAE1ED; }
 
 /* Aanbod overzicht  -------------------------------------------  */
+@media only screen and (max-width: 768px) {
+  .aanbod-overzicht .filter-wrapper {
+    display: none; } }
+@media only screen and (max-width: 768px) {
+  .aanbod-overzicht .column-content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; } }
+
 .sidebar-filtering {
   margin-left: 4rem; }
   @media only screen and (max-width: 768px) {
@@ -1672,7 +1682,8 @@ input:focus {
   .sidebar-filtering .filter-head {
     font-weight: bold;
     font-size: 1.2rem;
-    margin-top: 2rem; }
+    margin-top: 2rem;
+    cursor: pointer; }
     .sidebar-filtering .filter-head.active {
       color: #2CBCAF; }
   .sidebar-filtering .remove-filter {
@@ -1738,6 +1749,9 @@ input:focus {
   .sidebar-filtering .more-filters {
     margin-top: 2rem;
     margin-bottom: 3rem; }
+    @media only screen and (max-width: 768px) {
+      .sidebar-filtering .more-filters {
+        margin-bottom: 1rem; } }
   .sidebar-filtering .filter-list-wrapper {
     margin-top: 1rem; }
     .sidebar-filtering .filter-list-wrapper .filter-head {
@@ -2526,5 +2540,4 @@ input:focus {
 }
 
 */
-
 /*# sourceMappingURL=style.css.map */

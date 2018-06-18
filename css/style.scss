@@ -1965,6 +1965,22 @@ input:focus {
 }
 
 /* Aanbod overzicht  -------------------------------------------  */
+.aanbod-overzicht {
+
+	.filter-wrapper {
+		@media only screen and (max-width: $container-size-m) {
+			display: none;
+		}
+	}
+	.column-content {
+		@media only screen and (max-width: $container-size-m) {
+			flex-direction: column;
+		}
+	}
+
+
+}
+
 .sidebar-filtering {
 	margin-left: 4rem;
 	@media only screen and (max-width: $container-size-m) {
@@ -1975,6 +1991,7 @@ input:focus {
 		font-weight: bold;
 		font-size: 1.2rem;
 		margin-top: 2rem;
+		cursor: pointer;
 		&.active {
 			color: $qua-col;
 		}
@@ -2007,46 +2024,50 @@ input:focus {
 		}
 	}
 
-.select-wrapper {
-	display: inline-block; 
-	position: relative;
-	width: 100%;
-	select {
+	.select-wrapper {
+		display: inline-block; 
+		position: relative;
 		width: 100%;
-		border: none;
-		border-bottom: solid 1px $ter-col;
-		margin-bottom: 1.5rem;
-		-webkit-appearance: none; // chrome / safari
-		-moz-appearance: none;  // firefox
-		&::-ms-expand { display: none; } // IE11
-	}
-	&:after {
-		position: absolute;
-		right: 0;
-		top: 0.1rem;
-		content:" ";
-		width: 0.4rem;
-		height: 0.4rem;
-		border-right: 1px solid $dar-col;
-		border-bottom: 1px solid $dar-col;
-		transform: rotate(45deg);
-
-		@media only screen and (max-width: $container-size-m) {
-			top: 0.2rem;
-			right: 0;
-			width: 0.5rem;
-			height: 0.5rem;
+		select {
+			width: 100%;
+			border: none;
+			border-bottom: solid 1px $ter-col;
+			margin-bottom: 1.5rem;
+			-webkit-appearance: none; // chrome / safari
+			-moz-appearance: none;  // firefox
+			&::-ms-expand { display: none; } // IE11
 		}
+		&:after {
+			position: absolute;
+			right: 0;
+			top: 0.1rem;
+			content:" ";
+			width: 0.4rem;
+			height: 0.4rem;
+			border-right: 1px solid $dar-col;
+			border-bottom: 1px solid $dar-col;
+			transform: rotate(45deg);
+
+			@media only screen and (max-width: $container-size-m) {
+				top: 0.2rem;
+				right: 0;
+				width: 0.5rem;
+				height: 0.5rem;
+			}
 
 
-		
+			
+		}
 	}
-}
 
 
 	.more-filters {
 		margin-top: 2rem;
 		margin-bottom: 3rem;
+		@media only screen and (max-width: $container-size-m) {
+			margin-bottom: 1rem;
+		}
+
 	}
 
 	.filter-list-wrapper {

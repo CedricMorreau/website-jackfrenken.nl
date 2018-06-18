@@ -15,7 +15,7 @@
 	</head>
 
 	<body>
-		<div class="page-wrapper actueel-overzicht">
+		<div class="page-wrapper aanbod-overzicht">
 
 			<?php include($documentRoot . "inc/primary-nav.php"); ?>
 

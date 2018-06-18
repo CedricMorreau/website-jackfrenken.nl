@@ -4,25 +4,29 @@
 
 	<a class="remove-filter">Filtering wissen <span class="remove-icon">&#x2715;</span></a>
 
-	<p class="filter-head">Locatie</p>
-	<input type="text" placeholder="Plaats of straat">
-	<div class="select-wrapper">
-		<select>
-			<option selected>Straal</option>
-		</select>
+	<p class="filter-head toggle">Locatie</p>
+	<div class="filter-wrapper">
+		<input type="text" placeholder="Plaats of straat">
+		<div class="select-wrapper">
+			<select>
+				<option selected>Straal</option>
+			</select>
+		</div>
 	</div>
 
-	<p class="filter-head">Prijs</p>
-	<div class="select-wrapper">
-		<select>
-			<option selected>Prijs vanaf &euro; 0</option>
-		</select>
-	</div>
+	<p class="filter-head toggle">Prijs</p>
+	<div class="filter-wrapper">
+		<div class="select-wrapper">
+			<select>
+				<option selected>Prijs vanaf &euro; 0</option>
+			</select>
+		</div>
 
-	<div class="select-wrapper">
-		<select>
-			<option selected>Prijs tot onbeperkt</option>
-		</select>
+		<div class="select-wrapper">
+			<select>
+				<option selected>Prijs tot onbeperkt</option>
+			</select>
+		</div>
 	</div>
 
 	<p class="more-filters">Meer zoekfilters &darr;</p>
