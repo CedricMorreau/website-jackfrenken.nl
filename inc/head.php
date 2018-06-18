@@ -1,9 +1,9 @@
 <meta charset="utf-8">
-<title>Jack Frenken Makelaars en adviseurs</title>
-<meta property="og:site_name" content="Jack Frenken Makelaars en adviseurs">
-<meta property="og:title" content="Jack Frenken Makelaars en adviseurs">
-<meta property="og:description" content="Jack Frenken Makelaars en adviseurs">
-<meta name="description" content="Jack Frenken Makelaars en adviseurs">
+<title>Jack Frenken Makelaars en Adviseurs</title>
+<meta property="og:site_name" content="Jack Frenken Makelaars en Adviseurs">
+<meta property="og:title" content="Jack Frenken Makelaars en Adviseurs">
+<meta property="og:description" content="Jack Frenken Makelaars en Adviseurs">
+<meta name="description" content="Jack Frenken Makelaars en Adviseurs">
 <meta name="author" content="Pixelplus Interactieve Media">
 	  	
 <!-- Favicon -->

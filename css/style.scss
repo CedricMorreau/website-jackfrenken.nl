@@ -255,8 +255,8 @@ input:focus {
 					flex-wrap: wrap;
 					position: absolute;
 					z-index: 50;
-					padding-left: 4rem;
-					padding-right: 4rem;
+					padding-left: 1.3rem;
+					padding-right: 3rem;
 					padding-top: 3rem;
 					padding-bottom: 2rem;
 					margin-top: 2.45rem;
@@ -276,6 +276,8 @@ input:focus {
 						padding-left: 0;
 						padding-right: 0;
 						width: 100%;
+						border: solid 1px red;
+						align-items: center;
 					}
 					
 					&.open {
@@ -287,21 +289,26 @@ input:focus {
 						width: 100%;
 						display: flex;
 						flex-direction: column;
-						align-items: center;
+						align-items: flex-start;
 						margin-bottom: 2rem;
 						@media only screen and (max-width: $container-size-m) {
 							margin-bottom: 0.5rem;
+							align-items: center;
 						}
 
 						a {
 							display: flex;
 							flex-direction: column;
-							align-items: center;
+							align-items: flex-start;
 							color: $lit-col;
 							text-decoration: none;
 							font-size: 1.3rem;
-							@media only screen and (max-width: $container-size-l) {
+							&:hover {
+								text-decoration: underline;
+							}
+							@media only screen and (max-width: $container-size-m) {
 								font-size: 1rem;
+								align-items: center;
 							}
 						}
 					}
@@ -315,6 +322,7 @@ input:focus {
 						// IE11 temp fix
 						@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
 						    margin-left: -6.2rem;
+						    border: solid 1px red;
 						}
 
 						&.open {
@@ -345,7 +353,11 @@ input:focus {
 								align-items: center;
 								color: $lit-col;
 								text-decoration: none;
+								&:hover {
+									text-decoration: underline;
+								}
 								font-size: 1.3rem;
+
 								@media only screen and (max-width: $container-size-l) {
 									font-size: 1rem;
 								}
@@ -934,6 +946,7 @@ input:focus {
 						-webkit-appearance: none; // chrome / safari
 						-moz-appearance: none;  // firefox
 						&::-ms-expand { display: none; } // IE11
+						border-radius: 0;
 
 						position: relative;
 						font-weight: lighter;
@@ -951,6 +964,12 @@ input:focus {
 							display: block;
 							margin-bottom: 2rem;
 							font-size: 1.3rem;
+						}
+						option {
+							border: solid 1px red;
+							padding-left: 1rem;
+							padding-right: 1rem;
+							text-indent: 10px;
 						}
 					}
 
@@ -1392,7 +1411,7 @@ input:focus {
 
 .secondary-footer {
 	display: flex;
-	color: $ter-col;
+	color: $oct-col;
 	margin-left: 4rem;
 	align-items: center;
 	flex-wrap: wrap;
@@ -1442,6 +1461,7 @@ input:focus {
 
 	.social-links {
 		margin-left: auto;
+		font-size: 0; // remove space between icons
 		@media only screen and (max-width: $container-size-m) {
 			margin-top: 0;
 		}
@@ -2062,7 +2082,8 @@ input:focus {
 			-webkit-appearance: none; // chrome / safari
 			-moz-appearance: none;  // firefox
 			&::-ms-expand { display: none; } // IE11
-		}
+			text-indent: 5px
+;		}
 		&:after {
 			position: absolute;
 			right: 0;

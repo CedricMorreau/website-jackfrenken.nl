@@ -98,10 +98,10 @@
 				<div class="select-wrapper">
 					<select>
 					  <option value="0" selected="">Wat zoekt u?</option>
-					  <option>Koopwoningen</option>
-					  <option>Huurwoningen</option>
-					  <option>Nieuwbouw</option>
-					  <option>Bedrijfspanden</option>
+					  <option>&nbsp; Koopwoningen</option>
+					  <option>&nbsp; Huurwoningen</option>
+					  <option>&nbsp; Nieuwbouw</option>
+					  <option>&nbsp; Bedrijfspanden</option>
 					</select>
 				</div>
 				<input type="text" name="" placeholder="Plaats, straat">
@@ -109,12 +109,12 @@
 				<div class="select-wrapper">
 					<select>
 					  <option value="0" selected="">Straal</option>
-					  <option>5 km</option>
-					  <option>10 km</option>
-					  <option>25 km</option>
-					  <option>50 km</option>
-					  <option>100 km</option>
-					  <option>Onbeperkt</option>
+					  <option>&nbsp; 5 km</option>
+					  <option>&nbsp; 10 km</option>
+					  <option>&nbsp; 25 km</option>
+					  <option>&nbsp; 50 km</option>
+					  <option>&nbsp; 100 km</option>
+					  <option>&nbsp; Onbeperkt</option>
 
 					</select>
 				</div>

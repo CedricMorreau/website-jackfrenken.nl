@@ -12,7 +12,7 @@ if (!($url = $template->getBackUrl($template->findPermalink(33, 1)))) {
 <html lang="nl">
 	<head>
 		<meta charset="utf-8">
-		<title>Jack Frenken Makelaars en adviseurs</title>
+		<title>Jack Frenken Makelaars en Adviseurs</title>
 		<meta property="og:site_name" content="Jack Frenken Makelaars en adviseurs">
 		<meta property="og:title" content="Jack Frenken Makelaars en adviseurs">
 		<meta property="og:description" content="Jack Frenken Makelaars en adviseurs">
