@@ -1016,7 +1016,7 @@ class Templates {
 							include($documentRoot . 'inc/svg-nav/' . $val['mod_pa_admin_value'] . '.php');
 						}
 						
-						$ulStructure .= '&nbsp;' . $val['mod_pa_nav'] . '</a>';
+						$ulStructure .= $val['mod_pa_nav'] . '</a>';
 					}
 					
 					if (isset($isDir) && $isDir)
