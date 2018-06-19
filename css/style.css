@@ -134,8 +134,8 @@ input:focus {
           -webkit-transition: all 0.3s;
           transition: all 0.3s;
           height: auto;
-          -webkit-box-shadow: 0px 0px 20px 0px rgba(113, 113, 113, 0.5);
-                  box-shadow: 0px 0px 20px 0px rgba(113, 113, 113, 0.5); } }
+          -webkit-box-shadow: 0px 0px 20px 0px rgba(113, 113, 113, 0.3);
+                  box-shadow: 0px 0px 20px 0px rgba(113, 113, 113, 0.3); } }
     .primary-nav nav > ul {
       margin-right: 4rem; }
       @media only screen and (max-width: 768px) {
@@ -599,7 +599,8 @@ input:focus {
     @media only screen and (max-width: 768px) {
       .homepage-wrapper .service-bar {
         width: 100%;
-        margin-right: 0; } }
+        margin-right: 0;
+        padding-bottom: 3rem; } }
     .homepage-wrapper .service-bar .service-quote h2 {
       font-size: 3rem;
       color: white;
@@ -808,6 +809,7 @@ input:focus {
             -webkit-appearance: none;
             -moz-appearance: none;
             border-radius: 0;
+            -webkit-border-radius: 0px;
             position: relative;
             font-weight: lighter;
             color: #003064;
@@ -848,6 +850,8 @@ input:focus {
         .homepage-wrapper .search-filter-wrapper .search-filter-container .search-filter-bar input {
           border: none;
           border-bottom: dotted 3px #003064;
+          border-radius: 0;
+          -webkit-border-radius: 0px;
           margin-right: 2rem;
           width: auto;
           width: 8rem;
@@ -1459,6 +1463,9 @@ input:focus {
       @media only screen and (max-width: 1200px) {
         .column-content .column-sidebar .sidebar-title {
           font-size: 2rem; } }
+      @media only screen and (max-width: 768px) {
+        .column-content .column-sidebar .sidebar-title {
+          margin-left: 0; } }
     .column-content .column-sidebar .sidebar-nav {
       margin-left: 4rem;
       margin-bottom: 3rem;
@@ -1709,14 +1716,20 @@ input:focus {
 .aanbod-overzicht .column-content .content-wrapper {
   margin-right: 0;
   padding-right: 0; }
+  @media only screen and (max-width: 768px) {
+    .aanbod-overzicht .column-content .content-wrapper {
+      padding-right: 1rem; } }
   .aanbod-overzicht .column-content .content-wrapper .item-wrapper {
     margin-right: 0; }
-    .aanbod-overzicht .column-content .content-wrapper .item-wrapper a {
+    .aanbod-overzicht .column-content .content-wrapper .item-wrapper > a {
       text-decoration: none; }
-      .aanbod-overzicht .column-content .content-wrapper .item-wrapper a:hover {
+      .aanbod-overzicht .column-content .content-wrapper .item-wrapper > a:hover {
         text-decoration: underline; }
     .aanbod-overzicht .column-content .content-wrapper .item-wrapper .item-image {
-      position: relative; }
+      position: relative;
+      -webkit-box-flex: 2;
+          -ms-flex: 2;
+              flex: 2; }
       .aanbod-overzicht .column-content .content-wrapper .item-wrapper .item-image a {
         display: -webkit-box;
         display: -ms-flexbox;
