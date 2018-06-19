@@ -2923,7 +2923,11 @@ input:focus {
 .zoekersformulier {
 	.column-content .column-content {
 		.content-wrapper {
-			margin-right: 0;
+			padding-right: 1rem;
+			@media only screen and (max-width: $container-size-m) {
+				padding-right: $margin-size-s;
+			}
+
 			padding-right: 0;
 			width: 100%;
 		}
@@ -2941,7 +2945,11 @@ input:focus {
 		padding-bottom: 0.5rem;
 		border: solid 1px $ter-col;
 		color: $pri-col;
-		&::placeholder {
+		@media only screen and (max-width: $container-size-m) {
+			&[type=text]{
+				width: 100%;
+				margin-bottom: 1rem;
+			}
 
 		}
 	}
@@ -2951,6 +2959,10 @@ input:focus {
 		padding-top: 0.5rem;
 		padding-bottom: 0.5rem;
 		border: solid 1px $ter-col;
+		@media only screen and (max-width: $container-size-m) {
+			width: 100% !important;
+			margin-bottom: 1rem;
+		}
 	}
 
 	label {
@@ -2967,6 +2979,7 @@ input:focus {
 		align-items: center;
 		margin-top: 2rem;
 		margin-bottom: 1rem;
+
 		.title-text {
 			flex-grow: 0;
 			flex-shrink: 0;
@@ -2987,6 +3000,13 @@ input:focus {
 	
 	.name-row {
 		display: flex;
+		@media only screen and (max-width: $container-size-m) {
+			flex-direction: column;
+		}
+		.gender-wrapper {
+			white-space: nowrap;
+		}
+
 		label {
 			margin-right: 1rem;
 		}
@@ -3003,20 +3023,72 @@ input:focus {
 
 	.plaats-row {
 		display: flex;
+		@media only screen and (max-width: $container-size-m) {
+			flex-direction: column;
+		}
+		
+		label {
+			
+			@media only screen and (max-width: $container-size-m) {
+				width: 100%;
+			}
+
+			select {
+
+				width: 100%;
+			}
+		}
 
 		select {
 			width: 100%;
 		}
 
+		.size20 {
+			@media only screen and (max-width: $container-size-m) {
+				width: 100%;
+			}
+		}
+
+		.size40 {
+			@media only screen and (max-width: $container-size-m) {
+				width: 100%;
+				padding-left: 0;
+				padding-right: 0;
+			}
+		}
+
+		.plaatskeuzes {
+			@media only screen and (max-width: $container-size-m) {
+				width: 100%;
+			}
+		}
 		.control-arrows-wrapper {
 			display: flex;
 			flex-direction: row;
 			text-align: center;
 			div {
 				flex: 1;
+				flex-shrink: 0;
 				a {
+					display: inline-flex;
 					text-decoration: none;
 					text-align: center;
+					background-color: $qua-col;
+					color: $lit-col;
+					padding-left: 1rem;
+					padding-right: 1rem;
+					padding-top: 0.5rem;
+					padding-bottom: 0.5rem;
+					@media only screen and (max-width: $container-size-m) {
+						transform: rotate(90deg);
+						margin-top: 1rem;
+						margin-bottom: 1rem;
+					}
+
+					&:hover {
+						background-color: $pri-col;
+						color: $lit-col;
+					}
 				}
 			}
 
@@ -3025,6 +3097,19 @@ input:focus {
 
 	.financieel-row {
 		display: flex;
+		@media only screen and (max-width: $container-size-m) {
+			flex-direction: column;
+		}
+		.checkbox-wrapper {
+			white-space: nowrap;
+		}
+
+		.size30 {
+			@media only screen and (max-width: $container-size-m) {
+				width: 100%;
+				margin-bottom: 1rem;
+			}
+		}
 	}
 
 	.form-item {
@@ -3040,6 +3125,50 @@ input:focus {
 			margin-right: 0;
 		}
 
+
+	}
+
+	.kenmerken-row {
+		display: flex;
+		@media only screen and (max-width: $container-size-m) {
+			flex-direction: column;
+		}
+	}
+
+	.opmerkingen-row {
+		display: flex;
+		@media only screen and (max-width: $container-size-m) {
+			flex-direction: column;
+		}
+		textarea {
+			height: 5rem;
+			margin-right: 1rem;
+			border: solid 1px $ter-col;
+			padding-left: 1rem;
+			padding-right: 1rem;
+			padding-top: 1rem;
+			padding-bottom: 1rem;
+			font-size: 1rem;
+			@media only screen and (max-width: $container-size-m) {
+				width: 100%;
+				margin-bottom: 1rem;
+			}
+		}
+
+		input[type="submit"] {
+			height: 5rem;
+			background-color: $qua-col;
+			color: $lit-col;
+			cursor: pointer;
+			@media only screen and (max-width: $container-size-m) {
+				width: 100%;
+				margin-bottom: 1rem;
+			}
+
+			&:hover {
+				background-color: $pri-col;
+			}
+		}
 
 	}
 
@@ -3067,6 +3196,12 @@ input:focus {
 		width: 40%;
 	}
 
+	.size50 {
+		width: 50%;
+	}
+	.size75 {
+		width: 75%;
+	}
 
 
 }

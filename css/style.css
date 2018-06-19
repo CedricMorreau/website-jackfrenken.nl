@@ -2503,9 +2503,12 @@ input:focus {
 
 /* Zoekersformulier -------------------------------------- */
 .zoekersformulier .column-content .column-content .content-wrapper {
-  margin-right: 0;
+  padding-right: 1rem;
   padding-right: 0;
   width: 100%; }
+  @media only screen and (max-width: 768px) {
+    .zoekersformulier .column-content .column-content .content-wrapper {
+      padding-right: 1rem; } }
 .zoekersformulier form {
   width: 100%;
   font-size: 0; }
@@ -2515,11 +2518,19 @@ input:focus {
   padding-bottom: 0.5rem;
   border: solid 1px #DAE1ED;
   color: #003064; }
+  @media only screen and (max-width: 768px) {
+    .zoekersformulier input[type=text] {
+      width: 100%;
+      margin-bottom: 1rem; } }
 .zoekersformulier select {
   font-size: 1rem;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   border: solid 1px #DAE1ED; }
+  @media only screen and (max-width: 768px) {
+    .zoekersformulier select {
+      width: 100% !important;
+      margin-bottom: 1rem; } }
 .zoekersformulier label {
   font-size: 1rem; }
 .zoekersformulier .subtitle {
@@ -2557,6 +2568,14 @@ input:focus {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
+  @media only screen and (max-width: 768px) {
+    .zoekersformulier .name-row {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; } }
+  .zoekersformulier .name-row .gender-wrapper {
+    white-space: nowrap; }
   .zoekersformulier .name-row label {
     margin-right: 1rem; }
 .zoekersformulier .contactgegevens-row div {
@@ -2567,8 +2586,30 @@ input:focus {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
+  @media only screen and (max-width: 768px) {
+    .zoekersformulier .plaats-row {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; } }
+  @media only screen and (max-width: 768px) {
+    .zoekersformulier .plaats-row label {
+      width: 100%; } }
+  .zoekersformulier .plaats-row label select {
+    width: 100%; }
   .zoekersformulier .plaats-row select {
     width: 100%; }
+  @media only screen and (max-width: 768px) {
+    .zoekersformulier .plaats-row .size20 {
+      width: 100%; } }
+  @media only screen and (max-width: 768px) {
+    .zoekersformulier .plaats-row .size40 {
+      width: 100%;
+      padding-left: 0;
+      padding-right: 0; } }
+  @media only screen and (max-width: 768px) {
+    .zoekersformulier .plaats-row .plaatskeuzes {
+      width: 100%; } }
   .zoekersformulier .plaats-row .control-arrows-wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2581,14 +2622,46 @@ input:focus {
     .zoekersformulier .plaats-row .control-arrows-wrapper div {
       -webkit-box-flex: 1;
           -ms-flex: 1;
-              flex: 1; }
+              flex: 1;
+      -ms-flex-negative: 0;
+          flex-shrink: 0; }
       .zoekersformulier .plaats-row .control-arrows-wrapper div a {
+        display: -webkit-inline-box;
+        display: -ms-inline-flexbox;
+        display: inline-flex;
         text-decoration: none;
-        text-align: center; }
+        text-align: center;
+        background-color: #2CBCAF;
+        color: white;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem; }
+        @media only screen and (max-width: 768px) {
+          .zoekersformulier .plaats-row .control-arrows-wrapper div a {
+            -webkit-transform: rotate(90deg);
+                    transform: rotate(90deg);
+            margin-top: 1rem;
+            margin-bottom: 1rem; } }
+        .zoekersformulier .plaats-row .control-arrows-wrapper div a:hover {
+          background-color: #003064;
+          color: white; }
 .zoekersformulier .financieel-row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
+  @media only screen and (max-width: 768px) {
+    .zoekersformulier .financieel-row {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; } }
+  .zoekersformulier .financieel-row .checkbox-wrapper {
+    white-space: nowrap; }
+  @media only screen and (max-width: 768px) {
+    .zoekersformulier .financieel-row .size30 {
+      width: 100%;
+      margin-bottom: 1rem; } }
 .zoekersformulier .form-item {
   padding-left: 1rem;
   padding-right: 1rem;
@@ -2598,6 +2671,50 @@ input:focus {
     margin-left: 0; }
   .zoekersformulier .form-item:last-of-type {
     margin-right: 0; }
+.zoekersformulier .kenmerken-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  @media only screen and (max-width: 768px) {
+    .zoekersformulier .kenmerken-row {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; } }
+.zoekersformulier .opmerkingen-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  @media only screen and (max-width: 768px) {
+    .zoekersformulier .opmerkingen-row {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; } }
+  .zoekersformulier .opmerkingen-row textarea {
+    height: 5rem;
+    margin-right: 1rem;
+    border: solid 1px #DAE1ED;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-size: 1rem; }
+    @media only screen and (max-width: 768px) {
+      .zoekersformulier .opmerkingen-row textarea {
+        width: 100%;
+        margin-bottom: 1rem; } }
+  .zoekersformulier .opmerkingen-row input[type="submit"] {
+    height: 5rem;
+    background-color: #2CBCAF;
+    color: white;
+    cursor: pointer; }
+    @media only screen and (max-width: 768px) {
+      .zoekersformulier .opmerkingen-row input[type="submit"] {
+        width: 100%;
+        margin-bottom: 1rem; } }
+    .zoekersformulier .opmerkingen-row input[type="submit"]:hover {
+      background-color: #003064; }
 .zoekersformulier .size10 {
   width: 10%; }
 .zoekersformulier .size15 {
@@ -2610,6 +2727,10 @@ input:focus {
   width: 30%; }
 .zoekersformulier .size40 {
   width: 40%; }
+.zoekersformulier .size50 {
+  width: 50%; }
+.zoekersformulier .size75 {
+  width: 75%; }
 
 /* Partners ----------------------------------------------- */
 .partners-table td {
@@ -2634,4 +2755,5 @@ input:focus {
 }
 
 */
+
 /*# sourceMappingURL=style.css.map */

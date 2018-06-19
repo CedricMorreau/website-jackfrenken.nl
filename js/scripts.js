@@ -30,10 +30,8 @@ if (screen.width >= 768) {
 
 // Toggle filters
 $(document).ready(function () {
-	console.log ("ready");
 	$(".filter-head.toggle").click(function() {
 		$(this).next().toggle();
-		console.log ("toggle");
 	});
 
 });
