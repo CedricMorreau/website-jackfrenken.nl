@@ -1,0 +1,2 @@
+/****** Script for SelectTopNRows command from SSMS  ******/
+UPDATE [buitenstate_nl].[dbo].[tbl_OG_media] SET bestandsnaam=CAST(object_ObjectTiaraId AS VARCHAR(25)) + '_' + CAST(id AS VARCHAR(25)) + '.pdf', bestandsnaam_tn='' WHERE bestands_extensie='pdf'

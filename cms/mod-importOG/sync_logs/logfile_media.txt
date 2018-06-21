@@ -1,0 +1,10 @@
+[1445956256.2646]Finished resizing media with ID 14688 in 1.23 second(s)
+[1445956254.9785]Finished resizing media with ID 14687 in 1.24 second(s)
+[1445956253.6801]Finished resizing media with ID 10520 in 5.3 second(s)
+[1445956248.322]Finished resizing media with ID 10519 in 6.9 second(s)
+[1445956241.3945]Starting media loop at batch 4 with 50 per batch.
+[1445956236.1258]Finished downloading media with ID 14688 (32510_14688_temp.jpg, 106.25K in 0.47 second(s))
+[1445956235.6063]Finished downloading media with ID 14687 (32510_14687_temp.jpg, 268.47K in 0.42 second(s))
+[1445956235.1289]Finished downloading media with ID 10520 (32510_10520_temp.jpg, 3.45M in 1.79 second(s))
+[1445956233.2737]Finished downloading media with ID 10519 (32510_10519_temp.jpg, 6.05M in 2.66 second(s))
+[1445956230.5814]Starting media loop at batch 3 with 50 per batch.
