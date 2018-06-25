@@ -512,13 +512,16 @@ $mediaList = $cms['database']->prepare("SELECT `id`, `object_ObjectTiaraID`, `be
 						?>				
 						
 					</div>
+					
 
 					<div class="content-wrapper" data-tab="3" style="display: none;">
+						<h2>Locatie</h2>
 						<div id="map_canvas"></div>
 						<div id="pano"></div>
 					</div>
 
 					<div class="content-wrapper" data-tab="4" style="display: none;">
+						<h2>Downloads</h2>
 						<ul>
 							<li><a href="<?php echo $extraMedia['brochure']; ?>" title="Download de brochure" target="_blank">Download de brochure</a></li>
 						</ul>
@@ -537,6 +540,8 @@ $mediaList = $cms['database']->prepare("SELECT `id`, `object_ObjectTiaraID`, `be
 								<div class="form_error general" style="display: none;"><h3>Foutje</h3><p>Er ging iets mis op de server. Probeer het nog eens.</p></div>
 								<div class="form_result" style="display: none;"><h3>Bedankt!</h3><p>Wij zullen indien nodig z.s.m. reageren.</p></div>
 							</div>
+	
+							<h2>Contact</h2>
 
 							<form action="#" class="standard flex-row flex-wrap">
 								<?php // FIXIT SB: Values van deze 3 hidden inputs dynamisch vullen ?>
