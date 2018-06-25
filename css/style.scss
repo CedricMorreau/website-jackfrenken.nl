@@ -2476,6 +2476,7 @@ input:focus {
 			background-color: $overlay-col;
 		}
 	}
+
 	.content-image {
 		// background-image: none;
 		height: auto;
@@ -2569,6 +2570,21 @@ input:focus {
 		@media only screen and (max-width: $container-size-m) {
 			margin-left: 0;
 			margin-right: 0;
+		}
+	}
+
+	.content-wrapper {
+
+		table {
+			width: 100%;
+			max-width: 40rem;
+			margin-bottom: 2rem;
+
+			th {
+				text-align: left;
+				padding-right: 2rem;
+				width: 15rem;
+			}
 		}
 	}
 

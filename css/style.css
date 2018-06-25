@@ -2159,6 +2159,14 @@ input:focus {
     .aanbod-detail .banner-wrapper {
       margin-left: 0;
       margin-right: 0; } }
+.aanbod-detail .content-wrapper table {
+  width: 100%;
+  max-width: 40rem;
+  margin-bottom: 2rem; }
+  .aanbod-detail .content-wrapper table th {
+    text-align: left;
+    padding-right: 2rem;
+    width: 15rem; }
 
 /* Actueel detail ---------------------------------------------- */
 .actueel-detail .header-title {
