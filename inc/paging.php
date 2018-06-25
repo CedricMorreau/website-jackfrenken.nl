@@ -1,18 +1,35 @@
 <div class="paging-wrapper">
+
+	<?php
+	
+	$current = (($perPage) * ($currentPage - 1)) + 1;
+	$last = $perPage * $currentPage;
+	
+	if ($last > $totalRows)
+		$last = $totalRows;
+	
+	?>
 	
 	<div class="text-wrapper">
-		Resultaten <span class="bold">1 t/m 8</span> van <span class="bold">12</span>
+		Resultaten <span class="bold"><?php echo $current; ?> t/m <?php echo $last; ?></span> van <span class="bold"><?php echo $totalRows; ?></span>
 	</div>
 	
-	<div class="numbers-wrapper">
-		<span><a href="#">1</a></span>
-		<span class="active">2</span>
-		<span><a href="#">3</a></span>
-		<span class="no-link">...</span>
-		<span><a href="#">9</a></span>
+	<?php
+	
+	if ($totalRows > $perPage) {
 		
-		<div class="next"><a href="#">&xrarr;</a></div>
+		$pagingClass = new PP_Paging($totalPages, $perPage, $currentPage, $pagingUrl);
+	
+	?>
+	
+	<div class="numbers-wrapper">
+	
+		<?php echo $pagingClass->displayLeft('&xlarr;'); ?>
+		<?php echo $pagingClass->displayPages(); ?>
+		<?php echo $pagingClass->displayRight('&xrarr;'); ?>		
+		
 	</div>
 
+	<?php } ?>
 	
 </div>

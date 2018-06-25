@@ -37,26 +37,32 @@ $filter['plaatsnaam'] = (isset($_POST['plaatsnaam'])) ? $_POST['plaatsnaam'] : (
 $filter['radius'] = (isset($_POST['radius'])) ? $_POST['radius'] : ((isset($_GET['radius'])) ? $_GET['radius'] : '');
 $filter['prijsVan'] = (isset($_POST['prijsVan'])) ? $_POST['prijsVan'] : ((isset($_GET['prijsVan'])) ? $_GET['prijsVan'] : 0);
 $filter['prijsTot'] = (isset($_POST['prijsTot'])) ? $_POST['prijsTot'] : ((isset($_GET['prijsTot'])) ? $_GET['prijsTot'] : '');
-$filter['saleType'] = (isset($_POST['saleType'])) ? $_POST['saleType'] : ((isset($_GET['saleType'])) ? $_GET['saleType'] : 'both');
+$filter['saleType'] = (isset($_POST['saleType'])) ? $_POST['saleType'] : ((isset($_GET['saleType'])) ? $_GET['saleType'] : 'kopen');
 $filter['extraFilter'] = (isset($_POST['extraFilter'])) ? $_POST['extraFilter'] : ((isset($_GET['extraFilter'])) ? $_GET['extraFilter'] : '');
 
 $filter['viewType'] = (isset($_POST['viewType'])) ? $_POST['viewType'] : ((isset($_GET['viewType'])) ? $_GET['viewType'] : 'list');
 
 // $filter['prijsOpAanvraag'] = (isset($_POST['prijsOpAanvraag'])) ? $_POST['prijsOpAanvraag'] : ((isset($_GET['prijsOpAanvraag'])) ? $_GET['prijsOpAanvraag'] : '');
 
-$filter['bestemming'] = (isset($_POST['bestemming'])) ? $_POST['bestemming'] : ((isset($_GET['bestemming'])) ? $_GET['bestemming'] : ''); //str_f01
-$filter['bedrijfswoning'] = (isset($_POST['bedrijfswoning'])) ? $_POST['bedrijfswoning'] : ((isset($_GET['bedrijfswoning'])) ? $_GET['bedrijfswoning'] : array()); //str_f02
+$filter['bestemming'] = (isset($_POST['bestemming'])) ? $_POST['bestemming'] : ((isset($_GET['bestemming'])) ? $_GET['bestemming'] : '');
+$filter['bedrijfswoning'] = (isset($_POST['bedrijfswoning'])) ? $_POST['bedrijfswoning'] : ((isset($_GET['bedrijfswoning'])) ? $_GET['bedrijfswoning'] : array());
 $filter['hoofdfunctie'] = (isset($_POST['hoofdfunctie'])) ? $_POST['hoofdfunctie'] : ((isset($_GET['hoofdfunctie'])) ? $_GET['hoofdfunctie'] : array());
 $filter['verkocht'] = (isset($_POST['verkocht'])) ? $_POST['verkocht'] : ((isset($_GET['verkocht'])) ? $_GET['verkocht'] : '');
 $filter['video'] = (isset($_POST['video'])) ? $_POST['video'] : ((isset($_GET['video'])) ? $_GET['video'] : '');
 
 $filter['openhuis'] = (isset($_POST['openhuis'])) ? $_POST['openhuis'] : ((isset($_GET['openhuis'])) ? $_GET['openhuis'] : '');
 
-// $filter['slaapkamers'] = (isset($_POST['slaapkamers'])) ? $_POST['slaapkamers'] : ((isset($_GET['slaapkamers'])) ? $_GET['slaapkamers'] : ''); //str_f02
-$filter['perceelOppervlakte'] = (isset($_POST['perceelOppervlakte'])) ? $_POST['perceelOppervlakte'] : ((isset($_GET['perceelOppervlakte'])) ? $_GET['perceelOppervlakte'] : ''); //str_f03
+$filter['perceelOppervlakte'] = (isset($_POST['perceelOppervlakte'])) ? $_POST['perceelOppervlakte'] : ((isset($_GET['perceelOppervlakte'])) ? $_GET['perceelOppervlakte'] : '');
 $filter['woonfunctieOppervlakte'] = (isset($_POST['woonfunctieOppervlakte'])) ? $_POST['woonfunctieOppervlakte'] : ((isset($_GET['woonfunctieOppervlakte'])) ? $_GET['woonfunctieOppervlakte'] : '');
 $filter['slaapkamers'] = (isset($_POST['slaapkamers'])) ? $_POST['slaapkamers'] : ((isset($_GET['slaapkamers'])) ? $_GET['slaapkamers'] : '');
 // $filter['openhuisVanaf'] = (isset($_POST['openhuisVanaf'])) ? $_POST['openhuisVanaf'] : ((isset($_GET['openhuisVanaf'])) ? $_GET['openhuisVanaf'] : '');
+
+$extraSearch = false;
+
+if (!empty($filter['perceelOppervlakte']) || !empty($filter['woonfunctieOppervlakte']) || !empty($filter['slaapkamers']) || !empty($filter['bestemming'])) {
+	
+	$extraSearch = true;
+}
 
 if ($template->getPageId() == 73)
 	$filter['verkocht'] = 1;
@@ -64,28 +70,7 @@ if ($template->getPageId() == 73)
 // Overrule the above filters indien removeFilter isset
 if (!empty($_GET['removeFilter'])) {
 
-	switch ($_GET['removeFilter']) {
-
-		case 'prijsVan':
-
-			$filter[$_GET['removeFilter']] = 0;
-
-			break;
-
-		case 'saleType':
-
-			$filter[$_GET['removeFilter']] = 'kopen';
-			$filter['prijsVan'] = 0;
-			$filter['prijsTot'] = '';
-
-			break;
-
-		default:
-
-			$filter[$_GET['removeFilter']] = '';
-
-			break;
-	}
+	Core::redirect($template->getPermalink(1, 1));
 }
 
 // if (!empty($filter['verkocht']) && $filter['verkocht'] == 1) {
@@ -145,7 +130,7 @@ $sql = "SELECT
         `tbl_OG_wonen`.objectDetails_Adres_NL_Postcode,
         '' as id_OG_nieuwbouw_projecten,
         (SELECT `cms_per_link` FROM `tbl_cms_permaLinks` WHERE `cms_per_tableId`=38 AND `cms_per_tableName`='tbl_mod_pages' AND `cms_per_moduleId`=`tbl_OG_wonen`.`id`) as `cms_per_link`,
-		(SELECT `bestandsnaam_medium` FROM `tbl_OG_media` WHERE `id_OG_wonen`=`tbl_OG_wonen`.`id` AND `media_status`=2 AND `media_groep` IN ('Hoofdfoto', 'Foto')  ORDER BY `media_groep` DESC, `media_id` ASC) as `mainImage`
+		(SELECT `bestandsnaam_medium` FROM `tbl_OG_media` WHERE `id_OG_wonen`=`tbl_OG_wonen`.`id` AND `media_status`=2 AND `media_groep` IN ('Hoofdfoto', 'Foto')  ORDER BY `media_groep` DESC, `media_id` ASC LIMIT 1) as `mainImage`
 
 	FROM `tbl_OG_wonen`
 		LEFT JOIN `tbl_OG_objectDetails` ON `ood_ogId`=`id` AND `ood_table`='tbl_OG_wonen'
@@ -177,11 +162,6 @@ $filter['p'] = (isset($_POST['p'])) ? $_POST['p'] : ((isset($_GET['p'])) ? $_GET
 // Correct weird sortBy
 if (!in_array($filter['sortBy'], array('asc', 'desc')))
 	$filter['sortBy'] = 'desc';
-
-// Filter for buitenstate (or not)
-// $sql .= " AND `object_Web_Prioriteit`=80 AND `objectDetails_Bouwvorm`!='nieuwbouw' ";
-// $sql .= " AND `object_Web_Prioriteit`=80 ";
-$ogType = 'buitenstate';
 
 // Pronvincie filter
 if (!empty($filter['provincie']) && $filter['provincie'] > 0) {
@@ -486,7 +466,7 @@ if (!empty($tempSql)) {
 // Let's handle paging!
 $currentPage = $filter['p'];
 
-$perPage = 10;
+$perPage = 8;
 
 $tempQ = $cms['database']->prepare($sql);
 $totalRows = count($tempQ);
@@ -620,7 +600,13 @@ $noFilters = '7fb224e66e6717c83510fb47e44583b8';
 					
 					<?php include($documentRoot . "inc/aanbod-banner.php"); ?>
 					
-					<?php include($documentRoot . "inc/paging.php"); ?>
+					<?php
+					
+					$pagingUrl = $dynamicRoot . $template->getPermaLink($template->getCurrentLanguage()) . '.html?searchHash=' . $MD5;
+					
+					include($documentRoot . "inc/paging.php");
+					
+					?>
 					</div>
 
 

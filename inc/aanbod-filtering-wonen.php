@@ -4,7 +4,7 @@
 
 	<a class="remove-filter">Filtering wissen <span class="remove-icon">&#x2715;</span></a>
 	
-	<form action="<?php echo $dynamicRoot . $template->getPermalink(1); ?>.html" class="standard">
+	<form action="<?php echo $template->getPermalink(1, 1); ?>" id="filter-form" class="standard">
 
 	<p class="filter-head toggle">Locatie</p>
 	<div class="filter-wrapper">
@@ -43,7 +43,7 @@
 	<p class="filter-head toggle">Prijs</p>
 	<div class="filter-wrapper">
 		<div class="select-wrapper">
-			<select name="prijsVan" id="filter-prijs-vanaf"<?php if ($filter['saleType'] == 'kopen') { ?> disabled<?php } ?>>
+			<select name="prijsVan" id="filter-prijs-vanaf">
 
 				<?php
 
@@ -65,7 +65,7 @@
 		</div>
 
 		<div class="select-wrapper">
-			<select name="prijsTot" id="filter-prijs-tot"<?php if ($filter['saleType'] == 'kopen') { ?> disabled<?php } ?>>
+			<select name="prijsTot" id="filter-prijs-tot">
 
 				<?php
 
@@ -96,13 +96,138 @@
 		</div>
 	</div>
 		
-	<div id="additional-filters">
+	<div id="additional-filters" style="display: none;">
 	
-		<p class="filter-head toggle">Prijs</p>
+		<p class="filter-head toggle">Objectkenmerken</p>
+		
 		<div class="filter-wrapper">
 		
+			<?php if ($filter['saleType'] == "kopen") { ?>
+			<div class="select-wrapper">
 			
-		
+				<?php
+				
+				// Load the cache for functions
+				$filterCache = unserialize(file_get_contents($documentRoot . 'data/cache/og/filters_wonen_koop.txt'));
+				
+				$typeArray = array('eengezinswoning', 'herenhuis', 'villa', 'landhuis', 'bungalow', 'woonboerderij', 'grachtenpand', 'woonboot', 'stacaravan', 'woonwagen', 'landgoed');
+				$fullArray = array();
+				
+				$totalCount = 0;
+				
+				foreach ($typeArray as $key => $val) {
+					
+					$fullArray[$val] = array();
+					
+					if (isset($filterCache['functions'][$val]) && $filterCache['functions'][$val] > 0) {
+						
+						$fullArray[$val]['disabled'] = '';
+						$fullArray[$val]['class'] = '';
+						$fullArray[$val]['counter'] = $filterCache['functions'][$val];
+						
+						$totalCount += $filterCache['functions'][$val];
+					}
+					else {
+						
+						$fullArray[$val]['disabled'] = ' disabled="disabled"';
+						$fullArray[$val]['class'] = 'disabled';
+						$fullArray[$val]['counter'] = 0;
+					}
+				}
+				
+				ksort($fullArray);
+				
+				?>
+				
+				<select name="bestemming" id="filter-type-object">
+				
+					<option value="">Alle objecttypes</option>
+	
+					<?php
+	
+					foreach ($fullArray as $key => $val) {
+	
+						if ($val['counter'] > 0) {
+	
+							$selected = (isset($filter['bestemming']) && $filter['bestemming'] == $key) ? ' selected="selected"' : '';
+	
+							echo '<option value="' . $key . '"' . $selected . '>' . ucwords($key) . ' (' . $val['counter'] . ')</option>';
+						}
+					}
+	
+					?>
+	
+				</select>
+			
+			</div>
+			<?php } ?>
+			
+			<div class="select-wrapper">
+			
+				<select name="perceelOppervlakte" id="filter-perceelopp">
+					<option value="">Alle perceeloppervlaktes</option>
+	
+					<?php
+	
+					$arrOpp = array(100, 250, 500, 1000, 2500, 5000, 7500, 10000);
+	
+					foreach ($arrOpp as $key => $val) {
+	
+						$selected = ($filter['perceelOppervlakte'] == $val) ? ' selected="selected"' : '';
+	
+						echo '<option value="' . $val . '"' . $selected . '>Perceel: ca. ' . number_format($val, 0, ',', '.') . ' m&sup2;</option>';
+					}
+	
+					?>
+	
+				</select>
+			
+			</div>
+			
+			<div class="select-wrapper">
+			
+				<select name="woonfunctieOppervlakte" id="filter-woonopp">
+					<option value="">Alle woonoppervlaktes</option>
+	
+					<?php
+	
+					$arrOpp = array(50, 100, 250, 500, 750, 1000);
+	
+					foreach ($arrOpp as $key => $val) {
+	
+						$selected = ($filter['woonfunctieOppervlakte'] == $val) ? ' selected="selected"' : '';
+	
+						echo '<option value="' . $val . '"' . $selected . '>Woonopp: ca. ' . number_format($val, 0, ',', '.') . ' m&sup2;</option>';
+					}
+	
+					?>
+	
+				</select>
+			
+			</div>
+			
+			<div class="select-wrapper">
+			
+				<select name="slaapkamers" id="filter-slaapkamers">
+					<option value="">1+ slaapkamers</option>
+	
+					<?php
+	
+					$arrOpp = array(2, 3, 4, 5, 6);
+	
+					foreach ($arrOpp as $key => $val) {
+	
+						$selected = ($filter['slaapkamers'] == $val) ? ' selected="selected"' : '';
+	
+						echo '<option value="' . $val . '"' . $selected . '>' . number_format($val, 0, ',', '.') . '+ slaapkamers</option>';
+					}
+	
+					?>
+	
+				</select>
+			
+			</div>
+			
 		</div>
 	
 	</div>
@@ -115,7 +240,7 @@
 	<p class="filter-head"><a href="#">Huurwoningen</a></p>
 	<p class="filter-head"><a href="#">Nieuwbouw</a></p>
 	<p class="filter-head"><a href="#">Bouwkavels</a></p>
-	<p class="filter-head"><a href="#">Bouwpanden</a></p>
+	<p class="filter-head"><a href="#">Bedrijfspanden</a></p>
 	<p class="filter-head"><a href="#">Recent verkocht</a></p>
 	</div>
 </div>
@@ -126,8 +251,32 @@
 
 		$('#more-filters').click(function() {
 
-			$('div#additional-filters').show();
+			showFilters();
 		});
+
+		$('form#filter-form select').change(function() { 
+
+			$('form#filter-form').submit();
+		});
+
+		<?php
+		
+		if ($extraSearch) {
+			
+			?>
+
+		showFilters();
+
+			<?php
+		}
+		
+		?>
 	});
+
+	function showFilters() {
+
+		$('div#additional-filters').show();
+		$('#more-filters').parent().hide();
+	}
 
 </script>

@@ -76,34 +76,33 @@ class PP_Paging {
 		if (!in_array(2, $nextPages))
 			$pages .= '<span class="no-link">...</span>';
 			
-			// Loop through $nextPages
-			foreach ($nextPages as $key => $val) {
-				
-				if ($val > 1 && $val < $this->totalPages) {
-					
-					$active = ($val == $this->currentPage) ? true : false;
-					
-					if ($active)
-						$pages .= '<span class="active">' . $val . '</span>';
-					else
-						$pages .= '<span><a href="' . $url . $val . '" title="Naar pagina ' . $val . '">' . $val . '</a></span>';
-				}
-			}
+		// Loop through $nextPages
+		foreach ($nextPages as $key => $val) {
 			
-			// ... end
-			if (!in_array(($this->totalPages - 1), $nextPages))
-				$pages .= '<a href="#"><span>...</span></a>';
+			if ($val > 1 && $val < $this->totalPages) {
 				
-				// Always display last page
-				$activeLast = ($this->currentPage == $this->totalPages) ? true : false;
+				$active = ($val == $this->currentPage) ? true : false;
 				
-				if ($activeLast)
-					$pages .= '<span class="active">' . $this->totalPages . '</span>';
-				else 
-					$pages .= '<span><a href="' . $url . $this->totalPages . '" class="button" title="' . $this->totalPages . '">' . $this->totalPages . '</a></span>';
-				
-				return str_replace('{{pageData}}', $pages, $this->templateData['pages']);
-				
+				if ($active)
+					$pages .= '<span class="active">' . $val . '</span>';
+				else
+					$pages .= '<span><a href="' . $url . $val . '" title="Naar pagina ' . $val . '">' . $val . '</a></span>';
+			}
+		}
+		
+		// ... end
+		if (!in_array(($this->totalPages - 1), $nextPages))
+			$pages .= '<span class="no-link">...</span>';
+			
+		// Always display last page
+		$activeLast = ($this->currentPage == $this->totalPages) ? true : false;
+		
+		if ($activeLast)
+			$pages .= '<span class="active">' . $this->totalPages . '</span>';
+		else 
+			$pages .= '<span><a href="' . $url . $this->totalPages . '" class="button" title="' . $this->totalPages . '">' . $this->totalPages . '</a></span>';
+		
+		return str_replace('{{pageData}}', $pages, $this->templateData['pages']);
 	}
 }
 
