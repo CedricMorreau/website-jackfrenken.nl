@@ -519,11 +519,45 @@ $mediaList = $cms['database']->prepare("SELECT `id`, `object_ObjectTiaraID`, `be
 					</div>
 
 					<div class="content-wrapper" data-tab="4" style="display: none;">
-						tab 4
+						<ul>
+							<li><a href="<?php echo $extraMedia['brochure']; ?>" title="Download de brochure" target="_blank">Download de brochure</a></li>
+						</ul>
 					</div>
 
 					<div class="content-wrapper" data-tab="5" style="display: none;">
-						tab 5
+						<div id="object-contact-form">
+
+							<div id="object-contact-form-output" class="clearfix">
+								<div class="form_loading group" style="display: none;">
+									<p>
+										<img src="/img/loading.gif" alt="Het reactieformulier wordt verstuurd" title="Het reactieformulier wordt verstuurd">
+										<i>Het contactformulier wordt verstuurd&hellip;</i>
+									</p>
+								</div>
+								<div class="form_error general" style="display: none;"><h3>Foutje</h3><p>Er ging iets mis op de server. Probeer het nog eens.</p></div>
+								<div class="form_result" style="display: none;"><h3>Bedankt!</h3><p>Wij zullen indien nodig z.s.m. reageren.</p></div>
+							</div>
+
+							<form action="#" class="standard flex-row flex-wrap">
+								<?php // FIXIT SB: Values van deze 3 hidden inputs dynamisch vullen ?>
+								<input type="hidden" name="object_plaatsnaam" value="<?php echo $val['objectDetails_Adres_NL_Woonplaats']; ?>">
+								<input type="hidden" name="object_adres" value="<?php echo obj_generateAddress($val['objectDetails_Adres_NL_Straatnaam'], $val['objectDetails_Adres_NL_Huisnummer'], $val['objectDetails_Adres_NL_HuisnummerToevoeging']); ?>">
+								<input type="hidden" name="object_url" value="<?php echo 'http://www.landelijkwonen.nl/' . $template->getPermalink(1) . '.html'; ?>">
+								
+								<fieldset class="flex-col size50">
+									<input type="text" name="name" value="" placeholder="Naam*">
+									<input type="email" name="email" value="" placeholder="E-mailadres*">
+									<input type="text" name="city" value="" placeholder="Woonplaats">
+									<input type="text" name="phone" value="" placeholder="Telefoon*">
+								</fieldset>
+
+								<fieldset class="flex-col size50">
+									<textarea name="message" placeholder="Uw bericht*"></textarea>
+									<input type="submit" name="object-contact-submit" value="Verstuur dit bericht">
+								</fieldset>
+							</form>
+						</div>
+						
 					</div>
 
 				</div>
@@ -543,6 +577,7 @@ $mediaList = $cms['database']->prepare("SELECT `id`, `object_ObjectTiaraID`, `be
 		<script type="text/javascript" src="<?php echo $dynamicRoot; ?>js/royalslider/royalslider/jquery.royalslider.min.js"></script>
 		<script type="text/javascript" src="https://maps.google.com/maps/api/js?key=AIzaSyATO501GwK6eyvxPwA6TIdbmc_PcfKvPAg"></script>
 		<script type="text/javascript" src="<?php echo $dynamicRoot; ?>js/google-maps.js"></script>
+		<script type="text/javascript" src="<?php echo $dynamicRoot; ?>js/jquery.validate.js"></script>
 		
 		<script type="text/javascript">
 
@@ -565,9 +600,9 @@ $mediaList = $cms['database']->prepare("SELECT `id`, `object_ObjectTiaraID`, `be
 					$('.content-wrapper[data-tab="' + tab + '"]').show();
 				}
 			}
-		
-			// Start royalslider
 			$(document).ready(function($) {
+
+				// START ROYALSLIDER
 
 				var slideWidth = $('#royal-slider').width();
 
@@ -617,83 +652,69 @@ $mediaList = $cms['database']->prepare("SELECT `id`, `object_ObjectTiaraID`, `be
 					});
 				});
 
+				// END ROYALSLIDER
+
 				$('li a[data-tab="3"]').click(function(){
 					load_map_and_street_view_from_address('<?php echo str_replace("'", "\'", obj_generateGoogleAddress($val['objectDetails_Adres_NL_Woonplaats'], $val['objectDetails_Adres_NL_Straatnaam'], $val['objectDetails_Adres_NL_Huisnummer'], $val['objectDetails_Adres_NL_HuisnummerToevoeging'], $val['objectDetails_Adres_NL_Postcode'])); ?>');
 				});
-				
-// 				slider = $('#royal-slider').royalSlider({
-// 					addActiveClass: true,
-// 				  	autoHeight: true,
-// 				    arrowsNav: true,
-// 				    fadeinLoadedSlide: false,
-// 					fullscreen: {
-// 						enabled: true,
-// 						nativeFS: false
-// 					},
-// 					buttonFS: true,
-// 					nativeFS: true,
-// 					slidesSpacing: 0,
-// 				    controlNavigationSpacing: 0,
-// 				    arrowsNavAutoHide: false,
-// 				    controlNavigation: 'none',
-// 				    imageScaleMode: 'fill',
-// 				    imageAlignCenter: false,
-// 				    loop: false,
-// 				    loopRewind: true,
-// 				    numImagesToPreload: 3,
-// 				    keyboardNavEnabled: true,
-// 				    usePreloader: true,
-// 				    transitionType: 'fade',
-// 				    transitionSpeed: 100
-// 				}).data('royalSlider');
 
-// 			  slider = $('#royal-slider').royalSlider({
-// 					addActiveClass: true,
-// 					arrowsNav: true,
-// 					imageScaleMode: 'fill',
-// 					controlNavigation: 'none',
-// 					// autoScaleSlider: true, 
-// 					// autoScaleSliderWidth: 960,
-// 					// autoScaleSliderHeight: 300,
-// 					fullscreen: {
-// 						enabled: true,
-// 						nativeFS: false
-// 					},
-// 					video: {
-// 						autoHideControlNav: true
-// 					},
-// 					buttonFS: true,
-// 					nativeFS: true,
-// 					slidesSpacing: 0,
-// 					loop: true,
-// 					fadeinLoadedSlide: false,
-// 					globalCaption: false,
-// 					keyboardNavEnabled: true,
-// 					globalCaptionInside: false,
-// 					visibleNearby: {
-// 						enabled: true,
-// 						centerArea: 0.8,
-// 						center: true,
-// 						breakpoint: 650,
-// 						breakpointCenterArea: 0.90,
-// 						navigateByCenterClick: true
-// 					}
-// 				}).data('royalSlider');
-
-// 				slider.ev.on('rsEnterFullscreen', function() {
-					
-// 					slider.st.imageScaleMode='fit';
-// 					slider.updateSliderSize(true);
-// 				});
-				
-// 				slider.ev.on('rsExitFullscreen', function() {
-
-// 					slider.st.imageScaleMode='fill';
-// 					slider.updateSliderSize(true);
-// 				});
+				// Form
+				$("#object-contact-form form").validate({
+					focusInvalid: false,
+					errorPlacement: function(error, element) {},
+					rules: {
+						name: {
+							required: true,
+							minlength: 2
+						},
+						email: {
+							required: true,
+							email: true
+						},
+						phone: {
+							required: true
+						},
+						message: {
+							required: true,
+							minlength: 4
+						}
+					},
+					submitHandler: function(form) {
+						return SubmitContactForm();
+					}
+				});
 			});
-		
-			// EINDE ROYALSLIDER
+
+			function SubmitContactForm(){
+
+				$('#object-contact-form-output .form_error').fadeOut('slow');
+				$('#object-contact-form form').fadeOut('slow', function(){
+				
+					$('#object-contact-form-output .form_loading').css({ display : 'none' }).fadeIn('slow');
+					$.ajax({
+						type	: 'POST',
+						url 	: '/inc/process-form-info.php',
+						data	: $('#object-contact-form form').serialize(),
+						success	: function(data){
+							$('#object-contact-form-output .form_loading').fadeOut('fast', function(){
+								if(!data){
+									
+									$('#object-contact-form-output .form_error.general').css({ display : 'none' }).fadeIn('fast');
+									$('#object-contact-form form').fadeIn('fast');
+								} else {
+									
+									$('#object-contact-form form').remove();
+									$('#object-contact-form-output .form_result').css({ display : 'none' }).fadeIn();
+									// $('#object-contact-form').html(data); //Test mail output
+								}
+							});
+						}
+					
+					});
+
+				});
+				return false;
+			}
 			
 		</script>
 	</body>
