@@ -550,7 +550,7 @@ else {
 			'-' AS huidigGebruik, 
 			`tbl_OG_nieuwbouw_bouwNummers`.MatenEnLigging_PerceelOppervlakte AS oppervlakte, 
 			`tbl_OG_nieuwbouw_bouwNummers`.MatenEnLigging_Liggingen AS liggingen, 
-			'nieuwbouw' AS ogType,
+			'nieuwbouw_' AS ogType,
 
 			(SELECT `cms_per_link` FROM `tbl_cms_permaLinks` WHERE `cms_per_tableId`=40 AND `cms_per_tableName`='tbl_mod_pages' AND `cms_per_moduleExtra`=`tbl_OG_nieuwbouw_bouwNummers`.`id`) as `cms_per_link`,
 			(SELECT `bestandsnaam_medium` FROM `tbl_OG_media` WHERE `id_OG_nieuwbouw_bouwnummers`=`tbl_OG_nieuwbouw_bouwNummers`.`id` AND `media_status`=2 AND `media_groep` IN ('Hoofdfoto', 'Foto')  ORDER BY `media_groep` DESC, `media_id` ASC LIMIT 1) as `mainImage`,
@@ -663,13 +663,6 @@ elseif ($overviewType == 'huren')
 
 <html lang="nl">
 	<head>
-		<meta charset="utf-8">
-		<title>Jack Frenken Makelaars en Adviseurs</title>
-		<meta property="og:site_name" content="Jack Frenken Makelaars en Adviseurs">
-		<meta property="og:title" content="Jack Frenken Makelaars en Adviseurs">
-		<meta property="og:description" content="Jack Frenken Makelaars en Adviseurs">
-	  	<meta name="description" content="Jack Frenken Makelaars en Adviseurs">
-	  	<meta name="author" content="Pixelplus Interactieve Media">
 		
 		<?php include($documentRoot . "inc/head.php"); ?>
 
