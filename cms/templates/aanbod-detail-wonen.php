@@ -212,7 +212,13 @@ $mediaList = $cms['database']->prepare("SELECT `id`, `object_ObjectTiaraID`, `be
 				
 				<div class="column-sidebar">
 				
-					<?php include($documentRoot . "inc/sidebar-nav.php"); ?>
+					<ul class="sidebar-nav">
+						<li class="active"><a href="javascript:void(0);" data-tab="1" data-desc="Beschrijving" onclick="changeTab(1);">Beschrijving &xrarr;</a></li>
+						<li><a href="javascript:void(0);" data-tab="2" data-desc="Kenmerken" onclick="changeTab(2);">Kenmerken</a></li>
+						<li><a href="javascript:void(0);" data-tab="3" data-desc="Locatie" onclick="changeTab(3);">Locatie</a></li>
+						<li><a href="javascript:void(0);" data-tab="4" data-desc="Downloads" onclick="changeTab(4);">Downloads</a></li>
+						<li><a href="javascript:void(0);" data-tab="5" data-desc="Contact" onclick="changeTab(5);">Contact</a></li>
+					</ul>
 				
 					<?php include($documentRoot . "inc/widget.php"); ?>
 
@@ -221,36 +227,303 @@ $mediaList = $cms['database']->prepare("SELECT `id`, `object_ObjectTiaraID`, `be
 				</div>
 
 				<div class="column-content">
+					<a id="content" class="anchor"></a>
 
-					<div class="content-wrapper">
-						<a id="content" class="anchor"></a>
+					<div class="content-wrapper" data-tab="1">
 						<h2>Beschrijving</h2>
-						<p class="intro">
-							U zoekt rust, ruimte, de mogelijkheid om een bedrijf aan huis te starten, of gewoon een lekker groot
-							huis met een eigen atelier of riante hobby ruimte? Deze riante vrijstaande geschakelde woning biedt u
-							alle ruimte die u zoekt! Met een woonoppervlak van 215 m² en een perceel van maar liefst 1012m2 m²
-							kunt u met wat werk al uw dromen realiseren.
-						</p>
-
-						<p>
-						De indeling is als volgt:	
-						</p>
-
-						<p>
-							Begane grond:<br>
-							De hal brengt u direct in de riante woonkamer met aansluitend een open keuken. Aan de voorzijde van de woning is een aparte speel/werkkamer, die weer in verbinding staat met de werkruimte van ca. 80m2 aan de rechterzijde van de woning. Deze werkruimte is verdeeld in 2 vertrekken heeft een eigen ingang aan de straatzijde. Aan de achterzijde heeft de werkruimte een deur naar de tuin en komt er dus voldoende daglicht binnen. Verder biedt de begane grond ruimte aan een luxe badkamer met ligbad en douche, een slaapkamer, een kantoor- en wasruimte. Ook de garage links naast de woning is inpandig bereikbaar.
-						</p>
-
-						<p>
-							1e Verdieping:<br>
-							Vanuit de overloop zijn er 3 ruime slaapkamers bereikbaar en de badkamer. De badkamer is ingericht met een douche, wandcloset en badmeubel. De masterbedroom is zeer riant en alle slaapkamers zijn voorzien van laminaat.
-						</p>
-
-						<p>Zolderberging:<br>
-							Middels een vlizotrap is de zolderberging bereikbaar.
-						</p>
+						
+						<?php echo utf8_encode(nl2br($val['objectDetails_Aanbiedingstekst'])); ?>
 					</div>
 
+					<div class="content-wrapper" data-tab="2" style="display: none;">
+					
+						<h2>Bebouwing</h2>
+	
+						<table>
+							<?php if (!empty($val['bouwgrond_HuidigGebruik']) && $val['bouwgrond_Oppervlakte'] > 0) { ?>
+							<tr>
+								<th class="description">Bouwgrond</th>
+								<td class="value"><?php echo number_format($val['bouwgrond_Oppervlakte'], 0, ",", "."); ?> m<sup>2</sup> perceeloppervlak</td>
+							</tr>
+							<?php } ?>
+	
+							<?php if (!empty($val['bouwgrond_HuidigGebruik']) && !empty($val['bouwgrond_Liggingen'])) { ?>
+							<tr>
+								<th class="description">Ligging</th>
+								<td class="value"><?php echo obj_splitValues($val['bouwgrond_Liggingen']); ?></td>
+							</tr>
+							<?php } ?>
+	
+							<?php if (!empty($val['wonen_WonenDetails_Bestemming_HuidigGebruik'])) { ?>
+	
+								<?php if (!empty($val['wonen_Woonhuis_SoortWoning'])) { ?>
+								<tr>
+									<th class="description">Soort woonhuis</th>
+									<td class="value"><?php echo ucfirst($val['wonen_Woonhuis_SoortWoning']) . ',<br>' . $val['wonen_Woonhuis_TypeWoning']; ?></td>
+								</tr>
+								<?php } ?>
+	
+								<?php if (!empty($val['wonen_Appartement_SoortAppartement'])) { ?>
+								<tr>
+									<th class="description">Soort appartement</th>
+									<td class="value"><?php echo $val['wonen_Appartement_SoortAppartement']; ?></td>
+								</tr>
+								<?php } ?>
+	
+								<?php if (!empty($val['wonen_WonenDetails_Bouwjaar_JaarOmschrijving_Jaar'])) { ?>
+								<tr>
+									<th class="description">Bouwjaar</th>
+									<td class="value"><?php echo $val['wonen_WonenDetails_Bouwjaar_JaarOmschrijving_Jaar']; ?></td>
+								</tr>
+								<?php } ?>
+	
+								<?php if (!is_null($val['wonen_WonenDetails_GebruiksoppervlakteWoonfunctie']) && $val['wonen_WonenDetails_GebruiksoppervlakteWoonfunctie'] > 0) { ?>
+								<tr>
+									<th class="description">Woonoppervlakte</th>
+									<td class="value"><?php echo number_format($val['wonen_WonenDetails_GebruiksoppervlakteWoonfunctie'], 0, ",", "."); ?> m<sup>2</sup></td>
+								</tr>
+								<?php } ?>
+	
+								<?php if (!is_null($val['wonen_WonenDetails_GebruiksoppervlakteOverigeFuncties']) && $val['wonen_WonenDetails_GebruiksoppervlakteOverigeFuncties'] > 0) { ?>
+								<tr>
+									<th class="description">Overige inpandige oppervlakte</th>
+									<td class="value"><?php echo number_format($val['wonen_WonenDetails_GebruiksoppervlakteOverigeFuncties'], 0, ",", "."); ?> m<sup>2</sup></td>
+								</tr>
+								<?php } ?>
+	
+								<?php if (!is_null($val['wonen_WonenDetails_PerceelOppervlakte']) && $val['wonen_WonenDetails_PerceelOppervlakte'] > 0) { ?>
+								<tr>
+									<th class="description">Perceeloppervlakte</th>
+									<td class="value"><?php echo number_format($val['wonen_WonenDetails_PerceelOppervlakte'], 0, ",", "."); ?> m<sup>2</sup></td>
+								</tr>
+								<?php } ?>
+	
+								<?php if (!is_null($val['wonen_WonenDetails_Inhoud']) && $val['wonen_WonenDetails_Inhoud'] > 0) { ?>
+								<tr>
+									<th class="description">Inhoud</th>
+									<td class="value"><?php echo number_format($val['wonen_WonenDetails_Inhoud'], 0, ",", "."); ?> m<sup>3</sup></td>
+								</tr>
+								<?php } ?>
+	
+							<?php } ?>
+						</table>
+						
+						<?php
+	
+						$boolInfo = false;
+	
+						if (!empty($val['wonen_Verdiepingen_AantalSlaapKamers']) || !empty($val['wonen_Verdiepingen_Aantal']) || !empty($val['wonen_WonenDetails_VoorzieningenWonen']))
+							$boolInfo = true;
+	
+						if ($boolInfo) {
+	
+						?>
+						
+						<h2>Indeling</h2>
+	
+						<table>
+	
+							<?php if (!empty($val['wonen_Verdiepingen_AantalSlaapKamers'])) { ?>
+							<tr>
+								<th class="description">Slaapkamers</th>
+								<td class="value"><?php echo $val['wonen_Verdiepingen_AantalSlaapKamers']; ?></td>
+							</tr>
+							<?php } ?>
+	
+							<?php if (!empty($val['wonen_Verdiepingen_Aantal'])) { ?>
+							<tr>
+								<th class="description">Verdiepingen</th>
+								<td class="value"><?php echo $val['wonen_Verdiepingen_Aantal']; ?></td>
+							</tr>
+							<?php } ?>
+	
+						</table>
+	
+						<?php
+	
+						}
+	
+						?>
+						
+						<?php
+	
+						$boolInfo = false;
+	
+						if (!empty($val['wonen_WonenDetails_Installatie_CVKetel_CVKetelType']) || !empty($val['wonen_WonenDetails_Installatie_CVKetel_Eigendom']) || !empty($val['wonen_WonenDetails_Installatie_CVKetel_Combiketel']) || !empty($val['wonen_WonenDetails_Diversen_Isolatievormen']) || !empty($val['wonen_WonenDetails_Installatie_SoortenVerwarming']) || !empty($val['wonen_WonenDetails_Installatie_SoortenWarmWater']))
+							$boolInfo = true;
+	
+						if ($boolInfo) {
+	
+						?>
+						
+						<h2>Energie</h2>
+						
+						<table>
+	
+							<?php if (!empty($val['wonen_WonenDetails_Installatie_CVKetel_CVKetelType'])) { ?>
+							<tr>
+								<th class="description">C.V.-ketel</th>
+								<td class="value">
+								
+									<?php
+									
+									echo ucfirst($val['wonen_WonenDetails_Installatie_CVKetel_CVKetelType']);
+									
+									if (!empty($val['wonen_WonenDetails_Installatie_CVKetel_Eigendom']) && !empty($val['wonen_WonenDetails_Installatie_CVKetel_Bouwjaar']) && !empty($val['wonen_WonenDetails_Installatie_CVKetel_Combiketel'])) {
+										
+										if ($val['wonen_WonenDetails_Installatie_CVKetel_Combiketel'] == "ja")
+											echo ', Combiketel';
+										
+										if ($val['wonen_WonenDetails_Installatie_CVKetel_Bouwjaar'] > 0)
+											echo ', ' . $val['wonen_WonenDetails_Installatie_CVKetel_Bouwjaar'];
+									}
+									
+									?>
+									
+								</td>
+							</tr>
+							<?php } ?>
+							
+							<?php if (!empty($val['wonen_WonenDetails_Diversen_Isolatievormen'])) { ?>
+							<tr>
+								<th class="description">Isolatie</th>
+								<td class="value"><?php echo obj_splitValues($val['wonen_WonenDetails_Diversen_Isolatievormen']); ?></td>
+							</tr>
+							<?php } ?>
+							
+							<?php if (!empty($val['wonen_WonenDetails_Installatie_SoortenVerwarming'])) { ?>
+							<tr>
+								<th class="description">Verwarming</th>
+								<td class="value"><?php echo obj_splitValues($val['wonen_WonenDetails_Installatie_SoortenVerwarming']); ?></td>
+							</tr>
+							<?php } ?>
+							
+							<?php if (!empty($val['wonen_WonenDetails_MatenEnLigging_Liggingen'])) { ?>
+							<tr>
+								<th class="description">Warm water</th>
+								<td class="value"><?php echo obj_splitValues($val['wonen_WonenDetails_MatenEnLigging_Liggingen']); ?></td>
+							</tr>
+							<?php } ?>
+							
+						</table>
+	
+						<?php
+	
+						}
+	
+						?>
+						
+						<?php
+	
+						$boolInfo = false;
+	
+						if (!empty($val['wonen_WonenDetails_MatenEnLigging_Liggingen']) || !empty($val['wonen_WonenDetails_Tuin_Tuintypen']) || !empty($val['wonen_WonenDetails_Hoofdtuin_Afmetingen_Oppervlakte']) || !empty($val['wonen_WonenDetails_Hoofdtuin_Positie']) || !empty($val['wonen_WonenDetails_Garage_Soorten']) || !empty($val['wonen_WonenDetails_SchuurBerging_Soort']))
+							$boolInfo = true;
+	
+						if ($boolInfo) {
+	
+						?>
+						
+						<h2>Buitenruimte</h2>
+						
+						<table>
+						
+							<?php if (!empty($val['wonen_WonenDetails_MatenEnLigging_Liggingen'])) { ?>
+							<tr>
+								<th class="description">Ligging</th>
+								<td class="value"><?php echo obj_splitValues($val['wonen_WonenDetails_MatenEnLigging_Liggingen']); ?></td>
+							</tr>
+							<?php } ?>
+						
+							<?php if (!empty($val['wonen_WonenDetails_Tuin_Tuintypen'])) { ?>
+							<tr>
+								<th class="description">Tuin</th>
+								<td class="value"><?php echo obj_splitValues($val['wonen_WonenDetails_Tuin_Tuintypen']); ?></td>
+							</tr>
+							<?php } ?>
+						
+							<?php if (!empty($val['wonen_WonenDetails_Hoofdtuin_Afmetingen_Oppervlakte'])) { ?>
+							<tr>
+								<th class="description">Achtertuin</th>
+								<td class="value"><?php echo $val['wonen_WonenDetails_Hoofdtuin_Afmetingen_Oppervlakte']; ?>m<sup>2</sup> (<?php echo number_format(($val['wonen_WonenDetails_Hoofdtuin_Afmetingen_Lengte'] / 100), 2, ',', '.'); ?>m diep en <?php echo number_format(($val['wonen_WonenDetails_Hoofdtuin_Afmetingen_Breedte'] / 100), 2, ',', '.'); ?>m breed)</td>
+							</tr>
+							<?php } ?>
+							
+							<?php if (!empty($val['wonen_WonenDetails_Hoofdtuin_Positie'])) { ?>
+							<tr>
+								<th class="description">Ligging tuin</th>
+								<td class="value">
+								
+									<?php
+									
+									switch ($val['wonen_WonenDetails_Hoofdtuin_Positie']) {
+										
+										case 'noord': echo 'Gelegen op het noorden'; break;
+										case 'noordoost': echo 'Gelegen op het noordoosten'; break;
+										case 'oost': echo 'Gelegen op het oosten'; break;
+										case 'zuidoost': echo 'Gelegen op het zuidoosten'; break;
+										case 'zuid': echo 'Gelegen op het zuiden'; break;
+										case 'zuidwest': echo 'Gelegen op het zuidwesten'; break;
+										case 'west': echo 'Gelegen op het westen'; break;
+										case 'noordwest': echo 'Gelegen op het noordwesten'; break;
+									}
+									
+									if (!empty($val['wonen_WonenDetails_Hoofdtuin_Achterom']))
+										echo ', bereikbaar via achterom';
+									
+									?>
+								
+								</td>
+							</tr>
+							<?php } ?>
+							
+							<?php if (!empty($val['wonen_WonenDetails_SchuurBerging_Soort'])) { ?>
+							<tr>
+								<th class="description">Ligging tuin</th>
+								<td class="value">
+								
+									<?php
+									
+									switch ($val['wonen_WonenDetails_SchuurBerging_Soort']) {
+										
+										case 'aangebouwd steen': echo 'Aangebouwde stenen schuur/berging'; break;
+										case 'aangebouwd hout': echo 'Aangebouwde houten schuur/berging'; break;
+										case 'vrijstaand steen': echo 'Vrijstaande stenen schuur/berging'; break;
+										case 'vrijstaand hout': echo 'Vrijstaande houten schuur/berging'; break;
+										case 'inpandig': echo 'Inpandige schuur/berging'; break;
+										case 'box': echo 'Box'; break;
+									}
+									
+									if (!empty($val['wonen_WonenDetails_SchuurBerging_TotaalAantal']))
+										echo '&nbsp(' . $val['wonen_WonenDetails_SchuurBerging_TotaalAantal'] . ')';
+									
+									?>
+								
+								</td>
+							</tr>
+							<?php } ?>
+						
+						</table>
+						
+						<?php
+	
+						}
+	
+						?>				
+						
+					</div>
+
+					<div class="content-wrapper" data-tab="3" style="display: none;">
+						tab 3
+					</div>
+
+					<div class="content-wrapper" data-tab="4" style="display: none;">
+						tab 4
+					</div>
+
+					<div class="content-wrapper" data-tab="5" style="display: none;">
+						tab 5
+					</div>
 
 				</div>
 			</div>
@@ -269,6 +542,26 @@ $mediaList = $cms['database']->prepare("SELECT `id`, `object_ObjectTiaraID`, `be
 		<script type="text/javascript" src="<?php echo $dynamicRoot; ?>js/royalslider/royalslider/jquery.royalslider.min.js"></script>
 		
 		<script type="text/javascript">
+
+			function changeTab(tab) {
+
+				// Current active tab
+				activeTab = $('li.active a[data-tab]');
+
+				if ($('li a[data-tab="' + tab + '"]').length > 0) {
+
+					newTab = $('li a[data-tab="' + tab + '"]');
+
+					activeTab.html(activeTab.data('desc')).parent().removeClass('active');
+					newTab.html(newTab.data('desc') + ' &xrarr;').parent().addClass('active');
+
+					// Hide all tabs
+					$('.content-wrapper[data-tab]').hide();
+
+					// Show new tab
+					$('.content-wrapper[data-tab="' + tab + '"]').show();
+				}
+			}
 		
 			// Start royalslider
 			$(document).ready(function($) {
