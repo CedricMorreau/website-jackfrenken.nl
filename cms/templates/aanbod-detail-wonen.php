@@ -514,7 +514,8 @@ $mediaList = $cms['database']->prepare("SELECT `id`, `object_ObjectTiaraID`, `be
 					</div>
 
 					<div class="content-wrapper" data-tab="3" style="display: none;">
-						tab 3
+						<div id="map_canvas"></div>
+						<div id="pano"></div>
 					</div>
 
 					<div class="content-wrapper" data-tab="4" style="display: none;">
@@ -540,6 +541,8 @@ $mediaList = $cms['database']->prepare("SELECT `id`, `object_ObjectTiaraID`, `be
 		<link rel="stylesheet" type="text/css" href="<?php echo $dynamicRoot; ?>js/royalslider/royalslider/skins/minimal-white/rs-minimal-white.css">
 
 		<script type="text/javascript" src="<?php echo $dynamicRoot; ?>js/royalslider/royalslider/jquery.royalslider.min.js"></script>
+		<script type="text/javascript" src="https://maps.google.com/maps/api/js?key=AIzaSyATO501GwK6eyvxPwA6TIdbmc_PcfKvPAg"></script>
+		<script type="text/javascript" src="<?php echo $dynamicRoot; ?>js/google-maps.js"></script>
 		
 		<script type="text/javascript">
 
@@ -612,6 +615,10 @@ $mediaList = $cms['database']->prepare("SELECT `id`, `object_ObjectTiaraID`, `be
 						'width': slideWidth,
 						'margin-left': '0px'
 					});
+				});
+
+				$('li a[data-tab="3"]').click(function(){
+					load_map_and_street_view_from_address('<?php echo str_replace("'", "\'", obj_generateGoogleAddress($val['objectDetails_Adres_NL_Woonplaats'], $val['objectDetails_Adres_NL_Straatnaam'], $val['objectDetails_Adres_NL_Huisnummer'], $val['objectDetails_Adres_NL_HuisnummerToevoeging'], $val['objectDetails_Adres_NL_Postcode'])); ?>');
 				});
 				
 // 				slider = $('#royal-slider').royalSlider({
