@@ -1,0 +1,1 @@
+a:1:{s:9:"functions";a:6:{s:15:"eengezinswoning";i:101;s:13:"woonboerderij";i:2;s:5:"villa";i:8;s:9:"herenhuis";i:5;s:8:"landhuis";i:3;s:8:"bungalow";i:5;}}

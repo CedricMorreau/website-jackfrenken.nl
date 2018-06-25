@@ -1,0 +1,1 @@
+arr_markerData[0] = func_markerData(51.1003256,5.9738393,'Diergaarderstraat Zuid 23 a','MARIA HOOP','Nederland','/error/404.html',33,'/img/aanbod_geen-afbeelding_tn01.svg', 'WONEN');
