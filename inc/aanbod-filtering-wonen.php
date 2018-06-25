@@ -1,8 +1,35 @@
 <div class="sidebar-filtering">
+	
+	<?php
+	
+	switch ($overviewType) {
+		
+		case 'kopen':
+			
+			echo '<p class="filter-head active">Koopwoningen &xrarr;</p>';
+			
+			break;
+			
+		case 'huren':
+			
+			echo '<p class="filter-head active">Huurwoningen &xrarr;</p>';
+			
+			break;
+			
+		case 'kavels':
+			
+			echo '<p class="filter-head active">Bouwkavels &xrarr;</p>';
+			
+			break;
+	}
 
-	<p class="filter-head active">Koopwoningen &xrarr;</p>
+	if ($overviewType != 'kavels') {
+		
+	?>
 
+	<?php if ($noFilters != $MD5) { ?>
 	<a class="remove-filter">Filtering wissen <span class="remove-icon">&#x2715;</span></a>
+	<?php } ?>
 	
 	<form action="<?php echo $template->getPermalink(1, 1); ?>" id="filter-form" class="standard">
 
@@ -236,14 +263,20 @@
 
 	<p class="more-filters"><a href="javascript:void(0);" id="more-filters">Meer zoekfilters &darr;</a></p>
 
-	<div class="filter-list-wrapper">
-	<p class="filter-head"><a href="#">Huurwoningen</a></p>
-	<p class="filter-head"><a href="#">Nieuwbouw</a></p>
-	<p class="filter-head"><a href="#">Bouwkavels</a></p>
-	<p class="filter-head"><a href="#">Bedrijfspanden</a></p>
-	<p class="filter-head"><a href="#">Recent verkocht</a></p>
-	</div>
+	<?php } ?>
+	
+	<?php
+	
+	include($documentRoot . 'inc/aanbod-sidenav.php');
+	
+	?>
 </div>
+
+<?php
+
+if ($overviewType != 'kavels') {
+	
+?>
 
 <script type="text/javascript">
 
@@ -280,3 +313,5 @@
 	}
 
 </script>
+
+<?php } ?>
