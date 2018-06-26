@@ -1521,6 +1521,8 @@ input:focus {
 		}
 		@media only screen and (max-width: $container-size-m) {
 			flex-basis: 0;
+			// margin-left: $margin-size-s;
+			// margin-right: $margin-size-s;
 		}
 
 		.header-title {
@@ -2434,6 +2436,11 @@ input:focus {
 		flex-direction: column;
 		margin-right: 0;
 	}
+	@media only screen and (max-width: $container-size-m) {
+		padding-left: $margin-size-m;
+		padding-right: $margin-size-m;
+	}
+
 
 	.banner-title {
 		font-size: 2.5rem;
@@ -2568,8 +2575,8 @@ input:focus {
 		margin-left: 4rem;
 		margin-top: 2rem;
 		@media only screen and (max-width: $container-size-m) {
-			margin-left: 0;
-			margin-right: 0;
+			margin-left: $margin-size-s;
+			margin-right: $margin-size-s;
 		}
 	}
 
