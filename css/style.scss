@@ -2595,6 +2595,13 @@ input:focus {
 					background-color: transparent;
 					-webkit-transition: background-color 200ms ease-in-out;
 					transition: background-color 200ms ease-in-out;
+					&.error {
+						color: red;
+						&::placeholder {
+							color: red;
+						}
+					}
+
 					&[type="submit"] {
 						padding: 1rem;
 						background-color: $qua-col;

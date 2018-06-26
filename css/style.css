@@ -2185,6 +2185,16 @@ input:focus {
       background-color: transparent;
       -webkit-transition: background-color 200ms ease-in-out;
       transition: background-color 200ms ease-in-out; }
+      .aanbod-detail .content-wrapper form fieldset input.error {
+        color: red; }
+        .aanbod-detail .content-wrapper form fieldset input.error::-webkit-input-placeholder {
+          color: red; }
+        .aanbod-detail .content-wrapper form fieldset input.error:-ms-input-placeholder {
+          color: red; }
+        .aanbod-detail .content-wrapper form fieldset input.error::-ms-input-placeholder {
+          color: red; }
+        .aanbod-detail .content-wrapper form fieldset input.error::placeholder {
+          color: red; }
       .aanbod-detail .content-wrapper form fieldset input[type="submit"] {
         padding: 1rem;
         background-color: #2CBCAF;
