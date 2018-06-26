@@ -2038,6 +2038,7 @@ input:focus {
 				.item-image {
 					position: relative;
 					flex: 2;
+					min-height: 20rem;
 
 					a {
 						display: flex;

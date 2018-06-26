@@ -1736,7 +1736,8 @@ input:focus {
       position: relative;
       -webkit-box-flex: 2;
           -ms-flex: 2;
-              flex: 2; }
+              flex: 2;
+      min-height: 20rem; }
       .aanbod-overzicht .column-content .content-wrapper .item-wrapper .item-image a {
         display: -webkit-box;
         display: -ms-flexbox;
