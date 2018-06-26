@@ -1,10 +1,4 @@
 <div class="sidebar-filtering">
-	
-	<?php
-	
-	echo '<p class="filter-head active">Bedrijfspanden &xrarr;</p>';
-		
-	?>
 
 	<?php if ($noFilters != $MD5) { ?>
 	<a class="remove-filter">Filtering wissen <span class="remove-icon">&#x2715;</span></a>
@@ -14,7 +8,7 @@
 
 	<p class="filter-head toggle">Locatie</p>
 	<div class="filter-wrapper">
-		<input src="<?php echo $dynamicRoot; ?>inc/ajax_searchAutoComplete.php" type="text" id="bog_plaats" name="plaatsnaam" class="auto_complete" value="<?php echo $filter['plaatsnaam']; ?>" data-ogType="wonen" placeholder="Plaats, straat of postcode">
+		<input src="<?php echo $dynamicRoot; ?>inc/ajax_searchAutoComplete.php" type="text" id="nieuwbouw_plaats" name="plaatsnaam" class="auto_complete" value="<?php echo $filter['plaatsnaam']; ?>" data-ogType="wonen" placeholder="Plaats, straat of postcode">
 		<div class="select-wrapper">
 			<select name="radius" id="filter-straal">
 				<option value="">Geen straal</option>
@@ -49,35 +43,12 @@
 	<p class="filter-head toggle">Prijs</p>
 	<div class="filter-wrapper">
 		<div class="select-wrapper">
-			<select name="saleType" id="filter-prijstype">
-
-				<?php
-
-				$arrType = array(
-					'both' => 'Kopen',
-					'rent' => 'Huren',
-					'kopen' => 'Kopen en huren'
-				);
-
-				foreach ($arrType as $key => $val) {
-
-					$selected = ($filter['saleType'] == $key) ? ' selected="selected"' : '';
-
-					echo '<option value="' . $key . '"' . $selected . '>' . $val . '</option>';
-				}
-
-				?>
-
-			</select>
-		</div>
-	
-		<div class="select-wrapper">
 			<select name="prijsVan" id="filter-prijs-vanaf">
 
 				<?php
 
 				if ($filter['saleType'] == 'rent')
-					$arrPriceFrom = array(0, 500, 1000, 1500, 2000, 2500, 3000, 3500, 10000);
+					$arrPriceFrom = array(0, 500, 1000, 1500, 2000, 2500, 3000, 35000, 10000);
 				else
 					$arrPriceFrom = array(0, 100000, 200000, 300000, 400000, 500000, 600000, 700000, 800000, 900000, 1000000, 1250000);
 
@@ -123,42 +94,65 @@
 
 			</select>
 		</div>
+	</div>
 		
-		<?php if ($filter['saleType'] == 'rent') { ?>
+	<div id="additional-filters" style="display: none;">
+	
+		<p class="filter-head toggle">Objectkenmerken</p>
 		
-		<div class="select-wrapper">
-		
-			<select name="rentType" id="filter-renttype">
-
-				<?php
-
-				$arrType = array(
-
-					'' => 'Alle prijstypen',
-					'per maand' => 'Per maand',
-					'per jaar' => 'Per jaar',
-					'per vierkante meter per jaar' => 'Per m<sup>2</sup> per jaar'
-				);
-
-				foreach ($arrType as $key => $val) {
-
-					$selected = ($filter['rentType'] == $key) ? ' selected="selected"' : '';
-
-					echo '<option value="' . $key . '"' . $selected . '>' . $val . '</option>';
-				}
-
-				?>
-
-			</select>
-		
+		<div class="filter-wrapper">
+			
+			<div class="select-wrapper">
+			
+				<select name="oppPerceel" id="filter-perceelopp">
+					<option value="">Alle perceeloppervlaktes</option>
+	
+					<?php
+	
+					$arrOpp = array(100, 250, 500, 1000, 2500, 5000, 7500, 10000);
+	
+					foreach ($arrOpp as $key => $val) {
+	
+						$selected = ($filter['oppPerceel'] == $val) ? ' selected="selected"' : '';
+	
+						echo '<option value="' . $val . '"' . $selected . '>Perceel: ca. ' . number_format($val, 0, ',', '.') . ' m&sup2;</option>';
+					}
+	
+					?>
+	
+				</select>
+			
+			</div>
+			
+			<div class="select-wrapper">
+			
+				<select name="oppWoon" id="filter-woonopp">
+					<option value="">Alle woonoppervlaktes</option>
+	
+					<?php
+	
+					$arrOpp = array(50, 100, 250, 500, 750, 1000);
+	
+					foreach ($arrOpp as $key => $val) {
+	
+						$selected = ($filter['oppWoon'] == $val) ? ' selected="selected"' : '';
+	
+						echo '<option value="' . $val . '"' . $selected . '>Woonopp: ca. ' . number_format($val, 0, ',', '.') . ' m&sup2;</option>';
+					}
+	
+					?>
+	
+				</select>
+			
+			</div>
+			
 		</div>
-		
-		<?php } ?>
+	
 	</div>
 	
 	</form>
 
-<!-- 	<p class="more-filters"><a href="javascript:void(0);" id="more-filters">Meer zoekfilters &darr;</a></p> -->
+	<p class="more-filters"><a href="javascript:void(0);" id="more-filters">Meer zoekfilters &darr;</a></p>
 	
 	<?php
 	
@@ -183,14 +177,14 @@
 
 		<?php
 		
-		/*if ($extraSearch) {
+		if ($extraSearch) {
 			
 			?>
 
 		showFilters();
 
 			<?php
-		}*/
+		}
 		
 		?>
 	});

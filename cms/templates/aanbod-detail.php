@@ -11,7 +11,11 @@ elseif ($template->getPageId() == 42) {
 }
 elseif ($template->getPageId() == 40) {
 
-	include('aanbod-detail-agrarisch.php');
+	include('aanbod-detail-nieuwbouw.php');
+}
+elseif ($template->getPageId() == 74) {
+	
+	include('aanbod-detail-nieuwbouw-nummer.php');
 }
 else {
 
