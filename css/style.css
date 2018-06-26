@@ -1501,8 +1501,6 @@ input:focus {
         .column-content .column-sidebar .sidebar-widget {
           margin-left: 0;
           padding-left: 1rem; } }
-      .column-content .column-sidebar .sidebar-widget:last-of-type {
-        margin-bottom: 0; }
       .column-content .column-sidebar .sidebar-widget a {
         text-decoration: none;
         color: white;
@@ -2161,8 +2159,8 @@ input:focus {
       .aanbod-detail .content-image .image-container .rsFullscreenBtn:hover {
         background-color: #003064; }
 .aanbod-detail .banner-wrapper {
-  margin-right: 15rem;
-  margin-left: 4rem; }
+  margin-left: 4rem;
+  margin-top: 2rem; }
   @media only screen and (max-width: 768px) {
     .aanbod-detail .banner-wrapper {
       margin-left: 0;
@@ -2189,11 +2187,13 @@ input:focus {
       transition: background-color 200ms ease-in-out; }
       .aanbod-detail .content-wrapper form fieldset input[type="submit"] {
         padding: 1rem;
-        border-bottom: 1px dotted #003064;
-        cursor: pointer; }
+        background-color: #2CBCAF;
+        color: white;
+        cursor: pointer;
+        border: none; }
         .aanbod-detail .content-wrapper form fieldset input[type="submit"]:hover {
-          border-color: #00519B;
-          color: #00519B; }
+          background-color: #003064;
+          color: white; }
     .aanbod-detail .content-wrapper form fieldset textarea {
       height: 100%;
       max-height: 15rem;

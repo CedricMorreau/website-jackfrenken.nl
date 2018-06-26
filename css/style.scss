@@ -1714,9 +1714,6 @@ input:focus {
 				padding-left: $margin-size-s;
 			}
 
-			&:last-of-type {
-				margin-bottom: 0;
-			}
 			
 			a {
 				text-decoration: none;
@@ -2568,8 +2565,8 @@ input:focus {
 	}
 
 	.banner-wrapper {
-		margin-right: 15rem;
 		margin-left: 4rem;
+		margin-top: 2rem;
 		@media only screen and (max-width: $container-size-m) {
 			margin-left: 0;
 			margin-right: 0;
@@ -2600,11 +2597,13 @@ input:focus {
 					transition: background-color 200ms ease-in-out;
 					&[type="submit"] {
 						padding: 1rem;
-						border-bottom: 1px dotted $pri-col;
+						background-color: $qua-col;
+						color: $lit-col;
 						cursor: pointer;
+						border: none;
 						&:hover {
-							border-color: $sec-col;
-							color: $sec-col;
+							background-color: $pri-col;
+							color: $lit-col;
 						}
 					}
 				}
