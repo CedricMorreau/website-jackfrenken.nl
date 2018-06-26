@@ -2640,6 +2640,102 @@ input:focus {
 
 	}
 
+	/* Nieuwbouw overzicht */
+	.counter {
+		float: left;
+		width: 100%;
+		height: auto;
+		line-height: 35px;
+		font-style: italic;
+		margin-bottom: 1rem;
+	}
+
+	.projectinfo {
+		display: flex;
+		margin: 0 0 2vmax;
+		height: auto;
+		background-color: transparent !important;
+		@media only screen and (max-width: $container-size-m) {
+			flex-direction: column;
+		}
+		
+		> span {
+			display: block;
+			float: left;
+			box-sizing: border-box;
+		}
+
+		span {
+			&.image {
+				position: relative;
+				display: block;
+				overflow: hidden; 
+				padding-bottom: 25%;
+				margin-right: 1rem;
+				height: 100%;
+				width: 35%;
+				@media only screen and (max-width: $container-size-m) {
+					width: 100%;
+					padding-bottom: 80%;
+				}
+
+				div {
+					position: absolute;
+					left: -50%;
+					top: -50%;
+					width: 200%;
+					height: 200%;
+					img {
+						max-width: 100%;
+						position: absolute;
+						left: 0;
+						right: 0;
+						top: 0;
+						bottom: 0;
+						display: block;
+						margin: auto;
+						min-width: 50%;
+						min-height: 50%;
+						max-width: 60%; 
+					} 	
+				}
+
+			}
+			
+			&.info {
+				width: 65%; 
+				a {
+					background-color: $ter-col; 
+					margin-bottom: 1rem;	
+				}
+				@media only screen and (max-width: $container-size-m) {
+					width: 100%;
+				}
+			}
+
+		}
+
+
+		a.objectInfo {
+			position: relative;
+			display: block;
+			padding: 3% 4% 3% 4%;
+			color: $dar-col;
+			text-decoration: none;
+		}
+
+		.headerAanbod {
+			background-color: $sec-col;
+			padding-bottom: 0.5rem;
+			.floatRight {
+				margin-left: auto;
+			}
+		}
+
+	}
+
+
+
 }
 
 
@@ -2656,99 +2752,8 @@ header.headerAanbod {
 	background-color: $pri-col;
 }
 
-.projectinfo {
-	display: flex;
-	margin: 0 0 2vmax;
-	height: auto;
-	background-color: transparent !important;
-	@media only screen and (max-width: $container-size-m) {
-		flex-direction: column;
-	}
-	
-	> span {
-		display: block;
-		float: left;
-		box-sizing: border-box;
-	}
 
-	span {
-		&.image {
-			position: relative;
-			display: block;
-			overflow: hidden; 
-			padding-bottom: 25%;
-			margin-right: 1rem;
-			height: 100%;
-			width: 35%;
-			@media only screen and (max-width: $container-size-m) {
-				width: 100%;
-				padding-bottom: 80%;
-			}
 
-			div {
-				position: absolute;
-				left: -50%;
-				top: -50%;
-				width: 200%;
-				height: 200%;
-				img {
-					max-width: 100%;
-					position: absolute;
-					left: 0;
-					right: 0;
-					top: 0;
-					bottom: 0;
-					display: block;
-					margin: auto;
-					min-width: 50%;
-					min-height: 50%;
-					max-width: 60%; 
-				} 	
-			}
-
-		}
-		
-		&.info {
-			width: 65%; 
-			a {
-				background-color: $ter-col; 
-				margin-bottom: 1rem;	
-			}
-			@media only screen and (max-width: $container-size-m) {
-				width: 100%;
-			}
-		}
-
-	}
-
-	
-	
-	.floatRight {
-		margin-left: auto;
-	}
-
-	.counter {
-		float: left;
-		width: 100%;
-		height: auto;
-		line-height: 35px;
-		font-style: italic;
-	}
-
-	.headerAanbod {
-		background-color: $sec-col;
-		padding-bottom: 0.5rem;
-	}
-
-	a.objectInfo {
-		position: relative;
-		display: block;
-		padding: 3% 4% 3% 4%;
-		color: $dar-col;
-		text-decoration: none;
-	}
-
-}
 
 
 /* Actueel detail ---------------------------------------------- */
