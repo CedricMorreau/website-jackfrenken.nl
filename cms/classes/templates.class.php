@@ -119,6 +119,20 @@ class Templates {
 			
 			$this->moduleId = $validatePermalink[0]['cms_per_moduleId'];
 			
+			/*********************************
+			 *** START JACK FRENKEN CUSTOM ***
+			 *********************************/
+			
+			if (!is_null($validatePermalink[0]['cms_per_moduleExtra'])) {
+				
+				$validatePermalink[0]['cms_per_tableId'] = 74;
+				$this->moduleId = $validatePermalink[0]['cms_per_moduleExtra'];
+			}
+			
+			/*********************************
+			 ***  END JACK FRENKEN CUSTOM  ***
+			 *********************************/
+			
 			// Validate that the permalink actually links to a page
 			$validatePage = $this->cms['database']->prepare("SELECT * FROM `tbl_mod_pages` WHERE `mod_pa_id`=?" . $stateCheck. " LIMIT 1", "i", array(
 				$validatePermalink[0]['cms_per_tableId']
