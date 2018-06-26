@@ -7,7 +7,7 @@ if ($template->getPageId() == 38 || $template->getPageId() == 39 || $template->g
 }
 elseif ($template->getPageId() == 42) {
 
-	include('aanbod-detail-bedrijven.php');
+	include('aanbod-detail-bog.php');
 }
 elseif ($template->getPageId() == 40) {
 
