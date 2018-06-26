@@ -2677,6 +2677,7 @@ header.headerAanbod {
 			display: block;
 			overflow: hidden; 
 			padding-bottom: 25%;
+			margin-right: 1rem;
 			height: 100%;
 			width: 35%;
 			@media only screen and (max-width: $container-size-m) {
@@ -2709,11 +2710,15 @@ header.headerAanbod {
 		
 		&.info {
 			width: 65%; 
+			a {
+				background-color: $ter-col; 
+				margin-bottom: 1rem;	
+			}
 			@media only screen and (max-width: $container-size-m) {
 				width: 100%;
 			}
 		}
-		
+
 	}
 
 	

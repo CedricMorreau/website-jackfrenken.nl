@@ -2254,6 +2254,7 @@ header.headerAanbod {
     display: block;
     overflow: hidden;
     padding-bottom: 25%;
+    margin-right: 1rem;
     height: 100%;
     width: 35%; }
     @media only screen and (max-width: 768px) {
@@ -2280,6 +2281,9 @@ header.headerAanbod {
         max-width: 60%; }
   .projectinfo span.info {
     width: 65%; }
+    .projectinfo span.info a {
+      background-color: #DAE1ED;
+      margin-bottom: 1rem; }
     @media only screen and (max-width: 768px) {
       .projectinfo span.info {
         width: 100%; } }
@@ -2898,4 +2902,5 @@ header.headerAanbod {
 }
 
 */
+
 /*# sourceMappingURL=style.css.map */
