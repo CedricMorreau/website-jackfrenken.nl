@@ -2220,6 +2220,121 @@ input:focus {
     padding-right: 2rem;
     width: 15rem; }
 
+header.headerAanbod {
+  padding: 1rem;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: 1.5rem; }
+
+header.headerAanbod {
+  background-color: #003064; }
+
+.projectinfo {
+  margin: 0; }
+
+.floatRight {
+  margin-left: auto; }
+
+.projectinfo span.image {
+  padding-bottom: 25%; }
+
+.projectinfo span.image > div,
+a.object span.image > div {
+  position: absolute;
+  left: -50%;
+  top: -50%;
+  width: 200%;
+  height: 200%; }
+
+.projectinfo span.image div img {
+  max-width: 100%; }
+
+.projectinfo span.image div img,
+a.object span.image div img {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: block;
+  margin: auto;
+  min-width: 50%;
+  min-height: 50%;
+  max-width: 60%; }
+
+.projectinfo span.info {
+  width: 65%; }
+  @media only screen and (max-width: 768px) {
+    .projectinfo span.info {
+      width: 100%; } }
+
+.projectinfo .image {
+  position: relative; }
+
+.projectinfo span.image {
+  padding-bottom: 25%; }
+  @media only screen and (max-width: 768px) {
+    .projectinfo span.image {
+      padding-bottom: 100%; } }
+
+.projectinfo span.image {
+  width: 35%; }
+
+.counter {
+  float: left;
+  width: 100%;
+  height: auto;
+  line-height: 35px;
+  font-style: italic; }
+
+.headerAanbod {
+  background-color: #00519B;
+  padding-bottom: 0.5rem; }
+
+.projectinfo a.objectInfo {
+  position: relative;
+  display: block;
+  padding: 3% 4% 3% 4%;
+  color: black;
+  text-decoration: none; }
+
+.projectinfo span.image,
+a.object span.image {
+  position: relative;
+  display: block;
+  width: 61%;
+  height: 100%;
+  overflow: hidden; }
+
+.projectinfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 0 2vmax;
+  height: auto;
+  background-color: transparent !important; }
+  @media only screen and (max-width: 768px) {
+    .projectinfo {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; } }
+
+.projectinfo span.image {
+  width: 35%; }
+  @media only screen and (max-width: 768px) {
+    .projectinfo span.image {
+      width: 100%; } }
+
+.projectinfo > span,
+a.object > span {
+  display: block;
+  float: left;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
 /* Actueel detail ---------------------------------------------- */
 .actueel-detail .header-title {
   position: relative;
@@ -2817,5 +2932,4 @@ input:focus {
 }
 
 */
-
 /*# sourceMappingURL=style.css.map */
