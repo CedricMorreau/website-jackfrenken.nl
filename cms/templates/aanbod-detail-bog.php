@@ -106,7 +106,7 @@ $typeText = 'Te koop';
 
 if ($val['objectDetails_Huur_PrijsSpecificatie_Prijs'] > 0) { $typeText = 'Te huur'; } else { $typeText = 'Te koop'; }
 
-$injectTitle = $typeText . ': ' . ucwords($val['objectDetails_Bestemming_Hoofdbestemming']) . ' te ' . $val['objectDetails_Adres_Woonplaats'] . ', ' . obj_generateAddress($val['objectDetails_Adres_Straatnaam'], $val['objectDetails_Adres_Huisnummer'], $val['objectDetails_Adres_HuisnummerToevoeging']) . ' | Aelmans Adviesgroep';
+$injectTitle = $typeText . ': ' . ucwords($val['objectDetails_Bestemming_Hoofdbestemming']) . ' te ' . $val['objectDetails_Adres_Woonplaats'] . ', ' . obj_generateAddress($val['objectDetails_Adres_Straatnaam'], $val['objectDetails_Adres_Huisnummer'], $val['objectDetails_Adres_HuisnummerToevoeging']) . ' | Jack Frenken - Makelaars en Adviseurs';
 $injectDescription = $injectTitle;
 
 // Breadcrumbs

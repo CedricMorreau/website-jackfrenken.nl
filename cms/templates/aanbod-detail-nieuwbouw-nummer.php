@@ -106,7 +106,7 @@ else {
 	$headImage = $dynamicRoot . '/img/aanbod_geen-afbeelding_tn01.svg';
 }
 
-$injectTitle = 'Te koop: ' . ucwords($val['Wonen_Woonhuis_SoortWoning']) . ' te ' . $val['Adres_Woonplaats'] . ', ' . obj_generateAddress($val['Adres_Straatnaam'], $val['Adres_Huisnummer'], $val['Adres_HuisnummerToevoeging']);
+$injectTitle = 'Te koop: ' . ucwords($val['Wonen_Woonhuis_SoortWoning']) . ' te ' . $val['Adres_Woonplaats'] . ', ' . obj_generateAddress($val['Adres_Straatnaam'], $val['Adres_Huisnummer'], $val['Adres_HuisnummerToevoeging']) . ' | Jack Frenken - Makelaars en Adviseurs';
 
 if (isset($_GET['searchHash'])) {
 	

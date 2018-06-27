@@ -128,11 +128,11 @@ else {
 
 if ($val['objectDetails_Huur_Huurprijs'] > 0) {
 
-	$injectTitle = 'Te huur: ' . ucwords($val['wonen_Woonhuis_SoortWoning']) . ' ' . $val['objectDetails_Adres_NL_Woonplaats'] . ', ' . obj_generateAddress($val['objectDetails_Adres_NL_Straatnaam'], $val['objectDetails_Adres_NL_Huisnummer'], $val['objectDetails_Adres_NL_HuisnummerToevoeging']) . ' | Schep Makelaardij - Landelijk Wonen';
+	$injectTitle = 'Te huur: ' . ucwords($val['wonen_Woonhuis_SoortWoning']) . ' ' . $val['objectDetails_Adres_NL_Woonplaats'] . ', ' . obj_generateAddress($val['objectDetails_Adres_NL_Straatnaam'], $val['objectDetails_Adres_NL_Huisnummer'], $val['objectDetails_Adres_NL_HuisnummerToevoeging']) . ' | Jack Frenken - Makelaars en Adviseurs';
 }
 else {
 	
-	$injectTitle = 'Te koop: ' . ucwords($val['wonen_Woonhuis_SoortWoning']) . ' ' . $val['objectDetails_Adres_NL_Woonplaats'] . ', ' . obj_generateAddress($val['objectDetails_Adres_NL_Straatnaam'], $val['objectDetails_Adres_NL_Huisnummer'], $val['objectDetails_Adres_NL_HuisnummerToevoeging']) . ' | Schep Makelaardij - Landelijk Wonen';
+	$injectTitle = 'Te koop: ' . ucwords($val['wonen_Woonhuis_SoortWoning']) . ' ' . $val['objectDetails_Adres_NL_Woonplaats'] . ', ' . obj_generateAddress($val['objectDetails_Adres_NL_Straatnaam'], $val['objectDetails_Adres_NL_Huisnummer'], $val['objectDetails_Adres_NL_HuisnummerToevoeging']) . ' | Jack Frenken - Makelaars en Adviseurs';
 }
 
 $injectDescription = $injectTitle;

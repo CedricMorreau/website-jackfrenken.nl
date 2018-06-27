@@ -112,7 +112,7 @@ else {
 	$headImage = $dynamicRoot . '/img/aanbod_geen-afbeelding_tn01.svg';
 }
 
-$injectTitle = $val['project_ProjectDetails_Projectnaam'] . ', ' . $val['project_ProjectDetails_Adres_Woonplaats'] . ' - ' . $priceText;
+$injectTitle = $val['project_ProjectDetails_Projectnaam'] . ', ' . $val['project_ProjectDetails_Adres_Woonplaats'] . ' - ' . $priceText . ' | Jack Frenken - Makelaars en Adviseurs';
 
 if (isset($_GET['searchHash'])) {
 
