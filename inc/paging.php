@@ -11,7 +11,7 @@
 	?>
 	
 	<div class="text-wrapper">
-		Resultaten <span class="bold"><?php echo $current; ?> t/m <?php echo $last; ?></span> van <span class="bold"><?php echo $totalRows; ?></span>
+		Objecten <span class="bold"><?php echo $current; ?> t/m <?php echo $last; ?></span> van <span class="bold"><?php echo $totalRows; ?></span>
 	</div>
 	
 	<?php

@@ -2,8 +2,21 @@
 	<div class="quote-beeldmerk">
 		<img src="<?php echo $dynamicRoot; ?>resources/jf_beeldmerk-s.png">
 	</div>
+	
+	<?php
+	
+	$slogans = array(
+		'Alles voor huis en hypotheek<br>...in een keer geregeld!',
+		'De deur naar het geluk<br>gaat naar binnen open',
+		'Dit is h&eacute;t moment',
+		'Dat is lekker thuiskomen'
+	);
+	
+	$rand = $slogans[array_rand($slogans)];
+	
+	?>
 
-	<h4>Alles voor huis en hypotheek <br>...in een keer geregeld!</h4>
+	<h4><?php echo $rand; ?></h4>
 
 </section>
 

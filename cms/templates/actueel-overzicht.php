@@ -251,14 +251,7 @@ function isActive($name) {
 								<?php echo $pagingClass->displayLeft('&xlarr;'); ?>
 								<?php echo $pagingClass->displayPages(); ?>
 								<?php echo $pagingClass->displayRight('&xrarr;'); ?>
-							
-<!-- 								<span><a href="#">1</a></span> -->
-<!-- 								<span class="active">2</span> -->
-<!-- 								<span><a href="#">3</a></span> -->
-<!-- 								<span class="no-link">...</span> -->
-<!-- 								<span><a href="#">9</a></span> -->
 								
-<!-- 								<div class="next"><a href="#">&xrarr;</a></div> -->
 							</div>
 							
 						</div>
