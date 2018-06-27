@@ -393,6 +393,8 @@ $noFilters = 'e42344d45ffa28dd531ac8b53b909385';
 	<head>
 		
 		<?php include($documentRoot . "inc/head.php"); ?>
+		
+		<link rel="stylesheet" href="<?php echo $dynamicRoot; ?>css/autocomplete.css">
 
 	</head>
 
@@ -448,10 +450,9 @@ $noFilters = 'e42344d45ffa28dd531ac8b53b909385';
 		</div>
 		
 		<?php include($documentRoot . "inc/footer-scripting.php"); ?>
-
-		<script>
-
-		</script>
+		
+		<script type="text/javascript" src="<?php echo $dynamicRoot; ?>js/global-makelaardij.js"></script>
+		<script type="text/javascript" src="<?php echo $dynamicRoot; ?>js/jquery-ui-1.10.3.custom.min.js"></script>
 	</body>
 
 </html>

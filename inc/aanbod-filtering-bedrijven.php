@@ -14,7 +14,7 @@
 
 	<p class="filter-head toggle">Locatie</p>
 	<div class="filter-wrapper">
-		<input src="<?php echo $dynamicRoot; ?>inc/ajax_searchAutoComplete.php" type="text" id="bog_plaats" name="plaatsnaam" class="auto_complete" value="<?php echo $filter['plaatsnaam']; ?>" data-ogType="wonen" placeholder="Plaats, straat of postcode">
+		<input src="<?php echo $dynamicRoot; ?>inc/ajax_searchAutoComplete.php" type="text" id="bog_plaats" name="plaatsnaam" class="auto_complete" value="<?php echo $filter['plaatsnaam']; ?>" data-ogType="bog" placeholder="Plaats, straat of postcode">
 		<div class="select-wrapper">
 			<select name="radius" id="filter-straal">
 				<option value="">Geen straal</option>

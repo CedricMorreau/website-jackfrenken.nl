@@ -665,10 +665,13 @@ elseif ($overviewType == 'huren')
 	<head>
 		
 		<?php include($documentRoot . "inc/head.php"); ?>
+		
+		<link rel="stylesheet" href="<?php echo $dynamicRoot; ?>css/autocomplete.css">
 
 	</head>
 
 	<body>
+	
 		<div class="page-wrapper aanbod-overzicht">
 
 			<?php include($documentRoot . "inc/primary-nav.php"); ?>
@@ -724,10 +727,10 @@ elseif ($overviewType == 'huren')
 		</div>
 		
 		<?php include($documentRoot . "inc/footer-scripting.php"); ?>
-
-		<script>
-
-		</script>
+		
+		<script type="text/javascript" src="<?php echo $dynamicRoot; ?>js/global-makelaardij.js"></script>
+		<script type="text/javascript" src="<?php echo $dynamicRoot; ?>js/jquery-ui-1.10.3.custom.min.js"></script>
+		
 	</body>
 
 </html>

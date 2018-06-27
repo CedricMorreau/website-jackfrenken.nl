@@ -1,0 +1,23 @@
+/* ------------------------------------------------- AUTOCOMPLETE */
+ul.ui-autocomplete {
+  position: absolute;
+  border: 1px solid #3E4718;
+  bottom: auto;
+  width: 180px;
+  height: auto;
+  background-color: #fff;
+  z-index: 99999;
+  list-style-type: none; }
+
+ul.ui-autocomplete li a {
+  display: block;
+  padding: 5px;
+  cursor: pointer;
+  font-size: 0.9em; }
+
+ul.ui-autocomplete li a:hover {
+  color: #333;
+  background-color: #eee; }
+
+.ui-helper-hidden-accessible {
+  display: none; }

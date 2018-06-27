@@ -7,18 +7,21 @@
 		case 'kopen':
 			
 			echo '<p class="filter-head active">Koopwoningen &xrarr;</p>';
+			$ogType = 'wonen_koop';
 			
 			break;
 			
 		case 'huren':
 			
 			echo '<p class="filter-head active">Huurwoningen &xrarr;</p>';
+			$ogType = 'wonen_huur';
 			
 			break;
 			
 		case 'kavels':
 			
 			echo '<p class="filter-head active">Bouwkavels &xrarr;</p>';
+			$ogType = 'wonen_koop';
 			
 			break;
 	}
@@ -35,7 +38,7 @@
 
 	<p class="filter-head toggle">Locatie</p>
 	<div class="filter-wrapper">
-		<input src="<?php echo $dynamicRoot; ?>inc/ajax_searchAutoComplete.php" type="text" id="wonen_plaats" name="plaatsnaam" class="auto_complete" value="<?php echo $filter['plaatsnaam']; ?>" data-ogType="wonen" placeholder="Plaats, straat of postcode">
+		<input src="<?php echo $dynamicRoot; ?>inc/ajax_searchAutoComplete.php" type="text" id="wonen_plaats" name="plaatsnaam" class="auto_complete" value="<?php echo $filter['plaatsnaam']; ?>" data-ogType="<?php echo $ogType; ?>" placeholder="Plaats">
 		<div class="select-wrapper">
 			<select name="radius" id="filter-straal">
 				<option value="">Geen straal</option>
