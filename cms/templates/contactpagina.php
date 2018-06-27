@@ -134,6 +134,16 @@ $locaties = $cms['database']->prepare("SELECT * FROM `tbl_cms_locaties` WHERE `c
 
 			<?php include($documentRoot . "inc/footer.php"); ?>
 		</div>
+		
+		<?php
+
+		define('EXCEPTIONALBS', true);
+		
+		include($documentRoot . 'inc/map-script.php');
+		
+		?>
+		
+		<script type="text/javascript" src="<?php echo $dynamicRoot; ?>js/jquery.validate.js"></script>
 
 		<!-- Contact overlay -->
 		<script>
@@ -178,6 +188,61 @@ $locaties = $cms['database']->prepare("SELECT * FROM `tbl_cms_locaties` WHERE `c
 				contactClosetwo.addEventListener('click', hideContact);
 
 			})(document);
+
+			$(document).ready(function(){
+
+				// Form
+				$("#contactForm").validate({
+					// focusInvalid: false,
+					errorPlacement: function(error, element) {},
+					rules: {
+						contact_name: {
+							required: true,
+							minlength: 2
+						},
+						contact_email: {
+							required: true,
+							email: true
+						},
+						contact_phone: {
+							required: true
+						},
+						contact_msg: {
+							required: true,
+							minlength: 4
+						}
+					},
+					submitHandler: function(form) {
+						return SubmitContactForm();
+					}
+				});
+			});
+
+			function SubmitContactForm(){
+				
+				$.ajax({
+					type	: 'POST',
+					url 	: '/inc/process-contactform.php',
+					data	: $('#contactForm').serialize(),
+					success	: function(data){
+
+						if (data == 0) {
+
+							$("#contactForm p.error").fadeIn();
+						}
+						else {
+
+							$("#contactForm p.error").hide();
+							$("#contactForm").hide();
+							$("#bedankt-melding").fadeIn();
+							$(".close-overlay-text").text('Sluiten');
+						}
+					}
+				
+				});
+
+				return false;
+			}
 
 		</script>
 		<?php include($documentRoot . "inc/footer-scripting.php"); ?>
