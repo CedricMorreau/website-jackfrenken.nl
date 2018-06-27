@@ -529,12 +529,11 @@ $ogType = 'bog';
 							<div id="object-contact-form-output" class="clearfix">
 								<div class="form_loading group" style="display: none;">
 									<p>
-										<img src="/img/loading.gif" alt="Het reactieformulier wordt verstuurd" title="Het reactieformulier wordt verstuurd">
 										<i>Het contactformulier wordt verstuurd&hellip;</i>
 									</p>
 								</div>
-								<div class="form_error general" style="display: none;"><h3>Foutje</h3><p>Er ging iets mis op de server. Probeer het nog eens.</p></div>
-								<div class="form_result" style="display: none;"><h3>Bedankt!</h3><p>Wij zullen indien nodig z.s.m. reageren.</p></div>
+								<div class="form_error general" style="display: none;"><h2>Foutje</h2><p>Er ging iets mis op de server. Probeer het nog eens.</p></div>
+								<div class="form_result" style="display: none;"><h2>Bedankt!</h2><p>Wij zullen indien nodig z.s.m. reageren.</p></div>
 							</div>
 	
 							<h2>Contact</h2>

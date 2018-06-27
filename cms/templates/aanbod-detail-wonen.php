@@ -22,7 +22,7 @@ $moduleId = $template->getModuleId();
 $objectData = $cms['database']->prepare("SELECT * FROM `tbl_OG_wonen` WHERE `id`=? AND (NOT `objectDetails_StatusBeschikbaarheid_Status` IN ('Ingetrokken'))", "i", array($moduleId));
 
 if (count($objectData) == 0)
-	Core::redirect($template->findPermalink(108, 1) . '.html');
+	Core::redirect($template->findPermalink(33, 1));
 
 $val = $objectData[0];
 
@@ -539,21 +539,21 @@ $mediaList = $cms['database']->prepare("SELECT `id`, `object_ObjectTiaraID`, `be
 							<div id="object-contact-form-output" class="clearfix">
 								<div class="form_loading group" style="display: none;">
 									<p>
-										<img src="/img/loading.gif" alt="Het reactieformulier wordt verstuurd" title="Het reactieformulier wordt verstuurd">
 										<i>Het contactformulier wordt verstuurd&hellip;</i>
 									</p>
 								</div>
-								<div class="form_error general" style="display: none;"><h3>Foutje</h3><p>Er ging iets mis op de server. Probeer het nog eens.</p></div>
-								<div class="form_result" style="display: none;"><h3>Bedankt!</h3><p>Wij zullen indien nodig z.s.m. reageren.</p></div>
+								<div class="form_error general" style="display: none;"><h2>Foutje</h2><p>Er ging iets mis op de server. Probeer het nog eens.</p></div>
+								<div class="form_result" style="display: none;"><h2>Bedankt!</h2><p>Wij zullen indien nodig z.s.m. reageren.</p></div>
 							</div>
 	
 							<h2>Contact</h2>
 
 							<form action="#" class="standard flex-row flex-wrap">
+							
 								<?php // FIXIT SB: Values van deze 3 hidden inputs dynamisch vullen ?>
 								<input type="hidden" name="object_plaatsnaam" value="<?php echo $val['objectDetails_Adres_NL_Woonplaats']; ?>">
 								<input type="hidden" name="object_adres" value="<?php echo obj_generateAddress($val['objectDetails_Adres_NL_Straatnaam'], $val['objectDetails_Adres_NL_Huisnummer'], $val['objectDetails_Adres_NL_HuisnummerToevoeging']); ?>">
-								<input type="hidden" name="object_url" value="<?php echo 'https://www.jackfrenken.nl/' . $template->getPermalink(1) . '.html'; ?>">
+								<input type="hidden" name="object_url" value="<?php echo 'https://www.jackfrenken.nl/' . $template->getPermalink(1); ?>">
 								
 								<fieldset class="flex-col size50">
 									<input type="text" name="name" value="" placeholder="Naam*">
