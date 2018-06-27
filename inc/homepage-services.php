@@ -94,60 +94,123 @@
 			<span>Gericht <br>zoeken:</span>
 		</div>
 		<div class="search-filter-bar">
-			<form>
+			<form action="" id="zoek-form" method="GET">
 				<div class="select-wrapper">
-					<select>
+					<select id="form-changer">
 					  <option value="0" selected="">Wat zoekt u?</option>
-					  <option>&nbsp; Koopwoningen</option>
-					  <option>&nbsp; Huurwoningen</option>
-					  <option>&nbsp; Nieuwbouw</option>
-					  <option>&nbsp; Bedrijfspanden</option>
+					  <option data-src="<?php echo $template->findPermalink(33, 1); ?>" data-value="koop">&nbsp; Koopwoningen</option>
+					  <option data-src="<?php echo $template->findPermalink(34, 1); ?>" data-value="huur">&nbsp; Huurwoningen</option>
+					  <option data-src="<?php echo $template->findPermalink(35, 1); ?>" data-value="nieuwbouw">&nbsp; Nieuwbouw</option>
+					  <option data-src="<?php echo $template->findPermalink(37, 1); ?>" data-value="bog">&nbsp; Bedrijfspanden</option>
 					</select>
 				</div>
-				<input type="text" name="" placeholder="Plaats, straat">
+				<input type="text" name="plaatsnaam" placeholder="Plaats, straat">
 
 				<div class="select-wrapper">
-					<select>
-					  <option value="0" selected="">Straal</option>
-					  <option>&nbsp; 5 km</option>
-					  <option>&nbsp; 10 km</option>
-					  <option>&nbsp; 25 km</option>
-					  <option>&nbsp; 50 km</option>
-					  <option>&nbsp; 100 km</option>
-					  <option>&nbsp; Onbeperkt</option>
+					<select name="radius">
+				  		<option value="" selected="">Straal</option>
+					  
+				  		<?php
 
-					</select>
-				</div>
-
-				<div class="select-wrapper">
-					<select>
-						<option value="" selected="">Prijs vanaf</option>						
-						<?php
+						$arrRadius = array(
+							0 => '0 km',
+							5 => '5 km',
+							10 => '10 km',
+							25 => '25 km',
+							50 => '50 km',
+							75 => '75 km',
+							100 => '100 km',
+							125 => '125 km',
+							150 => '150 km'
+						);
 						
-						for ($i = 0; $i <= 950000; $i += 50000) {
-							
-							echo '<option value="' . $i . '">&euro; ' . number_format($i, 0, ',', '.') . '</option>';
+						foreach ($arrRadius as $key => $val) {
+						
+							echo '<option value="' . $key . '">' . $val . '</option>';
 						}
 						
+						?>
+
+					</select>
+				</div>
+
+				<div class="select-wrapper price-buy">
+					<select name="prijsVan" class="prijsVan">
+						<option value="" selected="">Prijs vanaf</option>						
+						<?php
+
+						$arrPriceFrom = array(0, 100000, 200000, 300000, 400000, 500000, 600000, 700000, 800000, 900000, 1000000, 1250000);
+		
+						foreach ($arrPriceFrom as $key => $val) {
+		
+							echo '<option value="' . $val . '">&euro; ' . number_format($val, 0, ',', '.') . ',-</option>';
+						}
+		
 						?>
 					</select>
 				</div>
 				
-				<div class="select-wrapper">
-					<select>
+				<div class="select-wrapper price-buy">
+					<select name="prijsTot" class="prijsTot">
 						<option value="" selected="">Prijs tot</option>			
 						<?php
-						
-						for ($i = 50000; $i <= 1000000; $i += 50000) {
-							
-							echo '<option value="' . $i . '">&euro; ' . number_format($i, 0, ',', '.') . '</option>';
+
+						$arrPriceFrom = array(100000, 150000, 200000, 300000, 400000, 500000, 600000, 700000, 800000, 900000, 1000000, 1250000, 'Onbeperkt');
+		
+						foreach ($arrPriceFrom as $key => $val) {
+		
+							if ($val == 'Onbeperkt') {
+		
+								echo '<option value="">Onbeperkt</option>';
+							}
+							else {
+		
+								echo '<option value="' . $val . '">&euro; ' . number_format($val, 0, ',', '.') . ',-</option>';
+							}
 						}
-						
+		
 						?>
-						<option value="max">Onbeperkt</option>
 					</select>
 				</div>
-			</form>
+
+				<div class="select-wrapper price-rent" style="display: none;">
+					<select name="" class="prijsVan">
+						<option value="" selected="">Prijs vanaf</option>						
+						<?php
+
+						$arrPriceFrom = array(0, 500, 1000, 1500, 2000, 2500, 3000, 35000, 10000);
+		
+						foreach ($arrPriceFrom as $key => $val) {
+		
+							echo '<option value="' . $val . '">&euro; ' . number_format($val, 0, ',', '.') . ',-</option>';
+						}
+		
+						?>
+					</select>
+				</div>
+				
+				<div class="select-wrapper price-rent" style="display: none;">
+					<select name="" class="prijsTot">
+						<option value="" selected="">Prijs tot</option>			
+						<?php
+
+						$arrPriceFrom = array(500, 1000, 1500, 2000, 2500, 3500, 4000, 10000, 20000, 'Onbeperkt');
+		
+						foreach ($arrPriceFrom as $key => $val) {
+		
+							if ($val == 'Onbeperkt') {
+		
+								echo '<option value="">Onbeperkt</option>';
+							}
+							else {
+		
+								echo '<option value="' . $val . '">&euro; ' . number_format($val, 0, ',', '.') . ',-</option>';
+							}
+						}
+		
+						?>
+					</select>
+				</div>
 
 		</div>
 		<div class="search-filter-button">
@@ -155,9 +218,47 @@
 		</div>
 		<div class="search-filter-button-mobile">
 			<a href="#">Zoeken <span>&xrarr;</span></a>
+			
 		</div>
+			</form>
 
 
 	</div>
+	
+	<script type="text/javascript">
+
+		$(document).ready(function() {
+
+			$('#form-changer').change(function() {
+
+				type = $(this).find('option:selected').data('value');
+
+				if (type == "huur") {
+
+					$('.price-buy').hide();
+					$('.price-buy').find('.prijsVan').attr('name', '');
+					$('.price-buy').find('.prijsTot').attr('name', '');
+
+					$('.price-rent').show();
+					$('.price-rent').find('.prijsVan').attr('name', 'prijsVan');
+					$('.price-rent').find('.prijsTot').attr('name', 'prijsTot');
+				}
+				else {
+
+					$('.price-rent').hide();
+					$('.price-rent').find('.prijsVan').attr('name', '');
+					$('.price-rent').find('.prijsTot').attr('name', '');
+
+					$('.price-buy').show();
+					$('.price-buy').find('.prijsVan').attr('name', 'prijsVan');
+					$('.price-buy').find('.prijsTot').attr('name', 'prijsTot');
+				}
+
+				// Hier verder: update form action
+				$('#zoek-form').attr('action', $(this).find('option:selected').data('src'));
+			});
+		});
+
+	</script>
 
 </section>

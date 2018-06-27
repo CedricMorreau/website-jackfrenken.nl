@@ -1,3 +1,9 @@
+<?php
+
+if ($totalRows > 0) {
+
+?>
+
 <div class="paging-wrapper">
 
 	<?php
@@ -33,3 +39,5 @@
 	<?php } ?>
 	
 </div>
+
+<?php } ?>
