@@ -612,6 +612,7 @@ if ($totalRows > 0 && $filter['viewType'] != 'map')
 $objects = $cms['database']->prepare($sql);
 
 $MD5 = generateHash($filter, array('searchHash', 'p'));
+$MD5None = generateHashNone($filter, array('searchHash', 'p'));
 $fullMD5 = generateHash($filter, array('searchHash', 'viewType'));
 $orderMD5 = generateHash($filter, array('p', 'orderBy', 'searchHash'));
 $sortMD5 = generateHash($filter, array('p', 'sortBy', 'searchHash'));
@@ -658,12 +659,39 @@ function generateHash($filters, $excludes = array()) {
 	return md5('searchQuerySort_' . $_SERVER['REMOTE_ADDR'] . $searchQuerySort);
 }
 
-if ($overviewType == 'kopen' || $overviewType == 'kavels')
-	$noFilters = '156c72c3808f0f0644d4a7446008a93d';
+function generateHashNone($filters, $excludes = array()) {
+	
+	$searchQuerySort = '';
+	
+	foreach ($filters as $key => $val) {
+		
+		if (!in_array($key, $excludes)) {
+			
+			if (is_array($val)) {
+				
+				foreach ($val as $sKey => $sVal) {
+					
+					$searchQuerySort .= '&' . $key . '[]=' . $sVal;
+				}
+			}
+			else {
+				
+				$searchQuerySort .= '&' . $key . '=' . $val;
+			}
+		}
+	}
+	
+	return md5('searchQuerySort_' . $searchQuerySort);
+}
+
+if ($overviewType == 'kopen')
+	$noFilters = 'a6baab2e2c0536c0de707442a64aa78f';
+elseif ($overviewType == 'kavels')
+	$noFilters = 'c96aeec2489487db3c98f4d6d8bad9b1';
 elseif ($overviewType == 'huren')
-	$noFilters = '837cdcb7cb5af81209ebd8679c9a3b8e';
+	$noFilters = '5bd2254ffe4ad749c2bdca75ea0d35dc';
 elseif ($overviewType == 'verkocht')
-	$noFilters = 'd875bd04e8e67371fcc5126c75b98c84';
+	$noFilters = 'a1ba92f1aa37c64c0fb80e50e87c5811';
 
 ?>
 

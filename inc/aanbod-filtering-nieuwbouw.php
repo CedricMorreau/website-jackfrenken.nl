@@ -1,7 +1,7 @@
 <div class="sidebar-filtering">
 
-	<?php if ($noFilters != $MD5) { ?>
-	<a class="remove-filter">Filtering wissen <span class="remove-icon">&#x2715;</span></a>
+	<?php if ($noFilters != $MD5None) { ?>
+	<a class="remove-filter" href="<?php echo $template->getPermalink(1, 1); ?>">Filtering wissen <span class="remove-icon">&#x2715;</span></a>
 	<?php } ?>
 	
 	<form action="<?php echo $template->getPermalink(1, 1); ?>" id="filter-form" class="standard">
