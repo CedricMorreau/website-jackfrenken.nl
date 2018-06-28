@@ -181,7 +181,7 @@ $ogType = 'bog';
 					<div class="content-wrapper" data-tab="1">
 						<h2>Beschrijving</h2>
 						
-						<?php echo nl2br($val['objectDetails_Aanbiedingstekst']); ?>
+						<?php echo utf8_encode(nl2br($val['objectDetails_Aanbiedingstekst'])); ?>
 					</div>
 
 					<div class="content-wrapper" data-tab="2" style="display: none;">
