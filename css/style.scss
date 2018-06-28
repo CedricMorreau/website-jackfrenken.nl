@@ -1629,7 +1629,7 @@ input:focus {
 		margin-top: 2rem;
 		margin-bottom: 1rem;
 	}
-	
+
 	.column-sidebar {
 		display: flex;
 		flex-direction: column;
@@ -1761,8 +1761,10 @@ input:focus {
 			h2 {
 				font-size: 2.5rem;
 				line-height: 3rem;
-				margin-top: 0;
+				margin-top: 1rem;
+				margin-bottom: 0;
 				padding-top: 0;
+				padding-bottom: 0;
 				@media only screen and (max-width: $container-size-m) {
 					margin-top: 2rem;
 					font-size: 2rem;
