@@ -579,7 +579,7 @@ else {
 // Let's handle paging!
 $currentPage = $filter['p'];
 
-$perPage = 8;
+$perPage = 10;
 
 $tempQ = $cms['database']->prepare($sql);
 $totalRows = count($tempQ);
@@ -598,7 +598,7 @@ $currentResult = ($currentPage - 1) * $perPage;
 if ($filter['p'] == 1) {
 
 	$currentResult = 0;
-	$perPage = 8;
+	$perPage = 10;
 }
 else {
 

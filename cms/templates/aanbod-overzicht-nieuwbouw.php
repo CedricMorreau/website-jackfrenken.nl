@@ -228,7 +228,7 @@ if (!empty($tempSql)) {
 // Let's handle paging!
 $currentPage = $filter['p'];
 
-$perPage = 8;
+$perPage = 10;
 
 $tempQ = $cms['database']->prepare($sql);
 $totalRows = count($tempQ);
