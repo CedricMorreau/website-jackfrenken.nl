@@ -24,6 +24,13 @@
 			$ogType = 'wonen_koop';
 			
 			break;
+			
+		case 'verkocht':
+			
+			echo '<p class="filter-head active">Recent verkocht &xrarr;</p>';
+			$ogType = 'wonen';
+			
+			break;
 	}
 
 	if ($overviewType != 'kavels') {

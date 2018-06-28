@@ -44,6 +44,12 @@ elseif ($template->getPageId()== 36) {
 	
 	$overviewType = 'kavels';
 }
+elseif ($template->getPageId() == 73) {
+	
+	$filter['saleType'] = 'both';
+	
+	$overviewType = 'verkocht';
+}
 
 $filter['provincie'] = (isset($_POST['provincie'])) ? $_POST['provincie'] : ((isset($_GET['provincie'])) ? $_GET['provincie'] : 0);
 $filter['straatnaam'] = (isset($_POST['straatnaam'])) ? $_POST['straatnaam'] : ((isset($_GET['straatnaam'])) ? $_GET['straatnaam'] : '');
@@ -96,7 +102,7 @@ if ($overviewType != 'kavels') {
 	}
 	else {
 	
-	 	$extraState = ", 'verkocht'";
+	 	$extraState = ", 'verkocht', 'verhuurd'";
 	}
 	
 	// Very basic query
@@ -656,6 +662,8 @@ if ($overviewType == 'kopen' || $overviewType == 'kavels')
 	$noFilters = '156c72c3808f0f0644d4a7446008a93d';
 elseif ($overviewType == 'huren')
 	$noFilters = '837cdcb7cb5af81209ebd8679c9a3b8e';
+elseif ($overviewType == 'verkocht')
+	$noFilters = 'd875bd04e8e67371fcc5126c75b98c84';
 
 ?>
 

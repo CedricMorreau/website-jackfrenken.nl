@@ -1,7 +1,7 @@
 <?php
 
 // For each template, see the similarly named templates (eg. aanbod-overzicht-wonen.php)
-if ($template->getPageId() == 33 || $template->getPageId() == 34 || $template->getPageId() == 36) {
+if ($template->getPageId() == 33 || $template->getPageId() == 34 || $template->getPageId() == 36 || $template->getPageId() == 73) {
 
 	include('aanbod-overzicht-wonen.php');
 }
@@ -15,7 +15,7 @@ elseif ($template->getPageId() == 35) {
 }
 else {
 
-	Core::redirect($dynamicRoot . $template->findPermalink(33, 1) . '.html');
+	Core::redirect($template->findPermalink(33, 1));
 }
 
 ?>

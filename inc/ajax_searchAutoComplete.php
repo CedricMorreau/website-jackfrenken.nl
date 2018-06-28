@@ -37,6 +37,22 @@ if (isset($_GET['query_type'])) {
 					}
 
 					break;
+					
+				case 'wonen':
+					
+					$sql = array();
+					
+					$tempSql = $cms['database']->prepare("SELECT DISTINCT `objectDetails_Adres_NL_Woonplaats` AS `rsWoonplaats`, Count(`objectDetails_Adres_NL_Woonplaats`) AS `rsCountWoonplaats` FROM `tbl_OG_wonen` WHERE NOT `objectDetails_StatusBeschikbaarheid_Status` IN ('ingetrokken', 'verkocht', 'Ingetrokken', 'Verkocht') AND `objectDetails_Adres_NL_Woonplaats` LIKE '%" . $_GET['q'] . "%' GROUP BY `objectDetails_Adres_NL_Woonplaats`");
+					
+					if (count($tempSql) > 0) {
+						
+						foreach ($tempSql as $key => $val) {
+							
+							$sql[] = $val;
+						}
+					}
+					
+					break;
 
 				case 'wonen_koop':
 
