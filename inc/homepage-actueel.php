@@ -15,7 +15,7 @@ if (count($actueel) > 0) {
 			
 			$values = Content::getArticleValues($val['mod_co_id'], $cms, $template->getCurrentLanguage());
 			
-			$url = $template->getPermaLink($template->getCurrentLanguage()) . '/' . $val['cms_per_link'];
+			$url = $template->getArticleUrl($val['mod_co_id']);
 			
 			$date = new PP_DateTime($values['art_pubDate']);
 			
