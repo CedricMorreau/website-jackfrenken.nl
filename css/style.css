@@ -430,7 +430,8 @@ input:focus {
               height: 15rem; } }
       .items-wrapper .items-container .item-container .item-title {
         position: relative;
-        font-weight: bold; }
+        font-weight: bold;
+        max-width: 23rem; }
         @media only screen and (max-width: 768px) {
           .items-wrapper .items-container .item-container .item-title {
             font-weight: bold;
@@ -1356,7 +1357,8 @@ input:focus {
       position: absolute;
       bottom: 0;
       max-width: 50rem;
-      min-width: 40rem; }
+      min-width: 40rem;
+      height: 70%; }
       @media only screen and (max-width: 768px) {
         .column-header .header-title-wrapper .header-title {
           min-width: 0;
@@ -1364,6 +1366,7 @@ input:focus {
           min-width: 100% !important;
           max-width: 100% !important;
           width: 100%;
+          height: auto;
           position: relative;
           top: 0;
           -webkit-transform: none;
@@ -2966,5 +2969,4 @@ header.headerAanbod {
 }
 
 */
-
 /*# sourceMappingURL=style.css.map */

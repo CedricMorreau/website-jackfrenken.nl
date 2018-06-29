@@ -157,16 +157,17 @@ function isActive($name) {
 											?>
 											
 											<div class="item-container">
-												<div class="item-image-wrapper">
-													<div class="item-image" style="background-image: url(<?php echo $values['wk_overviewPhoto']; ?>);">
-														&nbsp;
+												<a href="<?php echo $values['wk_pdf']; ?>">
+													<div class="item-image-wrapper">
+														<div class="item-image" style="background-image: url(<?php echo $values['wk_overviewPhoto']; ?>);">
+															&nbsp;
+														</div>
+														<div class="hover-overlay"></div>
+														<div class="item-button">&xrarr;</div>
 													</div>
-													<div class="hover-overlay"></div>
-													<a href="<?php echo $values['wk_pdf']; ?>" target="_BLANK" class="item-button">&xrarr;</a>
-												</div>
-												
-												<p class="item-title"><a href="<?php echo $values['wk_pdf']; ?>" target="_BLANK"><?php echo $values['wk_title']; ?></a></p>
-											
+													
+													<p class="item-title"><?php echo $values['wk_title']; ?></p>
+												</a>
 											</div>
 											
 											<?php

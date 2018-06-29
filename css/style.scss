@@ -527,7 +527,7 @@ input:focus {
 			.item-title {
 				position: relative;
 				font-weight: bold;
-
+				max-width: 23rem; //must match block size
 				@media only screen and (max-width: $container-size-m) {
 					font-weight: bold;
 					font-size: 1.3rem;
@@ -1561,12 +1561,14 @@ input:focus {
 			bottom: 0;
     		max-width: 50rem;
    			min-width: 40rem;
+   			height: 70%;
   			@media only screen and (max-width: $container-size-m) {
 				min-width: 0;
 				max-width: none;
   				min-width: 100% !important;
   				max-width: 100% !important;
 				width: 100%;
+				height: auto;
 				position: relative;
 				top: 0;
 				transform: none;
@@ -1740,7 +1742,6 @@ input:focus {
 			padding-top: 1.5rem;
 			padding-bottom:0.5rem;
 			color: $lit-col;
-			
 			@media only screen and (max-width: $container-size-m) {
 				margin-left: 0;
 				padding-left: $margin-size-s;
@@ -1764,15 +1765,13 @@ input:focus {
 					font-size: inherit;
 				}
 			}
-			
 			p {
 				color: $lit-col;
 				font-size: 1rem;
-				a {
-					font-size: inherit;
-				}
+					a {
+						font-size: inherit;
+					}
 			}
-
 		}
 
 	}
