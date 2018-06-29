@@ -1,7 +1,7 @@
 <div class="sidebar-filtering">
 
-	<?php if ($noFilters != $MD5) { ?>
-	<a class="remove-filter">Filtering wissen <span class="remove-icon">&#x2715;</span></a>
+	<?php if ($noFilters != $MD5None) { ?>
+	<a class="remove-filter" href="<?php echo $template->getPermalink(1, 1); ?>">Filtering wissen <span class="remove-icon">&#x2715;</span></a>
 	<?php } ?>
 	
 	<form action="<?php echo $template->getPermalink(1, 1); ?>" id="filter-form" class="standard">
@@ -95,64 +95,60 @@
 			</select>
 		</div>
 	</div>
+	
+	<p class="filter-head toggle">Objectkenmerken</p>
+	
+	<div class="filter-wrapper">
 		
-	<div id="additional-filters" style="display: none;">
-	
-		<p class="filter-head toggle">Objectkenmerken</p>
+		<div class="select-wrapper">
 		
-		<div class="filter-wrapper">
-			
-			<div class="select-wrapper">
-			
-				<select name="oppPerceel" id="filter-perceelopp">
-					<option value="">Alle perceeloppervlaktes</option>
-	
-					<?php
-	
-					$arrOpp = array(100, 250, 500, 1000, 2500, 5000, 7500, 10000);
-	
-					foreach ($arrOpp as $key => $val) {
-	
-						$selected = ($filter['oppPerceel'] == $val) ? ' selected="selected"' : '';
-	
-						echo '<option value="' . $val . '"' . $selected . '>Perceel: ca. ' . number_format($val, 0, ',', '.') . ' m&sup2;</option>';
-					}
-	
-					?>
-	
-				</select>
-			
-			</div>
-			
-			<div class="select-wrapper">
-			
-				<select name="oppWoon" id="filter-woonopp">
-					<option value="">Alle woonoppervlaktes</option>
-	
-					<?php
-	
-					$arrOpp = array(50, 100, 250, 500, 750, 1000);
-	
-					foreach ($arrOpp as $key => $val) {
-	
-						$selected = ($filter['oppWoon'] == $val) ? ' selected="selected"' : '';
-	
-						echo '<option value="' . $val . '"' . $selected . '>Woonopp: ca. ' . number_format($val, 0, ',', '.') . ' m&sup2;</option>';
-					}
-	
-					?>
-	
-				</select>
-			
-			</div>
-			
+			<select name="oppPerceel" id="filter-perceelopp">
+				<option value="">Alle perceeloppervlaktes</option>
+
+				<?php
+
+				$arrOpp = array(100, 250, 500, 1000, 2500, 5000, 7500, 10000);
+
+				foreach ($arrOpp as $key => $val) {
+
+					$selected = ($filter['oppPerceel'] == $val) ? ' selected="selected"' : '';
+
+					echo '<option value="' . $val . '"' . $selected . '>Perceel: ca. ' . number_format($val, 0, ',', '.') . ' m&sup2;</option>';
+				}
+
+				?>
+
+			</select>
+		
+		</div>
+		
+		<div class="select-wrapper">
+		
+			<select name="oppWoon" id="filter-woonopp">
+				<option value="">Alle woonoppervlaktes</option>
+
+				<?php
+
+				$arrOpp = array(50, 100, 250, 500, 750, 1000);
+
+				foreach ($arrOpp as $key => $val) {
+
+					$selected = ($filter['oppWoon'] == $val) ? ' selected="selected"' : '';
+
+					echo '<option value="' . $val . '"' . $selected . '>Woonopp: ca. ' . number_format($val, 0, ',', '.') . ' m&sup2;</option>';
+				}
+
+				?>
+
+			</select>
+		
 		</div>
 	
 	</div>
 	
 	</form>
 
-	<p class="more-filters"><a href="javascript:void(0);" id="more-filters">Meer zoekfilters &darr;</a></p>
+	<!-- <p class="more-filters"><a href="javascript:void(0);" id="more-filters">Meer zoekfilters &darr;</a></p>  -->
 	
 	<?php
 	

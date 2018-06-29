@@ -94,7 +94,7 @@
 			<span>Gericht <br>zoeken:</span>
 		</div>
 		<div class="search-filter-bar">
-			<form action="" id="zoek-form" method="GET">
+			<form action="<?php echo $template->findPermalink(33, 1); ?>" id="zoek-form" method="GET">
 				<div class="select-wrapper">
 					<select id="form-changer">
 					  <option value="0" selected="">Wat zoekt u?</option>

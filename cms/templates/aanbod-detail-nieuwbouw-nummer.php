@@ -205,7 +205,7 @@ $mediaList = $cms['database']->prepare("SELECT `id`, `object_ObjectTiaraID`, `be
 				
 					<?php include($documentRoot . "inc/widget.php"); ?>
 
-					<a href="<?php echo $url; ?>" class="back-link">&xlarr; Terug naar overzicht</a>
+					<a href="<?php echo $hrefProject; ?>" class="back-link">&xlarr; Terug naar <?php echo $objectData[0]['project_ProjectDetails_Projectnaam']; ?></a>
 
 				</div>
 

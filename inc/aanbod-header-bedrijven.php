@@ -30,7 +30,7 @@
 					$fullImage = $dynamicRoot . 'og_media/bog_' . $val['object_NVMVestigingNR'] . '_' . $val['object_ObjectTiaraID']. '/' . $media['bestandsnaam'];
 					$tnImage = $dynamicRoot . 'og_media/bog_' . $val['object_NVMVestigingNR'] . '_' . $val['object_ObjectTiaraID']. '/' . $media['bestandsnaam_medium'];
 					
-					echo '<a class="rsImg" href="' . $fullImage . '" data-rsTmb="' . $tnImage . '" data-rsBigImg="' . $fullImage . '">' . $val['objectDetails_Adres_Woonplaats'] . ' - ' . obj_generateAddress($val['objectDetails_Adres_Straatnaam'], $val['objectDetails_Adres_Huisnummer'], $val['objectDetails_Adres_HuisnummerToevoeging']). '</a>' . PHP_EOL;
+					echo '<a class="rsImg" href="' . $tnImage . '" data-rsTmb="' . $tnImage . '" data-rsBigImg="' . $fullImage . '">' . $val['objectDetails_Adres_Woonplaats'] . ' - ' . obj_generateAddress($val['objectDetails_Adres_Straatnaam'], $val['objectDetails_Adres_Huisnummer'], $val['objectDetails_Adres_HuisnummerToevoeging']). '</a>' . PHP_EOL;
 					
 					$i++;
 				}

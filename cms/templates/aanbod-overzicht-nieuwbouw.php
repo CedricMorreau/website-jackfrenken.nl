@@ -228,7 +228,7 @@ if (!empty($tempSql)) {
 // Let's handle paging!
 $currentPage = $filter['p'];
 
-$perPage = 8;
+$perPage = 10;
 
 $tempQ = $cms['database']->prepare($sql);
 $totalRows = count($tempQ);
@@ -373,12 +373,39 @@ foreach ($filter as $key => $val) {
 	}
 }
 
+$MD5None = generateHashNone($filter, array('searchHash', 'p'));
+
+function generateHashNone($filters, $excludes = array()) {
+	
+	$searchQuerySort = '';
+	
+	foreach ($filters as $key => $val) {
+		
+		if (!in_array($key, $excludes)) {
+			
+			if (is_array($val)) {
+				
+				foreach ($val as $sKey => $sVal) {
+					
+					$searchQuerySort .= '&' . $key . '[]=' . $sVal;
+				}
+			}
+			else {
+				
+				$searchQuerySort .= '&' . $key . '=' . $val;
+			}
+		}
+	}
+	
+	return md5('searchQuerySort_' . $searchQuerySort);
+}
+
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
 	
 	Core::redirect($template->findPermalink(35, 1) . '.html&searchHash=' . $fullMD5);
 }
 
-$noFilters = '5c8f1e520b962ab06024595f82b904d1';
+$noFilters = '26588d98cdfcdf9e83c2b9bb4644f49b';
 
 ?>
 

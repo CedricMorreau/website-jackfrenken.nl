@@ -161,8 +161,17 @@ $ogType = 'bog';
 					</ul>
 				
 					<?php include($documentRoot . "inc/widget.php"); ?>
+					
+					<?php
+					
+					if (!($url = $template->getBackUrl($template->findPermalink(37, 1)))) {
+						
+						$url = $template->findPermalink(37, 1);
+					}
+					
+					?>
 
-					<a href="aanbod-overzicht.php" class="back-link">&xlarr; Terug naar overzicht</a>
+					<a href="<?php echo $url; ?>" class="back-link">&xlarr; Terug naar overzicht</a>
 
 				</div>
 

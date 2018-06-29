@@ -342,6 +342,7 @@ if ($totalRows > 0 && $filter['viewType'] != 'map')
 $objects = $cms['database']->prepare($sql);
 
 $MD5 = generateHash($filter, array('searchHash', 'p'));
+$MD5None = generateHashNone($filter, array('searchHash', 'p'));
 $fullMD5 = generateHash($filter, array('searchHash', 'viewType'));
 $orderMD5 = generateHash($filter, array('p', 'orderBy', 'searchHash'));
 $sortMD5 = generateHash($filter, array('p', 'sortBy', 'searchHash'));
@@ -381,9 +382,34 @@ function generateHash($filters, $excludes = array()) {
 	return md5('searchQuerySort_' . $_SERVER['REMOTE_ADDR'] . $searchQuerySort);
 }
 
+function generateHashNone($filters, $excludes = array()) {
+	
+	$searchQuerySort = '';
+	
+	foreach ($filters as $key => $val) {
+		
+		if (!in_array($key, $excludes)) {
+			
+			if (is_array($val)) {
+				
+				foreach ($val as $sKey => $sVal) {
+					
+					$searchQuerySort .= '&' . $key . '[]=' . $sVal;
+				}
+			}
+			else {
+				
+				$searchQuerySort .= '&' . $key . '=' . $val;
+			}
+		}
+	}
+	
+	return md5('searchQuerySort_' . $searchQuerySort);
+}
+
 $ogType = 'bog';
 
-$noFilters = 'e42344d45ffa28dd531ac8b53b909385';
+$noFilters = 'fddd2a713d1f5c27ffb44c280c795fe2';
 
 ?>
 
