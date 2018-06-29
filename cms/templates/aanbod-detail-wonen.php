@@ -238,78 +238,79 @@ $mediaList = $cms['database']->prepare("SELECT `id`, `object_ObjectTiaraID`, `be
 					</div>
 
 					<div class="content-wrapper" data-tab="2" style="display: none;">
-					
-						<h2>Bebouwing</h2>
-	
-						<table>
-							<?php if (!empty($val['bouwgrond_HuidigGebruik']) && $val['bouwgrond_Oppervlakte'] > 0) { ?>
-							<tr>
-								<th class="description">Bouwgrond</th>
-								<td class="value"><?php echo number_format($val['bouwgrond_Oppervlakte'], 0, ",", "."); ?> m<sup>2</sup> perceeloppervlak</td>
-							</tr>
-							<?php } ?>
-	
-							<?php if (!empty($val['bouwgrond_HuidigGebruik']) && !empty($val['bouwgrond_Liggingen'])) { ?>
-							<tr>
-								<th class="description">Ligging</th>
-								<td class="value"><?php echo obj_splitValues($val['bouwgrond_Liggingen']); ?></td>
-							</tr>
-							<?php } ?>
-	
-							<?php if (!empty($val['wonen_WonenDetails_Bestemming_HuidigGebruik'])) { ?>
-	
-								<?php if (!empty($val['wonen_Woonhuis_SoortWoning'])) { ?>
-								<tr>
-									<th class="description">Soort woonhuis</th>
-									<td class="value"><?php echo ucfirst($val['wonen_Woonhuis_SoortWoning']) . ',<br>' . $val['wonen_Woonhuis_TypeWoning']; ?></td>
-								</tr>
-								<?php } ?>
-	
-								<?php if (!empty($val['wonen_Appartement_SoortAppartement'])) { ?>
-								<tr>
-									<th class="description">Soort appartement</th>
-									<td class="value"><?php echo $val['wonen_Appartement_SoortAppartement']; ?></td>
-								</tr>
-								<?php } ?>
-	
-								<?php if (!empty($val['wonen_WonenDetails_Bouwjaar_JaarOmschrijving_Jaar'])) { ?>
-								<tr>
-									<th class="description">Bouwjaar</th>
-									<td class="value"><?php echo $val['wonen_WonenDetails_Bouwjaar_JaarOmschrijving_Jaar']; ?></td>
-								</tr>
-								<?php } ?>
-	
-								<?php if (!is_null($val['wonen_WonenDetails_GebruiksoppervlakteWoonfunctie']) && $val['wonen_WonenDetails_GebruiksoppervlakteWoonfunctie'] > 0) { ?>
-								<tr>
-									<th class="description">Woonoppervlakte</th>
-									<td class="value"><?php echo number_format($val['wonen_WonenDetails_GebruiksoppervlakteWoonfunctie'], 0, ",", "."); ?> m<sup>2</sup></td>
-								</tr>
-								<?php } ?>
-	
-								<?php if (!is_null($val['wonen_WonenDetails_GebruiksoppervlakteOverigeFuncties']) && $val['wonen_WonenDetails_GebruiksoppervlakteOverigeFuncties'] > 0) { ?>
-								<tr>
-									<th class="description">Overige inpandige oppervlakte</th>
-									<td class="value"><?php echo number_format($val['wonen_WonenDetails_GebruiksoppervlakteOverigeFuncties'], 0, ",", "."); ?> m<sup>2</sup></td>
-								</tr>
-								<?php } ?>
-	
-								<?php if (!is_null($val['wonen_WonenDetails_PerceelOppervlakte']) && $val['wonen_WonenDetails_PerceelOppervlakte'] > 0) { ?>
-								<tr>
-									<th class="description">Perceeloppervlakte</th>
-									<td class="value"><?php echo number_format($val['wonen_WonenDetails_PerceelOppervlakte'], 0, ",", "."); ?> m<sup>2</sup></td>
-								</tr>
-								<?php } ?>
-	
-								<?php if (!is_null($val['wonen_WonenDetails_Inhoud']) && $val['wonen_WonenDetails_Inhoud'] > 0) { ?>
-								<tr>
-									<th class="description">Inhoud</th>
-									<td class="value"><?php echo number_format($val['wonen_WonenDetails_Inhoud'], 0, ",", "."); ?> m<sup>3</sup></td>
-								</tr>
-								<?php } ?>
-	
-							<?php } ?>
-						</table>
-						
+						<div class="table-flex-wrapper">			
+							<div class="table-wrapper">
+								<h2>Bebouwing</h2>
+		
+								<table>
+									<?php if (!empty($val['bouwgrond_HuidigGebruik']) && $val['bouwgrond_Oppervlakte'] > 0) { ?>
+									<tr>
+										<th class="description">Bouwgrond</th>
+										<td class="value"><?php echo number_format($val['bouwgrond_Oppervlakte'], 0, ",", "."); ?> m<sup>2</sup> perceeloppervlak</td>
+									</tr>
+									<?php } ?>
+			
+									<?php if (!empty($val['bouwgrond_HuidigGebruik']) && !empty($val['bouwgrond_Liggingen'])) { ?>
+									<tr>
+										<th class="description">Ligging</th>
+										<td class="value"><?php echo obj_splitValues($val['bouwgrond_Liggingen']); ?></td>
+									</tr>
+									<?php } ?>
+			
+									<?php if (!empty($val['wonen_WonenDetails_Bestemming_HuidigGebruik'])) { ?>
+			
+										<?php if (!empty($val['wonen_Woonhuis_SoortWoning'])) { ?>
+										<tr>
+											<th class="description">Soort woonhuis</th>
+											<td class="value"><?php echo ucfirst($val['wonen_Woonhuis_SoortWoning']) . ',<br>' . $val['wonen_Woonhuis_TypeWoning']; ?></td>
+										</tr>
+										<?php } ?>
+			
+										<?php if (!empty($val['wonen_Appartement_SoortAppartement'])) { ?>
+										<tr>
+											<th class="description">Soort appartement</th>
+											<td class="value"><?php echo $val['wonen_Appartement_SoortAppartement']; ?></td>
+										</tr>
+										<?php } ?>
+			
+										<?php if (!empty($val['wonen_WonenDetails_Bouwjaar_JaarOmschrijving_Jaar'])) { ?>
+										<tr>
+											<th class="description">Bouwjaar</th>
+											<td class="value"><?php echo $val['wonen_WonenDetails_Bouwjaar_JaarOmschrijving_Jaar']; ?></td>
+										</tr>
+										<?php } ?>
+			
+										<?php if (!is_null($val['wonen_WonenDetails_GebruiksoppervlakteWoonfunctie']) && $val['wonen_WonenDetails_GebruiksoppervlakteWoonfunctie'] > 0) { ?>
+										<tr>
+											<th class="description">Woonoppervlakte</th>
+											<td class="value"><?php echo number_format($val['wonen_WonenDetails_GebruiksoppervlakteWoonfunctie'], 0, ",", "."); ?> m<sup>2</sup></td>
+										</tr>
+										<?php } ?>
+			
+										<?php if (!is_null($val['wonen_WonenDetails_GebruiksoppervlakteOverigeFuncties']) && $val['wonen_WonenDetails_GebruiksoppervlakteOverigeFuncties'] > 0) { ?>
+										<tr>
+											<th class="description">Overige inpandige oppervlakte</th>
+											<td class="value"><?php echo number_format($val['wonen_WonenDetails_GebruiksoppervlakteOverigeFuncties'], 0, ",", "."); ?> m<sup>2</sup></td>
+										</tr>
+										<?php } ?>
+			
+										<?php if (!is_null($val['wonen_WonenDetails_PerceelOppervlakte']) && $val['wonen_WonenDetails_PerceelOppervlakte'] > 0) { ?>
+										<tr>
+											<th class="description">Perceeloppervlakte</th>
+											<td class="value"><?php echo number_format($val['wonen_WonenDetails_PerceelOppervlakte'], 0, ",", "."); ?> m<sup>2</sup></td>
+										</tr>
+										<?php } ?>
+			
+										<?php if (!is_null($val['wonen_WonenDetails_Inhoud']) && $val['wonen_WonenDetails_Inhoud'] > 0) { ?>
+										<tr>
+											<th class="description">Inhoud</th>
+											<td class="value"><?php echo number_format($val['wonen_WonenDetails_Inhoud'], 0, ",", "."); ?> m<sup>3</sup></td>
+										</tr>
+										<?php } ?>
+			
+									<?php } ?>
+								</table>
+							</div>
 						<?php
 	
 						$boolInfo = false;
@@ -320,27 +321,27 @@ $mediaList = $cms['database']->prepare("SELECT `id`, `object_ObjectTiaraID`, `be
 						if ($boolInfo) {
 	
 						?>
-						
-						<h2>Indeling</h2>
-	
-						<table>
-	
-							<?php if (!empty($val['wonen_Verdiepingen_AantalSlaapKamers'])) { ?>
-							<tr>
-								<th class="description">Slaapkamers</th>
-								<td class="value"><?php echo $val['wonen_Verdiepingen_AantalSlaapKamers']; ?></td>
-							</tr>
-							<?php } ?>
-	
-							<?php if (!empty($val['wonen_Verdiepingen_Aantal'])) { ?>
-							<tr>
-								<th class="description">Verdiepingen</th>
-								<td class="value"><?php echo $val['wonen_Verdiepingen_Aantal']; ?></td>
-							</tr>
-							<?php } ?>
-	
-						</table>
-	
+						<div class="table-wrapper">			
+							<h2>Indeling</h2>
+		
+							<table>
+		
+								<?php if (!empty($val['wonen_Verdiepingen_AantalSlaapKamers'])) { ?>
+								<tr>
+									<th class="description">Slaapkamers</th>
+									<td class="value"><?php echo $val['wonen_Verdiepingen_AantalSlaapKamers']; ?></td>
+								</tr>
+								<?php } ?>
+		
+								<?php if (!empty($val['wonen_Verdiepingen_Aantal'])) { ?>
+								<tr>
+									<th class="description">Verdiepingen</th>
+									<td class="value"><?php echo $val['wonen_Verdiepingen_Aantal']; ?></td>
+								</tr>
+								<?php } ?>
+		
+							</table>
+						</div>
 						<?php
 	
 						}
@@ -357,58 +358,58 @@ $mediaList = $cms['database']->prepare("SELECT `id`, `object_ObjectTiaraID`, `be
 						if ($boolInfo) {
 	
 						?>
+						<div class="table-wrapper">						<h2>Energie</h2>
 						
-						<h2>Energie</h2>
-						
-						<table>
-	
-							<?php if (!empty($val['wonen_WonenDetails_Installatie_CVKetel_CVKetelType'])) { ?>
-							<tr>
-								<th class="description">C.V.-ketel</th>
-								<td class="value">
+							<table>
+		
+								<?php if (!empty($val['wonen_WonenDetails_Installatie_CVKetel_CVKetelType'])) { ?>
+								<tr>
+									<th class="description">C.V.-ketel</th>
+									<td class="value">
+									
+										<?php
+										
+										echo ucfirst($val['wonen_WonenDetails_Installatie_CVKetel_CVKetelType']);
+										
+										if (!empty($val['wonen_WonenDetails_Installatie_CVKetel_Eigendom']) && !empty($val['wonen_WonenDetails_Installatie_CVKetel_Bouwjaar']) && !empty($val['wonen_WonenDetails_Installatie_CVKetel_Combiketel'])) {
+											
+											if ($val['wonen_WonenDetails_Installatie_CVKetel_Combiketel'] == "ja")
+												echo ', Combiketel';
+											
+											if ($val['wonen_WonenDetails_Installatie_CVKetel_Bouwjaar'] > 0)
+												echo ', ' . $val['wonen_WonenDetails_Installatie_CVKetel_Bouwjaar'];
+										}
+										
+										?>
+										
+									</td>
+								</tr>
+								<?php } ?>
 								
-									<?php
-									
-									echo ucfirst($val['wonen_WonenDetails_Installatie_CVKetel_CVKetelType']);
-									
-									if (!empty($val['wonen_WonenDetails_Installatie_CVKetel_Eigendom']) && !empty($val['wonen_WonenDetails_Installatie_CVKetel_Bouwjaar']) && !empty($val['wonen_WonenDetails_Installatie_CVKetel_Combiketel'])) {
-										
-										if ($val['wonen_WonenDetails_Installatie_CVKetel_Combiketel'] == "ja")
-											echo ', Combiketel';
-										
-										if ($val['wonen_WonenDetails_Installatie_CVKetel_Bouwjaar'] > 0)
-											echo ', ' . $val['wonen_WonenDetails_Installatie_CVKetel_Bouwjaar'];
-									}
-									
-									?>
-									
-								</td>
-							</tr>
-							<?php } ?>
-							
-							<?php if (!empty($val['wonen_WonenDetails_Diversen_Isolatievormen'])) { ?>
-							<tr>
-								<th class="description">Isolatie</th>
-								<td class="value"><?php echo obj_splitValues($val['wonen_WonenDetails_Diversen_Isolatievormen']); ?></td>
-							</tr>
-							<?php } ?>
-							
-							<?php if (!empty($val['wonen_WonenDetails_Installatie_SoortenVerwarming'])) { ?>
-							<tr>
-								<th class="description">Verwarming</th>
-								<td class="value"><?php echo obj_splitValues($val['wonen_WonenDetails_Installatie_SoortenVerwarming']); ?></td>
-							</tr>
-							<?php } ?>
-							
-							<?php if (!empty($val['wonen_WonenDetails_MatenEnLigging_Liggingen'])) { ?>
-							<tr>
-								<th class="description">Warm water</th>
-								<td class="value"><?php echo obj_splitValues($val['wonen_WonenDetails_MatenEnLigging_Liggingen']); ?></td>
-							</tr>
-							<?php } ?>
-							
-						</table>
-	
+								<?php if (!empty($val['wonen_WonenDetails_Diversen_Isolatievormen'])) { ?>
+								<tr>
+									<th class="description">Isolatie</th>
+									<td class="value"><?php echo obj_splitValues($val['wonen_WonenDetails_Diversen_Isolatievormen']); ?></td>
+								</tr>
+								<?php } ?>
+								
+								<?php if (!empty($val['wonen_WonenDetails_Installatie_SoortenVerwarming'])) { ?>
+								<tr>
+									<th class="description">Verwarming</th>
+									<td class="value"><?php echo obj_splitValues($val['wonen_WonenDetails_Installatie_SoortenVerwarming']); ?></td>
+								</tr>
+								<?php } ?>
+								
+								<?php if (!empty($val['wonen_WonenDetails_MatenEnLigging_Liggingen'])) { ?>
+								<tr>
+									<th class="description">Warm water</th>
+									<td class="value"><?php echo obj_splitValues($val['wonen_WonenDetails_MatenEnLigging_Liggingen']); ?></td>
+								</tr>
+								<?php } ?>
+								
+							</table>
+						</div>
+
 						<?php
 	
 						}
@@ -425,94 +426,98 @@ $mediaList = $cms['database']->prepare("SELECT `id`, `object_ObjectTiaraID`, `be
 						if ($boolInfo) {
 	
 						?>
+
+						<div class="table-wrapper">
 						
-						<h2>Buitenruimte</h2>
-						
-						<table>
-						
-							<?php if (!empty($val['wonen_WonenDetails_MatenEnLigging_Liggingen'])) { ?>
-							<tr>
-								<th class="description">Ligging</th>
-								<td class="value"><?php echo obj_splitValues($val['wonen_WonenDetails_MatenEnLigging_Liggingen']); ?></td>
-							</tr>
-							<?php } ?>
-						
-							<?php if (!empty($val['wonen_WonenDetails_Tuin_Tuintypen'])) { ?>
-							<tr>
-								<th class="description">Tuin</th>
-								<td class="value"><?php echo obj_splitValues($val['wonen_WonenDetails_Tuin_Tuintypen']); ?></td>
-							</tr>
-							<?php } ?>
-						
-							<?php if (!empty($val['wonen_WonenDetails_Hoofdtuin_Afmetingen_Oppervlakte'])) { ?>
-							<tr>
-								<th class="description">Achtertuin</th>
-								<td class="value"><?php echo $val['wonen_WonenDetails_Hoofdtuin_Afmetingen_Oppervlakte']; ?>m<sup>2</sup> (<?php echo number_format(($val['wonen_WonenDetails_Hoofdtuin_Afmetingen_Lengte'] / 100), 2, ',', '.'); ?>m diep en <?php echo number_format(($val['wonen_WonenDetails_Hoofdtuin_Afmetingen_Breedte'] / 100), 2, ',', '.'); ?>m breed)</td>
-							</tr>
-							<?php } ?>
+							<h2>Buitenruimte</h2>
 							
-							<?php if (!empty($val['wonen_WonenDetails_Hoofdtuin_Positie'])) { ?>
-							<tr>
-								<th class="description">Ligging tuin</th>
-								<td class="value">
-								
-									<?php
-									
-									switch ($val['wonen_WonenDetails_Hoofdtuin_Positie']) {
-										
-										case 'noord': echo 'Gelegen op het noorden'; break;
-										case 'noordoost': echo 'Gelegen op het noordoosten'; break;
-										case 'oost': echo 'Gelegen op het oosten'; break;
-										case 'zuidoost': echo 'Gelegen op het zuidoosten'; break;
-										case 'zuid': echo 'Gelegen op het zuiden'; break;
-										case 'zuidwest': echo 'Gelegen op het zuidwesten'; break;
-										case 'west': echo 'Gelegen op het westen'; break;
-										case 'noordwest': echo 'Gelegen op het noordwesten'; break;
-									}
-									
-									if (!empty($val['wonen_WonenDetails_Hoofdtuin_Achterom']))
-										echo ', bereikbaar via achterom';
-									
-									?>
-								
-								</td>
-							</tr>
-							<?php } ?>
+							<table>
 							
-							<?php if (!empty($val['wonen_WonenDetails_SchuurBerging_Soort'])) { ?>
-							<tr>
-								<th class="description">Ligging tuin</th>
-								<td class="value">
+								<?php if (!empty($val['wonen_WonenDetails_MatenEnLigging_Liggingen'])) { ?>
+								<tr>
+									<th class="description">Ligging</th>
+									<td class="value"><?php echo obj_splitValues($val['wonen_WonenDetails_MatenEnLigging_Liggingen']); ?></td>
+								</tr>
+								<?php } ?>
+							
+								<?php if (!empty($val['wonen_WonenDetails_Tuin_Tuintypen'])) { ?>
+								<tr>
+									<th class="description">Tuin</th>
+									<td class="value"><?php echo obj_splitValues($val['wonen_WonenDetails_Tuin_Tuintypen']); ?></td>
+								</tr>
+								<?php } ?>
+							
+								<?php if (!empty($val['wonen_WonenDetails_Hoofdtuin_Afmetingen_Oppervlakte'])) { ?>
+								<tr>
+									<th class="description">Achtertuin</th>
+									<td class="value"><?php echo $val['wonen_WonenDetails_Hoofdtuin_Afmetingen_Oppervlakte']; ?>m<sup>2</sup> (<?php echo number_format(($val['wonen_WonenDetails_Hoofdtuin_Afmetingen_Lengte'] / 100), 2, ',', '.'); ?>m diep en <?php echo number_format(($val['wonen_WonenDetails_Hoofdtuin_Afmetingen_Breedte'] / 100), 2, ',', '.'); ?>m breed)</td>
+								</tr>
+								<?php } ?>
 								
-									<?php
+								<?php if (!empty($val['wonen_WonenDetails_Hoofdtuin_Positie'])) { ?>
+								<tr>
+									<th class="description">Ligging tuin</th>
+									<td class="value">
 									
-									switch ($val['wonen_WonenDetails_SchuurBerging_Soort']) {
+										<?php
 										
-										case 'aangebouwd steen': echo 'Aangebouwde stenen schuur/berging'; break;
-										case 'aangebouwd hout': echo 'Aangebouwde houten schuur/berging'; break;
-										case 'vrijstaand steen': echo 'Vrijstaande stenen schuur/berging'; break;
-										case 'vrijstaand hout': echo 'Vrijstaande houten schuur/berging'; break;
-										case 'inpandig': echo 'Inpandige schuur/berging'; break;
-										case 'box': echo 'Box'; break;
-									}
+										switch ($val['wonen_WonenDetails_Hoofdtuin_Positie']) {
+											
+											case 'noord': echo 'Gelegen op het noorden'; break;
+											case 'noordoost': echo 'Gelegen op het noordoosten'; break;
+											case 'oost': echo 'Gelegen op het oosten'; break;
+											case 'zuidoost': echo 'Gelegen op het zuidoosten'; break;
+											case 'zuid': echo 'Gelegen op het zuiden'; break;
+											case 'zuidwest': echo 'Gelegen op het zuidwesten'; break;
+											case 'west': echo 'Gelegen op het westen'; break;
+											case 'noordwest': echo 'Gelegen op het noordwesten'; break;
+										}
+										
+										if (!empty($val['wonen_WonenDetails_Hoofdtuin_Achterom']))
+											echo ', bereikbaar via achterom';
+										
+										?>
 									
-									if (!empty($val['wonen_WonenDetails_SchuurBerging_TotaalAantal']))
-										echo '&nbsp(' . $val['wonen_WonenDetails_SchuurBerging_TotaalAantal'] . ')';
-									
-									?>
+									</td>
+								</tr>
+								<?php } ?>
 								
-								</td>
-							</tr>
-							<?php } ?>
-						
-						</table>
+								<?php if (!empty($val['wonen_WonenDetails_SchuurBerging_Soort'])) { ?>
+								<tr>
+									<th class="description">Ligging tuin</th>
+									<td class="value">
+									
+										<?php
+										
+										switch ($val['wonen_WonenDetails_SchuurBerging_Soort']) {
+											
+											case 'aangebouwd steen': echo 'Aangebouwde stenen schuur/berging'; break;
+											case 'aangebouwd hout': echo 'Aangebouwde houten schuur/berging'; break;
+											case 'vrijstaand steen': echo 'Vrijstaande stenen schuur/berging'; break;
+											case 'vrijstaand hout': echo 'Vrijstaande houten schuur/berging'; break;
+											case 'inpandig': echo 'Inpandige schuur/berging'; break;
+											case 'box': echo 'Box'; break;
+										}
+										
+										if (!empty($val['wonen_WonenDetails_SchuurBerging_TotaalAantal']))
+											echo '&nbsp(' . $val['wonen_WonenDetails_SchuurBerging_TotaalAantal'] . ')';
+										
+										?>
+									
+									</td>
+								</tr>
+								<?php } ?>
+							
+							</table>
+
+						</div>
 						
 						<?php
 	
 						}
 	
 						?>				
-						
+					</div>	
 					</div>
 					
 
@@ -570,7 +575,7 @@ $mediaList = $cms['database']->prepare("SELECT `id`, `object_ObjectTiaraID`, `be
 						</div>
 						
 					</div>
-
+					
 				</div>
 			</div>
 

@@ -185,332 +185,344 @@ $ogType = 'bog';
 					</div>
 
 					<div class="content-wrapper" data-tab="2" style="display: none;">
-					
-						<h2>Overdracht</h2>
+						<div class="table-flex-wrapper">
+							<div class="table-wrapper">					
+								<h2>Overdracht</h2>
 
-						<table cellpadding="0" cellspacing="0" border="0">
+								<table cellpadding="0" cellspacing="0" border="0">
 
-							<tr>
-								<th>Aangeboden sinds</th>
-								<td>
-								
-								<?php
+									<tr>
+										<th>Aangeboden sinds</th>
+										<td>
+										
+										<?php
 
-								$dateAdded = strtotime($val['objectDetails_DatumInvoer']);
-								$dateNow = time();
-								$dateDiff = time() - $dateAdded;
-								$weeks = ceil($dateDiff / (7 * 86400));
+										$dateAdded = strtotime($val['objectDetails_DatumInvoer']);
+										$dateNow = time();
+										$dateDiff = time() - $dateAdded;
+										$weeks = ceil($dateDiff / (7 * 86400));
 
-								echo $weeks . (($weeks == 1) ? ' week' : ' weken');
+										echo $weeks . (($weeks == 1) ? ' week' : ' weken');
 
-								?>
+										?>
 
-								</td>
-							</tr>
+										</td>
+									</tr>
 
-							<?php
+									<?php
 
-							if (!empty($val['objectDetails_Aanvaarding_TypeAanvaarding'])) {
+									if (!empty($val['objectDetails_Aanvaarding_TypeAanvaarding'])) {
 
-								?>
+										?>
 
-							<tr>
-								<th class="description">Aanvaarding</th>
-								<td class="value">
-								
-								<?php
+									<tr>
+										<th class="description">Aanvaarding</th>
+										<td class="value">
+										
+										<?php
 
-								echo ucfirst($val['objectDetails_Aanvaarding_TypeAanvaarding']);
+										echo ucfirst($val['objectDetails_Aanvaarding_TypeAanvaarding']);
 
-								?>
+										?>
 
-								</td>
-							</tr>
+										</td>
+									</tr>
 
-								<?php
-							}
-							?>
+										<?php
+									}
+									?>
 
-						</table>
-						
-						<h2>Bebouwing</h2>
+								</table>
+							</div>
 
-						<table>
+							<div class="table-wrapper">					
 
-							<?php
+								<h2>Bebouwing</h2>
 
-							if (!empty($val['objectDetails_Bouwvorm'])) {
+								<table>
 
-								?>
+									<?php
 
-							<tr>
-								<th class="description">Soort bouw</th>
-								<td class="value">
-								
-								<?php
+									if (!empty($val['objectDetails_Bouwvorm'])) {
 
-								echo ucfirst($val['objectDetails_Bouwvorm']);
+										?>
 
-								?>
+									<tr>
+										<th class="description">Soort bouw</th>
+										<td class="value">
+										
+										<?php
 
-								</td>
-							</tr>
+										echo ucfirst($val['objectDetails_Bouwvorm']);
 
-								<?php
-							}
-							?>
+										?>
 
-							<?php
+										</td>
+									</tr>
 
-							if (!empty($val['objectDetails_Bestemming_Hoofdbestemming'])) {
+										<?php
+									}
+									?>
 
-								?>
+									<?php
 
-							<tr>
-								<th class="description">Hoofdbestemming</th>
-								<td class="value">
-								
-								<?php
+									if (!empty($val['objectDetails_Bestemming_Hoofdbestemming'])) {
 
-								echo ucfirst($val['objectDetails_Bestemming_Hoofdbestemming']);
+										?>
 
-								?>
+									<tr>
+										<th class="description">Hoofdbestemming</th>
+										<td class="value">
+										
+										<?php
 
-								</td>
-							</tr>
+										echo ucfirst($val['objectDetails_Bestemming_Hoofdbestemming']);
 
-								<?php
-							}
-							?>
+										?>
 
-							<?php
+										</td>
+									</tr>
 
-							if (!empty($val['objectDetails_Bestemming_Nevenbestemmingen'])) {
+										<?php
+									}
+									?>
 
-								?>
+									<?php
 
-							<tr>
-								<th class="description">Nevenbestemming</th>
-								<td class="value">
-								
-								<?php
+									if (!empty($val['objectDetails_Bestemming_Nevenbestemmingen'])) {
 
-								$explodedTemp = explode(',', $val['objectDetails_Bestemming_Nevenbestemmingen']);
+										?>
 
-								foreach ($explodedTemp as $subKey => $subVal) {
+									<tr>
+										<th class="description">Nevenbestemming</th>
+										<td class="value">
+										
+										<?php
 
-									$newValue = str_replace(array('[', ']'), array('', ''), $subVal);
+										$explodedTemp = explode(',', $val['objectDetails_Bestemming_Nevenbestemmingen']);
 
-									echo (($subKey == 0) ? ucfirst($newValue) : ', ' . $newValue);
-								}
+										foreach ($explodedTemp as $subKey => $subVal) {
 
-								?>
+											$newValue = str_replace(array('[', ']'), array('', ''), $subVal);
 
-								</td>
-							</tr>
+											echo (($subKey == 0) ? ucfirst($newValue) : ', ' . $newValue);
+										}
 
-								<?php
-							}
-							?>
+										?>
 
-							<?php
+										</td>
+									</tr>
 
-							if (!empty($val['objectDetails_Bouwjaar_JaarOmschrijving_Jaar'])) {
+										<?php
+									}
+									?>
 
-								?>
-
-							<tr>
-								<th class="description">Bouwjaar</th>
-								<td class="value">
-								
-								<?php
-
-								echo ucfirst($val['objectDetails_Bouwjaar_JaarOmschrijving_Jaar']);
-
-								?>
-
-								</td>
-							</tr>
-
-								<?php
-							}
-							?>
-
-							<?php
-
-							if (!empty($val['objectDetails_Kantoorruimte_Verdiepingen'])) {
-
-								?>
-
-							<tr>
-								<th class="description">Aantal bouwlagen</th>
-								<td class="value">
-								
-								<?php
+									<?php
 
-								echo ucfirst($val['objectDetails_Kantoorruimte_Verdiepingen']);
+									if (!empty($val['objectDetails_Bouwjaar_JaarOmschrijving_Jaar'])) {
 
-								?>
+										?>
 
-								</td>
-							</tr>
+									<tr>
+										<th class="description">Bouwjaar</th>
+										<td class="value">
+										
+										<?php
 
-								<?php
-							}
-							?>
+										echo ucfirst($val['objectDetails_Bouwjaar_JaarOmschrijving_Jaar']);
 
-						</table>
-						
-						<h2>Kenmerken</h2>
+										?>
 
-						<table>
+										</td>
+									</tr>
 
-							<?php if (!is_null($val['objectDetails_Woonobject_Oppervlakte']) && $val['objectDetails_Woonobject_Oppervlakte'] > 0) { ?>
-							<tr>
-								<th class="description">Woonobject</th>
-								<td class="value">
-								
-								<?php echo number_format($val['objectDetails_Woonobject_Oppervlakte'], 0, ",", "."); ?> m<sup>2</sup>
+										<?php
+									}
+									?>
 
-								</td>
-							</tr>
-							<?php } ?>
-							<?php if (!is_null($val['objectDetails_Bedrijfshal_Oppervlakte']) && $val['objectDetails_Bedrijfshal_Oppervlakte'] > 0) { ?>
-							<tr>
-								<th class="description">Bedrijfshal</th>
-								<td class="value">
-								
-								<?php echo number_format($val['objectDetails_Bedrijfshal_Oppervlakte'], 0, ",", "."); ?> m<sup>2</sup>
+									<?php
 
-								</td>
-							</tr>
-							<?php } ?>
-							<?php if (!is_null($val['objectDetails_Kantoorruimte_Oppervlakte']) && $val['objectDetails_Kantoorruimte_Oppervlakte'] > 0) { ?>
-							<tr>
-								<th class="description">Kantoorruimte</th>
-								<td class="value">
-								
-								<?php echo number_format($val['objectDetails_Kantoorruimte_Oppervlakte'], 0, ",", "."); ?> m<sup>2</sup>
+									if (!empty($val['objectDetails_Kantoorruimte_Verdiepingen'])) {
 
-								</td>
-							</tr>
-							<?php } ?>
-							<?php if (!is_null($val['objectDetails_BKantoorruimte_Oppervlakte']) && $val['objectDetails_BKantoorruimte_Oppervlakte'] > 0) { ?>
-							<tr>
-								<th class="description">Kantoorruimte</th>
-								<td class="value">
-								
-								<?php echo number_format($val['objectDetails_BKantoorruimte_Oppervlakte'], 0, ",", "."); ?> m<sup>2</sup>
+										?>
 
-								</td>
-							</tr>
-							<?php } ?>
-							<?php if (!is_null($val['objectDetails_Terrein_Oppervlakte']) && $val['objectDetails_Terrein_Oppervlakte'] > 0) { ?>
-							<tr>
-								<th class="description">Terrein</th>
-								<td class="value">
-								
-								<?php echo number_format($val['objectDetails_Terrein_Oppervlakte'], 0, ",", "."); ?> m<sup>2</sup>
+									<tr>
+										<th class="description">Aantal bouwlagen</th>
+										<td class="value">
+										
+										<?php
 
-								</td>
-							</tr>
-							<?php } ?>
-							<?php if (!is_null($val['objectDetails_Horeca_Oppervlakte']) && $val['objectDetails_Horeca_Oppervlakte'] > 0) { ?>
-							<tr>
-								<th class="description">Horeca</th>
-								<td class="value">
-								
-								<?php echo number_format($val['objectDetails_Horeca_Oppervlakte'], 0, ",", "."); ?> m<sup>2</sup>
+										echo ucfirst($val['objectDetails_Kantoorruimte_Verdiepingen']);
 
-								</td>
-							</tr>
-							<?php } ?>
-							<?php if (!is_null($val['objectDetails_Winkelruimte_Oppervlakte']) && $val['objectDetails_Winkelruimte_Oppervlakte'] > 0) { ?>
-							<tr>
-								<th class="description">Winkelruimte</th>
-								<td class="value">
-								
-								<?php echo number_format($val['objectDetails_Winkelruimte_Oppervlakte'], 0, ",", "."); ?> m<sup>2</sup>
+										?>
 
-								</td>
-							</tr>
-							<?php } ?>
+										</td>
+									</tr>
 
-						</table>
+										<?php
+									}
+									?>
 
-						<h2>Voorzieningen</h2>
+								</table>
+							</div>
 
-						<table cellpadding="0" cellspacing="0" border="0">
+							<div class="table-wrapper">					
 
-							<?php
+								<h2>Kenmerken</h2>
 
-							if (!empty($val['objectDetails_Lokatie_Parkeren_Parkeerplaatsen_Aantal'])) {
+								<table>
 
-								?>
+									<?php if (!is_null($val['objectDetails_Woonobject_Oppervlakte']) && $val['objectDetails_Woonobject_Oppervlakte'] > 0) { ?>
+									<tr>
+										<th class="description">Woonobject</th>
+										<td class="value">
+										
+										<?php echo number_format($val['objectDetails_Woonobject_Oppervlakte'], 0, ",", "."); ?> m<sup>2</sup>
 
-							<tr>
-								<th class="description">Parkeerplaatsen</th>
-								<td class="value">
-								
-								<?php
+										</td>
+									</tr>
+									<?php } ?>
+									<?php if (!is_null($val['objectDetails_Bedrijfshal_Oppervlakte']) && $val['objectDetails_Bedrijfshal_Oppervlakte'] > 0) { ?>
+									<tr>
+										<th class="description">Bedrijfshal</th>
+										<td class="value">
+										
+										<?php echo number_format($val['objectDetails_Bedrijfshal_Oppervlakte'], 0, ",", "."); ?> m<sup>2</sup>
 
-								echo ucfirst($val['objectDetails_Lokatie_Parkeren_Parkeerplaatsen_Aantal']);
+										</td>
+									</tr>
+									<?php } ?>
+									<?php if (!is_null($val['objectDetails_Kantoorruimte_Oppervlakte']) && $val['objectDetails_Kantoorruimte_Oppervlakte'] > 0) { ?>
+									<tr>
+										<th class="description">Kantoorruimte</th>
+										<td class="value">
+										
+										<?php echo number_format($val['objectDetails_Kantoorruimte_Oppervlakte'], 0, ",", "."); ?> m<sup>2</sup>
 
-								?>
+										</td>
+									</tr>
+									<?php } ?>
+									<?php if (!is_null($val['objectDetails_BKantoorruimte_Oppervlakte']) && $val['objectDetails_BKantoorruimte_Oppervlakte'] > 0) { ?>
+									<tr>
+										<th class="description">Kantoorruimte</th>
+										<td class="value">
+										
+										<?php echo number_format($val['objectDetails_BKantoorruimte_Oppervlakte'], 0, ",", "."); ?> m<sup>2</sup>
 
-								</td>
-							</tr>
+										</td>
+									</tr>
+									<?php } ?>
+									<?php if (!is_null($val['objectDetails_Terrein_Oppervlakte']) && $val['objectDetails_Terrein_Oppervlakte'] > 0) { ?>
+									<tr>
+										<th class="description">Terrein</th>
+										<td class="value">
+										
+										<?php echo number_format($val['objectDetails_Terrein_Oppervlakte'], 0, ",", "."); ?> m<sup>2</sup>
 
-								<?php
-							}
-							else {
+										</td>
+									</tr>
+									<?php } ?>
+									<?php if (!is_null($val['objectDetails_Horeca_Oppervlakte']) && $val['objectDetails_Horeca_Oppervlakte'] > 0) { ?>
+									<tr>
+										<th class="description">Horeca</th>
+										<td class="value">
+										
+										<?php echo number_format($val['objectDetails_Horeca_Oppervlakte'], 0, ",", "."); ?> m<sup>2</sup>
 
-								?>
+										</td>
+									</tr>
+									<?php } ?>
+									<?php if (!is_null($val['objectDetails_Winkelruimte_Oppervlakte']) && $val['objectDetails_Winkelruimte_Oppervlakte'] > 0) { ?>
+									<tr>
+										<th class="description">Winkelruimte</th>
+										<td class="value">
+										
+										<?php echo number_format($val['objectDetails_Winkelruimte_Oppervlakte'], 0, ",", "."); ?> m<sup>2</sup>
 
-							<tr>
-								<th class="description">Parkeerplaatsen</th>
-								<td class="value">
-								
-								Geen
+										</td>
+									</tr>
+									<?php } ?>
 
-								</td>
-							</tr>
+								</table>
+							</div>
 
-								<?php
-							}
-							?>
+							<div class="table-wrapper">					
 
-							<?php
+								<h2>Voorzieningen</h2>
 
-							if (!empty($val['objectDetails_Kantoorruimte_Opleveringsniveau'])) {
+								<table cellpadding="0" cellspacing="0" border="0">
 
-								?>
+									<?php
 
-							<tr>
-								<th class="description">Opleveringsniveau</th>
-								<td class="value">
-								
-								<?php
+									if (!empty($val['objectDetails_Lokatie_Parkeren_Parkeerplaatsen_Aantal'])) {
 
-								$explodedTemp = explode(',', $val['objectDetails_Kantoorruimte_Opleveringsniveau']);
+										?>
 
-								foreach ($explodedTemp as $subKey => $subVal) {
+									<tr>
+										<th class="description">Parkeerplaatsen</th>
+										<td class="value">
+										
+										<?php
 
-									$newValue = str_replace(array('[', ']'), array('', ''), $subVal);
+										echo ucfirst($val['objectDetails_Lokatie_Parkeren_Parkeerplaatsen_Aantal']);
 
-									echo (($subKey == 0) ? ucfirst($newValue) : ', ' . $newValue);
-								}
+										?>
 
-								?>
+										</td>
+									</tr>
 
-								</td>
-							</tr>
+										<?php
+									}
+									else {
 
-								<?php
-							}
-							?>
+										?>
 
-						</table>		
+									<tr>
+										<th class="description">Parkeerplaatsen</th>
+										<td class="value">
+										
+										Geen
+
+										</td>
+									</tr>
+
+										<?php
+									}
+									?>
+
+									<?php
+
+									if (!empty($val['objectDetails_Kantoorruimte_Opleveringsniveau'])) {
+
+										?>
+
+									<tr>
+										<th class="description">Opleveringsniveau</th>
+										<td class="value">
+										
+										<?php
+
+										$explodedTemp = explode(',', $val['objectDetails_Kantoorruimte_Opleveringsniveau']);
+
+										foreach ($explodedTemp as $subKey => $subVal) {
+
+											$newValue = str_replace(array('[', ']'), array('', ''), $subVal);
+
+											echo (($subKey == 0) ? ucfirst($newValue) : ', ' . $newValue);
+										}
+
+										?>
+
+										</td>
+									</tr>
+
+										<?php
+									}
+									?>
+
+								</table>	
+							</div>	
+						</div>
 						
 					</div>
 					

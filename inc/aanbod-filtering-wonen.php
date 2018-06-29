@@ -48,6 +48,7 @@
 		<input src="<?php echo $dynamicRoot; ?>inc/ajax_searchAutoComplete.php" type="text" id="wonen_plaats" name="plaatsnaam" class="auto_complete" value="<?php echo $filter['plaatsnaam']; ?>" data-ogType="<?php echo $ogType; ?>" placeholder="Plaats">
 		<div class="select-wrapper">
 			<select name="radius" id="filter-straal">
+				<optgroup>
 				<option value="">Geen straal</option>
 
 				<?php
@@ -74,14 +75,16 @@
 				?>
 
 			</select>
+			</optgroup>
 		</div>
 	</div>
 
 	<p class="filter-head toggle">Prijs</p>
 	<div class="filter-wrapper">
 		<div class="select-wrapper">
-			<select name="prijsVan" id="filter-prijs-vanaf">
 
+			<select name="prijsVan" id="filter-prijs-vanaf">
+				<optgroup>
 				<?php
 
 				if ($filter['saleType'] == 'rent')
@@ -97,12 +100,14 @@
 				}
 
 				?>
-
+				</optgroup>
 			</select>
+
 		</div>
 
 		<div class="select-wrapper">
 			<select name="prijsTot" id="filter-prijs-tot">
+				<optgroup>
 
 				<?php
 
@@ -128,7 +133,7 @@
 				}
 
 				?>
-
+				</optgroup>
 			</select>
 		</div>
 	</div>
@@ -175,23 +180,23 @@
 			?>
 			
 			<select name="bestemming" id="filter-type-object">
-			
-				<option value="">Alle objecttypes</option>
+				<optgroup>
+					<option value="">Alle objecttypes</option>
 
-				<?php
+					<?php
 
-				foreach ($fullArray as $key => $val) {
+					foreach ($fullArray as $key => $val) {
 
-					if ($val['counter'] > 0) {
+						if ($val['counter'] > 0) {
 
-						$selected = (isset($filter['bestemming']) && $filter['bestemming'] == $key) ? ' selected="selected"' : '';
+							$selected = (isset($filter['bestemming']) && $filter['bestemming'] == $key) ? ' selected="selected"' : '';
 
-						echo '<option value="' . $key . '"' . $selected . '>' . ucwords($key) . ' (' . $val['counter'] . ')</option>';
+							echo '<option value="' . $key . '"' . $selected . '>' . ucwords($key) . ' (' . $val['counter'] . ')</option>';
+						}
 					}
-				}
 
-				?>
-
+					?>
+				</optgroup>
 			</select>
 		
 		</div>
@@ -200,21 +205,22 @@
 		<div class="select-wrapper">
 		
 			<select name="perceelOppervlakte" id="filter-perceelopp">
-				<option value="">Alle perceeloppervlaktes</option>
+				<optgroup>
+					<option value="">Alle perceeloppervlaktes</option>
 
-				<?php
+					<?php
 
-				$arrOpp = array(100, 250, 500, 1000, 2500, 5000, 7500, 10000);
+					$arrOpp = array(100, 250, 500, 1000, 2500, 5000, 7500, 10000);
 
-				foreach ($arrOpp as $key => $val) {
+					foreach ($arrOpp as $key => $val) {
 
-					$selected = ($filter['perceelOppervlakte'] == $val) ? ' selected="selected"' : '';
+						$selected = ($filter['perceelOppervlakte'] == $val) ? ' selected="selected"' : '';
 
-					echo '<option value="' . $val . '"' . $selected . '>Perceel: ca. ' . number_format($val, 0, ',', '.') . ' m&sup2;</option>';
-				}
+						echo '<option value="' . $val . '"' . $selected . '>Perceel: ca. ' . number_format($val, 0, ',', '.') . ' m&sup2;</option>';
+					}
 
-				?>
-
+					?>
+				</optgroup>
 			</select>
 		
 		</div>
@@ -222,21 +228,22 @@
 		<div class="select-wrapper">
 		
 			<select name="woonfunctieOppervlakte" id="filter-woonopp">
-				<option value="">Alle woonoppervlaktes</option>
+				<optgroup>
+					<option value="">Alle woonoppervlaktes</option>
 
-				<?php
+					<?php
 
-				$arrOpp = array(50, 100, 250, 500, 750, 1000);
+					$arrOpp = array(50, 100, 250, 500, 750, 1000);
 
-				foreach ($arrOpp as $key => $val) {
+					foreach ($arrOpp as $key => $val) {
 
-					$selected = ($filter['woonfunctieOppervlakte'] == $val) ? ' selected="selected"' : '';
+						$selected = ($filter['woonfunctieOppervlakte'] == $val) ? ' selected="selected"' : '';
 
-					echo '<option value="' . $val . '"' . $selected . '>Woonopp: ca. ' . number_format($val, 0, ',', '.') . ' m&sup2;</option>';
-				}
+						echo '<option value="' . $val . '"' . $selected . '>Woonopp: ca. ' . number_format($val, 0, ',', '.') . ' m&sup2;</option>';
+					}
 
-				?>
-
+					?>
+				</optgroup>
 			</select>
 		
 		</div>
@@ -244,21 +251,22 @@
 		<div class="select-wrapper">
 		
 			<select name="slaapkamers" id="filter-slaapkamers">
-				<option value="">1+ slaapkamers</option>
+				<optgroup>
+					<option value="">1+ slaapkamers</option>
+			
+					<?php
 
-				<?php
+					$arrOpp = array(2, 3, 4, 5, 6);
 
-				$arrOpp = array(2, 3, 4, 5, 6);
+					foreach ($arrOpp as $key => $val) {
 
-				foreach ($arrOpp as $key => $val) {
+						$selected = ($filter['slaapkamers'] == $val) ? ' selected="selected"' : '';
 
-					$selected = ($filter['slaapkamers'] == $val) ? ' selected="selected"' : '';
+						echo '<option value="' . $val . '"' . $selected . '>' . number_format($val, 0, ',', '.') . '+ slaapkamers</option>';
+					}
 
-					echo '<option value="' . $val . '"' . $selected . '>' . number_format($val, 0, ',', '.') . '+ slaapkamers</option>';
-				}
-
-				?>
-
+					?>
+				</optgroup>
 			</select>
 		
 		</div>

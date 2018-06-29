@@ -53,7 +53,7 @@ function generate_googleMaps(map_elementId,map_center_lat,map_center_lng,map_zoo
 				maxZoom: 14,
 				styles: [{
 					height: 25,
-					url: "/resources/map-marker.png.png",
+					url: "/resources/jf_beeldmerk-s.png",
 					width: 21
 				}]
 			};
@@ -92,7 +92,7 @@ function generate_googleMaps(map_elementId,map_center_lat,map_center_lng,map_zoo
 				maxZoom: 5,
 				styles: [{
 					height: 26,
-					url: "/resources/map-marker.png",
+					url: "/resources/jf_beeldmerk-s.png",
 					width: 26
 				}]
 			};
@@ -131,7 +131,7 @@ function googleMaps_initialize(map_elementId,center_lat,center_lng,zoomlevel) {
 		center: new google.maps.LatLng(center_lat,center_lng),
     	zoom: zoomlevel,
     	mapTypeId: google.maps.MapTypeId.ROADMAP,
-        scrollwheel: true,
+        scrollwheel: false,
         backgroundColor: 'transparent',
         streetViewControl: false,
         keyboardShortcuts: false,
@@ -146,7 +146,7 @@ function googleMaps_initialize(map_elementId,center_lat,center_lng,zoomlevel) {
 function googleMaps_addMarker(googleMap_object,arr_markerData,arr_index,show_infoWindow) {
 	var markerImage = 0;
 
-	arrIconImage = '/resources/map-marker.png';
+	arrIconImage = '/resources/jf_beeldmerk-s.png';
 	var markerImage = new google.maps.MarkerImage(
 		arrIconImage,
 		new google.maps.Size(83, 80),
@@ -161,7 +161,7 @@ function googleMaps_addMarker(googleMap_object,arr_markerData,arr_index,show_inf
 //		// title: arr_markerData[arr_index].address
 //	});
 	
-	var customCustomOverlay = new CustomOverlay(googleMap_object, new google.maps.LatLng(arr_markerData[arr_index].lat, arr_markerData[arr_index].lng), '/resources/map-marker.png', '', 83, 99, 0, true, arr_markerData[arr_index].ajax_id);
+	var customCustomOverlay = new CustomOverlay(googleMap_object, new google.maps.LatLng(arr_markerData[arr_index].lat, arr_markerData[arr_index].lng), '/resources/jf_beeldmerk-s.png', '', 83, 99, 0, true, arr_markerData[arr_index].ajax_id);
 	
 	totalBounds = new google.maps.LatLngBounds();
 

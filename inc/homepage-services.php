@@ -97,17 +97,20 @@
 			<form action="<?php echo $template->findPermalink(33, 1); ?>" id="zoek-form" method="GET">
 				<div class="select-wrapper">
 					<select id="form-changer">
+					<optgroup>
 					  <option value="0" selected="">Wat zoekt u?</option>
-					  <option data-src="<?php echo $template->findPermalink(33, 1); ?>" data-value="koop">&nbsp; Koopwoningen</option>
-					  <option data-src="<?php echo $template->findPermalink(34, 1); ?>" data-value="huur">&nbsp; Huurwoningen</option>
-					  <option data-src="<?php echo $template->findPermalink(35, 1); ?>" data-value="nieuwbouw">&nbsp; Nieuwbouw</option>
-					  <option data-src="<?php echo $template->findPermalink(37, 1); ?>" data-value="bog">&nbsp; Bedrijfspanden</option>
+					  <option data-src="<?php echo $template->findPermalink(33, 1); ?>" data-value="koop">Koopwoningen</option>
+					  <option data-src="<?php echo $template->findPermalink(34, 1); ?>" data-value="huur">Huurwoningen</option>
+					  <option data-src="<?php echo $template->findPermalink(35, 1); ?>" data-value="nieuwbouw">Nieuwbouw</option>
+					  <option data-src="<?php echo $template->findPermalink(37, 1); ?>" data-value="bog">Bedrijfspanden</option>
+					  </optgroup>
 					</select>
 				</div>
 				<input type="text" name="plaatsnaam" placeholder="Plaats, straat">
 
 				<div class="select-wrapper">
 					<select name="radius">
+						<optgroup>
 				  		<option value="" selected="">Straal</option>
 					  
 				  		<?php
@@ -132,26 +135,30 @@
 						?>
 
 					</select>
+					</optgroup>
 				</div>
 
 				<div class="select-wrapper price-buy">
 					<select name="prijsVan" class="prijsVan">
-						<option value="" selected="">Prijs vanaf</option>						
-						<?php
+						<optgroup>
+							<option value="" selected="">Prijs vanaf</option>						
+							<?php
 
-						$arrPriceFrom = array(0, 100000, 200000, 300000, 400000, 500000, 600000, 700000, 800000, 900000, 1000000, 1250000);
-		
-						foreach ($arrPriceFrom as $key => $val) {
-		
-							echo '<option value="' . $val . '">&euro; ' . number_format($val, 0, ',', '.') . ',-</option>';
-						}
-		
-						?>
+							$arrPriceFrom = array(0, 100000, 200000, 300000, 400000, 500000, 600000, 700000, 800000, 900000, 1000000, 1250000);
+			
+							foreach ($arrPriceFrom as $key => $val) {
+			
+								echo '<option value="' . $val . '">&euro; ' . number_format($val, 0, ',', '.') . ',-</option>';
+							}
+			
+							?>
+						</optgroup>
 					</select>
 				</div>
 				
 				<div class="select-wrapper price-buy">
 					<select name="prijsTot" class="prijsTot">
+						<optgroup>
 						<option value="" selected="">Prijs tot</option>			
 						<?php
 
@@ -171,6 +178,7 @@
 		
 						?>
 					</select>
+					</optgroup>
 				</div>
 
 				<div class="select-wrapper price-rent" style="display: none;">
