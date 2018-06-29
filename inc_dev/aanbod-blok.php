@@ -8,7 +8,7 @@
 			</p>
 			
 			<p class="item-subtitle">
-				<a href="">Vraagprijs &euro; 259.500,- k.k.</a>
+				<a href="">&euro; 259.500,- k.k.</a>
 			</p>
 
 			<p class="item-bold-title">

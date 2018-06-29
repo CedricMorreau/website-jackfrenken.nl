@@ -1372,6 +1372,9 @@ input:focus {
           .column-header .header-title-wrapper .header-title h1 {
             word-break: break-word;
             font-size: 2rem; } }
+      .column-header .header-title-wrapper .header-title a {
+        color: inherit;
+        font-size: inherit; }
       .column-header .header-title-wrapper .header-title .scroll-down {
         color: #003064;
         text-decoration: none;
@@ -1523,6 +1526,7 @@ input:focus {
     .column-content .column-content .content-wrapper {
       padding-right: 13rem;
       width: 100%;
+      max-width: 60rem;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -1575,6 +1579,7 @@ input:focus {
         border-color: #CCE9f5;
         background-color: #CCE9f5;
         height: 1px;
+        width: 100%;
         outline: 0;
         border: none; }
       .column-content .column-content .content-wrapper .attention-block {

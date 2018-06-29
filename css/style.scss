@@ -1573,6 +1573,11 @@ input:focus {
 
 			}
 
+			a {
+				color: inherit;
+				font-size: inherit;
+			}
+
 			.scroll-down {
 				color: $pri-col;
 				text-decoration: none;
@@ -1747,6 +1752,7 @@ input:focus {
 		.content-wrapper {
 			padding-right: 13rem;
 			width: 100%;
+			max-width: 60rem;
 			display: flex;
 			flex-direction: column;
 			@media only screen and (max-width: $container-size-l) {
@@ -1815,6 +1821,7 @@ input:focus {
 				border-color: $qui-col;
 				background-color: $qui-col;
 				height: 1px;
+				width: 100%;
 				outline: 0;
 				border: none;
 			}

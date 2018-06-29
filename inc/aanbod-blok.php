@@ -8,7 +8,7 @@
 				</p>
 				
 				<p class="item-subtitle">
-					Vraagprijs &euro; 259.500,- k.k.
+					&euro; 259.500,- k.k.
 				</p>
 
 				<p class="item-bold-title">

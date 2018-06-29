@@ -53,7 +53,7 @@ else
 				</p>
 				
 				<p class="item-subtitle">
-					Vraagprijs <?php echo $priceText; ?>
+					<?php echo $priceText; ?>
 				</p>
 
 				<p class="item-bold-title">
