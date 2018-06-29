@@ -1740,6 +1740,7 @@ input:focus {
 			padding-top: 1.5rem;
 			padding-bottom:0.5rem;
 			color: $lit-col;
+			
 			@media only screen and (max-width: $container-size-m) {
 				margin-left: 0;
 				padding-left: $margin-size-s;
@@ -1759,11 +1760,19 @@ input:focus {
 				margin-top: 0;
 				color: $lit-col;
 				font-size: 1.5rem;
+				a {
+					font-size: inherit;
+				}
 			}
+			
 			p {
 				color: $lit-col;
-					font-size: 1rem;
+				font-size: 1rem;
+				a {
+					font-size: inherit;
+				}
 			}
+
 		}
 
 	}
