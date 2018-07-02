@@ -575,6 +575,33 @@ class Core {
 			
 			return false;
 	}
+	
+	static function fixEncoding($val) {
+		
+		$chars = array(
+			'’',
+			'‘',
+			'“',
+			'”',
+			'€',
+			'•',
+			'–',
+			'…'
+		);
+		
+		$replace = array(
+			'\'',
+			'\'',
+			'"',
+			'"',
+			'&euro;',
+			'&middot;',
+			'-',
+			'&hellip;'
+		);
+		
+		return str_replace($chars, $replace, $val);
+	}
 }
 
 ?>
