@@ -130,7 +130,7 @@ function obj_showPrice($koopPrijsVoorvoegsel, $koopPrijs, $koopConditie, $huurPr
 			
 			if ($huurPrijs == 1) {
 				
-				$priceText = 'Prijs op aanvraag';
+				$priceText = 'Huurprijs op aanvraag';
 			}
 			else {
 			
