@@ -122,22 +122,28 @@ function obj_showPrice($koopPrijsVoorvoegsel, $koopPrijs, $koopConditie, $huurPr
 			
 			if ($koopPrijs <= 1)
 				$priceText = 'Prijs op aanvraag';
-				else
-					$priceText = obj_generateCost($koopPrijs) . ' ' . $type;
+			else
+				$priceText = obj_generateCost($koopPrijs) . ' ' . $type;
 		}
 		
 		if ((!is_null($huurPrijs) && !empty($huurPrijs)) || (!is_null($huurConditie) && !empty($huurConditie))) {
 			
-			if (!empty($priceText)){
-				$priceText .= '<br>';
+			if ($huurPrijs == 1) {
+				
+				$priceText = 'Prijs op aanvraag';
 			}
+			else {
 			
-			if (!is_null($huurPrijs) && !empty($huurPrijs)) {
-				$priceText .= obj_generateCost($huurPrijs) . ' ' . str_replace(array('vierkante meter'), array('m<sup>2</sup>'), $huurConditie);
-			} else {
-				$priceText .= 'Huurprijs op aanvraag';
+				if (!empty($priceText)){
+					$priceText .= '<br>';
+				}
+				
+				if (!is_null($huurPrijs) && !empty($huurPrijs)) {
+					$priceText .= obj_generateCost($huurPrijs) . ' ' . str_replace(array('vierkante meter'), array('m<sup>2</sup>'), $huurConditie);
+				} else {
+					$priceText .= 'Huurprijs op aanvraag';
+				}
 			}
-			
 		}
 	}
 	
