@@ -189,7 +189,7 @@ input:focus {
 				display: block;
 				transition: all 0.3s;
 				height: auto;
-				box-shadow: 0px 0px 20px 0px rgba(113, 113, 113, 0.3);
+				//box-shadow: 0px 0px 20px 0px rgba(113, 113, 113, 0.3);
 			}
 		}
 
@@ -1057,9 +1057,9 @@ input:focus {
 		.search-filter-button {
 
 			color: $lit-col;
-			width: 6rem; 
+			width: auto;
 			height: 100%;
-			font-size: 1.5rem;
+			font-size: 1.2rem;
 			@media only screen and (max-width: $container-size-m) {
 				width: 100%;
 				padding-left: 2rem;
@@ -1076,6 +1076,8 @@ input:focus {
 				width: 100%;
 				padding-top: 2rem;
 				padding-bottom: 2rem;
+				padding-left: 1rem;
+				padding-right: 1rem;
 				border-radius: 0;
 
 				@media only screen and (max-width: $container-size-m) {
@@ -2079,7 +2081,9 @@ input:focus {
 					position: relative;
 					flex: 2;
 					min-height: 20rem;
-
+					@media only screen and (max-width: $container-size-m) {
+						min-height: 0;
+					}
 					a {
 						display: flex;
 						text-decoration: none;
@@ -2267,8 +2271,10 @@ input:focus {
 				position: absolute;
 				bottom: 0;
 				width: calc(100% + 4rem);
+				min-height: 70%;
 				overflow: visible;
 				z-index: 5;
+
 				@media only screen and (max-width: $container-size-xl) {
 					padding-top: 2rem;
 					padding-bottom: 2rem;
@@ -2532,6 +2538,9 @@ input:focus {
 		min-height: 30rem;
 		padding-top: 0;
 		padding-bottom: 0;
+		@media only screen and (max-width: $container-size-m) {
+			min-height: 0;
+		}
 
 		.image-container {
 			height: 100%;
@@ -2631,10 +2640,18 @@ input:focus {
 
 		form {
 			display: flex;	
+			@media only screen and (max-width: $container-size-m) {
+				flex-direction: column;
+			}
+
 			fieldset {
 				width: 50%;
 				border: none;
 				padding-right: 2rem;
+				@media only screen and (max-width: $container-size-m) {
+					width: 100%;
+				}
+
 				input {
 					display: block;
 					margin-bottom: 2rem;
@@ -2869,6 +2886,7 @@ header.headerAanbod {
   		bottom: unset !important;
   		max-width: 33rem !important;
   		min-width: 33rem !important;
+  		height: auto !important;
 	}
 	.content-image {
 		height: 35rem;

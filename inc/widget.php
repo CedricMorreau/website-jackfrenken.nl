@@ -1,5 +1,5 @@
 <div class="sidebar-widget">
-	<a href="">
+	<a href="<?php echo $template->findPermalink(58, 1); ?>">
 	<h3>
 		Schrijf u in als zoeker!
 	</h3>

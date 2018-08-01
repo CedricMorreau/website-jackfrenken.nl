@@ -133,9 +133,7 @@ input:focus {
           display: block;
           -webkit-transition: all 0.3s;
           transition: all 0.3s;
-          height: auto;
-          -webkit-box-shadow: 0px 0px 20px 0px rgba(113, 113, 113, 0.3);
-                  box-shadow: 0px 0px 20px 0px rgba(113, 113, 113, 0.3); } }
+          height: auto; } }
     .primary-nav nav > ul {
       margin-right: 4rem; }
       @media only screen and (max-width: 768px) {
@@ -895,9 +893,9 @@ input:focus {
             color: #DAE1ED; }
     .homepage-wrapper .search-filter-wrapper .search-filter-button {
       color: white;
-      width: 6rem;
+      width: auto;
       height: 100%;
-      font-size: 1.5rem; }
+      font-size: 1.2rem; }
       @media only screen and (max-width: 768px) {
         .homepage-wrapper .search-filter-wrapper .search-filter-button {
           width: 100%;
@@ -912,6 +910,8 @@ input:focus {
         width: 100%;
         padding-top: 2rem;
         padding-bottom: 2rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
         border-radius: 0;
         display: -webkit-box;
         display: -ms-flexbox;
@@ -1764,6 +1764,9 @@ input:focus {
           -ms-flex: 2;
               flex: 2;
       min-height: 20rem; }
+      @media only screen and (max-width: 768px) {
+        .aanbod-overzicht .column-content .content-wrapper .item-wrapper .item-image {
+          min-height: 0; } }
       .aanbod-overzicht .column-content .content-wrapper .item-wrapper .item-image a {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -1919,6 +1922,7 @@ input:focus {
       position: absolute;
       bottom: 0;
       width: calc(100% + 4rem);
+      min-height: 70%;
       overflow: visible;
       z-index: 5; }
       @media only screen and (max-width: 1366px) {
@@ -2130,6 +2134,9 @@ input:focus {
     min-height: 30rem;
     padding-top: 0;
     padding-bottom: 0; }
+    @media only screen and (max-width: 768px) {
+      .aanbod-detail .content-image {
+        min-height: 0; } }
     .aanbod-detail .content-image .image-container {
       height: 100%; }
       @media only screen and (max-width: 768px) {
@@ -2210,10 +2217,19 @@ input:focus {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex; }
+    @media only screen and (max-width: 768px) {
+      .aanbod-detail .content-wrapper form {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column; } }
     .aanbod-detail .content-wrapper form fieldset {
       width: 50%;
       border: none;
       padding-right: 2rem; }
+      @media only screen and (max-width: 768px) {
+        .aanbod-detail .content-wrapper form fieldset {
+          width: 100%; } }
       .aanbod-detail .content-wrapper form fieldset input {
         display: block;
         margin-bottom: 2rem;
@@ -2401,7 +2417,8 @@ header.headerAanbod {
           transform: translateY(-50%);
   bottom: unset !important;
   max-width: 33rem !important;
-  min-width: 33rem !important; }
+  min-width: 33rem !important;
+  height: auto !important; }
 .contact .content-image {
   height: 35rem; }
   @media only screen and (max-width: 768px) {
