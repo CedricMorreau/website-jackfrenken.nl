@@ -6,28 +6,28 @@
 		
 		case 'kopen':
 			
-			echo '<p class="filter-head active">Koopwoningen &xrarr;</p>';
+			echo '<p class="filter-head">' . $totalRows . ' koopwoningen</p>';
 			$ogType = 'wonen_koop';
 			
 			break;
 			
 		case 'huren':
 			
-			echo '<p class="filter-head active">Huurwoningen &xrarr;</p>';
+			echo '<p class="filter-head">' . $totalRows . ' huurwoningen &xrarr;</p>';
 			$ogType = 'wonen_huur';
 			
 			break;
 			
 		case 'kavels':
 			
-			echo '<p class="filter-head active">Bouwkavels &xrarr;</p>';
+			echo '<p class="filter-head">' . $totalRows . ' bouwkavels &xrarr;</p>';
 			$ogType = 'wonen_koop';
 			
 			break;
 			
 		case 'verkocht':
 			
-			echo '<p class="filter-head active">Recent verkocht &xrarr;</p>';
+			echo '<p class="filter-head">' . $totalRows . ' recent verkocht &xrarr;</p>';
 			$ogType = 'wonen';
 			
 			break;

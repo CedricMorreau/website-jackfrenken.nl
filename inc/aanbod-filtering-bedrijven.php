@@ -2,7 +2,7 @@
 	
 	<?php
 	
-	echo '<p class="filter-head active">Bedrijfspanden &xrarr;</p>';
+	echo '<p class="filter-head">' . $totalRows . ' bedrijfspanden</p>';
 		
 	?>
 
