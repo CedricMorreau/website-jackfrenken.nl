@@ -1535,7 +1535,8 @@ input:focus {
           font-size: inherit; }
       .column-content .column-sidebar .sidebar-widget p {
         color: white;
-        font-size: 1rem; }
+        font-size: 1rem;
+        line-height: 1.3rem; }
         .column-content .column-sidebar .sidebar-widget p a {
           font-size: inherit; }
   .column-content .column-content {
@@ -1591,7 +1592,8 @@ input:focus {
         .column-content .column-content .content-wrapper p a:hover {
           color: #2CBCAF; }
       .column-content .column-content .content-wrapper ul {
-        margin-left: 1rem; }
+        margin-left: 1rem;
+        background-color: none; }
       .column-content .column-content .content-wrapper img {
         max-width: 100%;
         height: auto; }
@@ -1613,7 +1615,8 @@ input:focus {
           margin-top: 0; }
         .column-content .column-content .content-wrapper .attention-block ul {
           list-style-position: inside;
-          margin-left: 1rem; }
+          margin-left: 1rem;
+          background-color: #DAE1ED; }
       .column-content .column-content .content-wrapper .cta-button {
         font-size: 1.1rem;
         background: #2CBCAF;
@@ -1870,7 +1873,8 @@ input:focus {
       .sidebar-filtering .more-filters {
         margin-bottom: 1rem; } }
   .sidebar-filtering .filter-list-wrapper {
-    margin-top: 1rem; }
+    margin-top: 1rem;
+    padding-top: 2rem; }
     .sidebar-filtering .filter-list-wrapper .filter-head {
       margin-top: 0;
       margin-bottom: 1rem; }
@@ -2070,6 +2074,7 @@ input:focus {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  text-decoration: none;
   padding-top: 2rem;
   padding-bottom: 2rem;
   padding-left: 3rem;
@@ -2090,6 +2095,10 @@ input:focus {
     .banner-wrapper {
       padding-left: 2rem;
       padding-right: 2rem; } }
+  .banner-wrapper:hover {
+    background-color: #003064; }
+    .banner-wrapper:hover .banner-link {
+      text-decoration: underline; }
   .banner-wrapper .banner-title {
     font-size: 2.5rem;
     font-family: "bodoni-bold";
@@ -2100,16 +2109,16 @@ input:focus {
             flex: 5;
     line-height: 2.5rem;
     -ms-flex-item-align: end;
-        align-self: flex-end; }
+        align-self: flex-end;
+    padding-bottom: 1rem; }
     @media only screen and (max-width: 1200px) {
       .banner-wrapper .banner-title {
         margin-right: 0; } }
     @media only screen and (max-width: 768px) {
       .banner-wrapper .banner-title {
         margin-top: 0;
-        margin-bottom: 2rem;
         font-size: 2rem; } }
-  .banner-wrapper > a {
+  .banner-wrapper .banner-link {
     -webkit-box-flex: 2;
         -ms-flex: 2;
             flex: 2;
@@ -2121,8 +2130,6 @@ input:focus {
         -ms-flex-positive: 0;
             flex-grow: 0;
     white-space: nowrap; }
-    .banner-wrapper > a:hover {
-      color: #DAE1ED !important; }
 
 /* Aanbod detail template ----------------------------------------- */
 .aanbod-detail {
