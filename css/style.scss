@@ -2497,6 +2497,10 @@ input:focus {
 	}
 	&:hover {
 		background-color: $pri-col;
+		color: $lit-col;
+		.banner-title {
+			color: $lit-col;
+		}
 		.banner-link {
 			text-decoration: underline;
 		}
@@ -2556,6 +2560,19 @@ input:focus {
 			@media only screen and (max-width: $container-size-m) {
 				margin-bottom: 1rem;
 			}
+
+			#royal-slider { // hide thumbs on overview
+				.rsThumbs {
+					display: none;
+				}
+				&.rsFullscreen {
+					.rsThumbs {
+						display: block;
+					}
+				}
+
+			}
+
 			.rsArrowLeft {
 				right: 10rem;
 				height: 5rem;

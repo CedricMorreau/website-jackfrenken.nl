@@ -2096,7 +2096,10 @@ input:focus {
       padding-left: 2rem;
       padding-right: 2rem; } }
   .banner-wrapper:hover {
-    background-color: #003064; }
+    background-color: #003064;
+    color: white; }
+    .banner-wrapper:hover .banner-title {
+      color: white; }
     .banner-wrapper:hover .banner-link {
       text-decoration: underline; }
   .banner-wrapper .banner-title {
@@ -2149,6 +2152,10 @@ input:focus {
       @media only screen and (max-width: 768px) {
         .aanbod-detail .content-image .image-container {
           margin-bottom: 1rem; } }
+      .aanbod-detail .content-image .image-container #royal-slider .rsThumbs {
+        display: none; }
+      .aanbod-detail .content-image .image-container #royal-slider.rsFullscreen .rsThumbs {
+        display: block; }
       .aanbod-detail .content-image .image-container .rsArrowLeft {
         right: 10rem;
         height: 5rem;
