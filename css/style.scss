@@ -1770,9 +1770,10 @@ input:focus {
 			p {
 				color: $lit-col;
 				font-size: 1rem;
-					a {
-						font-size: inherit;
-					}
+				line-height: 1.3rem;
+				a {
+					font-size: inherit;
+				}
 			}
 		}
 
@@ -1843,6 +1844,7 @@ input:focus {
 			
 			ul {
 				margin-left: 1rem;
+				background-color: none;
 			}
 			
 			img {
@@ -1872,14 +1874,17 @@ input:focus {
 				p {
 					margin-top: 0;
 				}
+
 				ul {
 					list-style-position: inside;
 					margin-left: 1rem;
+					background-color: $non-col;
 					// font-size: 1.2rem;
 					// font-family: $fon-fam-pri;
 					// font-weight: bold;
 					// line-height: 1.7rem;
 				}
+
 			}
 
 			.cta-button {
@@ -2216,7 +2221,7 @@ input:focus {
 
 	.filter-list-wrapper {
 		margin-top: 1rem;
-
+		padding-top: 2rem;
 		.filter-head {
 			margin-top: 0;
 			margin-bottom: 1rem;
@@ -2472,6 +2477,7 @@ input:focus {
 	color: $lit-col;
 	height: auto;
 	display: flex;
+	text-decoration: none;
 	padding-top: 2rem;
 	padding-bottom: 2rem;
 	padding-left: 3rem;
@@ -2489,7 +2495,12 @@ input:focus {
 		padding-left: $margin-size-m;
 		padding-right: $margin-size-m;
 	}
-
+	&:hover {
+		background-color: $pri-col;
+		.banner-link {
+			text-decoration: underline;
+		}
+	}
 
 	.banner-title {
 		font-size: 2.5rem;
@@ -2499,28 +2510,24 @@ input:focus {
 		flex: 5;
 		line-height: 2.5rem;
 		align-self: flex-end;
+		padding-bottom: 1rem;
 		@media only screen and (max-width: $container-size-l) {
 			margin-right: 0;
 		}
 		@media only screen and (max-width: $container-size-m) {
 			margin-top: 0;
-			margin-bottom: 2rem;
 			font-size: 2rem;
 		}
 
-
 	}
 
-	> a {
+	.banner-link {
 		flex: 2;
 		align-self: flex-end;
 		color: $lit-col;
 		text-decoration: none;
 		flex-grow: 0;
 		white-space: nowrap;
-		&:hover {
-			color: $ter-col !important;
-		}
 	}
 
 }
