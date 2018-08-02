@@ -261,7 +261,7 @@ $mediaList = $cms['database']->prepare("SELECT `id`, `object_ObjectTiaraID`, `be
 										<?php
 										if (strtolower($val['project_ProjectDetails_Status_ObjectStatus']) != 'verkocht') {
 										?>
-										<div class="floatRight"><?php echo $tPriceText; ?></div>
+										<div class="floatRight">&nbsp;&rsaquo; <?php echo $tPriceText; ?></div>
 										<?php } ?>
 									</header>
 		
