@@ -161,7 +161,7 @@ function googleMaps_addMarker(googleMap_object,arr_markerData,arr_index,show_inf
 //		// title: arr_markerData[arr_index].address
 //	});
 	
-	var customCustomOverlay = new CustomOverlay(googleMap_object, new google.maps.LatLng(arr_markerData[arr_index].lat, arr_markerData[arr_index].lng), '/resources/jf_beeldmerk-s.png', '', 83, 99, 0, true, arr_markerData[arr_index].ajax_id);
+	var customCustomOverlay = new CustomOverlay(googleMap_object, new google.maps.LatLng(arr_markerData[arr_index].lat, arr_markerData[arr_index].lng), '/resources/jf_beeldmerk-s.png', arr_markerData[arr_index].ajax_id, 83, 99, 0, true, arr_markerData[arr_index].ajax_id);
 	
 	totalBounds = new google.maps.LatLngBounds();
 
@@ -274,7 +274,7 @@ CustomOverlay.prototype.draw = function() {
 
     this.markerLayer.empty(); // Empty any previous rendered markers
 
-    var clickData = (this.onclick_) ? ' href="javascript: void(0);"' : ' href="javascript:showOverlay(\'' + this.mapType_ + '\');"';
+    var clickData = (!this.onclick_) ? ' href="javascript: void(0);"' : ' href="javascript:scrollVestiging(\'' + this.title_ + '\');"';
 
     var location = projection.fromLatLngToDivPixel(this.latlon_);
     
