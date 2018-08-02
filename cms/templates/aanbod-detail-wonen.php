@@ -250,10 +250,10 @@ $mediaList = $cms['database']->prepare("SELECT `id`, `object_ObjectTiaraID`, `be
 									</tr>
 									<?php } ?>
 			
-									<?php if (!empty($val['bouwgrond_HuidigGebruik']) && !empty($val['bouwgrond_Liggingen'])) { ?>
+									<?php if (!empty($val['wonen_WonenDetails_Liggingen']) && !empty($val['wonen_WonenDetails_Liggingen'])) { ?>
 									<tr>
 										<th class="description">Ligging</th>
-										<td class="value"><?php echo obj_splitValues($val['bouwgrond_Liggingen']); ?></td>
+										<td class="value"><?php echo obj_splitValues($val['wonen_WonenDetails_Liggingen']); ?></td>
 									</tr>
 									<?php } ?>
 			

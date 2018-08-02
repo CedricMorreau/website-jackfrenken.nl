@@ -22,7 +22,7 @@
 
 		?>
 
-		arr_markerData[<?php echo $counter; ?>] = func_markerData(<?php echo $sVal['cl_coord_lat']; ?>,<?php echo $sVal['cl_coord_lon']; ?>, 'vestiging_<?php echo $sKey; ?>', 'vestiging', 1);
+		arr_markerData[<?php echo $counter; ?>] = func_markerData(<?php echo $sVal['cl_coord_lat']; ?>,<?php echo $sVal['cl_coord_lon']; ?>, '<?php echo $sKey; ?>', 'vestiging', 1);
 		totalBounds.extend(new google.maps.LatLng(<?php echo $sVal['cl_coord_lat']; ?>,<?php echo $sVal['cl_coord_lon']; ?>));
 
 		<?php

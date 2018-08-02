@@ -55,7 +55,6 @@ if (!($url = $template->getBackUrl($template->findPermalink(59, 1)))) {
 						<?php echo $values['art_content']; ?>
 					</div>
 
-
 				</div>
 			</div>
 
