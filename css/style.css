@@ -1800,7 +1800,7 @@ input:focus {
     font-size: 1.2rem;
     margin-top: 2rem;
     cursor: pointer; }
-    .sidebar-filtering .filter-head.active {
+    .sidebar-filtering .filter-head.active a {
       color: #2CBCAF; }
   .sidebar-filtering .remove-filter {
     display: -webkit-box;
@@ -2986,4 +2986,5 @@ header.headerAanbod {
 }
 
 */
+
 /*# sourceMappingURL=style.css.map */

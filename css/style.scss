@@ -2134,7 +2134,9 @@ input:focus {
 		margin-top: 2rem;
 		cursor: pointer;
 		&.active {
-			color: $qua-col;
+			a { 
+				color: $qua-col; 
+			}
 		}
 	}
 
