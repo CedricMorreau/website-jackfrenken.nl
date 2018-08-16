@@ -71,7 +71,7 @@ function obj_generateGoogleAddress($place, $street, $number, $add, $postCode = '
 
 function obj_generateCost($amount, $space = '') {
 	
-	$return = '&euro;' . $space;
+	$return = '&euro; ' . $space;
 	
 	// Depending on whether it has behind ,
 	if (($amount / floor($amount)) == 1) {

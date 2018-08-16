@@ -28,8 +28,8 @@ $image = (!is_null($val['mainImage'])) ? $dynamicRoot . 'og_media/wonen_' . $val
 					<?php echo obj_generateAddress($val['objectDetails_Adres_NL_Straatnaam'], $val['objectDetails_Adres_NL_Huisnummer'], $val['objectDetails_Adres_NL_HuisnummerToevoeging']); ?>
 				</p>
 
-				<?php if (!empty($val['wonen_WonenDetails_Bestemming_HuidigGebruik'])) { ?>
-				<p class="item-sub-subtitle"><?php echo ucfirst($val['wonen_Woonhuis_SoortWoning']); ?>, <?php echo ucfirst($val['wonen_Woonhuis_TypeWoning']); ?></p>
+				<?php if (!empty($val['wonen_Woonhuis_SoortWoning'])) { ?>
+				<p><?php echo ucfirst($val['wonen_Woonhuis_SoortWoning']); ?>, <?php echo ucfirst($val['wonen_Woonhuis_TypeWoning']); ?></p>
 				<?php } ?>
 
 				<?php if (!is_null($val['wonen_WonenDetails_GebruiksoppervlakteWoonfunctie']) && $val['wonen_WonenDetails_GebruiksoppervlakteWoonfunctie'] > 0) { ?>
@@ -37,6 +37,9 @@ $image = (!is_null($val['mainImage'])) ? $dynamicRoot . 'og_media/wonen_' . $val
 				<?php } ?>
 				<?php if (!is_null($val['wonen_WonenDetails_PerceelOppervlakte']) && $val['wonen_WonenDetails_PerceelOppervlakte'] > 0) { ?>
 				<p>Perceel: <?php echo number_format($val['wonen_WonenDetails_PerceelOppervlakte'], 0, ",", "."); ?> m<sup>2</sup></p>
+				<?php } ?>
+				<?php if (!is_null($val['wonen_WonenDetails_Bouwjaar_JaarOmschrijving_Jaar']) && $val['wonen_WonenDetails_Bouwjaar_JaarOmschrijving_Jaar'] > 0) { ?>
+				<p>Bouwjaar: <?php echo $val['wonen_WonenDetails_Bouwjaar_JaarOmschrijving_Jaar']; ?></p>
 				<?php } ?>
 			</div>
 		</div>

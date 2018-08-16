@@ -151,6 +151,7 @@ if ($overviewType != 'kavels') {
 	        `tbl_OG_wonen`.wonen_Appartement_KenmerkAppartement,
 	        `tbl_OG_wonen`.datum_toegevoegd,
 	        `tbl_OG_wonen`.objectDetails_Adres_NL_Postcode,
+			`wonen_WonenDetails_Bouwjaar_JaarOmschrijving_Jaar`,
 	        '' as id_OG_nieuwbouw_projecten,
 	        (SELECT `cms_per_link` FROM `tbl_cms_permaLinks` WHERE `cms_per_tableId`=38 AND `cms_per_tableName`='tbl_mod_pages' AND `cms_per_moduleId`=`tbl_OG_wonen`.`id`) as `cms_per_link`,
 			(SELECT `bestandsnaam_medium` FROM `tbl_OG_media` WHERE `id_OG_wonen`=`tbl_OG_wonen`.`id` AND `media_status`=2 AND `media_groep` IN ('Hoofdfoto', 'Foto')  ORDER BY `media_groep` DESC, `media_id` ASC LIMIT 1) as `mainImage`
