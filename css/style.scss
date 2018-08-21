@@ -109,6 +109,9 @@ input:focus {
     outline: none;
 }
 
+.uppercase {
+	text-transform: uppercase;
+}
 /* General layout elements */
 .page-wrapper {
 	display: flex;

@@ -17,7 +17,8 @@ $image = (!is_null($val['mainImage'])) ? $dynamicRoot . 'og_media/bog_' . $val['
 			<div class="item-overlay-wrapper">
 				
 				<p class="item-title">
-					<?php echo $val['objectDetails_Adres_Woonplaats']; ?>
+					<span class="uppercase"><?php echo $val['objectDetails_Adres_Woonplaats']; ?></span><br>
+					<?php echo obj_generateAddress($val['objectDetails_Adres_Straatnaam'], $val['objectDetails_Adres_Huisnummer'], $val['objectDetails_Adres_HuisnummerToevoeging']); ?>
 				</p>
 				
 				<p class="item-subtitle">
@@ -25,7 +26,7 @@ $image = (!is_null($val['mainImage'])) ? $dynamicRoot . 'og_media/bog_' . $val['
 				</p>
 
 				<p class="item-bold-title">
-					<?php echo obj_generateAddress($val['objectDetails_Adres_Straatnaam'], $val['objectDetails_Adres_Huisnummer'], $val['objectDetails_Adres_HuisnummerToevoeging']); ?>
+
 				</p>
 				
 			</div>

@@ -51,6 +51,9 @@ textarea:focus,
 input:focus {
   outline: none; }
 
+.uppercase {
+  text-transform: uppercase; }
+
 /* General layout elements */
 .page-wrapper {
   display: -webkit-box;
@@ -3001,4 +3004,5 @@ header.headerAanbod {
 }
 
 */
+
 /*# sourceMappingURL=style.css.map */
