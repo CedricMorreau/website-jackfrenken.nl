@@ -17,15 +17,12 @@ $image = (!is_null($val['mainImage'])) ? $dynamicRoot . 'og_media/' . $val['ogTy
 			<div class="item-overlay-wrapper">
 				
 				<p class="item-title">
-					<?php echo $val['woonplaats']; ?>
+					<?php echo $val['woonplaats']; ?><br>
+					<?php echo obj_generateAddress($val['straatnaam'], $val['huisnummer'], $val['huisnummerToevoeging']); ?>
 				</p>
 				
 				<p class="item-subtitle">
 					<?php echo $priceText; ?>
-				</p>
-
-				<p class="item-bold-title">
-					<?php echo obj_generateAddress($val['straatnaam'], $val['huisnummer'], $val['huisnummerToevoeging']); ?>
 				</p>
 
 				<p class="item-sub-subtitle">
