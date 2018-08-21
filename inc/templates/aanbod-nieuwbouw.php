@@ -49,7 +49,7 @@ else
 			<div class="item-overlay-wrapper">
 				
 				<p class="item-title">
-					<?php echo $val['project_ProjectDetails_Adres_Woonplaats']; ?>
+					<span class="uppercase"><?php echo $val['project_ProjectDetails_Adres_Woonplaats']; ?></span>
 				</p>
 				
 				<p class="item-subtitle">
