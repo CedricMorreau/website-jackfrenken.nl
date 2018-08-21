@@ -32,6 +32,7 @@ $sen-col: #00519b ; // 90% Dark blue
 $sep-col: #C3C12C ; // Grass green
 $oct-col: #0091D1 ; // Bright blue
 $non-col: #DAE1ED ; // Lila overlay color
+$den-col: #D64242 ; // Red
 
 $overlay-col: rgba(218, 225, 237, 0.8); // overlay RGBA color
 $overlay-col-sec: rgba(218, 225, 237, 0.9); // overlay RGBA color
@@ -2312,7 +2313,8 @@ input:focus {
 					font-weight: bold;
 					font-size: 1.3rem;
 					padding-bottom: 0;
-					margin-bottom: 0.5rem;
+					margin-bottom: 1rem;
+
 					a {
 						text-decoration: none;
 						&:hover {
@@ -2324,6 +2326,7 @@ input:focus {
 				.item-subtitle {
 					font-size: 1.3rem;
 					margin-top: 0;
+					margin-bottom: 1rem;
 					a {
 						text-decoration: none;
 						&:hover {
@@ -2458,12 +2461,12 @@ input:focus {
 	}
 	
 	&.status-sold {
-		background-color: $pri-col;
+		background-color: $den-col;
 
 	}
 	
 	&.status-soldsubject {
-		background-color: $pri-col;
+		background-color: $sep-col;
 	}
 
 	&.status-loweredprice {

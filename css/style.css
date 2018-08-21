@@ -1953,14 +1953,15 @@ input:focus {
         font-weight: bold;
         font-size: 1.3rem;
         padding-bottom: 0;
-        margin-bottom: 0.5rem; }
+        margin-bottom: 1rem; }
         .item-wrapper > a .item-description .item-overlay-wrapper .item-title a {
           text-decoration: none; }
           .item-wrapper > a .item-description .item-overlay-wrapper .item-title a:hover {
             text-decoration: underline; }
       .item-wrapper > a .item-description .item-overlay-wrapper .item-subtitle {
         font-size: 1.3rem;
-        margin-top: 0; }
+        margin-top: 0;
+        margin-bottom: 1rem; }
         .item-wrapper > a .item-description .item-overlay-wrapper .item-subtitle a {
           text-decoration: none; }
           .item-wrapper > a .item-description .item-overlay-wrapper .item-subtitle a:hover {
@@ -2061,9 +2062,9 @@ input:focus {
   .image-label.status-new {
     background-color: #2CBCAF; }
   .image-label.status-sold {
-    background-color: #003064; }
+    background-color: #D64242; }
   .image-label.status-soldsubject {
-    background-color: #003064; }
+    background-color: #C3C12C; }
   .image-label.status-loweredprice {
     background-color: #2CBCAF; }
 
@@ -3000,5 +3001,4 @@ header.headerAanbod {
 }
 
 */
-
 /*# sourceMappingURL=style.css.map */

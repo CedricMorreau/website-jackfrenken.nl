@@ -17,16 +17,14 @@ $image = (!is_null($val['mainImage'])) ? $dynamicRoot . 'og_media/wonen_' . $val
 			<div class="item-overlay-wrapper">
 				
 				<p class="item-title">
-					<?php echo $val['objectDetails_Adres_NL_Woonplaats']; ?>
+					<?php echo $val['objectDetails_Adres_NL_Woonplaats']; ?><br>
+					<?php echo obj_generateAddress($val['objectDetails_Adres_NL_Straatnaam'], $val['objectDetails_Adres_NL_Huisnummer'], $val['objectDetails_Adres_NL_HuisnummerToevoeging']); ?>
 				</p>
 				
 				<p class="item-subtitle">
 					<?php echo $priceText; ?>
 				</p>
 
-				<p class="item-bold-title">
-					<?php echo obj_generateAddress($val['objectDetails_Adres_NL_Straatnaam'], $val['objectDetails_Adres_NL_Huisnummer'], $val['objectDetails_Adres_NL_HuisnummerToevoeging']); ?>
-				</p>
 
 				<?php if (!empty($val['wonen_Woonhuis_SoortWoning'])) { ?>
 				<p><?php echo ucfirst($val['wonen_Woonhuis_SoortWoning']); ?>, <?php echo ucfirst($val['wonen_Woonhuis_TypeWoning']); ?></p>
