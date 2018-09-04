@@ -13,8 +13,8 @@ if(!empty($_POST['contact_name']) && !empty($_POST['contact_email']) && !empty($
 	
 	$mail_template = file_get_contents($_SERVER['DOCUMENT_ROOT'] . '/inc/mailtemplates/algemeen/mail_template.txt');
 
-	$mail_ontvanger = 'sander@pixelplus.nl';
-// 	$mail_ontvanger = 'info@jackfrenken.nl';
+// 	$mail_ontvanger = 'sander@pixelplus.nl';
+	$mail_ontvanger = 'info@jackfrenken.nl';
 	
 	$mail_subject = 'Contactformulier Jackfrenken.nl';
 

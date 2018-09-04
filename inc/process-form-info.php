@@ -18,8 +18,8 @@ if(!empty($_POST['name']) && !empty($_POST['email']) && !empty($_POST['phone']) 
 	
 	$mail_template = file_get_contents('mailtemplates/aanbod_reactieformulier.html');
 	
-	// $mail_ontvanger = 'info@jackfrenken.nl';
-	$mail_ontvanger = 'sander@pixelplus.nl';
+	$mail_ontvanger = 'info@jackfrenken.nl';
+// 	$mail_ontvanger = 'sander@pixelplus.nl';
 	
 	$mail_subject = 'Aanvraag informatie: '.$objectPlaatsnaam.' '. $objectAdres;
 	

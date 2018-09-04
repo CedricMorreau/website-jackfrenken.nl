@@ -22,8 +22,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
 		$mail_template = file_get_contents('mailtemplates/process_zoekersFormulier.html');
 		
-// 		$mail_ontvanger = 'info@jackfrenken.nl';
-		$mail_ontvanger = 'sander@pixelplus.nl';
+		$mail_ontvanger = 'info@jackfrenken.nl';
+// 		$mail_ontvanger = 'sander@pixelplus.nl';
 		$mail_subject = 'Verstuurd via Jackfrenken.nl';
 
 		$_POST['plaatsnaam']=(!empty($_POST['plaatsnaam']))?$_POST['plaatsnaam']:'Geen voorkeur';
