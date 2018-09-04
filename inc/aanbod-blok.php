@@ -1,5 +1,5 @@
 <div class="item-wrapper">
-	<a href="<?php echo $template->findPermalink(38, 1); ?>">
+	<a href="<?php echo $template->findPermalink(38, 1); ?>" class="animated fadeInLeft">
 		<div class="item-description">
 			<div class="item-overlay-wrapper">
 				
@@ -22,7 +22,7 @@
 			</div>
 		</div>
 	</a>
-	<div class="item-image">
+	<div class="item-image animated fadeInRight">
 		<a href="<?php echo $template->findPermalink(38, 1); ?>">
 			<img src="<?php echo $dynamicRoot; ?>resources/aanbod-thumb-1.jpg">
 			<div class="image-label status-sold">Nieuw!</div>

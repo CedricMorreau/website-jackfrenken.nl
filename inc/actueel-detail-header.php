@@ -8,7 +8,7 @@
 	
 	?>
 
-	<div class="header-title-wrapper">
+	<div class="header-title-wrapper animated fadeInLeft">
 		<div class="header-title">
 			<p class="title-category"><?php echo $navName[0]['mod_pa_nav']; ?></p>
 			<h1>
@@ -31,7 +31,7 @@
 		</div>
 	</div>
 
-	<div class="content-image" style="background-image: url(<?php echo $values['art_overviewPhoto']; ?>);">
+	<div class="content-image animated fadeInRight" style="background-image: url(<?php echo $values['art_overviewPhoto']; ?>);">
 		<!-- bg img -->
 	</div>
 

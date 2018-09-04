@@ -1,10 +1,10 @@
 <div class="column-header">
 	
-	<div class="header-title-wrapper">
+	<div class="header-title-wrapper animated fadeInLeft">
 		<div class="header-title">
 			<h1><?php echo $val['objectDetails_Adres_Woonplaats']; ?><br>
 			<?php echo obj_generateAddress($val['objectDetails_Adres_Straatnaam'], $val['objectDetails_Adres_Huisnummer'], $val['objectDetails_Adres_HuisnummerToevoeging']); ?></h1>
-			<p><?php echo $priceText; ?></p>
+			<p class="title-price"><?php echo $priceText; ?></p>
 
 			<a href="javascript:void(0);" onclick="javascript:$.scrollTo('#content', 1000)" class="scroll-down">Meer informatie &nbsp; &darr;</a>
 		</div>
@@ -16,7 +16,7 @@
 	
 	?>
 
-	<div class="content-image" style="background: none;">
+	<div class="content-image animated fadeInRight" style="background: none;">
 		<div class="image-container">
 		
 			<div id="royal-slider" class="royalSlider rsMinW visibleNearby">
