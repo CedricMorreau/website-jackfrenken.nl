@@ -25,19 +25,19 @@ else {
 
 	if (count($checkUrl) > 0) {
 		
-		Core::redirect($checkUrl[0]['destinationId'], '301');
+// 		Core::redirect($checkUrl[0]['destinationId'], '301');
 
-// 		$fetchUrl = $cms['database']->prepare("SELECT * FROM `tbl_cms_permaLinks` WHERE `cms_per_tableName`='tbl_mod_pages' AND `cms_per_tableField`='mod_pa_id' AND `cms_per_tableId`=?", "i", array($checkUrl[0]['destinationId']));
+		$fetchUrl = $cms['database']->prepare("SELECT * FROM `tbl_cms_permaLinks` WHERE `cms_per_tableName`='tbl_mod_pages' AND `cms_per_tableField`='mod_pa_id' AND `cms_per_tableId`=?", "i", array($checkUrl[0]['destinationId']));
 
-// 		if (count($fetchUrl) > 0) {
+		if (count($fetchUrl) > 0) {
 
-// 			$constructRedirect = $dynamicRoot . $fetchUrl[0]['cms_per_link'] . '.html';
+			$constructRedirect = $dynamicRoot . $fetchUrl[0]['cms_per_link'];
 
-// 			if (!empty($checkUrl[0]['destinationBit']))
-// 				$constructRedirect .= $checkUrl[0]['destinationBit'];
+			if (!empty($checkUrl[0]['destinationBit']))
+				$constructRedirect .= $checkUrl[0]['destinationBit'];
 
-// 			Core::redirect($constructRedirect, '301');
-// 		}
+			Core::redirect($constructRedirect, '301');
+		}
 	}
 
 	// Handle the url..
