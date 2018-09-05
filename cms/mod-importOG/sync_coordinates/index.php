@@ -38,7 +38,7 @@ foreach ($cases as $key => $val) {
 					$postcode = str_replace(" ", "+", $data['postcode']);
 					$land = $data['land'];
 
-					$googleData = file_get_contents("http://maps.googleapis.com/maps/api/geocode/json?address=" . $postcode . ",+" . $land . "&sensor=false");
+					$googleData = file_get_contents("https://maps.googleapis.com/maps/api/geocode/json?address=" . $postcode . ",+" . $land . "&key=AIzaSyBCvhSY0IKeAhSzUph9Ud3LpBsp9wuUNuY");
 					$googleArray = json_decode($googleData, TRUE);
 
 					$readArray = $googleArray['results'][0];
