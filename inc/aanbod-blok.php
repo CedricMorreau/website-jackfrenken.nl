@@ -1,5 +1,5 @@
 <div class="item-wrapper">
-	<a href="<?php echo $template->findPermalink(38, 1); ?>">
+	<a href="<?php echo $template->findPermalink(38, 1); ?>" class="">
 		<div class="item-description">
 			<div class="item-overlay-wrapper">
 				

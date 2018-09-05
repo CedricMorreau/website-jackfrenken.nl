@@ -121,6 +121,7 @@ input:focus {
 	margin: 0 auto;
 	flex-direction: column;
 	padding-bottom: 3rem;
+	overflow-x: hidden; // to fix animation causing scrollbars
 }
 
 /* Page template specific */
@@ -1542,6 +1543,7 @@ input:focus {
 	}
 
 	.header-title-wrapper {
+		z-index: 2;
 		flex: 1;
 		flex-shrink: 0;
 		flex-grow: 0;
@@ -1582,6 +1584,10 @@ input:focus {
 				padding-right: $margin-size-s;
 				padding-top: 1rem;
 				padding-bottom: 2rem;
+  			}
+
+  			.title-price {
+  				font-size: 1.3rem;
   			}
 
 			.title-category {

@@ -1,5 +1,5 @@
 <div class="column-header">
-	<div class="header-title-wrapper">
+	<div class="header-title-wrapper animated fadeInLeft">
 		<div class="header-title">
 			<p class="title-category">Contact</p>
 			<h1>Goed en vertrouwd <br>voor huis en hypotheek.</h1>
@@ -24,7 +24,7 @@
 		</div>
 	</div>
 
-	<div class="content-image">
+	<div class="content-image animated fadeInRight">
 	
 		<div id="map_canvas" style="-webkit-transform: translateZ(0px); height: 600px;">
 			&nbsp;

@@ -4,7 +4,7 @@
 		<div class="header-title">
 			<h1><?php echo $val['objectDetails_Adres_NL_Woonplaats']; ?><br>
 			<?php echo obj_generateAddress($val['objectDetails_Adres_NL_Straatnaam'], $val['objectDetails_Adres_NL_Huisnummer'], $val['objectDetails_Adres_NL_HuisnummerToevoeging']); ?></h1>
-			<p><?php echo $priceText; ?></p>
+			<p class="title-price"><?php echo $priceText; ?></p>
 
 			<a href="javascript:void(0);" onclick="javascript:$.scrollTo('#content', 1000)" class="scroll-down">Meer over deze woning &darr;</a>
 		</div>

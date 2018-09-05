@@ -52,7 +52,7 @@
 
 	<div class="footer-row-2">
 		<a href="<?php echo $template->findPermalink(48, 1); ?>">
-			<img src="<?php echo $dynamicRoot; ?>resources/nvm-logo-lit.svg" class="nvm-logo" alt="NVM logo">Wij scoren <span class="rating">8,3</span> op Funda &rarr;
+			<img src="<?php echo $dynamicRoot; ?>resources/nvm-logo-lit.svg" class="nvm-logo" alt="NVM logo">Wij <span class="rating">scoren</span> op Funda &rarr;
 		</a>
 	</div>
 
