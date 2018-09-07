@@ -1319,6 +1319,8 @@ input:focus {
         .column-content .column-content .content-wrapper {
           padding-left: 1rem;
           padding-right: 1rem; } }
+      .column-content .column-content .content-wrapper br {
+        margin: 8px; }
       .column-content .column-content .content-wrapper h2 {
         font-size: 2.5rem;
         line-height: 3rem;
