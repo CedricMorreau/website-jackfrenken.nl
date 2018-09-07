@@ -38,7 +38,7 @@
 	
 	?>
 
-	<div class="content-image animated fadeInRight" style="background-image: url(<?php echo $sfeerbeeld; ?>);">
+	<div class="content-image" style="background-image: url(<?php echo $sfeerbeeld; ?>);">
 		<!-- bg img -->
 	</div>
 	
