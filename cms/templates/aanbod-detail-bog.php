@@ -635,11 +635,13 @@ $ogType = 'bog';
 			            enabled: true,
 						nativeFS: false
 		            },
-		            imageScaleMode: 'fill',
+		            controlNavigation: 'none',
+		            autoHeight: true,
+		            imageScaleMode: 'fill-if-smaller',
 		            imageAlignCenter: false,
 		            arrowsNavAutoHide: false,
-		            controlNavigation: 'none',
-		            autoHeight: true
+		            autoHeight: true,
+		            loop: true
 		        }).data('royalSlider');
 	
 				slider.ev.on('rsEnterFullscreen', function() {

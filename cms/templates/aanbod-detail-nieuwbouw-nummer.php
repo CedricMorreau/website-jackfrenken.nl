@@ -595,15 +595,21 @@ $mediaList = $cms['database']->prepare("SELECT `id`, `object_ObjectTiaraID`, `be
 				slider = $("#royal-slider").royalSlider({
 					
 		            keyboardNavEnabled: true,
+		            controlNavigation: 'thumbnails',
 		            fullscreen: {
 			            enabled: true,
 						nativeFS: false
 		            },
-		            imageScaleMode: 'fill',
+		            imageScaleMode: 'fill-if-smaller',
 		            imageAlignCenter: false,
 		            arrowsNavAutoHide: false,
-		            controlNavigation: 'none',
-		            autoHeight: true
+		            autoHeight: true,
+		            loop: true,
+		            thumbs: {
+		                appendSpan: true,
+		                firstMargin: true,
+		                paddingBottom: 4
+	              	}
 		        }).data('royalSlider');
 
 				slider.ev.on('rsEnterFullscreen', function() {
