@@ -39,7 +39,7 @@ else {
 <!-- animation library -->
 <link rel="stylesheet" href="<?php echo $dynamicRoot; ?>css/animate.css">
 <!-- Google fonts -->
-<link href="https://fonts.googleapis.com/css?family=Titillium+Web:200,400,400i,600,700" rel="stylesheet">
+<link href="//fonts.googleapis.com/css?family=Titillium+Web:200,400,400i,600,700" rel="stylesheet">
 <!-- custom styling -->
 <link rel="stylesheet" href="<?php echo $dynamicRoot; ?>css/style.css">
 
@@ -49,7 +49,7 @@ else {
 
 <!-- Jquery 3.3.1 minified -->
 <script
-  src="http://code.jquery.com/jquery-3.3.1.min.js"
+  src="//code.jquery.com/jquery-3.3.1.min.js"
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous">
 </script>

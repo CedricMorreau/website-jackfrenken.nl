@@ -158,7 +158,7 @@ $ogType = 'bog';
 						<li><a href="javascript:void(0);" data-tab="2" data-desc="Kenmerken" onclick="changeTab(2);">Kenmerken</a></li>
 						<li><a href="javascript:void(0);" data-tab="3" data-desc="Locatie" onclick="changeTab(3);">Locatie</a></li>
 						<?php if (!empty($extraMedia['brochure'])) { ?>
-						<li><a href="javascript:void(0);" data-tab="4" data-desc="Downloads" onclick="changeTab(4);">Downloads</a></li>
+						<li><a href="javascript:void(0);" data-tab="4" data-desc="Brochure" onclick="changeTab(4);">Brochure</a></li>
 						<?php } ?>
 						<li><a href="javascript:void(0);" data-tab="5" data-desc="Contact" onclick="changeTab(5);">Contact</a></li>
 					</ul>
@@ -539,7 +539,7 @@ $ogType = 'bog';
 					<?php if (!empty($extraMedia['brochure'])) { ?>
 
 					<div class="content-wrapper" data-tab="4" style="display: none;">
-						<h2>Downloads</h2>
+						<h2>Brochure</h2>
 						<ul>
 							<li><a href="<?php echo $extraMedia['brochure']; ?>" title="Download de brochure" target="_blank">Download de brochure</a></li>
 						</ul>
@@ -638,11 +638,13 @@ $ogType = 'bog';
 			            enabled: true,
 						nativeFS: false
 		            },
-		            imageScaleMode: 'fill',
+		            controlNavigation: 'none',
+		            autoHeight: true,
+		            imageScaleMode: 'fill-if-smaller',
 		            imageAlignCenter: false,
 		            arrowsNavAutoHide: false,
-		            controlNavigation: 'none',
-		            autoHeight: true
+		            autoHeight: true,
+		            loop: true
 		        }).data('royalSlider');
 	
 				slider.ev.on('rsEnterFullscreen', function() {
