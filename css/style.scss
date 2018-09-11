@@ -2565,6 +2565,7 @@ input:focus {
 		// background-image: none;
 		height: auto;
 		min-height: 30rem;
+
 		padding-top: 0;
 		padding-bottom: 0;
 		@media only screen and (max-width: $container-size-m) {
@@ -2576,9 +2577,20 @@ input:focus {
 			@media only screen and (max-width: $container-size-m) {
 				margin-bottom: 1rem;
 			}
+			.rsSlide  {
+				height: auto;
+			}
 
-			#royal-slider { // hide thumbs on overview
-				.rsThumbs {
+			@media only screen and (max-width: $container-size-m) {
+				.rsImg { // mobile size of Slider images
+					width: 100% !important;
+					height: auto !important;
+				}
+			}
+
+			#royal-slider { 
+				max-height: 52rem; // set max height of slider
+				.rsThumbs { // hide thumbs on overview
 					display: none;
 				}
 				&.rsFullscreen {

@@ -630,10 +630,11 @@ $mediaList = $cms['database']->prepare("SELECT `id`, `object_ObjectTiaraID`, `be
 			            enabled: true,
 						nativeFS: false
 		            },
-		            imageScaleMode: 'fill',
+		            imageScaleMode: 'fill-if-smaller',
 		            imageAlignCenter: false,
 		            arrowsNavAutoHide: false,
 		            autoHeight: true,
+		            loop: true,
 		            thumbs: {
 		                appendSpan: true,
 		                firstMargin: true,

@@ -1850,10 +1850,18 @@ input:focus {
       @media only screen and (max-width: 768px) {
         .aanbod-detail .content-image .image-container {
           margin-bottom: 1rem; } }
-      .aanbod-detail .content-image .image-container #royal-slider .rsThumbs {
-        display: none; }
-      .aanbod-detail .content-image .image-container #royal-slider.rsFullscreen .rsThumbs {
-        display: block; }
+      .aanbod-detail .content-image .image-container .rsSlide {
+        height: auto; }
+      @media only screen and (max-width: 768px) {
+        .aanbod-detail .content-image .image-container .rsImg {
+          width: 100% !important;
+          height: auto !important; } }
+      .aanbod-detail .content-image .image-container #royal-slider {
+        max-height: 52rem; }
+        .aanbod-detail .content-image .image-container #royal-slider .rsThumbs {
+          display: none; }
+        .aanbod-detail .content-image .image-container #royal-slider.rsFullscreen .rsThumbs {
+          display: block; }
       .aanbod-detail .content-image .image-container .rsArrowLeft {
         right: 10rem;
         height: 5rem;
