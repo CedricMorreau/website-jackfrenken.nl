@@ -27,6 +27,9 @@ $val = $objectData[0];
 
 $priceText = obj_showPrice($val['objectDetails_Koop_KoopConditie'], $val['objectDetails_Koop_PrijsSpecificatie_Prijs'], $val['objectDetails_Koop_KoopConditie'], $val['objectDetails_Huur_PrijsSpecificatie_Prijs'], $val['objectDetails_Huur_HuurConditie']);
 
+if (!empty($val['objectDetails_Bouwgrond_Bebouwingsmogelijkheid']))
+	$priceText = str_replace(' k.k.', ' per m<sup>2</sup> excl. btw k.k.', $priceText);
+
 if ($val['object_Web_PrijsTonen'] == 'nee') {
 	
 	$priceText = 'Prijs op aanvraag';

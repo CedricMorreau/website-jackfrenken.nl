@@ -88,6 +88,7 @@ $sql = "SELECT
 		`tbl_OG_bog`.objectDetails_Bestemming_Hoofdbestemming,
 		`tbl_OG_bog`.objectDetails_Bestemming_Nevenbestemmingen,
 		`tbl_OG_bog`.datum_toegevoegd,
+		objectDetails_Bouwgrond_Bebouwingsmogelijkheid,
 		'NIEUW' as `tblType`,
 
 		`tbl_OG_bog`.objectDetails_Status_StatusType,

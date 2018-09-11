@@ -1,6 +1,9 @@
 <?php
 
 $priceText = obj_showPrice($val['objectDetails_Koop_KoopConditie'], $val['objectDetails_Koop_PrijsSpecificatie_Prijs'], $val['objectDetails_Koop_KoopConditie'], $val['objectDetails_Huur_PrijsSpecificatie_Prijs'], $val['objectDetails_Huur_HuurConditie']);
+
+if (!empty($val['objectDetails_Bouwgrond_Bebouwingsmogelijkheid']))
+	$priceText = str_replace(' k.k.', ' per m<sup>2</sup> excl. btw k.k.', $priceText);
 	
 if (!is_null($val['cms_per_link']))
 	$href = $dynamicRoot . $val['cms_per_link'];
