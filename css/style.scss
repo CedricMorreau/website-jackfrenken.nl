@@ -1569,7 +1569,7 @@ input:focus {
 			bottom: 0;
     		max-width: 50rem;
    			min-width: 40rem;
-   			height: 70%;
+   			// height: 70%;
   			@media only screen and (max-width: $container-size-m) {
 				min-width: 0;
 				max-width: none;
@@ -2558,6 +2558,11 @@ input:focus {
 	.column-header {
 		.header-title {
 			background-color: $overlay-col;
+			min-height: 27rem;
+			@media only screen and (max-width: $container-size-m) {
+				min-height: 0;
+			}
+
 		}
 	}
 
@@ -2819,7 +2824,7 @@ input:focus {
 				width: 35%;
 				@media only screen and (max-width: $container-size-m) {
 					width: 100%;
-					padding-bottom: 80%;
+					padding-bottom: 0;
 				}
 
 				div {
@@ -2865,8 +2870,34 @@ input:focus {
 			padding: 3% 4% 3% 4%;
 			color: $dar-col;
 			text-decoration: none;
+			&:hover {
+				background-color: $pri-col;
+				color: $lit-col;
+			}
 		}
 
+		.read-more {
+			display: block;
+			margin-top: 1em;
+		}
+
+		.sold + .objectInfo {
+			display: block;
+			padding: 3% 4% 3% 4%;
+			margin-bottom: 1rem;
+			background-color: $ter-col;
+
+		}
+
+		.sold {
+			color: $lit-col;
+			font-weight: bold;
+			background-color: $den-col;
+			padding-left: 1rem;
+			padding-right: 1rem;
+			padding-top: 0.3rem;
+			padding-bottom: 0.3rem;
+		}
 		.headerAanbod {
 			background-color: $sec-col;
 			padding-bottom: 0.5rem;

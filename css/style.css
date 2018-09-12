@@ -1142,8 +1142,7 @@ input:focus {
       position: absolute;
       bottom: 0;
       max-width: 50rem;
-      min-width: 40rem;
-      height: 70%; }
+      min-width: 40rem; }
       @media only screen and (max-width: 768px) {
         .column-header .header-title-wrapper .header-title {
           min-width: 0;
@@ -1836,7 +1835,11 @@ input:focus {
 .aanbod-detail {
   /* Nieuwbouw overzicht */ }
   .aanbod-detail .column-header .header-title {
-    background-color: rgba(218, 225, 237, 0.8); }
+    background-color: rgba(218, 225, 237, 0.8);
+    min-height: 27rem; }
+    @media only screen and (max-width: 768px) {
+      .aanbod-detail .column-header .header-title {
+        min-height: 0; } }
   .aanbod-detail .content-image {
     height: auto;
     min-height: 30rem;
@@ -2026,7 +2029,7 @@ input:focus {
       @media only screen and (max-width: 768px) {
         .aanbod-detail .projectinfo span.image {
           width: 100%;
-          padding-bottom: 80%; } }
+          padding-bottom: 0; } }
       .aanbod-detail .projectinfo span.image div {
         position: absolute;
         left: -50%;
@@ -2059,6 +2062,25 @@ input:focus {
       padding: 3% 4% 3% 4%;
       color: black;
       text-decoration: none; }
+      .aanbod-detail .projectinfo a.objectInfo:hover {
+        background-color: #003064;
+        color: white; }
+    .aanbod-detail .projectinfo .read-more {
+      display: block;
+      margin-top: 1em; }
+    .aanbod-detail .projectinfo .sold + .objectInfo {
+      display: block;
+      padding: 3% 4% 3% 4%;
+      margin-bottom: 1rem;
+      background-color: #DAE1ED; }
+    .aanbod-detail .projectinfo .sold {
+      color: white;
+      font-weight: bold;
+      background-color: #D64242;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      padding-top: 0.3rem;
+      padding-bottom: 0.3rem; }
     .aanbod-detail .projectinfo .headerAanbod {
       background-color: #00519B;
       padding-bottom: 0.5rem; }

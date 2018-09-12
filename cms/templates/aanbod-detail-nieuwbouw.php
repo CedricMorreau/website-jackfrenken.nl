@@ -353,7 +353,8 @@ $mediaList = $cms['database']->prepare("SELECT `id`, `object_ObjectTiaraID`, `be
 											
 											<?php } ?>
 		
-												<span class="city"><small><?php echo $oVal['bouwNummer_Nummer']; ?>.</small> <?php echo $oVal['Adres_Straatnaam']; ?>, <?php echo $oVal['Adres_Postcode']; ?> <?php echo $oVal['Adres_Woonplaats']; ?> - <small><?php echo $oVal['bouwNummer_ObjectCode']; ?></small></span>
+												<strong><span class="city"><?php echo $oVal['Adres_Straatnaam']; ?>, <?php echo $oVal['Adres_Postcode']; ?> <?php echo $oVal['Adres_Woonplaats']; ?> - <?php echo $oVal['bouwNummer_ObjectCode']; ?></span></strong>
+												
 												<ul class="specs">
 													<li>Status: <?php echo $oVal['Status_ObjectStatus']; ?></li>
 													<?php
@@ -390,6 +391,11 @@ $mediaList = $cms['database']->prepare("SELECT `id`, `object_ObjectTiaraID`, `be
 		
 													?>
 												</ul>
+												
+												<!-- Niet laten zien bij verkocht -->
+												<span class="read-more"><strong>Lees meer ⟶</strong></span>
+												
+
 											<?php if (strtolower($oVal['Status_ObjectStatus']) == 'verkocht' || strtolower($oVal['Status_ObjectStatus']) == 'verhuurd') { ?>
 											</span>
 											<?php } else { ?>
