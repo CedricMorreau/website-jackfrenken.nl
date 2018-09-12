@@ -305,6 +305,13 @@ $mediaList = $cms['database']->prepare("SELECT `id`, `object_ObjectTiaraID`, `be
 											<?php
 		
 											foreach($fetchObjects as $oKey => $oVal) {
+												
+												$verkocht = false;
+												
+												if (strtolower($oVal['Status_ObjectStatus']) == 'verkocht' || strtolower($oVal['Status_ObjectStatus']) == 'verhuurd') {
+													
+													$verkocht = true;
+												}
 		
 		
 												if ($oVal['Status_ObjectStatus'] == 'Verkocht' || $oVal['Status_ObjectStatus'] == 'Verkocht onder voorbehoud') {
@@ -336,13 +343,13 @@ $mediaList = $cms['database']->prepare("SELECT `id`, `object_ObjectTiaraID`, `be
 												else
 													$href = $dynamicRoot . 'error/404';
 												
-													if (strtolower($oVal['Status_ObjectStatus']) == 'verkocht' || strtolower($oVal['Status_ObjectStatus']) == 'verhuurd')
-														$url = 'javascript:void(0);';
-													else
-														$url = $href;
+												if ($verkocht)
+													$url = 'javascript:void(0);';
+												else
+													$url = $href;
 		
 														
-											if (strtolower($oVal['Status_ObjectStatus']) == 'verkocht' || strtolower($oVal['Status_ObjectStatus']) == 'verhuurd') {
+											if ($verkocht) {
 												?>
 		
 											<span class="objectInfo">
@@ -392,8 +399,9 @@ $mediaList = $cms['database']->prepare("SELECT `id`, `object_ObjectTiaraID`, `be
 													?>
 												</ul>
 												
-												<!-- Niet laten zien bij verkocht -->
+												<?php if (!$verkocht) { ?>
 												<span class="read-more"><strong>Lees meer ⟶</strong></span>
+												<?php } ?>
 												
 
 											<?php if (strtolower($oVal['Status_ObjectStatus']) == 'verkocht' || strtolower($oVal['Status_ObjectStatus']) == 'verhuurd') { ?>
