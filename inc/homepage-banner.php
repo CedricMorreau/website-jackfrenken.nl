@@ -1,4 +1,4 @@
-<img src="<?php echo $dynamicRoot; ?>resources/cta-banner-mobile.jpg" class="cta-banner-mobile" alt="Banner">
+<img src="<?php echo $dynamicRoot; ?>resources/cta-banner.jpg" class="cta-banner-mobile" alt="Banner">
 <section class="cta-banner">
 
 	<div class="cta-text-wrapper">
