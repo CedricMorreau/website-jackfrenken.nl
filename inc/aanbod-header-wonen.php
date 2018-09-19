@@ -4,6 +4,26 @@
 		<div class="header-title">
 			<h1><?php echo $val['objectDetails_Adres_NL_Woonplaats']; ?><br>
 			<?php echo obj_generateAddress($val['objectDetails_Adres_NL_Straatnaam'], $val['objectDetails_Adres_NL_Huisnummer'], $val['objectDetails_Adres_NL_HuisnummerToevoeging']); ?></h1>
+			
+			<?php
+			
+			if (!empty($val['object_Web_OpenHuis_Vanaf']) && !empty($val['object_Web_OpenHuis_Tot']) && $val['object_Web_OpenHuis_Vanaf'] != '0000-00-00 00:00:00' && $val['object_Web_OpenHuis_Tot'] != '0000-00-00 00:00:00') {
+				
+				$toTimeFrom = strtotime($val['object_Web_OpenHuis_Vanaf']);
+				$toTimeTill = strtotime($val['object_Web_OpenHuis_Tot']);
+				
+				if (time() < $toTimeTill) {
+					
+					// Open huis!
+					$shownDate = translateDay(date('l. j F', $toTimeFrom), 'short');
+					$shownTime = date('H:i', $toTimeFrom) . ' tot ' . date('H:i', $toTimeTill);
+					
+					echo '<p><strong>Open Huis!</strong> <i>' . $shownDate . ' - ' . $shownTime . ' uur</i></p>';
+				}
+			}
+			
+			?>
+			
 			<p class="title-price"><?php echo $priceText; ?></p>
 
 			<a href="javascript:void(0);" onclick="javascript:$.scrollTo('#content', 1000)" class="scroll-down">Meer over deze woning &darr;</a>
