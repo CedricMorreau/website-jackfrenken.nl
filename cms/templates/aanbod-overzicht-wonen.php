@@ -725,6 +725,19 @@ elseif ($overviewType == 'verkocht')
 
 					<div class="content-wrapper">
 					
+						<?php
+
+						if (isset($realOpenDate)) {
+	
+							$dateOpen = new PP_DateTime($realOpenDate);
+	
+							?>
+						<div class="bar-alert">
+							Onderstaand de <b>Open Huis deelnemers van <?php echo $dateOpen->format('j'); ?> <?php echo translateDay($dateOpen->format('F')); ?> <?php echo $dateOpen->format('Y'); ?></b>.<br>
+							<small><a href="<?php echo $dynamicRoot . $template->getPermalink(1); ?>">Bekijk ook ons totaalaanbod van woningen &rsaquo;</a></small>
+						</div>
+						<?php } ?>
+					
 					<?php
 					
 					if (count($objects) > 0) {
