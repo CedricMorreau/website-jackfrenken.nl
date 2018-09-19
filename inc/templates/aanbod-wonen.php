@@ -61,7 +61,7 @@ $image = (!is_null($val['mainImage'])) ? $dynamicRoot . 'og_media/wonen_' . $val
 					$shownDate = translateDay(date('l. j F', $toTimeFrom), 'short');
 				    $shownTime = date('H:i', $toTimeFrom) . ' tot ' . date('H:i', $toTimeTill);
 
-					echo '<div class="image-label status-sold"><span>Open Huis!</span> <i>' . $shownDate . ' - ' . $shownTime . ' uur</i></div>';
+					echo '<div class="image-label status-openhouse"><span>Open Huis!</span> <i>' . $shownDate . ' - ' . $shownTime . ' uur</i></div>';
 				}
 			}
 			elseif (strtolower($val['objectDetails_StatusBeschikbaarheid_Status']) == 'verkocht' || strtolower($val['objectDetails_StatusBeschikbaarheid_Status']) == 'verhuurd') {
