@@ -831,7 +831,6 @@ input:focus {
     position: relative;
     min-height: 18rem;
     margin-top: 4rem;
-    background-image: url("../resources/cta-banner.jpg");
     background-size: cover;
     background-repeat: none;
     background-position: center;
@@ -842,7 +841,7 @@ input:focus {
         padding-bottom: 0;
         padding-left: 2rem;
         padding-right: 2rem;
-        background-image: none;
+        background-image: none !important;
         margin-top: 0;
         min-height: 0;
         background-color: #DAE1ED; } }
