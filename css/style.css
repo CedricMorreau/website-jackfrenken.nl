@@ -1500,6 +1500,22 @@ input:focus {
   @media only screen and (max-width: 768px) {
     .aanbod-overzicht .column-content .content-wrapper {
       padding-right: 1rem; } }
+  .aanbod-overzicht .column-content .content-wrapper .bar-alert {
+    background-color: #2CBCAF;
+    color: white;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-left: 3rem;
+    padding-right: 2rem;
+    margin-bottom: 2rem;
+    font-size: 1.5rem; }
+    .aanbod-overzicht .column-content .content-wrapper .bar-alert a {
+      color: white;
+      font-size: 1rem;
+      margin-top: 1rem;
+      display: block; }
+      .aanbod-overzicht .column-content .content-wrapper .bar-alert a:hover {
+        color: #003064; }
   .aanbod-overzicht .column-content .content-wrapper .item-wrapper {
     margin-right: 0; }
     .aanbod-overzicht .column-content .content-wrapper .item-wrapper > a {

@@ -2086,7 +2086,25 @@ input:focus {
 			@media only screen and (max-width: $container-size-m) {
 				padding-right: $margin-size-s;
 			}
-
+			.bar-alert {
+				background-color: $qua-col;
+				color: $lit-col;
+				padding-top: 2rem;
+				padding-bottom: 2rem;
+				padding-left: 3rem;
+				padding-right: 2rem;
+				margin-bottom: 2rem;
+				font-size: 1.5rem;
+				a {
+					color: $lit-col;
+					font-size: 1rem;
+					margin-top: 1rem;
+					display: block;
+					&:hover {
+						color: $pri-col;
+					}
+				}
+			}
 			.item-wrapper {
 				margin-right: 0;
 				> a {
@@ -2197,8 +2215,9 @@ input:focus {
 			-webkit-appearance: none; // chrome / safari
 			-moz-appearance: none;  // firefox
 			&::-ms-expand { display: none; } // IE11
-			text-indent: 5px
-;		}
+			text-indent: 5px;
+		}
+
 		&:after {
 			position: absolute;
 			right: 0;
