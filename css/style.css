@@ -1791,6 +1791,8 @@ input:focus {
     background-color: #C3C12C; }
   .image-label.status-loweredprice {
     background-color: #2CBCAF; }
+  .image-label.status-openhouse {
+    background-color: #2CBCAF; }
 
 .banner-wrapper {
   background-color: #0091D1;
@@ -1855,6 +1857,16 @@ input:focus {
     @media only screen and (max-width: 768px) {
       .aanbod-detail .column-header .header-title {
         min-height: 0; } }
+    .aanbod-detail .column-header .header-title .openhouse {
+      font-size: 1.2rem;
+      background-color: #2CBCAF;
+      color: white;
+      display: inline-block;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      padding-top: 0.3rem;
+      padding-bottom: 0.3rem;
+      line-height: 1.8rem; }
   .aanbod-detail .content-image {
     height: auto;
     min-height: 30rem;
