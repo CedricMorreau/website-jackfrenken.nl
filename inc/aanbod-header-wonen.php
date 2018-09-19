@@ -18,7 +18,7 @@
 					$shownDate = translateDay(date('l. j F', $toTimeFrom), 'short');
 					$shownTime = date('H:i', $toTimeFrom) . ' tot ' . date('H:i', $toTimeTill);
 					
-					echo '<p><strong>Open Huis!</strong> <i>' . $shownDate . ' - ' . $shownTime . ' uur</i></p>';
+					echo '<p class="openhouse"><strong>Open Huis!</strong> <i>' . $shownDate . ' - ' . $shownTime . ' uur</i></p>';
 				}
 			}
 			
