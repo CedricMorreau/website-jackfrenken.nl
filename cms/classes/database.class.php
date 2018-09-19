@@ -90,12 +90,12 @@ class Database {
         $time_start = microtime(true);
         
         if($stmt = mysqli_prepare($link,$sql)){ 
-            if(count($params) == count($params,1)){ 
+//             if(count($params) == count($params,1)){ 
               $params = array($params); 
               $multiQuery = FALSE; 
-            } else { 
-              $multiQuery = TRUE; 
-            }  
+//             } else { 
+//               $multiQuery = TRUE; 
+//             }  
             
             if($typeDef){ 
               $bindParams = array();    
