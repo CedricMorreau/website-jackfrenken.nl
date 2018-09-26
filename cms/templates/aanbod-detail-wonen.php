@@ -202,6 +202,7 @@ $mediaList = $cms['database']->prepare("SELECT `id`, `object_ObjectTiaraID`, `be
 	</head>
 
 	<body>
+		<?php $val['objectDetails_Adres_NL_Postcode'] = preg_replace('/\s+/','',$val['objectDetails_Adres_NL_Postcode']); ?>
 		<script>
 		  kmhPixel = [{
 		      'objectIdentifier': '<?php echo $val['object_ObjectTiaraID']; ?>',

@@ -168,13 +168,14 @@ $mediaList = $cms['database']->prepare("SELECT `id`, `object_ObjectTiaraID`, `be
 	</head>
 
 	<body>
+		<?php $val['project_ProjectDetails_Adres_Postcode'] = preg_replace('/\s+/','',$val['project_ProjectDetails_Adres_Postcode']); ?>
 		<script>
 		  kmhPixel = [{
 		      'objectIdentifier': '<?php echo $val['project_ObjectTiaraID']; ?>',
 		      'objectZipcode': '<?php echo $val['project_ProjectDetails_Adres_Postcode']; ?>'
 		  }];
 		</script>
-		
+
 
 		<!-- KMH pixel --> 
 		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':

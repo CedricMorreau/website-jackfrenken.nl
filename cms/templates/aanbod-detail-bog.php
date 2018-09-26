@@ -143,6 +143,7 @@ $ogType = 'bog';
 	</head>
 
 	<body>
+		<?php $val['objectDetails_Adres_Postcode'] = preg_replace('/\s+/','',$val['objectDetails_Adres_Postcode']); ?>
 		<script>
 		  kmhPixel = [{
 		      'objectIdentifier': '<?php echo $val['object_ObjectTiaraID']; ?>',
