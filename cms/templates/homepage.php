@@ -21,7 +21,7 @@
 
 			<?php include($documentRoot . "inc/homepage-services.php"); ?>
 			
-			<?php include($documentRoot . "inc/homepage-banner.php"); ?>
+			<?php //include($documentRoot . "inc/homepage-banner.php"); ?>
 
 			<?php include($documentRoot . "inc/homepage-actueel.php"); ?>
 
