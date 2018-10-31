@@ -109,6 +109,10 @@ input:focus {
     outline: none;
 }
 
+input::placeholder {
+	color: #A1A9B7;
+}
+
 .uppercase {
 	text-transform: uppercase;
 }
@@ -952,7 +956,6 @@ input:focus {
 				}
 
 				
-
 				.select-wrapper {
 					display: inline-block; 
 					position: relative;
@@ -1029,7 +1032,6 @@ input:focus {
 					border-radius: 0;
 					-webkit-border-radius: 0px;
 					margin-right: 2rem;
-
 					width: auto;
 					width: 8rem;
 					min-width: 8rem;
@@ -1052,7 +1054,7 @@ input:focus {
 					}
 					padding-bottom: 0.3rem;
 					&::placeholder {
-						color: $ter-col;
+						color: #A1A9B7;
 					}
 				}
 			}
@@ -2199,7 +2201,7 @@ input:focus {
 		margin-bottom: 1.5rem;
 		color: $pri-col;
 		&::placeholder {
-			color: $ter-col;
+			color: #A1A9B7;
 		}
 	}
 

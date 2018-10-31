@@ -49,6 +49,9 @@ textarea:focus,
 input:focus {
   outline: none; }
 
+input::placeholder {
+  color: #A1A9B7; }
+
 .uppercase {
   text-transform: uppercase; }
 
@@ -760,7 +763,7 @@ input:focus {
               min-width: 6rem;
               width: 6rem; } }
           .homepage-wrapper .search-filter-wrapper .search-filter-container .search-filter-bar input::placeholder {
-            color: #DAE1ED; }
+            color: #A1A9B7; }
     .homepage-wrapper .search-filter-wrapper .search-filter-button {
       color: white;
       width: auto;
@@ -1577,7 +1580,7 @@ input:focus {
     margin-bottom: 1.5rem;
     color: #003064; }
     .sidebar-filtering input::placeholder {
-      color: #DAE1ED; }
+      color: #A1A9B7; }
   .sidebar-filtering .select-wrapper {
     display: inline-block;
     position: relative;
