@@ -45,7 +45,9 @@ $image = (!is_null($val['mainImage'])) ? $dynamicRoot . 'og_media/wonen_' . $val
 	<div class="item-image">
 		<a href="<?php echo $href; ?>">
 			<?php if (!empty($image)) { ?>
-			<img src="<?php echo $image; ?>">
+			<img src="<?php echo $image; ?>" alt="<?php echo $val['objectDetails_Adres_NL_Woonplaats']; ?>
+					<?php echo obj_generateAddress($val['objectDetails_Adres_NL_Straatnaam'], $val['objectDetails_Adres_NL_Huisnummer'], $val['objectDetails_Adres_NL_HuisnummerToevoeging']); ?>" title="<?php echo $val['objectDetails_Adres_NL_Woonplaats']; ?>
+					<?php echo obj_generateAddress($val['objectDetails_Adres_NL_Straatnaam'], $val['objectDetails_Adres_NL_Huisnummer'], $val['objectDetails_Adres_NL_HuisnummerToevoeging']); ?>">
 			<?php } ?>
 			
 			<?php
@@ -80,7 +82,8 @@ $image = (!is_null($val['mainImage'])) ? $dynamicRoot . 'og_media/wonen_' . $val
 
 			<?php } ?>
 			
-			<div class="hover-overlay"></div>
+			<div class="hover-overlay" title="<?php echo $val['objectDetails_Adres_NL_Woonplaats']; ?> - <?php echo obj_generateAddress($val['objectDetails_Adres_NL_Straatnaam'], $val['objectDetails_Adres_NL_Huisnummer'], $val['objectDetails_Adres_NL_HuisnummerToevoeging']); ?>">
+			</div>
 		</a>
 	</div>
 

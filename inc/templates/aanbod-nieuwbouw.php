@@ -131,7 +131,7 @@ else
 	<div class="item-image">
 		<a href="<?php echo $href; ?>">
 			<?php if (!empty($image)) { ?>
-			<img src="<?php echo $image; ?>">
+			<img src="<?php echo $image; ?>" alt="<?php echo $val['project_ProjectDetails_Projectnaam']; ?> - <?php echo $val['project_ProjectDetails_Adres_Woonplaats']; ?>" title="<?php echo $val['project_ProjectDetails_Projectnaam']; ?> - <?php echo $val['project_ProjectDetails_Adres_Woonplaats']; ?>">
 			<?php } ?>
 			
 			<?php
@@ -153,7 +153,7 @@ else
 
 			?>
 			
-			<div class="hover-overlay"></div>
+			<div class="hover-overlay" title="<?php echo $val['project_ProjectDetails_Projectnaam']; ?> - <?php echo $val['project_ProjectDetails_Adres_Woonplaats']; ?>"></div>
 		</a>
 	</div>
 

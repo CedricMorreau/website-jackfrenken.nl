@@ -22,12 +22,12 @@ else {
 
 <meta charset="utf-8">
 <title><?php echo $pageDisplayTitle; ?></title>
-<meta property="og:site_name" content="Jack Frenken Makelaars en Adviseurs">
+<meta property="og:site_name" content="Jack Frenken Makelaars en Adviseurs voor de aankoop en verkoop van woningen">
 <meta property="og:title" content="<?php echo $pageDisplayTitle; ?>">
 <meta property="og:description" content="<?php echo $pageDisplayDescription; ?>">
 <meta name="description" content="<?php echo $pageDisplayDescription; ?>">
 <meta name="web_author" content="Pixelplus Interactieve Media">
-	  	
+<meta name="keywords" content="makelaar, adviseurs, woningen, hypotheken, nieuwbouw, bouwkavels, bedrijfspanden, jack frenken, vertrouwed, huis, hypotheek, koopwoning, huurwoning, bouwkavels, kavel, bouwen, nvm, advies, verkocht, voor" />
 <!-- Favicon -->
 <link rel="shortcut icon" href="<?php echo $dynamicRoot; ?>favicon.ico?v=1" type="image/ico">
 <!-- Enable responsive view -->

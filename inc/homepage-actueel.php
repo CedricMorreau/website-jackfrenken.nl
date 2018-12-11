@@ -23,16 +23,18 @@ if (count($actueel) > 0) {
 			
 		<div class="item-container">
 			<div class="item-image-wrapper">
-				<div class="item-image" style="background-image: url(<?php echo $values['art_overviewPhoto']; ?>);">
+				<div class="item-image" style="background-image: url(<?php echo $values['art_overviewPhoto']; ?>);" title="Lees meer over <?php echo $values['art_title']; ?>" alt="<?php echo $values['art_title']; ?>">
 					&nbsp;
 				</div>
 				<div class="hover-overlay">
-					<a href="<?php echo $url; ?>"></a>
+					<a href="<?php echo $url; ?>" title="Lees meer over <?php echo $values['art_title']; ?>" alt="<?php echo $values['art_title']; ?>"></a>
 				</div>
-				<a href="<?php echo $url; ?>" class="item-button">&xrarr;</a>
+				<a href="<?php echo $url; ?>" class="item-button" title="Lees meer over <?php echo $values['art_title']; ?>">&xrarr;</a>
 			</div>
 			
-			<p class="item-title"><a href="<?php echo $url; ?>"><?php echo $values['art_title']; ?></a></p>
+			<p class="item-title">
+				<a href="<?php echo $url; ?>" title="<?php echo $values['art_title']; ?>"><?php echo $values['art_title']; ?></a>
+			</p>
 
 		</div>
 			

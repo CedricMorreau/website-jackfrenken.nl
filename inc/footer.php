@@ -1,6 +1,6 @@
 <section class="quote-wrapper">
 	<div class="quote-beeldmerk">
-		<img src="<?php echo $dynamicRoot; ?>resources/jf_beeldmerk-s.png">
+		<img src="<?php echo $dynamicRoot; ?>resources/jf_beeldmerk-s.png" alt="Beeldmerk Jack Frenken" title="Jack Frenken">
 	</div>
 	
 	<?php
@@ -24,7 +24,7 @@
 	
 	<div class="phone-icon">
 		<a href="tel:0475335225">
-			<img src="<?php echo $dynamicRoot; ?>resources/icon-telefoon.svg" alt="telefoon">
+			<img src="<?php echo $dynamicRoot; ?>resources/icon-telefoon.svg" alt="telefoon" title="Bel ons direct!">
 		</a>
 	</div>
 
@@ -52,7 +52,7 @@
 
 	<div class="footer-row-2">
 		<a href="<?php echo $template->findPermalink(48, 1); ?>">
-			<img src="<?php echo $dynamicRoot; ?>resources/nvm-logo-lit.svg" class="nvm-logo" alt="NVM logo">Wij <span class="rating">scoren</span> op Funda &rarr;
+			<img src="<?php echo $dynamicRoot; ?>resources/nvm-logo-lit.svg" class="nvm-logo" alt="NVM logo" title="NVM">Wij <span class="rating">scoren</span> op Funda &rarr;
 		</a>
 	</div>
 

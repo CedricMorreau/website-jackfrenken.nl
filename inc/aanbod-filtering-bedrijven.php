@@ -2,7 +2,7 @@
 	
 	<?php
 	
-	echo '<p class="filter-head">' . $totalRows . ' bedrijfspanden</p>';
+	echo '<h1 class="filter-head">' . $totalRows . ' bedrijfspanden</h1>';
 		
 	?>
 

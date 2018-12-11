@@ -1555,6 +1555,7 @@ input::placeholder {
     .sidebar-filtering {
       margin-left: 0; } }
   .sidebar-filtering .filter-head {
+    font-family: "Titillium Web", sans-serif;
     font-weight: bold;
     font-size: 1.2rem;
     margin-top: 2rem;
