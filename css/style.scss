@@ -3007,6 +3007,13 @@ header.headerAanbod {
   		max-width: 33rem !important;
   		min-width: 33rem !important;
   		height: auto !important;
+  		h1 {
+  			font-size: 1rem !important;
+  			font-family: $fon-fam-pri;
+  		}
+  		h2 {
+  			font-size: 3rem !important;
+  		}
 	}
 	.content-image {
 		height: 35rem;

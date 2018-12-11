@@ -27,7 +27,7 @@ else {
 <meta property="og:description" content="<?php echo $pageDisplayDescription; ?>">
 <meta name="description" content="<?php echo $pageDisplayDescription; ?>">
 <meta name="web_author" content="Pixelplus Interactieve Media">
-<meta name="keywords" content="makelaar, adviseurs, woningen, hypotheken, nieuwbouw, bouwkavels, bedrijfspanden, jack frenken, vertrouwed, huis, hypotheek, koopwoning, huurwoning, bouwkavels, kavel, bouwen, nvm, advies, verkocht, voor" />
+<meta name="keywords" content="makelaar, adviseurs, adviseur, woningen, hypotheken, nieuwbouw, bouwkavels, bedrijfspanden, jack frenken, vertrouwed, huis, huizen, hypotheek, koopwoning, koopwoningen, huurwoning, huurwoningen, bouwkavels, kavel, bouwen, nvm, advies, verkocht, voor, contact" />
 <!-- Favicon -->
 <link rel="shortcut icon" href="<?php echo $dynamicRoot; ?>favicon.ico?v=1" type="image/ico">
 <!-- Enable responsive view -->

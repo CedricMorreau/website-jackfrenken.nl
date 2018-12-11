@@ -1,8 +1,8 @@
 <div class="column-header">
 	<div class="header-title-wrapper animated fadeInLeft">
 		<div class="header-title">
-			<p class="title-category">Contact</p>
-			<h1>Goed en vertrouwd <br>voor huis en hypotheek.</h1>
+			<h1 class="title-category">Contact</h1>
+			<h2>Goed en vertrouwd <br>voor huis en hypotheek.</h2>
 			
 			<?php
 			
