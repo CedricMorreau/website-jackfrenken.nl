@@ -250,6 +250,83 @@ $ogType = 'bog';
 
 								</table>
 							</div>
+							
+							<?php
+							
+							if (!is_null($val['objectDetails_Huur_ServicekostenConditie_Prijs']) && $val['objectDetails_Huur_ServicekostenConditie_Prijs'] > 0) {
+								
+							?>
+							
+							<div class="table-wrapper">					
+
+								<h2>Servicekosten</h2>
+								
+								<table>
+
+									<tr>
+										<th class="description" style="width: 40%;">Prijs</th>
+										<td class="value">
+										
+										<?php
+
+										echo obj_generateCost($val['objectDetails_Huur_ServicekostenConditie_Prijs']);
+
+										?>
+
+										</td>
+									</tr>
+									
+									<?php
+
+									if (!empty($val['objectDetails_Huur_ServicekostenConditie_BTWTarief'])) {
+
+										?>
+
+									<tr>
+										<th class="description">Conditie</th>
+										<td class="value">
+										
+										<?php
+
+										echo ucfirst($val['objectDetails_Huur_ServicekostenConditie_BTWTarief']);
+
+										?>
+
+										</td>
+									</tr>
+
+										<?php
+									}
+									?>
+									
+									<?php
+
+									if (!empty($val['objectDetails_Huur_ServicekostenConditie_BTWBelast'])) {
+
+										?>
+
+									<tr>
+										<th class="description">BTW belast</th>
+										<td class="value">
+										
+										<?php
+
+										echo ($val['objectDetails_Huur_ServicekostenConditie_BTWBelast'] == 'true') ? 'ja' : 'nee';
+
+										?>
+
+										</td>
+									</tr>
+
+										<?php
+									}
+									?>
+								
+								</table>
+								
+							</div>
+							
+							<?php } ?>
 
 							<div class="table-wrapper">					
 
@@ -387,6 +464,17 @@ $ogType = 'bog';
 								<h2>Kenmerken</h2>
 
 								<table>
+
+									<?php if (!is_null($val['objectDetails_Lokatie_Liggingen']) && !empty($val['objectDetails_Lokatie_Liggingen'])) { ?>
+									<tr>
+										<th class="description">Ligging</th>
+										<td class="value">
+										
+											<?php echo obj_splitValues($val['objectDetails_Lokatie_Liggingen']); ?>
+
+										</td>
+									</tr>
+									<?php } ?>
 
 									<?php if (!is_null($val['objectDetails_Woonobject_Oppervlakte']) && $val['objectDetails_Woonobject_Oppervlakte'] > 0) { ?>
 									<tr>
@@ -538,6 +626,87 @@ $ogType = 'bog';
 
 								</table>	
 							</div>	
+							
+							<?php
+							
+							if (!empty($val['objectDetails_Energielabel_Energieklasse']) || !empty($val['objectDetails_Energielabel_EnergieIndex']) || !empty($val['objectDetails_Energielabel_Einddatum'])) {
+								
+							?>
+							
+							<div class="table-wrapper">					
+
+								<h2>Energielabel</h2>
+
+								<table cellpadding="0" cellspacing="0" border="0">
+								
+									<?php
+
+									if (!empty($val['objectDetails_Energielabel_Energieklasse'])) {
+
+										?>
+
+									<tr>
+										<th class="description">Klasse</th>
+										<td class="value">
+										
+											<?php echo $val['objectDetails_Energielabel_Energieklasse']; ?>
+
+										</td>
+									</tr>
+
+										<?php
+									}
+									?>
+									
+									<?php
+
+									if (!empty($val['objectDetails_Energielabel_EnergieIndex'])) {
+
+										?>
+
+									<tr>
+										<th class="description">Index</th>
+										<td class="value">
+										
+											<?php echo $val['objectDetails_Energielabel_EnergieIndex']; ?>
+
+										</td>
+									</tr>
+
+										<?php
+									}
+									?>
+									
+									<?php
+
+									if (!empty($val['objectDetails_Energielabel_Einddatum'])) {
+
+										?>
+
+									<tr>
+										<th class="description">Einddatum</th>
+										<td class="value">
+										
+											<?php
+											
+											$date = new PP_DateTime($val['objectDetails_Energielabel_Einddatum']);
+											
+											?>
+										
+											<?php echo $date->format('d-m-Y'); ?>
+
+										</td>
+									</tr>
+
+										<?php
+									}
+									?>
+								
+								</table>
+								
+							</div>
+							
+							<?php } ?>
 						</div>
 						
 					</div>
