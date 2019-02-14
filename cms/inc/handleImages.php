@@ -9,8 +9,12 @@ if (isset($_GET['hash'])) {
     
     if (count($image) > 0) {
     	
-    	if (isset($_GET['thumb']) && is_numeric($_GET['thumb']))
-    		$fileName = $documentRoot . 'upload/media/' . $image[0]['mod_me_folderId'] . '/' . $image[0]['mod_me_hash'] . '_thumb_' . $_GET['thumb'] . '.' . $image[0]['mod_me_extension'];
+    	if (isset($_GET['thumb']) && is_numeric($_GET['thumb'])) {
+    		if (file_exists($documentRoot . 'upload/media/' . $image[0]['mod_me_folderId'] . '/' . $image[0]['mod_me_hash'] . '_thumb_' . $_GET['thumb'] . '.' . $image[0]['mod_me_extension']))
+    			$fileName = $documentRoot . 'upload/media/' . $image[0]['mod_me_folderId'] . '/' . $image[0]['mod_me_hash'] . '_thumb_' . $_GET['thumb'] . '.' . $image[0]['mod_me_extension'];
+    		else
+    			$fileName = $documentRoot . 'upload/media/' . $image[0]['mod_me_folderId'] . '/' . $image[0]['mod_me_hash'] . '.' . $image[0]['mod_me_extension'];
+    	}
     	else 
     		$fileName = $documentRoot . 'upload/media/' . $image[0]['mod_me_folderId'] . '/' . $image[0]['mod_me_hash'] . '.' . $image[0]['mod_me_extension'];
         
