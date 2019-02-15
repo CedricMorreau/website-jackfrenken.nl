@@ -3,7 +3,7 @@
 	<div class="header-title-wrapper">
 		<div class="header-title">
 			<h1><?php echo $val['project_ProjectDetails_Adres_Woonplaats']; ?><br>
-			<?php echo $val['project_ProjectDetails_Projectnaam']; ?></h1>
+			<?php echo utf8_encode($val['project_ProjectDetails_Projectnaam']); ?></h1>
 			<p class="title-price"><?php echo $priceText; ?></p>
 
 			<a href="javascript:void(0);" onclick="javascript:$.scrollTo('#content', 1000)" class="scroll-down">Meer over dit project &darr;</a>

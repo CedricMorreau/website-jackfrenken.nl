@@ -112,7 +112,7 @@ else {
 	$headImage = $dynamicRoot . '/img/aanbod_geen-afbeelding_tn01.svg';
 }
 
-$injectTitle = $val['project_ProjectDetails_Projectnaam'] . ', ' . $val['project_ProjectDetails_Adres_Woonplaats'] . ' - ' . $priceText . ' | Jack Frenken - Makelaars en Adviseurs';
+$injectTitle = utf8_encode($val['project_ProjectDetails_Projectnaam']) . ', ' . $val['project_ProjectDetails_Adres_Woonplaats'] . ' - ' . $priceText . ' | Jack Frenken - Makelaars en Adviseurs';
 
 if (isset($_GET['searchHash'])) {
 
@@ -311,7 +311,7 @@ $mediaList = $cms['database']->prepare("SELECT `id`, `object_ObjectTiaraID`, `be
 									<div class="projectinfo object group" title="Stad - Projectnaam">
 										<span class="image">
 											<div>
-												<img src="<?php echo $headImage; ?>" alt="<?php echo $val['project_ProjectDetails_Adres_Woonplaats']; ?>, <?php echo $val['project_ProjectDetails_Projectnaam']; ?> - <?php echo $tVal['bouwType_BouwTypeDetails_Naam']; ?>" title="<?php echo $val['project_ProjectDetails_Adres_Woonplaats']; ?>, <?php echo $val['project_ProjectDetails_Projectnaam']; ?> - <?php echo $tVal['bouwType_BouwTypeDetails_Naam']; ?>">
+												<img src="<?php echo $headImage; ?>" alt="<?php echo $val['project_ProjectDetails_Adres_Woonplaats']; ?>, <?php echo utf8_encode($val['project_ProjectDetails_Projectnaam']); ?> - <?php echo $tVal['bouwType_BouwTypeDetails_Naam']; ?>" title="<?php echo $val['project_ProjectDetails_Adres_Woonplaats']; ?>, <?php echo utf8_encode($val['project_ProjectDetails_Projectnaam']); ?> - <?php echo $tVal['bouwType_BouwTypeDetails_Naam']; ?>">
 											</div>
 										</span>
 										<span class="info">

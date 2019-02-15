@@ -57,7 +57,7 @@ else
 				</p>
 
 				<p class="item-bold-title">
-					<?php echo $val['project_ProjectDetails_Projectnaam']; ?>
+					<?php echo utf8_encode($val['project_ProjectDetails_Projectnaam']); ?>
 				</p>
 				
 				<?php
@@ -131,7 +131,7 @@ else
 	<div class="item-image">
 		<a href="<?php echo $href; ?>">
 			<?php if (!empty($image)) { ?>
-			<img src="<?php echo $image; ?>" alt="<?php echo $val['project_ProjectDetails_Projectnaam']; ?> - <?php echo $val['project_ProjectDetails_Adres_Woonplaats']; ?>" title="<?php echo $val['project_ProjectDetails_Projectnaam']; ?> - <?php echo $val['project_ProjectDetails_Adres_Woonplaats']; ?>">
+			<img src="<?php echo $image; ?>" alt="<?php echo utf8_encode($val['project_ProjectDetails_Projectnaam']); ?> - <?php echo $val['project_ProjectDetails_Adres_Woonplaats']; ?>" title="<?php echo $val['project_ProjectDetails_Projectnaam']; ?> - <?php echo $val['project_ProjectDetails_Adres_Woonplaats']; ?>">
 			<?php } ?>
 			
 			<?php
