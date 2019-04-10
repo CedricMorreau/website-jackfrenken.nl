@@ -1933,8 +1933,186 @@ input::placeholder {
 				}
 			}
 		}
-	}
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		.medewerkers-wrapper {
+			//padding-right: 13rem;
+			width: 100%;
+			//max-width: 60rem;
+			display: flex;
+			flex-direction: column;
+			@media only screen and (max-width: $container-size-l) {
+				padding-right: $margin-size-m;
+			}
+
+			@media only screen and (max-width: $container-size-m) {
+				padding-left: $margin-size-s;
+				padding-right: $margin-size-s;
+			}
+			
+			br { // Firefox weet niet wat BR's zijn 
+				margin: 8px;
+			}
+			
+			h2 {
+				font-size: 2.5rem;
+				line-height: 3rem;
+				margin-top: 1rem;
+				margin-bottom: 0;
+				padding-top: 0;
+				padding-bottom: 0;
+				@media only screen and (max-width: $container-size-m) {
+					margin-top: 2rem;
+					font-size: 2rem;
+					word-break: break-word;
+				}
+			}
+
+
+			p {
+				padding-right: 13rem;
+				max-width: 60rem;
+				ul {
+					margin-left: 1rem;
+				}
+				a {
+					font-size: inherit;
+					&:hover {
+						color: $qua-col;
+					}
+				}
+			}
+			
+			ul {
+				margin-left: 1rem;
+				background-color: none;
+			}
+			
+			hr {
+				color: $qui-col;
+				border-color: $qui-col;
+				background-color: $qui-col;
+				height: 1px;
+				width: 100%;
+				outline: 0;
+				border: none;
+			}
+			
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			section#flexbox-gallery {
+			    padding-bottom: calc(10vh - 3rem);
+				.parent {
+			        width: 100%;
+			        display: flex;
+			        justify-content: flex-start;
+			        align-items: flex-start;
+			        flex-flow: row wrap;
+			        .child {
+			        	margin: 0;
+			            width: calc(100%/3);
+			            position: relative;
+			            z-index: 1;
+
+			            @media only screen and (max-width: $container-size-l) {
+			            	width: calc(100%/2);
+			            }
+						@media only screen and (max-width: 830px) {
+			            	width: calc(100%/1);
+			            }
+
+
+
+
+			            @media only screen and (max-width: $container-size-m) {
+			            	width: calc(100%/2);
+			            }
+			            @media only screen and (max-width: $container-size-s) {
+			            	width: calc(100%/1);
+			            }
+
+			            .pic {
+			                width: 100%;
+			                height: 0;
+			                padding-bottom: 100%;
+			                background-size: cover;
+			                background-position: center;
+			                background-repeat: no-repeat;
+
+			                span {
+			                	color: white;
+			                	display: block;
+			                	padding-left: 10%;
+			                	text-shadow: 2px 2px 7px rgba(black, .1);
+			                	&.mw-naam {
+									font-size: 1.2em;
+									font-weight: bold;
+									padding-top: 77%;
+			                	}
+			                	&.mw-functie {
+									margin-top: -.2em;
+									padding-top: 0;
+			                	}
+			                }
+			            }
+			        }
+			    }
+			}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			
+		}
+	}
 }
 
 /* Actueel overzicht ------------------------------- */
