@@ -1998,6 +1998,9 @@ input::placeholder {
 			p {
 				padding-right: 13rem;
 				max-width: 60rem;
+				@media only screen and (max-width: $container-size-l) {
+					padding-right: 0;
+				}
 				ul {
 					margin-left: 1rem;
 				}
