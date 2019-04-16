@@ -1960,6 +1960,7 @@ input::placeholder {
 
 
 		.medewerkers-wrapper {
+			margin-right: 96px;
 			//padding-right: 13rem;
 			width: 100%;
 			//max-width: 60rem;
@@ -1967,6 +1968,7 @@ input::placeholder {
 			flex-direction: column;
 			@media only screen and (max-width: $container-size-l) {
 				padding-right: $margin-size-m;
+				margin-right: 0;
 			}
 
 			@media only screen and (max-width: $container-size-m) {

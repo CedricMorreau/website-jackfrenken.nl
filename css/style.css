@@ -1962,6 +1962,7 @@ input::placeholder {
           color: white; }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000031962}}
     .column-content .column-content .medewerkers-wrapper {
+      margin-right: 96px;
       width: 100%;
       display: -webkit-box;
       display: -ms-flexbox;
@@ -1973,16 +1974,17 @@ input::placeholder {
       @media only screen and (max-width: 1200px) {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000031962}}
         .column-content .column-content .medewerkers-wrapper {
-          padding-right: 2rem; } }
+          padding-right: 2rem;
+          margin-right: 0; } }
       @media only screen and (max-width: 768px) {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000031962}}
         .column-content .column-content .medewerkers-wrapper {
           padding-left: 1rem;
           padding-right: 1rem; } }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000031977}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000031979}}
       .column-content .column-content .medewerkers-wrapper br {
         margin: 8px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000031981}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000031983}}
       .column-content .column-content .medewerkers-wrapper h2 {
         font-size: 2.5rem;
         line-height: 3rem;
@@ -1991,29 +1993,29 @@ input::placeholder {
         padding-top: 0;
         padding-bottom: 0; }
         @media only screen and (max-width: 768px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000031981}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000031983}}
           .column-content .column-content .medewerkers-wrapper h2 {
             margin-top: 2rem;
             font-size: 2rem;
             word-break: break-word; } }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000031996}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000031998}}
       .column-content .column-content .medewerkers-wrapper p {
         padding-right: 13rem;
         max-width: 60rem; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000031999}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032001}}
         .column-content .column-content .medewerkers-wrapper p ul {
           margin-left: 1rem; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032002}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032004}}
         .column-content .column-content .medewerkers-wrapper p a {
           font-size: inherit; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032004}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032006}}
           .column-content .column-content .medewerkers-wrapper p a:hover {
             color: #2CBCAF; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032010}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032012}}
       .column-content .column-content .medewerkers-wrapper ul {
         margin-left: 1rem;
         background-color: none; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032015}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032017}}
       .column-content .column-content .medewerkers-wrapper hr {
         color: #CCE9f5;
         border-color: #CCE9f5;
@@ -2022,10 +2024,10 @@ input::placeholder {
         width: 100%;
         outline: 0;
         border: none; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032040}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032042}}
       .column-content .column-content .medewerkers-wrapper section#flexbox-gallery {
         padding-bottom: calc(10vh - 3rem); }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032042}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032044}}
         .column-content .column-content .medewerkers-wrapper section#flexbox-gallery .parent {
           width: 100%;
           display: -webkit-box;
@@ -2041,29 +2043,29 @@ input::placeholder {
           -webkit-box-direction: normal;
               -ms-flex-flow: row wrap;
                   flex-flow: row wrap; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032048}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032050}}
           .column-content .column-content .medewerkers-wrapper section#flexbox-gallery .parent .child {
             margin: 0;
             width: calc(100%/3);
             position: relative;
             z-index: 1; }
             @media only screen and (max-width: 1200px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032048}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032050}}
               .column-content .column-content .medewerkers-wrapper section#flexbox-gallery .parent .child {
                 width: calc(100%/2); } }
             @media only screen and (max-width: 830px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032048}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032050}}
               .column-content .column-content .medewerkers-wrapper section#flexbox-gallery .parent .child {
                 width: calc(100%/1); } }
             @media only screen and (max-width: 768px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032048}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032050}}
               .column-content .column-content .medewerkers-wrapper section#flexbox-gallery .parent .child {
                 width: calc(100%/2); } }
             @media only screen and (max-width: 480px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032048}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032050}}
               .column-content .column-content .medewerkers-wrapper section#flexbox-gallery .parent .child {
                 width: calc(100%/1); } }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032071}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032073}}
             .column-content .column-content .medewerkers-wrapper section#flexbox-gallery .parent .child .pic {
               width: 100%;
               height: 0;
@@ -2071,70 +2073,70 @@ input::placeholder {
               background-size: cover;
               background-position: center;
               background-repeat: no-repeat; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032079}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032081}}
               .column-content .column-content .medewerkers-wrapper section#flexbox-gallery .parent .child .pic span {
                 color: white;
                 display: block;
                 padding-left: 10%;
                 text-shadow: 2px 2px 7px rgba(0, 0, 0, 0.1); }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032084}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032086}}
                 .column-content .column-content .medewerkers-wrapper section#flexbox-gallery .parent .child .pic span.mw-naam {
                   font-size: 1.2em;
                   font-weight: bold;
                   padding-top: 77%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032089}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032091}}
                 .column-content .column-content .medewerkers-wrapper section#flexbox-gallery .parent .child .pic span.mw-functie {
                   margin-top: -.2em;
                   padding-top: 0; }
 
 /* Actueel overzicht ------------------------------- */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032123}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032125}}
 .actueel-overzicht .column-content .column-content .content-wrapper {
   padding-right: 0;
   width: 100%; }
   @media only screen and (max-width: 768px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032123}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032125}}
     .actueel-overzicht .column-content .column-content .content-wrapper {
       padding-left: 0; } }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032131}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032133}}
   .actueel-overzicht .column-content .column-content .content-wrapper .items-wrapper {
     margin-top: 0;
     margin-left: 0;
     margin-right: 0; }
     @media only screen and (max-width: 768px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032131}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032133}}
       .actueel-overzicht .column-content .column-content .content-wrapper .items-wrapper {
         margin-bottom: 2rem; } }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032138}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032140}}
     .actueel-overzicht .column-content .column-content .content-wrapper .items-wrapper .items-container {
       margin-left: 0;
       margin-right: 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032141}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032143}}
       .actueel-overzicht .column-content .column-content .content-wrapper .items-wrapper .items-container .item-container {
         margin-bottom: 3rem; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032144}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032146}}
         .actueel-overzicht .column-content .column-content .content-wrapper .items-wrapper .items-container .item-container:nth-child(even) {
           margin-top: 4rem; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032148}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032150}}
         .actueel-overzicht .column-content .column-content .content-wrapper .items-wrapper .items-container .item-container:hover .item-button {
           background-color: #2CBCAF; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032151}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032153}}
         .actueel-overzicht .column-content .column-content .content-wrapper .items-wrapper .items-container .item-container:hover .hover-overlay {
           background: rgba(255, 255, 255, 0.15); }
         @media only screen and (max-width: 1200px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032141}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032143}}
           .actueel-overzicht .column-content .column-content .content-wrapper .items-wrapper .items-container .item-container {
             margin-top: 0 !important;
             margin-bottom: 1rem;
             margin-right: 3rem; } }
         @media only screen and (max-width: 768px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032141}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032143}}
           .actueel-overzicht .column-content .column-content .content-wrapper .items-wrapper .items-container .item-container {
             margin-bottom: 1rem;
             margin-right: 0; } }
 
 /* Paging -------------------------------------------  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032178}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032180}}
 .paging-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2143,7 +2145,7 @@ input::placeholder {
       -ms-flex-align: center;
           align-items: center; }
   @media only screen and (max-width: 768px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032178}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032180}}
     .paging-wrapper {
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
@@ -2151,27 +2153,27 @@ input::placeholder {
               flex-direction: column;
       margin-bottom: 2rem; } }
   @media only screen and (max-width: 768px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032186}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032188}}
     .paging-wrapper .text-wrapper {
       width: 100%;
       padding-left: 1rem;
       padding-right: 1rem;
       text-align: center; } }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032193}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032195}}
   .paging-wrapper .text-wrapper .bold {
     font-weight: bold; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032198}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032200}}
   .paging-wrapper .numbers-wrapper {
     margin-left: auto;
     font-weight: bold; }
     @media only screen and (max-width: 768px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032198}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032200}}
       .paging-wrapper .numbers-wrapper {
         width: 100%;
         padding-left: 1rem;
         padding-right: 1rem;
         text-align: center; } }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032209}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032211}}
     .paging-wrapper .numbers-wrapper span a {
       padding-left: 1.2rem;
       padding-right: 1.2rem;
@@ -2179,27 +2181,27 @@ input::placeholder {
       padding-bottom: 0.7rem;
       font-size: 1rem;
       text-decoration: none; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032216}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032218}}
       .paging-wrapper .numbers-wrapper span a:hover {
         text-decoration: underline;
         background-color: #003064;
         color: white;
         text-decoration: none; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032223}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032225}}
     .paging-wrapper .numbers-wrapper span.active {
       color: #DAE1ED;
       padding-left: 0.5rem;
       padding-right: 0.5rem; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032228}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032230}}
     .paging-wrapper .numbers-wrapper span.no-link {
       padding-left: 0.5rem;
       padding-right: 0.5rem; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032234}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032236}}
     .paging-wrapper .numbers-wrapper .next {
       background-color: #003064;
       margin-left: 1rem;
       display: inline-block; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032238}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032240}}
       .paging-wrapper .numbers-wrapper .next a {
         display: block;
         text-decoration: none;
@@ -2209,20 +2211,20 @@ input::placeholder {
         padding-right: 1rem;
         padding-top: 0.7rem;
         padding-bottom: 0.7rem; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032247}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032249}}
         .paging-wrapper .numbers-wrapper .next a:hover {
           background: #DAE1ED; }
 
 /* Aanbod overzicht  -------------------------------------------  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032263}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032265}}
 .aanbod-overzicht .column-content .content-wrapper {
   margin-right: 0;
   padding-right: 0; }
   @media only screen and (max-width: 768px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032263}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032265}}
     .aanbod-overzicht .column-content .content-wrapper {
       padding-right: 1rem; } }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032269}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032271}}
   .aanbod-overzicht .column-content .content-wrapper .bar-alert {
     background-color: #2CBCAF;
     color: white;
@@ -2232,25 +2234,25 @@ input::placeholder {
     padding-right: 2rem;
     margin-bottom: 2rem;
     font-size: 1.5rem; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032278}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032280}}
     .aanbod-overzicht .column-content .content-wrapper .bar-alert a {
       color: white;
       font-size: 1rem;
       margin-top: 1rem;
       display: block; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032283}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032285}}
       .aanbod-overzicht .column-content .content-wrapper .bar-alert a:hover {
         color: #003064; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032288}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032290}}
   .aanbod-overzicht .column-content .content-wrapper .item-wrapper {
     margin-right: 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032290}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032292}}
     .aanbod-overzicht .column-content .content-wrapper .item-wrapper > a {
       text-decoration: none; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032292}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032294}}
       .aanbod-overzicht .column-content .content-wrapper .item-wrapper > a:hover {
         text-decoration: underline; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032296}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032298}}
     .aanbod-overzicht .column-content .content-wrapper .item-wrapper .item-image {
       position: relative;
       -webkit-box-flex: 2;
@@ -2258,55 +2260,55 @@ input::placeholder {
               flex: 2;
       min-height: 20rem; }
       @media only screen and (max-width: 768px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032296}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032298}}
         .aanbod-overzicht .column-content .content-wrapper .item-wrapper .item-image {
           min-height: 0; } }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032303}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032305}}
       .aanbod-overzicht .column-content .content-wrapper .item-wrapper .item-image a {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
         text-decoration: none; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032307}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032309}}
         .aanbod-overzicht .column-content .content-wrapper .item-wrapper .item-image a img {
           max-width: 100%;
           height: auto;
           min-width: 100%;
           -ms-flex-item-align: center;
               align-self: center; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032321}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032323}}
 .aanbod-overzicht .column-content .banner-wrapper {
   margin-right: 0; }
 @media only screen and (max-width: 768px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032327}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032329}}
   .aanbod-overzicht .filter-wrapper {
     display: none; } }
 @media only screen and (max-width: 768px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032332}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032334}}
   .aanbod-overzicht .column-content {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column; } }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032341}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032343}}
 .sidebar-filtering {
   margin-left: 4rem; }
   @media only screen and (max-width: 768px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032341}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032343}}
     .sidebar-filtering {
       margin-left: 0; } }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032347}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032349}}
   .sidebar-filtering .filter-head {
     font-family: "Titillium Web", sans-serif;
     font-weight: bold;
     font-size: 1.2rem;
     margin-top: 2rem;
     cursor: pointer; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032354}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032356}}
     .sidebar-filtering .filter-head.active a {
       color: #2CBCAF; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032360}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032362}}
   .sidebar-filtering .remove-filter {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2316,23 +2318,23 @@ input::placeholder {
             align-items: center;
     text-decoration: none;
     font-size: 1rem; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032365}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032367}}
     .sidebar-filtering .remove-filter:hover {
       color: red;
       cursor: pointer;
       text-decoration: none; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032370}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032372}}
     .sidebar-filtering .remove-filter .remove-icon {
       color: red;
       margin-left: 0.5rem; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032376}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032378}}
   .sidebar-filtering input {
     width: 100%;
     border: none;
     border-bottom: solid 1px #DAE1ED;
     margin-bottom: 1.5rem;
     color: #003064; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032382}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032384}}
     .sidebar-filtering input::-webkit-input-placeholder {
       color: #A1A9B7; }
     .sidebar-filtering input:-ms-input-placeholder {
@@ -2341,12 +2343,12 @@ input::placeholder {
       color: #A1A9B7; }
     .sidebar-filtering input::placeholder {
       color: #A1A9B7; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032387}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032389}}
   .sidebar-filtering .select-wrapper {
     display: inline-block;
     position: relative;
     width: 100%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032391}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032393}}
     .sidebar-filtering .select-wrapper select {
       width: 100%;
       border: none;
@@ -2355,10 +2357,10 @@ input::placeholder {
       -webkit-appearance: none;
       -moz-appearance: none;
       text-indent: 5px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032398}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032400}}
       .sidebar-filtering .select-wrapper select::-ms-expand {
         display: none; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032402}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032404}}
     .sidebar-filtering .select-wrapper:after {
       position: absolute;
       right: 0;
@@ -2371,36 +2373,36 @@ input::placeholder {
       -webkit-transform: rotate(45deg);
               transform: rotate(45deg); }
       @media only screen and (max-width: 768px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032402}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032404}}
         .sidebar-filtering .select-wrapper:after {
           top: 0.2rem;
           right: 0;
           width: 0.5rem;
           height: 0.5rem; } }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032426}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032428}}
   .sidebar-filtering .more-filters {
     margin-top: 2rem;
     margin-bottom: 3rem; }
     @media only screen and (max-width: 768px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032426}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032428}}
       .sidebar-filtering .more-filters {
         margin-bottom: 1rem; } }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032435}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032437}}
   .sidebar-filtering .filter-list-wrapper {
     margin-top: 1rem;
     padding-top: 2rem; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032438}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032440}}
     .sidebar-filtering .filter-list-wrapper .filter-head {
       margin-top: 0;
       margin-bottom: 1rem; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032441}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032443}}
       .sidebar-filtering .filter-list-wrapper .filter-head a {
         text-decoration: none; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032443}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032445}}
         .sidebar-filtering .filter-list-wrapper .filter-head a:hover {
           color: #2CBCAF; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032453}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032455}}
 .item-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2412,11 +2414,11 @@ input::placeholder {
   margin-bottom: 5rem;
   margin-right: 6rem; }
   @media only screen and (max-width: 1366px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032453}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032455}}
     .item-wrapper {
       margin-right: 3rem; } }
   @media only screen and (max-width: 1000px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032453}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032455}}
     .item-wrapper {
       margin-right: 1rem;
       -webkit-box-orient: vertical;
@@ -2424,22 +2426,22 @@ input::placeholder {
           -ms-flex-direction: column-reverse;
               flex-direction: column-reverse; } }
   @media only screen and (max-width: 768px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032453}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032455}}
     .item-wrapper {
       margin-right: 0;
       margin-bottom: 3rem; } }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032471}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032473}}
   .item-wrapper > a {
     -webkit-box-flex: 1;
         -ms-flex: 1;
             flex: 1;
     position: relative; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032476}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032478}}
     .item-wrapper > a:hover .hover-overlay {
       background: rgba(255, 255, 255, 0.1);
       -webkit-transition: background 0.3s ease-in-out;
       transition: background 0.3s ease-in-out; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032484}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032486}}
     .item-wrapper > a .item-description .item-overlay-wrapper {
       background-color: rgba(218, 225, 237, 0.8);
       color: #003064;
@@ -2454,83 +2456,83 @@ input::placeholder {
       overflow: visible;
       z-index: 5; }
       @media only screen and (max-width: 1366px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032484}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032486}}
         .item-wrapper > a .item-description .item-overlay-wrapper {
           padding-top: 2rem;
           padding-bottom: 2rem;
           width: calc(100% + 4rem); } }
       @media only screen and (max-width: 1200px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032484}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032486}}
         .item-wrapper > a .item-description .item-overlay-wrapper {
           width: calc(100% + 12rem); } }
       @media only screen and (max-width: 1000px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032484}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032486}}
         .item-wrapper > a .item-description .item-overlay-wrapper {
           width: 100%;
           position: relative; } }
       @media only screen and (max-width: 768px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032484}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032486}}
         .item-wrapper > a .item-description .item-overlay-wrapper {
           padding-left: 1rem;
           padding-right: 1rem; } }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032519}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032521}}
       .item-wrapper > a .item-description .item-overlay-wrapper:hover {
         background: rgba(218, 225, 237, 0.9);
         -webkit-transition: background 0.3s ease-in-out;
         transition: background 0.3s ease-in-out; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032524}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032526}}
       .item-wrapper > a .item-description .item-overlay-wrapper .item-title {
         font-weight: bold;
         font-size: 1.3rem;
         padding-bottom: 0;
         margin-bottom: 1rem; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032530}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032532}}
         .item-wrapper > a .item-description .item-overlay-wrapper .item-title a {
           text-decoration: none; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032532}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032534}}
           .item-wrapper > a .item-description .item-overlay-wrapper .item-title a:hover {
             text-decoration: underline; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032538}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032540}}
       .item-wrapper > a .item-description .item-overlay-wrapper .item-subtitle {
         font-size: 1.3rem;
         margin-top: 0;
         margin-bottom: 1rem; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032542}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032544}}
         .item-wrapper > a .item-description .item-overlay-wrapper .item-subtitle a {
           text-decoration: none; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032544}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032546}}
           .item-wrapper > a .item-description .item-overlay-wrapper .item-subtitle a:hover {
             text-decoration: underline; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032550}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032552}}
       .item-wrapper > a .item-description .item-overlay-wrapper .item-bold-title {
         font-weight: bold;
         margin-top: 1.5rem;
         margin-bottom: 0;
         padding-bottom: 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032555}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032557}}
         .item-wrapper > a .item-description .item-overlay-wrapper .item-bold-title a {
           text-decoration: none; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032557}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032559}}
           .item-wrapper > a .item-description .item-overlay-wrapper .item-bold-title a:hover {
             text-decoration: underline; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032564}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032566}}
       .item-wrapper > a .item-description .item-overlay-wrapper .item-sub-subtitle {
         margin-bottom: 1.5rem; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032568}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032570}}
       .item-wrapper > a .item-description .item-overlay-wrapper p {
         margin-top: 0;
         margin-bottom: 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032576}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032578}}
     .item-wrapper > a .item-image {
       position: relative;
       -webkit-box-flex: 2;
           -ms-flex: 2;
               flex: 2;
       line-height: 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032581}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032583}}
       .item-wrapper > a .item-image img {
         width: 100%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032585}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032587}}
       .item-wrapper > a .item-image .hover-overlay {
         width: 100%;
         height: 100%;
@@ -2543,11 +2545,11 @@ input::placeholder {
         -webkit-transition: all 0.3s ease-in-out;
         transition: all 0.3s ease-in-out;
         background: rgba(0, 0, 0, 0); }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032596}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032598}}
         .item-wrapper > a .item-image .hover-overlay:hover {
           background: rgba(255, 255, 255, 0.15); }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032608}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032610}}
 .back-link {
   text-decoration: none;
   font-size: 1rem;
@@ -2558,24 +2560,24 @@ input::placeholder {
   display: -ms-flexbox;
   display: flex;
   font-weight: bold; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032616}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032618}}
   .back-link.ali-top {
     margin-top: 0; }
   @media only screen and (max-width: 768px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032608}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032610}}
     .back-link {
       margin-left: 0;
       margin-top: 2rem;
       margin-bottom: 2rem; } }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032628}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032630}}
 .anchor {
   display: block;
   position: relative;
   top: -2rem;
   visibility: hidden; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032635}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032637}}
 .hover-overlay {
   width: 100%;
   height: 100%;
@@ -2587,11 +2589,11 @@ input::placeholder {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   background: rgba(0, 0, 0, 0); }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032645}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032647}}
   .hover-overlay:hover {
     background: rgba(255, 255, 255, 0.15); }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032650}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032652}}
 .image-label {
   position: absolute;
   top: 0;
@@ -2604,30 +2606,30 @@ input::placeholder {
   color: white;
   z-index: 7; }
   @media only screen and (max-width: 768px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032650}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032652}}
     .image-label {
       font-size: 1rem;
       padding-top: 0.7rem;
       padding-bottom: 0.7rem;
       padding-left: 0.7rem;
       padding-right: 0.7rem; } }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032670}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032672}}
   .image-label.status-new {
     background-color: #2CBCAF; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032675}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032677}}
   .image-label.status-sold {
     background-color: #D64242; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032680}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032682}}
   .image-label.status-soldsubject {
     background-color: #C3C12C; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032684}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032686}}
   .image-label.status-loweredprice {
     background-color: #2CBCAF; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032688}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032690}}
   .image-label.status-openhouse {
     background-color: #2CBCAF; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032694}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032696}}
 .banner-wrapper {
   background-color: #0091D1;
   color: white;
@@ -2643,11 +2645,11 @@ input::placeholder {
   margin-right: 6rem;
   margin-bottom: 3rem; }
   @media only screen and (max-width: 1366px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032694}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032696}}
     .banner-wrapper {
       margin-right: 3rem; } }
   @media only screen and (max-width: 1200px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032694}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032696}}
     .banner-wrapper {
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
@@ -2655,21 +2657,21 @@ input::placeholder {
               flex-direction: column;
       margin-right: 0; } }
   @media only screen and (max-width: 768px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032694}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032696}}
     .banner-wrapper {
       padding-left: 2rem;
       padding-right: 2rem; } }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032717}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032719}}
   .banner-wrapper:hover {
     background-color: #003064;
     color: white; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032720}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032722}}
     .banner-wrapper:hover .banner-title {
       color: white; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032723}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032725}}
     .banner-wrapper:hover .banner-link {
       text-decoration: underline; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032728}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032730}}
   .banner-wrapper .banner-title {
     font-size: 2.5rem;
     font-family: "bodoni-bold";
@@ -2683,15 +2685,15 @@ input::placeholder {
         align-self: flex-end;
     padding-bottom: 1rem; }
     @media only screen and (max-width: 1200px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032728}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032730}}
       .banner-wrapper .banner-title {
         margin-right: 0; } }
     @media only screen and (max-width: 768px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032728}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032730}}
       .banner-wrapper .banner-title {
         margin-top: 0;
         font-size: 2rem; } }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032747}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032749}}
   .banner-wrapper .banner-link {
     -webkit-box-flex: 2;
         -ms-flex: 2;
@@ -2706,18 +2708,18 @@ input::placeholder {
     white-space: nowrap; }
 
 /* Aanbod detail template ----------------------------------------- */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032760}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032762}}
 .aanbod-detail {
   /* Nieuwbouw overzicht */ }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032762}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032764}}
   .aanbod-detail .column-header .header-title {
     background-color: rgba(218, 225, 237, 0.8);
     min-height: 27rem; }
     @media only screen and (max-width: 768px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032762}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032764}}
       .aanbod-detail .column-header .header-title {
         min-height: 0; } }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032768}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032770}}
     .aanbod-detail .column-header .header-title .openhouse {
       font-size: 1.2rem;
       background-color: #2CBCAF;
@@ -2728,47 +2730,47 @@ input::placeholder {
       padding-top: 0.3rem;
       padding-bottom: 0.3rem;
       line-height: 1.8rem; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032783}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032785}}
   .aanbod-detail .content-image {
     height: auto;
     min-height: 30rem;
     padding-top: 0;
     padding-bottom: 0; }
     @media only screen and (max-width: 768px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032783}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032785}}
       .aanbod-detail .content-image {
         min-height: 0; } }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032793}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032795}}
     .aanbod-detail .content-image .image-container {
       height: 100%; }
       @media only screen and (max-width: 768px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032793}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032795}}
         .aanbod-detail .content-image .image-container {
           margin-bottom: 1rem; } }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032798}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032800}}
       .aanbod-detail .content-image .image-container .rsSlide {
         height: auto; }
       @media only screen and (max-width: 768px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032803}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032805}}
         .aanbod-detail .content-image .image-container .rsImg {
           width: 100% !important;
           height: auto !important; } }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032809}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032811}}
       .aanbod-detail .content-image .image-container #royal-slider {
         max-height: 52rem; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032811}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032813}}
         .aanbod-detail .content-image .image-container #royal-slider .rsThumbs {
           display: none; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032815}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032817}}
         .aanbod-detail .content-image .image-container #royal-slider.rsFullscreen .rsThumbs {
           display: block; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032822}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032824}}
       .aanbod-detail .content-image .image-container .rsArrowLeft {
         right: 10rem;
         height: 5rem;
         width: 5rem;
         bottom: 3px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032827}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032829}}
         .aanbod-detail .content-image .image-container .rsArrowLeft .rsArrowIcn {
           background-image: none !important;
           background-color: rgba(0, 48, 100, 0.1);
@@ -2776,23 +2778,23 @@ input::placeholder {
           margin: 0;
           width: 100%;
           height: 100%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032834}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032836}}
           .aanbod-detail .content-image .image-container .rsArrowLeft .rsArrowIcn:hover {
             background-color: #003064; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032837}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032839}}
           .aanbod-detail .content-image .image-container .rsArrowLeft .rsArrowIcn:after {
             content: "\2190";
             text-align: center;
             color: white;
             display: block;
             line-height: 4.5rem; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032847}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032849}}
       .aanbod-detail .content-image .image-container .rsArrowRight {
         height: 5rem;
         width: 5rem;
         right: 5rem;
         bottom: 3px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032853}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032855}}
         .aanbod-detail .content-image .image-container .rsArrowRight .rsArrowIcn {
           background-image: none !important;
           background-color: #0091D1;
@@ -2800,17 +2802,17 @@ input::placeholder {
           margin: 0;
           width: 100%;
           height: 100%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032860}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032862}}
           .aanbod-detail .content-image .image-container .rsArrowRight .rsArrowIcn:hover {
             background-color: #003064; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032863}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032865}}
           .aanbod-detail .content-image .image-container .rsArrowRight .rsArrowIcn:after {
             content: "\2192";
             text-align: center;
             color: white;
             display: block;
             line-height: 4.5rem; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032873}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032875}}
       .aanbod-detail .content-image .image-container .rsFullscreenBtn {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -2827,48 +2829,48 @@ input::placeholder {
         -webkit-box-pack: center;
             -ms-flex-pack: center;
                 justify-content: center; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032884}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032886}}
         .aanbod-detail .content-image .image-container .rsFullscreenBtn .rsFullscreenIcn:hover {
           background-color: #003064;
           opacity: 1 !important; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032890}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032892}}
         .aanbod-detail .content-image .image-container .rsFullscreenBtn:hover {
           background-color: #003064; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032897}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032899}}
   .aanbod-detail .banner-wrapper {
     margin-left: 4rem;
     margin-top: 2rem; }
     @media only screen and (max-width: 768px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032897}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032899}}
       .aanbod-detail .banner-wrapper {
         margin-left: 1rem;
         margin-right: 1rem; } }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032908}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032910}}
   .aanbod-detail .content-wrapper #map_canvas {
     width: 100%;
     height: 100%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032913}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032915}}
   .aanbod-detail .content-wrapper form {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex; }
     @media only screen and (max-width: 768px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032913}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032915}}
       .aanbod-detail .content-wrapper form {
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
             -ms-flex-direction: column;
                 flex-direction: column; } }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032919}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032921}}
     .aanbod-detail .content-wrapper form fieldset {
       width: 50%;
       border: none;
       padding-right: 2rem; }
       @media only screen and (max-width: 768px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032919}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032921}}
         .aanbod-detail .content-wrapper form fieldset {
           width: 100%; } }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032927}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032929}}
       .aanbod-detail .content-wrapper form fieldset input {
         display: block;
         margin-bottom: 2rem;
@@ -2878,10 +2880,10 @@ input::placeholder {
         background-color: transparent;
         -webkit-transition: background-color 200ms ease-in-out;
         transition: background-color 200ms ease-in-out; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032936}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032938}}
         .aanbod-detail .content-wrapper form fieldset input.error {
           color: red; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032938}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032940}}
           .aanbod-detail .content-wrapper form fieldset input.error::-webkit-input-placeholder {
             color: red; }
           .aanbod-detail .content-wrapper form fieldset input.error:-ms-input-placeholder {
@@ -2890,18 +2892,18 @@ input::placeholder {
             color: red; }
           .aanbod-detail .content-wrapper form fieldset input.error::placeholder {
             color: red; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032943}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032945}}
         .aanbod-detail .content-wrapper form fieldset input[type="submit"] {
           padding: 1rem;
           background-color: #2CBCAF;
           color: white;
           cursor: pointer;
           border: none; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032949}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032951}}
           .aanbod-detail .content-wrapper form fieldset input[type="submit"]:hover {
             background-color: #003064;
             color: white; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032955}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032957}}
       .aanbod-detail .content-wrapper form fieldset textarea {
         height: 100%;
         max-height: 15rem;
@@ -2909,7 +2911,7 @@ input::placeholder {
         padding: 0.5rem;
         margin-bottom: 1rem;
         border: 1px dotted #003064; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032967}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032969}}
   .aanbod-detail .content-wrapper .table-flex-wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2917,10 +2919,10 @@ input::placeholder {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     width: 100%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032972}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032974}}
     .aanbod-detail .content-wrapper .table-flex-wrapper h2 {
       margin-top: 1rem; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032975}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032977}}
     .aanbod-detail .content-wrapper .table-flex-wrapper .table-wrapper {
       margin-left: 2rem;
       margin-right: 2rem;
@@ -2933,7 +2935,7 @@ input::placeholder {
           -ms-flex: 1 0 calc(50% - 4rem);
               flex: 1 0 calc(50% - 4rem); }
       @media only screen and (max-width: 768px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032975}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032977}}
         .aanbod-detail .content-wrapper .table-flex-wrapper .table-wrapper {
           width: calc(100%);
           -webkit-box-flex: 1;
@@ -2941,18 +2943,18 @@ input::placeholder {
                   flex: 1 0 calc(100%);
           margin-left: 0;
           margin-right: 0; } }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032989}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032991}}
       .aanbod-detail .content-wrapper .table-flex-wrapper .table-wrapper table {
         width: 100%;
         max-width: 40rem;
         margin-bottom: 2rem; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032993}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000032995}}
         .aanbod-detail .content-wrapper .table-flex-wrapper .table-wrapper table th {
           text-align: left;
           padding-right: 2rem;
           width: 15rem;
           vertical-align: top; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033006}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033008}}
   .aanbod-detail .counter {
     float: left;
     width: 100%;
@@ -2960,7 +2962,7 @@ input::placeholder {
     line-height: 35px;
     font-style: italic;
     margin-bottom: 1rem; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033015}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033017}}
   .aanbod-detail .projectinfo {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2969,19 +2971,19 @@ input::placeholder {
     height: auto;
     background-color: transparent !important; }
     @media only screen and (max-width: 768px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033015}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033017}}
       .aanbod-detail .projectinfo {
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
             -ms-flex-direction: column;
                 flex-direction: column; } }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033024}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033026}}
     .aanbod-detail .projectinfo > span {
       display: block;
       float: left;
       -webkit-box-sizing: border-box;
               box-sizing: border-box; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033031}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033033}}
     .aanbod-detail .projectinfo span.image {
       position: relative;
       display: block;
@@ -2991,18 +2993,18 @@ input::placeholder {
       height: 100%;
       width: 35%; }
       @media only screen and (max-width: 768px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033031}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033033}}
         .aanbod-detail .projectinfo span.image {
           width: 100%;
           padding-bottom: 0; } }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033044}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033046}}
       .aanbod-detail .projectinfo span.image div {
         position: absolute;
         left: -50%;
         top: -50%;
         width: 200%;
         height: 200%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033050}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033052}}
         .aanbod-detail .projectinfo span.image div img {
           max-width: 100%;
           position: absolute;
@@ -3015,39 +3017,39 @@ input::placeholder {
           min-width: 50%;
           min-height: 50%;
           max-width: 60%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033067}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033069}}
     .aanbod-detail .projectinfo span.info {
       width: 65%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033069}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033071}}
       .aanbod-detail .projectinfo span.info a {
         background-color: #DAE1ED;
         margin-bottom: 1rem; }
       @media only screen and (max-width: 768px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033067}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033069}}
         .aanbod-detail .projectinfo span.info {
           width: 100%; } }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033081}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033083}}
     .aanbod-detail .projectinfo a.objectInfo {
       position: relative;
       display: block;
       padding: 3% 4% 3% 4%;
       color: black;
       text-decoration: none; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033087}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033089}}
       .aanbod-detail .projectinfo a.objectInfo:hover {
         background-color: #003064;
         color: white; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033093}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033095}}
     .aanbod-detail .projectinfo .read-more {
       display: block;
       margin-top: 1em; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033098}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033100}}
     .aanbod-detail .projectinfo .sold + .objectInfo {
       display: block;
       padding: 3% 4% 3% 4%;
       margin-bottom: 1rem;
       background-color: #DAE1ED; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033106}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033108}}
     .aanbod-detail .projectinfo .sold {
       color: white;
       font-weight: bold;
@@ -3056,15 +3058,15 @@ input::placeholder {
       padding-right: 1rem;
       padding-top: 0.3rem;
       padding-bottom: 0.3rem; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033115}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033117}}
     .aanbod-detail .projectinfo .headerAanbod {
       background-color: #00519B;
       padding-bottom: 0.5rem; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033118}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033120}}
       .aanbod-detail .projectinfo .headerAanbod .floatRight {
         margin-left: auto; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033131}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033133}}
 header.headerAanbod {
   padding: 1rem;
   color: white;
@@ -3073,38 +3075,38 @@ header.headerAanbod {
   display: flex;
   line-height: 1.5rem; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033139}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033141}}
 header.headerAanbod {
   background-color: #003064; }
 
 /* Actueel detail ---------------------------------------------- */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033150}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033152}}
 .actueel-detail .header-title {
   position: relative;
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   bottom: none; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033156}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033158}}
 .actueel-detail .content-image {
   height: 35rem; }
   @media only screen and (max-width: 768px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033156}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033158}}
     .actueel-detail .content-image {
       height: 18rem; } }
 
 /* Contact ---------------------------------------------------- */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033169}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033171}}
 .contact .content-image {
   padding-top: 0;
   padding-bottom: 0;
   background-image: none;
   height: auto; }
   @media only screen and (max-width: 768px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033169}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033171}}
     .contact .content-image {
       height: auto !important; } }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033180}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033182}}
 .contact .header-title {
   position: relative;
   top: 50%;
@@ -3114,67 +3116,67 @@ header.headerAanbod {
   max-width: 33rem !important;
   min-width: 33rem !important;
   height: auto !important; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033188}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033190}}
   .contact .header-title h1 {
     font-size: 1rem !important;
     font-family: "Titillium Web", sans-serif; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033192}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033194}}
   .contact .header-title h2 {
     font-size: 3rem !important; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033196}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033198}}
 .contact .content-image {
   height: 35rem; }
   @media only screen and (max-width: 768px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033196}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033198}}
     .contact .content-image {
       height: 18rem; } }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033203}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033205}}
 .contact .column-content {
   padding-top: 1rem; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033207}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033209}}
 .contact .location-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 4rem; }
   @media only screen and (max-width: 1000px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033207}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033209}}
     .contact .location-wrapper {
       -webkit-box-orient: vertical;
       -webkit-box-direction: reverse;
           -ms-flex-direction: column-reverse;
               flex-direction: column-reverse;
       margin-bottom: 2rem; } }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033216}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033218}}
   .contact .location-wrapper:last-of-type {
     margin-bottom: 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033220}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033222}}
   .contact .location-wrapper .location-details {
     -webkit-box-flex: 2;
         -ms-flex: 2;
             flex: 2; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033222}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033224}}
     .contact .location-wrapper .location-details .times-table {
       border-collapse: collapse;
       margin-bottom: 1em;
       margin-left: -0.5rem; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033226}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033228}}
       .contact .location-wrapper .location-details .times-table td {
         padding-left: 0.5rem;
         padding-right: 0.5rem; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033230}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033232}}
       .contact .location-wrapper .location-details .times-table .today {
         background-color: #DAE1ED; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033238}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033240}}
   .contact .location-wrapper .location-photo {
     -webkit-box-flex: 3;
         -ms-flex: 3;
             flex: 3; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033240}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033242}}
     .contact .location-wrapper .location-photo img {
       width: 100%;
       height: auto; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033248}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033250}}
 .contact .social-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3188,7 +3190,7 @@ header.headerAanbod {
           align-items: center;
   font-weight: bold; }
   @media only screen and (max-width: 768px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033248}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033250}}
     .contact .social-wrapper {
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
@@ -3198,7 +3200,7 @@ header.headerAanbod {
       -webkit-box-align: start;
           -ms-flex-align: start;
               align-items: flex-start; } }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033260}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033262}}
   .contact .social-wrapper .social-items {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -3208,48 +3210,48 @@ header.headerAanbod {
         -ms-flex-align: center;
             align-items: center; }
     @media only screen and (max-width: 768px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033260}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033262}}
       .contact .social-wrapper .social-items {
         margin-left: 0;
         margin-top: 1rem; } }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033270}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033272}}
     .contact .social-wrapper .social-items span {
       margin-right: 1rem; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033274}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033276}}
     .contact .social-wrapper .social-items a {
       width: 3rem;
       display: inline-block;
       margin-right: 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033278}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033280}}
       .contact .social-wrapper .social-items a img {
         width: 100%;
         height: auto; }
 
 /* Contact form overlay --------------------------------- */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033293}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033295}}
 .a-fadeIn {
   -webkit-animation: fadeIn .25s forwards;
           animation: fadeIn .25s forwards; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033297}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033299}}
 .a-fadeOut {
   -webkit-animation: fadeOut .25s;
           animation: fadeOut .25s; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033301}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033303}}
 .a-fadeDown {
   -webkit-animation: fadeDown .25s;
           animation: fadeDown .25s; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033305}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033307}}
 .error {
   border-color: #00519B !important; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033309}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033311}}
 #bedankt-melding {
   text-align: center; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033313}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033315}}
 .contact-overlay-wrapper {
   display: none;
   background-color: #DAE1ED;
@@ -3260,7 +3262,7 @@ header.headerAanbod {
   top: 0;
   left: 0;
   color: #003064; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033325}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033327}}
   .contact-overlay-wrapper.Contact--show {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -3270,7 +3272,7 @@ header.headerAanbod {
         -ms-flex-direction: column;
             flex-direction: column;
     overflow: scroll; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033331}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033333}}
   .contact-overlay-wrapper .contact-overlay-container {
     width: 60vw;
     padding-top: 5vh;
@@ -3283,14 +3285,14 @@ header.headerAanbod {
             align-items: center;
     height: 100%; }
     @media only screen and (max-width: 768px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033331}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033333}}
       .contact-overlay-wrapper .contact-overlay-container {
         width: 70vw; } }
     @media only screen and (max-width: 480px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033331}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033333}}
       .contact-overlay-wrapper .contact-overlay-container {
         width: 90vw; } }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033346}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033348}}
     .contact-overlay-wrapper .contact-overlay-container .contact-content-wrapper {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -3301,28 +3303,28 @@ header.headerAanbod {
               flex-direction: row;
       margin-bottom: 2rem; }
       @media only screen and (max-width: 768px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033346}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033348}}
         .contact-overlay-wrapper .contact-overlay-container .contact-content-wrapper {
           -webkit-box-orient: vertical;
           -webkit-box-direction: normal;
               -ms-flex-direction: column;
                   flex-direction: column; } }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033354}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033356}}
       .contact-overlay-wrapper .contact-overlay-container .contact-content-wrapper h2 {
         -webkit-box-flex: 2;
             -ms-flex: 2;
                 flex: 2;
         line-height: 3.5rem; }
         @media only screen and (max-width: 768px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033354}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033356}}
           .contact-overlay-wrapper .contact-overlay-container .contact-content-wrapper h2 {
             font-size: 4rem; } }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033362}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033364}}
       .contact-overlay-wrapper .contact-overlay-container .contact-content-wrapper form {
         -webkit-box-flex: 3;
             -ms-flex: 3;
                 flex: 3; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033367}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033369}}
     .contact-overlay-wrapper .contact-overlay-container h2 {
       font-size: 4em;
       margin-right: 1em;
@@ -3331,10 +3333,10 @@ header.headerAanbod {
       text-align: right;
       line-height: 3rem; }
       @media only screen and (max-width: 480px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033367}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033369}}
         .contact-overlay-wrapper .contact-overlay-container h2 {
           font-size: 1.5em; } }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033379}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033381}}
     .contact-overlay-wrapper .contact-overlay-container .label-wrapper {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -3343,12 +3345,12 @@ header.headerAanbod {
       -webkit-box-direction: normal;
           -ms-flex-direction: row;
               flex-direction: row; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033382}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033384}}
       .contact-overlay-wrapper .contact-overlay-container .label-wrapper input {
         -webkit-box-flex: 2;
             -ms-flex: 2;
                 flex: 2; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033385}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033387}}
       .contact-overlay-wrapper .contact-overlay-container .label-wrapper label {
         -webkit-box-flex: 1;
             -ms-flex: 1;
@@ -3371,7 +3373,7 @@ header.headerAanbod {
                 flex-grow: 0;
         -ms-flex-preferred-size: 10rem;
             flex-basis: 10rem; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033400}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033402}}
     .contact-overlay-wrapper .contact-overlay-container input {
       display: block;
       border-color: white;
@@ -3388,7 +3390,7 @@ header.headerAanbod {
       padding-top: 0.5em;
       padding-right: 1em;
       padding-bottom: 1em; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033416}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033418}}
       .contact-overlay-wrapper .contact-overlay-container input::-webkit-input-placeholder {
         color: #003064;
         font-family: "bodoni-bold";
@@ -3405,19 +3407,19 @@ header.headerAanbod {
         color: #003064;
         font-family: "bodoni-bold";
         font-weight: normal; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033422}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033424}}
       .contact-overlay-wrapper .contact-overlay-container input[type="submit"] {
         margin-top: 1em;
         background-color: #2CBCAF;
         color: white;
         border: none; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033428}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033430}}
         .contact-overlay-wrapper .contact-overlay-container input[type="submit"]:hover {
           color: white;
           background-color: #003064;
           cursor: pointer;
           border: none; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033437}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033439}}
     .contact-overlay-wrapper .contact-overlay-container textarea {
       -webkit-box-sizing: border-box;
               box-sizing: border-box;
@@ -3435,10 +3437,10 @@ header.headerAanbod {
       font-family: "Titillium Web", sans-serif;
       font-weight: normal; }
       @media only screen and (max-width: 480px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033437}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033439}}
         .contact-overlay-wrapper .contact-overlay-container textarea {
           height: 7em; } }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033456}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033458}}
       .contact-overlay-wrapper .contact-overlay-container textarea::-webkit-input-placeholder {
         color: #003064;
         font-family: "Titillium Web", sans-serif;
@@ -3455,7 +3457,7 @@ header.headerAanbod {
         color: #003064;
         font-family: "Titillium Web", sans-serif;
         font-weight: bold; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033465}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033467}}
     .contact-overlay-wrapper .contact-overlay-container .close-overlay {
       position: absolute;
       right: 2em;
@@ -3464,40 +3466,40 @@ header.headerAanbod {
       text-decoration: none;
       width: 2em;
       height: 2em; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033472}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033474}}
       .contact-overlay-wrapper .contact-overlay-container .close-overlay:hover {
         fill: #2CBCAF;
         cursor: pointer; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033481}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033483}}
     .contact-overlay-wrapper .contact-overlay-container .close-overlay-text {
       text-align: center;
       text-decoration: none;
       margin-top: 1rem;
       padding-bottom: 2em; }
       @media only screen and (max-width: 480px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033481}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033483}}
         .contact-overlay-wrapper .contact-overlay-container .close-overlay-text {
           margin-top: 3vh; } }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033489}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033491}}
       .contact-overlay-wrapper .contact-overlay-container .close-overlay-text:hover {
         color: #2CBCAF;
         cursor: pointer; }
 
 /* Zoekersformulier -------------------------------------- */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033502}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033504}}
 .zoekersformulier .column-content .column-content .content-wrapper {
   padding-right: 1rem;
   padding-right: 0;
   width: 100%; }
   @media only screen and (max-width: 768px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033502}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033504}}
     .zoekersformulier .column-content .column-content .content-wrapper {
       padding-right: 1rem; } }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033514}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033516}}
 .zoekersformulier form {
   width: 100%;
   font-size: 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033519}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033521}}
 .zoekersformulier input {
   font-size: 1rem;
   padding-top: 0.5rem;
@@ -3506,27 +3508,27 @@ header.headerAanbod {
   border: solid 1px #DAE1ED;
   color: #003064; }
   @media only screen and (max-width: 768px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033527}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033529}}
     .zoekersformulier input[type=text] {
       width: 100%; } }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033534}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033536}}
 .zoekersformulier select {
   font-size: 1rem;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   border: solid 1px #DAE1ED; }
   @media only screen and (max-width: 768px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033534}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033536}}
     .zoekersformulier select {
       width: 100% !important;
       margin-bottom: 1rem; } }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033545}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033547}}
 .zoekersformulier label {
   font-size: 1rem; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033549}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033551}}
 .zoekersformulier .subtitle {
   font-weight: bold; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033554}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033556}}
 .zoekersformulier .title-row-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3536,7 +3538,7 @@ header.headerAanbod {
           align-items: center;
   margin-top: 2rem;
   margin-bottom: 1rem; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033560}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033562}}
   .zoekersformulier .title-row-wrapper .title-text {
     -webkit-box-flex: 0;
         -ms-flex-positive: 0;
@@ -3551,7 +3553,7 @@ header.headerAanbod {
     margin-right: 1.5rem;
     -ms-flex-preferred-size: auto;
         flex-basis: auto; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033571}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033573}}
   .zoekersformulier .title-row-wrapper .title-line {
     -webkit-box-flex: 1;
         -ms-flex-positive: 1;
@@ -3560,67 +3562,67 @@ header.headerAanbod {
         flex: 2;
     height: 2px;
     background-color: #003064; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033579}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033581}}
 .zoekersformulier .name-row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
   @media only screen and (max-width: 768px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033579}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033581}}
     .zoekersformulier .name-row {
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
           -ms-flex-direction: column;
               flex-direction: column; } }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033584}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033586}}
   .zoekersformulier .name-row .gender-wrapper {
     white-space: nowrap; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033588}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033590}}
   .zoekersformulier .name-row label {
     margin-right: 1rem; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033594}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033596}}
 .zoekersformulier .contactgegevens-row div {
   display: inline; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033597}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033599}}
 .zoekersformulier .contactgegevens-row a {
   font-size: 1rem; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033602}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033604}}
 .zoekersformulier .plaats-row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
   @media only screen and (max-width: 768px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033602}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033604}}
     .zoekersformulier .plaats-row {
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
           -ms-flex-direction: column;
               flex-direction: column; } }
   @media only screen and (max-width: 768px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033608}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033610}}
     .zoekersformulier .plaats-row label {
       width: 100%; } }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033614}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033616}}
   .zoekersformulier .plaats-row label select {
     width: 100%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033620}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033622}}
   .zoekersformulier .plaats-row select {
     width: 100%; }
   @media only screen and (max-width: 768px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033624}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033626}}
     .zoekersformulier .plaats-row .size20 {
       width: 100%; } }
   @media only screen and (max-width: 768px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033630}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033632}}
     .zoekersformulier .plaats-row .size40 {
       width: 100%;
       padding-left: 0;
       padding-right: 0; } }
   @media only screen and (max-width: 768px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033638}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033640}}
     .zoekersformulier .plaats-row .plaatskeuzes {
       width: 100%; } }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033643}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033645}}
   .zoekersformulier .plaats-row .control-arrows-wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -3630,14 +3632,14 @@ header.headerAanbod {
         -ms-flex-direction: row;
             flex-direction: row;
     text-align: center; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033647}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033649}}
     .zoekersformulier .plaats-row .control-arrows-wrapper div {
       -webkit-box-flex: 1;
           -ms-flex: 1;
               flex: 1;
       -ms-flex-negative: 0;
           flex-shrink: 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033650}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033652}}
       .zoekersformulier .plaats-row .control-arrows-wrapper div a {
         display: -webkit-inline-box;
         display: -ms-inline-flexbox;
@@ -3651,73 +3653,73 @@ header.headerAanbod {
         padding-top: 0.5rem;
         padding-bottom: 0.5rem; }
         @media only screen and (max-width: 768px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033650}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033652}}
           .zoekersformulier .plaats-row .control-arrows-wrapper div a {
             -webkit-transform: rotate(90deg);
                     transform: rotate(90deg);
             margin-top: 1rem;
             margin-bottom: 1rem; } }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033666}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033668}}
         .zoekersformulier .plaats-row .control-arrows-wrapper div a:hover {
           background-color: #003064;
           color: white; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033676}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033678}}
 .zoekersformulier .financieel-row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
   @media only screen and (max-width: 768px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033676}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033678}}
     .zoekersformulier .financieel-row {
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
           -ms-flex-direction: column;
               flex-direction: column; } }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033681}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033683}}
   .zoekersformulier .financieel-row .checkbox-wrapper {
     white-space: nowrap; }
   @media only screen and (max-width: 768px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033685}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033687}}
     .zoekersformulier .financieel-row .size30 {
       width: 100%;
       margin-bottom: 1rem; } }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033693}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033695}}
 .zoekersformulier .form-item {
   padding-left: 1rem;
   padding-right: 1rem;
   margin-right: 1rem;
   font-size: 1rem; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033698}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033700}}
   .zoekersformulier .form-item:first-of-type {
     margin-left: 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033702}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033704}}
   .zoekersformulier .form-item:last-of-type {
     margin-right: 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033709}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033711}}
 .zoekersformulier .kenmerken-row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
   @media only screen and (max-width: 768px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033709}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033711}}
     .zoekersformulier .kenmerken-row {
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
           -ms-flex-direction: column;
               flex-direction: column; } }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033716}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033718}}
 .zoekersformulier .opmerkingen-row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
   @media only screen and (max-width: 768px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033716}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033718}}
     .zoekersformulier .opmerkingen-row {
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
           -ms-flex-direction: column;
               flex-direction: column; } }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033721}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033723}}
   .zoekersformulier .opmerkingen-row textarea {
     height: 5rem;
     margin-right: 1rem;
@@ -3728,56 +3730,56 @@ header.headerAanbod {
     padding-bottom: 1rem;
     font-size: 1rem; }
     @media only screen and (max-width: 768px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033721}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033723}}
       .zoekersformulier .opmerkingen-row textarea {
         width: 100%;
         margin-bottom: 1rem; } }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033736}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033738}}
   .zoekersformulier .opmerkingen-row input[type="submit"] {
     height: 5rem;
     background-color: #2CBCAF;
     color: white;
     cursor: pointer; }
     @media only screen and (max-width: 768px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033736}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033738}}
       .zoekersformulier .opmerkingen-row input[type="submit"] {
         width: 100%;
         margin-bottom: 1rem; } }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033746}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033748}}
     .zoekersformulier .opmerkingen-row input[type="submit"]:hover {
       background-color: #003064; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033753}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033755}}
 .zoekersformulier .size10 {
   width: 10%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033757}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033759}}
 .zoekersformulier .size15 {
   width: 15%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033761}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033763}}
 .zoekersformulier .size20 {
   width: 20%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033765}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033767}}
 .zoekersformulier .size25 {
   width: 25%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033769}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033771}}
 .zoekersformulier .size30 {
   width: 30%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033773}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033775}}
 .zoekersformulier .size40 {
   width: 40%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033777}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033779}}
 .zoekersformulier .size50 {
   width: 50%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033780}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033782}}
 .zoekersformulier .size75 {
   width: 75%; }
 
 /* Partners ----------------------------------------------- */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033791}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033793}}
 .partners-table td {
   width: 25%;
   padding-left: 0.5rem;
   padding-right: 0.5rem; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033795}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/PIM\%20client\/GIT\%20repositories\/Jack\%20Frenken\/Website\%20-\%20Jackfrenken\.nl\/css\/style\.scss}line{font-family:\000033797}}
   .partners-table td img {
     width: auto;
     max-width: 70%;
