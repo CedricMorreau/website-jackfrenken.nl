@@ -25,7 +25,8 @@
 			?>
 			
 			<p class="title-price"><?php echo $priceText; ?></p>
-
+			
+			<a href="<?php echo $template->findPermalink(65, 1); ?>" class="title-link">Bereken hier uw hypotheeklasten &#x27F6;</a>
 			<a href="javascript:void(0);" onclick="javascript:$.scrollTo('#content', 1000)" class="scroll-down">Meer over deze woning &darr;</a>
 		</div>
 	</div>

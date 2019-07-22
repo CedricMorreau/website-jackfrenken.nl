@@ -7,7 +7,7 @@
   src: url("../fonts/BodoniFLF-Bold.ttf");
   font-weight: bold; 
 }
-
+ 
 
 @font-face {
   font-family: "helvetica neue";
@@ -1568,14 +1568,14 @@ input::placeholder {
 			background-color: $overlay-col;
 			position: absolute;
 			bottom: 0;
-    		max-width: 50rem;
-   			min-width: 40rem;
+			max-width: 50rem;
+			min-width: 40rem;
    			// height: 70%;
-  			@media only screen and (max-width: $container-size-m) {
+  		@media only screen and (max-width: $container-size-m) {
 				min-width: 0;
 				max-width: none;
-  				min-width: 100% !important;
-  				max-width: 100% !important;
+				min-width: 100% !important;
+				max-width: 100% !important;
 				width: 100%;
 				height: auto;
 				position: relative;
@@ -1585,10 +1585,19 @@ input::placeholder {
 				padding-right: $margin-size-s;
 				padding-top: 1rem;
 				padding-bottom: 2rem;
-  			}
+  		}
 
   			.title-price {
   				font-size: 1.3rem;
+  			}
+
+  			.title-link {
+  				color: $qua-col;
+  				text-decoration: none;
+  				&:hover {
+	  				text-decoration: underline;
+  					color: $pri-col;
+  				}
   			}
 
 			.title-category {
@@ -1626,9 +1635,9 @@ input::placeholder {
 					display: none;
 				}
 
-
 				&:hover {
 					text-decoration: underline;
+					color: $qua-col;
 				}
 			}
 
@@ -2697,7 +2706,7 @@ input::placeholder {
 }
 
 .banner-wrapper {
-	background-color: $oct-col;
+	background-color: $qua-col;
 	color: $lit-col;
 	height: auto;
 	display: flex;
