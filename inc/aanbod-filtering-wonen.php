@@ -150,7 +150,7 @@
 			// Load the cache for functions
 			$filterCache = unserialize(file_get_contents($documentRoot . 'data/cache/og/filters_wonen_koop.txt'));
 			
-			$typeArray = array('eengezinswoning', 'herenhuis', 'villa', 'landhuis', 'bungalow', 'woonboerderij', 'grachtenpand', 'woonboot', 'stacaravan', 'woonwagen', 'landgoed');
+			$typeArray = array('appartement', 'eengezinswoning', 'herenhuis', 'villa', 'landhuis', 'bungalow', 'woonboerderij', 'grachtenpand', 'woonboot', 'stacaravan', 'woonwagen', 'landgoed');
 			$fullArray = array();
 			
 			$totalCount = 0;

@@ -33,7 +33,8 @@ foreach ($cases as $key => $val) {
 			// Fetch all where google_status=0
 			$query = "SELECT * FROM `tbl_OG_wonen` WHERE (NOT `tbl_OG_wonen`.`objectDetails_StatusBeschikbaarheid_Status` IN ('Ingetrokken', 'ingetrokken', 'verkocht', 'gearchiveerd')) AND `object_Web_Prioriteit`!=80 AND `objectDetails_Bouwvorm`!='nieuwbouw' AND (`objectDetails_Koop_Koopprijs`>0)";
 			$result = $db->prepare($query);
-
+			
+			$hoofdfuncties['appartement'] = 'appartement';
 			$hoofdfuncties['eengezinswoning'] = 'eengezinswoning';
 			$hoofdfuncties['herenhuis'] = 'herenhuis';
 			$hoofdfuncties['villa'] = 'villa';
@@ -79,12 +80,19 @@ foreach ($cases as $key => $val) {
 					$markerData[] = "arr_markerData[" . $counter . "] = func_markerData(" . $data['google_lat'] . "," . $data['google_lng']. ",'" . addslashes(obj_generateAddress($data['objectDetails_Adres_NL_Straatnaam'], $data['objectDetails_Adres_NL_Huisnummer'], $data['objectDetails_Adres_NL_HuisnummerToevoeging'])). "','" . addslashes($data['objectDetails_Adres_NL_Woonplaats']). "','Nederland','" . $href. ".html'," . $data['id'] . ",'" . $image. "', 'WONEN');";
 
 					// Also hop in some filter data
-					if (isset($hoofdfuncties[$data['wonen_Woonhuis_SoortWoning']])) {
+					if (!empty($hoofdfuncties[$data['wonen_Woonhuis_SoortWoning']])) {
 
 						if (!isset($objectDataArray['functions'][$hoofdfuncties[$data['wonen_Woonhuis_SoortWoning']]]))
 							$objectDataArray['functions'][$hoofdfuncties[$data['wonen_Woonhuis_SoortWoning']]] = 1;
 						else
 							$objectDataArray['functions'][$hoofdfuncties[$data['wonen_Woonhuis_SoortWoning']]]++;
+					}
+					elseif (!empty($hoofdfuncties[$data['wonen_Appartement_KenmerkAppartement']])) {
+						
+						if (!isset($objectDataArray['functions'][$hoofdfuncties[$data['wonen_Appartement_KenmerkAppartement']]]))
+							$objectDataArray['functions'][$hoofdfuncties[$data['wonen_Appartement_KenmerkAppartement']]] = 1;
+						else
+							$objectDataArray['functions'][$hoofdfuncties[$data['wonen_Appartement_KenmerkAppartement']]]++;
 					}
 
 					if (!in_array(strtolower($data['objectDetails_Adres_NL_Woonplaats']), $places))
@@ -126,6 +134,7 @@ foreach ($cases as $key => $val) {
 			$query = "SELECT * FROM `tbl_OG_wonen` WHERE (NOT `tbl_OG_wonen`.`objectDetails_StatusBeschikbaarheid_Status` IN ('Ingetrokken', 'ingetrokken', 'verkocht', 'gearchiveerd')) AND `object_Web_Prioriteit`!=80 AND `objectDetails_Bouwvorm`!='nieuwbouw' AND (`objectDetails_Huur_Huurprijs`>0)";
 			$result = $db->prepare($query);
 			
+			$hoofdfuncties['appartement'] = 'appartement';
 			$hoofdfuncties['eengezinswoning'] = 'eengezinswoning';
 			$hoofdfuncties['herenhuis'] = 'herenhuis';
 			$hoofdfuncties['villa'] = 'villa';
@@ -171,12 +180,19 @@ foreach ($cases as $key => $val) {
 							$markerData[] = "arr_markerData[" . $counter . "] = func_markerData(" . $data['google_lat'] . "," . $data['google_lng']. ",'" . addslashes(obj_generateAddress($data['objectDetails_Adres_NL_Straatnaam'], $data['objectDetails_Adres_NL_Huisnummer'], $data['objectDetails_Adres_NL_HuisnummerToevoeging'])). "','" . addslashes($data['objectDetails_Adres_NL_Woonplaats']). "','Nederland','" . $href. ".html'," . $data['id'] . ",'" . $image. "', 'WONEN');";
 							
 							// Also hop in some filter data
-							if (isset($hoofdfuncties[$data['wonen_Woonhuis_SoortWoning']])) {
+							if (!empty($hoofdfuncties[$data['wonen_Woonhuis_SoortWoning']])) {
 								
 								if (!isset($objectDataArray['functions'][$hoofdfuncties[$data['wonen_Woonhuis_SoortWoning']]]))
 									$objectDataArray['functions'][$hoofdfuncties[$data['wonen_Woonhuis_SoortWoning']]] = 1;
 									else
 										$objectDataArray['functions'][$hoofdfuncties[$data['wonen_Woonhuis_SoortWoning']]]++;
+							}
+							elseif (!empty($hoofdfuncties[$data['wonen_Appartement_KenmerkAppartement']])) {
+								
+								if (!isset($objectDataArray['functions'][$hoofdfuncties[$data['wonen_Appartement_KenmerkAppartement']]]))
+									$objectDataArray['functions'][$hoofdfuncties[$data['wonen_Appartement_KenmerkAppartement']]] = 1;
+									else
+										$objectDataArray['functions'][$hoofdfuncties[$data['wonen_Appartement_KenmerkAppartement']]]++;
 							}
 							
 							if (!in_array(strtolower($data['objectDetails_Adres_NL_Woonplaats']), $places))
@@ -217,7 +233,8 @@ foreach ($cases as $key => $val) {
 			// Fetch all where google_status=0
 			$query = "SELECT * FROM `tbl_OG_wonen` WHERE (NOT `tbl_OG_wonen`.`objectDetails_StatusBeschikbaarheid_Status` IN ('Ingetrokken', 'ingetrokken', 'verkocht', 'gearchiveerd')) AND `objectDetails_Bouwvorm`!='nieuwbouw'";
 			$result = $db->prepare($query);
-
+			
+			$hoofdfuncties['appartement'] = 'appartement';
 			$hoofdfuncties['eengezinswoning'] = 'eengezinswoning';
 			$hoofdfuncties['herenhuis'] = 'herenhuis';
 			$hoofdfuncties['villa'] = 'villa';
@@ -263,12 +280,19 @@ foreach ($cases as $key => $val) {
 					$markerData[] = "arr_markerData[" . $counter . "] = func_markerData(" . $data['google_lat'] . "," . $data['google_lng']. ",'" . addslashes(obj_generateAddress($data['objectDetails_Adres_NL_Straatnaam'], $data['objectDetails_Adres_NL_Huisnummer'], $data['objectDetails_Adres_NL_HuisnummerToevoeging'])). "','" . addslashes($data['objectDetails_Adres_NL_Woonplaats']). "','Nederland','" . $href. ".html'," . $data['id'] . ",'" . $image. "', 'WONEN');";
 
 					// Also hop in some filter data
-					if (isset($hoofdfuncties[$data['wonen_Woonhuis_SoortWoning']])) {
-
+					if (!empty($hoofdfuncties[$data['wonen_Woonhuis_SoortWoning']])) {
+						
 						if (!isset($objectDataArray['functions'][$hoofdfuncties[$data['wonen_Woonhuis_SoortWoning']]]))
 							$objectDataArray['functions'][$hoofdfuncties[$data['wonen_Woonhuis_SoortWoning']]] = 1;
-						else
-							$objectDataArray['functions'][$hoofdfuncties[$data['wonen_Woonhuis_SoortWoning']]]++;
+							else
+								$objectDataArray['functions'][$hoofdfuncties[$data['wonen_Woonhuis_SoortWoning']]]++;
+					}
+					elseif (!empty($hoofdfuncties[$data['wonen_Appartement_KenmerkAppartement']])) {
+						
+						if (!isset($objectDataArray['functions'][$hoofdfuncties[$data['wonen_Appartement_KenmerkAppartement']]]))
+							$objectDataArray['functions'][$hoofdfuncties[$data['wonen_Appartement_KenmerkAppartement']]] = 1;
+							else
+								$objectDataArray['functions'][$hoofdfuncties[$data['wonen_Appartement_KenmerkAppartement']]]++;
 					}
 
 					if (!in_array(strtolower($data['objectDetails_Adres_NL_Woonplaats']), $places))
@@ -392,6 +416,7 @@ foreach ($cases as $key => $val) {
 			$query = "SELECT * FROM `tbl_OG_wonen` WHERE (NOT `tbl_OG_wonen`.`objectDetails_StatusBeschikbaarheid_Status` IN ('Ingetrokken', 'ingetrokken', 'verkocht', 'gearchiveerd')) AND `objectDetails_Bouwvorm`='nieuwbouw'";
 			$result = $db->prepare($query);
 
+			$hoofdfuncties['appartement'] = 'appartement';
 			$hoofdfuncties['eengezinswoning'] = 'eengezinswoning';
 			$hoofdfuncties['herenhuis'] = 'herenhuis';
 			$hoofdfuncties['villa'] = 'villa';
@@ -437,12 +462,19 @@ foreach ($cases as $key => $val) {
 					$markerData[] = "arr_markerData[" . $counter . "] = func_markerData(" . $data['google_lat'] . "," . $data['google_lng']. ",'" . addslashes(obj_generateAddress($data['objectDetails_Adres_NL_Straatnaam'], $data['objectDetails_Adres_NL_Huisnummer'], $data['objectDetails_Adres_NL_HuisnummerToevoeging'])). "','" . addslashes($data['objectDetails_Adres_NL_Woonplaats']). "','Nederland','" . $href. ".html'," . $data['id'] . ",'" . $image. "', 'WONEN');";
 
 					// Also hop in some filter data
-					if (isset($hoofdfuncties[$data['wonen_Woonhuis_SoortWoning']])) {
-
+					if (!empty($hoofdfuncties[$data['wonen_Woonhuis_SoortWoning']])) {
+						
 						if (!isset($objectDataArray['functions'][$hoofdfuncties[$data['wonen_Woonhuis_SoortWoning']]]))
 							$objectDataArray['functions'][$hoofdfuncties[$data['wonen_Woonhuis_SoortWoning']]] = 1;
-						else
-							$objectDataArray['functions'][$hoofdfuncties[$data['wonen_Woonhuis_SoortWoning']]]++;
+							else
+								$objectDataArray['functions'][$hoofdfuncties[$data['wonen_Woonhuis_SoortWoning']]]++;
+					}
+					elseif (!empty($hoofdfuncties[$data['wonen_Appartement_KenmerkAppartement']])) {
+						
+						if (!isset($objectDataArray['functions'][$hoofdfuncties[$data['wonen_Appartement_KenmerkAppartement']]]))
+							$objectDataArray['functions'][$hoofdfuncties[$data['wonen_Appartement_KenmerkAppartement']]] = 1;
+							else
+								$objectDataArray['functions'][$hoofdfuncties[$data['wonen_Appartement_KenmerkAppartement']]]++;
 					}
 
 					if (!in_array(strtolower($data['objectDetails_Adres_NL_Woonplaats']), $places))

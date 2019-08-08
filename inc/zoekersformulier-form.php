@@ -176,6 +176,7 @@
 
 		<select class="form-item size25" name="objectSoort">
 			<option value="">Soort object</option>
+			<option value="appartement">Appartement</option>
 			<option value="bungalow">Bungalow</option>
 	        <option value="eengezinswoning">Eengezinswoning</option>
 	        <option value="grachtenpand">Grachtenpand</option>
