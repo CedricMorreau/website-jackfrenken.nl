@@ -2734,6 +2734,7 @@ input::placeholder {
 		.banner-title {
 			color: $lit-col;
 		}
+
 		.banner-link {
 			text-decoration: underline;
 		}
@@ -2765,6 +2766,7 @@ input::placeholder {
 		text-decoration: none;
 		flex-grow: 0;
 		white-space: nowrap;
+		flex-basis: auto;
 	}
 
 }

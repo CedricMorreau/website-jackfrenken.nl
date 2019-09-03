@@ -2286,7 +2286,9 @@ input::placeholder {
     -webkit-box-flex: 0;
         -ms-flex-positive: 0;
             flex-grow: 0;
-    white-space: nowrap; }
+    white-space: nowrap;
+    -ms-flex-preferred-size: auto;
+        flex-basis: auto; }
 
 /* Aanbod detail template ----------------------------------------- */
 .aanbod-detail {
