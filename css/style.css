@@ -1364,16 +1364,16 @@ input::placeholder {
         -ms-flex-preferred-size: 0;
             flex-basis: 0; } }
     .column-header .header-title-wrapper .header-title {
-      padding-left: 6rem;
-      padding-right: 6rem;
+      padding-left: 4rem;
+      padding-right: 2rem;
       padding-top: 2rem;
       padding-bottom: 2rem;
       z-index: 15;
       background-color: rgba(218, 225, 237, 0.8);
       position: absolute;
       bottom: 0;
-      max-width: 50rem;
-      min-width: 40rem; }
+      max-width: 35rem;
+      min-width: 30rem; }
       @media only screen and (max-width: 768px) {
         .column-header .header-title-wrapper .header-title {
           min-width: 0;
@@ -1405,7 +1405,7 @@ input::placeholder {
         font-size: 1.2rem;
         line-height: 1.5rem; }
       .column-header .header-title-wrapper .header-title h1 {
-        font-size: 3.5rem;
+        font-size: 3rem;
         padding-top: 0;
         margin-top: 0; }
         @media only screen and (max-width: 768px) {
@@ -2295,7 +2295,7 @@ input::placeholder {
   /* Nieuwbouw overzicht */ }
   .aanbod-detail .column-header .header-title {
     background-color: rgba(218, 225, 237, 0.8);
-    min-height: 27rem; }
+    min-height: 25rem; }
     @media only screen and (max-width: 768px) {
       .aanbod-detail .column-header .header-title {
         min-height: 0; } }
@@ -3202,4 +3202,5 @@ header.headerAanbod {
 }
 
 */
+
 /*# sourceMappingURL=style.css.map */
