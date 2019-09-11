@@ -6,5 +6,5 @@
 <!-- 		<h3>Uw woning verkopen?</h3>
 		<p>Eenvoudig, snel &eacute;n voor de juiste prijs</p> -->
 	</div>
-	<!-- <a href="<?php echo $template->findPermalink(33, 1); ?>?openhuis=05-10-2019">Bekijk de deelnemende woningen &nbsp; &xrarr;</a> -->
+	<a href="<?php echo $template->findPermalink(33, 1); ?>?openhuis=05-10-2019">Bekijk de deelnemende woningen &nbsp; &xrarr;</a>
 </section>
