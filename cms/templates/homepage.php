@@ -22,7 +22,7 @@
 			<?php include($documentRoot . "inc/homepage-services.php"); ?>
 			
 			<!-- Open huis banner -->
-			<?php include($documentRoot . "inc/homepage-banner.php"); ?>
+			<?php // include($documentRoot . "inc/homepage-banner.php"); ?>
 
 			<?php include($documentRoot . "inc/homepage-actueel.php"); ?>
 
