@@ -78,7 +78,7 @@
 				                    <div class="child">
 				                        <div class="pic" style="background-image: url('<?php echo $values['mw_foto'] ?>')">
 				                        	<span class="mw-naam"><?php echo $values['mw_naam'] ?></span>
-				                        	<span class="mw-functie"><?php echo $values['mw_functie'] ?></span>
+				                        	<!-- <span class="mw-functie"><?php echo $values['mw_functie'] ?></span> -->
 				                        </div>
 				                    </div>
 
