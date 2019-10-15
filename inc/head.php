@@ -34,6 +34,8 @@ else {
 <meta name="viewport" content="width=device-width">
 <!-- Force IE to behave -->
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<!-- Google Search Console validation -->
+<meta name="google-site-verification" content="R4o1vlqQrIrd7AjoE6A3N2j-DgUiER1GVW4R2-b8o_I" />
 <!-- normalize browser behavior -->
 <link rel="stylesheet" href="<?php echo $dynamicRoot; ?>css/normalize.css">
 <!-- animation library -->
@@ -42,6 +44,16 @@ else {
 <link href="//fonts.googleapis.com/css?family=Titillium+Web:200,400,400i,600,700" rel="stylesheet">
 <!-- custom styling -->
 <link rel="stylesheet" href="<?php echo $dynamicRoot; ?>css/style.css">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-42911090-22"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'UA-42911090-22');
+</script>
 
 <!--[if lt IE 9]>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
