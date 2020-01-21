@@ -486,7 +486,7 @@ $mediaList = $cms['database']->prepare("SELECT `id`, `object_ObjectTiaraID`, `be
 											case 'noordwest': echo 'Gelegen op het noordwesten'; break;
 										}
 										
-										if (!empty($val['wonen_WonenDetails_Hoofdtuin_Achterom']))
+										if ($val['wonen_WonenDetails_Hoofdtuin_Achterom'] != 'nee')
 											echo ', bereikbaar via achterom';
 										
 										?>
