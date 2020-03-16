@@ -152,10 +152,13 @@ else
 				echo '<div class="image-label status-sold">' . $val['project_ProjectDetails_Status_ObjectStatus'] . '</div>';
 			}
 
+			if ($val['id'] == 44) {
+
 			?>
 			<div class="secondary-label">
 				Financieel meer ruimte dankzij de groenverklaring en NOM
 			</div>
+			<?php } ?>
 			<div class="hover-overlay" title="<?php echo $val['project_ProjectDetails_Projectnaam']; ?> - <?php echo $val['project_ProjectDetails_Adres_Woonplaats']; ?>"></div>
 		</a>
 	</div>
