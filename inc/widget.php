@@ -1,5 +1,24 @@
 <?php
 
+// Extra widget for "Linnerpark, Linne"
+if (($template->getPageId() == 40 && $val['id'] == 44) || ($template->getPageId() == 74 && ($val['id'] >= 518 && $val['id'] <= 529))) {
+
+	?>
+
+<div class="sidebar-widget" style="background: #2CBCAF;">
+	<a href="<?php echo $template->findPermalink(70, 1); ?>">
+	<h3>
+		Financieel meer ruimte dankzij de groenverklaring en NOM
+	</h3>
+	<p>
+		Meer weten? Neem contact op &xrarr;
+	</p>
+	</a>
+</div>
+
+	<?php
+}
+
 if ($template->getPageId() == 42) {
 	
 	?>
