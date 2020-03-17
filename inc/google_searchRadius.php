@@ -14,10 +14,14 @@ $dataArray = unserialize(file_get_contents($documentRoot . 'inc/google_searchRad
 
 // Check if in array
 if (!isset($dataArray[$plaatsnaam . '_' . $land])) {
-	$googleData = file_get_contents("http://maps.googleapis.com/maps/api/geocode/json?address=" . urlencode($plaatsnaam) . ",+" . urlencode($land) . "&sensor=false");
-	$googleArray = json_decode($googleData, TRUE);
 
-	$readArray = (isset($googleArray['results'][0])) ? $googleArray['results'][0] : array();
+	$tomtomData = file_get_contents('https://tools.pixelplus.nl/geocoder/v2/' . str_replace(' ', '+', $plaatsnaam) . ",+" . $land . '&radius=20&key=6b825c6032d6cf95e562b9b4b5393cc8');
+	$tomtomData = json_decode($tomtomData, true);
+
+	$readArray['geometry']['location'] = [
+		'lat' => $tomtomData['data']['origin']['lat'],
+		'lng' => $tomtomData['data']['origin']['lng']
+	];
 
 	// echo 'from google';
 }
