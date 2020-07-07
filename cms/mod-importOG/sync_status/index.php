@@ -36,16 +36,10 @@ foreach ($days as $key => $val) {
 
 		case 'bog':
 			$db->prepare("UPDATE `tbl_OG_bog` 
-					SET `objectDetails_Status_StatusType`='gearchiveerd'
+					SET `objectDetails_Status_StatusType`='Ingetrokken'
 					WHERE
 					`objectDetails_Status_StatusType` IN ('Verhuurd','Verkocht')
 					AND `objectDetails_DatumWijziging`<'" . $readableDate . "'");
-
-			$db->prepare("UPDATE `tbl_OG_bog` 
-					SET `objectDetails_Status_StatusType`='Ingetrokken'
-					WHERE
-					`inFeed`=0
-					AND NOT `objectDetails_Status_StatusType` IN ('gearchiveerd', 'verkocht', 'Verkocht', 'verhuurd', 'Verhuurd')");
 			break;
 		case 'wonen':
 			$db->prepare("UPDATE `tbl_OG_wonen` 
@@ -63,44 +57,25 @@ foreach ($days as $key => $val) {
 			break;
 		case 'landelijk':
 			$db->prepare("UPDATE `tbl_OG_wonen` 
-					SET `objectDetails_StatusBeschikbaarheid_Status`='gearchiveerd'
+					SET `objectDetails_StatusBeschikbaarheid_Status`='Ingetrokken'
 					WHERE
 					`object_Web_Prioriteit`=80
 					AND `objectDetails_StatusBeschikbaarheid_Status` IN ('Verhuurd','Verkocht')
 					AND `datum_gewijzigd`<'" . $readableDate . "'");
-
-			$db->prepare("UPDATE `tbl_OG_wonen` 
-					SET `objectDetails_StatusBeschikbaarheid_Status`='Ingetrokken'
-					WHERE
-					`object_Web_Prioriteit`=80
-					AND NOT `objectDetails_StatusBeschikbaarheid_Status` IN ('gearchiveerd', 'verkocht', 'Verkocht', 'verhuurd', 'Verhuurd')
-					AND `inFeed`=0");
 			break;
 		case 'alv':
 			$db->prepare("UPDATE `tbl_OG_alv` 
-					SET `object_ObjectDetails_Status_StatusType`='gearchiveerd'
+					SET `object_ObjectDetails_Status_StatusType`='Ingetrokken'
 					WHERE
 					`object_ObjectDetails_Status_StatusType` IN ('Verhuurd','Verkocht','verhuurd','verkocht')
 					AND `datum_gewijzigd`<'" . $readableDate . "'");
-
-			$db->prepare("UPDATE `tbl_OG_alv` 
-					SET `object_ObjectDetails_Status_StatusType`='Ingetrokken'
-					WHERE
-					`inFeed`=0
-					AND NOT `object_ObjectDetails_Status_StatusType` IN ('gearchiveerd', 'verkocht', 'Verkocht', 'verhuurd', 'Verhuurd')");
 			break;
 		case 'nieuwbouw':
 			$db->prepare("UPDATE `tbl_OG_nieuwbouw_bouwNummers` 
-					SET `bouwNummer_BouwNummerDetails_Status_ObjectStatus`='gearchiveerd'
+					SET `bouwNummer_BouwNummerDetails_Status_ObjectStatus`='Ingetrokken'
 					WHERE
 					`bouwNummer_BouwNummerDetails_Status_ObjectStatus` IN ('Verhuurd','Verkocht')
 					AND `datum_gewijzigd`<'" . $readableDate . "'");
-
-			$db->prepare("UPDATE `tbl_OG_nieuwbouw_bouwNummers` 
-					SET `bouwNummer_BouwNummerDetails_Status_ObjectStatus`='Ingetrokken'
-					WHERE
-					`inFeed`=0
-					AND NOT `bouwNummer_BouwNummerDetails_Status_ObjectStatus` IN ('gearchiveerd', 'verkocht', 'Verkocht', 'verhuurd', 'Verhuurd')");
 			break;
 		default:
 			break;
