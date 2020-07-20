@@ -1958,6 +1958,18 @@ input::placeholder {
   font-size: 1.3rem;
 }
 
+.column-header .header-title-wrapper .header-title .label {
+  padding: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  color: #fff;
+  font-weight: bold;
+}
+
+.column-header .header-title-wrapper .header-title .label.verkocht {
+  background-color: #D64242;
+}
+
 .column-header .header-title-wrapper .header-title .title-link {
   color: #2CBCAF;
   text-decoration: none;

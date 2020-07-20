@@ -1589,7 +1589,21 @@ input::placeholder {
 
   			.title-price {
   				font-size: 1.3rem;
-  			}
+			  }
+			  
+			.label {
+
+				padding: 10px;
+				padding-left: 15px;
+				padding-right: 15px;
+				color: #fff;
+				font-weight: bold;
+			}
+
+			.label.verkocht {
+
+				background-color: #D64242;
+			}
 
   			.title-link {
   				color: $qua-col;

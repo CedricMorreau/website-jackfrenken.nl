@@ -4,6 +4,20 @@
 		<div class="header-title">
 			<h1><?php echo $val['objectDetails_Adres_Woonplaats']; ?><br>
 			<?php echo obj_generateAddress($val['objectDetails_Adres_Straatnaam'], $val['objectDetails_Adres_Huisnummer'], $val['objectDetails_Adres_HuisnummerToevoeging']); ?></h1>
+
+			<?php
+
+			if ($val['objectDetails_Status_StatusType'] == 'Verkocht' || $val['objectDetails_Status_StatusType'] == 'Verkocht onder voorbehoud') {
+
+				echo '<span class="label verkocht">' . $val['objectDetails_Status_StatusType'] . '</span>';
+			}
+			elseif ($val['objectDetails_Status_StatusType'] == 'Verhuurd' || $val['objectDetails_Status_StatusType'] == 'Verhuurd onder voorbehoud') {
+
+				echo '<span class="label verkocht">' . $val['objectDetails_Status_StatusType'] . '</span>';
+			}
+
+			?>
+
 			<p class="title-price"><?php echo $priceText; ?></p>
 
 			<a href="javascript:void(0);" onclick="javascript:$.scrollTo('#content', 1000)" class="scroll-down">Meer informatie &nbsp; &darr;</a>
