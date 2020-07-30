@@ -12,7 +12,7 @@ if (!isset($dataArray['dl_status'][11]))
 	Core::redirect('/');
 
 $title = $dataArray['dl_title'];
-$injectTitle = $title;
+$injectTitle = $title . ' - Jack Frenken Makelaars en Adviseurs';
 $pageOverride = $dataArray['dl_title'];
 
 $sfeerbeeld = $dataArray['dl_sfeerbeeld'];

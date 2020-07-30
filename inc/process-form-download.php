@@ -52,7 +52,7 @@ if(!empty($_POST['name']) && !empty($_POST['telnr'])) {
         $mail->addField('subject', $mail_subject);
         $mail->addField('message', base64_encode($output));
 
-		// $mail->send();
+		$mail->send();
 		
 		?>
 
