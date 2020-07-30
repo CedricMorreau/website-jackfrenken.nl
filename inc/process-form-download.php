@@ -52,16 +52,14 @@ if(!empty($_POST['name']) && !empty($_POST['telnr'])) {
         $mail->addField('subject', $mail_subject);
         $mail->addField('message', base64_encode($output));
 
-		$mail->send();
+		// $mail->send();
 		
 		?>
 
-		<h2>Bedankt!</h2>
+		<h2>Bedankt voor uw contactgegevens</h2>
 
-		<p>U kunt het bestand nu downloaden.
-
-		<div class="buttonWrapper">
-			<a href="<?php echo $dataArray['dl_download']; ?>" target="_blank" class="btn">Downloaden</a>
+		<div class="buttonWrapper downloads">
+			<a href="<?php echo $dataArray['dl_download']; ?>" target="_blank" class="btn">Download PDF-document</a>
 		</div>
 
 		<?php

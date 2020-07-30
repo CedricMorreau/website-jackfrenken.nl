@@ -61,12 +61,12 @@ if (!empty($sfeerbeeld))
 
 						<div id="object-contact-form">
 
-							<p class="form-header">Vul je gegevens in om de brochure te downloaden.</p>
+							<p class="form-header">Vul je gegevens in om de rapportage te downloaden.</p>
 
 							<div id="download-form-output" class="clearfix">
 								<div class="form_loading group" style="display: none;">
 									<p>
-										<i>Het contactformulier wordt verstuurd&hellip;</i>
+										<i>Een ogenblik geduld a.u.b.</i>
 									</p>
 								</div>
 								<div class="form_error general" style="display: none;"><h2>Foutje</h2><p>Er ging iets mis op de server. Probeer het nog eens.</p></div>
@@ -78,8 +78,8 @@ if (!empty($sfeerbeeld))
 								<fieldset class="flex-col size100">
 									<input type="hidden" name="page" value="<?php echo $template->detailPage; ?>">
 									<input type="text" name="name" value="" placeholder="Naam*">
+									<input type="text" name="telnr" value="" placeholder="Woonplaats*">
 									<input type="email" name="email" value="" placeholder="E-mailadres*">
-									<input type="text" name="telnr" value="" placeholder="Telefoon*">
 									<input type="submit" name="object-contact-submit" value="Verstuur dit bericht">
 								</fieldset>
 

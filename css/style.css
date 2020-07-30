@@ -507,6 +507,25 @@ input::placeholder {
   }
 }
 
+/* Downloadform -----------------------------------------*/
+.buttonWrapper.downloads {
+  margin-top: 25px;
+}
+
+.buttonWrapper.downloads a {
+  padding: 1rem;
+  background-color: #2CBCAF;
+  color: white;
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+}
+
+.buttonWrapper.downloads a:hover {
+  background-color: #003064;
+  color: #fff !important;
+}
+
 /* Reusable blocks --------------------------------------*/
 .items-wrapper {
   width: 100%;
