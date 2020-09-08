@@ -48,12 +48,12 @@ foreach ($days as $key => $val) {
 					`objectDetails_StatusBeschikbaarheid_Status` IN ('gearchiveerd', 'verkocht', 'Verkocht', 'verhuurd', 'Verhuurd')
 					AND `datum_gewijzigd`<'" . $readableDate . "'");
 
-			$db->prepare("UPDATE `tbl_OG_wonen` 
-					SET `objectDetails_StatusBeschikbaarheid_Status`='Ingetrokken'
-					WHERE
-					`object_Web_Prioriteit`!=80
-					AND NOT `objectDetails_StatusBeschikbaarheid_Status` IN ('gearchiveerd', 'verkocht', 'Verkocht', 'verhuurd', 'Verhuurd')
-					AND `inFeed`=0");
+			// $db->prepare("UPDATE `tbl_OG_wonen` 
+			// 		SET `objectDetails_StatusBeschikbaarheid_Status`='Ingetrokken'
+			// 		WHERE
+			// 		`object_Web_Prioriteit`!=80
+			// 		AND NOT `objectDetails_StatusBeschikbaarheid_Status` IN ('gearchiveerd', 'verkocht', 'Verkocht', 'verhuurd', 'Verhuurd')
+			// 		AND `inFeed`=0");
 			break;
 		case 'landelijk':
 			$db->prepare("UPDATE `tbl_OG_wonen` 
