@@ -119,7 +119,7 @@ $sql = "SELECT
 		INNER JOIN `tbl_OG_provincies` ON `tbl_OG_provincies`.`id`=`tbl_OG_bog`.`id_provincies`
 
 	WHERE
-		(NOT `tbl_OG_bog`.`objectDetails_Status_StatusType` IN ('Ingetrokken', 'ingetrokken'" . $extraState . "))
+		(NOT `tbl_OG_bog`.`objectDetails_Status_StatusType` IN ('Ingetrokken', 'ingetrokken', 'gearchiveerd'" . $extraState . "))
 		AND (`ood_onlineStatus` IS NULL or `ood_onlineStatus`=1)
 		AND `tbl_OG_bog`.`id`<>0 ";
 

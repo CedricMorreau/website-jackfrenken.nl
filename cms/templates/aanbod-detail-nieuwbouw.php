@@ -451,7 +451,16 @@ $mediaList = $cms['database']->prepare("SELECT `id`, `object_ObjectTiaraID`, `be
 						<div class="content-wrapper" data-tab="2" style="display: none;">
 							<h2>Beschrijving</h2>
 							
-							<?php echo utf8_encode(nl2br(Core::fixEncoding($val['project_ProjectDetails_Presentatie_Aanbiedingstekst']))); ?>
+							<?php 
+
+							if (!empty($val['project_ProjectDetails_Presentatie_Website'])) {
+
+								echo 'Projectwebsite: <a href="' . $val['project_ProjectDetails_Presentatie_Website'] . '" target="_blank">' . trim($val['project_ProjectDetails_Presentatie_Website']) . '</a><br>';
+							}
+							
+							echo utf8_encode(nl2br(Core::fixEncoding($val['project_ProjectDetails_Presentatie_Aanbiedingstekst']))); 
+							
+							?>
 						</div>						
 	
 						<div class="content-wrapper" data-tab="3" style="display: none;">

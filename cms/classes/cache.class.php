@@ -17,7 +17,7 @@ class Cache {
 		// Generate mapname
 		$mapName = substr(md5($name), 0, 1);
 
-		@mkdir($documentRoot . 'data/cache/auto/' . $mapName, 0777);
+		@mkdir($documentRoot . 'data/cache/auto/' . $mapName, 0777, true);
 
 		file_put_contents($documentRoot . 'data/cache/auto/' . $mapName . '/' . md5($name) . '.txt', serialize($array));
 	}

@@ -507,6 +507,25 @@ input::placeholder {
   }
 }
 
+/* Downloadform -----------------------------------------*/
+.buttonWrapper.downloads {
+  margin-top: 25px;
+}
+
+.buttonWrapper.downloads a {
+  padding: 1rem;
+  background-color: #2CBCAF;
+  color: white;
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+}
+
+.buttonWrapper.downloads a:hover {
+  background-color: #003064;
+  color: #fff !important;
+}
+
 /* Reusable blocks --------------------------------------*/
 .items-wrapper {
   width: 100%;
@@ -1956,6 +1975,18 @@ input::placeholder {
 
 .column-header .header-title-wrapper .header-title .title-price {
   font-size: 1.3rem;
+}
+
+.column-header .header-title-wrapper .header-title .label {
+  padding: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  color: #fff;
+  font-weight: bold;
+}
+
+.column-header .header-title-wrapper .header-title .label.verkocht {
+  background-color: #D64242;
 }
 
 .column-header .header-title-wrapper .header-title .title-link {

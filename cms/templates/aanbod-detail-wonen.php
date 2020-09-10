@@ -19,7 +19,7 @@ function translateDay($val, $type = 'default') {
 $moduleId = $template->getModuleId();
 
 // See if object even exists
-$objectData = $cms['database']->prepare("SELECT * FROM `tbl_OG_wonen` WHERE `id`=? AND (NOT `objectDetails_StatusBeschikbaarheid_Status` IN ('Ingetrokken'))", "i", array($moduleId));
+$objectData = $cms['database']->prepare("SELECT * FROM `tbl_OG_wonen` WHERE `id`=? AND (NOT `objectDetails_StatusBeschikbaarheid_Status` IN ('Ingetrokken', 'gearchiveerd'))", "i", array($moduleId));
 
 if (count($objectData) == 0)
 	Core::redirect($template->findPermalink(33, 1));

@@ -440,6 +440,29 @@ input::placeholder {
 
 }
 
+/* Downloadform -----------------------------------------*/
+
+.buttonWrapper.downloads {
+
+	margin-top: 25px;
+
+	a {
+
+		padding: 1rem;
+		background-color: $qua-col;
+		color: white;
+		cursor: pointer;
+		border: none;
+		text-decoration: none;
+	}
+
+	a:hover {
+
+		background-color: $pri-col;
+		color: #fff !important;
+	}
+}
+
 /* Reusable blocks --------------------------------------*/
 
 .items-wrapper {
@@ -1589,7 +1612,21 @@ input::placeholder {
 
   			.title-price {
   				font-size: 1.3rem;
-  			}
+			  }
+			  
+			.label {
+
+				padding: 10px;
+				padding-left: 15px;
+				padding-right: 15px;
+				color: #fff;
+				font-weight: bold;
+			}
+
+			.label.verkocht {
+
+				background-color: #D64242;
+			}
 
   			.title-link {
   				color: $qua-col;

@@ -38,10 +38,13 @@ foreach ($cases as $key => $val) {
 					$postcode = str_replace(" ", "+", $data['postcode']);
 					$land = $data['land'];
 
-					$googleData = file_get_contents("https://maps.googleapis.com/maps/api/geocode/json?address=" . $postcode . ",+" . $land . "&key=AIzaSyBCvhSY0IKeAhSzUph9Ud3LpBsp9wuUNuY");
-					$googleArray = json_decode($googleData, TRUE);
+					$tomtomData = file_get_contents('https://tools.pixelplus.nl/geocoder/v2/' . $postcode . ",+" . $land . '&radius=20&key=6b825c6032d6cf95e562b9b4b5393cc8');
+					$tomtomData = json_decode($tomtomData, true);
 
-					$readArray = $googleArray['results'][0];
+					$readArray['geometry']['location'] = [
+						'lat' => $tomtomData['data']['origin']['lat'],
+						'lng' => $tomtomData['data']['origin']['lng']
+					];
 
 					if (isset($readArray['geometry']['location']['lat']) && isset($readArray['geometry']['location']['lng'])) {
 
@@ -71,10 +74,13 @@ foreach ($cases as $key => $val) {
 
 					$postcode = str_replace(' ', '+', $data['object_ObjectDetails_Adres_Straatnaam']) . ',+' . str_replace(' ', '+', $data['object_ObjectDetails_Adres_Woonplaats']) . ',+' . $postcode;
 
-					$googleData = file_get_contents("http://maps.googleapis.com/maps/api/geocode/json?address=" . $postcode . ",+" . $land . "&sensor=false");
-					$googleArray = json_decode($googleData, TRUE);
+					$tomtomData = file_get_contents('https://tools.pixelplus.nl/geocoder/v2/' . $postcode . ",+" . $land . '&radius=20&key=6b825c6032d6cf95e562b9b4b5393cc8');
+					$tomtomData = json_decode($tomtomData, true);
 
-					$readArray = $googleArray['results'][0];
+					$readArray['geometry']['location'] = [
+						'lat' => $tomtomData['data']['origin']['lat'],
+						'lng' => $tomtomData['data']['origin']['lng']
+					];
 
 					if (isset($readArray['geometry']['location']['lat']) && isset($readArray['geometry']['location']['lng'])) {
 
@@ -102,10 +108,13 @@ foreach ($cases as $key => $val) {
 					$postcode = str_replace(" ", "+", $data['postcode']);
 					$land = 'Nederland';
 
-					$googleData = file_get_contents("http://maps.googleapis.com/maps/api/geocode/json?address=" . $postcode . ",+" . $land . "&sensor=false");
-					$googleArray = json_decode($googleData, TRUE);
+					$tomtomData = file_get_contents('https://tools.pixelplus.nl/geocoder/v2/' . $postcode . ",+" . $land . '&radius=20&key=6b825c6032d6cf95e562b9b4b5393cc8');
+					$tomtomData = json_decode($tomtomData, true);
 
-					$readArray = $googleArray['results'][0];
+					$readArray['geometry']['location'] = [
+						'lat' => $tomtomData['data']['origin']['lat'],
+						'lng' => $tomtomData['data']['origin']['lng']
+					];
 
 					if (isset($readArray['geometry']['location']['lat']) && isset($readArray['geometry']['location']['lng'])) {
 

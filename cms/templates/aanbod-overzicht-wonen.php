@@ -161,7 +161,7 @@ if ($overviewType != 'kavels') {
 			INNER JOIN `tbl_OG_provincies` ON `tbl_OG_provincies`.`id`=`tbl_OG_wonen`.`id_provincies`
 	
 		WHERE
-			(NOT `tbl_OG_wonen`.`objectDetails_StatusBeschikbaarheid_Status` IN ('Ingetrokken', 'ingetrokken'" . $extraState . "))
+			(NOT `tbl_OG_wonen`.`objectDetails_StatusBeschikbaarheid_Status` IN ('Ingetrokken', 'ingetrokken', 'gearchiveerd'" . $extraState . "))
 			AND (`ood_onlineStatus` IS NULL or `ood_onlineStatus`=1)
 			AND `tbl_OG_wonen`.`id`<>0";
 	
