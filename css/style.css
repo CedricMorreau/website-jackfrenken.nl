@@ -3809,6 +3809,8 @@ header.headerAanbod {
 
 .actueel-detail .content-image {
   height: 35rem;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 @media only screen and (max-width: 768px) {

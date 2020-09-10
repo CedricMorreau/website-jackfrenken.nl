@@ -3175,6 +3175,8 @@ header.headerAanbod {
 	}
 	.content-image {
 		height: 35rem;
+		background-size: contain;
+		background-repeat: no-repeat;
 		@media only screen and (max-width: $container-size-m) {
 			height: 18rem;
 		}
