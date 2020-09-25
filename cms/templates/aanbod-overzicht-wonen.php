@@ -293,7 +293,7 @@ if ($overviewType != 'kavels') {
 		$sql .= ')';
 	}
 	
-echo $filter['saleType'];
+//echo $filter['saleType'];
 
 	if (!empty($filter['saleType'])) {
 	
