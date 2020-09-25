@@ -293,6 +293,8 @@ if ($overviewType != 'kavels') {
 		$sql .= ')';
 	}
 	
+echo $filter['saleType'];
+
 	if (!empty($filter['saleType'])) {
 	
 		if ($filter['saleType'] == 'rent') {
@@ -301,11 +303,15 @@ if ($overviewType != 'kavels') {
 		}
 		elseif ($filter['saleType'] == 'both') {
 	
-			$sql .= " AND (`objectDetails_Koop_Koopprijs`>0 OR (`objectDetails_Koop_Koopprijs`=0 AND `objectDetails_Huur_Huurprijs`=0))";
+			//$sql .= " AND (`objectDetails_Koop_Koopprijs`>0 OR (`objectDetails_Koop_Koopprijs`=0 AND `objectDetails_Huur_Huurprijs`=0))";
+			$sql .= " AND (`objectDetails_Koop_Koopprijs`>0 OR `objectDetails_Huur_Huurprijs`>0 )";
+			
 		}
 		else {
 	
-			$sql .= " AND (`objectDetails_Koop_Koopprijs`>=0 OR `objectDetails_Huur_Huurprijs`>=0 OR `objectDetails_Koop_Koopprijs` IS NULL OR `objectDetails_Huur_Huurprijs` IS NULL) ";	
+			//$sql .= " AND (`objectDetails_Koop_Koopprijs`>=0 OR `objectDetails_Huur_Huurprijs`>=0 OR `objectDetails_Koop_Koopprijs` IS NULL OR `objectDetails_Huur_Huurprijs` IS NULL) ";	
+
+			$sql .= " AND `objectDetails_Koop_Koopprijs`>=0 AND `objectDetails_Huur_Huurprijs`=0";
 		}
 	}
 	
