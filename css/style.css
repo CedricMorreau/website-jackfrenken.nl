@@ -2923,6 +2923,12 @@ input::placeholder {
   color: #A1A9B7;
 }
 
+@media only screen and (max-width: 768px) {
+  .sidebar-filtering input {
+    border-radius: 0;
+  }
+}
+
 .sidebar-filtering .select-wrapper {
   display: inline-block;
   position: relative;
