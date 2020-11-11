@@ -3485,6 +3485,14 @@ input::placeholder {
   bottom: 3px;
 }
 
+@media only screen and (max-width: 768px) {
+  .aanbod-detail .content-image .image-container .rsArrowLeft {
+    height: 3rem;
+    width: 3rem;
+    right: 6rem;
+  }
+}
+
 .aanbod-detail .content-image .image-container .rsArrowLeft .rsArrowIcn {
   background-image: none !important;
   background-color: rgba(0, 48, 100, 0.1);
@@ -3506,11 +3514,25 @@ input::placeholder {
   line-height: 4.5rem;
 }
 
+@media only screen and (max-width: 768px) {
+  .aanbod-detail .content-image .image-container .rsArrowLeft .rsArrowIcn:after {
+    line-height: 3rem;
+  }
+}
+
 .aanbod-detail .content-image .image-container .rsArrowRight {
   height: 5rem;
   width: 5rem;
   right: 5rem;
   bottom: 3px;
+}
+
+@media only screen and (max-width: 768px) {
+  .aanbod-detail .content-image .image-container .rsArrowRight {
+    height: 3rem;
+    width: 3rem;
+    right: 3rem;
+  }
 }
 
 .aanbod-detail .content-image .image-container .rsArrowRight .rsArrowIcn {
@@ -3534,6 +3556,12 @@ input::placeholder {
   line-height: 4.5rem;
 }
 
+@media only screen and (max-width: 768px) {
+  .aanbod-detail .content-image .image-container .rsArrowRight .rsArrowIcn:after {
+    line-height: 3rem;
+  }
+}
+
 .aanbod-detail .content-image .image-container .rsFullscreenBtn {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3550,6 +3578,13 @@ input::placeholder {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+@media only screen and (max-width: 768px) {
+  .aanbod-detail .content-image .image-container .rsFullscreenBtn {
+    height: 3rem;
+    width: 3rem;
+  }
 }
 
 .aanbod-detail .content-image .image-container .rsFullscreenBtn .rsFullscreenIcn:hover {

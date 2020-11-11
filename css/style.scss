@@ -2904,6 +2904,11 @@ input::placeholder {
 				height: 5rem;
 				width: 5rem;
 				bottom: 3px;
+				@media only screen and (max-width: $container-size-m) {
+					height: 3rem;
+					width: 3rem;
+					right: 6rem;
+				}
 				.rsArrowIcn {
 					background-image: none !important;
 					background-color: rgba(0,48,100, 0.1);
@@ -2920,6 +2925,9 @@ input::placeholder {
 						color: $lit-col;
 						display: block;
 						line-height: 4.5rem;
+						@media only screen and (max-width: $container-size-m) {
+							line-height: 3rem;
+						}
 					}
 				}
 			}
@@ -2929,7 +2937,11 @@ input::placeholder {
 				width: 5rem;
 				right: 5rem;
 				bottom: 3px;
-
+				@media only screen and (max-width: $container-size-m) {
+					height: 3rem;
+					width: 3rem;
+					right: 3rem;
+				}
 				.rsArrowIcn {
 					background-image: none !important;
 					background-color: $oct-col;
@@ -2946,6 +2958,9 @@ input::placeholder {
 						color: $lit-col;
 						display: block;
 						line-height: 4.5rem;
+						@media only screen and (max-width: $container-size-m) {
+							line-height: 3rem;
+						}
 					}
 				}
 			}
@@ -2960,6 +2975,11 @@ input::placeholder {
 				width: 5rem;
 				background-color: $ter-col;
 				justify-content: center;
+				@media only screen and (max-width: $container-size-m) {
+					height: 3rem;
+					width: 3rem;
+				}
+
 				.rsFullscreenIcn {
 					&:hover {
 						background-color: $pri-col;
