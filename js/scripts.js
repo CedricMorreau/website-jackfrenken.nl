@@ -40,7 +40,7 @@ $(document).ready(function (e) {
 $(document).ready(function(e) {
 	
 	// On load
-	if (screen.width <= 768) {
+	if ($(window).width() <= 768) {
 		$(".aanbod-overzicht .sidebar-filtering .filter-list-wrapper").detach().insertAfter('.content-wrapper .paging-wrapper');
 	}
 	else {
@@ -49,7 +49,8 @@ $(document).ready(function(e) {
 	
 	// On resize
 	$(window).resize(function(e) {
-		if (screen.width <= 768) {
+
+		if ($(window).width() <= 768) {
 			$(".aanbod-overzicht .sidebar-filtering .filter-list-wrapper").detach().insertAfter('.content-wrapper .paging-wrapper');
 		}
 		else {
