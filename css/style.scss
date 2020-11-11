@@ -2359,46 +2359,13 @@ input::placeholder {
 	margin-left: 4rem;
 	@media only screen and (max-width: $container-size-m) {
 		margin-left: 0;
+		margin-bottom: 2rem;
 	}
 
 	h1.filter-head {
 		@media only screen and (max-width: $container-size-m) {
 			margin-bottom: 2rem;
 		}
-	}
-
-	.filter-head {
-		font-family: $fon-fam-pri;
-		font-weight: bold;
-		font-size: 1.2rem;
-		margin-top: 2rem;
-		cursor: pointer;
-		@media only screen and (max-width: $container-size-m) {
-			margin-top: 1rem;
-			margin-bottom: 1rem;
-		}
-		&.active {
-			a { 
-				color: $qua-col; 
-			}
-		}
-		&.toggle {
-			&:after {
-				@media only screen and (max-width: $container-size-m) {
-					content: "+";
-					color: $pri-col;
-					display: inline-flex;
-					align-items: center;
-					justify-content: center;
-					text-align: center;
-					height: 1rem;
-					width: 1rem;
-					left: 0.5rem;
-					position: relative;
-				}
-			}
-		}
-
 	}
 
 	.remove-filter {
@@ -2487,22 +2454,60 @@ input::placeholder {
 
 	}
 
-	.filter-list-wrapper {
+}
+
+.filter-head {
+	font-family: $fon-fam-pri;
+	font-weight: bold;
+	font-size: 1.2rem;
+	margin-top: 2rem;
+	cursor: pointer;
+	@media only screen and (max-width: $container-size-m) {
 		margin-top: 1rem;
-		padding-top: 2rem;
-		.filter-head {
-			margin-top: 0;
-			margin-bottom: 1rem;
-			a {
-				text-decoration: none;
-				&:hover {
-					color: $qua-col;
-				}
+		margin-bottom: 1rem;
+	}
+	&.active {
+		a { 
+			color: $qua-col; 
+		}
+	}
+	&.toggle {
+		&:after {
+			@media only screen and (max-width: $container-size-m) {
+				content: "+";
+				color: $pri-col;
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				text-align: center;
+				height: 1rem;
+				width: 1rem;
+				left: 0.5rem;
+				position: relative;
 			}
 		}
 	}
 
+}
 
+
+.filter-list-wrapper {
+	margin-top: 1rem;
+	padding-top: 2rem;
+	@media only screen and (max-width: $container-size-m) {
+		padding-top: 0;
+		margin-bottom: 1rem;
+	}
+	.filter-head {
+		margin-top: 0;
+		margin-bottom: 1rem;
+		a {
+			text-decoration: none;
+			&:hover {
+				color: $qua-col;
+			}
+		}
+	}
 }
 
 .item-wrapper {

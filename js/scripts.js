@@ -33,5 +33,28 @@ $(document).ready(function () {
 	$(".filter-head.toggle").click(function() {
 		$(this).next().toggle();
 	});
+});
 
+
+// Move sidenav to bottom of page on mobile
+$(document).ready(function () {
+	
+	// On load
+	if (screen.width <= 768) {
+		$(".aanbod-overzicht .sidebar-filtering .filter-list-wrapper").detach().insertAfter('.content-wrapper .paging-wrapper');
+	}
+	else {
+		$(".content-wrapper .filter-list-wrapper").detach().insertAfter('.aanbod-overzicht .sidebar-filtering .standard');
+	}
+	
+	// On resize
+	$( window ).resize(function() {
+		if (screen.width <= 768) {
+			$(".aanbod-overzicht .sidebar-filtering .filter-list-wrapper").detach().insertAfter('.content-wrapper .paging-wrapper');
+		}
+		else {
+			$(".content-wrapper .filter-list-wrapper").detach().insertAfter('.aanbod-overzicht .sidebar-filtering .standard');
+		}
+	});
+	
 });
