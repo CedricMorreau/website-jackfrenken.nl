@@ -29,7 +29,7 @@ if (screen.width >= 768) {
 }
 
 // Toggle filters
-$(document).ready(function () {
+$(document).ready(function (e) {
 	$(".filter-head.toggle").click(function() {
 		$(this).next().toggle();
 	});
@@ -37,7 +37,7 @@ $(document).ready(function () {
 
 
 // Move sidenav to bottom of page on mobile
-$(document).ready(function () {
+$(document).ready(function(e) {
 	
 	// On load
 	if (screen.width <= 768) {
@@ -48,7 +48,7 @@ $(document).ready(function () {
 	}
 	
 	// On resize
-	$( window ).resize(function() {
+	$(window).resize(function(e) {
 		if (screen.width <= 768) {
 			$(".aanbod-overzicht .sidebar-filtering .filter-list-wrapper").detach().insertAfter('.content-wrapper .paging-wrapper');
 		}
@@ -56,5 +56,5 @@ $(document).ready(function () {
 			$(".content-wrapper .filter-list-wrapper").detach().insertAfter('.aanbod-overzicht .sidebar-filtering .standard');
 		}
 	});
-	
+
 });
