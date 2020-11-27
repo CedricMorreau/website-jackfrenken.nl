@@ -60,6 +60,50 @@ class RealworksSearchForm
     }
 
     /**
+     * Gets a field from the payload based on a dot (.) separated path to the value.
+     * 
+     * @param string $path The path to the value.
+     * @return mixed
+     */
+    public function get_payload_field(string $path)
+    {
+        $keys = explode('.', $path);
+        $value = $this->payload;
+
+        foreach ($keys as $key) {
+
+            if (!isset($value[$key]))
+                return null;
+
+            $value = $value[$key];
+        }
+
+        return $value;
+    }
+
+    /**
+     * Sets a field from the payload based on a dot (.) separated path to the value.
+     * 
+     * @param string $path The path to the value.
+     * @param mixed $value The value to set to the path.
+     * 
+     * @return void
+     */
+    public function set_payload_field(string $path, $value): void
+    {
+        $keys = explode('.', $path);
+
+        // Take a temporary copy of the value and get started with some memory address magic
+        $temp = $value;
+        $value = &$this->payload;
+
+        foreach ($keys as $key) // Even more memory address magic to get the address of the new key in the array
+            $value = &$value[$key];
+
+        $value = $temp;
+    }
+
+    /**
      * Fetches the location data for this organization and cache them within the instance
      * to cache them, as multiple requests to this endpoint are probably not required.
      * 
@@ -191,6 +235,11 @@ $search_form->fetch_locations();
 
 var_dump($search_form->locations('zoekgebieden'));
 var_dump($search_form->locations('plaatsen'));
+
+echo $search_form->get_payload_field('zoekopdracht.basis.afdelingscode');
+
+$search_form->set_payload_field('test.some.property', 'Hello');
+var_dump($search_form->payload());
 
 /*
 {
