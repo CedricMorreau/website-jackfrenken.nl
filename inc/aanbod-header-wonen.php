@@ -40,39 +40,33 @@
 		</div>
 	</div>
 	
-	<?php
-	
-	if (count($mediaList) > 0) {
-	
-	?>
-
 	<div class="content-image" style="background: none;">
 		<div class="image-container">
-		
-			<div id="royal-slider" class="royalSlider rsMinW visibleNearby">
-			
-				<?php
+
+			<?php if (isset($mediaList[0])): ?>
+
+				<div id="royal-slider" class="royalSlider rsMinW visibleNearby">
 				
-				$i = 0;
+					<?php
+					
+					$i = 0;
+					
+					foreach ($mediaList as $key => $media) {
+						
+						$fullImage = $dynamicRoot . 'og_media/wonen_' . $val['object_NVMVestigingNR'] . '_' . $val['object_ObjectTiaraID']. '/' . $media['bestandsnaam'];
+						$tnImage = $dynamicRoot . 'og_media/wonen_' . $val['object_NVMVestigingNR'] . '_' . $val['object_ObjectTiaraID']. '/' . $media['bestandsnaam_medium'];
+						
+						echo '<a class="rsImg" href="' . $tnImage . '" data-rsTmb="' . $tnImage . '" data-rsBigImg="' . $fullImage . '">' . $val['objectDetails_Adres_NL_Woonplaats'] . ' - ' . obj_generateAddress($val['objectDetails_Adres_NL_Straatnaam'], $val['objectDetails_Adres_NL_Huisnummer'], $val['objectDetails_Adres_NL_HuisnummerToevoeging']) . '</a>' . PHP_EOL;
+						
+						$i++;
+					}
+					
+					?>
 				
-				foreach ($mediaList as $key => $media) {
-					
-					$fullImage = $dynamicRoot . 'og_media/wonen_' . $val['object_NVMVestigingNR'] . '_' . $val['object_ObjectTiaraID']. '/' . $media['bestandsnaam'];
-					$tnImage = $dynamicRoot . 'og_media/wonen_' . $val['object_NVMVestigingNR'] . '_' . $val['object_ObjectTiaraID']. '/' . $media['bestandsnaam_medium'];
-					
-					echo '<a class="rsImg" href="' . $tnImage . '" data-rsTmb="' . $tnImage . '" data-rsBigImg="' . $fullImage . '">' . $val['objectDetails_Adres_NL_Woonplaats'] . ' - ' . obj_generateAddress($val['objectDetails_Adres_NL_Straatnaam'], $val['objectDetails_Adres_NL_Huisnummer'], $val['objectDetails_Adres_NL_HuisnummerToevoeging']) . '</a>' . PHP_EOL;
-					
-					$i++;
-				}
-				
-				?>
-			
-			</div>
-		
-		</div>
-		
+				</div>
+
+			<?php endif; ?>
+		</div>		
 	</div>
-	
-	<?php } ?>
 
 </div>
