@@ -54,7 +54,90 @@ class RealworksSearchForm
             'zoekopdracht' => [
                 'basis' => [
                     'afdelingscode' => strval($department),
+                    'alleenEigenAanbod' => true,
+                    'automatischeVerwerking' => false, // TODO: Check the meaning of this value
+                    'betalendeKlant' => false,
+                    'einddatum' => '2018-04-18', // TODO: Fill out this value
+                    'medewerkercode' => '100123', // TODO: Figure out what this value means
+                    'realtime' => false,
+                    'status' => 'LOPEND',
+                    'verstuurPerPost' => false,
                 ],
+                'diversen' => [], // Including an empty object in your JSON... Very nice, Realworks
+                'locaties' => [
+                    // TODO: Fill out these two arrays here
+                    'zoekgebieden' => [],
+                    'plaatsen' => [],
+                ],
+
+                // TODO: Fill out all fields below this comment
+
+                'relatie' => [
+                    'persoon' => [
+                        'achternaam' => 'Puk',
+                        'email' => 'example@example.com',
+                        'geslacht' => 'MAN',
+                        'huisnummer' => '58',
+                        'huisnummertoevoeging' => 'bis',
+                        'initialen' => 'P.P.',
+                        'land' => 'Nederland',
+                        'mobielTelefoonnummer' => '06-12345678',
+                        'postcode' => '1012AD',
+                        'roepnaam' => 'Pietje',
+                        'straat' => 'Prins Hendrikkade',
+                        'telefoonnummer' => '020-1234567',
+                        'titel' => 'De heer',
+                        'tussenvoegsel' => 'van der',
+                        'woonplaats' => 'Amsterdam'
+                    ],
+                    'referentie' => [
+                        'relatiecode' => 'string',
+                        'relatiesoort' => 'BEDRIJF'
+                    ]
+                ],
+                'woonwens' => [
+                    'aantalSlaapkamersVanaf' => 0,
+                    'appartementsoorten' => [
+                        'BOVENWONING'
+                    ],
+                    'badkamerOpBeganeGrond' => false,
+                    'balkonPatioDakterras' => false,
+                    'bestaandeBouw' => false,
+                    'bouwjaarTotEnMet' => 0,
+                    'bouwjaarVanaf' => 0,
+                    'garage' => [
+                        'GARAGE'
+                    ],
+                    'gedeeltelijkGestoffeerd' => false,
+                    'gemeubileerd' => false,
+                    'gestoffeerd' => false,
+                    'huurprijsTotEnMet' => 0,
+                    'huurprijsVanaf' => 0,
+                    'koopprijsTotEnMet' => 0,
+                    'koopprijsVanaf' => 0,
+                    'lift' => false,
+                    'liggingen' => [
+                        'AAN_BOSRAND'
+                    ],
+                    'nieuwbouw' => false,
+                    'objectsoort' => 'WOONHUIS_OF_APPARTEMENT',
+                    'perceelOppervlakteVanaf' => 0,
+                    'permanenteBewoning' => false,
+                    'recreatiewoning' => false,
+                    'slaapkamerOpBeganeGrond' => false,
+                    'tuinliggingen' => [
+                        'NOORD'
+                    ],
+                    'woningsoorten' => [
+                        'EENGEZINSWONING'
+                    ],
+                    'woningtypes' => [
+                        'VRIJSTAANDE_WONING'
+                    ],
+                    'woonInhoudVanaf' => 0,
+                    'woonOppervlakteVanaf' => 0,
+                    'woonkamerOppervlakteVanaf' => 0
+                ]
             ],
         ];
     }
@@ -240,96 +323,3 @@ echo $search_form->get_payload_field('zoekopdracht.basis.afdelingscode');
 
 $search_form->set_payload_field('test.some.property', 'Hello');
 var_dump($search_form->payload());
-
-/*
-{
-  "zoekopdracht": {
-    "basis": {
-      "afdelingscode": "string",
-      "alleenEigenAanbod": false,
-      "automatischeVerwerking": false,
-      "betalendeKlant": false,
-      "einddatum": "2018-04-18",
-      "medewerkercode": "100123",
-      "realtime": false,
-      "status": "LOPEND",
-      "verstuurPerPost": false
-    },
-    "diversen": {},
-    "locaties": {
-      "plaatsen": [
-        0
-      ],
-      "zoekgebieden": [
-        0
-      ]
-    },
-    "relatie": {
-      "persoon": {
-        "achternaam": "Puk",
-        "email": "example@example.com",
-        "geslacht": "MAN",
-        "huisnummer": "58",
-        "huisnummertoevoeging": "bis",
-        "initialen": "P.P.",
-        "land": "Nederland",
-        "mobielTelefoonnummer": "06-12345678",
-        "postcode": "1012AD",
-        "roepnaam": "Pietje",
-        "straat": "Prins Hendrikkade",
-        "telefoonnummer": "020-1234567",
-        "titel": "De heer",
-        "tussenvoegsel": "van der",
-        "woonplaats": "Amsterdam"
-      },
-      "referentie": {
-        "relatiecode": "string",
-        "relatiesoort": "BEDRIJF"
-      }
-    },
-    "woonwens": {
-      "aantalSlaapkamersVanaf": 0,
-      "appartementsoorten": [
-        "BOVENWONING"
-      ],
-      "badkamerOpBeganeGrond": false,
-      "balkonPatioDakterras": false,
-      "bestaandeBouw": false,
-      "bouwjaarTotEnMet": 0,
-      "bouwjaarVanaf": 0,
-      "garage": [
-        "GARAGE"
-      ],
-      "gedeeltelijkGestoffeerd": false,
-      "gemeubileerd": false,
-      "gestoffeerd": false,
-      "huurprijsTotEnMet": 0,
-      "huurprijsVanaf": 0,
-      "koopprijsTotEnMet": 0,
-      "koopprijsVanaf": 0,
-      "lift": false,
-      "liggingen": [
-        "AAN_BOSRAND"
-      ],
-      "nieuwbouw": false,
-      "objectsoort": "WOONHUIS_OF_APPARTEMENT",
-      "perceelOppervlakteVanaf": 0,
-      "permanenteBewoning": false,
-      "recreatiewoning": false,
-      "slaapkamerOpBeganeGrond": false,
-      "tuinliggingen": [
-        "NOORD"
-      ],
-      "woningsoorten": [
-        "EENGEZINSWONING"
-      ],
-      "woningtypes": [
-        "VRIJSTAANDE_WONING"
-      ],
-      "woonInhoudVanaf": 0,
-      "woonOppervlakteVanaf": 0,
-      "woonkamerOppervlakteVanaf": 0
-    }
-  }
-}
-*/
