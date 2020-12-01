@@ -271,9 +271,13 @@ class RealworksSearchForm
             $this->set_payload_field('zoekopdracht.woonwens.woningsoorten', []);
             $this->set_payload_field('zoekopdracht.woonwens.woningtypes', []);
 
+            $this->set_payload_field('zoekopdracht.woonwens.objectsoort', 'APPARTEMENT');
+
         } else {
             $this->set_payload_field('zoekopdracht.woonwens.appartementsoorten', []);
             $this->set_payload_field('zoekopdracht.woonwens.woningsoorten', [$value]);
+
+            $this->set_payload_field('zoekopdracht.woonwens.objectsoort', 'WOONHUIS');
         }
     }
 
