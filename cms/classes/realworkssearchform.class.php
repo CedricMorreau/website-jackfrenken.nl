@@ -248,6 +248,24 @@ class RealworksSearchForm
             $this->set_payload_field('zoekopdracht.woonwens.koopprijsTotEnMet', $max);
     }
 
+    public function set_locations(string $key, array $values): void
+    {
+        if (!isset($this->locations[$key]))
+            throw new \Exception("Locations key '$key' does not exist");
+
+        $keys = [];
+
+        foreach ($this->locations[$key] as $id => $location) {
+            foreach ($values as $value) {
+
+                if ($location === $value)
+                    $keys[] = $id;
+            }
+        }
+
+        $this->set_payload_field('zoekopdracht.locaties.' . $key, $keys);
+    }
+
     public function set_woningsoort(string $value): void
     {
         $value = strtoupper($value);
@@ -528,7 +546,11 @@ $search_form->set_woningtype('2-onder-1-kapwoning');
 
 $search_form->set_rent_range(200, 500);
 
+$search_form->set_locations('plaatsen', [
+    'Baexem', 'Beegden', 'Maria Hoop',
+]);
+
+var_dump($search_form->payload());
+
 $response = $search_form->send();
 var_dump($response);
-
-var_dump($search_form->locations('plaatsen'));
