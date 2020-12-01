@@ -1,10 +1,17 @@
 <?php
 
+// Search form URL:
+// https://www.jackfrenken.nl/diensten/inschrijven-als-zoeker
+
 /**
  * An API wrapper class that relays searcher form submissions to the Realworks API.
  */
 class RealworksSearchForm
 {
+    public const FIELD_GENDER_MALE = 'MAN';
+    public const FIELD_GENDER_FEMALE = 'VROUW';
+    public const FIELD_GENDER_OTHER = 'ONBEKEND';
+
     /**
      * The constant base URL of the Realworks API.
      * @var string
@@ -53,7 +60,7 @@ class RealworksSearchForm
         $this->payload = [
             'zoekopdracht' => [
                 'basis' => [
-                    'afdelingscode' => strval($department),
+                    'afdelingscode' => strval($this->department),
                     'alleenEigenAanbod' => true,
                     'automatischeVerwerking' => false, // TODO: Check the meaning of this value
                     'betalendeKlant' => false,
@@ -74,31 +81,31 @@ class RealworksSearchForm
 
                 'relatie' => [
                     'persoon' => [
-                        'achternaam' => 'Puk',
+                        'achternaam' => null,
                         'email' => 'example@example.com',
-                        'geslacht' => 'MAN',
-                        'huisnummer' => '58',
-                        'huisnummertoevoeging' => 'bis',
-                        'initialen' => 'P.P.',
+                        'geslacht' => 'ONBEKEND',
+                        'huisnummer' => null,
+                        'huisnummertoevoeging' => null,
+                        'initialen' => null,
                         'land' => 'Nederland',
-                        'mobielTelefoonnummer' => '06-12345678',
-                        'postcode' => '1012AD',
-                        'roepnaam' => 'Pietje',
-                        'straat' => 'Prins Hendrikkade',
-                        'telefoonnummer' => '020-1234567',
+                        'mobielTelefoonnummer' => null,
+                        'postcode' => null,
+                        'roepnaam' => null,
+                        'straat' => null,
+                        'telefoonnummer' => null,
                         'titel' => 'De heer',
-                        'tussenvoegsel' => 'van der',
-                        'woonplaats' => 'Amsterdam'
+                        'tussenvoegsel' => null,
+                        'woonplaats' => null,
                     ],
                     'referentie' => [
                         'relatiecode' => 'string',
-                        'relatiesoort' => 'BEDRIJF'
+                        'relatiesoort' => 'BEDRIJF',
                     ]
                 ],
                 'woonwens' => [
                     'aantalSlaapkamersVanaf' => 0,
                     'appartementsoorten' => [
-                        'BOVENWONING'
+                        'BOVENWONING',
                     ],
                     'badkamerOpBeganeGrond' => false,
                     'balkonPatioDakterras' => false,
@@ -106,7 +113,7 @@ class RealworksSearchForm
                     'bouwjaarTotEnMet' => 0,
                     'bouwjaarVanaf' => 0,
                     'garage' => [
-                        'GARAGE'
+                        'GARAGE',
                     ],
                     'gedeeltelijkGestoffeerd' => false,
                     'gemeubileerd' => false,
@@ -117,7 +124,7 @@ class RealworksSearchForm
                     'koopprijsVanaf' => 0,
                     'lift' => false,
                     'liggingen' => [
-                        'AAN_BOSRAND'
+                        'AAN_BOSRAND',
                     ],
                     'nieuwbouw' => false,
                     'objectsoort' => 'WOONHUIS_OF_APPARTEMENT',
@@ -126,13 +133,13 @@ class RealworksSearchForm
                     'recreatiewoning' => false,
                     'slaapkamerOpBeganeGrond' => false,
                     'tuinliggingen' => [
-                        'NOORD'
+                        'NOORD',
                     ],
                     'woningsoorten' => [
-                        'EENGEZINSWONING'
+                        'EENGEZINSWONING',
                     ],
                     'woningtypes' => [
-                        'VRIJSTAANDE_WONING'
+                        'VRIJSTAANDE_WONING',
                     ],
                     'woonInhoudVanaf' => 0,
                     'woonOppervlakteVanaf' => 0,
@@ -140,6 +147,53 @@ class RealworksSearchForm
                 ]
             ],
         ];
+    }
+
+    public function set_contact_info(string $fname, ?string $infix, string $lname, string $phone, ?string $mobile, string $email, string $gender = 'ONBEKEND'): void
+    {
+        $initials = strtoupper($fname[0]) . '.' . strtoupper($lname[0]) . '.';
+        $phone = preg_replace('/[^\d]+/', '', $phone);
+
+        $this->set_payload_fields_array([
+            'zoekopdracht.relatie.persoon.roepnaam' => $fname,
+            'zoekopdracht.relatie.persoon.achternaam' => $lname,
+            'zoekopdracht.relatie.persoon.initialen' => $initials,
+            'zoekopdracht.relatie.persoon.geslacht' => $gender,
+            'zoekopdracht.relatie.persoon.telefoonnummer' => $phone,
+            'zoekopdracht.relatie.persoon.email' => strtolower($email),
+        ]);
+
+        $title = [
+            self::FIELD_GENDER_MALE => 'Dhr.',
+            self::FIELD_GENDER_FEMALE => 'Mevr.',
+            self::FIELD_GENDER_OTHER => 'Fam.',
+        ];
+
+        $title = isset($title[$gender]) ? $title[$gender] : 'Fam.';
+        $this->set_payload_field('zoekopdracht.relatie.persoon.titel', $title);
+
+        if ($infix !== null && !empty($infix))
+            $this->set_payload_field('zoekopdracht.relatie.persoon.tussenvoegsel', $infix);
+
+        if ($mobile !== null && !empty($mobile)) {
+            $mobile = preg_replace('/[^\d]/', '', $mobile);
+            $this->set_payload_field('zoekopdracht.relatie.persoon.mobielTelefoonnummer', $mobile);
+        }
+    }
+
+    public function set_contact_address(string $street, int $number, ?string $addition, string $zipcode, string $city): void
+    {
+        $zipcode = preg_replace('/[^\dA-Z]+/', '', strtoupper($zipcode));
+
+        $this->set_payload_fields_array([
+            'zoekopdracht.relatie.persoon.straat' => $street,
+            'zoekopdracht.relatie.persoon.huisnummer' => strval($number),
+            'zoekopdracht.relatie.persoon.postcode' => $zipcode,
+            'zoekopdracht.relatie.persoon.woonplaats' => $city,
+        ]);
+
+        if ($addition !== null && !empty($addition))
+            $this->set_payload_field('zoekopdracht.relatie.persoon.huisnummertoevoeging', $addition);
     }
 
     /**
@@ -184,6 +238,12 @@ class RealworksSearchForm
             $value = &$value[$key];
 
         $value = $temp;
+    }
+
+    public function set_payload_fields_array(array $values): void
+    {
+        foreach ($values as $path => $value)
+            $this->set_payload_field($path, $value);
     }
 
     /**
@@ -316,10 +376,7 @@ class RealworksSearchForm
 $search_form = new RealworksSearchForm('e2ed5b0a-d544-409b-aa06-7f3a875c2403', 44003);
 $search_form->fetch_locations();
 
-var_dump($search_form->locations('zoekgebieden'));
-var_dump($search_form->locations('plaatsen'));
+$search_form->set_contact_info('Test', null, 'Tester', '06 427 93 443', null, 'test@pixelplus.nl', RealworksSearchForm::FIELD_GENDER_MALE);
+$search_form->set_contact_address('Raadhuisstraat', 12, null, '6191 KB', 'Beek');
 
-echo $search_form->get_payload_field('zoekopdracht.basis.afdelingscode');
-
-$search_form->set_payload_field('test.some.property', 'Hello');
 var_dump($search_form->payload());
