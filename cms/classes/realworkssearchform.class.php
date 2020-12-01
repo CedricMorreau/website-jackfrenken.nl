@@ -389,7 +389,7 @@ class RealworksSearchForm
         // In the following loop, we are going to process all items in the results array
         // that we received from the API. We will then map each result's "naam" property
         //to its corresponding ID.
-        foreach ($response['resultaten'] as $result) {
+        foreach ($response['result']['resultaten'] as $result) {
 
             foreach ($result['zoekgebieden'] as $zoekgebied) {
                 $key = intval($zoekgebied['id']);
@@ -416,11 +416,10 @@ class RealworksSearchForm
      * 
      * @return string|array|null
      */
-    public function request(string $endpoint, bool $json = true)
+    public function request(string $endpoint, bool $json = true, array $post_fields = [])
     {
         // Prepare the API URL and initialize a cURL handle for the request
-        $url = rtrim(self::BASE_URL, '/') . '/' . trim($endpoint, '/');
-        $ch = curl_init($url);
+        $ch = curl_init($this->url($endpoint));
 
         curl_setopt_array($ch, [
             CURLOPT_RETURNTRANSFER => true,
@@ -435,19 +434,35 @@ class RealworksSearchForm
             CURLOPT_SSL_VERIFYPEER => false,
         ]);
 
+        if (count($post_fields) > 0) {
+            curl_setopt_array($ch, [
+                CURLOPT_POST => true,
+                CURLOPT_POSTFIELDS => json_encode($post_fields),
+            ]);
+        }
+
         $result = curl_exec($ch);
         $info = curl_getinfo($ch);
 
         curl_close($ch);
 
-        // If the request didn't return a successful response code, return null
-        if ($info['http_code'] < 200 || $info['http_code'] >= 300)
-            return null;
-
         if ($json === true) // Check if the expected output is JSON and decode it as such
             $result = json_decode($result, true);
 
-        return $result;
+        return ['info' => $info, 'result' => $result];
+    }
+
+    public function send()
+    {
+        $response = $this->request('/wonen/v1/zoekopdracht', true, $this->payload);
+
+        var_dump($response['result']);
+        echo $response['info']['http_code'];
+    }
+
+    public function url(string $endpoint): string
+    {
+        return rtrim(self::BASE_URL, '/') . '/' . trim($endpoint, '/');
     }
 
     /**
@@ -513,4 +528,7 @@ $search_form->set_woningtype('2-onder-1-kapwoning');
 
 $search_form->set_rent_range(200, 500);
 
-var_dump($search_form->payload());
+$response = $search_form->send();
+var_dump($response);
+
+var_dump($search_form->locations('plaatsen'));
