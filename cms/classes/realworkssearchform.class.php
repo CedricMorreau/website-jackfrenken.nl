@@ -76,9 +76,6 @@ class RealworksSearchForm
                     'zoekgebieden' => [],
                     'plaatsen' => [],
                 ],
-
-                // TODO: Fill out all fields below this comment
-
                 'relatie' => [
                     'persoon' => [
                         'achternaam' => null,
@@ -106,6 +103,16 @@ class RealworksSearchForm
                     'aantalSlaapkamersVanaf' => 0,
                     'appartementsoorten' => [
                         'BOVENWONING',
+                        'BENEDENWONING',
+                        'MAISONNETTE',
+                        'GALERIJFLAT',
+                        'PORTIEKFLAT',
+                        'BENEDEN_PLUS_BOVENWONING',
+                        'PENTHOUSE',
+                        'PORTIEKWONING',
+                        'STUDENTENKAMER',
+                        'DUBBEL_BENEDENHUIS',
+                        'TUSSENVERDIEPING',
                     ],
                     'badkamerOpBeganeGrond' => false,
                     'balkonPatioDakterras' => false,
@@ -114,6 +121,12 @@ class RealworksSearchForm
                     'bouwjaarVanaf' => 0,
                     'garage' => [
                         'GARAGE',
+                        'BERGING',
+                        'PARKEERPLAATS',
+                        'GARAGE_OF_BERGING',
+                        'GARAGE_OF_PARKEERPLAATS',
+                        'BERGING_OF_PARKEERPLAATS',
+                        'GARAGE_OF_BERGING_OF_PARKEERPLAATS',
                     ],
                     'gedeeltelijkGestoffeerd' => false,
                     'gemeubileerd' => false,
@@ -125,6 +138,21 @@ class RealworksSearchForm
                     'lift' => false,
                     'liggingen' => [
                         'AAN_BOSRAND',
+                        'AAN_WATER',
+                        'AAN_PARK',
+                        'AAN_DRUKKE_WEG',
+                        'AAN_RUSTIGE_WEG',
+                        'IN_CENTRUM',
+                        'IN_WOONWIJK',
+                        'VRIJ_UITZICHT',
+                        'BESCHUTTE_LIGGING',
+                        'OPEN_LIGGING',
+                        'BUITEN_BEBOUWDE_KOM',
+                        'AAN_VAARWATER',
+                        'IN_BOSRIJKE_OMGEVING',
+                        'LANDELIJK_GELEGEN',
+                        'ZEEZICHT',
+                        'BEDRIJVENTERREIN',
                     ],
                     'nieuwbouw' => false,
                     'objectsoort' => 'WOONHUIS_OF_APPARTEMENT',
@@ -134,12 +162,33 @@ class RealworksSearchForm
                     'slaapkamerOpBeganeGrond' => false,
                     'tuinliggingen' => [
                         'NOORD',
+                        'OOST',
+                        'ZUID',
+                        'WEST',
                     ],
                     'woningsoorten' => [
                         'EENGEZINSWONING',
+                        'HERENHUIS',
+                        'VILLA',
+                        'LANDHUIS',
+                        'BUNGALOW',
+                        'WOONBOERDERIJ',
+                        'GRACHTENPAND',
+                        'WOONBOOT',
+                        'STACARAVAN',
+                        'WOONWAGEN',
+                        'LANDGOED',
                     ],
                     'woningtypes' => [
                         'VRIJSTAANDE_WONING',
+                        'GESCHAKELDE_WONING',
+                        'TWEE_ONDER_EEN_KAPWONING',
+                        'TUSSENWONING',
+                        'HOEKWONING',
+                        'EINDWONING',
+                        'HALFVRIJSTAANDE_WONING',
+                        'GESCHAKELDE_TWEE_ONDER_EEN_KAPWONING',
+                        'VERSPRINGEND',
                     ],
                     'woonInhoudVanaf' => 0,
                     'woonOppervlakteVanaf' => 0,
@@ -179,6 +228,79 @@ class RealworksSearchForm
             $mobile = preg_replace('/[^\d]/', '', $mobile);
             $this->set_payload_field('zoekopdracht.relatie.persoon.mobielTelefoonnummer', $mobile);
         }
+    }
+
+    public function set_rent_range(?int $min, ?int $max): void
+    {
+        if ($min !== null)
+            $this->set_payload_field('zoekopdracht.woonwens.huurprijsVanaf', $min);
+
+        if ($max !== null)
+            $this->set_payload_field('zoekopdracht.woonwens.huurprijsTotEnMet', $max);
+    }
+
+    public function set_purchase_range(?int $min, ?int $max): void
+    {
+        if ($min !== null)
+            $this->set_payload_field('zoekopdracht.woonwens.koopprijsVanaf', $min);
+
+        if ($max !== null)
+            $this->set_payload_field('zoekopdracht.woonwens.koopprijsTotEnMet', $max);
+    }
+
+    public function set_woningsoort(string $value): void
+    {
+        $value = strtoupper($value);
+
+        if (in_array($value, ['APPARTEMENT', 'APARTEMENT'])) {
+
+            $this->set_payload_field('zoekopdracht.woonwens.appartementsoorten', [
+                'BOVENWONING',
+                'BENEDENWONING',
+                'MAISONNETTE',
+                'GALERIJFLAT',
+                'PORTIEKFLAT',
+                'BENEDEN_PLUS_BOVENWONING',
+                'PENTHOUSE',
+                'PORTIEKWONING',
+                'STUDENTENKAMER',
+                'DUBBEL_BENEDENHUIS',
+                'TUSSENVERDIEPING',
+            ]);
+
+            $this->set_payload_field('zoekopdracht.woonwens.woningsoorten', []);
+            $this->set_payload_field('zoekopdracht.woonwens.woningtypes', []);
+
+        } else {
+            $this->set_payload_field('zoekopdracht.woonwens.appartementsoorten', []);
+            $this->set_payload_field('zoekopdracht.woonwens.woningsoorten', [$value]);
+        }
+    }
+
+    public function set_woningtype(string $value): void
+    {
+        $value = strtoupper($value);
+
+        $value = preg_replace('/[^A-Z\d]+/', '_', $value);
+        $value = preg_replace('/_+/', '_', $value);
+
+        $replace = [
+            1 => 'EEN',
+            2 => 'TWEE',
+        ];
+
+        $value = str_replace(array_keys($replace), array_values($replace), $value);
+        $this->set_payload_field('zoekopdracht.woonwens.woningtypes', [$value]);
+    }
+
+    public function set_min_perceeloppervlakte(int $value): void
+    {
+        $this->set_payload_field('zoekopdracht.woonwens.perceelOppervlakteVanaf', strval($value));
+    }
+
+    public function set_min_slaapkamers(int $value): void
+    {
+        $this->set_payload_field('zoekopdracht.woonwens.aantalSlaapkamersVanaf', strval($value));
     }
 
     public function set_contact_address(string $street, int $number, ?string $addition, string $zipcode, string $city): void
@@ -378,5 +500,13 @@ $search_form->fetch_locations();
 
 $search_form->set_contact_info('Test', null, 'Tester', '06 427 93 443', null, 'test@pixelplus.nl', RealworksSearchForm::FIELD_GENDER_MALE);
 $search_form->set_contact_address('Raadhuisstraat', 12, null, '6191 KB', 'Beek');
+
+$search_form->set_min_perceeloppervlakte(250);
+$search_form->set_min_slaapkamers(2);
+
+$search_form->set_woningsoort('Bungalow');
+$search_form->set_woningtype('2-onder-1-kapwoning');
+
+$search_form->set_rent_range(200, 500);
 
 var_dump($search_form->payload());
