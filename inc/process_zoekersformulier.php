@@ -1,6 +1,7 @@
 <?php
 
 include($_SERVER['DOCUMENT_ROOT'] . "/cms/classes/pp_mailer.class.php");
+include($_SERVER['DOCUMENT_ROOT'] . "/cms/classes/realworkssearchform.class.php");
 
 // Process POST data etc.
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
@@ -40,6 +41,64 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
 			$mail_template = str_replace('{{' . $key . '}}', $val, $mail_template);
 		}
+
+		// Initialize search form for Realworks
+		$search_form = new RealworksSearchForm('e2ed5b0a-d544-409b-aa06-7f3a875c2403', 44003);
+		$search_form->fetch_locations();
+
+		$gender = [
+			'DHR' => RealworksSearchForm::FIELD_GENDER_MALE,
+			'MEVR' => RealworksSearchForm::FIELD_GENDER_FEMALE,
+			'FAM' => RealworksSearchForm::FIELD_GENDER_OTHER,
+		];
+
+		$gender = $gender[$_POST['aanhef']];
+
+		$search_form->set_contact_info($_POST['voornaam'], !empty($_POST['tussenvoegsel']) ? $_POST['tussenvoegsel'] : null, $_POST['achternaam'], $_POST['contactTelefoon'],
+			!empty($_POST['contactMobiel']) ? $_POST['contactMobiel'] : null, $_POST['contactEmail'], $gender);
+
+		$search_form->set_contact_address($_POST['contactStraat'], intval($_POST['contactHuisnummer']), null, $_POST['contactPostcode'], $_POST['contactPlaats']);
+
+		$search_form->set_min_perceeloppervlakte(intval($_POST['objectPerceelOpp']));
+		$search_form->set_min_slaapkamers(intval($_POST['objectSlaapkamers']));
+
+		if (strtolower($_POST['objectSoort']) === 'appartement') {
+
+			$search_form->set_all_appartementsoorten();
+			$search_form->set_objectsoort('APPARTEMENT');
+
+		} else {
+
+			$search_form->set_woningsoorten([$_POST['objectSoort']]);
+			$search_form->set_woningtype($_POST['objectBouwvorm']);
+			
+			$search_form->set_objectsoort('WOONHUIS');
+		}
+
+		$min_object_price = intval($_POST['prijsVanaf']);
+		$max_object_price = intval($_POST['prijsTot']);
+
+		if (is_array($_POST['soortAankoop'])) {
+
+			if (in_array('Huren', $_POST['soortAankoop']))
+				$search_form->set_rent_range($min_object_price, $max_object_price);
+
+			if (in_array('Kopen', $_POST['soortAankoop']))
+				$search_form->set_purchase_range($min_object_price, $max_object_price);
+
+		} else {
+			$search_form->set_rent_range($min_object_price, $max_object_price);
+			$search_form->set_purchase_range($min_object_price, $max_object_price);
+		}
+
+		if (is_array($_POST['plaatsnaam'])) {
+			$search_form->set_locations('plaatsen', $_POST['plaatsnaam']);
+		} else {
+			$search_form->set_all_locations('plaatsen');
+		}
+
+		echo '<pre>', var_dump($search_form->payload()), '</pre>';
+		die();
 
 		if ($test) {
 			

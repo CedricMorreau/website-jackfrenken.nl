@@ -72,7 +72,6 @@ class RealworksSearchForm
                 ],
                 'diversen' => [], // Including an empty object in your JSON... Very nice, Realworks
                 'locaties' => [
-                    // TODO: Fill out these two arrays here
                     'zoekgebieden' => [],
                     'plaatsen' => [],
                 ],
@@ -101,19 +100,7 @@ class RealworksSearchForm
                 ],
                 'woonwens' => [
                     'aantalSlaapkamersVanaf' => 0,
-                    'appartementsoorten' => [
-                        'BOVENWONING',
-                        'BENEDENWONING',
-                        'MAISONNETTE',
-                        'GALERIJFLAT',
-                        'PORTIEKFLAT',
-                        'BENEDEN_PLUS_BOVENWONING',
-                        'PENTHOUSE',
-                        'PORTIEKWONING',
-                        'STUDENTENKAMER',
-                        'DUBBEL_BENEDENHUIS',
-                        'TUSSENVERDIEPING',
-                    ],
+                    'appartementsoorten' => [],
                     'badkamerOpBeganeGrond' => false,
                     'balkonPatioDakterras' => false,
                     'bestaandeBouw' => false,
@@ -161,41 +148,21 @@ class RealworksSearchForm
                     'recreatiewoning' => false,
                     'slaapkamerOpBeganeGrond' => false,
                     'tuinliggingen' => [
-                        'NOORD',
-                        'OOST',
-                        'ZUID',
-                        'WEST',
+                        'NOORD', 'OOST', 'ZUID', 'WEST',
                     ],
-                    'woningsoorten' => [
-                        'EENGEZINSWONING',
-                        'HERENHUIS',
-                        'VILLA',
-                        'LANDHUIS',
-                        'BUNGALOW',
-                        'WOONBOERDERIJ',
-                        'GRACHTENPAND',
-                        'WOONBOOT',
-                        'STACARAVAN',
-                        'WOONWAGEN',
-                        'LANDGOED',
-                    ],
-                    'woningtypes' => [
-                        'VRIJSTAANDE_WONING',
-                        'GESCHAKELDE_WONING',
-                        'TWEE_ONDER_EEN_KAPWONING',
-                        'TUSSENWONING',
-                        'HOEKWONING',
-                        'EINDWONING',
-                        'HALFVRIJSTAANDE_WONING',
-                        'GESCHAKELDE_TWEE_ONDER_EEN_KAPWONING',
-                        'VERSPRINGEND',
-                    ],
+                    'woningsoorten' => [],
+                    'woningtypes' => [],
                     'woonInhoudVanaf' => 0,
                     'woonOppervlakteVanaf' => 0,
                     'woonkamerOppervlakteVanaf' => 0
                 ]
             ],
         ];
+
+        $this->set_all_appartementsoorten();
+
+        $this->set_all_woningsoorten();
+        $this->set_all_woningtypes();
     }
 
     public function set_contact_info(string $fname, ?string $infix, string $lname, string $phone, ?string $mobile, string $email, string $gender = 'ONBEKEND'): void
@@ -251,14 +218,14 @@ class RealworksSearchForm
     public function set_locations(string $key, array $values): void
     {
         if (!isset($this->locations[$key]))
-            throw new \Exception("Locations key '$key' does not exist");
+            throw new \Exception("Location key '$key' does not exist");
 
         $keys = [];
 
         foreach ($this->locations[$key] as $id => $location) {
             foreach ($values as $value) {
 
-                if ($location === $value)
+                if (strtolower($location) === strtolower($value))
                     $keys[] = $id;
             }
         }
@@ -266,37 +233,63 @@ class RealworksSearchForm
         $this->set_payload_field('zoekopdracht.locaties.' . $key, $keys);
     }
 
-    public function set_woningsoort(string $value): void
+    public function set_all_locations(string $key): void
     {
-        $value = strtoupper($value);
+        if (!isset($this->locations[$key]))
+            throw new \Exception("Location key '$key' does not exist");
 
-        if (in_array($value, ['APPARTEMENT', 'APARTEMENT'])) {
+        $this->set_payload_field('zoekopdracht.locaties.' . $key, array_keys($this->locations[$key]));
+    }
 
-            $this->set_payload_field('zoekopdracht.woonwens.appartementsoorten', [
-                'BOVENWONING',
-                'BENEDENWONING',
-                'MAISONNETTE',
-                'GALERIJFLAT',
-                'PORTIEKFLAT',
-                'BENEDEN_PLUS_BOVENWONING',
-                'PENTHOUSE',
-                'PORTIEKWONING',
-                'STUDENTENKAMER',
-                'DUBBEL_BENEDENHUIS',
-                'TUSSENVERDIEPING',
-            ]);
+    public function set_objectsoort(string $value): void
+    {
+        $this->set_payload_field('zoekopdracht.woonwens.objectsoort', strtoupper($value));
+    }
 
-            $this->set_payload_field('zoekopdracht.woonwens.woningsoorten', []);
-            $this->set_payload_field('zoekopdracht.woonwens.woningtypes', []);
+    public function set_appartementsoorten(array $values): void
+    {
+        $this->set_payload_field('zoekopdracht.woonwens.appartementsoorten',
+            array_map(function ($item) { return strtoupper($item); }, $values));
+    }
 
-            $this->set_payload_field('zoekopdracht.woonwens.objectsoort', 'APPARTEMENT');
+    public function set_all_appartementsoorten(): void
+    {
+        $this->set_payload_field('zoekopdracht.woonwens.appartementsoorten', [
+            'BOVENWONING',
+            'BENEDENWONING',
+            'MAISONNETTE',
+            'GALERIJFLAT',
+            'PORTIEKFLAT',
+            'BENEDEN_PLUS_BOVENWONING',
+            'PENTHOUSE',
+            'PORTIEKWONING',
+            'STUDENTENKAMER',
+            'DUBBEL_BENEDENHUIS',
+            'TUSSENVERDIEPING',
+        ]);
+    }
 
-        } else {
-            $this->set_payload_field('zoekopdracht.woonwens.appartementsoorten', []);
-            $this->set_payload_field('zoekopdracht.woonwens.woningsoorten', [$value]);
+    public function set_woningsoorten(array $values): void
+    {
+        $this->set_payload_field('zoekopdracht.woonwens.woningsoorten',
+            array_map(function ($item) { return strtoupper($item); }, $values));
+    }
 
-            $this->set_payload_field('zoekopdracht.woonwens.objectsoort', 'WOONHUIS');
-        }
+    public function set_all_woningsoorten(): void
+    {
+        $this->set_payload_field('zoekopdracht.woonwens.woningsoorten', [
+            'EENGEZINSWONING',
+            'HERENHUIS',
+            'VILLA',
+            'LANDHUIS',
+            'BUNGALOW',
+            'WOONBOERDERIJ',
+            'GRACHTENPAND',
+            'WOONBOOT',
+            'STACARAVAN',
+            'WOONWAGEN',
+            'LANDGOED',
+        ]);
     }
 
     public function set_woningtype(string $value): void
@@ -313,6 +306,21 @@ class RealworksSearchForm
 
         $value = str_replace(array_keys($replace), array_values($replace), $value);
         $this->set_payload_field('zoekopdracht.woonwens.woningtypes', [$value]);
+    }
+
+    public function set_all_woningtypes(): void
+    {
+        $this->set_payload_field('zoekopdracht.woonwens.woningtypes', [
+            'VRIJSTAANDE_WONING',
+            'GESCHAKELDE_WONING',
+            'TWEE_ONDER_EEN_KAPWONING',
+            'TUSSENWONING',
+            'HOEKWONING',
+            'EINDWONING',
+            'HALFVRIJSTAANDE_WONING',
+            'GESCHAKELDE_TWEE_ONDER_EEN_KAPWONING',
+            'VERSPRINGEND',
+        ]);
     }
 
     public function set_min_perceeloppervlakte(int $value): void
@@ -531,26 +539,3 @@ class RealworksSearchForm
         return $this->department;
     }
 }
-
-$search_form = new RealworksSearchForm('e2ed5b0a-d544-409b-aa06-7f3a875c2403', 44003);
-$search_form->fetch_locations();
-
-$search_form->set_contact_info('Test', null, 'Tester', '06 427 93 443', null, 'test@pixelplus.nl', RealworksSearchForm::FIELD_GENDER_MALE);
-$search_form->set_contact_address('Raadhuisstraat', 12, null, '6191 KB', 'Beek');
-
-$search_form->set_min_perceeloppervlakte(250);
-$search_form->set_min_slaapkamers(2);
-
-$search_form->set_woningsoort('Bungalow');
-$search_form->set_woningtype('2-onder-1-kapwoning');
-
-$search_form->set_rent_range(200, 500);
-
-$search_form->set_locations('plaatsen', [
-    'Baexem', 'Beegden', 'Maria Hoop',
-]);
-
-var_dump($search_form->payload());
-
-$response = $search_form->send();
-var_dump($response);
