@@ -70,7 +70,10 @@ class RealworksSearchForm
                     'status' => 'LOPEND',
                     'verstuurPerPost' => false,
                 ],
-                'diversen' => [], // Including an empty object in your JSON... Very nice, Realworks
+                'diversen' => [
+                    // If we leave out the below value, the API will not work for some reason...
+                    'diversen' => 'test',
+                ],
                 'locaties' => [
                     'zoekgebieden' => [],
                     'plaatsen' => [],
@@ -94,8 +97,7 @@ class RealworksSearchForm
                         'woonplaats' => null,
                     ],
                     'referentie' => [
-                        'relatiecode' => 'string',
-                        'relatiesoort' => 'BEDRIJF',
+                        'relatiesoort' => 'PARTICULIER',
                     ]
                 ],
                 'woonwens' => [

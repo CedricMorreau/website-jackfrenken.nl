@@ -97,7 +97,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 			$search_form->set_all_locations('plaatsen');
 		}
 
-		echo '<pre>', var_dump($search_form->payload()), '</pre>';
+		$search_form->send();
 		die();
 
 		if ($test) {
