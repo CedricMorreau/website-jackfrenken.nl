@@ -66,7 +66,7 @@ $image = (!is_null($val['mainImage'])) ? $dynamicRoot . 'og_media/wonen_' . $val
 					echo '<div class="image-label status-openhouse"><span>Open Huis!</span> <i>' . $shownDate . ' - ' . $shownTime . ' uur</i></div>';
 				}
 			}
-			elseif (strtolower($val['objectDetails_StatusBeschikbaarheid_Status']) == 'verkocht' || strtolower($val['objectDetails_StatusBeschikbaarheid_Status']) == 'verhuurd') {
+			elseif (strtolower($val['objectDetails_StatusBeschikbaarheid_Status']) == 'verkocht' || strtolower($val['objectDetails_StatusBeschikbaarheid_Status']) == 'verhuurd' || strtolower($val['objectDetails_StatusBeschikbaarheid_Status']) == 'onder optie') {
 
 				echo '<div class="image-label status-sold">' . $val['objectDetails_StatusBeschikbaarheid_Status'] . '</div>';
 			}

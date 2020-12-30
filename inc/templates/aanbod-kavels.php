@@ -53,7 +53,7 @@ $image = (!is_null($val['mainImage'])) ? $dynamicRoot . 'og_media/' . $val['ogTy
 			
 			<?php
 
-			if (strtolower($val['status']) == 'verkocht' || strtolower($val['status']) == 'verhuurd') {
+			if (strtolower($val['status']) == 'verkocht' || strtolower($val['status']) == 'verhuurd' || strtolower($val['status']) == 'onder optie') {
 
 				echo '<div class="image-label status-sold">' . $val['status'] . '</div>';
 			}
