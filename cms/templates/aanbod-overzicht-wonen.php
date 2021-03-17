@@ -187,7 +187,7 @@ if ($overviewType != 'kavels') {
 		$filter['sortBy'] = 'desc';
 	
 	// Pronvincie filter
-	if (!empty($filter['provincie']) && $filter['provincie'] > 0) {
+	if (!empty($filter['provincie']) && $filter['provincie'] > 0 && is_numeric($filter['provincie'])) {
 	
 		$sql .= " AND `id_provincies`=" . $cms['database']->escape($filter['provincie']);
 	}
@@ -321,7 +321,7 @@ if ($overviewType != 'kavels') {
 	}
 	
 	// Prijs van
-	if (!empty($filter['prijsVan']) && $filter['prijsVan'] > 0) {
+	if (!empty($filter['prijsVan']) && $filter['prijsVan'] > 0 && is_numeric($filter['prijsVan'])) {
 	
 		if ($filter['saleType'] == 'rent')
 			$sql .= " AND `objectDetails_Huur_Huurprijs`>=" . $cms['database']->escape($filter['prijsVan']) . " ";
@@ -330,25 +330,25 @@ if ($overviewType != 'kavels') {
 	}
 	
 	// Perceeloppervlakte
-	if (!empty($filter['perceelOppervlakte']) && $filter['perceelOppervlakte'] > 0) {
+	if (!empty($filter['perceelOppervlakte']) && $filter['perceelOppervlakte'] > 0 && is_numeric($filter['perceelOppervlakte'])) {
 	
 		$sql .= " AND `wonen_WonenDetails_PerceelOppervlakte`>=" . $cms['database']->escape($filter['perceelOppervlakte']) . " ";
 	}
 	
 	// Woonoppervlakte
-	if (!empty($filter['woonfunctieOppervlakte']) && $filter['woonfunctieOppervlakte'] > 0) {
+	if (!empty($filter['woonfunctieOppervlakte']) && $filter['woonfunctieOppervlakte'] > 0 && is_numeric($filter['woonfunctieOppervlakte'])) {
 	
 		$sql .= " AND `wonen_WonenDetails_GebruiksoppervlakteWoonfunctie`>=" . $cms['database']->escape($filter['woonfunctieOppervlakte']) . " ";
 	}
 	
 	// Slaapkamers
-	if (!empty($filter['slaapkamers']) && $filter['slaapkamers'] > 0) {
+	if (!empty($filter['slaapkamers']) && $filter['slaapkamers'] > 0 && is_numeric($filter['slaapkamers'])) {
 	
 		$sql .= " AND `wonen_Verdiepingen_AantalSlaapKamers`>=" . $cms['database']->escape($filter['slaapkamers']) . " ";
 	}
 	
 	// Prijs tot
-	if (!empty($filter['prijsTot']) && $filter['prijsTot'] > 0) {
+	if (!empty($filter['prijsTot']) && $filter['prijsTot'] > 0 && is_numeric($filter['prijsTot'])) {
 	
 		if ($filter['prijsTot'] > $filter['prijsVan']) {
 	
@@ -384,7 +384,7 @@ if ($overviewType != 'kavels') {
 	
 		$realOpenDate = $firstDate;
 	
-		$sql .= " AND `object_Web_OpenHuis_Vanaf`>='" . $firstDate . "' AND `object_Web_OpenHuis_Vanaf`<='" . $lastDate . "'";
+		$sql .= " AND `object_Web_OpenHuis_Vanaf`>='" . $firstDate . "' AND `object_Web_OpenHuis_Vanaf`<='" . $cms['database']->escape($lastDate) . "'";
 	}
 	
 	// Type object
@@ -424,7 +424,7 @@ if ($overviewType != 'kavels') {
 	
 				foreach ($arrData as $key => $val) {
 	
-					$hoofdfuncties[] = "'" . $val . "'";
+					$hoofdfuncties[] = "'" . $cms['database']->escape($val) . "'";
 				}
 	
 				$implodeFuncties = implode(',', $hoofdfuncties);

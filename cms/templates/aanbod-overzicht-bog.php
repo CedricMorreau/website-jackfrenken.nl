@@ -146,7 +146,7 @@ if (!in_array($filter['sortBy'], array('asc', 'desc')))
 	$filter['sortBy'] = 'desc';
 
 // Pronvincie filter
-if (!empty($filter['provincie']) && $filter['provincie'] > 0) {
+if (!empty($filter['provincie']) && $filter['provincie'] > 0 && is_numeric($filter['provincie'])) {
 
 	$sql .= " AND `tbl_OG_bog`.`id_provincies`=" . $cms['database']->escape($filter['provincie']);
 }
@@ -236,7 +236,7 @@ if (!empty($filter['rentType'])) {
 }
 
 // Prijs van
-if (!empty($filter['prijsVan']) && $filter['prijsVan'] > 0) {
+if (!empty($filter['prijsVan']) && $filter['prijsVan'] > 0 && is_numeric($filter['prijsVan'])) {
 
 	if ($filter['saleType'] == 'rent')
 		$sql .= " AND `tbl_OG_bog`.`objectDetails_Huur_PrijsSpecificatie_Prijs`>=" . $cms['database']->escape($filter['prijsVan']) . " ";
@@ -245,7 +245,7 @@ if (!empty($filter['prijsVan']) && $filter['prijsVan'] > 0) {
 }
 
 // Prijs tot
-if (!empty($filter['prijsTot']) && $filter['prijsTot'] > 0) {
+if (!empty($filter['prijsTot']) && $filter['prijsTot'] > 0 && is_numeric($filter['prijsTot'])) {
 
 	if ($filter['prijsTot'] > $filter['prijsVan']) {
 
@@ -276,7 +276,7 @@ if (!empty($filter['hoofdfunctie'])) {
 
 		foreach ($arrData as $key => $val) {
 
-			$hoofdfuncties[] = "'" . $val . "'";
+			$hoofdfuncties[] = "'" . $cms['database']->escape($val) . "'";
 		}
 
 		$implodeFuncties = implode(',', $hoofdfuncties);

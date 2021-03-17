@@ -112,7 +112,7 @@ if (!in_array($filter['sortBy'], array('asc', 'desc')))
 	$filter['sortBy'] = 'DESC';
 	
 // Pronvincie filter
-if (!empty($filter['provincie']) && $filter['provincie'] > 0) {
+if (!empty($filter['provincie']) && $filter['provincie'] > 0 && is_numeric($filter['provincie'])) {
 	
 	$sql .= " AND `tbl_OG_nieuwbouw_projecten`.`id_provincies`=" . $cms['database']->escape($filter['provincie']);
 }
@@ -151,13 +151,13 @@ if (!empty($filter['plaatsnaam'])) {
 }
 
 // Prijs van
-if (!empty($filter['prijsVan']) && $filter['prijsVan'] > 0) {
+if (!empty($filter['prijsVan']) && $filter['prijsVan'] > 0 && is_numeric($filter['prijsVan'])) {
 	
 	$sql .= " AND `tbl_OG_nieuwbouw_projecten`.`project_ProjectDetails_KoopAanneemsom_Van`>=" . $cms['database']->escape($filter['prijsVan']) . " ";
 }
 
 // Prijs tot
-if (!empty($filter['prijsTot']) && $filter['prijsTot'] > 0) {
+if (!empty($filter['prijsTot']) && $filter['prijsTot'] > 0 && is_numeric($filter['prijsTot'])) {
 	
 	if ($filter['prijsTot'] > $filter['prijsVan']) {
 		
@@ -183,13 +183,13 @@ if (!empty($filter['plaatsnaam']) && !empty($filter['radius'])) {
 }
 
 // Perceeloppervlakte filter
-if (!empty($filter['oppPerceel']) && $filter['oppPerceel'] > 0) {
+if (!empty($filter['oppPerceel']) && $filter['oppPerceel'] > 0 && is_numeric($filter['oppPerceel'])) {
 	
 	$sql .= " AND `tbl_OG_nieuwbouw_projecten`.`project_ProjectDetails_Maten_Perceeloppervlakte_TotEnMet`>=" . $cms['database']->escape($filter['oppPerceel']) . " ";
 }
 
 // Woonoppervlakte filter
-if (!empty($filter['oppWoon']) && $filter['oppWoon'] > 0) {
+if (!empty($filter['oppWoon']) && $filter['oppWoon'] > 0 && is_numeric($filter['oppWoon'])) {
 	
 	$sql .= " AND `tbl_OG_nieuwbouw_projecten`.`project_ProjectDetails_Maten_Woonoppervlakte_TotEnMet`>=" . $cms['database']->escape($filter['oppPerceel']) . " ";
 }
