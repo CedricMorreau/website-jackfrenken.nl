@@ -64,7 +64,7 @@ class RealworksSearchForm
                     'alleenEigenAanbod' => true,
                     'automatischeVerwerking' => false, // TODO: Check the meaning of this value
                     'betalendeKlant' => false,
-                    'einddatum' => '2018-04-18', // TODO: Fill out this value
+                    'einddatum' => '2038-01-01',
                     'medewerkercode' => '100123', // TODO: Figure out what this value means
                     'realtime' => false,
                     'status' => 'LOPEND',
@@ -72,7 +72,7 @@ class RealworksSearchForm
                 ],
                 'diversen' => [
                     // If we leave out the below value, the API will not work for some reason...
-                    'diversen' => 'test',
+                    'diversen' => 0,
                 ],
                 'locaties' => [
                     'zoekgebieden' => [],
@@ -96,9 +96,11 @@ class RealworksSearchForm
                         'tussenvoegsel' => null,
                         'woonplaats' => null,
                     ],
+                    /*
                     'referentie' => [
                         'relatiesoort' => 'PARTICULIER',
                     ]
+                    */
                 ],
                 'woonwens' => [
                     'aantalSlaapkamersVanaf' => 0,
@@ -109,12 +111,14 @@ class RealworksSearchForm
                     'bouwjaarTotEnMet' => 0,
                     'bouwjaarVanaf' => 0,
                     'garage' => [
+                        /*
                         'GARAGE',
                         'BERGING',
                         'PARKEERPLAATS',
                         'GARAGE_OF_BERGING',
                         'GARAGE_OF_PARKEERPLAATS',
                         'BERGING_OF_PARKEERPLAATS',
+                        */
                         'GARAGE_OF_BERGING_OF_PARKEERPLAATS',
                     ],
                     'gedeeltelijkGestoffeerd' => false,
@@ -456,6 +460,7 @@ class RealworksSearchForm
             CURLOPT_HTTPHEADER => [
                 'Authorization: rwauth ' . $this->token,
                 'Accept: application/json;charset=UTF-8',
+                'Content-Type: application/json', // An undocumented header that has to be added, apparently...
             ],
             // Who cares about SSL, anyways? /s
             CURLOPT_SSL_VERIFYHOST => false,
@@ -480,14 +485,25 @@ class RealworksSearchForm
         return ['info' => $info, 'result' => $result];
     }
 
-    public function send()
+    /**
+     * Sends the current payload to Realworks for further processing. It will
+     * return a boolean according to whether the request was successful or not.
+     * 
+     * @return bool
+     */
+    public function send(): bool
     {
         $response = $this->request('/wonen/v1/zoekopdracht', true, $this->payload);
-
-        var_dump($response['result']);
-        echo $response['info']['http_code'];
+        return $response['info']['http_code'] === 200;
     }
 
+    /**
+     * Builds the endpoint URL with the base URL appended to it based
+     * on the provided endpoint URI.
+     * 
+     * @param string $endpoint The endpoint URI to process.
+     * @return string
+     */
     public function url(string $endpoint): string
     {
         return rtrim(self::BASE_URL, '/') . '/' . trim($endpoint, '/');
