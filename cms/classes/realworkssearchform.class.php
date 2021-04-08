@@ -8,27 +8,27 @@
  */
 class RealworksSearchForm
 {
-    public const FIELD_GENDER_MALE = 'MAN';
-    public const FIELD_GENDER_FEMALE = 'VROUW';
-    public const FIELD_GENDER_OTHER = 'ONBEKEND';
+    const FIELD_GENDER_MALE = 'MAN';
+    const FIELD_GENDER_FEMALE = 'VROUW';
+    const FIELD_GENDER_OTHER = 'ONBEKEND';
 
     /**
      * The constant base URL of the Realworks API.
      * @var string
      */
-    public const BASE_URL = 'https://api.realworks.nl/';
+    const BASE_URL = 'https://api.realworks.nl/';
 
     /**
      * The payload buffer that contains any data to be send to the form endpoint.
      * @var array
      */
-    private array $payload = [];
+    private $payload = [];
 
     /**
      * The cached location data fetched from the locations endpoint.
      * @var array
      */
-    private array $locations = [
+    private $locations = [
         'zoekgebieden' => [],
         'plaatsen' => [],
     ];
@@ -37,13 +37,13 @@ class RealworksSearchForm
      * The Realworks authorization token for this organization.
      * @var string
      */
-    private string $token;
+    private $token;
 
     /**
      * The Realworks department code ("afdelingscode") for this organization.
      * @var string
      */
-    private int $department;
+    private $department;
 
     /**
      * Creates a new Realworks search form instance based on a valid Realworks token and
@@ -52,7 +52,7 @@ class RealworksSearchForm
      * @param string $token The Realworks authorization token for this organization.
      * @param int $department The Realworks department code for this organization.
      */
-    public function __construct(string $token, int $department)
+    public function __construct($token, $department)
     {
         $this->token = $token;
         $this->department = $department;
@@ -171,7 +171,7 @@ class RealworksSearchForm
         $this->set_all_woningtypes();
     }
 
-    public function set_contact_info(string $fname, ?string $infix, string $lname, string $phone, ?string $mobile, string $email, string $gender = 'ONBEKEND'): void
+    public function set_contact_info($fname, $infix, $lname, $phone, $mobile, $email, $gender = 'ONBEKEND')
     {
         $initials = strtoupper($fname[0]) . '.' . strtoupper($lname[0]) . '.';
         $phone = preg_replace('/[^\d]+/', '', $phone);
@@ -203,7 +203,7 @@ class RealworksSearchForm
         }
     }
 
-    public function set_rent_range(?int $min, ?int $max): void
+    public function set_rent_range($min, $max)
     {
         if ($min !== null)
             $this->set_payload_field('zoekopdracht.woonwens.huurprijsVanaf', $min);
@@ -212,7 +212,7 @@ class RealworksSearchForm
             $this->set_payload_field('zoekopdracht.woonwens.huurprijsTotEnMet', $max);
     }
 
-    public function set_purchase_range(?int $min, ?int $max): void
+    public function set_purchase_range($min, $max)
     {
         if ($min !== null)
             $this->set_payload_field('zoekopdracht.woonwens.koopprijsVanaf', $min);
@@ -221,7 +221,7 @@ class RealworksSearchForm
             $this->set_payload_field('zoekopdracht.woonwens.koopprijsTotEnMet', $max);
     }
 
-    public function set_locations(string $key, array $values): void
+    public function set_locations($key, array $values)
     {
         if (!isset($this->locations[$key]))
             throw new \Exception("Location key '$key' does not exist");
@@ -239,7 +239,7 @@ class RealworksSearchForm
         $this->set_payload_field('zoekopdracht.locaties.' . $key, $keys);
     }
 
-    public function set_all_locations(string $key): void
+    public function set_all_locations($key)
     {
         if (!isset($this->locations[$key]))
             throw new \Exception("Location key '$key' does not exist");
@@ -247,18 +247,18 @@ class RealworksSearchForm
         $this->set_payload_field('zoekopdracht.locaties.' . $key, array_keys($this->locations[$key]));
     }
 
-    public function set_objectsoort(string $value): void
+    public function set_objectsoort($value)
     {
         $this->set_payload_field('zoekopdracht.woonwens.objectsoort', strtoupper($value));
     }
 
-    public function set_appartementsoorten(array $values): void
+    public function set_appartementsoorten($values)
     {
         $this->set_payload_field('zoekopdracht.woonwens.appartementsoorten',
             array_map(function ($item) { return strtoupper($item); }, $values));
     }
 
-    public function set_all_appartementsoorten(): void
+    public function set_all_appartementsoorten()
     {
         $this->set_payload_field('zoekopdracht.woonwens.appartementsoorten', [
             'BOVENWONING',
@@ -275,13 +275,13 @@ class RealworksSearchForm
         ]);
     }
 
-    public function set_woningsoorten(array $values): void
+    public function set_woningsoorten($values)
     {
         $this->set_payload_field('zoekopdracht.woonwens.woningsoorten',
             array_map(function ($item) { return strtoupper($item); }, $values));
     }
 
-    public function set_all_woningsoorten(): void
+    public function set_all_woningsoorten()
     {
         $this->set_payload_field('zoekopdracht.woonwens.woningsoorten', [
             'EENGEZINSWONING',
@@ -298,7 +298,7 @@ class RealworksSearchForm
         ]);
     }
 
-    public function set_woningtype(string $value): void
+    public function set_woningtype($value)
     {
         $value = strtoupper($value);
 
@@ -314,7 +314,7 @@ class RealworksSearchForm
         $this->set_payload_field('zoekopdracht.woonwens.woningtypes', [$value]);
     }
 
-    public function set_all_woningtypes(): void
+    public function set_all_woningtypes()
     {
         $this->set_payload_field('zoekopdracht.woonwens.woningtypes', [
             'VRIJSTAANDE_WONING',
@@ -329,17 +329,17 @@ class RealworksSearchForm
         ]);
     }
 
-    public function set_min_perceeloppervlakte(int $value): void
+    public function set_min_perceeloppervlakte($value)
     {
         $this->set_payload_field('zoekopdracht.woonwens.perceelOppervlakteVanaf', strval($value));
     }
 
-    public function set_min_slaapkamers(int $value): void
+    public function set_min_slaapkamers($value)
     {
         $this->set_payload_field('zoekopdracht.woonwens.aantalSlaapkamersVanaf', strval($value));
     }
 
-    public function set_contact_address(string $street, int $number, ?string $addition, string $zipcode, string $city): void
+    public function set_contact_address($street, $number, $addition, $zipcode, $city)
     {
         $zipcode = preg_replace('/[^\dA-Z]+/', '', strtoupper($zipcode));
 
@@ -360,7 +360,7 @@ class RealworksSearchForm
      * @param string $path The path to the value.
      * @return mixed
      */
-    public function get_payload_field(string $path)
+    public function get_payload_field($path)
     {
         $keys = explode('.', $path);
         $value = $this->payload;
@@ -384,7 +384,7 @@ class RealworksSearchForm
      * 
      * @return void
      */
-    public function set_payload_field(string $path, $value): void
+    public function set_payload_field($path, $value)
     {
         $keys = explode('.', $path);
 
@@ -398,7 +398,7 @@ class RealworksSearchForm
         $value = $temp;
     }
 
-    public function set_payload_fields_array(array $values): void
+    public function set_payload_fields_array($values)
     {
         foreach ($values as $path => $value)
             $this->set_payload_field($path, $value);
@@ -410,7 +410,7 @@ class RealworksSearchForm
      * 
      * @return void
      */
-    public function fetch_locations(): void
+    public function fetch_locations()
     {
         // Send a request to the locations endpoint, along with this organization's department code
         $response = $this->request('/wonen/v1/zoekopdracht/locaties?afdelingscode=' . $this->department);
@@ -448,7 +448,7 @@ class RealworksSearchForm
      * 
      * @return string|array|null
      */
-    public function request(string $endpoint, bool $json = true, array $post_fields = [])
+    public function request($endpoint, $json = true, $post_fields = [])
     {
         // Prepare the API URL and initialize a cURL handle for the request
         $ch = curl_init($this->url($endpoint));
@@ -491,7 +491,7 @@ class RealworksSearchForm
      * 
      * @return bool
      */
-    public function send(): bool
+    public function send()
     {
         $response = $this->request('/wonen/v1/zoekopdracht', true, $this->payload);
         return $response['info']['http_code'] === 200;
@@ -504,7 +504,7 @@ class RealworksSearchForm
      * @param string $endpoint The endpoint URI to process.
      * @return string
      */
-    public function url(string $endpoint): string
+    public function url($endpoint)
     {
         return rtrim(self::BASE_URL, '/') . '/' . trim($endpoint, '/');
     }
@@ -513,7 +513,7 @@ class RealworksSearchForm
      * Returns the payload buffer that contains any data to be send to the form endpoint.
      * @return array
      */
-    public function payload(): array
+    public function payload()
     {
         return $this->payload;
     }
@@ -528,7 +528,7 @@ class RealworksSearchForm
      * @return array
      * @throws \Exception
      */
-    public function locations(?string $key = null): array
+    public function locations($key = null)
     {
         if ($key === null)
             return $this->locations;
@@ -543,7 +543,7 @@ class RealworksSearchForm
      * Returns the Realworks authorization token for this organization.
      * @return string
      */
-    public function token(): string
+    public function token()
     {
         return $this->token;
     }
@@ -552,7 +552,7 @@ class RealworksSearchForm
      * Returns the Realworks department code ("afdelingscode") for this organization.
      * @return string
      */
-    public function department(): int
+    public function department()
     {
         return $this->department;
     }
