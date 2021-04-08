@@ -69,21 +69,30 @@
 						
 		<label for="plaatsnamenOverzicht" class="size40">
 			<select size="9" name="plaatsnamenOverzicht" multiple="multiple" class="form-item plaatskeuzes">
-			
+
 				<?php
-				
-				$plaatsen = $cms['database']->prepare("SELECT DISTINCT lower(objectDetails_Adres_NL_Woonplaats) AS `plaats` FROM `tbl_OG_wonen` WHERE NOT `objectDetails_StatusBeschikbaarheid_Status` IN ('Ingetrokken') ORDER BY `plaats` ASC");
-				
-				if (count($plaatsen)) {
-					
-					foreach ($plaatsen as $key => $val) {
-						
-						echo '<option value="' . $val['plaats'] . '">' . ucfirst($val['plaats']) . '</option>';
-					}
+
+				$plaatsen = Cache::get('realworks/plaatsen');
+
+				if ($plaatsen === false) {
+
+					$search_form = new RealworksSearchForm('e2ed5b0a-d544-409b-aa06-7f3a875c2403', 44003);
+					$search_form->fetch_locations();
+	
+					$plaatsen = array_values($search_form->locations('plaatsen'));
+					sort($plaatsen);
+
+					Cache::set($plaatsen, 'realworks/plaatsen', 86400);
 				}
-				
+
 				?>
-				
+
+				<?php foreach ($plaatsen as $plaats): ?>
+					<option value="<?php echo strtolower($plaats); ?>">
+						<?php echo ucfirst($plaats); ?>
+					</option>
+				<?php endforeach; ?>
+			
 			</select>
 		</label>
 
