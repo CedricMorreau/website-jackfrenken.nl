@@ -626,7 +626,7 @@ $ogType = 'bog';
 
 								</table>	
 							</div>	
-							
+
 							<?php
 							
 							if (!empty($val['objectDetails_Energielabel_Energieklasse']) || !empty($val['objectDetails_Energielabel_EnergieIndex']) || !empty($val['objectDetails_Energielabel_Einddatum'])) {
@@ -649,7 +649,11 @@ $ogType = 'bog';
 										<th class="description">Klasse</th>
 										<td class="value">
 										
-											<?php echo $val['objectDetails_Energielabel_Energieklasse']; ?>
+											<span class="energy-label energy-label-<?php echo $val['objectDetails_Energielabel_Energieklasse']; ?>">
+												<?php echo $val['objectDetails_Energielabel_Energieklasse']; ?>
+
+											</span>
+
 
 										</td>
 									</tr>

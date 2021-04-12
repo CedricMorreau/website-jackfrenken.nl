@@ -26,6 +26,12 @@ $image = (!is_null($val['mainImage'])) ? $dynamicRoot . 'og_media/bog_' . $val['
 				
 				<p class="item-subtitle">
 					<?php echo $priceText; ?>
+
+					<p>Energielabel: 
+						<span class="energy-label energy-label-a">
+						A
+						</span>
+					</p>
 				</p>
 
 				<p class="item-bold-title">

@@ -419,6 +419,20 @@ $mediaList = $cms['database']->prepare("SELECT `id`, `object_ObjectTiaraID`, `be
 									<td class="value"><?php echo obj_splitValues($val['wonen_WonenDetails_MatenEnLigging_Liggingen']); ?></td>
 								</tr>
 								<?php } ?>
+
+								<tr>
+									<th>Energielabel</th>
+									<td class="value">
+										<span class="energy-label energy-label-a">
+											A
+										</span>
+
+										<!-- <a href="<?php //echo $dynamicRoot; ?>vastgoed/diensten/energielabel-woningen.html" target="_blank">
+											Wat betekent dit?
+										</a> -->
+									
+									</td>
+								</tr>
 								
 							</table>
 						</div>

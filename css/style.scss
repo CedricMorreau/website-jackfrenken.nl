@@ -3922,6 +3922,97 @@ header.headerAanbod {
 	}
 }
 
+/* Energy labels --------------------------------------------*/
+
+// Energy labels
+.energy-label {
+	// Default styling
+	background-color: #999;
+	padding: 0 .625rem;
+	margin: 0 1.5rem 0 0;
+	color: $dar-col; 
+	margin-right: 1.5rem;
+	position: relative;
+	height: 1.5rem;
+	display: inline-block;
+	text-transform: uppercase;
+	
+	line-height: 1.4rem;
+	// A label
+	&.energy-label-a {
+		background-color: #009342;
+		color: $lit-col;
+		&:after {
+			border-left-color: #009342;
+		}
+	}
+	// B label
+	&.energy-label-b {
+		background-color: #1ba943;
+		color: $lit-col;
+		&:after {
+			border-left-color: #1ba943;
+		}
+	}
+	// C label
+	&.energy-label-c {
+		background-color: #9ecf1b;
+		color: $lit-col;
+		&:after {
+			border-left-color: #9ecf1b;
+		}
+	}
+	// D label
+	&.energy-label-d {
+		background-color: #f8f51c;
+		color: $dar-col;
+		&:after {
+			border-left-color: #f8f51c;
+		}
+	}
+
+	// E label
+	&.energy-label-e {
+		background-color: #f4b003;
+		color: $dar-col;
+		&:after {
+			border-left-color: #f4b003;
+		}
+	}
+
+	// F label
+	&.energy-label-f {
+		background-color: #df6d14;
+		color: $lit-col;
+		&:after {
+			border-left-color: #df6d14;
+		}
+	}
+
+	// G label
+	&.energy-label-g {
+		background-color: #db261d;
+		color: $lit-col;
+		&:after {
+			border-left-color: #db261d;
+		}
+	}
+
+	// Arrow element
+	&:after {
+		content: "";
+		position: absolute;
+		width: 0;
+		height: 0;
+		top: 0;
+		left: 100%;
+		border-color: transparent transparent transparent #999;
+		border-style: solid;
+		border-width: .75rem 0 .75rem .75rem;
+	}
+}
+
+
 /* mediaquery example
 @media only screen and (max-width: $container-size-s) {
 
