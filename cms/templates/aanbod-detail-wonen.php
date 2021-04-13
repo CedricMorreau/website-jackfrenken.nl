@@ -420,11 +420,14 @@ $mediaList = $cms['database']->prepare("SELECT `id`, `object_ObjectTiaraID`, `be
 								</tr>
 								<?php } ?>
 
+								<?php if (!empty($val['objectDetails_Energielabel_Energieklasse'])) { ?>
 								<tr>
 									<th>Energielabel</th>
 									<td class="value">
-										<span class="energy-label energy-label-a">
-											A
+
+										<span class="energy-label energy-label-<?php echo strtolower($val['objectDetails_Energielabel_Energieklasse']); ?>">
+											<?php echo $val['objectDetails_Energielabel_Energieklasse']; ?>
+
 										</span>
 
 										<!-- <a href="<?php //echo $dynamicRoot; ?>vastgoed/diensten/energielabel-woningen.html" target="_blank">
@@ -433,7 +436,8 @@ $mediaList = $cms['database']->prepare("SELECT `id`, `object_ObjectTiaraID`, `be
 									
 									</td>
 								</tr>
-								
+								<?php } ?>
+
 							</table>
 						</div>
 

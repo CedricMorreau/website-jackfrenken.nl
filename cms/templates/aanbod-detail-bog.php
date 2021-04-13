@@ -649,7 +649,7 @@ $ogType = 'bog';
 										<th class="description">Klasse</th>
 										<td class="value">
 										
-											<span class="energy-label energy-label-<?php echo $val['objectDetails_Energielabel_Energieklasse']; ?>">
+											<span class="energy-label energy-label-<?php echo strtolower($val['objectDetails_Energielabel_Energieklasse']); ?>">
 												<?php echo $val['objectDetails_Energielabel_Energieklasse']; ?>
 
 											</span>

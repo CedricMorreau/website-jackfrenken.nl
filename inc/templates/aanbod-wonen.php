@@ -40,11 +40,15 @@ $image = (!is_null($val['mainImage'])) ? $dynamicRoot . 'og_media/wonen_' . $val
 				<p>Bouwjaar: <?php echo $val['wonen_WonenDetails_Bouwjaar_JaarOmschrijving_Jaar']; ?></p>
 				<?php } ?>
 
+				<?php if (!empty($val['objectDetails_Energielabel_Energieklasse'])) { ?>
+
 				<p>Energielabel: 
-					<span class="energy-label energy-label-a">
-						A
+					<span class="energy-label energy-label-<?php echo strtolower($val['objectDetails_Energielabel_Energieklasse']); ?>">
+						<?php echo $val['objectDetails_Energielabel_Energieklasse']; ?>
 					</span>
 				</p>
+
+				<?php } ?>
 			</div>
 			
 		</div>
