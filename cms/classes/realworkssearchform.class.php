@@ -52,7 +52,7 @@ class RealworksSearchForm
      * @param string $token The Realworks authorization token for this organization.
      * @param int $department The Realworks department code for this organization.
      */
-    public function __construct($token, $department)
+    public function __construct($token, $department, $code = null)
     {
         $this->token = $token;
         $this->department = $department;
@@ -65,7 +65,7 @@ class RealworksSearchForm
                     'automatischeVerwerking' => false, // TODO: Check the meaning of this value
                     'betalendeKlant' => false,
                     'einddatum' => '2038-01-01',
-                    'medewerkercode' => '100123', // TODO: Figure out what this value means
+                    'medewerkercode' => '',
                     'realtime' => false,
                     'status' => 'LOPEND',
                     'verstuurPerPost' => false,
@@ -169,6 +169,14 @@ class RealworksSearchForm
 
         $this->set_all_woningsoorten();
         $this->set_all_woningtypes();
+
+        if ($code !== null)
+            $this->set_medewerkercode($code);
+    }
+
+    public function set_medewerkercode($code)
+    {
+        $this->set_payload_field('zoekopdracht.basis.medewerkercode', $code);
     }
 
     public function set_contact_info($fname, $infix, $lname, $phone, $mobile, $email, $gender = 'ONBEKEND')
