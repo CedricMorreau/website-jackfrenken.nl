@@ -67,6 +67,11 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 			$search_form->set_all_appartementsoorten();
 			$search_form->set_objectsoort('APPARTEMENT');
 
+		} elseif (strtolower($_POST['objectSoort']) === 'bouwgrond') {
+
+			$search_form->set_woningsoorten([]);
+			$search_form->set_objectsoort('BOUWGROND');
+
 		} else {
 
 			$search_form->set_woningsoorten([$_POST['objectSoort']]);
