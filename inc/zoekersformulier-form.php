@@ -233,14 +233,12 @@
 
 	</div>
 
-	<!-- Opmerkingen en versturen -->
+	<!-- Versturen -->
 	<div class="title-row-wrapper">
-		<div class="title-text">Opmerkingen en versturen</div><div class="title-line"></div>
+		<div class="title-text">Versturen</div><div class="title-line"></div>
 	</div>
 
 	<div class="opmerkingen-row">
-		<textarea class="size75" name="message" rows="5"></textarea>
-
 		<input type="submit" name="submitSearchForm" value="Schrijf mij in als zoeker" class="size25">
 
 	</div>
