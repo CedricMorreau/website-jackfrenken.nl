@@ -85,7 +85,11 @@ $sfeerbeeld = trim($template->getCustomVar('sfeerbeeld'));
 						contactEmail: {
 							required: true,
 							email: true
-						}
+						},
+						plaatsnaam: "required",
+						prijsVanaf: "required",
+						prijsTot: "required",
+						soortAankoop: "required",
 					},
 					submitHandler: function(form) {
 						return SubmitContactForm();

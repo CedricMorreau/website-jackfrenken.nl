@@ -7,7 +7,7 @@ include($_SERVER['DOCUMENT_ROOT'] . "/cms/classes/realworkssearchform.class.php"
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
 	// Not empty
-	$array = array('voornaam', 'achternaam', 'contactStraat', 'contactHuisnummer', 'contactPostcode', 'contactPlaats', 'contactTelefoon', 'contactEmail');
+	$array = array('voornaam', 'achternaam', 'contactStraat', 'contactHuisnummer', 'contactPostcode', 'contactPlaats', 'contactTelefoon', 'contactEmail', 'plaatsnaam', 'prijsVanaf', 'prijsTot', 'soortAankoop');
 
 	$error = false;
 
@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 			$error = true;
 		}
 	}
-
+	
 	if (!$error) {
 
 		$mail_template = file_get_contents('mailtemplates/process_zoekersFormulier.html');
