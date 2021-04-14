@@ -103,7 +103,6 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 		}
 
 		$search_form->send();
-		die();
 
 		if ($test) {
 			
