@@ -43,7 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 		}
 
 		// Initialize search form for Realworks
-		$search_form = new RealworksSearchForm('e2ed5b0a-d544-409b-aa06-7f3a875c2403', 44003);
+		$search_form = new RealworksSearchForm('e2ed5b0a-d544-409b-aa06-7f3a875c2403', 44003, 884311);
 		$search_form->fetch_locations();
 
 		$gender = [
