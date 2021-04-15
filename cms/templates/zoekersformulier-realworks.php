@@ -89,7 +89,7 @@ $sfeerbeeld = trim($template->getCustomVar('sfeerbeeld'));
 						plaatsnaam: "required",
 						prijsVanaf: "required",
 						prijsTot: "required",
-						soortAankoop: "required",
+						'soortAankoop[]': "required",
 					},
 					submitHandler: function(form) {
 						return SubmitContactForm();
