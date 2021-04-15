@@ -3828,9 +3828,16 @@ header.headerAanbod {
 		&.error {
 			border-width: 1px;
 			border-color: rgb(224, 2, 2) !important;
+
+			+ span {
+				color: rgb(224, 2, 2) !important;
+			}
 		}
 
+	}
 
+	input[type=checkbox].error + label {
+		color: rgb(224, 2, 2) !important;
 	}
 
 	.kenmerken-row {

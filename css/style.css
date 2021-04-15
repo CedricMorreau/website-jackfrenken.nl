@@ -4670,6 +4670,14 @@ header.headerAanbod {
   border-color: #e00202 !important;
 }
 
+.zoekersformulier .form-item.error + span {
+  color: #e00202 !important;
+}
+
+.zoekersformulier input[type=checkbox].error + label {
+  color: #e00202 !important;
+}
+
 .zoekersformulier .kenmerken-row {
   display: -webkit-box;
   display: -ms-flexbox;
