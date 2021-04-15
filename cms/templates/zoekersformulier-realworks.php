@@ -71,6 +71,16 @@ $sfeerbeeld = trim($template->getCustomVar('sfeerbeeld'));
 					trigger: ".remove"
 				});
 
+				$('#financieel-kopen').click(function () {
+					$('#financieel-huren').removeClass('error');
+					$('#financieel-kopen').removeClass('error');
+				});
+
+				$('#financieel-huren').click(function () {
+					$('#financieel-kopen').removeClass('error');
+					$('#financieel-huren').removeClass('error');
+				});
+
 				$("#zoeker-formulier").validate({
 					focusInvalid: false,
 					errorPlacement: function(error, element) {
