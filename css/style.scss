@@ -3825,6 +3825,11 @@ header.headerAanbod {
 			margin-right: 0;
 		}
 
+		&.error {
+			border-width: 1px;
+			border-color: rgb(224, 2, 2) !important;
+		}
+
 
 	}
 

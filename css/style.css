@@ -4665,6 +4665,11 @@ header.headerAanbod {
   margin-right: 0;
 }
 
+.zoekersformulier .form-item.error {
+  border-width: 1px;
+  border-color: #e00202 !important;
+}
+
 .zoekersformulier .kenmerken-row {
   display: -webkit-box;
   display: -ms-flexbox;
