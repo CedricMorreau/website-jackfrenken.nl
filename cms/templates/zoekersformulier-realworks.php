@@ -105,7 +105,7 @@ $sfeerbeeld = trim($template->getCustomVar('sfeerbeeld'));
 							required: true,
 							email: true
 						},
-						plaatsnaam: "required",
+						'plaatsnaam[]': "required",
 						prijsVanaf: "required",
 						prijsTot: "required",
 						'soortAankoop[]': "required",
