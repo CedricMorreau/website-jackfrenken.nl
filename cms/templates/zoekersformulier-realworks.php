@@ -73,7 +73,16 @@ $sfeerbeeld = trim($template->getCustomVar('sfeerbeeld'));
 
 				$("#zoeker-formulier").validate({
 					focusInvalid: false,
-					errorPlacement: function(error, element) { },
+					errorPlacement: function(error, element) {
+
+						if (element.attr('id') == 'financieel-kopen')
+							$('#financieel-huren').addClass('error');
+
+						if (element.attr('id') == 'financieel-huren')
+							$('#financieel-kopen').addClass('error');
+
+						return true;
+					},
 					rules: {
 						voornaam: "required",
 						achternaam: "required",
