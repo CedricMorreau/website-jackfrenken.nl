@@ -62,11 +62,11 @@ class RealworksSearchForm
                 'basis' => [
                     'afdelingscode' => strval($this->department),
                     'alleenEigenAanbod' => true,
-                    'automatischeVerwerking' => false, // TODO: Check the meaning of this value
+                    'automatischeVerwerking' => true,
                     'betalendeKlant' => false,
                     'einddatum' => '2038-01-01',
                     'medewerkercode' => '',
-                    'realtime' => false,
+                    'realtime' => true,
                     'status' => 'LOPEND',
                     'verstuurPerPost' => false,
                 ],
