@@ -45,7 +45,7 @@ else {
 <!-- custom styling -->
 <link rel="stylesheet" href="<?php echo $dynamicRoot; ?>css/style.css">
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
+<!-- Google Analytics 4 -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-42911090-22"></script>
 <script>
 window.dataLayer = window.dataLayer || [];
@@ -54,17 +54,7 @@ gtag('js', new Date());
 
 gtag('config', 'UA-42911090-22');
 </script>
-
-<!--[if lt IE 9]>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
-<![endif]-->
-
-<!-- Jquery 3.3.1 minified -->
-<script
-  src="//code.jquery.com/jquery-3.3.1.min.js"
-  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  crossorigin="anonymous">
-</script>
+<!-- End Google Analytics 4 -->
 
 <!-- Google analytics -->
 <script type="text/javascript">
@@ -77,6 +67,27 @@ gtag('config', 'UA-42911090-22');
     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
+</script>
+
+<!-- End Google analytics -->
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TXC23LL');</script>
+<!-- End Google Tag Manager -->
+
+<!--[if lt IE 9]>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+<![endif]-->
+
+<!-- Jquery 3.3.1 minified -->
+<script
+  src="//code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous">
 </script>
 
 <!-- Google Tag Manager - Media Group Holland -->
