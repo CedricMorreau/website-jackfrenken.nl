@@ -707,7 +707,9 @@ $mediaList = $cms['database']->prepare("SELECT `id`, `object_ObjectTiaraID`, `be
 									$('#object-contact-form-output .form_error.general').css({ display : 'none' }).fadeIn('fast');
 									$('#object-contact-form form').fadeIn('fast');
 								} else {
-									
+									dataLayer.push({
+										'event': 'contactformulier-submit'
+									});									
 									$('#object-contact-form form').remove();
 									$('#object-contact-form-output .form_result').css({ display : 'none' }).fadeIn();
 									// $('#object-contact-form').html(data); //Test mail output
