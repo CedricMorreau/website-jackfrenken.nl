@@ -1,5 +1,7 @@
 <?php
-
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 include($_SERVER['DOCUMENT_ROOT'] . "/cms/classes/pp_mailer.class.php");
 include($_SERVER['DOCUMENT_ROOT'] . "/cms/classes/realworkssearchform.class.php");
 
@@ -47,9 +49,9 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 		$search_form->fetch_locations();
 
 		$gender = [
-			'Dhr' => RealworksSearchForm::FIELD_GENDER_MALE,
-			'Mevr' => RealworksSearchForm::FIELD_GENDER_FEMALE,
-			'Fam' => RealworksSearchForm::FIELD_GENDER_OTHER,
+			'DHR' => RealworksSearchForm::FIELD_GENDER_MALE,
+			'MEVR' => RealworksSearchForm::FIELD_GENDER_FEMALE,
+			'FAM' => RealworksSearchForm::FIELD_GENDER_OTHER,
 		];
 
 		$gender = $gender[$_POST['aanhef']];
@@ -102,8 +104,50 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 			$search_form->set_all_locations('plaatsen');
 		}
 
+
+
+		$mail_template_wrapper = '
+		<!DOCTYPE html>
+			<html xmlns="http://www.w3.org/1999/xhtml">
+				<head>
+					<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+					<title>Jack Frencken zoek registratie</title>
+					<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+				</head>
+				<body style="margin: 0; padding: 0;">
+					<table cellpadding="0" cellspacing="0" width="100%">
+						<tr>
+							<td style="display:flex; justify-content: center; align-items: center; padding: 40px 0 30px 0; background-color: white; width: 100%; height: 100%;">
+								<img src="/resources/logo.svg" alt="Jack Frenken zoek registratie" style="width: 500px; height: 500px; display: block;">
+							</td>
+						</tr>
+						<tr>
+							<td>
+								'.$mail_template.'
+							</td>
+							<td>
+								'.$mail_template[0][1].'
+							</td>
+						</tr>
+						<tr>
+							<td>
+								'.$mail_template[2].'
+							</td>
+							<td>
+								'.$mail_template[3].'
+							</td>
+						</tr>
+						<tr style="background-color: #003064; padding: 20px;">
+						</tr>
+					</table>
+				</body>
+			</html>
+		';
+
+
 		$search_form->send();
 
+		
 		if (isset($test)) {
 			
 			echo $output;
@@ -117,12 +161,14 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 			$mail->addField('type', 'send');
 			$mail->addField('from', 'info@jackfrenken.nl');
 			$mail->addField('fromName', 'Jackfrenken.nl');
+			// $mail->addField('to', $mail_ontvanger);
 			$mail->addField('to', "luca@pixelplus.nl");
+			// $mail->addField('BCC', 'info@jackfrenken.nl');
 			$mail->addField('subject', $mail_subject);
-			$mail->addField('message', base64_encode($mail_template));
+			$mail->addField('message', base64_encode($mail_template_wrapper));
 			
 			$mail->send();
-			echo $mail_template;
+			
 			echo 1;
 		}
 	}

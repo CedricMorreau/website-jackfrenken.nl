@@ -1,21 +1,118 @@
-Dit zoekersformulier is verstuurd via Jackfrenken.nl:<br /><br />
-
-<b>Aanhef</b>: {{aanhef}}<br>
-<b>Voornaam</b>: {{voornaam}}<br>
-<b>Tussenvoegsel</b>: {{tussenvoegsel}}<br>
-<b>Achternaam</b>: {{achternaam}}<br>
-<b>Straat</b>: {{contactStraat}}<br>
-<b>Huisnummer</b>: {{contactHuisnummer}}<br>
-<b>Postcode</b>: {{contactPostcode}}<br>
-<b>Plaats</b>: {{contactPlaats}}<br>
-<b>Telefoonnummer</b>: {{contactTelefoon}}<br>
-<b>Mobiel</b>: {{contactMobiel}}<br>
-<b>E-mailadres</b>: {{contactEmail}}<br>
-<b>Plaatsen</b>: {{plaatsnaam}}<br>
-<b>Koop/huur</b>: {{soortAankoop}}<br>
-<b>Prijs van</b>: {{prijsVanaf}}<br>
-<b>Prijs tot</b>: {{prijsTot}}<br>
-<b>Soort object</b>: {{objectSoort}}<br>
-<b>Bouwvorm</b>: {{objectBouwvorm}}<br>
-<b>Perceeloppervlakte</b>: {{objectPerceelOpp}}<br>
-<b>Aantal slaapkamers</b>: {{objectSlaapkamers}}<br>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>Jack Frencken zoek registratie</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body id="body" style="margin: 0; padding: 0; max-width: 800px; margin-left: auto; margin-right: auto; font-style: italic;">
+        <table style="margin: 0; padding: 0; width: 100%;">
+            <tr>
+                <td style="display:flex; justify-content: center; align-items: center; padding: 40px 0 0 0; background-color: white; width: 100%; height: 100%;">
+                    <img src="https://jackfrenken.nl/resources/logo.svg" alt="Jack Frenken zoek registratie" style="width: 300px; height: 300px; display: block;">
+                </td>
+            </tr>
+        </table>
+        <table style="width: 100%; margin: 0; padding: 20px 20% 30px 20%; background-color: #CCE9f5;">
+            <tr>
+                <td colspan="2">
+                    <h1 style="font-style: normal;">Persoonlijke gegevens</h1>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <b>{{aanhef}} {{voornaam}} {{achternaam}}</b><br>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <b>{{contactStraat}} {{contactHuisnummer}}</b><br>
+                </td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>
+                    <b>{{contactPostcode}} {{contactPlaats}}</b><br>
+                </td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>
+                    &nbsp;
+                </td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>
+                    <b>Tel: </b>{{contactTelefoon}}<br>
+                </td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>
+                    <b>Mobiel: </b>{{contactMobiel}}<br>
+                </td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td style="text-decoration: none !important; ">
+                    <b>E-mailadres</b>:&nbsp;<a style="color: black !important; text-decoration: none !important;">{{contactEmail}}</a><br>
+                </td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <h1 style="font-style: normal;">Zoekcriteria</h1>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <b>Plaatsen</b>: {{plaatsnaam}}<br>
+                </td>
+                <td>
+                    <b>Koop/huur</b>: {{soortAankoop}}<br>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <b>Prijs van</b>: €{{prijsVanaf}}&nbsp;&nbsp;<b>tot</b>: €{{prijsTot}}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <b>Soort object</b>: {{objectSoort}}<br>
+                </td>
+                <td>
+                    <b>Bouwvorm</b>: {{objectBouwvorm}}<br>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <b>Perceeloppervlakte</b>: {{objectPerceelOpp}}<br>
+                </td>
+                <td>
+                    <b>Aantal slaapkamers</b>: {{objectSlaapkamers}}<br>
+                </td>
+            </tr>
+        </table>
+        <table style="width: 100%; height: 200px; margin: 0; padding: 20px 20%; background-color: #00519b; font-size: 15px;">
+            <tr>
+                <td colspan="2">
+                    <img src="https://jackfrenken.nl/resources/logo.svg" alt="Jack Frenken zoek registratie" style="width: 300px; height: 300px; display: block; margin-left: auto; margin-right: auto;">
+                </td>
+            </tr>
+            <tr style="color: white; font-weight: bold;">
+                <td colspan="2" style="text-align: center !important;">Contact:</td>
+            </tr>
+            <tr style="text-align: center; color: white;">
+                <td colspan="2" style="text-decoration: none !important; color: inherit !important;"><a href="#" style="color: white !important; text-decoration: none !important;">Mail: info@jackfrenken.nl</a> - Tel: (0475) 33 52 25</td>
+            </tr>
+        </table>
+        <style>
+            u + #body a {
+                color: inherit !important;
+                text-decoration: none !important;
+            }
+        </style>
+    </body>
+</html>
