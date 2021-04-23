@@ -5,7 +5,7 @@
 		</p>
 	</div>
 	<div class="form_error general" style="display: none;"><h2>Foutje</h2><p>Er ging iets mis op de server. Probeer het nog eens.</p></div>
-	<div class="form_result" style="display: none;"><h2>Bedankt!</h2><p>Wij zullen indien nodig z.s.m. reageren.</p></div>
+	<div class="form_result" style="display: none;"><h2>Bedankt voor uw inschrijving.</h2><p>We hebben uw inschrijving verwerkt en gaan opzoek naar uw droomwoning.</p></div>
 </div>
 
 <form id="zoeker-formulier">
