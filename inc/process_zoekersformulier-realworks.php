@@ -25,10 +25,18 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 		
 		// $mail_ontvanger = 'info@jackfrenken.nl';
 		$mail_ontvanger = $_POST['contactEmail'];
-		$mail_subject = 'Verstuurd via Jackfrenken.nl';
+		// $mail_ontvanger = "luca@pixelplus.nl";
+		$mail_subject = 'Jack Frenken makelaars en adviseurs: Uw zoekopdracht';
 
 		$_POST['plaatsnaam']=(!empty($_POST['plaatsnaam']))?$_POST['plaatsnaam']:'Geen voorkeur';
 		$_POST['soortAankoop']=(!empty($_POST['soortAankoop']))?$_POST['soortAankoop']:'Geen voorkeur';
+		$_POST['contactStraat']=(!empty($_POST['contactStraat']))?$_POST['contactStraat']:' -';
+		$_POST['contactHuisnummer']=(!empty($_POST['contactHuisnummer']))?$_POST['contactHuisnummer']:' -';
+		$_POST['contactPostcode']=(!empty($_POST['contactPostcode']))?$_POST['contactPostcode']:' -';
+		$_POST['contactPlaats']=(!empty($_POST['contactPlaats']))?$_POST['contactPlaats']:' -';
+		$_POST['contactTelefoon']=(!empty($_POST['contactTelefoon']))?$_POST['contactTelefoon']:' -';
+		$_POST['contactMobiel']=(!empty($_POST['contactMobiel']))?$_POST['contactMobiel']:' -';
+		$_POST['contactEmail']=(!empty($_POST['contactEmail']))?$_POST['contactEmail']:' -';
 
 		// Replace placeholders
 		foreach ($_POST as $key => $val) {
@@ -41,6 +49,9 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
 			$mail_template = str_replace('{{' . $key . '}}', $val, $mail_template);
 		}
+		$mail_template = str_replace('Dhr', 'heer', $mail_template);
+		$mail_template = str_replace('Mevr', 'mevrouw', $mail_template);
+		$mail_template = str_replace('Fam', 'familie', $mail_template);
 
 		// Initialize search form for Realworks
 		$search_form = new RealworksSearchForm('e2ed5b0a-d544-409b-aa06-7f3a875c2403', 44003, 884311);
