@@ -502,9 +502,6 @@ class RealworksSearchForm
     public function send()
     {
         $response = $this->request('/wonen/v1/zoekopdracht', true, $this->payload);
-
-        var_dump($response['result']);
-
         return $response['info']['http_code'] === 200;
     }
 
