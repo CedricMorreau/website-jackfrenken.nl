@@ -5,7 +5,7 @@
 		</p>
 	</div>
 	<div class="form_error general" style="display: none;"><h2>Foutje</h2><p>Er ging iets mis op de server. Probeer het nog eens.</p></div>
-	<div class="form_result" style="display: none;"><h2>Bedankt!</h2><p>Wij zullen indien nodig z.s.m. reageren.</p></div>
+	<div class="form_result" style="display: none;"><h2>Bedankt voor uw inschrijving.</h2><p>We hebben uw inschrijving verwerkt en gaan opzoek naar uw droomwoning.<br>U ontvangt een kopie van uw inschrijving per e-mail.</p></div>
 </div>
 
 <form id="zoeker-formulier">
@@ -19,17 +19,17 @@
 	<div class="name-row">
 			<div class="gender-wrapper">
 			    <label for="contactChoice1" class="form-item size15">
-			    	<input type="radio" checked="checked" name="aanhef" id="contactChoice1" value="DHR">
+			    	<input type="radio" checked="checked" name="aanhef" id="contactChoice1" value="Dhr">
 			    	Dhr.
 				</label>
 
 			    <label for="contactChoice2" class="form-item size15">
-			    	<input type="radio" name="aanhef" id="contactChoice2" value="MEVR">
+			    	<input type="radio" name="aanhef" id="contactChoice2" value="Mevr">
 			    	Mevr.
 			    </label>
 				
 				<label for="contactChoice3" class="form-item size15">
-			    	<input type="radio" name="aanhef" id="contactChoice3" value="FAM">
+			    	<input type="radio" name="aanhef" id="contactChoice3" value="Fam">
 			    	Fam.
 			    </label>
 			</div>
@@ -129,8 +129,8 @@
 		<div class="checkbox-wrapper">
 			<input type="checkbox" id="financieel-kopen" name="soortAankoop[]" value="Kopen">
 			<label for="financieel-kopen" class="form-item size20">
-					Kopen
-				</label>
+				Kopen
+			</label>
 			<input type="checkbox" id="financieel-huren" name="soortAankoop[]" value="Huren">
 			<label for="financieel-huren" class="form-item size20">
 				Huren

@@ -23,12 +23,20 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
 		$mail_template = file_get_contents('mailtemplates/process_zoekersFormulier.html');
 		
-		$mail_ontvanger = 'info@jackfrenken.nl';
-// 		$mail_ontvanger = 'sander@pixelplus.nl';
-		$mail_subject = 'Verstuurd via Jackfrenken.nl';
+		// $mail_ontvanger = 'info@jackfrenken.nl';
+		$mail_ontvanger = $_POST['contactEmail'];
+		// $mail_ontvanger = "luca@pixelplus.nl";
+		$mail_subject = 'Jack Frenken makelaars en adviseurs: Uw zoekopdracht';
 
 		$_POST['plaatsnaam']=(!empty($_POST['plaatsnaam']))?$_POST['plaatsnaam']:'Geen voorkeur';
 		$_POST['soortAankoop']=(!empty($_POST['soortAankoop']))?$_POST['soortAankoop']:'Geen voorkeur';
+		$_POST['contactStraat']=(!empty($_POST['contactStraat']))?$_POST['contactStraat']:' -';
+		$_POST['contactHuisnummer']=(!empty($_POST['contactHuisnummer']))?$_POST['contactHuisnummer']:' -';
+		$_POST['contactPostcode']=(!empty($_POST['contactPostcode']))?$_POST['contactPostcode']:' -';
+		$_POST['contactPlaats']=(!empty($_POST['contactPlaats']))?$_POST['contactPlaats']:' -';
+		$_POST['contactTelefoon']=(!empty($_POST['contactTelefoon']))?$_POST['contactTelefoon']:' -';
+		$_POST['contactMobiel']=(!empty($_POST['contactMobiel']))?$_POST['contactMobiel']:' -';
+		$_POST['contactEmail']=(!empty($_POST['contactEmail']))?$_POST['contactEmail']:' -';
 
 		// Replace placeholders
 		foreach ($_POST as $key => $val) {
@@ -41,15 +49,18 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
 			$mail_template = str_replace('{{' . $key . '}}', $val, $mail_template);
 		}
+		$mail_template = str_replace('Dhr', 'heer', $mail_template);
+		$mail_template = str_replace('Mevr', 'mevrouw', $mail_template);
+		$mail_template = str_replace('Fam', 'familie', $mail_template);
 
 		// Initialize search form for Realworks
 		$search_form = new RealworksSearchForm('e2ed5b0a-d544-409b-aa06-7f3a875c2403', 44003, 884311);
 		$search_form->fetch_locations();
 
 		$gender = [
-			'DHR' => RealworksSearchForm::FIELD_GENDER_MALE,
-			'MEVR' => RealworksSearchForm::FIELD_GENDER_FEMALE,
-			'FAM' => RealworksSearchForm::FIELD_GENDER_OTHER,
+			'Dhr' => RealworksSearchForm::FIELD_GENDER_MALE,
+			'Mevr' => RealworksSearchForm::FIELD_GENDER_FEMALE,
+			'Fam' => RealworksSearchForm::FIELD_GENDER_OTHER,
 		];
 
 		$gender = $gender[$_POST['aanhef']];
@@ -104,7 +115,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
 		$search_form->send();
 
-		if ($test) {
+		if (isset($test)) {
 			
 			echo $output;
 		}
@@ -118,11 +129,12 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 			$mail->addField('from', 'info@jackfrenken.nl');
 			$mail->addField('fromName', 'Jackfrenken.nl');
 			$mail->addField('to', $mail_ontvanger);
+			$mail->addField('bcc', 'info@jackfrenken.nl');
 			$mail->addField('subject', $mail_subject);
 			$mail->addField('message', base64_encode($mail_template));
 			
 			$mail->send();
-			
+			echo $mail_template;
 			echo 1;
 		}
 	}

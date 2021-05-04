@@ -1,21 +1,134 @@
-Dit zoekersformulier is verstuurd via Jackfrenken.nl:<br /><br />
-
-<b>Aanhef</b>: {{aanhef}}<br>
-<b>Voornaam</b>: {{voornaam}}<br>
-<b>Tussenvoegsel</b>: {{tussenvoegsel}}<br>
-<b>Achternaam</b>: {{achternaam}}<br>
-<b>Straat</b>: {{contactStraat}}<br>
-<b>Huisnummer</b>: {{contactHuisnummer}}<br>
-<b>Postcode</b>: {{contactPostcode}}<br>
-<b>Plaats</b>: {{contactPlaats}}<br>
-<b>Telefoonnummer</b>: {{contactTelefoon}}<br>
-<b>Mobiel</b>: {{contactMobiel}}<br>
-<b>E-mailadres</b>: {{contactEmail}}<br>
-<b>Plaatsen</b>: {{plaatsnaam}}<br>
-<b>Koop/huur</b>: {{soortAankoop}}<br>
-<b>Prijs van</b>: {{prijsVanaf}}<br>
-<b>Prijs tot</b>: {{prijsTot}}<br>
-<b>Soort object</b>: {{objectSoort}}<br>
-<b>Bouwvorm</b>: {{objectBouwvorm}}<br>
-<b>Perceeloppervlakte</b>: {{objectPerceelOpp}}<br>
-<b>Aantal slaapkamers</b>: {{objectSlaapkamers}}<br>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>Jack Frencken zoek registratie</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@700&display=swap" rel="stylesheet">
+    </head>
+    <body id="body" style="margin: 0; padding: 0; max-width: 800px; margin-left: auto; margin-right: auto; font-family: 'Bodoni Moda', serif;">
+        <table style="margin: 0; padding: 0; width: 100%;">
+            <tr>
+                <td style="display:flex; justify-content: end; align-items: center; padding: 40px 0 30px 0; background-color: white; width: 100%; height: 100%;">
+                    <img src="www.jackfrenken.nl/resources/logo.png" alt="Jack Frenken zoek registratie" style="max-width: 140px; max-height: 130px; display: block; margin-left: auto; margin-right: 10px;">
+                </td>
+            </tr>
+        </table>
+        <table style="width: 100%; margin: 0; padding: 20px 20% 30px 20%; background-color: #CCE9f5;">
+            <tr>
+                <td colspan="2">
+                    &nbsp;
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    Wij zoeken graag met u mee naar de woning van uw dromen!
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">     
+                    Onderstaand de gegevens waarmee u zich heeft ingeschreven via onze website.
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    &nbsp;
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <h3 style="font-style: normal; font-style: italic;">Persoonlijke gegevens</h3>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <b>{{aanhef}} {{voornaam}} {{achternaam}}</b><br>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <b>{{contactStraat}} {{contactHuisnummer}}</b><br>
+                </td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>
+                    <b>{{contactPostcode}} {{contactPlaats}}</b><br>
+                </td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>
+                    &nbsp;
+                </td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>
+                    <b>Telefoonnummer: </b>{{contactTelefoon}}<br>
+                </td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>
+                    <b>Mobielnummer: </b>{{contactMobiel}}<br>
+                </td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td style="text-decoration: none !important; ">
+                    <b>E-mailadres</b>:&nbsp;<a style="color: black !important; text-decoration: none !important;">{{contactEmail}}</a><br>
+                </td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <h3 style="font-style: normal; font-style: italic;">Zoekcriteria</h3>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <b>Soort object</b>: {{objectSoort}}<br>
+                </td>
+                <td>
+                    <b>Koop/huur</b>: {{soortAankoop}}<br>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <b>Prijs van</b>: €{{prijsVanaf}}&nbsp;&nbsp;<b>tot</b>: €{{prijsTot}}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <b>Bouwvorm</b>: {{objectBouwvorm}}<br>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <b>Perceeloppervlakte</b>: {{objectPerceelOpp}}<br>
+                </td>
+                <td>
+                    <b>Aantal slaapkamers</b>: {{objectSlaapkamers}}<br>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <b>Plaatsen</b>: {{plaatsnaam}}<br>
+                </td>
+            </tr>
+        </table>
+        <table style="width: 100%; height: 200px; margin: 0; padding: 5px 20%; font-size: 15px;">
+            <tr style="text-align: center; color: black;">
+                <td colspan="2" style="text-decoration: none !important; color: inherit !important;"><a href="#" style="color: black !important; text-decoration: none !important;">info@jackfrenken.nl</a> - (0475) 33 52 25</td>
+            </tr>
+        </table>
+        <style>
+            u + #body a {
+                color: inherit !important;
+                text-decoration: none !important;
+            }
+        </style>
+    </body>
+</html>
