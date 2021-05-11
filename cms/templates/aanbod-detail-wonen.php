@@ -246,8 +246,12 @@ $mediaList = $cms['database']->prepare("SELECT `id`, `object_ObjectTiaraID`, `be
 
 					<div class="content-wrapper" data-tab="1">
 						<h2>Beschrijving</h2>
-						
-						<?php echo utf8_encode(nl2br(Core::fixEncoding($val['objectDetails_Aanbiedingstekst']))); ?>
+
+						<?php if ($val['crmLeverancier'] == 'realworks-api') { ?>
+							<?php echo nl2br($val['objectDetails_Aanbiedingstekst']); ?>
+						<?php } else { ?>
+							<?php echo utf8_encode(nl2br(Core::fixEncoding($val['objectDetails_Aanbiedingstekst']))); ?>
+						<?php } ?>
 					</div>
 
 					<div class="content-wrapper" data-tab="2" style="display: none;">
