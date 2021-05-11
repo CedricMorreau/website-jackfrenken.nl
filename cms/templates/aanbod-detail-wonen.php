@@ -488,15 +488,15 @@ $mediaList = $cms['database']->prepare("SELECT `id`, `object_ObjectTiaraID`, `be
 									<td class="value"><?php echo $val['wonen_WonenDetails_Hoofdtuin_Afmetingen_Oppervlakte']; ?>m<sup>2</sup> (<?php echo number_format(($val['wonen_WonenDetails_Hoofdtuin_Afmetingen_Lengte'] / 100), 2, ',', '.'); ?>m diep en <?php echo number_format(($val['wonen_WonenDetails_Hoofdtuin_Afmetingen_Breedte'] / 100), 2, ',', '.'); ?>m breed)</td>
 								</tr>
 								<?php } ?>
-								
+
 								<?php if (!empty($val['wonen_WonenDetails_Hoofdtuin_Positie'])) { ?>
 								<tr>
 									<th class="description">Ligging tuin</th>
 									<td class="value">
 									
 										<?php
-										
-										switch ($val['wonen_WonenDetails_Hoofdtuin_Positie']) {
+
+										switch (strtolower($val['wonen_WonenDetails_Hoofdtuin_Positie'])) {
 											
 											case 'noord': echo 'Gelegen op het noorden'; break;
 											case 'noordoost': echo 'Gelegen op het noordoosten'; break;
