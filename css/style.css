@@ -484,7 +484,6 @@ ul.ui-autocomplete .ui-menu-item .ui-menu-item-wrapper:hover {
 
 .primary-nav .mobile-toggle {
   width: 3rem;
-  margin-left: auto;
   margin-right: 2rem;
   display: none;
   cursor: pointer;
@@ -521,10 +520,17 @@ ul.ui-autocomplete .ui-menu-item .ui-menu-item-wrapper:hover {
 }
 
 .primary-nav .mobile-contact-icon {
-  width: 2.5rem;
+  display: none;
+  width: 2rem;
   height: 2.5rem;
-  margin-left: 0;
-  margin-right: 1rem;
+  margin-left: auto;
+  margin-right: 1.5rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .primary-nav .mobile-contact-icon {
+    display: block;
+  }
 }
 
 .primary-nav .mobile-contact-icon img {

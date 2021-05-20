@@ -421,7 +421,6 @@ ul.ui-autocomplete {
 
 	.mobile-toggle {
 		width: 3rem;
-		margin-left: auto;
 		margin-right: $margin-size-m;
 		display: none;
 		cursor: pointer;
@@ -453,10 +452,14 @@ ul.ui-autocomplete {
 	}
 
 	.mobile-contact-icon {
+		display: none;
 		width: 2.5rem;
 		height: 2.5rem;
-		margin-left: 0;
-		margin-right: 1rem;
+		margin-left: auto;
+		margin-right: 1.5rem;
+		@media only screen and (max-width: $container-size-m) {
+			display: block;
+		}
 		img {
 			width: 100%;
 		}
