@@ -116,6 +116,22 @@ input::placeholder {
 .uppercase {
 	text-transform: uppercase;
 }
+
+// Autocomplete
+ul.ui-autocomplete {
+
+	.ui-menu-item {
+		cursor: pointer;
+		.ui-menu-item-wrapper {
+			padding: 0.7rem;
+			&:hover {
+				background: $pri-col;
+				color: $lit-col;
+			}
+		}
+	}
+}
+
 /* General layout elements */
 .page-wrapper {
 	display: flex;

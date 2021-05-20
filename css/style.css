@@ -84,6 +84,19 @@ input::placeholder {
   text-transform: uppercase;
 }
 
+ul.ui-autocomplete .ui-menu-item {
+  cursor: pointer;
+}
+
+ul.ui-autocomplete .ui-menu-item .ui-menu-item-wrapper {
+  padding: 0.7rem;
+}
+
+ul.ui-autocomplete .ui-menu-item .ui-menu-item-wrapper:hover {
+  background: #003064;
+  color: white;
+}
+
 /* General layout elements */
 .page-wrapper {
   display: -webkit-box;
