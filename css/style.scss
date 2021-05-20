@@ -1132,24 +1132,29 @@ input::placeholder {
 				padding-left: $margin-size-m;
 				padding-right: $margin-size-m;
 				display: flex;
-				a {
-				display: flex;
-				background-color: $qua-col;
-				color: $lit-col;
-				width: 100%;
-				padding-left: 2rem;
-				padding-right: 2rem;
-				padding-top: 1.5rem;
-				padding-bottom: 1.5rem;
-				text-decoration: none;
-				font-weight: bold;
-				&:hover {
-					background-color: $qui-col;
-				}
-					span {
-						margin-left: auto;
+
+				button[type=submit] {
+					display: flex;
+					background-color: $qua-col;
+					color: $lit-col;
+					width: 100%;
+					padding-left: 2rem;
+					padding-right: 2rem;
+					padding-top: 1.5rem;
+					padding-bottom: 1.5rem;
+					text-decoration: none;
+					font-weight: bold;
+					outline: none;
+					border: none;
+					&:hover {
+						background-color: $pri-col;
+						cursor: pointer;
 					}
-				}
+						span {
+							margin-left: auto;
+						}
+					}
+
 			}
 		}
 

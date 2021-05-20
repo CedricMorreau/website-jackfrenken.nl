@@ -1360,7 +1360,7 @@ input::placeholder {
     display: -ms-flexbox;
     display: flex;
   }
-  .homepage-wrapper .search-filter-wrapper .search-filter-button-mobile a {
+  .homepage-wrapper .search-filter-wrapper .search-filter-button-mobile button[type=submit] {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1373,11 +1373,14 @@ input::placeholder {
     padding-bottom: 1.5rem;
     text-decoration: none;
     font-weight: bold;
+    outline: none;
+    border: none;
   }
-  .homepage-wrapper .search-filter-wrapper .search-filter-button-mobile a:hover {
-    background-color: #CCE9f5;
+  .homepage-wrapper .search-filter-wrapper .search-filter-button-mobile button[type=submit]:hover {
+    background-color: #003064;
+    cursor: pointer;
   }
-  .homepage-wrapper .search-filter-wrapper .search-filter-button-mobile a span {
+  .homepage-wrapper .search-filter-wrapper .search-filter-button-mobile button[type=submit] span {
     margin-left: auto;
   }
 }

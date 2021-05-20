@@ -230,8 +230,7 @@
 			<input type="submit" value="Zoeken &xrarr;" title="Zoeken in aanbod"></input>
 		</div>
 		<div class="search-filter-button-mobile">
-			<a href="#" title="Zoeken in aanbod">Zoeken <span>&xrarr;</span></a>
-			
+				<button type="submit">Zoeken <span>⟶</span></button>
 		</div>
 			</form>
 
