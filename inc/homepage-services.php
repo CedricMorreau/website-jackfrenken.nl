@@ -1,5 +1,4 @@
 <section class="service-bar">
-<link rel="stylesheet" href="<?php echo $dynamicRoot; ?>css/autocomplete.css">
 	
 	<div class="anchor" id="services"></div>
 
@@ -238,8 +237,6 @@
 
 
 		</div>
-		<script src="<?php echo $dynamicRoot; ?>js/jquery-ui-1.10.3.custom.min.js"></script>
-		<script src="<?php echo $dynamicRoot; ?>js/global-makelaardij.js"></script>
 	<script type="text/javascript">
 
 		$(document).ready(function() {
