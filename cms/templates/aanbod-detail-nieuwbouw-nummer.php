@@ -228,7 +228,11 @@ $mediaList = $cms['database']->prepare("SELECT `id`, `object_ObjectTiaraID`, `be
 					<div class="content-wrapper" data-tab="1">
 						<h2>Beschrijving</h2>
 						
-						<?php echo utf8_encode(nl2br(Core::fixEncoding($val['Aanbiedingstekst']))); ?>
+						<?php if ($val['crmLeverancier'] == 'realworks-api') { ?>
+							<?php echo nl2br($val['Aanbiedingstekst']); ?>
+						<?php } else { ?>
+							<?php echo utf8_encode(nl2br(Core::fixEncoding($val['Aanbiedingstekst']))); ?>
+						<?php } ?>
 					</div>
 
 					<div class="content-wrapper" data-tab="2" style="display: none;">
@@ -707,7 +711,9 @@ $mediaList = $cms['database']->prepare("SELECT `id`, `object_ObjectTiaraID`, `be
 									$('#object-contact-form-output .form_error.general').css({ display : 'none' }).fadeIn('fast');
 									$('#object-contact-form form').fadeIn('fast');
 								} else {
-									
+									dataLayer.push({
+										'event': 'contactformulier-submit'
+									});									
 									$('#object-contact-form form').remove();
 									$('#object-contact-form-output .form_result').css({ display : 'none' }).fadeIn();
 									// $('#object-contact-form').html(data); //Test mail output

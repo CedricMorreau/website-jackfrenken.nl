@@ -116,6 +116,22 @@ input::placeholder {
 .uppercase {
 	text-transform: uppercase;
 }
+
+// Autocomplete
+ul.ui-autocomplete {
+
+	.ui-menu-item {
+		cursor: pointer;
+		.ui-menu-item-wrapper {
+			padding: 0.7rem;
+			&:hover {
+				background: $pri-col;
+				color: $lit-col;
+			}
+		}
+	}
+}
+
 /* General layout elements */
 .page-wrapper {
 	display: flex;
@@ -405,7 +421,6 @@ input::placeholder {
 
 	.mobile-toggle {
 		width: 3rem;
-		margin-left: auto;
 		margin-right: $margin-size-m;
 		display: none;
 		cursor: pointer;
@@ -433,6 +448,20 @@ input::placeholder {
 					display: block;
 				}
 			}
+		}
+	}
+
+	.mobile-contact-icon {
+		display: none;
+		width: 2.5rem;
+		height: 2.5rem;
+		margin-left: auto;
+		margin-right: 1.5rem;
+		@media only screen and (max-width: $container-size-m) {
+			display: block;
+		}
+		img {
+			width: 100%;
 		}
 	}
 
@@ -1132,24 +1161,29 @@ input::placeholder {
 				padding-left: $margin-size-m;
 				padding-right: $margin-size-m;
 				display: flex;
-				a {
-				display: flex;
-				background-color: $qua-col;
-				color: $lit-col;
-				width: 100%;
-				padding-left: 2rem;
-				padding-right: 2rem;
-				padding-top: 1.5rem;
-				padding-bottom: 1.5rem;
-				text-decoration: none;
-				font-weight: bold;
-				&:hover {
-					background-color: $qui-col;
-				}
-					span {
-						margin-left: auto;
+
+				button[type=submit] {
+					display: flex;
+					background-color: $qua-col;
+					color: $lit-col;
+					width: 100%;
+					padding-left: 2rem;
+					padding-right: 2rem;
+					padding-top: 1.5rem;
+					padding-bottom: 1.5rem;
+					text-decoration: none;
+					font-weight: bold;
+					outline: none;
+					border: none;
+					&:hover {
+						background-color: $pri-col;
+						cursor: pointer;
 					}
-				}
+						span {
+							margin-left: auto;
+						}
+					}
+
 			}
 		}
 

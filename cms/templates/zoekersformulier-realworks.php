@@ -133,6 +133,9 @@ $sfeerbeeld = trim($template->getCustomVar('sfeerbeeld'));
 								} else {
 									$('#zoeker-formulier').remove();
 									$('.form_result').css({ display : 'none' }).fadeIn();
+									 dataLayer.push({
+									  'event': 'zoekersformulier-submit'
+									 });
 									// $('#zoekersForm').html(data); //Test mail output
 								}
 							});

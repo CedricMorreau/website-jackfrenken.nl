@@ -1,5 +1,7 @@
 <?php
 
+header('Content-Type: text/plain');
+
 include($_SERVER['DOCUMENT_ROOT'] . "/cms/classes/pp_mailer.class.php");
 include($_SERVER['DOCUMENT_ROOT'] . "/cms/classes/realworkssearchform.class.php");
 
@@ -84,11 +86,13 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 			$search_form->set_objectsoort('BOUWGROND');
 
 		} else {
+			if (!empty($_POST['objectSoort'])) {
 
-			$search_form->set_woningsoorten([$_POST['objectSoort']]);
-			$search_form->set_woningtype($_POST['objectBouwvorm']);
-			
-			$search_form->set_objectsoort('WOONHUIS');
+				$search_form->set_woningsoorten([$_POST['objectSoort']]);
+				$search_form->set_woningtype($_POST['objectBouwvorm']);
+				
+				$search_form->set_objectsoort('WOONHUIS');
+			}
 		}
 
 		$min_object_price = intval($_POST['prijsVanaf']);
@@ -113,7 +117,10 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 			$search_form->set_all_locations('plaatsen');
 		}
 
-		$search_form->send();
+		$success = $search_form->send();
+
+		if ($success === false)
+			die('0');
 
 		if (isset($test)) {
 			
