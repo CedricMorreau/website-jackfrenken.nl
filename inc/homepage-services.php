@@ -1,4 +1,6 @@
 <section class="service-bar">
+<link rel="stylesheet" href="<?php echo $dynamicRoot; ?>css/autocomplete.css">
+	
 	<div class="anchor" id="services"></div>
 
 	<div class="service-quote">
@@ -111,7 +113,7 @@
 					  </optgroup>
 					</select>
 				</div>
-				<input type="text" name="plaatsnaam" placeholder="Plaats, straat">
+				<input src="<?php echo $dynamicRoot; ?>inc/ajax_searchAutoComplete.php" type="text" id="wonen_plaats" class="auto_complete" name="plaatsnaam" placeholder="Plaats, straat" data-ogType="wonen">
 
 <!-- 				<div class="select-wrapper">
 					<select name="radius">
@@ -236,8 +238,9 @@
 			</form>
 
 
-	</div>
-	
+		</div>
+		<script src="<?php echo $dynamicRoot; ?>js/jquery-ui-1.10.3.custom.min.js"></script>
+		<script src="<?php echo $dynamicRoot; ?>js/global-makelaardij.js"></script>
 	<script type="text/javascript">
 
 		$(document).ready(function() {

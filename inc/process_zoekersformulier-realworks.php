@@ -129,7 +129,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 			$mail->addField('from', 'info@jackfrenken.nl');
 			$mail->addField('fromName', 'Jackfrenken.nl');
 			$mail->addField('to', $mail_ontvanger);
-			$mail->addField('bcc', 'info@jackfrenken.nl');
+			// $mail->addField('bcc', 'info@jackfrenken.nl');
 			$mail->addField('subject', $mail_subject);
 			$mail->addField('message', base64_encode($mail_template));
 			
