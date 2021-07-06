@@ -521,7 +521,7 @@ ul.ui-autocomplete .ui-menu-item .ui-menu-item-wrapper:hover {
 
 .primary-nav .mobile-contact-icon {
   display: none;
-  width: 2rem;
+  width: 2.5rem;
   height: 2.5rem;
   margin-left: auto;
   margin-right: 1.5rem;
@@ -2523,6 +2523,12 @@ ul.ui-autocomplete .ui-menu-item .ui-menu-item-wrapper:hover {
   width: 100%;
   outline: 0;
   border: none;
+}
+
+.column-content .column-content .medewerkers-wrapper img {
+  max-width: 100%;
+  width: auto;
+  height: auto;
 }
 
 .column-content .column-content .medewerkers-wrapper section#flexbox-gallery {
