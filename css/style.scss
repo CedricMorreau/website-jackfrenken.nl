@@ -4077,6 +4077,10 @@ header.headerAanbod {
 	margin-bottom: 1rem;
 	background: rgba(53, 45, 45, 0.2);
 
+	&.square {
+		padding-bottom: 100%;
+	}
+	
 	iframe, 
 	object, 
 	embed { 

@@ -4930,6 +4930,12 @@ header.headerAanbod {
   background: rgba(53, 45, 45, 0.2);
 }
 
+.vimeo-embed-container.square,
+.video-embed-wrapper.square,
+.youtube-embed-wrapper.square {
+  padding-bottom: 100%;
+}
+
 .vimeo-embed-container iframe,
 .vimeo-embed-container object,
 .vimeo-embed-container embed,
