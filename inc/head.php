@@ -25,6 +25,7 @@ else {
 <meta property="og:site_name" content="Jack Frenken Makelaars en Adviseurs voor de aankoop en verkoop van woningen">
 <meta property="og:title" content="<?php echo $pageDisplayTitle; ?>">
 <meta property="og:description" content="<?php echo $pageDisplayDescription; ?>">
+<meta property="og:image" content="<?php echo $dynamicRoot; ?>resources/jack-frenken-og-image.png">
 <meta name="description" content="<?php echo $pageDisplayDescription; ?>">
 <meta name="web_author" content="Pixelplus Interactieve Media">
 <meta name="keywords" content="makelaar, adviseurs, adviseur, woningen, hypotheken, nieuwbouw, bouwkavels, bedrijfspanden, jack frenken, vertrouwd, huis, huizen, hypotheek, koopwoning, koopwoningen, huurwoning, huurwoningen, bouwkavels, kavel, bouwen, nvm, advies, verkocht, voor, contact, pixelplus, colofon" />
