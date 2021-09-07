@@ -60,10 +60,12 @@
 <footer class="secondary-footer">
 	<div class="links-wrapper">
 		<span>2018 &copy; Jack Frenken Makelaars en adviseurs</span> 
-		<a href="<?php echo $template->findPermalink(52, 1); ?>">Disclaimer <span class="entity">&rarr;</span></a>
+		
+		<a href="<?php echo $template->findPermalink(86, 1); ?>">Algemene voorwaarden <span class="entity">&rarr;</span></a>
 		<a href="<?php echo $template->findPermalink(71, 1); ?>">Colofon <span class="entity">&rarr;</span></a>
+		<a href="<?php echo $template->findPermalink(50, 1); ?>">Privacy <span class="entity">&rarr;</span></a>
 		<a href="<?php echo $template->findPermalink(51, 1); ?>">Cookies <span class="entity">&rarr;</span></a>
-		<a href="<?php echo $template->findPermalink(50, 1); ?>">Privacybeleid <span class="entity">&rarr;</span></a>
+		<a href="<?php echo $template->findPermalink(52, 1); ?>">Disclaimer <span class="entity">&rarr;</span></a>
 	</div>
 	<div class="social-links">
 		<a href="https://www.facebook.com/jackfrenken" title="Facebook" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 50 50" class="fb-icon">
