@@ -46,9 +46,6 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 			if ($key == 'plaatsnaam')
 				$val = implode(', ', $val);
 
-			if ($key == 'soortAankoop')
-				$val = implode(', ', $val);
-
 			$mail_template = str_replace('{{' . $key . '}}', $val, $mail_template);
 		}
 		$mail_template = str_replace('Dhr', 'heer', $mail_template);
@@ -98,16 +95,12 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 		$min_object_price = intval($_POST['prijsVanaf']);
 		$max_object_price = intval($_POST['prijsTot']);
 
-		if (is_array($_POST['soortAankoop'])) {
+		if (!in_array(strtolower($_POST['soortAankoop']), ['huren', 'kopen']))
+			die();
 
-			if (in_array('Huren', $_POST['soortAankoop']))
-				$search_form->set_rent_range($min_object_price, $max_object_price);
-
-			if (in_array('Kopen', $_POST['soortAankoop']))
-				$search_form->set_purchase_range($min_object_price, $max_object_price);
-
-		} else {
+		if (strtolower($_POST['soortAankoop']) === 'huren') {
 			$search_form->set_rent_range($min_object_price, $max_object_price);
+		} else {
 			$search_form->set_purchase_range($min_object_price, $max_object_price);
 		}
 

@@ -60,6 +60,34 @@ $sfeerbeeld = trim($template->getCustomVar('sfeerbeeld'));
 		<script type="text/javascript" src="<?php echo $dynamicRoot; ?>js/jquery.multiselects-0.3.js"></script>
 
 		<script>
+			window.isRent = false;
+
+			var formatter = new Intl.NumberFormat('nl-NL', {
+				style: 'currency',
+				currency: 'EUR',
+			});
+
+			const updatePriceFrom = () => generatePriceOptions('select[name=prijsVanaf]', window.isRent ? [ 500, 1000, 1500, 2000, 2500, 3000, 10000, 35000 ] :
+					[ 0, 100000, 200000, 300000, 400000, 500000, 600000, 700000, 800000, 900000, 1000000, 1250000 ], true);
+
+			const updatePriceTo = () => generatePriceOptions('select[name=prijsTot]', window.isRent ? [ 500, 1000, 1500, 2000, 2500, 3000, 10000, 35000 ] :
+					[ 100000, 200000, 300000, 400000, 500000, 600000, 700000, 800000, 900000, 1000000, 1250000 ], false);
+			
+			function generatePriceOptions(element, object, from) {
+				let output = [];
+
+				if (from === true)
+					output.push('<option>Prijs vanaf</option>');
+				else
+					output.push('<option>Prijs tot</option>');
+
+				for (const option of object) {
+					output.push('<option value="' + option + '">' + (from == true ? 'Vanaf ' : 'Tot ')
+						+ formatter.format(option) + '</option>');
+				}
+
+				$(element).html(output.join('\n'));
+			}
 
 			$(document).ready(function(){
 
@@ -74,11 +102,21 @@ $sfeerbeeld = trim($template->getCustomVar('sfeerbeeld'));
 				$('#financieel-kopen').click(function () {
 					$('#financieel-huren').removeClass('error');
 					$('#financieel-kopen').removeClass('error');
+
+					window.isRent = false;
+					
+					updatePriceFrom();
+					updatePriceTo();
 				});
 
 				$('#financieel-huren').click(function () {
 					$('#financieel-kopen').removeClass('error');
 					$('#financieel-huren').removeClass('error');
+
+					window.isRent = true;
+
+					updatePriceFrom();
+					updatePriceTo();
 				});
 
 				$("#zoeker-formulier").validate({
