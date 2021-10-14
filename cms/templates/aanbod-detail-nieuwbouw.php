@@ -458,8 +458,12 @@ $mediaList = $cms['database']->prepare("SELECT `id`, `object_ObjectTiaraID`, `be
 								echo 'Projectwebsite: <a href="' . $val['project_ProjectDetails_Presentatie_Website'] . '" target="_blank">' . trim($val['project_ProjectDetails_Presentatie_Website']) . '</a><br>';
 							}
 							
-							echo utf8_encode(nl2br(Core::fixEncoding($val['project_ProjectDetails_Presentatie_Aanbiedingstekst']))); 
-							
+							if ($val['crmLeverancier'] == 'realworks-api') {
+								echo nl2br($val['project_ProjectDetails_Presentatie_Aanbiedingstekst']);
+							} else {
+								echo utf8_encode(nl2br(Core::fixEncoding($val['project_ProjectDetails_Presentatie_Aanbiedingstekst'])));
+							}
+
 							?>
 						</div>						
 	
@@ -657,7 +661,9 @@ $mediaList = $cms['database']->prepare("SELECT `id`, `object_ObjectTiaraID`, `be
 									$('#object-contact-form-output .form_error.general').css({ display : 'none' }).fadeIn('fast');
 									$('#object-contact-form form').fadeIn('fast');
 								} else {
-									
+									dataLayer.push({
+										'event': 'contactformulier-submit'
+									});
 									$('#object-contact-form form').remove();
 									$('#object-contact-form-output .form_result').css({ display : 'none' }).fadeIn();
 									// $('#object-contact-form').html(data); //Test mail output

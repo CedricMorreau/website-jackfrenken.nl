@@ -18,6 +18,15 @@ else {
 	$pageDisplayDescription = $template->getPageDataMulti('metaTag_1');
 }
 
+if (isset($injectImage)) {
+
+  $pageDisplayImage = $injectImage;
+}
+else {
+
+  $pageDisplayImage = $dynamicRoot . 'resources/jack-frenken-og-image.png';
+}
+
 ?>
 
 <meta charset="utf-8">
@@ -25,6 +34,7 @@ else {
 <meta property="og:site_name" content="Jack Frenken Makelaars en Adviseurs voor de aankoop en verkoop van woningen">
 <meta property="og:title" content="<?php echo $pageDisplayTitle; ?>">
 <meta property="og:description" content="<?php echo $pageDisplayDescription; ?>">
+<meta property="og:image" content="<?php echo $pageDisplayImage; ?>">
 <meta name="description" content="<?php echo $pageDisplayDescription; ?>">
 <meta name="web_author" content="Pixelplus Interactieve Media">
 <meta name="keywords" content="makelaar, adviseurs, adviseur, woningen, hypotheken, nieuwbouw, bouwkavels, bedrijfspanden, jack frenken, vertrouwd, huis, huizen, hypotheek, koopwoning, koopwoningen, huurwoning, huurwoningen, bouwkavels, kavel, bouwen, nvm, advies, verkocht, voor, contact, pixelplus, colofon" />
@@ -45,7 +55,7 @@ else {
 <!-- custom styling -->
 <link rel="stylesheet" href="<?php echo $dynamicRoot; ?>css/style.css">
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
+<!-- Google Analytics 4 -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-42911090-22"></script>
 <script>
 window.dataLayer = window.dataLayer || [];
@@ -54,17 +64,7 @@ gtag('js', new Date());
 
 gtag('config', 'UA-42911090-22');
 </script>
-
-<!--[if lt IE 9]>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
-<![endif]-->
-
-<!-- Jquery 3.3.1 minified -->
-<script
-  src="//code.jquery.com/jquery-3.3.1.min.js"
-  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  crossorigin="anonymous">
-</script>
+<!-- End Google Analytics 4 -->
 
 <!-- Google analytics -->
 <script type="text/javascript">
@@ -77,6 +77,27 @@ gtag('config', 'UA-42911090-22');
     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
+</script>
+
+<!-- End Google analytics -->
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TXC23LL');</script>
+<!-- End Google Tag Manager -->
+
+<!--[if lt IE 9]>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+<![endif]-->
+
+<!-- Jquery 3.3.1 minified -->
+<script
+  src="//code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous">
 </script>
 
 <!-- Google Tag Manager - Media Group Holland -->

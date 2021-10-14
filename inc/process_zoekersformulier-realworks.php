@@ -1,5 +1,7 @@
 <?php
 
+header('Content-Type: text/plain');
+
 include($_SERVER['DOCUMENT_ROOT'] . "/cms/classes/pp_mailer.class.php");
 include($_SERVER['DOCUMENT_ROOT'] . "/cms/classes/realworkssearchform.class.php");
 
@@ -44,9 +46,6 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 			if ($key == 'plaatsnaam')
 				$val = implode(', ', $val);
 
-			if ($key == 'soortAankoop')
-				$val = implode(', ', $val);
-
 			$mail_template = str_replace('{{' . $key . '}}', $val, $mail_template);
 		}
 		$mail_template = str_replace('Dhr', 'heer', $mail_template);
@@ -54,7 +53,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 		$mail_template = str_replace('Fam', 'familie', $mail_template);
 
 		// Initialize search form for Realworks
-		$search_form = new RealworksSearchForm('e2ed5b0a-d544-409b-aa06-7f3a875c2403', 44003, 884311);
+		$search_form = new RealworksSearchForm('e2ed5b0a-d544-409b-aa06-7f3a875c2403', 44003, '884311');
 		$search_form->fetch_locations();
 
 		$gender = [
@@ -84,26 +83,24 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 			$search_form->set_objectsoort('BOUWGROND');
 
 		} else {
+			if (!empty($_POST['objectSoort'])) {
 
-			$search_form->set_woningsoorten([$_POST['objectSoort']]);
-			$search_form->set_woningtype($_POST['objectBouwvorm']);
-			
-			$search_form->set_objectsoort('WOONHUIS');
+				$search_form->set_woningsoorten([$_POST['objectSoort']]);
+				$search_form->set_woningtype($_POST['objectBouwvorm']);
+				
+				$search_form->set_objectsoort('WOONHUIS');
+			}
 		}
 
 		$min_object_price = intval($_POST['prijsVanaf']);
 		$max_object_price = intval($_POST['prijsTot']);
 
-		if (is_array($_POST['soortAankoop'])) {
+		if (!in_array(strtolower($_POST['soortAankoop']), ['huren', 'kopen']))
+			die();
 
-			if (in_array('Huren', $_POST['soortAankoop']))
-				$search_form->set_rent_range($min_object_price, $max_object_price);
-
-			if (in_array('Kopen', $_POST['soortAankoop']))
-				$search_form->set_purchase_range($min_object_price, $max_object_price);
-
-		} else {
+		if (strtolower($_POST['soortAankoop']) === 'huren') {
 			$search_form->set_rent_range($min_object_price, $max_object_price);
+		} else {
 			$search_form->set_purchase_range($min_object_price, $max_object_price);
 		}
 
@@ -113,7 +110,10 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 			$search_form->set_all_locations('plaatsen');
 		}
 
-		$search_form->send();
+		$success = $search_form->send();
+
+		if ($success === false)
+			die('0');
 
 		if (isset($test)) {
 			
@@ -129,7 +129,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 			$mail->addField('from', 'info@jackfrenken.nl');
 			$mail->addField('fromName', 'Jackfrenken.nl');
 			$mail->addField('to', $mail_ontvanger);
-			$mail->addField('bcc', 'info@jackfrenken.nl');
+			// $mail->addField('bcc', 'info@jackfrenken.nl');
 			$mail->addField('subject', $mail_subject);
 			$mail->addField('message', base64_encode($mail_template));
 			

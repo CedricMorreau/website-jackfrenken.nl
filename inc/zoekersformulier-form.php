@@ -127,11 +127,11 @@
 	<div class="financieel-row">
 		
 		<div class="checkbox-wrapper">
-			<input type="checkbox" id="financieel-kopen" name="soortAankoop[]" value="Kopen">
+			<input type="radio" id="financieel-kopen" name="soortAankoop" value="Kopen" checked>
 			<label for="financieel-kopen" class="form-item size20">
 				Kopen
 			</label>
-			<input type="checkbox" id="financieel-huren" name="soortAankoop[]" value="Huren">
+			<input type="radio" id="financieel-huren" name="soortAankoop" value="Huren">
 			<label for="financieel-huren" class="form-item size20">
 				Huren
 			</label>

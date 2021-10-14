@@ -14,6 +14,7 @@ if (!isset($values['art_status'][1]) && !$template->previewMode())
 	Core::redirect('/404-pagina-niet-gevonden');
 	
 $injectTitle = $values['art_title'] . $template->getPageDataMulti('pageTitle');
+$injectImage = $values['art_overviewPhoto'];
 
 $useTitle = $values['art_title'];
 

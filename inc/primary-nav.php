@@ -7,9 +7,13 @@
 		</a>
 	</div>
 
+	<a href="tel:0475335225" class="mobile-contact-icon">
+		<img src="/resources/icon-telefoon-small.svg" alt="Bel ons">
+	</a>
 
 	<div class="mobile-toggle">
 		<img class="hamburger-icon open" src="<?php echo $dynamicRoot; ?>resources/icon-hamburger.svg" alt="Menu">
+
 		<img class="close-icon" src="<?php echo $dynamicRoot; ?>resources/icon-close.svg" alt="Menu">
 	</div>
 

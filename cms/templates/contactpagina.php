@@ -236,7 +236,9 @@ $locaties = $cms['database']->prepare("SELECT * FROM `tbl_cms_locaties` WHERE `c
 							$("#contactForm p.error").fadeIn();
 						}
 						else {
-
+							dataLayer.push({
+								'event': 'contactformulier-submit'
+							});
 							$("#contactForm p.error").hide();
 							$("#contactForm").hide();
 							$("#bedankt-melding").fadeIn();

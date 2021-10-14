@@ -4,7 +4,7 @@
 	<head>
 		
 		<?php include($documentRoot . "inc/head.php"); ?>
-
+		<link rel="stylesheet" href="<?php echo $dynamicRoot; ?>css/autocomplete.css">
 	</head>
 
 	<body>
@@ -38,6 +38,8 @@
 		
 		<?php include($documentRoot . "inc/footer-scripting.php"); ?>
 
+		<script src="<?php echo $dynamicRoot; ?>js/jquery-ui-1.10.3.custom.min.js"></script>
+		<script src="<?php echo $dynamicRoot; ?>js/global-makelaardij.js"></script>
 	</body>
 
 </html>
