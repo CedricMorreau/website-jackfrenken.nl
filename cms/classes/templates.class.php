@@ -99,23 +99,26 @@ class Templates {
 			));
 		}
 
-		// Start hacky JF nonsense
-		$hacky_temp_url = explode('/', $permaLink);
-		$hacky_last = explode('-', array_pop($hacky_temp_url));
-		$hacky_id = array_pop($hacky_last);
-		$hacky_new_url = implode('/', $hacky_temp_url);
+		if (count($validatePermalink) <= 0) {
 
-		$validatePermalink = $this->cms['database']->prepare("SELECT * FROM `tbl_cms_permaLinks` LEFT JOIN `tbl_mod_pages` ON `mod_pa_id`=`cms_per_tableId` WHERE `cms_per_tableName`=? AND `cms_per_link`=? AND `mod_pa_type`!=4", "ss", array(
-			'tbl_mod_pages',
-			$hacky_new_url
-		));
+			// Start hacky JF nonsense
+			$hacky_temp_url = explode('/', $permaLink);
+			$hacky_last = explode('-', array_pop($hacky_temp_url));
+			$hacky_id = array_pop($hacky_last);
+			$hacky_new_url = implode('/', $hacky_temp_url);
 
-		if (count($validatePermalink) > 0 && is_numeric($hacky_id)) {
+			$validatePermalink = $this->cms['database']->prepare("SELECT * FROM `tbl_cms_permaLinks` LEFT JOIN `tbl_mod_pages` ON `mod_pa_id`=`cms_per_tableId` WHERE `cms_per_tableName`=? AND `cms_per_link`=? AND `mod_pa_type`!=4", "ss", array(
+				'tbl_mod_pages',
+				$hacky_new_url
+			));
 
-			$validatePermalink[0]['cms_per_tableId'] = 74;
-			$this->moduleId = $hacky_id;
+			if (count($validatePermalink) > 0 && is_numeric($hacky_id)) {
+
+				$validatePermalink[0]['cms_per_tableId'] = 74;
+				$this->moduleId = $hacky_id;
+			}
+			// End hacky JF nonsense
 		}
-		// End hacky JF nonsense
 		
 		if (count($validatePermalink) <= 0) {
 			
