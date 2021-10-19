@@ -350,13 +350,7 @@ $mediaList = $cms['database']->prepare("SELECT `id`, `object_ObjectTiaraID`, `be
 												if (!empty($oVal['Huur_HuurConditie']) && !is_null($oVal['Huur_HuurConditie']) && $oPriceText != 'Prijs op aanvraag')
 													$oPriceText .= ' ' . $oVal['Huur_HuurConditie'];
 		
-												// Fetch permalink
-												$permaLink = $cms['database']->prepare("SELECT `cms_per_link` FROM `tbl_cms_permaLinks` WHERE `cms_per_tableName`='tbl_mod_pages' AND `cms_per_tableId`=40 AND `cms_per_moduleId`=? AND `cms_per_moduleExtra`=?", "ii", array($val['id'], $oVal['id']));
-		
-												if (count($permaLink) > 0)
-													$href = $dynamicRoot . $permaLink[0]['cms_per_link'];
-												else
-													$href = $dynamicRoot . 'error/404';
+												$href = $template->getPermalink(1, 1) . '/' . Core::replaceSpecialChars($oVal['Adres_Straatnaam'] . ' ' . $oVal['bouwNummer_ObjectCode'], 'permaLink') . '-' . $oVal['id'];
 												
 												if ($verkocht)
 													$url = 'javascript:void(0);';
