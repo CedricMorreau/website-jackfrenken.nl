@@ -342,7 +342,7 @@ class Core {
 		return $contentArray;
 	}
 	
-	static function vd($var, $type = 'print_r') {
+	static function vd($var, $type = 'vd') {
 		
 		echo '<pre>';
 		
@@ -579,14 +579,14 @@ class Core {
 	static function fixEncoding($val) {
 		
 		$chars = array(
-			'’',
-			'‘',
-			'“',
-			'”',
-			'€',
-			'•',
-			'–',
-			'…'
+			'ï¿½',
+			'ï¿½',
+			'ï¿½',
+			'ï¿½',
+			'ï¿½',
+			'ï¿½',
+			'ï¿½',
+			'ï¿½'
 		);
 		
 		$replace = array(
