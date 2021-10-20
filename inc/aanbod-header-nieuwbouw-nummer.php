@@ -28,8 +28,8 @@
 				
 				foreach ($mediaList as $key => $media) {
 					
-					$fullImage = $dynamicRoot . 'og_media/nieuwbouw__' . $val['bouwNummer_NVMVestigingNR'] . '_' . $val['bouwNummer_ObjectTiaraID']. '/' . $media['bestandsnaam'];
-					$tnImage = $dynamicRoot . 'og_media/nieuwbouw__' . $val['bouwNummer_NVMVestigingNR'] . '_' . $val['bouwNummer_ObjectTiaraID']. '/' . $media['bestandsnaam_medium'];
+					$fullImage = $dynamicRoot . 'og_media/bouwnummers_' . $val['bouwNummer_NVMVestigingNR'] . '_' . $val['bouwNummer_ObjectTiaraID']. '/' . $media['bestandsnaam'];
+					$tnImage = $dynamicRoot . 'og_media/bouwnummers_' . $val['bouwNummer_NVMVestigingNR'] . '_' . $val['bouwNummer_ObjectTiaraID']. '/' . $media['bestandsnaam_medium'];
 					
 					echo '<a class="rsImg" href="' . $tnImage . '" data-rsTmb="' . $tnImage . '" data-rsBigImg="' . $fullImage . '">' . $val['Adres_Woonplaats'] . ' - ' . obj_generateAddress($val['Adres_Straatnaam'], $val['Adres_Huisnummer'], $val['Adres_HuisnummerToevoeging']) . '</a>' . PHP_EOL;
 					

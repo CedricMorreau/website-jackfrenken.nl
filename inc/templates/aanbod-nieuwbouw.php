@@ -26,7 +26,7 @@ $fetchImage = $cms['database']->prepare("SELECT `bestandsnaam_medium` FROM `tbl_
 
 if (count($fetchImage) > 0) {
 	
-	$image = $dynamicRoot . 'og_media/nieuwbouw__' . $val['project_NVMVestigingNR'] . '_' . $val['project_ObjectTiaraID']. '/' . $fetchImage[0]['bestandsnaam_medium'];
+	$image = $dynamicRoot . 'og_media/nieuwbouw_' . $val['project_NVMVestigingNR'] . '_' . $val['project_ObjectTiaraID']. '/' . $fetchImage[0]['bestandsnaam_medium'];
 }
 else {
 	

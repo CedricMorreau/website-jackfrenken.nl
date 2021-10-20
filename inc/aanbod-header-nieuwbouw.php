@@ -27,8 +27,8 @@
 				
 				foreach ($mediaList as $key => $media) {
 					
-					$fullImage = $dynamicRoot . 'og_media/nieuwbouw__' . $val['project_NVMVestigingNR'] . '_' . $val['project_ObjectTiaraID']. '/' . $media['bestandsnaam'];
-					$tnImage = $dynamicRoot . 'og_media/nieuwbouw__' . $val['project_NVMVestigingNR'] . '_' . $val['project_ObjectTiaraID']. '/' . $media['bestandsnaam_medium'];
+					$fullImage = $dynamicRoot . 'og_media/nieuwbouw_' . $val['project_NVMVestigingNR'] . '_' . $val['project_ObjectTiaraID']. '/' . $media['bestandsnaam'];
+					$tnImage = $dynamicRoot . 'og_media/nieuwbouw_' . $val['project_NVMVestigingNR'] . '_' . $val['project_ObjectTiaraID']. '/' . $media['bestandsnaam_medium'];
 					
 					echo '<a class="rsImg" href="' . $tnImage . '" data-rsTmb="' . $tnImage . '" data-rsBigImg="' . $fullImage . '"></a>' . PHP_EOL;
 					

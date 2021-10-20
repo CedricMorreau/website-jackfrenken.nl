@@ -61,7 +61,7 @@ if (count($findMedia) > 0) {
 
 			case 'Brochure':
 
-				$extraMedia['brochure'] = $dynamicRoot . 'og_media/nieuwbouw__' . $val['object_NVMVestigingNR'] . '_' . $val['object_ObjectTiaraID']. '/' . $sVal['bestandsnaam'];
+				$extraMedia['brochure'] = $dynamicRoot . 'og_media/nieuwbouw_' . $val['object_NVMVestigingNR'] . '_' . $val['object_ObjectTiaraID']. '/' . $sVal['bestandsnaam'];
 
 				break;
 
@@ -104,7 +104,7 @@ $fetchImage = $cms['database']->prepare("SELECT `bestandsnaam_tn`, `bestandsnaam
 
 if (count($fetchImage) > 0) {
 
-	$headImage = $dynamicRoot . 'og_media/nieuwbouw__' . $val['project_NVMVestigingNR'] . '_' . $val['project_ObjectTiaraID']. '/' . $fetchImage[0]['bestandsnaam_medium'];
+	$headImage = $dynamicRoot . 'og_media/nieuwbouw_' . $val['project_NVMVestigingNR'] . '_' . $val['project_ObjectTiaraID']. '/' . $fetchImage[0]['bestandsnaam_medium'];
 	$injectImage = $headImage;
 }
 else {
@@ -299,7 +299,7 @@ $mediaList = $cms['database']->prepare("SELECT `id`, `object_ObjectTiaraID`, `be
 		
 											if (count($fetchImage) > 0) {
 		
-												$headImage = $dynamicRoot . 'og_media/nieuwbouw__' . $val['project_NVMVestigingNR'] . '_' . $tVal['bouwType_ObjectTiaraID']. '/' . $fetchImage[0]['bestandsnaam_medium'];
+												$headImage = $dynamicRoot . 'og_media/bouwtypen_' . $val['project_NVMVestigingNR'] . '_' . $tVal['bouwType_ObjectTiaraID']. '/' . $fetchImage[0]['bestandsnaam_medium'];
 												$injectImage = $headImage;
 											}
 											else {
