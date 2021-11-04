@@ -2107,6 +2107,13 @@ ul.ui-autocomplete .ui-menu-item .ui-menu-item-wrapper:hover {
   }
 }
 
+@media only screen and (max-width: 480px) {
+  .column-header .content-image {
+    height: 19vh;
+    max-height: 10rem;
+  }
+}
+
 .column-content {
   display: -webkit-box;
   display: -ms-flexbox;
