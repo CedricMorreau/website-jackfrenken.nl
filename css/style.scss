@@ -1733,12 +1733,11 @@ ul.ui-autocomplete {
 			padding-top: 0;
 			padding-bottom: 0;
 			height: 30vh;
-			background-position: 100% 50%;
+			background-position: 50% 50%;
 		}
 		@media only screen and (max-width: $container-size-s) {
 			height: 19vh;
 			max-height: 10rem;
-			background-position: 50% 50%;
 		}
 
 
