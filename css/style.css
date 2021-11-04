@@ -2111,6 +2111,7 @@ ul.ui-autocomplete .ui-menu-item .ui-menu-item-wrapper:hover {
   .column-header .content-image {
     height: 19vh;
     max-height: 10rem;
+    background-position: 50% 50%;
   }
 }
 
