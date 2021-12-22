@@ -83,7 +83,7 @@
 			<?php include($documentRoot . "resources/social_instagram.svg"); ?>
 		</a>
 
-		<a href="https://www.linkedin.com/company/1680615?trk=tyah&trkInfo=tarId%3A1410275372935%2Ctas%3Ajack%20frenken%2Cidx%3A1-1-1" target="_blank">
+		<a href="https://www.linkedin.com/company/jack-frenken-makelaars-en-adviseurs" target="_blank">
 			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 50 50" class="in-icon">
 			  <path d="M0 0h50v50H0z"/>
 			  <defs>
