@@ -1551,11 +1551,13 @@ ul.ui-autocomplete {
 	.social-links {
 		margin-left: auto;
 		font-size: 0; // remove space between icons
+		display: flex;
 		@media only screen and (max-width: $container-size-m) {
 			margin-top: 0;
 		}
 
 		a {
+			height: 3rem;
 			width: 3rem;
 			display: inline-block;
 			margin-right: 0;
@@ -1574,6 +1576,29 @@ ul.ui-autocomplete {
 			svg {
 				&:hover {
 					fill: $pri-col;
+				}
+			}
+
+			&.instagram {
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				align-self: stretch;
+				background-color: #8a49a1;
+				height: 100%;
+				height: 3rem;
+				width: 3rem;
+
+				&:hover {
+					background-color: $pri-col;
+				}
+
+				svg {
+					color: $lit-col;
+					fill: currentColor;
+					width: 1.2rem;
+					height: 1.2rem;
+
 				}
 			}
 

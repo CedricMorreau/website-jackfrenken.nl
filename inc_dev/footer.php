@@ -55,6 +55,17 @@
 		<a href="#">Privacybeleid <span class="entity">&rarr;</span></a>
 	</div>
 	<div class="social-links">
-		<a href="https://www.facebook.com/jackfrenken" title="Facebook"><img src="/resources/social_facebook.svg" alt="Facebook"></a><a href="https://twitter.com/JackFrenkenNVM"><img src="/resources/social_twitter.svg" alt="Twitter" title="Twitter"></a><a href="https://www.linkedin.com/company/1680615?trk=tyah&trkInfo=tarId%3A1410275372935%2Ctas%3Ajack%20frenken%2Cidx%3A1-1-1"><img src="/resources/social_linkedin.svg" alt="LinkedIn" title="LinkedIn"></a>
+
+		<a href="https://www.facebook.com/jackfrenken" title="Facebook" target="_blank">
+			<img src="/resources/social_facebook.svg" alt="Facebook">
+		</a>
+
+		<a href="https://www.instagram.com/jackfrenkenmakelaarsadviseurs/" target="_blank" title="Instagram">
+			<img src="/resources/social_instagram.svg" alt="Instagram" title="Instagram">
+		</a>
+
+		<a href="https://www.linkedin.com/company/1680615?trk=tyah&	trkInfo=tarId%3A1410275372935%2Ctas%3Ajack%20frenken%2Cidx%3A1-1-1" target="_blank">
+			<img src="/resources/social_linkedin.svg" alt="LinkedIn" title="LinkedIn">
+		</a>
 	</div>
 </footer>
