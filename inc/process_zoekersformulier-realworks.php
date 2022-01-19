@@ -129,10 +129,23 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 			$mail->addField('fromName', 'Jackfrenken.nl');
 			$mail->addField('to', $mail_ontvanger);
 			// $mail->addField('bcc', 'info@jackfrenken.nl');
-			$mail->addField('subject', $mail_subject);
+			$mail->addField('subject', 'Jack Frenken makelaars en adviseurs: Uw zoekopdracht');
 			$mail->addField('message', base64_encode($mail_template));
 			
+			// Add another email to Jack Frenken
+			$mail = new PP_Mailer();
+			
+			$mail->addField('apiKey', '8b7442195ca347fe7b36d77fd7289a17');
+			$mail->addField('base64', 1);
+			$mail->addField('type', 'send');
+			$mail->addField('from', 'info@jackfrenken.nl');
+			$mail->addField('fromName', 'Jackfrenken.nl');
+			$mail->addField('to', 'info@jackfrenken.nl');
+			// $mail->addField('bcc', 'info@jackfrenken.nl');
+			$mail->addField('subject', 'Nieuwe zoekopdracht via Jackfrenken.nl');
+			$mail->addField('message', base64_encode($mail_template));
 			$mail->send();
+
 			echo $mail_template;
 			echo 1;
 		}
