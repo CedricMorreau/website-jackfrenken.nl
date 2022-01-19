@@ -114,6 +114,9 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 				if ($key == 'plaatsnaam')
 					$val = implode(', ', $val);
 
+				if ($key == 'achternaam' && !empty($_POST['tussenvoegsel']))
+					$val = $_POST['tussenvoegsel'] . ' ' . $val;
+
 				$mail_template = str_replace('{{' . $key . '}}', $val, $mail_template);
 			}
 			$mail_template = str_replace('Dhr', 'heer', $mail_template);
