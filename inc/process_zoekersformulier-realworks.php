@@ -134,6 +134,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 			// $mail->addField('bcc', 'info@jackfrenken.nl');
 			$mail->addField('subject', 'Jack Frenken makelaars en adviseurs: Uw zoekopdracht');
 			$mail->addField('message', base64_encode($mail_template));
+			$mail->send();
 			
 			// Add another email to Jack Frenken
 			$mail = new PP_Mailer();
