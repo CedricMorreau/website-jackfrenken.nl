@@ -112,7 +112,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 			foreach ($_POST as $key => $val) {
 
 				if ($key == 'plaatsnaam')
-					$val = implode(', ', $val);
+					$val = implode(', ', array_map('ucfirst', $val));
 
 				if ($key == 'achternaam' && !empty($_POST['tussenvoegsel']))
 					$val = $_POST['tussenvoegsel'] . ' ' . $val;
