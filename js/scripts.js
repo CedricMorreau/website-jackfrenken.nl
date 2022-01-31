@@ -59,3 +59,25 @@ $(document).ready(function(e) {
 	});
 
 });
+
+// Show popup
+function showPopup() {
+	$('.popup-wrapper').addClass('active');
+}
+
+
+$(document).ready(function(e) {
+	//showPopup();
+
+	$('.popup-close').click(function(e) {
+		e.preventDefault();
+		$('.sell').removeClass('active');
+	});
+
+
+});
+
+// Show popup after 20 seconds
+setTimeout(function() {
+	showPopup();
+}, 10000);

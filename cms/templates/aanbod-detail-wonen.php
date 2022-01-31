@@ -618,6 +618,9 @@ $mediaList = $cms['database']->prepare("SELECT `id`, `object_ObjectTiaraID`, `be
 
 			<?php include($documentRoot . "inc/footer.php"); ?>
 
+			<!-- Popup -->
+			<?php include("inc/sell-popup.php"); ?>
+
 		</div>
 		
 		<?php include($documentRoot . "inc/footer-scripting.php"); ?>

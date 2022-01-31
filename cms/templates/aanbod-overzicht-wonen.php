@@ -783,6 +783,9 @@ elseif ($overviewType == 'verkocht')
 
 			<?php include($documentRoot . "inc/footer.php"); ?>
 
+			<!-- Popup -->
+			<?php include("inc/sell-popup.php"); ?>
+
 		</div>
 		
 		<?php include($documentRoot . "inc/footer-scripting.php"); ?>

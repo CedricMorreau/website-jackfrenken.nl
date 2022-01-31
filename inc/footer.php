@@ -100,4 +100,5 @@
 	</div>
 </footer>
 
+<!-- Contact overlay -->
 <?php include("inc/contact-overlay.php"); ?>
