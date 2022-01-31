@@ -60,6 +60,13 @@ $(document).ready(function(e) {
 
 });
 
+function setCookie(c_name,value,expiredays){
+		
+	var exdate=new Date();
+	exdate.setDate(exdate.getDate()+expiredays);
+	document.cookie=c_name+ "=" +escape(value)+((expiredays==null) ? "" : "; expires="+exdate.toGMTString())+ "; path=/";
+}
+
 // Show popup
 function showPopup() {
 	$('.popup-wrapper').addClass('active');
@@ -72,12 +79,8 @@ $(document).ready(function(e) {
 	$('.popup-close').click(function(e) {
 		e.preventDefault();
 		$('.sell').removeClass('active');
+		setCookie('sellPopup', 1, 7);
 	});
 
 
 });
-
-// Show popup after 20 seconds
-setTimeout(function() {
-	showPopup();
-}, 10000);
