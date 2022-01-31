@@ -5007,13 +5007,16 @@ header.headerAanbod {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-transition: right 2s ease;
-  transition: right 2s ease;
+  -webkit-transition: right 2s ease, opacity 1s linear;
+  transition: right 2s ease, opacity 1s linear;
 }
 
 @media only screen and (max-width: 768px) {
   .popup-wrapper {
     padding: 1.5rem;
+    opacity: 0;
+    -webkit-transition: right 1s ease, opacity, 1s linear;
+    transition: right 1s ease, opacity, 1s linear;
   }
 }
 
@@ -5028,7 +5031,9 @@ header.headerAanbod {
   .popup-wrapper.active {
     left: 1rem;
     right: 1rem;
+    bottom: 1rem;
     width: calc(100% - 2rem);
+    opacity: 1;
   }
 }
 
