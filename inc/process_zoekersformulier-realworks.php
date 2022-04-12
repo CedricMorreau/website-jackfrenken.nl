@@ -9,18 +9,21 @@ include($_SERVER['DOCUMENT_ROOT'] . "/cms/classes/realworkssearchform.class.php"
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
 	// Not empty
-	$array = array('voornaam', 'achternaam', 'contactStraat', 'contactHuisnummer', 'contactPostcode', 'contactPlaats', 'contactTelefoon', 'contactEmail', 'plaatsnaam', 'prijsVanaf', 'prijsTot', 'soortAankoop');
+	$array = array('voornaam', 'achternaam', 'contactStraat', 'contactHuisnummer', 'contactPostcode', 'contactPlaats', 'contactTelefoon', 'contactEmail', 'plaatsnaam', /*'prijsVanaf',*/ 'prijsTot', 'soortAankoop');
+
+	// Set prijsVanaf to 0 if empty
+	if (empty($_POST['prijsVanaf']))
+		$_POST['prijsVanaf'] = 0;
 
 	$error = false;
 
 	foreach ($array as $key => $val) {
-
 		if (empty($_POST[$val])) {
-
 			$error = true;
+			break;
 		}
 	}
-	
+
 	if (!$error) {
 
 		// Initialize search form for Realworks
@@ -84,7 +87,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 		$success = $search_form->send();
 
 		if ($success === false)
-			die('0');
+			die(0);
 
 		if (isset($test)) {
 			
@@ -150,13 +153,12 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 			$mail->addField('message', base64_encode($mail_template));
 			$mail->send();
 
-			echo $mail_template;
 			echo 1;
 		}
 	}
 	else {
 		
-		echo '0';
+		echo 0;
 	}
 }
 
