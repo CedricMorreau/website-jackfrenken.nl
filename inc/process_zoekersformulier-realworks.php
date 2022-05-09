@@ -58,10 +58,11 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
 		} else {
 			if (!empty($_POST['objectSoort'])) {
-
 				$search_form->set_woningsoorten([$_POST['objectSoort']]);
-				$search_form->set_woningtype($_POST['objectBouwvorm']);
-				
+
+				if (!empty($_POST['objectBouwvorm']))
+					$search_form->set_woningtype($_POST['objectBouwvorm']);
+
 				$search_form->set_objectsoort('WOONHUIS');
 			}
 		}
@@ -70,7 +71,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 		$max_object_price = intval($_POST['prijsTot']);
 
 		if (!in_array(strtolower($_POST['soortAankoop']), ['huren', 'kopen']))
-			die();
+			die(0);
 
 		if (strtolower($_POST['soortAankoop']) === 'huren') {
 			$search_form->set_rent_range($min_object_price, $max_object_price);

@@ -165,7 +165,7 @@ $sfeerbeeld = trim($template->getCustomVar('sfeerbeeld'));
 						data	: $('#zoeker-formulier').serialize(),
 						success	: function(data){
 							$('.form_loading').fadeOut('fast', function(){
-								if(data == 0){
+								if(data != 1){
 									$('.form_error').css({ display : 'none' }).fadeIn('fast');
 									$('#zoeker-formulier').fadeIn('fast');
 								} else {
