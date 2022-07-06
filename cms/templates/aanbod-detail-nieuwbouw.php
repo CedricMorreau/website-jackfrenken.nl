@@ -369,7 +369,7 @@ $mediaList = $cms['database']->prepare("SELECT `id`, `object_ObjectTiaraID`, `be
 											
 											<?php } ?>
 		
-												<strong><span class="city"><?php echo $oVal['Adres_Straatnaam']; ?>, <?php echo $oVal['Adres_Postcode']; ?> <?php echo $oVal['Adres_Woonplaats']; ?> - <?php echo $oVal['bouwNummer_ObjectCode']; ?></span></strong>
+												<strong><span class="city"><?php echo $oVal['Adres_Straatnaam']; ?>, <?php echo $oVal['Adres_Postcode']; ?> <?php echo $oVal['Adres_Woonplaats']; ?> - <?php echo !empty($oVal['bouwNummer_Nummer']) ? $oVal['bouwNummer_Nummer'] : $oVal['bouwNummer_ObjectCode']; ?></span></strong>
 												
 												<ul class="specs">
 													<li>Status: <?php echo $oVal['Status_ObjectStatus']; ?></li>
