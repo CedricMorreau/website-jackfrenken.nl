@@ -82,7 +82,7 @@ $sql = "SELECT
 		
 		(SELECT COUNT(id) AS rsCount FROM tbl_OG_nieuwbouw_bouwTypes WHERE id_OG_nieuwbouw_projecten=tbl_OG_nieuwbouw_projecten.id) as aantal_bouwTypes,
 		(SELECT COUNT(id) AS rsCount FROM tbl_OG_nieuwbouw_bouwNummers WHERE id_OG_nieuwbouw_projecten=tbl_OG_nieuwbouw_projecten.id) as aantal_bouwNummers,
-		(SELECT COUNT(id) AS rsCount FROM tbl_OG_nieuwbouw_bouwNummers WHERE id_OG_nieuwbouw_projecten=tbl_OG_nieuwbouw_projecten.id AND `Status_ObjectStatus` IN ('verkocht', 'verhuurd')) as aantal_verkochtBouwNummers
+		(SELECT COUNT(id) AS rsCount FROM tbl_OG_nieuwbouw_bouwNummers WHERE id_OG_nieuwbouw_projecten=tbl_OG_nieuwbouw_projecten.id AND `Status_ObjectStatus` IN ('verkocht', 'verhuurd', 'ingetrokken')) as aantal_verkochtBouwNummers
 		
 		FROM tbl_OG_nieuwbouw_projecten
 			LEFT JOIN `tbl_OG_objectDetails` ON `ood_ogId`=`id` AND `ood_table`='tbl_OG_nieuwbouw_projecten'
