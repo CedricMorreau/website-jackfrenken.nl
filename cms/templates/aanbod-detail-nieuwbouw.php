@@ -19,7 +19,7 @@ function translateDay($val, $type = 'default') {
 $moduleId = $template->getModuleId();
 
 // See if object even exists
-$objectData = $cms['database']->prepare("SELECT *, (SELECT COUNT(id) AS rsCount FROM tbl_OG_nieuwbouw_bouwTypes WHERE id_OG_nieuwbouw_projecten=tbl_OG_nieuwbouw_projecten.id AND EXISTS(SELECT * FROM tbl_OG_nieuwbouw_bouwNummers WHERE id_OG_nieuwbouw_bouwTypes=tbl_OG_nieuwbouw_bouwTypes.id AND lower(`Status_ObjectStatus`) NOT IN ('ingetrokken')) AND lower(`bouwType_BouwTypeDetails_Status_ObjectStatus`) NOT IN ('ingetrokken')) as aantal_bouwTypes, (SELECT COUNT(id) AS rsCount FROM tbl_OG_nieuwbouw_bouwNummers WHERE id_OG_nieuwbouw_projecten=tbl_OG_nieuwbouw_projecten.id AND lower(`Status_ObjectStatus`) NOT IN ('ingetrokken')) as aantal_bouwNummers FROM `tbl_OG_nieuwbouw_projecten` WHERE `id`=? AND (NOT `project_ProjectDetails_Status_ObjectStatus` IN ('Ingetrokken', 'gearchiveerd'))", "i", array($moduleId));
+$objectData = $cms['database']->prepare("SELECT *, (SELECT COUNT(id) AS rsCount FROM tbl_OG_nieuwbouw_bouwTypes WHERE id_OG_nieuwbouw_projecten=tbl_OG_nieuwbouw_projecten.id AND EXISTS(SELECT * FROM tbl_OG_nieuwbouw_bouwNummers WHERE id_OG_nieuwbouw_bouwTypes=tbl_OG_nieuwbouw_bouwTypes.id AND lower(`Status_ObjectStatus`) NOT IN ('ingetrokken', 'verkocht', 'verhuurd')) AND lower(`bouwType_BouwTypeDetails_Status_ObjectStatus`) NOT IN ('ingetrokken', 'verkocht', 'verhuurd')) as aantal_bouwTypes, (SELECT COUNT(id) AS rsCount FROM tbl_OG_nieuwbouw_bouwNummers WHERE id_OG_nieuwbouw_projecten=tbl_OG_nieuwbouw_projecten.id AND lower(`Status_ObjectStatus`) NOT IN ('ingetrokken', 'verkocht', 'verhuurd')) as aantal_bouwNummers FROM `tbl_OG_nieuwbouw_projecten` WHERE `id`=? AND (NOT LOWER(`project_ProjectDetails_Status_ObjectStatus`) IN ('ingetrokken', 'gearchiveerd', ''))", "i", array($moduleId));
 
 if (count($objectData) == 0)
 	Core::redirect($template->findPermalink(40, 1));
@@ -237,7 +237,7 @@ $mediaList = $cms['database']->prepare("SELECT `id`, `object_ObjectTiaraID`, `be
 									(SELECT COUNT(id) AS rsCount FROM tbl_OG_nieuwbouw_bouwNummers WHERE id_OG_nieuwbouw_projecten=? AND id_OG_nieuwbouw_bouwTypes=tbl_OG_nieuwbouw_bouwTypes.id) as aantal_bouwNummers
 								FROM tbl_OG_nieuwbouw_bouwTypes
 								WHERE id_OG_nieuwbouw_projecten=?
-								AND EXISTS(SELECT * FROM tbl_OG_nieuwbouw_bouwNummers WHERE id_OG_nieuwbouw_bouwTypes=tbl_OG_nieuwbouw_bouwTypes.id AND lower(`Status_ObjectStatus`) NOT IN ('ingetrokken'))
+								AND EXISTS(SELECT * FROM tbl_OG_nieuwbouw_bouwNummers WHERE id_OG_nieuwbouw_bouwTypes=tbl_OG_nieuwbouw_bouwTypes.id AND lower(`Status_ObjectStatus`) NOT IN ('ingetrokken', 'verkocht', 'verhuurd'))
 								ORDER BY bouwType_BouwTypeDetails_Naam ASC ";
 		
 								$fetchTypes = $cms['database']->prepare($sql, "ii", array($val['id'], $val['id']));
@@ -287,11 +287,11 @@ $mediaList = $cms['database']->prepare("SELECT `id`, `object_ObjectTiaraID`, `be
 												FROM tbl_OG_nieuwbouw_bouwNummers
 												WHERE id_OG_nieuwbouw_projecten=?
 													AND id_OG_nieuwbouw_bouwTypes=?
-													AND lower(`Status_ObjectStatus`) NOT IN ('ingetrokken')
+													AND lower(`Status_ObjectStatus`) NOT IN ('ingetrokken', 'verkocht', 'verhuurd')
 													ORDER BY bouwNummer_Nummer ASC ";
 		
 										$fetchObjects = $cms['database']->prepare($sql, "ii", array($val['id'], $tVal['id']));
-		
+
 										if (count($fetchObjects) > 0) {
 		
 											// Fetch image of the main object
