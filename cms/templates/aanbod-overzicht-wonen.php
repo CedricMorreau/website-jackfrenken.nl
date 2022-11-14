@@ -163,7 +163,15 @@ if ($overviewType != 'kavels') {
 		WHERE
 			(NOT `tbl_OG_wonen`.`objectDetails_StatusBeschikbaarheid_Status` IN ('Ingetrokken', 'ingetrokken', 'gearchiveerd'" . $extraState . "))
 			AND (`ood_onlineStatus` IS NULL or `ood_onlineStatus`=1)
-			AND `tbl_OG_wonen`.`id`<>0";
+			AND `tbl_OG_wonen`.`id`<>0
+			
+			AND CASE WHEN lower(`tbl_OG_wonen`.`objectDetails_StatusBeschikbaarheid_Status`) IN ('verkocht', 'verhuurd') THEN
+                (`objectDetails_DatumWijziging`>=DATE_ADD(NOW(), INTERVAL -26 WEEK) OR `objectDetails_DatumWijziging` IS NULL)
+            ELSE
+                (`objectDetails_DatumWijziging`>='1970-01-01' OR `objectDetails_DatumWijziging` IS NULL OR `objectDetails_DatumWijziging`='0000-00-00')
+            END
+			
+			";
 	
 	// Extended search filter
 	// if (!empty($filter['plaatsnaam']) || !empty($filter['radius']) || !empty($filter['prijsVan']) || !empty($filter['prijsTot']) || count($filter['bedrijfswoning']) > 0) {
