@@ -16,6 +16,26 @@ function translateDay($val, $type = 'default') {
 	return str_replace($en, $nl, $val);
 }
 
+function obj_generateNumber($values) {
+	if (isset($values['Adres_Huisnummer']) && intval($values['Adres_Huisnummer']) > 0) {
+
+		$number = $values['Adres_Huisnummer'];
+
+		//if (isset($values['Adres_HuisnummerToevoeging']))
+		//	$number .= ' ' . $values['Adres_HuisnummerToevoeging'];
+
+		return $number;
+	}
+	
+	if (isset($values['bouwNummer_Nummer']) && intval($values['bouwNummer_Nummer']) > 0)
+		return $values['bouwNummer_Nummer'];
+
+	if (isset($values['bouwNummer_ObjectCode']))
+		return $values['bouwNummer_ObjectCode'];
+
+	return null;
+}
+
 $moduleId = $template->getModuleId();
 
 // See if object even exists
@@ -368,8 +388,8 @@ $mediaList = $cms['database']->prepare("SELECT `id`, `object_ObjectTiaraID`, `be
 											<a href="<?php echo $url; ?>" class="objectInfo" title="<?php echo $oVal['Adres_Straatnaam']; ?> - <?php echo $oVal['bouwNummer_ObjectCode']; ?>">
 											
 											<?php } ?>
-		
-												<strong><span class="city"><?php echo $oVal['Adres_Straatnaam']; ?>, <?php echo $oVal['Adres_Postcode']; ?> <?php echo $oVal['Adres_Woonplaats']; ?> - <?php echo !empty($oVal['bouwNummer_Nummer']) ? $oVal['bouwNummer_Nummer'] : $oVal['bouwNummer_ObjectCode']; ?></span></strong>
+
+												<strong><span class="city"><?php echo $oVal['Adres_Straatnaam']; ?>, <?php echo $oVal['Adres_Postcode']; ?> <?php echo $oVal['Adres_Woonplaats']; ?> - <?php echo obj_generateNumber($oVal); ?></span></strong>
 												
 												<ul class="specs">
 													<li>Status: <?php echo $oVal['Status_ObjectStatus']; ?></li>
