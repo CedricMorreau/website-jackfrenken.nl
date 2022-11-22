@@ -155,6 +155,36 @@
 		
 		<?php } ?>
 	</div>
+
+	<p class="filter-head toggle">Type</p>
+	<div class="filter-wrapper">
+		<div class="select-wrapper">
+			<select name="bestemming" id="filter-bestemming">
+
+				<?php
+
+				$arrType = array(
+					'' => 'Geen type',
+					'bouwgrond' => 'Bouwgrond',
+					'winkelruimte' => 'Winkelruimte',
+					'kantoorruimte' => 'Kantoorruimte',
+					'bedrijfsruimte' => 'Bedrijfsruimte',
+					'horeca' => 'Horeca',
+					'belegging' => 'Belegging',
+				);
+
+				foreach ($arrType as $key => $val) {
+
+					$selected = ($filter['bestemming'] == $key) ? ' selected="selected"' : '';
+
+					echo '<option value="' . $key . '"' . $selected . '>' . $val . '</option>';
+				}
+
+				?>
+
+			</select>
+		</div>
+	</div>
 	
 	</form>
 
