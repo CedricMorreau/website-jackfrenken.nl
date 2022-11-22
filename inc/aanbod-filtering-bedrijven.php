@@ -54,9 +54,9 @@
 				<?php
 
 				$arrType = array(
-					'both' => 'Kopen',
+					'both' => 'Kopen en huren',
 					'rent' => 'Huren',
-					'kopen' => 'Kopen en huren'
+					'kopen' => 'Kopen'
 				);
 
 				foreach ($arrType as $key => $val) {

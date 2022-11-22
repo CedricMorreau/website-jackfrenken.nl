@@ -217,7 +217,7 @@ if (!empty($filter['saleType'])) {
 
 		$sql .= " AND `tbl_OG_bog`.`objectDetails_Huur_PrijsSpecificatie_Prijs`>=0 ";
 	}
-	elseif ($filter['saleType'] == 'both') {
+	elseif ($filter['saleType'] == 'kopen') {
 
 		$sql .= " AND `tbl_OG_bog`.`objectDetails_Koop_PrijsSpecificatie_Prijs`>=0 ";
 	}
