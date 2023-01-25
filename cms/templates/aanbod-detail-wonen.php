@@ -26,6 +26,9 @@ if (count($objectData) == 0)
 
 $val = $objectData[0];
 
+if (in_array(strtolower($val['objectDetails_StatusBeschikbaarheid_Status']), ['verkocht', 'verhuurd']))
+	Core::redirect($template->getPermalink(38));
+
 $priceText = obj_showPrice($val['objectDetails_Koop_Prijsvoorvoegsel'], $val['objectDetails_Koop_Koopprijs'], $val['objectDetails_Koop_KoopConditie'], $val['objectDetails_Huur_Huurprijs'], $val['objectDetails_Huur_HuurConditie']);
 
 // Find other media
