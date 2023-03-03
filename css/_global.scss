@@ -129,6 +129,7 @@ ul.ui-autocomplete {
 		}
 	}
 
+	// Primary nav container
 	nav {
 		margin-left: auto;
 		font-weight: 500;
@@ -169,6 +170,8 @@ ul.ui-autocomplete {
 				display: inline-flex;
 				margin-right: 1.3rem;
 				font-family: $fon-fam-pri;
+				font-weight: 300;
+				text-transform: uppercase;
 
 				@media only screen and (max-width: $container-size-l) {
 					margin-right: 0.5rem;
@@ -224,8 +227,10 @@ ul.ui-autocomplete {
 
 				}
 
+				// Hover menu
 				> ul {
-					background-color: $sec-col;
+					background-color: rgba($sec-col, 0.9);
+					backdrop-filter: blur(2px);
 					width: auto;
 					height: auto;
 					flex-direction: column;
@@ -260,25 +265,30 @@ ul.ui-autocomplete {
 						display: flex;
 					}
 
+					// Hover menu item
 					li {
 						color: $lit-col;
 						width: 100%;
 						display: flex;
 						flex-direction: column;
 						align-items: flex-start;
-						margin-bottom: 2rem;
+						margin-bottom: 1rem;
+						text-transform: none;
+						font-size: 1rem;
+
 						@media only screen and (max-width: $container-size-m) {
 							margin-bottom: 0.5rem;
 							align-items: center;
 						}
 
+						// Hover menu link
 						a {
 							display: flex;
 							flex-direction: column;
 							align-items: flex-start;
 							color: $lit-col;
 							text-decoration: none;
-							font-size: 1.3rem;
+							font-size: 1rem;
 							&:hover {
 								text-decoration: underline;
 							}
@@ -289,76 +299,6 @@ ul.ui-autocomplete {
 						}
 					}
 
-					&.menu-33 {
-						flex-direction: row;
-						//display: flex;
-
-						display: none; // toggle with JS
-
-						// IE11 temp fix
-						@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-						    margin-left: -6.2rem;
-						}
-
-						&.open {
-							display: flex;
-						}
-						@media only screen and (max-width: $container-size-m) {
-							display: block;
-							width: 100%;
-						}
-
-
-						li {
-							color: $lit-col;
-							width: 33.333%;
-							margin-bottom: 3rem;
-
-							display: flex;
-							flex-direction: column;
-							align-items: center;
-							@media only screen and (max-width: $container-size-m) {
-								width: 100%;
-								margin-bottom: 0.5rem;
-							}
-							
-							a {
-								display: flex;
-								flex-direction: column;
-								align-items: center;
-								color: $lit-col;
-								text-decoration: none;
-								&:hover {
-									text-decoration: underline;
-								}
-								font-size: 1.3rem;
-
-								@media only screen and (max-width: $container-size-l) {
-									font-size: 1rem;
-								}
-								svg {
-									fill: $pri-col;
-									width: 4rem;
-									height: 4rem;
-									padding-left: 0.5rem;
-									padding-right: 0.5rem;
-									margin-bottom: 1rem;
-									@media only screen and (max-width: $container-size-m) {
-										display: none;
-									}
-
-								}
-
-								&:hover {
-									color: $lit-col;
-									svg {
-										fill: $lit-col;
-									}
-								}
-							}
-						}
-
-					}
 				}
 
 			}
@@ -568,3 +508,301 @@ ul.ui-autocomplete {
 	}
 
 }
+
+/* Footer  ---------------------------------- */
+
+.primary-footer {
+	min-height: 10rem;
+	height: auto;
+	display: flex;
+	flex-shrink: 0;
+	flex-direction: column;
+	background-color: $sen-col;
+	color: $lit-col;
+	margin-top: -4rem;
+	padding-left: 2rem;
+	padding-right: 2rem;
+	padding-top: 2rem;
+	padding-bottom: 3rem;
+	font-size: 1rem;
+	position: relative;
+	width: 100%;
+	align-items: center;
+
+	.content-container {
+		width: 100%;
+		max-width: $container-size-l;
+	}
+
+	a {
+		color: $lit-col;
+		text-decoration: none;
+		font-size: 1rem;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	.phone-icon {
+		width: 3rem;
+		position: absolute;
+		right: 2rem;
+		top: -1px;
+		@media only screen and (max-width: $container-size-m) {
+			width: 4rem;
+
+		}
+		img {
+			width: 100%;
+		}
+	}
+
+	.footer-row-1 {
+		display: flex;
+		flex: 1;
+		flex-direction: row;
+		@media only screen and (max-width: $container-size-m) {
+			flex-direction: column-reverse;
+			font-size: 1.3rem;
+		}
+
+
+		
+		.footer-links-wrapper {
+			width: 100%;
+			display: flex;
+			flex: 1;
+			flex-direction: row;
+			@media only screen and (max-width: $container-size-m) {
+				flex-direction: column;
+			}
+
+			.footer-links-col-1 {
+				margin-right: 2rem;
+				a {
+					color: $ter-col;
+				}
+				@media only screen and (max-width: $container-size-m) {
+					font-size: 1.3rem;
+					margin-right: 0;
+					a {
+						font-size: 1.5rem;
+					}
+				}
+
+			}
+
+			.footer-links-col-2 {
+				a {
+					color: $ter-col;
+				}
+				@media only screen and (max-width: $container-size-m) {
+					margin-right: 0;
+
+					a {
+						font-size: 1.5rem;
+					}
+				}
+			}
+
+		}
+		
+		.footer-contact-wrapper {
+			flex: 1;
+			align-items: center;
+			text-align: right;
+			margin-top: 1rem;
+			@media only screen and (max-width: $container-size-m) {
+				text-align: left;
+				margin-bottom: 3rem;
+				margin-top: 2rem;
+			}
+			@media only screen and (max-width: $container-size-s) {
+				margin-top: 2rem;
+			}
+
+			.contact-phone {
+				a {
+					font-size: 2.3rem !important;
+					font-weight: bold;
+
+					@media only screen and (max-width: $container-size-m) {
+						font-size: 2rem;
+						text-align: right;
+					}
+
+					margin-bottom: 0.3rem;
+				}
+			}
+
+			a {
+				@media only screen and (max-width: $container-size-m) {
+					display: block;
+					width: 100%;
+					text-align: right;
+				}
+			}
+		}
+	}
+
+	.footer-row-2 {
+		flex: 1;
+		margin-top: 2rem;
+		a {
+			align-items: center;
+			display: flex;
+			color: $ter-col;
+		}
+		@media only screen and (max-width: $container-size-m) {
+			margin-top: 4rem;
+			white-space: nowrap;
+			a {
+				align-items: center;
+				display: flex;
+				font-size: 1.2rem;
+			}
+		}
+
+		.nvm-logo {
+			width: 1.3rem;
+			margin-right: 1rem;
+			@media only screen and (max-width: $container-size-m) {
+				width: 1.3rem;
+				margin-right: 1rem;
+			}
+		}
+		.rating {
+			color: $qua-col;
+			font-weight: bold;
+			margin-left: 0.3rem;
+			margin-right: 0.3rem;
+		}
+		
+		@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+			display: none; // IE11 fix temp
+		}
+	}
+
+
+	.social-links {
+		margin-left: auto;
+		font-size: 0; // remove space between icons
+		display: flex;
+		@media only screen and (max-width: $container-size-m) {
+			margin-top: 0;
+		}
+
+		a {
+			height: 3rem;
+			width: 3rem;
+			display: inline-block;
+			margin-right: 0;
+
+			.fb-icon {
+				fill: #3b5997;
+			}
+
+			.tw-icon {
+				fill: #089fe8;
+			}
+			.in-icon {
+				fill: #0077b4; 
+			}
+
+			svg {
+				&:hover {
+					fill: $pri-col;
+				}
+			}
+
+			&.instagram {
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				align-self: stretch;
+				background-color: #8a49a1;
+				height: 100%;
+				height: 3rem;
+				width: 3rem;
+
+				&:hover {
+					background-color: $pri-col;
+				}
+
+				svg {
+					color: $lit-col;
+					fill: currentColor;
+					width: 1.2rem;
+					height: 1.2rem;
+
+				}
+			}
+
+
+		}
+
+	}
+
+}
+
+.secondary-footer {
+	display: flex;
+	color: $oct-col;
+	align-items: center;
+	flex-wrap: wrap;
+	width: 100%;
+	justify-content: center;
+
+	@media only screen and (max-width: $container-size-m) {
+		margin-left: 0;
+		padding-left: 2rem;
+		align-items: baseline;
+		flex-direction: column-reverse;
+	}
+
+
+	.content-container {
+		width: 100%;
+		max-width: $container-size-l;
+	}
+
+	.links-wrapper {
+		@media only screen and (max-width: $container-size-m) {
+			margin-top: 2rem;
+		}
+
+		span {
+			margin-right: 1rem;
+			@media only screen and (max-width: $container-size-m) {
+				display: block;
+				font-size: 1.2rem;
+				margin-bottom: 1rem;
+			}
+		}
+		a {
+			color: inherit;
+			font-size: inherit;
+			margin-right: 1rem;
+			text-decoration: none;
+			margin-right: 0.5rem;
+			@media only screen and (max-width: $container-size-m) {
+				display: block;
+				font-size: 1.2rem;
+				margin-bottom: 1rem;
+			}
+			&:hover {
+				text-decoration: underline;
+			}
+
+			.entity {
+				@media only screen and (max-width: $container-size-m) {
+				display: none;
+				}
+			}
+		}
+	}
+
+
+}
+

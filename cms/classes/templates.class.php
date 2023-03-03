@@ -644,6 +644,7 @@ class Templates {
 			
 			return ($full == 0) ? $checkLink[0]['cms_per_link'] : $this->getBaseUrl($this->language) . $checkLink[0]['cms_per_link'];
 		}
+
 		else {
 			
 			// If language is not default, try to see if default language exists
@@ -717,25 +718,7 @@ class Templates {
 			
 			$realUrl = $this->getArticleUrl($data['inhoudTypeHidden']);
 			
-			// Find permaLink
-// 			$permaLink = $this->cms['database']->prepare("SELECT * FROM `tbl_cms_permaLinks` WHERE `cms_per_tableId`=? AND `cms_per_TableName`=?", "is", array(
-// 				$data['inhoudTypeHidden'],
-// 				'tbl_mod_articleContent'
-// 			));
-			
-// 			if (count($permaLink) > 0) {
-				
-// 				// Find the page it belongs to
-// 				$page = $this->cms['database']->prepare("SELECT * FROM `tbl_mod_articleContent` INNER JOIN `tbl_mod_articleTypes` ON `mod_at_id`=`mod_co_articletypeId` WHERE `mod_co_id`=?", "i", array(
-// 					$data['inhoudTypeHidden']
-// 				));
-				
-// 				if (count($page) > 0) {
-					
-// 					if (! is_null($page[0]['mod_at_pageId']))
-// 						$realUrl = $this->findPermalink(6, 1) . '/' . $permaLink[0]['cms_per_link'];
-// 				}
-// 			}
+
 		}
 		elseif ($data['linkType'] != 3) {
 			
@@ -1023,24 +1006,12 @@ class Templates {
 						$aAction = $val['additional_data']['mod_np_addAction'];
 					}
 					
-					if (isset($data[2], $data[3]) && $data[2] == 'special' && $data[3] == 'bubbles') {
-						
-						$ulStructure .= '<li' . $classLi . '>';
-						
-						$ulStructure .= '<a href="' . $url . $aAction . '" title="' . $val['mod_pa_nav'] . '"' . $target . '' . $extraAttr . '><span class="bubble"><span>&nbsp;</span></span><span class="text">' . $val['mod_pa_nav'] . '</span></a>';
-					}
-					else {
-						
-						$ulStructure .= '<li' . $classLi . '><a href="' . $url . $aAction . '" title="' . $val['mod_pa_nav'] . '"' . $target . '' . $extraAttr . '>';
-						
-						if (file_exists($documentRoot . 'inc/svg-nav/' . $val['mod_pa_admin_value'] . '.php')) {
-							
-							include($documentRoot . 'inc/svg-nav/' . $val['mod_pa_admin_value'] . '.php');
-						}
-						
-						$ulStructure .= $val['mod_pa_nav'] . '</a>';
-					}
 					
+						
+					$ulStructure .= '<li' . $classLi . '>';	
+					$ulStructure .= '<a href="' . $url . $aAction . '" title="' . $val['mod_pa_nav'] . '"' . $target . '' . $extraAttr . '><span class="text">' . $val['mod_pa_nav'] . '</span></a>';
+				
+
 					if (isset($isDir) && $isDir)
 						$ulStructure .= '</li>';
 					
