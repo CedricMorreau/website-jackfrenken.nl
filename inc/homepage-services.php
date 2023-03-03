@@ -1,4 +1,4 @@
-<section class="service-bar">
+<section class="service-bar content-wrapper">
 	
 	<div class="anchor" id="services"></div>
 
@@ -92,7 +92,7 @@
 	</div>
 </section>
 
-<section class="search-filter-wrapper">
+<section class="search-filter-wrapper content-wrapper">
 	<div class="search-filter-container">
 		<div class="search-text">
 			<span>Gericht <br>zoeken:</span>

@@ -1,4 +1,4 @@
-<div class="primary-nav">
+<div class="primary-nav content-wrapper">
 
 	<div class="logo-container">
 		<a href="/">
@@ -21,6 +21,6 @@
 	
 		<?php echo $template->cmsData('page][navigation/1/active/' . $template->findHighestParent()); ?>
 	
-	</nav>	
+	</nav>
 	
 </div>

@@ -6,7 +6,7 @@ if (count($actueel) > 0) {
 
 ?>
 
-<section class="items-wrapper">
+<section class="items-wrapper content-wrapper">
 	<div class="items-container">
 	
 		<?php

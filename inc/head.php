@@ -50,8 +50,12 @@ else {
 <link rel="stylesheet" href="<?php echo $dynamicRoot; ?>css/normalize.css">
 <!-- animation library -->
 <link rel="stylesheet" href="<?php echo $dynamicRoot; ?>css/animate.css">
+
 <!-- Google fonts -->
-<link href="//fonts.googleapis.com/css?family=Titillium+Web:200,400,400i,600,700" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;500&family=Poppins:wght@300;700&display=swap" rel="stylesheet">
+
 <!-- custom styling -->
 <link rel="stylesheet" href="<?php echo $dynamicRoot; ?>css/style.css">
 

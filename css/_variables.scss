@@ -1,0 +1,41 @@
+// Define font family
+$fon-fam-pri: 'Barlow', sans-serif; // primary font
+$fon-fam-sec: 'Poppins', sans-serif; // secondary font
+$fon-fam-ter: 'verdana'; // 
+
+
+// Set color variables
+$pri-col: #003064 ; // Dark blue
+$sec-col: #2e97b8 ; // Mid blue
+$ter-col: #DAE1ED ; // Light blue
+$qua-col: #2CBCAF ; // Bright green
+$qui-col: #CCE9f5 ; // Brighter blue
+$sen-col: #00519b ; // 90% Dark blue
+$sep-col: #C3C12C ; // Grass green
+$oct-col: #0091D1 ; // Bright blue
+$non-col: #DAE1ED ; // Lila overlay color
+$den-col: #D64242 ; // Red
+
+$overlay-col: rgba(218, 225, 237, 0.8); // overlay RGBA color
+$overlay-col-sec: rgba(218, 225, 237, 0.9); // overlay RGBA color
+
+
+$lit-col: white;
+$dar-col: black;
+$mid-col: #333333; // light gray
+
+// Define container sizes for responsive views
+$container-size-xxl: 1500px; // desktop and beyond
+$container-size-xl: 1366px; // desktop and beyond
+$container-size-l: 1200px; // laptop
+$container-size-ml: 1000px; // border between desktop/tablet
+$container-size-m: 768px; // tablet
+$container-size-s: 480px; // mobile
+$container-size-xs: 200px; // minimum size
+
+// page margins
+$margin-size-s: 1rem; // tiny margin
+$margin-size-m: 2rem; // small margin
+$margin-size-l: 5vw; // big dynamic margin
+
+

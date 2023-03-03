@@ -1,25 +1,3 @@
-<section class="quote-wrapper">
-	<div class="quote-beeldmerk">
-		<img src="<?php echo $dynamicRoot; ?>resources/jf_beeldmerk-s.png" alt="Beeldmerk Jack Frenken" title="Jack Frenken">
-	</div>
-	
-	<?php
-	
-	$slogans = array(
-		'Alles voor huis en hypotheek<br>...in een keer geregeld!',
-		'De deur naar het geluk<br>gaat naar binnen open',
-		'Dit is h&eacute;t moment',
-		'Dat is lekker thuiskomen'
-	);
-	
-	$rand = $slogans[array_rand($slogans)];
-	
-	?>
-
-	<h4><?php echo $rand; ?></h4>
-
-</section>
-
 <footer class="primary-footer">
 	
 	<div class="phone-icon">
@@ -57,6 +35,7 @@
 	</div>
 
 </footer>
+
 <footer class="secondary-footer">
 	<div class="links-wrapper">
 		<span>2021 &copy; Jack Frenken Makelaars en adviseurs</span> 
