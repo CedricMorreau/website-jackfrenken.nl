@@ -32,6 +32,8 @@
 
 			<?php include($documentRoot . "inc/homepage-actueel.php"); ?>
 
+			<?php include($documentRoot . "inc/homepage-paralax.php"); ?>
+
 			<?php include($documentRoot . "inc/footer.php"); ?>
 
 		</div>

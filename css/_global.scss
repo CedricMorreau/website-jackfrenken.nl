@@ -565,6 +565,84 @@ ul.ui-autocomplete {
 
 }
 
+.parallax-banner {
+	width: 100%;
+	position: relative;
+	justify-content: center;
+
+	.parallax-image {
+		display: block;
+		width: 100%;
+		height: 100%;
+		display: block;
+		min-height: 30rem;
+		@include background-image;
+		position: relative;
+		transition: 0s linear;
+		transition-property: background-position;
+		background-attachment: fixed;
+		justify-content: center;
+		display: flex;
+	}
+
+	.content-wrapper {
+		background-color: transparent;
+	}
+
+	.review-emblem {
+		position: absolute;
+		right: 20%;
+		top: 20%;
+		height: auto;
+		width: 15rem;
+		background-color: rgba($lit-col, 0.95);
+		backdrop-filter: blur(3px);
+		color: $sec-col;
+		padding: 1rem;
+	}
+
+	.review-container {
+		padding: 1.5rem;
+		border: solid 1px $sec-col;		
+		justify-content: center;
+		align-items: center;
+		display: flex;
+		flex-direction: column;
+	}
+
+	h5 {
+		font-size: 2rem;
+		line-height: 2rem;
+		color: $sec-col;
+		margin-top: 0;
+		margin-bottom: 0.5rem;
+		font-family: $fon-fam-sec;
+		font-weight: 300;
+		text-transform: uppercase;
+	}
+
+	.review-score {
+		font-size: 4rem;
+		font-weight: 600;
+		margin-bottom: 1rem;
+		position: relative;
+		display: flex;
+
+		span {
+			font-size: 3.5rem;
+			font-weight: 600;
+			display: block;
+			position: relative;
+		}
+
+	}
+
+	.review-text {
+		font-size: 0.8rem;
+		text-transform: uppercase;
+	}
+}
+
 /* Footer  ---------------------------------- */
 
 .primary-footer {
@@ -575,7 +653,6 @@ ul.ui-autocomplete {
 	flex-direction: column;
 	background-color: $sen-col;
 	color: $lit-col;
-	margin-top: -4rem;
 	padding-left: 2rem;
 	padding-right: 2rem;
 	padding-top: 2rem;
