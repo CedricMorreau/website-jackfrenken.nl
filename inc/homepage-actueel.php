@@ -23,18 +23,27 @@ if (count($actueel) > 0) {
 			
 		<div class="item-container">
 			<div class="item-image-wrapper">
-				<div class="item-image" style="background-image: url(<?php echo $values['art_overviewPhoto']; ?>);" title="Lees meer over <?php echo $values['art_title']; ?>" alt="<?php echo $values['art_title']; ?>">
+				<div class="item-image" style="background-image: url(<?php echo $values['art_overviewPhoto']; ?>);" title="<?php echo $values['art_title']; ?>" alt="<?php echo $values['art_title']; ?>">
 					&nbsp;
 				</div>
 				<div class="hover-overlay">
-					<a href="<?php echo $url; ?>" title="Lees meer over <?php echo $values['art_title']; ?>" alt="<?php echo $values['art_title']; ?>"></a>
+					<a href="<?php echo $url; ?>" title="<?php echo $values['art_title']; ?>" alt="<?php echo $values['art_title']; ?>"></a>
 				</div>
-				<a href="<?php echo $url; ?>" class="item-button" title="Lees meer over <?php echo $values['art_title']; ?>">&xrarr;</a>
+				
 			</div>
 			
-			<p class="item-title">
-				<a href="<?php echo $url; ?>" title="<?php echo $values['art_title']; ?>"><?php echo $values['art_title']; ?></a>
-			</p>
+			<div class="item-image-content-wrapper">
+				<p class="item-title">
+					<a href="<?php echo $url; ?>" title="<?php echo $values['art_title']; ?>"><?php echo $values['art_title']; ?></a>
+				</p>
+
+				<div class="item-content-excerpt">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eget porttitor velit. Integer et semper metus. Proin dignissim orci sodales, eleifend nunc in, porta est. Aliquam velit urna, accumsan eget turpis quis, pretium aliquet odio. Cras semper vestibulum felis non maximus.
+				</div>
+
+				<a href="<?php echo $url; ?>" class="item-button" title="Lees meer">Lees verder</a> 
+				<a href="<?php echo $url; ?>" class="item-button ghost" title="Meer artikelen">Meer artikelen</a>
+			</div>
 
 		</div>
 			

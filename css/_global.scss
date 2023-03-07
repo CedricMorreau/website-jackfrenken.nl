@@ -166,6 +166,7 @@ ul.ui-autocomplete {
 			@media only screen and (max-width: $container-size-m) {
 				margin-right: 0;
 			}
+
 			> li {
 				display: inline-flex;
 				margin-right: 1.3rem;
@@ -202,6 +203,7 @@ ul.ui-autocomplete {
 					padding-bottom: 0.5rem;
 					color: $pri-col;
 					font-family: $fon-fam-pri;
+					font-weight: 400;
 
 					@media only screen and (max-width: $container-size-l) {
 						font-size: 1rem;
@@ -357,7 +359,7 @@ ul.ui-autocomplete {
 
 .content-wrapper {
 	width: 100%;
-	max-width: $container-size-xxl;
+	max-width: $container-size-xl;
 }
 
 
@@ -369,38 +371,51 @@ ul.ui-autocomplete {
 	display: flex;
 	//flex-shrink: 0;
 	margin-top: 5rem;
-	margin-bottom: 4rem;
+	margin-bottom: 5rem;
 
 	.items-container {
 		display: flex;
 		height: 100%;
 		width: 100%;
-		margin-left: 14vw;
-		margin-right: 14vw;
-
-		@media only screen and (max-width: $container-size-l) {
-			margin-left: 2vw;
-			margin-right: 2vw;
-		}
-
-		@media only screen and (max-width: $container-size-m) {
-			margin-left: 0;
-			margin-right: 0;
-		}
-
 		justify-content: space-between;
 		flex-wrap: wrap;
+		margin-bottom: 3rem;
+
+		@media only screen and (max-width: $container-size-m) {
+			padding-left: $margin-size-m;
+			padding-right: $margin-size-m;
+		}	
 
 		.item-container {
 			display: flex;
-			// height: 100%;
-			// @media only screen and (max-width: $container-size-m) {
-			// 	width: 100%;
-			// }
-
-			flex-direction: column;
+			flex-direction: row;
 			position: relative;
-			margin-bottom: auto;
+			margin-bottom: 1.5rem;
+
+			@media only screen and (max-width: $container-size-m) {
+				flex-direction: column;
+			}
+
+			// Reverse even items
+			&:nth-of-type(2n) {
+				flex-direction: row-reverse;
+				@media only screen and (max-width: $container-size-m) {
+					flex-direction: column;
+				}
+				.item-image-wrapper {
+					margin-right: 0;
+				}
+
+				.item-image-content-wrapper {
+					margin-right: 5rem;
+					@media only screen and (max-width: $container-size-m) {
+						margin-right: 0;
+					}
+						
+				}
+
+			}
+
 			@media only screen and (max-width: $container-size-m) {
 				width: 100%;
 				margin-top: 0;
@@ -413,10 +428,12 @@ ul.ui-autocomplete {
 					text-decoration: underline;
 				}
 			}
-			
+
+			// Left
 			.item-image-wrapper {
 				position: relative;
-				margin-right: 3rem; // make up for the button
+				margin-right: 5rem; // make up for the button
+				flex: 1;
 				@media only screen and (max-width: $container-size-l) {
 					margin-right: 1rem;
 				}
@@ -434,57 +451,96 @@ ul.ui-autocomplete {
 				}
 
 				.item-image {
-					height: 18rem;
-					width: 23rem;
-
-
-
-					@media only screen and (max-width: $container-size-m) {
-						width: 100%;
-						height: 15rem;
-					}
-
+					width: 100%;
+					height: 100%;
 					background-image: url("../resources/item-thumb.jpg");
 					overflow: hidden;
 					background-size: cover;
 					background-position-x: center;
 					background-position-y: center;
 					flex-shrink: 0;
+
+					@media only screen and (max-width: $container-size-m) {
+						width: 100%;
+						height: 15rem;
+					}
 				}				
+			}
+
+			// Right
+			.item-image-content-wrapper {
+				flex: 1;
+				padding-top: 3rem;
+				padding-bottom: 3rem;
 			}
 
 
 			.item-title {
 				position: relative;
 				font-weight: bold;
-				max-width: 23rem; //must match block size
+				font-size: 2rem;
+				font-weight: 400;
+				color: $pri-col;
+				text-transform: uppercase;
+				margin-top: 0;
+				margin-bottom: 1rem;
 				@media only screen and (max-width: $container-size-m) {
 					font-weight: bold;
 					font-size: 1.3rem;
-					padding-left: $margin-size-m;
-					padding-right: $margin-size-m;
+				}
+
+				a {
+					color: inherit;
+					font-size: inherit;
 				}
 
 			}
+
+			.item-content-excerpt {
+				margin-bottom: 1.5rem;
+				font-size: 1.2rem;
+				line-height: 1.5rem;
+
+			}
+
 			.item-button {
-				position: absolute;
-				bottom: 0;
-				right: -3rem;
-				z-index: 5;
-				padding-top: 2.3rem;
-				padding-bottom: 2.3rem;
-				padding-left: 2.3rem;
-				padding-right: 2.3rem;
-				background: $sep-col;
+				font-size: 1.2rem;
+				padding-top: 0.7rem;
+				padding-bottom: 0.7rem;
+				padding-left: 1.5rem;
+				padding-right: 1.5rem;
+				margin-right: 2rem;
+				background: $pri-col;
 				color: $lit-col;
 				text-decoration: none;
-				@media only screen and (max-width: $container-size-m) {
-					right: 0;
+				display: inline-block;
+				text-transform: uppercase;
+				@media only screen and (max-width: $container-size-s) {
+					width: 100%;
+					margin-bottom: 1rem;
 				}
+
 				&:hover {
-					background-color: $pri-col;
+					background-color: $sec-col;
 					color: $lit-col;
 					text-decoration: none;
+				}
+
+				&:last-of-type {
+					margin-right: 0;
+					@media only screen and (max-width: $container-size-s) {
+						margin-bottom: 0;
+					}
+				}
+
+				&.ghost {
+					background-color: transparent;
+					border: solid 2px $pri-col;
+					color: $pri-col;
+					&:hover {
+						border-color: $sec-col;
+						color: $sec-col;
+					}
 				}
 			}
 			
