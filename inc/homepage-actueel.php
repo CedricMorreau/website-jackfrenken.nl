@@ -41,8 +41,8 @@ if (count($actueel) > 0) {
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eget porttitor velit. Integer et semper metus. Proin dignissim orci sodales, eleifend nunc in, porta est. Aliquam velit urna, accumsan eget turpis quis, pretium aliquet odio. Cras semper vestibulum felis non maximus.
 				</div>
 
-				<a href="<?php echo $url; ?>" class="item-button" title="Lees meer">Lees verder</a> 
-				<a href="<?php echo $url; ?>" class="item-button ghost" title="Meer artikelen">Meer artikelen</a>
+				<a href="<?php echo $url; ?>" class="cta-button item-button" title="Lees meer">Lees verder</a> 
+				<a href="<?php echo $url; ?>" class="cta-button item-button ghost" title="Meer artikelen">Meer artikelen</a>
 			</div>
 
 		</div>

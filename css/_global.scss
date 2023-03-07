@@ -85,6 +85,48 @@ ul.ui-autocomplete {
 	overflow-x: hidden; // to fix animation causing scrollbars
 }
 
+.cta-button {
+	font-size: 1.2rem;
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+	padding-left: 1.5rem;
+	padding-right: 1.5rem;
+	margin-right: 2rem;
+	background: $pri-col;
+	color: $lit-col;
+	text-decoration: none;
+	display: inline-block;
+	text-transform: uppercase;
+	text-decoration: none;
+	@media only screen and (max-width: $container-size-s) {
+		width: 100%;
+		margin-bottom: 1rem;
+	}
+
+	&:hover {
+		background-color: $sec-col;
+		color: $lit-col;
+		text-decoration: none;
+	}
+
+	&:last-of-type {
+		margin-right: 0;
+		@media only screen and (max-width: $container-size-s) {
+			margin-bottom: 0;
+		}
+	}
+
+	&.ghost {
+		background-color: transparent;
+		border: solid 2px $pri-col;
+		color: $pri-col;
+		&:hover {
+			border-color: $sec-col;
+			color: $sec-col;
+		}
+	}
+}
+
 /* Page template specific */
 .primary-nav {
 	display: flex;
@@ -422,10 +464,10 @@ ul.ui-autocomplete {
 				margin-bottom: 2rem;
 			}
 
-			a {
+			a:not(.cta-button) {
 				text-decoration: none;
 				&:hover {
-					text-decoration: underline;
+					color: $sec-col;
 				}
 			}
 
@@ -504,44 +546,7 @@ ul.ui-autocomplete {
 			}
 
 			.item-button {
-				font-size: 1.2rem;
-				padding-top: 0.7rem;
-				padding-bottom: 0.7rem;
-				padding-left: 1.5rem;
-				padding-right: 1.5rem;
-				margin-right: 2rem;
-				background: $pri-col;
-				color: $lit-col;
-				text-decoration: none;
-				display: inline-block;
-				text-transform: uppercase;
-				@media only screen and (max-width: $container-size-s) {
-					width: 100%;
-					margin-bottom: 1rem;
-				}
 
-				&:hover {
-					background-color: $sec-col;
-					color: $lit-col;
-					text-decoration: none;
-				}
-
-				&:last-of-type {
-					margin-right: 0;
-					@media only screen and (max-width: $container-size-s) {
-						margin-bottom: 0;
-					}
-				}
-
-				&.ghost {
-					background-color: transparent;
-					border: solid 2px $pri-col;
-					color: $pri-col;
-					&:hover {
-						border-color: $sec-col;
-						color: $sec-col;
-					}
-				}
 			}
 			
 			&:last-of-type{
@@ -565,6 +570,7 @@ ul.ui-autocomplete {
 
 }
 
+// Parallax banner
 .parallax-banner {
 	width: 100%;
 	position: relative;
@@ -640,6 +646,37 @@ ul.ui-autocomplete {
 	.review-text {
 		font-size: 0.8rem;
 		text-transform: uppercase;
+	}
+}
+
+// References
+.homepage-references-wrapper {
+	padding-top: 5rem;
+	padding-bottom: 5rem;
+	justify-content: center;
+	text-align: center;
+	h4 {
+		font-size: 2.5rem;
+		line-height: 3rem;
+		font-weight: 300;
+		margin-top: 0;
+		margin-bottom: 1.5rem;
+		text-transform: uppercase;
+		strong {
+			font-weight: 600;
+		}
+	}
+
+	.references-text {
+		margin-bottom: 2rem;
+		max-width: 60rem;
+		line-height: 1.4rem;
+		em {
+			font-style: normal;
+			font-size: 1.2rem;
+			line-height: 1.5rem;
+
+		}
 	}
 }
 
