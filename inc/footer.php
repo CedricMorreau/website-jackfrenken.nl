@@ -98,7 +98,7 @@
 <footer class="secondary-footer">
 	<div class="content-container">
 		<div class="links-wrapper">
-			<span>2021 &copy; Jack Frenken Makelaars en adviseurs</span> 
+			<span>2023 &copy; Jack Frenken Makelaars en adviseurs</span> 
 			
 			<a href="<?php echo $template->findPermalink(86, 1); ?>">Algemene voorwaarden <span class="entity">&rarr;</span></a>
 			<a href="<?php echo $template->findPermalink(71, 1); ?>">Colofon <span class="entity">&rarr;</span></a>
