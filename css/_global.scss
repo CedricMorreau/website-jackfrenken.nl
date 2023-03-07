@@ -86,7 +86,7 @@ ul.ui-autocomplete {
 }
 
 .cta-button {
-	font-size: 1.2rem;
+	font-size: 1.1rem;
 	padding-top: 0.5rem;
 	padding-bottom: 0.5rem;
 	padding-left: 1.5rem;
@@ -98,6 +98,9 @@ ul.ui-autocomplete {
 	display: inline-block;
 	text-transform: uppercase;
 	text-decoration: none;
+	cursor: pointer;
+	outline: none;
+	border: none;
 	@media only screen and (max-width: $container-size-s) {
 		width: 100%;
 		margin-bottom: 1rem;
@@ -113,6 +116,20 @@ ul.ui-autocomplete {
 		margin-right: 0;
 		@media only screen and (max-width: $container-size-s) {
 			margin-bottom: 0;
+		}
+	}
+
+	&.sec {
+		background-color: $sec-col;
+		&:hover {
+			background-color: $pri-col;
+		}
+	}
+
+	&.qua {
+		background-color: $qua-col;
+		&:hover {
+			background-color: $pri-col;
 		}
 	}
 
@@ -677,6 +694,83 @@ ul.ui-autocomplete {
 			line-height: 1.5rem;
 
 		}
+	}
+}
+
+// Homepage contact form
+.homepage-contact-wrapper {
+	padding-top: 7rem;
+	padding-bottom: 7rem;
+	background-color: $und-col;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+
+		.content-wrapper {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+
+		h4 {
+			font-size: 2.5rem;
+			line-height: 3rem;
+			font-weight: 300;
+			text-align: center;
+			text-transform: uppercase;
+			margin-top: 0;
+			strong {
+				font-weight: 600;
+			}
+		}
+
+	form {
+		display: flex;
+		align-self: center;
+		justify-content: center;
+		flex-direction: column;
+		max-width: 40rem;
+
+		.form-row-wrapper {
+			display: flex;
+			justify-content: center;
+			width: 100%;
+			margin-bottom: 2.5rem;
+			
+			.input-wrapper {
+				margin-right: 2.5rem;
+				&:last-of-type {
+					margin-right: 0;
+				}
+
+				input {
+					padding-top: 0.5rem;
+					padding-bottom: 0.5rem;
+					padding-left: 1rem;
+					padding-right: 1rem;
+					background-color: transparent;
+					outline: none;
+					border: none;
+					border-bottom: solid 1px $pri-col;
+					font-size: 1.1rem;
+					color: $pri-col;
+					&::placeholder {
+						color: rgba($pri-col, 0.8);
+					}
+				}
+			}
+
+		}
+
+		.form-submit-wrapper {
+			margin-top: 1rem;
+			button {
+				padding-top: 1rem;
+				padding-bottom: 1rem;
+				width: 100%;
+			}
+		}
+
 	}
 }
 
