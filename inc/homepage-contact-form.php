@@ -2,6 +2,10 @@
 	<div class="content-wrapper">
 		<h4><strong>Vragen of een afspraak?</strong> <br>Neem gerust contact met ons op</h4>
 
+		<div class="form-message success active">
+			Het formulier is verzonden. We nemen zo snel mogelijk contact met u op.
+		</div>
+
 		<form action="#">
 			<div class="form-row-wrapper">
 				<div class="input-wrapper">

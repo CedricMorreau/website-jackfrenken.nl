@@ -723,6 +723,20 @@ ul.ui-autocomplete {
 			}
 		}
 
+	.form-message {
+		padding: 1.5rem;
+		border: solid 2px $pri-col;
+		margin-bottom: 2.5rem;
+		max-width: 45rem;
+		margin-left: auto;
+		margin-right: auto;
+		display: none;
+
+		&.active {
+			display: block;
+		}
+	}
+
 	form {
 		display: flex;
 		align-self: center;
@@ -829,6 +843,9 @@ ul.ui-autocomplete {
 		display: flex;
 		flex: 1;
 		flex-direction: row;
+		max-width: 90%;
+		margin-left: auto;
+		margin-right: auto;
 		@media only screen and (max-width: $container-size-m) {
 			flex-direction: column-reverse;
 			font-size: 1.3rem;
@@ -864,7 +881,7 @@ ul.ui-autocomplete {
 
 			// Nav col 1
 			.footer-links-col-1 {
-				margin-right: 4rem;
+				margin-right: 1.5rem;
 				flex: 1;
 
 				@media only screen and (max-width: $container-size-m) {
@@ -879,7 +896,7 @@ ul.ui-autocomplete {
 
 			// Nav col 2
 			.footer-links-col-2 {
-				margin-right: 4rem;
+				margin-right: 1.5rem;
 				flex: 1;
 
 				@media only screen and (max-width: $container-size-m) {
@@ -893,7 +910,7 @@ ul.ui-autocomplete {
 
 			// Nav col 3
 			.footer-links-col-3 {
-				margin-right: 4rem;
+				margin-right: 1.5rem;
 				flex: 1;
 				a {
 					color: $ter-col;
@@ -984,13 +1001,13 @@ ul.ui-autocomplete {
 	.footer-row-2 {
 		flex: 1;
 		margin-top: 2rem;
-		margin-right: 3rem;
+		margin-right: 1.5rem;
 
 		a {
 			align-items: center;
 			display: flex;
 			color: $ter-col;
-			font-size: 1.1rem;
+			font-size: 1rem;
 			font-weight: 300;
 			text-decoration: none;
 
@@ -1017,6 +1034,7 @@ ul.ui-autocomplete {
 				margin-right: 1rem;
 			}
 		}
+
 		.rating {
 			color: $qua-col;
 			font-weight: bold;
@@ -1076,13 +1094,15 @@ ul.ui-autocomplete {
 	display: flex;
 	background-color: $sec-col;
 	color: $lit-col;
-	padding-top: 1rem;
-	padding-bottom: 1rem;
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
 	align-items: center;
 	flex-wrap: wrap;
 	width: 100%;
 	justify-content: center;
-
+	color: $lit-col;
+	font-size: inherit;
+	
 	@media only screen and (max-width: $container-size-m) {
 		margin-left: 0;
 		padding-left: 2rem;
@@ -1090,13 +1110,15 @@ ul.ui-autocomplete {
 		flex-direction: column-reverse;
 	}
 
-
 	.content-container {
 		width: 100%;
 		max-width: $container-size-l;
+		display: flex;
+		color: inherit;
 	}
 
 	.links-wrapper {
+		margin-left: auto;
 		@media only screen and (max-width: $container-size-m) {
 			margin-top: 2rem;
 		}
@@ -1116,7 +1138,7 @@ ul.ui-autocomplete {
 			font-weight: 300;
 			margin-right: 1rem;
 			text-decoration: none;
-			margin-right: 0.5rem;
+			margin-right: 2.5rem;
 			
 
 			@media only screen and (max-width: $container-size-m) {
@@ -1128,11 +1150,10 @@ ul.ui-autocomplete {
 				text-decoration: underline;
 			}
 
-			.entity {
-				@media only screen and (max-width: $container-size-m) {
-				display: none;
-				}
+			&:last-of-type {
+				margin-right: 0;
 			}
+
 		}
 	}
 
