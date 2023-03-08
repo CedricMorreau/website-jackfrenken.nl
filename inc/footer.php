@@ -1,6 +1,13 @@
-<footer class="primary-footer page-r ">
-	<div class="content-container">
+<footer class="primary-footer">
 
+	<!-- Footer content -->
+	<div class="content-container">
+		<!-- Scroll to top -->
+		<div class="scroll-to-top-wrapper" onclick="javascript:$.scrollTo('body', 1000)">
+			<div class="scroll-content-wrapper">
+				&rarr;
+			</div>
+		</div>
 		<div class="footer-row-1">
 			<div class="footer-links-wrapper">
 				

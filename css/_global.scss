@@ -810,9 +810,40 @@ ul.ui-autocomplete {
 	width: 100%;
 	align-items: center;
 
+
 	.content-container {
 		width: 100%;
 		max-width: $container-size-l;
+		position: relative;
+
+
+		.scroll-to-top-wrapper {
+			position: absolute;
+			right: 0;
+			top: -7.7rem;
+			height: 4rem;
+			width: 4rem;
+			background: $sec-col;
+			transform: rotate(-45deg);
+			padding: 1rem;
+			opacity: 0.8;
+			cursor: pointer;
+			transition: 0.3s all ease-in-out;
+
+			&:hover {
+				opacity: 1;
+			}
+
+			.scroll-content-wrapper {
+				position: relative;
+				transform: rotate(-45deg);
+				line-height: 2rem;
+				font-size: 2rem;
+				height: 2rem;
+				height: 2rem;
+				user-select: none;
+			}
+		}
 	}
 
 	a {
