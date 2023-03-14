@@ -17,6 +17,27 @@
         exit;
     }
 
-    $_GET['page']=$page;
-    require_once 'index.php';
+    function handle_images($content) {
+
+        // Do a quick replace so images are loaded online, not locally
+        $content = str_replace('"/og_media', '"https://www.jackfrenken.nl/og_media', $content);
+
+        echo $content;
+    }
+
+    function on_die(){
+
+        $content = ob_get_contents();
+        ob_end_clean();
+        handle_images($content);
+    }
+    
+    register_shutdown_function('on_die');
+
+    $_GET['page'] = $page;
+    ob_start();
+    include 'index.php';
+    $content = ob_get_clean();
+
+    handle_images($content);
 ?>
