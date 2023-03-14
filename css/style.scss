@@ -858,13 +858,20 @@
 		align-items: center;
 		text-decoration: none;
 		font-size: 1rem;
+		color: $pri-col;
+
 		&:hover {
 			color: red;
 			cursor: pointer;
 			text-decoration: none;
+			.remove-icon {
+				color: red;
+			}
 		}
+
 		.remove-icon {
-			color: red;
+			color: $pri-col;
+			font-weight: bold;
 			margin-left: 0.5rem;
 		}
 	}
@@ -898,6 +905,7 @@
 			-moz-appearance: none;  // firefox
 			&::-ms-expand { display: none; } // IE11
 			text-indent: 5px;
+			color: $pri-col;
 			@media only screen and (max-width: $container-size-m) {
 				border-radius: 0;
 				padding-top: 0.3rem;
@@ -913,8 +921,8 @@
 			content:" ";
 			width: 0.4rem;
 			height: 0.4rem;
-			border-right: 1px solid $dar-col;
-			border-bottom: 1px solid $dar-col;
+			border-right: 1px solid #a1a9b7;
+			border-bottom: 1px solid #a1a9b7;
 			transform: rotate(45deg);
 
 			@media only screen and (max-width: $container-size-m) {
@@ -953,7 +961,7 @@
 	}
 	&.active {
 		a { 
-			color: $qua-col; 
+			color: $sec-col; 
 		}
 	}
 	&.toggle {
@@ -978,21 +986,39 @@
 
 .filter-list-wrapper {
 	margin-top: 1rem;
+	margin-bottom: 3rem;
 	padding-top: 2rem;
+	font-family: $fon-fam-sec;
+
 	@media only screen and (max-width: $container-size-m) {
 		padding-top: 0;
 		margin-bottom: 1rem;
 	}
+
 	.filter-head {
 		margin-top: 0;
 		margin-bottom: 1rem;
+		font-family: inherit;
+		text-transform: uppercase;
+		display: flex;
+
 		a {
 			text-decoration: none;
+			width: 100%;
+			display: flex;
+
 			&:hover {
 				color: $qua-col;
 			}
 		}
+
+		.arrow {
+			margin-left: auto;
+			font-weight: bold;
+		}
+
 	}
+
 }
 
 .item-wrapper {
@@ -1067,8 +1093,8 @@
 				}
 
 				.item-title {
-					font-weight: bold;
-					font-size: 1.3rem;
+					font-size: 1.2rem;
+					text-transform: uppercase;
 					padding-bottom: 0;
 					margin-bottom: 1rem;
 
@@ -1078,12 +1104,18 @@
 							text-decoration: underline
 						}
 					}
+					strong {
+						font-weight: 600;
+					}
 				}
 
 				.item-subtitle {
 					font-size: 1.3rem;
+					padding-bottom: 0.5rem;
 					margin-top: 0;
 					margin-bottom: 1rem;
+					margin-bottom: 2rem;
+					border-bottom: solid 2px $sec-col;
 					a {
 						text-decoration: none;
 						&:hover {
@@ -1194,14 +1226,16 @@
 
 .image-label {
 	position: absolute;
-	top: 0;
-	right: 0;
-	font-weight: bold;
+	top: -1rem;
+	right: 1rem;
 	padding-left: 1.5rem;
 	padding-right: 1.5rem;
-	padding-top: 1.5rem;
-	padding-bottom: 1.5rem;
+	padding-top: 0.8rem;
+	padding-bottom: 0.8rem;
+	font-size: 1.2rem;
+	font-family: $fon-fam-pri;
 	color: $lit-col;
+	text-transform: uppercase;
 	z-index: 7;
 	
 	@media only screen and (max-width: $container-size-m) {

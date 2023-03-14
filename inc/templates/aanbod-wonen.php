@@ -18,7 +18,7 @@ $image = (!is_null($val['mainImage'])) ? $dynamicRoot . 'og_media/wonen_' . $val
 				
 				<p class="item-title">
 					<?php echo $val['objectDetails_Adres_NL_Woonplaats']; ?><br>
-					<?php echo obj_generateAddress($val['objectDetails_Adres_NL_Straatnaam'], $val['objectDetails_Adres_NL_Huisnummer'], $val['objectDetails_Adres_NL_HuisnummerToevoeging']); ?>
+					<strong><?php echo obj_generateAddress($val['objectDetails_Adres_NL_Straatnaam'], $val['objectDetails_Adres_NL_Huisnummer'], $val['objectDetails_Adres_NL_HuisnummerToevoeging']); ?></strong>
 				</p>
 				
 				<p class="item-subtitle">
