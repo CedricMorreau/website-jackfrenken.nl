@@ -450,8 +450,8 @@
 						content:" ";
 						width: 0.4rem;
 						height: 0.4rem;
-						border-right: 1px solid #dae1ed;
-						border-bottom: 1px solid #dae1ed;
+						border-right: 1px solid $pri-col;
+						border-bottom: 1px solid $pri-col;
 						transform: rotate(45deg);
 
 						@media only screen and (max-width: $container-size-l) {

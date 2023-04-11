@@ -25,30 +25,65 @@ $image = (!is_null($val['mainImage'])) ? $dynamicRoot . 'og_media/wonen_' . $val
 					<?php echo $priceText; ?>
 				</p>
 
-
+				<p class="item-type">
 				<?php if (!empty($val['wonen_Woonhuis_SoortWoning'])) { ?>
-				<p><?php echo ucfirst($val['wonen_Woonhuis_SoortWoning']); ?>, <?php echo ucfirst($val['wonen_Woonhuis_TypeWoning']); ?></p>
+						<?php echo ucfirst($val['wonen_Woonhuis_SoortWoning']); ?>, <?php echo ucfirst($val['wonen_Woonhuis_TypeWoning']); ?>
 				<?php } ?>
-
-				<?php if (!is_null($val['wonen_WonenDetails_GebruiksoppervlakteWoonfunctie']) && $val['wonen_WonenDetails_GebruiksoppervlakteWoonfunctie'] > 0) { ?>
-				<p>Woonoppervlak: <?php echo number_format($val['wonen_WonenDetails_GebruiksoppervlakteWoonfunctie'], 0, ",", "."); ?> m<sup>2</sup></p>
-				<?php } ?>
-				<?php if (!is_null($val['wonen_WonenDetails_PerceelOppervlakte']) && $val['wonen_WonenDetails_PerceelOppervlakte'] > 0) { ?>
-				<p>Perceel: <?php echo number_format($val['wonen_WonenDetails_PerceelOppervlakte'], 0, ",", "."); ?> m<sup>2</sup></p>
-				<?php } ?>
-				<?php if (!is_null($val['wonen_WonenDetails_Bouwjaar_JaarOmschrijving_Jaar']) && $val['wonen_WonenDetails_Bouwjaar_JaarOmschrijving_Jaar'] > 0) { ?>
-				<p>Bouwjaar: <?php echo $val['wonen_WonenDetails_Bouwjaar_JaarOmschrijving_Jaar']; ?></p>
-				<?php } ?>
-
-				<?php if (!empty($val['objectDetails_Energielabel_Energieklasse'])) { ?>
-
-				<p>Energielabel: 
-					<span class="energy-label energy-label-<?php echo strtolower($val['objectDetails_Energielabel_Energieklasse']); ?>">
-						<?php echo $val['objectDetails_Energielabel_Energieklasse']; ?>
-					</span>
 				</p>
 
+				<table>
+					<?php if (!is_null($val['wonen_WonenDetails_GebruiksoppervlakteWoonfunctie']) && $val['wonen_WonenDetails_GebruiksoppervlakteWoonfunctie'] > 0) { ?>				
+					<tr>
+						<td>
+							Woonoppervlak: 
+						</td>
+						<td>
+							<?php echo number_format($val['wonen_WonenDetails_GebruiksoppervlakteWoonfunctie'], 0, ",", "."); ?> m<sup>2</sup>
+						</td>
+				
+					</tr>
+					<?php } ?>
+					
+
+				<?php if (!is_null($val['wonen_WonenDetails_PerceelOppervlakte']) && $val['wonen_WonenDetails_PerceelOppervlakte'] > 0) { ?>
+					<tr>
+						<td>Perceel:</td>
+						<td><?php echo number_format($val['wonen_WonenDetails_PerceelOppervlakte'], 0, ",", "."); ?> m<sup>2</sup></td>
+						
+					</tr>
+
 				<?php } ?>
+
+
+				<?php if (!is_null($val['wonen_WonenDetails_Bouwjaar_JaarOmschrijving_Jaar']) && $val['wonen_WonenDetails_Bouwjaar_JaarOmschrijving_Jaar'] > 0) { ?>
+				<tr>
+					<td>
+						Bouwjaar:
+					</td>
+
+					<td>
+						<?php echo $val['wonen_WonenDetails_Bouwjaar_JaarOmschrijving_Jaar']; ?>
+					</td>
+				
+				</tr>
+				<?php } ?>
+
+				
+				<?php if (!empty($val['objectDetails_Energielabel_Energieklasse'])) { ?>
+				<tr>
+					<td>
+						Energielabel:
+					</td>
+					<td>
+						<span class="energy-label energy-label-<?php echo strtolower($val['objectDetails_Energielabel_Energieklasse']); ?>">
+							<?php echo $val['objectDetails_Energielabel_Energieklasse']; ?>
+						</span>
+					</td>
+				
+				</tr>
+
+				<?php } ?>
+				</table>
 			</div>
 			
 		</div>

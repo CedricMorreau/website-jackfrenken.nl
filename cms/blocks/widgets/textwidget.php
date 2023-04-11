@@ -40,7 +40,7 @@ if (count($widgetData) > 0) {
 		<a href="<?php echo $url; ?>"><?php echo $dataArray['widget_title']; ?></a>
 	</h3>
 	<p>
-		<a href="<?php echo $url; ?>"><?php echo $dataArray['widget_text']; ?>&nbsp;&xrarr;</a>
+		<a href="<?php echo $url; ?>"><?php echo $dataArray['widget_text']; ?></a>
 	</p>
 	
 	<?php } else { ?>

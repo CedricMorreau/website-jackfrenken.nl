@@ -13,21 +13,21 @@
 			
 		case 'huren':
 			
-			echo '<h1 class="filter-head">' . $totalRows . ' huurwoningen &xrarr;</h1>';
+			echo '<h1 class="filter-head">' . $totalRows . ' huurwoningen</h1>';
 			$ogType = 'wonen_huur';
 			
 			break;
 			
 		case 'kavels':
 			
-			echo '<h1 class="filter-head">' . $totalRows . ' bouwkavels &xrarr;</h1>';
+			echo '<h1 class="filter-head">' . $totalRows . ' bouwkavels</h1>';
 			$ogType = 'wonen_koop';
 			
 			break;
 			
 		case 'verkocht':
 			
-			echo '<h1 class="filter-head">' . $totalRows . ' recent verkocht &xrarr;</h1>';
+			echo '<h1 class="filter-head">' . $totalRows . ' recent verkocht</h1>';
 			$ogType = 'wonen';
 			
 			break;

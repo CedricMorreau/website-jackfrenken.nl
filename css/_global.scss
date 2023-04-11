@@ -86,8 +86,8 @@ ul.ui-autocomplete {
 
 .cta-button {
 	font-size: 1.1rem;
-	padding-top: 0.5rem;
-	padding-bottom: 0.5rem;
+	padding-top: 0.7rem;
+	padding-bottom: 0.7rem;
 	padding-left: 1.5rem;
 	padding-right: 1.5rem;
 	margin-right: 2rem;
@@ -689,6 +689,7 @@ ul.ui-autocomplete {
 		line-height: 1.4rem;
 		em {
 			font-style: normal;
+			font-weight: bold;
 			font-size: 1.2rem;
 			line-height: 1.5rem;
 
@@ -1123,7 +1124,7 @@ ul.ui-autocomplete {
 
 .secondary-footer {
 	display: flex;
-	background-color: $sec-col;
+	background-color: #1b4e73;
 	color: $lit-col;
 	padding-top: 0.5rem;
 	padding-bottom: 0.5rem;

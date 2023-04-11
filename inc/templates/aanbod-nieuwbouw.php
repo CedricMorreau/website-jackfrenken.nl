@@ -55,74 +55,90 @@ else
 				<p class="item-subtitle">
 					<?php echo $priceText; ?>
 				</p>
-
+				
 				<p class="item-bold-title">
 					<?php echo utf8_encode($val['project_ProjectDetails_Projectnaam']); ?>
 				</p>
 				
-				<?php
+				<table>
+					<?php
 
-				if ($val['project_ProjectDetails_Maten_Perceeloppervlakte_Van'] > 1) {
-	
-				?>
+					if ($val['project_ProjectDetails_Maten_Perceeloppervlakte_Van'] > 1) {
 
-				<p>Perceeloppervlak: 
-				<?php
+					?>
+					<tr>
 
-					echo number_format($val['project_ProjectDetails_Maten_Perceeloppervlakte_Van'], 0, ",", ".");
 
-					if ($val['project_ProjectDetails_Maten_Perceeloppervlakte_TotEnMet'] > 0 && $val['project_ProjectDetails_Maten_Perceeloppervlakte_Van'] != $val['project_ProjectDetails_Maten_Perceeloppervlakte_TotEnMet']) {
+						<td>Perceeloppervlak:</td>
+						<td>
+						<?php
 
-						echo ' t/m ' . number_format($val['project_ProjectDetails_Maten_Perceeloppervlakte_TotEnMet'], 0, ",", ".");
-					}
+							echo number_format($val['project_ProjectDetails_Maten_Perceeloppervlakte_Van'], 0, ",", ".");
 
-					echo ' m<sup>2</sup>';
+							if ($val['project_ProjectDetails_Maten_Perceeloppervlakte_TotEnMet'] > 0 && $val['project_ProjectDetails_Maten_Perceeloppervlakte_Van'] != $val['project_ProjectDetails_Maten_Perceeloppervlakte_TotEnMet']) {
 
-				?></p>
-				
-				<?php } ?>
-				
-				<?php
+								echo ' t/m ' . number_format($val['project_ProjectDetails_Maten_Perceeloppervlakte_TotEnMet'], 0, ",", ".");
+							}
 
-				if ($val['project_ProjectDetails_Maten_Woonoppervlakte_Van'] > 1) {
+							echo ' m<sup>2</sup>';
 
-				?>
-				<p>Woonoppervlak: 
-				<?php
+						?>
+						</td>
 
-					echo number_format($val['project_ProjectDetails_Maten_Woonoppervlakte_Van'], 0, ",", ".");
+					</tr>
+					
+					<?php } ?>
+							
+					<?php
 
-					if ($val['project_ProjectDetails_Maten_Woonoppervlakte_TotEnMet'] > 0 && $val['project_ProjectDetails_Maten_Woonoppervlakte_TotEnMet'] != $val['project_ProjectDetails_Maten_Woonoppervlakte_Van']) {
+					if ($val['project_ProjectDetails_Maten_Woonoppervlakte_Van'] > 1) {
 
-						echo ' t/m ' . number_format($val['project_ProjectDetails_Maten_Woonoppervlakte_TotEnMet'], 0, ",", ".");
-					}
+					?>		
+					
+					<tr>
 
-					echo ' m<sup>2</sup>';
+						<td>Woonoppervlak: </td>
+						<td>
+						<?php
 
-				?>
-				</p>
-				
-				<?php
+							echo number_format($val['project_ProjectDetails_Maten_Woonoppervlakte_Van'], 0, ",", ".");
 
-				if ($val['project_ProjectDetails_Maten_Inhoud_Van'] > 1) {
+							if ($val['project_ProjectDetails_Maten_Woonoppervlakte_TotEnMet'] > 0 && $val['project_ProjectDetails_Maten_Woonoppervlakte_TotEnMet'] != $val['project_ProjectDetails_Maten_Woonoppervlakte_Van']) {
 
-				?>
+								echo ' t/m ' . number_format($val['project_ProjectDetails_Maten_Woonoppervlakte_TotEnMet'], 0, ",", ".");
+							}
 
-				<p>Inhoud: 
-				<?php
+							echo ' m<sup>2</sup>';
 
-					echo number_format($val['project_ProjectDetails_Maten_Inhoud_Van'], 0, ",", ".");
+						?>
+						</td>
+					</tr>
 
-					if ($val['project_ProjectDetails_Maten_Inhoud_TotEnMet'] > 0 && $val['project_ProjectDetails_Maten_Inhoud_TotEnMet'] != $val['project_ProjectDetails_Maten_Inhoud_Van']) {
 
-						echo ' t/m ' . number_format($val['project_ProjectDetails_Maten_Inhoud_TotEnMet'], 0, ",", ".");
-					}
+					<?php
 
-					echo ' m<sup>3</sup>';
+					if ($val['project_ProjectDetails_Maten_Inhoud_Van'] > 1) {
 
-				?>
-				</p>
-				<?php } ?>
+					?>
+					<tr>
+						<td>Inhoud: </td>
+						<td>
+						<?php
+
+							echo number_format($val['project_ProjectDetails_Maten_Inhoud_Van'], 0, ",", ".");
+
+							if ($val['project_ProjectDetails_Maten_Inhoud_TotEnMet'] > 0 && $val['project_ProjectDetails_Maten_Inhoud_TotEnMet'] != $val['project_ProjectDetails_Maten_Inhoud_Van']) {
+
+								echo ' t/m ' . number_format($val['project_ProjectDetails_Maten_Inhoud_TotEnMet'], 0, ",", ".");
+							}
+
+							echo ' m<sup>3</sup>';
+
+						?>
+					</td>
+					<?php } ?>
+
+				</table>
 
 				<?php } ?>
 			</div>

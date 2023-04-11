@@ -229,18 +229,18 @@ $mediaList = $cms['database']->prepare("SELECT `id`, `object_ObjectTiaraID`, `be
 				<div class="column-sidebar">
 				
 					<ul class="sidebar-nav">
-						<li class="active"><a href="javascript:void(0);" data-tab="1" data-desc="Beschrijving" onclick="changeTab(1);">Beschrijving &xrarr;</a></li>
-						<li><a href="javascript:void(0);" data-tab="2" data-desc="Kenmerken" onclick="changeTab(2);">Kenmerken</a></li>
-						<li><a href="javascript:void(0);" data-tab="3" data-desc="Locatie" onclick="changeTab(3);">Locatie</a></li>
+						<li class="active"><a href="javascript:void(0);" data-tab="1" data-desc="Beschrijving" onclick="changeTab(1);">Beschrijving <span class="arrow">&rsaquo;</span></a></li>
+						<li><a href="javascript:void(0);" data-tab="2" data-desc="Kenmerken" onclick="changeTab(2);">Kenmerken <span class="arrow">&rsaquo;</span></a></li>
+						<li><a href="javascript:void(0);" data-tab="3" data-desc="Locatie" onclick="changeTab(3);">Locatie <span class="arrow">&rsaquo;</span></a></li>
 						<?php if (!empty($extraMedia['brochure'])) { ?>
-						<li><a href="javascript:void(0);" data-tab="4" data-desc="Brochure" onclick="changeTab(4);">Brochure</a></li>
+						<li><a href="javascript:void(0);" data-tab="4" data-desc="Brochure" onclick="changeTab(4);">Brochure <span class="arrow">&rsaquo;</span></a></li>
 						<?php } ?>
-						<li><a href="javascript:void(0);" data-tab="5" data-desc="Contact" onclick="changeTab(5);">Contact</a></li>
+						<li><a href="javascript:void(0);" data-tab="5" data-desc="Contact" onclick="changeTab(5);">Contact <span class="arrow">&rsaquo;</span></a></li>
 					</ul>
 				
 					<?php include($documentRoot . "inc/widget.php"); ?>
 
-					<a href="<?php echo $url; ?>" class="back-link">&xlarr; Terug naar overzicht</a>
+					<a href="<?php echo $url; ?>" class="back-link"> Terug naar&nbsp;<strong>overzicht</strong></a>
 
 				</div>
 
@@ -647,9 +647,9 @@ $mediaList = $cms['database']->prepare("SELECT `id`, `object_ObjectTiaraID`, `be
 
 					newTab = $('li a[data-tab="' + tab + '"]');
 
-					activeTab.html(activeTab.data('desc')).parent().removeClass('active');
-					newTab.html(newTab.data('desc') + ' &xrarr;').parent().addClass('active');
-
+					activeTab.parent().removeClass('active');
+					newTab.parent().addClass('active');
+					
 					// Hide all tabs
 					$('.content-wrapper[data-tab]').hide();
 
