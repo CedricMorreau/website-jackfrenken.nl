@@ -1,6 +1,6 @@
 <section class="column-header">
 	<div class="content-wrapper">	
-		
+
 		<div class="header-title-wrapper">
 			<div class="header-title">
 				<h1><span class="city"><?php echo $val['objectDetails_Adres_NL_Woonplaats']; ?></span><br>
@@ -42,6 +42,9 @@
 		
 		<div class="content-image" style="background: none;">
 			<div class="image-container">
+
+				<div class="image-label status-soldsubject">Verkocht onder voorbehoud</div>
+
 
 				<?php if (isset($mediaList[0])): ?>
 

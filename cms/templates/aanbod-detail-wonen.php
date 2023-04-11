@@ -240,7 +240,7 @@ $mediaList = $cms['database']->prepare("SELECT `id`, `object_ObjectTiaraID`, `be
 				
 					<?php include($documentRoot . "inc/widget.php"); ?>
 
-					<a href="<?php echo $url; ?>" class="back-link"> Terug naar&nbsp;<strong>overzicht</strong></a>
+					<a href="<?php echo $url; ?>" class="back-link"> <span>&#9656;</span> Terug naar&nbsp;<strong>overzicht</strong></a>
 
 				</div>
 
@@ -562,7 +562,9 @@ $mediaList = $cms['database']->prepare("SELECT `id`, `object_ObjectTiaraID`, `be
 					<div class="content-wrapper" data-tab="3" style="display: none;">
 						<h2>Locatie</h2>
 						<div id="map_canvas"></div>
-						<div id="pano"></div>
+
+						<?php //include($documentRoot . "inc/aanbod-banner.php"); ?>
+
 					</div>
 					
 					<?php if (!empty($extraMedia['brochure'])) { ?>
@@ -616,8 +618,6 @@ $mediaList = $cms['database']->prepare("SELECT `id`, `object_ObjectTiaraID`, `be
 					
 				</div>
 			</div>
-
-			<?php include($documentRoot . "inc/aanbod-banner.php"); ?>
 
 			<?php include($documentRoot . "inc/footer.php"); ?>
 

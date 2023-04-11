@@ -3,6 +3,6 @@
 		<a>Heeft u een vraag of opmerking? Stuur ons een bericht!</a>
 	</h3>
 	<p>
-		<a href="#" data-hook="Icon-contact">Contactformulier</a>
+		<a href="#" data-hook="Icon-contact">Contactformulier &rsaquo;</a>
 	</p>
 </div>

@@ -27,9 +27,6 @@
 
 			<?php echo $textBlock; ?>
 
-
-
-
 			<?php
             	$medewerkers = $cms['database']->prepare("SELECT *,
 
@@ -60,14 +57,9 @@
 
             ?>
 
-
-
-
 			<section id="flexbox-gallery">
 	            <div class="limiter">
 	                <div class="parent">
-
-
 
 						<?php
 			            	if (count($medewerkers) > 0) {
@@ -75,12 +67,24 @@
 				                    $values = Content::getArticleValues($val['mod_co_id'], $cms, $template->getCurrentLanguage());
 				        ?>
 
-				                    <div class="child">
-				                        <div class="pic" style="background-image: url('<?php echo $values['mw_foto'] ?>')">
-				                        	<span class="mw-naam"><?php echo $values['mw_naam'] ?></span>
-				                        	<!-- <span class="mw-functie"><?php echo $values['mw_functie'] ?></span> -->
-				                        </div>
-				                    </div>
+							<div class="child">
+								<div class="pic" style="background-image: url('<?php echo $values['mw_foto'] ?>')">
+								</div>
+
+								<div class="info">
+									<div class="mw-naam"><?php echo $values['mw_naam'] ?></div>
+									<div class="mw-functie"><?php echo $values['mw_functie'] ?></div>
+									<div class="divider"></div>
+									<div class="social-icons">
+										<a href="#" class="icon mail" target="_blank">
+											<?php include($documentRoot . "resources/icon-contact-email.svg"); ?>
+										</a>
+										<a href="#" class="icon linkedin" target="_blank">
+											<?php include($documentRoot . "resources/icon-contact-linkedin.svg"); ?>
+										</a>
+									</div>
+								</div>
+							</div>
 
 						<?php
 				                }
@@ -94,11 +98,24 @@
 	        </section>
 
 
-
-
-
-
-
 		</div>
 	</div>
 </div>
+
+<section class="partners-banner-wrapper">
+	<div class="column-content">
+		<div class="column-sidebar"><!-- spacer --></div>
+		<div class="column-content flex column">
+			<h4>Partners</h4>
+			<div class="partner-logos-wrapper">
+				<a href="#" class="partner-logo" target="_blank">
+					<img src="/resources/partner-logo-funda_powered_by_nvm.png" alt="Funda">
+				</a>
+				<a href="#" class="partner-logo" target="_blank">
+					<img src="/resources/partner-logo-nvm.png" alt="Funda">
+				</a>
+			</div>
+		</div>
+		
+	</div>
+</section>
