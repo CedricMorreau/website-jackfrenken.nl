@@ -67,55 +67,31 @@
 
 	<div class="plaats-row">
 						
-		<label for="plaatsnamenOverzicht" class="size40">
-			<select size="9" name="plaatsnamenOverzicht" multiple="multiple" class="form-item plaatskeuzes">
+		<?php
 
-				<?php
+		$plaatsen = Cache::get('realworks/plaatsen');
 
-				$plaatsen = Cache::get('realworks/plaatsen');
+		if ($plaatsen === false) {
 
-				if ($plaatsen === false) {
+			$search_form = new RealworksSearchForm('e2ed5b0a-d544-409b-aa06-7f3a875c2403', 44003, 884311);
+			$search_form->fetch_locations();
 
-					$search_form = new RealworksSearchForm('e2ed5b0a-d544-409b-aa06-7f3a875c2403', 44003, 884311);
-					$search_form->fetch_locations();
-	
-					$plaatsen = array_values($search_form->locations('plaatsen'));
-					sort($plaatsen);
+			$plaatsen = array_values($search_form->locations('plaatsen'));
+			sort($plaatsen);
 
-					Cache::set($plaatsen, 'realworks/plaatsen', 86400);
-				}
+			Cache::set($plaatsen, 'realworks/plaatsen', 86400);
+		}
 
-				?>
+		?>
 
-				<?php foreach ($plaatsen as $plaats): ?>
-					<option value="<?php echo strtolower($plaats); ?>">
-						<?php echo ucfirst($plaats); ?>
-					</option>
-				<?php endforeach; ?>
+		<?php foreach ($plaatsen as $plaats): ?>
+			<label>
+				<input type="checkbox" value="<?php echo strtolower($plaats); ?>">
+				<?php echo $plaats; ?>
+			</label>
 			
-			</select>
-		</label>
-
-
-		<div class="form-item size20">
-			<div class="control-arrows-wrapper">
-				<div class="col size50">
-					<a href="javascript:void(0);" class="button left remove" title="Verwijderen uit selectie">&larr;</a>
-				</div>
-				<div class="col size50">
-					<a href="javascript:void(0);" class="button right add" title="Toevoegen aan selectie">&rarr;</a>										
-				</div>
-			</div>
-		</div>
-
-		<div class="form-item size40">
-			<select name="plaatsnaam[]" multiple="multiple" class="form-item plaatskeuzes">
-				<optgroup label="Uw selectie:"></optgroup>
-			</select>
-		</div>
-
-
-
+		<?php endforeach; ?>
+	
 
 	</div>
 	
