@@ -5,7 +5,7 @@
 		<?php echo $template->cmsData('page][navigation/2/subnav/' . $template->findHighestParent() . '/active/' . $template->getPageId()); ?>
 		
 		<?php echo $template->cmsData('page][section/widgets'); ?>
-
+		<a href="#" class="back-link"><span class="arrow">&#x25B8;</span>Terug naar&nbsp;<strong>over ons</strong></a>
 	</div>
 
 	<div class="column-content">
