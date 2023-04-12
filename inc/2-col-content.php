@@ -26,6 +26,18 @@
 			<?php } ?>
 
 			<?php echo $textBlock; ?>
+
+			<!-- Only for Funda reviews page -->
+			<a href="https://www.funda.nl/makelaars/roermond/21047-jack-frenken-makelaars-en-adviseurs/" class="funda-review-banner">
+				<span class="icon-external">
+				<?php include($documentRoot . "/resources/icon-external.svg"); ?>
+
+				</span> 
+					Bekijk ons kantoor op funda
+				 <div class="funda-logo">
+					<img src="/resources/logo-funda-business.png">
+				</div>
+			</a>
 		</div>
 	</div>
 </div>
