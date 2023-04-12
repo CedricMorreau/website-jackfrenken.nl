@@ -13,7 +13,8 @@
 				
 				<div class="footer-links-col footer-links-col-1">
 					<h5>Navigatie</h5>
-					<p><a href="<?php echo $template->findPermalink(33, 1); ?>">Aanbod</a></p>
+					<p><a href="<
+					?php echo $template->findPermalink(33, 1); ?>">Aanbod</a></p>
 					<p><a href="<?php echo $template->findPermalink(34, 1); ?>">Over ons</a></p>
 					<p><a href="<?php echo $template->findPermalink(35, 1); ?>">Diensten</a></p>
 					<p><a href="<?php echo $template->findPermalink(35, 1); ?>">Hypotheekadvies</a></p>

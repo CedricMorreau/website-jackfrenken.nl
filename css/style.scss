@@ -34,12 +34,24 @@
 	width: 100%;
 	height: auto;
 	flex-direction: row;
+	justify-content: center;
 	margin-top: 3rem;
 	position: relative;
+
 
 	@media only screen and (max-width: $container-size-m) {
 		flex-direction: column-reverse;
 		margin-top: 0;
+	}
+	
+	.content-wrapper {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.header-main-content {
+		display: flex;
+		margin-bottom: 1.5rem;
 	}
 
 	.header-title-wrapper {
@@ -48,6 +60,10 @@
 		flex-shrink: 0;
 		flex-grow: 0;
 		flex-basis: 25rem;
+		overflow: visible;
+		max-width: 23rem;
+		position: relative;
+
 		@media only screen and (max-width: $container-size-l) {
 			flex-basis: 20rem;
 		}
@@ -58,14 +74,14 @@
 		.header-title {
 
 			padding-left: 4rem;
-			padding-right: 2rem;
-			padding-top: 3rem;
-			padding-bottom: 3rem;
+			padding-right: 4rem;
+			padding-top: 5rem;
+			padding-bottom: 5rem;
 			z-index: 15;
 			background-color: rgba($pri-col, 0.8);
 			color: $lit-col;
 			text-transform: uppercase;
-			position: absolute;
+			position: relative;
 			top: 50%;
 			transform: translateY(-45%);
 			max-width: 28rem;
@@ -134,9 +150,11 @@
 			}
 
 			h1 {
-				font-size: 1.5rem;
+				font-size: 2rem;
+				text-transform: lowercase;
 				padding-top: 0;
 				margin-top: 0;
+				margin-bottom: 0;
 				color: inherit;
 	  			@media only screen and (max-width: $container-size-m) {
 	  				word-break: break-word;
@@ -175,13 +193,11 @@
 		background-size: cover;
 		background-position: 50% 50%;
 		background-image: url("../resources/homepage-header.jpg");
-		height: 19rem;
+		height: 21rem;
 		padding-top: 2rem;
 		padding-bottom: 2rem;
-		margin-right: 6rem;
-		@media only screen and (max-width: $container-size-l) {
-			margin-right: 0 !important;
-		}
+		margin-right: 0;
+
 		@media only screen and (max-width: $container-size-m) {
 			padding-top: 0;
 			padding-bottom: 0;
@@ -194,6 +210,20 @@
 		}
 
 
+	}
+
+	
+	// Breadcrumbs row
+	.breadcrumbs-row-wrapper {
+		display: flex;
+		.breadcrumbs-spacer {
+			flex: 1;
+			flex-basis: 25rem;
+			max-width: 23rem;
+		}
+		.breadcrumbs-wrapper {
+			flex: 2;
+		}
 	}
 
 	.breadcrumbs-wrapper {
