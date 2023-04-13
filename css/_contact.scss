@@ -2,17 +2,25 @@
 
 .contact {
 	
-	// Map embed
-	.content-image {
-		padding-top: 0;
-		padding-bottom: 0;
-		background-image: none;
-		height: 32rem;
-		@media only screen and (max-width: $container-size-m) {
-			height: 18rem;
-		}
 
+	.column-header {
+		// Map embed
+		.content-image {
+			padding-top: 0;
+			padding-bottom: 0;
+			background-image: none;
+			height: 32rem;
+			@media only screen and (max-width: $container-size-m) {
+				height: 20rem;
+			}
+			@media only screen and (max-width: $container-size-s) {
+				height: 20rem;
+				max-height: none;
+			}
+
+		}
 	}
+	
 
 	.header-title-wrapper  {
 		.header-title {
