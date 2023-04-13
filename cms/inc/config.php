@@ -44,7 +44,7 @@ if (isset($_SERVER['HTTP_HOST']) && strpos($_SERVER['HTTP_HOST'], $localIp) !== 
 if ($test == 1) {
 
 	$cms['database'] = new Database();
-	$cms['database']->connection('jackfrenk_cms-usr', 'EtIWFhIhQP', 'mysql02.pixelplus.nl');
+	$cms['database']->connection('jackfrenk_cms-usr', 'EtIWFhIhQP', 'orel.pixelplus.nl');
 	$cms['database']->selectDatabase('jackfrenk_cms-db');
 }
 else {
