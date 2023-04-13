@@ -1,43 +1,57 @@
 /* Contact ---------------------------------------------------- */
 
 .contact {
-
+	
+	// Map embed
 	.content-image {
 		padding-top: 0;
 		padding-bottom: 0;
 		background-image: none;
-		height: auto;
-		@media only screen and (max-width: $container-size-m) {
-			height: auto !important;
-		}
-
-	}
-
-	.header-title {
-		position: relative;
-  		top: 50%;
-  		transform: translateY(-50%);
-  		bottom: unset !important;
-  		max-width: 33rem !important;
-  		min-width: 33rem !important;
-  		height: auto !important;
-  		h1 {
-  			font-size: 1rem !important;
-  			font-family: $fon-fam-pri;
-  		}
-  		h2 {
-  			font-size: 3rem !important;
-  		}
-	}
-	.content-image {
-		height: 35rem;
+		height: 32rem;
 		@media only screen and (max-width: $container-size-m) {
 			height: 18rem;
 		}
+
 	}
+
+	.header-title-wrapper  {
+		.header-title {
+			position: relative;
+			top: 50%;
+			transform: translateY(-50%);
+			bottom: unset !important;
+			max-width: 33rem;
+			min-width: 33rem;
+			height: auto !important;
+			color: $lit-col;
+			padding-top: 3rem;
+			padding-bottom: 3rem;
+			@media only screen and (max-width: $container-size-m) {
+				max-width: none;
+				min-width: 0;
+			}
+
+			h1 {
+				font-size: 3rem;
+				@media only screen and (max-width: $container-size-m) {
+					font-size: 1.5rem;
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+
 	
 	.column-content {
-		padding-top: 1rem;
+		.content-wrapper {
+			h2 {
+				margin-bottom: 2rem;
+				@media only screen and (max-width: $container-size-m) {
+					font-size: 1.5rem;
+					margin-bottom: 1rem;
+				}
+			}
+		}
 	}
 
 	.location-wrapper {
@@ -55,6 +69,15 @@
 		
 		.location-details {
 			flex: 2;
+
+			p {
+				margin-top: 0;
+			}
+
+			a {
+				text-decoration: none;
+			}
+
 			.times-table {
 				border-collapse: collapse;
 				margin-bottom: 1em;
@@ -147,6 +170,8 @@
 	text-align: center;
 }
 
+
+// Contact overlay
 .contact-overlay-wrapper {
 	display: none; // Toggle with JS
 	//display: block; // debug mode

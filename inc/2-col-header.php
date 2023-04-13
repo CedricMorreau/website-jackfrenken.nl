@@ -51,6 +51,7 @@
 		
 		<?php } ?>
 		</div>
+		
 		<div class="breadcrumbs-row-wrapper">
 			<div class="breadcrumbs-spacer"></div>
 			<div class="breadcrumbs-wrapper">

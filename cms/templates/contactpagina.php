@@ -51,9 +51,10 @@ $locaties = $cms['database']->prepare("SELECT * FROM `tbl_cms_locaties` WHERE `c
 								
 						<a id="<?php echo $uniId; ?>" class="anchor"></a>
 						
+						<h2><?php echo $val['cl_name']; ?></h2>
 						<div class="location-wrapper" id="vestiging_<?php echo $key; ?>">
+							
 							<div class="location-details">
-								<h2><?php echo $val['cl_name']; ?></h2>
 								<p>
 									<a href="<?php echo $val['cl_googleLink']; ?>" target="_blank">
 									<?php echo $val['cl_adres_straat']; ?> <?php echo $val['cl_adres_huisnummer']; ?><br>
