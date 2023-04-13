@@ -85,10 +85,14 @@
 		?>
 
 		<?php foreach ($plaatsen as $plaats): ?>
-			<label>
-				<input type="checkbox" value="<?php echo strtolower($plaats); ?>">
-				<?php echo $plaats; ?>
-			</label>
+			<div class="form-group">
+				<input type="checkbox" value="<?php echo strtolower($plaats); ?>" id="<?php echo strtolower($plaats); ?>">
+			
+				<label for="<?php echo strtolower($plaats); ?>">
+					<?php echo $plaats; ?>
+				</label>
+			
+			</div>
 			
 		<?php endforeach; ?>
 	
