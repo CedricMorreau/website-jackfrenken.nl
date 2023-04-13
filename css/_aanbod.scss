@@ -1,0 +1,575 @@
+
+/* Aanbod overzicht  -------------------------------------------  */
+.aanbod-overzicht {
+	.column-content {
+		
+		.content-wrapper {
+			margin-right: 0;
+			padding-right: 0;
+			@media only screen and (max-width: $container-size-m) {
+				padding-right: $margin-size-s;
+			}
+			.bar-alert {
+				background-color: $qua-col;
+				color: $lit-col;
+				padding-top: 2rem;
+				padding-bottom: 2rem;
+				padding-left: 3rem;
+				padding-right: 2rem;
+				margin-bottom: 2rem;
+				font-size: 1.5rem;
+				a {
+					color: $lit-col;
+					font-size: 1rem;
+					margin-top: 1rem;
+					display: block;
+					&:hover {
+						color: $pri-col;
+					}
+				}
+			}
+			.item-wrapper {
+				margin-right: 0;
+				> a {
+					text-decoration: none;
+					&:hover {
+						text-decoration: underline;
+					}
+				}	
+				.item-image {
+					position: relative;
+					flex: 2;
+					min-height: 20rem;
+					@media only screen and (max-width: $container-size-m) {
+						min-height: 0;
+					}
+					a {
+						display: flex;
+						text-decoration: none;
+
+						img {
+							max-width: 100%;
+							height: auto;
+							max-height: 30rem;
+							min-width: 100%;
+							align-self: center;
+							object-fit: cover;
+						}
+
+					}
+				}
+
+			}
+
+		}
+
+		.banner-wrapper {
+			margin-right: 0;
+		}
+
+	}
+
+	.filter-wrapper {
+		@media only screen and (max-width: $container-size-m) {
+			display: none;
+		}
+	}
+	.column-content {
+		@media only screen and (max-width: $container-size-m) {
+			flex-direction: column;
+		}
+	}
+
+
+}
+
+
+/* Aanbod detail template ----------------------------------------- */
+.aanbod-detail {
+	.column-header {
+		padding-top: 2rem;
+		padding-bottom: 2.5rem;
+		background-color: darken($lit-col, 2%);
+		justify-content: center;
+
+		.content-wrapper {
+			display: flex;
+			max-width: $container-size-xl;
+		}
+
+		.header-title {
+			background-color: $overlay-col;
+
+			@media only screen and (max-width: $container-size-m) {
+				min-height: 0;
+			}
+
+			.city {
+				font-weight: 300;
+			}
+
+			.openhouse {
+				font-size: 1.2rem;
+				background-color: $qua-col;
+				color: $lit-col;
+				display: inline-block;
+				padding-left: 1rem;
+				padding-right: 1rem;
+				padding-top: 0.3rem;
+				padding-bottom: 0.3rem;
+				line-height: 1.8rem;
+			}
+
+			&:after {
+				content: "";
+				left: 100%;
+				top: 50%;
+				transform: translateY(-100%);
+				width: 3rem;
+				height: 3rem;
+				display: block;
+				z-index: 2;
+				position: absolute;
+				width: 1.7rem;
+				height: 1.7rem;
+				border-style: solid;
+				border-width: 1.7rem 0 1.7rem 1.7rem;
+				border-color: transparent transparent transparent $overlay-col;
+				
+			}
+
+		}
+	}
+
+	.content-image {
+		// background-image: none;
+		height: auto;
+		min-height: 30rem;
+		padding-top: 0;
+		padding-bottom: 0;
+		@media only screen and (max-width: $container-size-m) {
+			min-height: 0;
+		}
+
+		.image-container {
+			height: 100%;
+
+			@media only screen and (max-width: $container-size-m) {
+				margin-bottom: 1rem;
+			}
+
+			.rsSlide  {
+				height: auto;
+				background: transparent;
+			}
+
+			@media only screen and (max-width: $container-size-m) {
+				.rsImg { // mobile size of Slider images
+					width: 100% !important;
+					height: auto !important;
+				}
+			}
+
+			#royal-slider { 
+				max-height: 52rem; // set max height of slider
+				background-color: transparent;
+
+				.rsThumbs { // hide thumbs on overview
+					display: none;
+				}
+
+				&.rsFullscreen {
+					.rsThumbs {
+						display: block;
+					}
+				}
+
+			}
+
+			// Arrow left
+			.rsArrowLeft {
+				right: 6rem;
+				height: 2.5rem;
+				width: 2.5rem;
+				bottom: 3px;
+
+				.rsArrowIcn {
+					background-image: none !important;
+					background-color: $overlay-col;
+					padding: 0;
+					margin: 0;
+					width: 100%;
+					height: 100%;
+
+					&:hover {
+						background-color: $pri-col;
+						&:after {
+							color: $lit-col;
+						}
+					}
+
+					&:after {
+						content: "\025B8";
+						text-align: center;
+						color: $sec-col;
+						display: block;
+						line-height:  2.8rem;
+						font-size: 3rem;
+						transform: rotate(180deg) rotateY(45deg);
+					}
+
+				}
+			}
+
+			// Arrow right
+			.rsArrowRight {
+				height: 2.5rem;
+				width: 2.5rem;
+				right: 3rem;
+				bottom: 3px;
+
+				.rsArrowIcn {
+					background-image: none !important;
+					background-color: $ter-col;
+					padding: 0;
+					margin: 0;
+					width: 100%;
+					height: 100%;
+
+					&:hover {
+						background-color: $pri-col;
+						color: $lit-col;
+						&:after {
+							color: $lit-col;
+						}
+					}
+
+					&:after {
+						content: "\025B8";
+						text-align: center;
+						color: $sec-col;
+						display: block;
+						line-height: 2.3rem;
+						font-size: 3rem;
+						transform: rotateY(45deg);
+					}
+				}
+			}
+
+			// Fullscreen button
+			.rsFullscreenBtn {
+				display: flex;
+				align-items: center;
+				top: initial;
+				right: 0;
+				bottom: 3px;
+				height: 2.5rem;
+				width: 2.5rem;
+				background-color: $ter-col;
+				justify-content: center;
+
+				.rsFullscreenIcn {
+					background-image: url("../resources/icon-fullscreen-sec.svg");
+					background-repeat: no-repeat;
+					background-position: center center;
+					background-size: 90%;
+					&:hover {
+						background-image: url("../resources/icon-fullscreen-lit.svg");
+					}
+				}
+
+				.rsFullscreenIcn {
+					&:hover {
+						background-color: $pri-col;
+						opacity: 1 !important;
+					}
+				}
+
+				&:hover {
+					background-color: $pri-col;
+					color: $lit-col;
+				}
+			}
+		}
+	}
+
+	.banner-wrapper {
+		margin-left: 4rem;
+		margin-top: 2rem;
+		@media only screen and (max-width: $container-size-m) {
+			margin-left: $margin-size-s;
+			margin-right: $margin-size-s;
+		}
+	}
+
+	.content-wrapper {
+		> h2:first-child {
+			margin-top: 0;			
+		}
+
+		#map_canvas {
+			width: 100%;
+			height: 100%;
+		}
+
+		form {
+			display: flex;	
+			@media only screen and (max-width: $container-size-m) {
+				flex-direction: column;
+			}
+
+			fieldset {
+				width: 50%;
+				border: none;
+				padding-right: 2rem;
+				@media only screen and (max-width: $container-size-m) {
+					width: 100%;
+				}
+
+				input {
+					display: block;
+					margin-bottom: 2rem;
+					width: 100%;
+					border: 0 solid white;
+					border-bottom: 1px solid lightgray;
+					background-color: transparent;
+					-webkit-transition: background-color 200ms ease-in-out;
+					transition: background-color 200ms ease-in-out;
+					&.error {
+						color: red;
+						&::placeholder {
+							color: red;
+						}
+					}
+
+					&[type="submit"] {
+						padding: 1rem;
+						background-color: $qua-col;
+						color: $lit-col;
+						cursor: pointer;
+						border: none;
+						text-transform: uppercase;
+						&:hover {
+							background-color: $pri-col;
+							color: $lit-col;
+						}
+					}
+				}
+
+				textarea {
+					height: 100%;
+					max-height: 15rem;
+					width: 100%;
+					padding: 0.5rem;
+					margin-bottom: 1rem;
+					border: 1px solid lightgray;
+				}
+
+			}
+		}
+
+		.table-flex-wrapper {
+			display: flex;
+			flex-wrap: wrap;
+			width: 100%;
+
+			h2 {
+				margin-top: 0;
+			}
+
+			.table-wrapper {
+
+				margin-left: 2rem;
+				margin-right: 2rem;
+				margin-bottom: 1rem;
+				flex-grow: 0;
+				width: calc(50% - 4rem);
+				flex: 1 0 calc(50% - 4rem);
+				
+				@media only screen and (max-width: $container-size-m) {
+					width: calc(100%);
+					flex: 1 0 calc(100%);
+					margin-left: 0;
+					margin-right: 0;
+				}
+
+				&:first-of-type {
+					margin-left: 0;
+				}
+
+				&:nth-of-type(3n) {
+					margin-left: 0;
+				}
+
+				table {
+					width: 100%;
+					max-width: 40rem;
+					margin-bottom: 2rem;
+					display: flex;
+					tbody {
+						@media only screen and (max-width: $container-size-m) {
+							width: 100%;
+							display: flex;
+							flex-direction: column;
+						}
+					}
+					tr {
+						@media only screen and (max-width: $container-size-m) {
+							width: 100%;
+							display: flex;
+						}
+					}
+					th {
+						text-align: left;
+						padding-right: 2rem;
+						vertical-align: top;
+						flex: 1;
+					}
+					td {
+						flex: 1;
+					}
+					h2 {
+						margin-top: 0;
+					}
+				}
+
+			}
+
+		}
+
+	}
+
+	/* Nieuwbouw overzicht */
+	.counter {
+		float: left;
+		width: 100%;
+		height: auto;
+		line-height: 35px;
+		font-style: italic;
+		margin-bottom: 1rem;
+	}
+
+	.projectinfo {
+		display: flex;
+		margin: 0 0 2vmax;
+		height: auto;
+		background-color: transparent !important;
+		@media only screen and (max-width: $container-size-m) {
+			flex-direction: column;
+		}
+		
+		> span {
+			display: block;
+			float: left;
+			box-sizing: border-box;
+		}
+
+		span {
+			&.image {
+				position: relative;
+				display: block;
+				overflow: hidden; 
+				padding-bottom: 25%;
+				margin-right: 1rem;
+				height: 100%;
+				width: 35%;
+				@media only screen and (max-width: $container-size-m) {
+					width: 100%;
+					padding-bottom: 0;
+				}
+
+				div {
+					position: absolute;
+					left: -50%;
+					top: -50%;
+					width: 200%;
+					height: 200%;
+					img {
+						max-width: 100%;
+						position: absolute;
+						left: 0;
+						right: 0;
+						top: 0;
+						bottom: 0;
+						display: block;
+						margin: auto;
+						min-width: 50%;
+						min-height: 50%;
+						max-width: 60%; 
+					} 	
+				}
+
+			}
+			
+			&.info {
+				width: 65%; 
+				a {
+					background-color: $ter-col; 
+					margin-bottom: 1rem;	
+				}
+				@media only screen and (max-width: $container-size-m) {
+					width: 100%;
+				}
+			}
+
+		}
+
+
+		a.objectInfo {
+			position: relative;
+			display: block;
+			padding: 3% 4% 3% 4%;
+			color: $dar-col;
+			text-decoration: none;
+			&:hover {
+				background-color: $pri-col;
+				color: $lit-col;
+			}
+		}
+
+		.read-more {
+			display: block;
+			margin-top: 1em;
+		}
+
+		.sold + .objectInfo {
+			display: block;
+			padding: 3% 4% 3% 4%;
+			margin-bottom: 1rem;
+			background-color: $ter-col;
+
+		}
+
+		.sold {
+			color: $lit-col;
+			font-weight: bold;
+			background-color: $den-col;
+			padding-left: 1rem;
+			padding-right: 1rem;
+			padding-top: 0.3rem;
+			padding-bottom: 0.3rem;
+		}
+		.headerAanbod {
+			background-color: $sec-col;
+			padding-bottom: 0.5rem;
+			.floatRight {
+				margin-left: auto;
+			}
+		}
+
+	}
+
+
+
+}
+
+header.headerAanbod {
+	padding: 1rem;
+	color: $lit-col;
+	display: flex;
+	line-height: 1.5rem; 
+}
+
+header.headerAanbod {
+	background-color: $pri-col;
+}

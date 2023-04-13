@@ -1,0 +1,77 @@
+/* Actueel overzicht ------------------------------- */
+
+.actueel-overzicht {
+	.column-content {
+		.column-content {
+			.content-wrapper {
+				padding-right: 0;
+				@media only screen and (max-width: $container-size-m) {
+					padding-left: 0;
+				}
+
+				width: 100%;
+
+				.items-wrapper {
+					margin-top: 0;
+					margin-left: 0;
+					margin-right: 0;
+					@media only screen and (max-width: $container-size-m) {
+						margin-bottom: 2rem;
+					}
+					.items-container {
+						margin-left: 0;
+						margin-right: 0;
+						.item-container {
+
+							margin-bottom: 3rem;
+							&:nth-child(even) {
+								margin-top: 4rem;
+							}
+							&:hover {
+								.item-button {
+									background-color: $qua-col;
+								}
+								.hover-overlay {
+									background: rgba(255, 255, 255, 0.15);
+								}
+							}
+							
+							@media only screen and (max-width: $container-size-l) {								
+								margin-top: 0 !important;
+								margin-bottom: 1rem;
+								margin-right: 3rem;
+							}
+
+							@media only screen and (max-width: $container-size-m) {
+								margin-bottom: 1rem;
+								margin-right: 0;
+							}
+
+						}
+					}
+				}
+
+			}
+		}
+	}
+}
+
+/* Actueel detail ---------------------------------------------- */
+
+.actueel-detail {
+	.header-title {
+		position: relative;
+  		top: 50%;
+  		transform: translateY(-50%);
+  		bottom: none;
+	}
+	.content-image {
+		height: 35rem;
+		background-size: contain;
+		background-repeat: no-repeat;
+		@media only screen and (max-width: $container-size-m) {
+			height: 18rem;
+		}
+	}
+}
+
