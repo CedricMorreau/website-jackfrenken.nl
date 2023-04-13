@@ -23,7 +23,11 @@
 		text-align: center;
 		width: 100%;
 		max-width: $container-size-ml;
-
+		@media only screen and (max-width: $container-size-m) {
+			padding-left: 1rem;
+			padding-right: 1rem;
+		}
+		
 		h2 {
 			text-transform: uppercase;
 			text-align: center;
@@ -31,6 +35,11 @@
 			font-size: 1.8rem;
 			line-height: 2rem;
 			margin-top: 0;
+			word-break: break-word;
+			@media only screen and (max-width: $container-size-m) {
+				font-size: 1.5rem;
+				line-height: 1.8rem;
+			}
 
 			strong {
 				font-weight: 600;
@@ -57,6 +66,9 @@
 
 		.row {
 			flex-direction: row;
+			@media only screen and (max-width: $container-size-m) {
+				flex-direction: column;
+			}
 		}
 
 		.column {
@@ -69,6 +81,10 @@
 
 		.margin-right-m {
 			margin-right: 3rem;
+			@media only screen and (max-width: $container-size-m) {
+				margin-right: 0;
+				margin-bottom: 1.5rem;
+			}
 		}
 
 		.text-align-left {
