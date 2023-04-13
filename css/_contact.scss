@@ -95,7 +95,7 @@
 					padding-right: 0.5rem;
 				}
 				.today {
-					background-color: $ter-col;
+					background-color: lighten($ter-col, 5%);
 
 				}
 			}
