@@ -182,15 +182,15 @@
 // Contact overlay
 .contact-overlay-wrapper {
 	display: none; // Toggle with JS
-	//display: block; // debug mode
-	background-color: $non-col;
+	display: block; // debug mode
+	background-color: #acc7db;
 	z-index: 99;
 	height: 100%;
 	width: 100%;
 	position: fixed;
 	top: 0;
 	left: 0;
-	color: $pri-col;
+	color: $lit-col;
 	// needed for js toggle
 	&.Contact--show {
 		display: flex;
@@ -213,6 +213,7 @@
 		display: flex;
 		align-items: center;
 		height: 100%;
+
 		.contact-content-wrapper {
 			display: flex;
 			flex-direction: row;
@@ -227,6 +228,18 @@
 				@media only screen and (max-width: $container-size-m) {
 					font-size: 4rem;
 				}
+				@media only screen and (max-width: $container-size-s) {
+					margin-right: 0;
+					font-size: 2rem;
+					line-height: 2.8rem;
+				}
+
+				br {
+					@media only screen and (max-width: $container-size-s) {
+						display: none;
+					}
+				}
+	
 
 			}
 			form {
@@ -235,20 +248,32 @@
 		}
 
 		h2 {
-			font-size: 4em;
+			font-size: 3rem;
+			font-weight: 300;
+			line-height: 4.5rem;
+			color: inherit;
+			text-align: right;
 			margin-right: 1em;
 			margin-top: 0;
-			color: $pri-col;
-			text-align: right;
-			line-height: 3rem;
+			@media only screen and (max-width: $container-size-m) {
+				margin-right: 0;
+				font-size: 2rem;
+				line-height: 3rem;
+			}
+
+			strong {
+				font-weight: 600;
+			}
 
 			@media only screen and (max-width: $container-size-s) {
 				font-size: 1.5em;
 			}
 		}
+
 		.label-wrapper {
 			display: flex;
 			flex-direction: row;
+			border-bottom: solid 1px $lit-col;
 			input {
 				flex: 2;
 			}
@@ -256,32 +281,30 @@
 				flex: 1;
 				display: flex;
 				align-items: center;
-				font-weight: bold;
-				border: solid 1px $lit-col;
+				border: none;
 				border-right: 0;
-				padding-left: 1rem;
-				padding-right: 1rem;
+				padding-left: 0.5rem;
+				padding-right: 0;
 				flex-shrink: 0;
 				flex-grow: 0;
-				flex-basis: 10rem;
+				flex-basis: 9rem;
 			}
 		}
 
 		input {
 			display: block;
 			border-color: $lit-col;
-			background-color: $non-col;
-			color: $pri-col;
+			background-color: transparent;
+			color: $lit-col;
 			font-family: $fon-fam-pri;
-			font-weight: bold;
 			width: 100%;
 			box-sizing: border-box;
 			border-radius: 0;
-			border: solid 1px $lit-col;
-			padding-left: 1em;
-			padding-top: 0.5em;
-			padding-right: 1em;
-			padding-bottom: 1em;
+			border: none;
+			padding-left: 1rem;
+			padding-right: 1rem;
+			padding-top: 0.7rem;
+			padding-bottom: 0.7rem;
 
 			&::placeholder {
 				color: $pri-col;
@@ -294,6 +317,8 @@
 				background-color: $qua-col;
 				color: $lit-col;
 				border: none;
+				font-weight: normal;
+				text-transform: uppercase;
 
 				&:hover{
 					color: $lit-col;
@@ -316,17 +341,17 @@
 			padding-right: 1em;
 			padding-top: 0.5em;
 			padding-bottom: 0.5em;
-			background: $non-col;
+			background: transparent;
 			border-color: $lit-col;
 			border: solid 1px $lit-col;
-			color: $pri-col;
+			border-top: none;
+			color: inherit;
 			font-family: $fon-fam-pri;
 			font-weight: normal;
 
 			&::placeholder {
-				color: $pri-col;
+				color: inherit;
 				font-family: $fon-fam-pri;
-				font-weight: bold;
 			}
 
 		}
@@ -334,18 +359,18 @@
 
 		.close-overlay{
 			position: absolute;
-			right: 2em;
-			top: 2em;
-			fill: $pri-col;
+			right: 2rem;
+			top: 2rem;
+			fill: $lit-col;
 			text-decoration: none;
+			width: 3rem;
+			height: 3rem;
 
 			&:hover {
-				fill: $qua-col;
+				fill: $pri-col;
 				cursor: pointer;
 			}
 
-			width: 2em;
-			height: 2em;
 		}
 
 		.close-overlay-text {
@@ -353,6 +378,7 @@
 			text-decoration: none;
 			margin-top: 1rem;
 			padding-bottom: 2em;
+			color: $pri-col;
 			@media only screen and (max-width: $container-size-s) {
 				margin-top: 3vh;
 			}

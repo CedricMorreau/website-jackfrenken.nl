@@ -9,7 +9,7 @@
 
 		</div>
 		<div class="contact-content-wrapper">
-			<h2>Heeft u een vraag of opmerking? Stuur ons een bericht!</h2>
+			<h2>heeft u een vraag of opmerking? <strong>Stuur ons <br>een bericht!</strong></h2>
 			<form id="contactForm" action="#" class="standard" method="post">
 			
 				
@@ -17,26 +17,26 @@
 				<p class="error" style="display: none;">Er ging iets mis op de server. Probeer het nogmaals.</p>
 				
 				<div class="label-wrapper">
-					<label for="contact_name" value="Uw naam">Uw naam</label>
-						<input type="text" name="contact_name" data-hook="Contact-text">
+					<label for="contact_name" value="Uw naam">Uw naam *</label>
+						<input type="text" name="contact_name" id="contact_name" data-hook="Contact-text">
 
 				</div>
 
 				<div class="label-wrapper">
-					<label for="contact_phone">Telefoonnummer</label>
-						<input type="text" name="contact_phone">
+					<label for="contact_phone">Telefoonnummer *</label>
+						<input type="text" name="contact_phone" id="contact_phone">
 				</div>
 
 				<div class="label-wrapper">
-					<label for="contact_email">E-mailadres</label>
-						<input type="text" name="contact_email">
+					<label for="contact_email">E-mailadres *</label>
+						<input type="text" name="contact_email" id="contact_email">
 				</div>
 				
-				<textarea name="contact_msg" placeholder="Uw vraag of opmerking"></textarea>
+				<textarea name="contact_msg" placeholder="Uw vraag of opmerking..."></textarea>
 
 
-				<input type="submit" value="Verstuur &xrarr;" title="Verstuur">
-				<div class="close-overlay-text" data-hook="Contact-closetwo" title="Sluiten">&#xd7; Sluiten</div>
+				<input type="submit" value="Verstuur dit bericht" title="Verstuur">
+				<div class="close-overlay-text" data-hook="Contact-closetwo" title="Sluiten">&#xd7; sluiten</div>
 			</form>
 		</div>
 		
