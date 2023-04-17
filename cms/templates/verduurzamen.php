@@ -132,6 +132,50 @@ $sfeerbeeld = trim($template->getCustomVar('sfeerbeeld'));
 				</div>
 			</section>
 
+			<section class="wide-block-wrapper image-banner" style="background-image: url('http://localhost:42069/resources/homepage-header.jpg')">
+				<div class="content-wrapper">
+					<h3>
+						Jack Frenken<br>
+						financieel Advies<br>
+						<strong>De kracht <br>van Frenken</strong>
+					</h3>
+				</div>
+			</section>
+
+			<section class="wide-block-wrapper form-wrapper">
+				<div class="content-wrapper form-content-wrapper">
+					<form>
+						<h4>Afspraak maken</h4>
+
+						<div class="input-row-wrapper">
+							<div class="input-wrapper">
+								<input type="text" placeholder="Voornaam*">
+							</div>
+							<div class="input-wrapper">
+								<input type="text" placeholder="Achternaam*">
+							</div>
+							
+						</div>
+
+						<div class="input-row-wrapper">
+							<div class="input-wrapper">
+								<input type="email" placeholder="E-mailadres*">
+							</div>
+							<div class="input-wrapper">
+								<input type="tel" placeholder="Telefoon*">
+							</div>
+							
+						</div>
+
+						<div class="button-wrapper">
+							<button type="submit" class="cta-button qui inline">
+								Verstuur dit bericht
+							</button>
+						</div>
+					</form>
+				</div>
+			</section>
+
 			<?php include($documentRoot . "inc/footer.php"); ?>
 
 		</div>

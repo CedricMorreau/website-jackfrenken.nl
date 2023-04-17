@@ -132,6 +132,13 @@ ul.ui-autocomplete {
 		}
 	}
 
+	&.qui {
+		background-color: #27b5ac;
+		&:hover {
+			background-color: $pri-col;
+		}
+	}
+
 	&.ghost {
 		background-color: transparent;
 		border: solid 2px $pri-col;
@@ -141,6 +148,8 @@ ul.ui-autocomplete {
 			color: $sec-col;
 		}
 	}
+
+	
 }
 
 /* Page template specific */

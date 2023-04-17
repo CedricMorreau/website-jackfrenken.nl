@@ -15,10 +15,6 @@
 	display: flex;
 	justify-content: center;
 
-	// > * {
-	// 	outline: solid 1px red;
-	// }
-
 	.content-wrapper {
 		text-align: center;
 		width: 100%;
@@ -98,12 +94,141 @@
 		}
 
 		ul {
-			margin-left: 1rem;
+			margin-left: 0;
 			margin-bottom: 1.5rem;
+			list-style-type: none;
+			
+			li {
+				margin-bottom: 0.3rem;
+				display: flex;
+				align-items: center;
+
+				&:before {
+					content: "";
+					background-image: url('/resources/icon-checkmark-pos.svg');
+					background-size: contain;
+					background-repeat: no-repeat;
+					background-position: center center;
+					left: 0;
+					top: 0;
+					width: 1rem;
+					height: 0.8rem;
+					margin-right: 1rem;
+					display: inline-block;
+					flex-shrink: 0;
+					flex-grow: 0;
+				}
+			}
 		}
 
 		.cta-button {
 			align-self: flex-start;
 		}
+	}
+
+	&.image-banner {
+		min-height: 27rem;
+		@include background-image;
+		h3 {
+			margin-left: auto;
+			display: block;
+			text-align: left;
+			width: max-content;
+			color: $lit-col;
+			text-transform: uppercase;
+			font-size: 2.5rem;
+			line-height: 2.5rem;
+			font-weight: 200;
+			@media only screen and (max-width: $container-size-s) {
+				font-size: 2rem;
+				line-height: 2rem;
+			}
+			strong {
+				font-weight: 600;
+			}
+			
+		}
+	}
+
+	&.form-wrapper {
+
+		.content-wrapper {
+			width: auto;
+			@media only screen and (max-width: $container-size-s) {
+				width: 100%;
+			}
+		}
+
+		h4 {
+			font-size: 1.8rem;
+			text-transform: uppercase;
+			margin-top: 0;
+			margin-bottom: 2.5rem;
+		}
+
+		form {
+			background-color: $lit-col;
+			padding: 4rem;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			margin-top: -7rem;
+			@media only screen and (max-width: $container-size-m) {
+				padding: 2rem;
+			}
+			@media only screen and (max-width: $container-size-s) {
+				padding: 1.5rem;
+			}
+		}
+
+		.input-row-wrapper {
+			display: flex;
+			margin-bottom: 2.5rem;
+			@media only screen and (max-width: $container-size-m) {
+				flex-direction: column;
+				width: 100%;
+				margin-bottom: 1.5rem;
+			}
+
+			.input-wrapper {
+				flex: 1;
+				flex-grow: 0;
+				flex-shrink: 0;
+				margin-right: 2.5rem;
+				@media only screen and (max-width: $container-size-m) {
+					margin-right: 0;
+					margin-bottom: 1.5rem;
+					width: 100%;
+				}
+				&:last-of-type {
+					margin-right: 0;
+				}
+
+				input {
+					padding-left: 0.7rem;
+					padding-right: 0.7rem;
+					padding-top: 0.3rem;
+					padding-bottom: 0.3rem;
+					border: none;
+					letter-spacing: 1px;
+					border-bottom: solid 1px #acc7db;
+					@media only screen and (max-width: $container-size-m) {
+						width: 100%;
+					}
+					&::placeholder {
+						color: #acc7db;
+					}
+				}
+
+			}
+
+			button {
+				@media only screen and (max-width: $container-size-m) {
+					margin-bottom: 1.5rem;
+				}
+			}
+		}
+
 	}
 }

@@ -46,7 +46,33 @@
 					margin-bottom: 0;
 				}
 			}
+
+			.scroll-down {
+				max-width: 10rem;
+				align-items: center;
+				&:hover {
+					text-decoration: none;
+					.scroll-text {
+						text-decoration: underline;
+					}
+					.arrow {
+						text-decoration: none;
+					}
+				}
+	
+				span.scroll-text {
+					margin-left: 0;
+				}
+	
+				.arrow {
+					margin-left: auto;
+					font-size: 1.3rem;
+					text-decoration: none;
+				}
+			}
 		}
+
+
 	}
 
 	

@@ -15,7 +15,7 @@
 							
 							?>
 							
-					<a href="javascript:void(0);" onclick="javascript:$.scrollTo('#<?php echo $uniId; ?>', 1000)" class="scroll-down"><?php echo $val['cl_name']; ?>&nbsp;&rsaquo;</a>
+					<a href="javascript:void(0);" onclick="javascript:$.scrollTo('#<?php echo $uniId; ?>', 1000)" class="scroll-down"><span class="scroll-text"><?php echo $val['cl_name']; ?></span><span class="arrow">&rsaquo;</span></a>
 							
 							<?php
 						}
