@@ -2,7 +2,7 @@
 
 	<div class="logo-container">
 		<a href="/">
-			<img src="<?php echo $dynamicRoot; ?>resources/logo.svg" alt="Jack Frenken logo" class="desktop-logo" />
+			<img src="<?php echo $dynamicRoot; ?>resources/logo_jf_landscape.svg" alt="Jack Frenken logo" class="desktop-logo" />
 			<img src="<?php echo $dynamicRoot; ?>resources/logo_jf_landscape.svg" alt="Jack Frenken beeldmerk" class="mobile-beeldmerk" />
 		</a>
 	</div>

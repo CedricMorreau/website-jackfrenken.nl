@@ -185,6 +185,8 @@
 		}
 	}
 
+	
+
 	.service-bar {
 		background-color: $pri-col;
 		color: $lit-col;
@@ -192,13 +194,22 @@
 		height: auto;
 		z-index: 3;
 		margin-left: -8rem;
+		position: relative;
+		@media only screen and (max-width: $container-size-ml) {
+			margin-left: 0;
+		}
 		@media only screen and (max-width: $container-size-m) {
 			width: 100%;
+			margin-left: 0;
 			margin-right: 0;
 			padding-bottom: 3rem;
 		}
 
 		.service-quote {
+			@media only screen and (max-width: $container-size-m) {
+				display: none;
+			}
+
 			.quote-wrapper {
 				background-color: $sec-col;
 				padding: 1.5rem;
@@ -256,6 +267,7 @@
 			padding-top: 1rem;
 			padding-bottom: 1rem;
 			justify-content: flex-end;
+			position: relative;
 
 			@media only screen and (max-width: $container-size-m) {
 				margin-right: 0;
@@ -266,6 +278,24 @@
 				padding-right: 2rem;
 				justify-content: space-between;
 				width: 100%;
+			}
+
+			&:after {
+				content: "";
+				display: block;
+				position: absolute;
+				left: -9vw;
+				top: 0;
+				width: 10rem;
+				height: 100%;
+				background-image: url('/resources/jf-logo-search.svg');
+				background-size: contain;
+				background-position: center left;
+				background-repeat: no-repeat;
+				z-index: 1;
+				@media only screen and (max-width: $container-size-ml) {
+					left: -2rem;
+				}
 			}
 
 			a {
