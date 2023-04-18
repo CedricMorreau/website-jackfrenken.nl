@@ -470,3 +470,168 @@
 	}
 }
 
+// Hypotheekadvies template
+.square-blocks-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	@media only screen and (max-width: $container-size-m) {
+		flex-direction: column;
+	}
+	
+	.square-option {
+		width: calc(50% - 1rem);
+		margin-right: 2rem;
+		margin-bottom: 2rem;
+		min-height: 18rem;
+		background-color: $pri-col;
+		color: $lit-col;
+		font-size: 3rem;
+		font-weight: bold;
+		font-family: $fon-fam-sec;
+		text-transform: uppercase;
+		text-decoration: none;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		cursor: pointer;
+
+		@media only screen and (max-width: $container-size-m) {
+			width: 100%;
+			min-height: 15rem;
+			margin-right: 0;
+			margin-bottom: 1rem;
+		}
+
+		@media only screen and (max-width: $container-size-s) {
+			font-size: 2rem;
+			line-height: 2.5rem;
+		}
+
+		&:nth-of-type(2n) {
+			margin-right: 0;
+		}
+
+		h5 {
+			margin: 0;
+			line-height: 2.8rem;
+			color: inherit;
+		}
+
+		span {
+			color: $sec-col;
+		}
+
+		&:hover {
+			h5 {
+				color: $sec-col;
+			}
+			span {
+				color: $lit-col;
+			}
+		}
+		
+	}
+
+}
+
+.square-sub-blocks-section {
+	background-color: darken($lit-col, 3%);	
+	margin-top: 15rem;
+}
+
+.square-sub-blocks-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	margin-top: -14rem;
+	margin-bottom: 3rem;
+	@media only screen and (max-width: $container-size-m) {
+		flex-direction: column;
+	}
+
+	.square-option {
+		min-height: 10rem;
+		background-color: $sec-col;
+		color: $lit-col;
+		width: calc(33.3333% - 1rem);
+		margin-right: 1.5rem;
+		margin-bottom: 1.5rem;
+		min-height: 17rem;
+		color: $lit-col;
+		font-size: 2rem;
+		font-weight: bold;
+		font-family: $fon-fam-sec;
+		text-transform: uppercase;
+		text-decoration: none;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		cursor: pointer;
+		position: relative;
+		@media only screen and (max-width: $container-size-m) {
+			width: 100%;
+			min-height: 15rem;
+			margin-right: 0;
+		}
+
+		@media only screen and (max-width: $container-size-s) {
+			min-height: 12rem;
+		}
+
+		h5 {
+			text-align: left;
+			color: inherit;
+			font-weight: normal;
+			strong {
+				font-weight: 600;
+			}
+		}
+
+		&:last-of-type {
+			margin-right: 0;
+		}
+
+		&:hover {
+			background-color: $pri-col;
+			.label {
+				background-color: $sec-col;
+			}
+		}
+
+		.label {
+			position: absolute;
+			right: -0.8rem;
+			top: 1rem;
+			background-color: $pri-col;
+			color: $lit-col;
+			font-size: 1rem;
+			font-weight: 300;
+			padding-left: 1.5rem;
+			padding-right: 1.5rem;
+			padding-top: 0.5rem;
+			padding-bottom: 0.5rem;
+		}
+	}
+
+}
+
+.square-sub-block-section-spacer {
+	height: 10rem;
+	background-color: $lit-col;
+}
+
+.square-sub-block-title {
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 3rem;
+	margin-top: 0;
+	margin-bottom: 4rem;
+	@media only screen and (max-width: $container-size-m) {
+		font-size: 2rem;
+		line-height: 2.5rem;
+	}
+	span {
+		color: $sec-col;
+	}
+}

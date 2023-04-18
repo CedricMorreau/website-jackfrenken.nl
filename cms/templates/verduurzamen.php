@@ -88,28 +88,28 @@ $sfeerbeeld = trim($template->getCustomVar('sfeerbeeld'));
 			</section>
 
 			<!-- Page content -->
-			<section class="wide-block-wrapper">
+			<section class="wide-block-wrapper bg-nth">
 				<div class="content-wrapper">
 					<h2>Verduurzaamhypotheek afsluiten? <strong>Check je mogelijkheden</strong></h2>
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tempor lectus et est porta rhoncus. Integer vitae sollicitudin magna. Nullam mi arcu, feugiat et faucibus eu, molestie vel nisl.</p><p>Ut tortor leo, hendrerit sit amet est eget, interdum finibus felis. Donec fermentum dui vel mauris luctus, et tincidunt nisl bibendum. Quisque sit amet placerat augue. Nullam euismod quam arcu, euismod tempor sem rhoncus nec. Ut nisi eros, scelerisque et dolor eget, iaculis rutrum augue. Nam pulvinar at libero ac bibendum. Nunc molestie nisi velit, sit amet accumsan lacus scelerisque ac. Suspendisse cursus mi non nisl posuere, et ultrices lectus ornare. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi placerat orci quis laoreet venenatis. Duis consectetur quam a dolor gravida laoreet.</p>
 				</div>
 			</section>
 
-			<section class="wide-block-wrapper">
+			<section class="wide-block-wrapper bg-nth">
 				<div class="content-wrapper">
 					<h2>Jouw woning <strong>verduurzamen</strong></h2>
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tempor lectus et est porta rhoncus. Integer vitae sollicitudin magna. Nullam mi arcu, feugiat et faucibus eu, molestie vel nisl. Ut tortor leo, hendrerit sit amet est eget, interdum finibus felis. Donec fermentum dui vel mauris luctus, et tincidunt nisl bibendum. Quisque sit amet placerat augue. Nullam euismod quam arcu, euismod tempor sem rhoncus nec. Ut nisi eros, scelerisque et dolor eget, iaculis rutrum augue. Nam pulvinar at libero ac bibendum. Nunc molestie nisi velit, sit amet accumsan lacus scelerisque ac. Suspendisse cursus mi non nisl posuere, et ultrices lectus ornare. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi placerat orci quis laoreet venenatis. Duis consectetur quam a dolor gravida laoreet.</p>
 				</div>
 			</section>
 
-			<section class="wide-block-wrapper">
+			<section class="wide-block-wrapper bg-nth">
 				<div class="content-wrapper">
 					<h2>De waarde van jouw woning <strong>verhogen</strong></h2>
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tempor lectus et est porta rhoncus. Integer vitae sollicitudin magna.</p><p>Nullam mi arcu, feugiat et faucibus eu, molestie vel nisl. Ut tortor leo, hendrerit sit amet est eget, interdum finibus felis. Donec fermentum dui vel mauris luctus, et tincidunt nisl bibendum. Quisque sit amet placerat augue. Nullam euismod quam arcu, euismod tempor sem rhoncus nec. Ut nisi eros, scelerisque et dolor eget, iaculis rutrum augue. Nam pulvinar at libero ac bibendum. Nunc molestie nisi velit, sit amet accumsan lacus scelerisque ac. Suspendisse cursus mi non nisl posuere, et ultrices lectus ornare. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi placerat orci quis laoreet venenatis. Duis consectetur quam a dolor gravida laoreet.</p>
 				</div>
 			</section>
 
-			<section class="wide-block-wrapper two-col">
+			<section class="wide-block-wrapper bg-nth two-col">
 				<div class="content-wrapper">
 					<div class="flex col row one">
 						<div class="flex col one margin-right-m">
@@ -132,7 +132,7 @@ $sfeerbeeld = trim($template->getCustomVar('sfeerbeeld'));
 				</div>
 			</section>
 
-			<section class="wide-block-wrapper image-banner" style="background-image: url('http://localhost:42069/resources/homepage-header.jpg')">
+			<section class="wide-block-wrapper bg-nth image-banner" style="background-image: url('http://localhost:42069/resources/homepage-header.jpg')">
 				<div class="content-wrapper">
 					<h3>
 						Jack Frenken<br>
@@ -142,7 +142,7 @@ $sfeerbeeld = trim($template->getCustomVar('sfeerbeeld'));
 				</div>
 			</section>
 
-			<section class="wide-block-wrapper form-wrapper">
+			<section class="wide-block-wrapper bg-nth form-wrapper">
 				<div class="content-wrapper form-content-wrapper">
 					<form>
 						<h4>Afspraak maken</h4>
