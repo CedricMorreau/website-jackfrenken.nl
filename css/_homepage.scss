@@ -57,7 +57,6 @@
 			width: 70vw;
 			height: auto;
 			position: relative;
-			
 			margin-top: 3rem;
 			margin-bottom: 7rem;
 			padding-left: 5rem;
@@ -99,6 +98,8 @@
 				font-size: 3.5rem;
 				line-height: 3.5rem;
 				font-weight: 300;
+				position: relative;
+				width: min-content;
 				@media only screen and (max-width: $container-size-l) {
 					font-size: 2rem;
 				}
@@ -106,35 +107,14 @@
 				strong {
 					font-weight: 600;
 					position: relative;
-
-					&:before {
-						content: "";
-						display: block;
-						position: absolute;
-						left: 0;
-						top: 100%;
-						height: 1px;
-						width: 100%;
-						border-bottom: solid 1px $pri-col;
-					}
-
-					&:after {
-						bottom: 0;
-						content: "";
-						display: block;
-						box-sizing: border-box;
-						position: absolute;
-						width: 1.3rem;
-						height: 1.3rem;
-						border-bottom: 1px solid;
-						border-right: 1px solid;
-						transform: rotate(45deg);
-						top: calc(100% - 10px);
-						right: 10%;
-						background: rgba(218,225,237,.9);
-					}
 				}
 
+				img {
+					margin-left: auto;
+					height: 1.3rem;
+					margin-top: 1rem;
+					display: block;
+				}
 
 			}
 
@@ -144,6 +124,7 @@
 				padding-bottom: 0.3rem;
 				margin-bottom: 1rem;
 				font-size: 1.1em;
+				font-family: $fon-fam-sec;
 				text-decoration: none;
 				font-weight: 300;
 				z-index: 4;
@@ -351,7 +332,7 @@
 						margin-left: 0;
 						width: 100%;
 					}
-
+					font-weight: 300;
 					display: flex;
 					flex-direction: column;
 

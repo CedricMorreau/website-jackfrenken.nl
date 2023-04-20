@@ -95,17 +95,31 @@
 		.content-wrapper {
 			display: flex;
 			max-width: $container-size-xl;
+			flex-direction: row;
 		}
 
 		.header-title {
 			background-color: $overlay-col;
-
+			color: $pri-col;
+			text-transform: uppercase;
+			padding-top: 3rem;
+			padding-bottom: 3rem;
+			
+			&:before {
+				display: none;
+			}
 			@media only screen and (max-width: $container-size-m) {
 				min-height: 0;
 			}
 
+			h1 {
+				text-transform: uppercase;
+				font-weight: 600;
+			}
+
 			.city {
 				font-weight: 300;
+				text-transform: uppercase;
 			}
 
 			.openhouse {
@@ -118,6 +132,10 @@
 				padding-top: 0.3rem;
 				padding-bottom: 0.3rem;
 				line-height: 1.8rem;
+			}
+
+			.title-price {
+				font-weight: 300;
 			}
 
 			&:after {
@@ -305,6 +323,8 @@
 	.content-wrapper {
 		> h2:first-child {
 			margin-top: 0;			
+			margin-bottom: 1.5rem;
+			font-weight: 600;
 		}
 
 		#map_canvas {

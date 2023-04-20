@@ -86,8 +86,8 @@ ul.ui-autocomplete {
 
 .cta-button {
 	font-size: 1.1rem;
-	padding-top: 0.7rem;
-	padding-bottom: 0.7rem;
+	padding-top: 0.4rem;
+	padding-bottom: 0.4rem;
 	padding-left: 1.5rem;
 	padding-right: 1.5rem;
 	margin-right: 2rem;
@@ -100,6 +100,7 @@ ul.ui-autocomplete {
 	cursor: pointer;
 	outline: none;
 	border: none;
+	letter-spacing: 1px;
 	@media only screen and (max-width: $container-size-s) {
 		width: 100%;
 		margin-bottom: 1rem;
@@ -141,7 +142,7 @@ ul.ui-autocomplete {
 
 	&.ghost {
 		background-color: transparent;
-		border: solid 2px $pri-col;
+		border: solid 1.5px $pri-col;
 		color: $pri-col;
 		&:hover {
 			border-color: $sec-col;
@@ -538,6 +539,7 @@ ul.ui-autocomplete {
 					background-position-x: center;
 					background-position-y: center;
 					flex-shrink: 0;
+					aspect-ratio: 5/3;
 
 					@media only screen and (max-width: $container-size-m) {
 						width: 100%;
@@ -804,6 +806,7 @@ ul.ui-autocomplete {
 		.form-submit-wrapper {
 			margin-top: 1rem;
 			button {
+				font-family: $fon-fam-pri;
 				padding-top: 1rem;
 				padding-bottom: 1rem;
 				width: 100%;
@@ -826,7 +829,7 @@ ul.ui-autocomplete {
 	padding-left: 2rem;
 	padding-right: 2rem;
 	padding-top: 5rem;
-	padding-bottom: 5rem;
+	padding-bottom: 3rem;
 	font-size: 1rem;
 	position: relative;
 	width: 100%;
@@ -1084,6 +1087,9 @@ ul.ui-autocomplete {
 
 			&:hover {
 				color: $qua-col;
+				.rating {
+					color: inherit;
+				}
 			}
 		}
 
@@ -1107,7 +1113,7 @@ ul.ui-autocomplete {
 		}
 
 		.rating {
-			color: $qua-col;
+			color: #9fbfd4;
 			font-weight: bold;
 			margin-left: 0.3rem;
 			margin-right: 0.3rem;
@@ -1173,6 +1179,7 @@ ul.ui-autocomplete {
 	justify-content: center;
 	color: $lit-col;
 	font-size: inherit;
+	font-weight: 300;
 	
 	@media only screen and (max-width: $container-size-m) {
 		margin-left: 0;

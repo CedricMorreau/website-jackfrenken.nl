@@ -148,6 +148,7 @@
 
 			h1 {
 				font-size: 2rem;
+				font-weight: 300;
 				text-transform: lowercase;
 				padding-top: 0;
 				margin-top: 0;
@@ -159,6 +160,10 @@
 	  			}
 	  			@media only screen and (max-width: $container-size-s) {
 					font-size: 1.3rem;
+				}
+
+				strong {
+					font-weight: 600;
 				}
 
 			}
@@ -246,6 +251,7 @@
 	}
 
 	.breadcrumbs-wrapper {
+		font-family: $fon-fam-sec;
 		ul {
 			color: lighten($dar-col, 70%);
 			list-style: none;
@@ -318,7 +324,7 @@
 
 		.sidebar-nav {
 			margin-left: 4rem;
-			margin-bottom: 3rem;
+			margin-bottom: 5rem;
 			font-weight: bold;
 			line-height: 2rem;
 			list-style: none;
@@ -328,6 +334,7 @@
 			}
 
 			li {
+				margin-bottom: 0.3rem;
 				&.active {
 					color: $qua-col;
 					a {
@@ -443,6 +450,7 @@
 			
 			h2 {
 				font-size: 2.5rem;
+				font-weight: 300;
 				line-height: 3rem;
 				text-transform: uppercase;
 				margin-top: 0;
@@ -453,12 +461,20 @@
 					font-size: 2rem;
 					word-break: break-word;
 				}
+
+				strong {
+					font-weight: 600;
+				}
 			}
 
 			h3 {
 				font-size: 1.5rem;
+				font-weight: 300;
 				padding-bottom: 0;
 				margin-bottom: 0;
+				strong {
+					font-weight: 600;
+				}
 			}
 
 			.intro {
@@ -474,7 +490,7 @@
 
 			p {
 				ul {
-					margin-left: 1rem;
+					margin-left: 1.1rem;
 				}
 				a {
 					font-size: inherit;
@@ -487,6 +503,7 @@
 			ul {
 				margin-left: 1rem;
 				background-color: none;
+				list-style-type: disc;
 			}
 			
 			img {
@@ -640,8 +657,9 @@
 			
 			h2 {
 				font-size: 2.5rem;
+				font-weight: 300;
 				line-height: 3rem;
-				margin-top: 1rem;
+				margin-top: 0;
 				margin-bottom: 0;
 				padding-top: 0;
 				padding-bottom: 0;
@@ -649,6 +667,9 @@
 					margin-top: 2rem;
 					font-size: 2rem;
 					word-break: break-word;
+				}
+				strong {
+					font-weight: 600;
 				}
 			}
 
