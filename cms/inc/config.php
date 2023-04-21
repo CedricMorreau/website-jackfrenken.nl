@@ -13,7 +13,7 @@ ob_start();
 
 // bb2_start(bb2_read_settings());
 
-$env_path = dirname(__DIR__, 2) . '/env.php';
+$env_path = dirname(dirname(dirname(__FILE__))) . '/env.php';
 
 if (!is_file($env_path))
 	die('Failed to read environment file at ' . $env_path);
