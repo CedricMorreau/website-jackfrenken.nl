@@ -1,7 +1,5 @@
-# Eclipse zaken
-.project
-.buildpath
-.settings/*
+# Exclude environment file
+env.php
 
 # Exclude cache folder
 data/cache/auto/*
