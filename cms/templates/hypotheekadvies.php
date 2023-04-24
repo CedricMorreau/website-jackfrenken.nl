@@ -43,8 +43,17 @@ $sfeerbeeld = trim($template->getCustomVar('sfeerbeeld'));
 						
 							if (isset($pageOverride))
 								echo $pageOverride;
-							else
-								echo $template->getPageDataMulti('navTitle');
+							else {
+
+								if (!empty($template->getPageDataMulti('alternateTitle'))) {
+			
+									echo $template->getPageDataMulti('alternateTitle');
+								}
+								else {
+			
+									echo $template->getPageDataMulti('navTitle');
+								}
+							}
 							
 							?>
 							</h1>
