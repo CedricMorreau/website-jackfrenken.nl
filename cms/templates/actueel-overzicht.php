@@ -272,7 +272,7 @@ function isActive($name) {
 							 -->
 							<?php
 							
-							$pagingClass = new PP_Paging($totalPages, $perPage, $page, $dynamicRoot . $template->getPermaLink($template->getCurrentLanguage()) . '&type=' . $_GET['type']);
+							$pagingClass = new PP_Paging($totalPages, $perPage, $page, $dynamicRoot . $template->getPermaLink($template->getCurrentLanguage()) . '?type=' . $_GET['type']);
 							
 							?>
 							
