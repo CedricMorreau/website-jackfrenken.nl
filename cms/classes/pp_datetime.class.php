@@ -36,7 +36,7 @@ class PP_DateTime extends DateTime {
         return $this->diff($now)->format('%y');
     }
     
-    static function convertDate($date, $format = 'Y-m-d H:i:s', $newFormat) {
+    static function convertDate($date, $format = 'Y-m-d H:i:s', $newFormat = 'd-m-Y H:i:s') {
     	
     	$d = DateTime::createFromFormat($format, $date);
     	
