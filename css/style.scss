@@ -85,9 +85,7 @@
 				font-size: 1rem;
 				text-decoration: none;
 				&:hover {
-					text-decoration: underline;
-					background-color: $pri-col;
-					color: $lit-col;
+					color: $sec-col;
 					text-decoration: none;
 				}
 			}
@@ -102,21 +100,40 @@
 			}
 		}
 
-		.next {
-			background-color: $pri-col;
-			margin-left: 1rem;
+		.previous {
+			margin-right: 1rem;
 			display: inline-block;
 			a {
 				display: block;
 				text-decoration: none;
-				color: $lit-col;
+				color: $pri-col;
 				font-size: 1rem;
 				padding-left: 1rem;
 				padding-right: 1rem;
 				padding-top: 0.7rem;
 				padding-bottom: 0.7rem;
+				transform: scaleX(0.7);
 				&:hover {
-					background: $ter-col;
+					color: $sec-col;
+				}
+			}
+		}
+
+		.next {
+			margin-left: 1rem;
+			display: inline-block;
+			a {
+				display: block;
+				text-decoration: none;
+				color: $pri-col;
+				font-size: 1rem;
+				padding-left: 1rem;
+				padding-right: 1rem;
+				padding-top: 0.7rem;
+				padding-bottom: 0.7rem;
+				transform: scaleX(0.7);
+				&:hover {
+					color: $sec-col;
 				}
 			}
 		}
