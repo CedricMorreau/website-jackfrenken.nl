@@ -197,6 +197,11 @@
 				}
 
 				&.rsFullscreen {
+					background-color: $lit-col;
+
+					.rsContainer {
+						background-color: $lit-col;
+					}
 					.rsThumbs {
 						display: block;
 					}

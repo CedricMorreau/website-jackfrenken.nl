@@ -263,6 +263,14 @@
 				&.active {
 					color: lighten($dar-col, 50%);
 				}
+				a {
+					color: inherit;
+					font-size: inherit;
+					text-decoration: none;
+					&:hover {
+						color: $pri-col;
+					}
+				}
 			}
 		}
 	}
