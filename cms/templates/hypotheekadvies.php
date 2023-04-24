@@ -49,7 +49,6 @@ $sfeerbeeld = trim($template->getCustomVar('sfeerbeeld'));
 							?>
 							</h1>
 
-							<a href="javascript:void(0);" onclick="javascript:$.scrollTo('#stappenplan', 1000)" class="scroll-link">Zie stappenplan</a>
 						</div>
 					</div>
 					
@@ -108,14 +107,14 @@ $sfeerbeeld = trim($template->getCustomVar('sfeerbeeld'));
 			</section>
 
 
-			<section class="wide-block-wrapper image-banner" style="background-image: url('http://localhost:42069/resources/homepage-header.jpg')">
+			<section class="wide-block-wrapper image-banner" style="background-image: url('/resources/fin-adv-team.jpg')">
 				<div class="content-wrapper">
 					<h3>
 						Voor een <em>gratis</em><br>
 						intake bel met<br>
 						onze <strong>Financieel <br>adviseurs</strong>
 						<br><br>
-						<strong><span>[]</span> (0475) 31 88 88</strong>
+						<strong><span><?php include($documentRoot . "resources/icon-telefoon-clean.svg"); ?></span> (0475) 31 88 88</strong>
 					</h3>
 				</div>
 			</section>

@@ -134,6 +134,7 @@
 	&.image-banner {
 		min-height: 27rem;
 		@include background-image;
+
 		h3 {
 			margin-left: auto;
 			display: block;
@@ -150,6 +151,11 @@
 			}
 			strong {
 				font-weight: 600;
+			}
+
+			svg {
+				width: 2.2rem;
+				height: 2.2rem;
 			}
 			
 		}
