@@ -189,6 +189,9 @@ function isActive($name) {
 											$url = $template->getPermaLink($template->getCurrentLanguage()) . '/' . $val['cms_per_link'];
 											
 											$date = new PP_DateTime($values['art_pubDate']);
+
+											if (empty($values['art_overviewPhoto']))
+												$values['art_overviewPhoto'] = '/resources/aanbod-no-image.jpg';
 											
 											// Add thumb
 											if (strpos($values['art_overviewPhoto'], '?') !== false)
