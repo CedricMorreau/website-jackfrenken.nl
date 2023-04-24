@@ -46,10 +46,10 @@
 				<?php
 
 				if (!isset($extraCrumbs))
-					$extraCrumbs = array();
+					$extraCrumbs = array($values['art_title'] => 1);
 
 				if (!isset($ignoreCrumb))
-					$ignoreCrumb = 0;
+					$ignoreCrumb = 1;
 							
 				$breadCrumbs = new Breadcrumbs($template->getPageData('id'), $template->getPageData('nav'), $cms['database'], $template, $extraCrumbs, $ignoreCrumb);
 
