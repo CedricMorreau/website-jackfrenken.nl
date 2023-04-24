@@ -25,10 +25,22 @@ if (count($widgetData) > 0) {
 		if (isset($dataArray['widget_status'][3])) {
 		
 		$url = $this->buildDynamicUrl($dataArray['widget_landingPage'], 2);
+
+		$color_class = '';
+		$use_key = key($dataArray['widget_color'] ?? [0 => 0]);
+
+		switch ($use_key) {
+
+			case 14:
+
+				$color_class = ' ghost-white';
+
+				break;
+		}
 		
 		?>
 		
-<div class="sidebar-widget">
+<div class="sidebar-widget<?php echo $color_class; ?>">
 
 	<?php
 	
