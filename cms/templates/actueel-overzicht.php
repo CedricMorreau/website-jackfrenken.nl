@@ -259,10 +259,10 @@ function isActive($name) {
 							
 							?>
 	
-							<div class="text-wrapper">
+							<!-- <div class="text-wrapper">
 								Resultaten <span class="bold"><?php echo $pageStart; ?> t/m <?php echo $pageEnd; ?></span> van <span class="bold"><?php echo $totalActueel; ?></span>
 							</div>
-							
+							 -->
 							<?php
 							
 							$pagingClass = new PP_Paging($totalPages, $perPage, $page, $dynamicRoot . $template->getPermaLink($template->getCurrentLanguage()) . '&type=' . $_GET['type']);

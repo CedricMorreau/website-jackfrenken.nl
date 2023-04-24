@@ -318,8 +318,7 @@
 		}
 
 		.sidebar-title {
-			font-size: 3rem;
-			margin-left: 1rem;
+			font-size: 2rem;
 			text-transform: uppercase;
 			@media only screen and (max-width: $container-size-l) {
 				font-size: 2rem;
@@ -332,7 +331,7 @@
 		}
 
 		.sidebar-nav {
-			margin-left: 4rem;
+			margin-left: 0;
 			margin-bottom: 5rem;
 			font-weight: bold;
 			line-height: 2rem;
@@ -343,7 +342,8 @@
 			}
 
 			li {
-				margin-bottom: 0.3rem;
+				margin-bottom: 0.5rem;
+				
 				&.active {
 					color: $qua-col;
 					a {
@@ -363,6 +363,7 @@
 					text-transform: uppercase;
 					white-space: nowrap;
 					font-size: 1.2rem;
+					font-family: $fon-fam-sec;
 					width: 100%;
 					display: flex;
 
