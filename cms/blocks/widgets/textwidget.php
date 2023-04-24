@@ -37,7 +37,7 @@ if (count($widgetData) > 0) {
 	?>
 
 	<h3>
-		<a href="<?php echo $url; ?>"><?php echo $dataArray['widget_title']; ?></a>
+		<a href="<?php echo $url; ?>"><?php echo $dataArray['widget_visibleTitle'] ?? $dataArray['widget_title']; ?></a>
 	</h3>
 	<p>
 		<a href="<?php echo $url; ?>"><?php echo $dataArray['widget_text']; ?> &rsaquo;</a>
@@ -46,7 +46,7 @@ if (count($widgetData) > 0) {
 	<?php } else { ?>
 	
 	<h3>
-		<?php echo $dataArray['widget_title']; ?>
+		<?php echo $dataArray['widget_visibleTitle'] ?? $dataArray['widget_title']; ?>
 	</h3>
 	<p>
 		<?php echo $dataArray['widget_text']; ?>
