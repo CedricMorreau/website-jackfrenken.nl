@@ -109,21 +109,23 @@ $sfeerbeeld = trim($template->getCustomVar('sfeerbeeld'));
 			<section class="wide-block-wrapper bg-nth">
 				<div class="content-wrapper">
 					<h2>Verduurzaamhypotheek afsluiten? <strong>Check je mogelijkheden</strong></h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tempor lectus et est porta rhoncus. Integer vitae sollicitudin magna. Nullam mi arcu, feugiat et faucibus eu, molestie vel nisl.</p><p>Ut tortor leo, hendrerit sit amet est eget, interdum finibus felis. Donec fermentum dui vel mauris luctus, et tincidunt nisl bibendum. Quisque sit amet placerat augue. Nullam euismod quam arcu, euismod tempor sem rhoncus nec. Ut nisi eros, scelerisque et dolor eget, iaculis rutrum augue. Nam pulvinar at libero ac bibendum. Nunc molestie nisi velit, sit amet accumsan lacus scelerisque ac. Suspendisse cursus mi non nisl posuere, et ultrices lectus ornare. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi placerat orci quis laoreet venenatis. Duis consectetur quam a dolor gravida laoreet.</p>
+					<p>Wil je graag je eigen huis uitbreiden met een extra kamer of een grotere leefruimte? Of witje jouw wooncomfort verbeteren door bijvoorbeeld je woning goed te Isoleren of het renoveren van bijvoorbeeld je badkamer? Het verbouwen ven je huls helpt je jouw doel te bereiken. Kun je of wil je dit niet volledig met eigen geld betalen dan ken een lening de oplossing bieden. Welke mogelijkheden je hebt hangt af van je inkomen en eventuele overwaarde van je huis. Wil je weten hoeveel je kunt lenen voor het verbouwen van je woning?. </p>
+					<a href="<?php echo $template->findPermalink(70, 1); ?>" class="cta-button">Afspraak maken</a>
 				</div>
 			</section>
 
 			<section class="wide-block-wrapper bg-nth">
 				<div class="content-wrapper">
 					<h2>Jouw woning <strong>verduurzamen</strong></h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tempor lectus et est porta rhoncus. Integer vitae sollicitudin magna. Nullam mi arcu, feugiat et faucibus eu, molestie vel nisl. Ut tortor leo, hendrerit sit amet est eget, interdum finibus felis. Donec fermentum dui vel mauris luctus, et tincidunt nisl bibendum. Quisque sit amet placerat augue. Nullam euismod quam arcu, euismod tempor sem rhoncus nec. Ut nisi eros, scelerisque et dolor eget, iaculis rutrum augue. Nam pulvinar at libero ac bibendum. Nunc molestie nisi velit, sit amet accumsan lacus scelerisque ac. Suspendisse cursus mi non nisl posuere, et ultrices lectus ornare. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi placerat orci quis laoreet venenatis. Duis consectetur quam a dolor gravida laoreet.</p>
+					<p>Indien je een lening afsluit voor het verduurzamen van Je woning dan kan dit vaak onder gunstige voorwaarden. Wil je weten hoe dit zit? Oe financieel adviseurs van Jack Frenken zijn op dit gebied gespecialiseerd en kunnen je hier alles over vertellen. </p>
+					<p>Wil jij je woning verduurzamen. maar weet je niet goed waar je moet beginnen? Met behulp van VerbeterJehuis van Milieu Centraal ontdek je welke energiemaatregelen nodig zijn om jouw woning zo optimaal mogelijk te verduurzamen. Daarnaast krijg je een inschatting van de te maken kosten en in welke mate je voordeel geniet. Zo zie je direct hoe jij jouw investering weer terugverdient. </p>
 				</div>
 			</section>
 
 			<section class="wide-block-wrapper bg-nth">
 				<div class="content-wrapper">
 					<h2>De waarde van jouw woning <strong>verhogen</strong></h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tempor lectus et est porta rhoncus. Integer vitae sollicitudin magna.</p><p>Nullam mi arcu, feugiat et faucibus eu, molestie vel nisl. Ut tortor leo, hendrerit sit amet est eget, interdum finibus felis. Donec fermentum dui vel mauris luctus, et tincidunt nisl bibendum. Quisque sit amet placerat augue. Nullam euismod quam arcu, euismod tempor sem rhoncus nec. Ut nisi eros, scelerisque et dolor eget, iaculis rutrum augue. Nam pulvinar at libero ac bibendum. Nunc molestie nisi velit, sit amet accumsan lacus scelerisque ac. Suspendisse cursus mi non nisl posuere, et ultrices lectus ornare. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi placerat orci quis laoreet venenatis. Duis consectetur quam a dolor gravida laoreet.</p>
+					<p>Door een verbouwing kan de waarde van je woning stijgen. Maar vergis je niet. Een verbouwing van bijvoorbeeld &euro;10.000,- betekent niet altijd dat de waarde van de woning met €10.000.- stijgt. Een waardestijging van de woning hangt af van wat je in je huis verbouwt. Zorgt de verbouwing voor meer wooncomfort, een groter woonoppervlakte of verbetert het de staat van jouw woning? Wij kunnen jou vertellen wat je beoogde verbouwing zal doen met de waarde van je woning. </p>
 				</div>
 			</section>
 
@@ -150,7 +152,7 @@ $sfeerbeeld = trim($template->getCustomVar('sfeerbeeld'));
 				</div>
 			</section>
 
-			<section class="wide-block-wrapper bg-nth image-banner" style="background-image: url('http://localhost:42069/resources/homepage-header.jpg')">
+			<section class="wide-block-wrapper bg-nth image-banner" style="background-image: url('/resources/fin-adv-team.jpg')">
 				<div class="content-wrapper">
 					<h3>
 						Jack Frenken<br>
