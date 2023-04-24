@@ -126,5 +126,31 @@
 			height: 18rem;
 		}
 	}
+
+	.header-title {
+		h1 {
+			text-transform: none;
+			font-weight: 300;
+			strong {
+				font-weight: 600;
+			}
+		}
+	}
+
+	.column-content  {
+		.column-content  {
+			.content-wrapper {
+				h2 {
+				font-size: 1.8rem;
+				line-height: 2rem;
+				font-weight: 300;
+					strong {
+						font-weight: 600;
+					}
+				}
+			}
+		}
+	}
+
 }
 

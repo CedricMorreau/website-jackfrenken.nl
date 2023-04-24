@@ -898,12 +898,12 @@ ul.ui-autocomplete {
 			position: absolute;
 			right: 0;
 			top: -7.7rem;
-			height: 4rem;
-			width: 4rem;
+			height: 3rem;
+			width: 3rem;
 			background: $sec-col;
 			transform: rotate(-45deg);
 			padding: 1rem;
-			opacity: 0.8;
+			opacity: 0.6;
 			cursor: pointer;
 			transition: 0.3s all ease-in-out;
 
@@ -914,7 +914,7 @@ ul.ui-autocomplete {
 			.scroll-content-wrapper {
 				position: relative;
 				transform: rotate(-45deg);
-				line-height: 1.5rem;
+				line-height: 0.8rem;
 				font-size: 2rem;
 				height: 2rem;
 				height: 2rem;
