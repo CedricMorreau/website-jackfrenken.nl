@@ -54,15 +54,15 @@
 		.header-title {
 			padding-left: 4rem;
 			padding-right: 4rem;
-			padding-top: 5rem;
-			padding-bottom: 5rem;
+			padding-top: 4rem;
+			padding-bottom: 4rem;
 			z-index: 15;
 			background-color: rgba($pri-col, 0.8);
 			color: $lit-col;
 			text-transform: uppercase;
 			position: relative;
 			top: 50%;
-			transform: translateY(-45%);
+			transform: translateY(-50%);
 			max-width: 28rem;
 			min-width: 28rem;
 
@@ -101,13 +101,12 @@
 			}
 
   			.title-price {
-  				font-size: 1.3rem;
+  				font-size: 1.4rem;
 				margin-bottom: 2rem;
 				text-transform: none;
 			}
 			  
 			.label {
-
 				padding: 10px;
 				padding-left: 15px;
 				padding-right: 15px;
@@ -116,7 +115,6 @@
 			}
 
 			.label.verkocht {
-
 				background-color: #D64242;
 			}
 
@@ -147,17 +145,19 @@
 			}
 
 			h1 {
-				font-size: 2rem;
+				font-size: 2.2rem;
 				font-weight: 300;
-				text-transform: lowercase;
+				line-height: 2.7rem;
 				padding-top: 0;
 				margin-top: 0;
-				margin-bottom: 2rem;
+				margin-bottom: 0;
 				color: inherit;
+
 	  			@media only screen and (max-width: $container-size-m) {
 	  				word-break: break-word;
 	  				font-size: 2rem;
 	  			}
+
 	  			@media only screen and (max-width: $container-size-s) {
 					font-size: 1.3rem;
 				}
@@ -210,7 +210,7 @@
 		background-size: cover;
 		background-position: 50% 50%;
 		background-image: url("../resources/homepage-header.jpg");
-		height: 21rem;
+		height: 22rem;
 		padding-top: 2rem;
 		padding-bottom: 2rem;
 		margin-right: 0;
@@ -337,7 +337,7 @@
 			line-height: 2rem;
 			list-style: none;
 			max-width: 15rem;
-			
+
 			@media only screen and (max-width: $container-size-m) {
 				margin-left: 0;
 			}
@@ -381,7 +381,7 @@
 		}
 
 		.sidebar-widget {
-			margin-left: 4rem;
+			margin-left: 0;
 			margin-bottom: 2rem;
 			background: $sec-col;
 			padding-left: 2rem;

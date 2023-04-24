@@ -149,7 +149,9 @@
 	margin-left: auto;
 	margin-top: auto;
 	display: flex;
+	align-items: center;
 	font-weight: 300;
+	font-family: $fon-fam-sec;
 
 	&:hover {
 		color: $sec-col;
@@ -157,11 +159,13 @@
 
 	span {
 		display: inline-block;
-		transform: rotate(-180deg);	
+		transform: rotate(-180deg) scaleX(0.5);	
+		margin-right: 0.5rem;
 	}
 
 	strong {
 		font-weight: 600;
+		margin-left: 0.3rem;
 	}
 
 	&.ali-top {
