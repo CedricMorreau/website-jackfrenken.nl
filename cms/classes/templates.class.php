@@ -1209,6 +1209,29 @@ class Templates {
 			
 			return $blockData;
 		}
+		elseif (isset($data[2]) && $data[2] == 'blockId') {
+			
+			$blockData = '';
+			
+			// We're looking for a specific block, fetch it by ID
+			$fetchBlock = $this->cms['database']->prepare("SELECT * FROM `tbl_mod_pageTemplatePositionBlocks` LEFT JOIN `tbl_mod_pageTemplatePositionRows` ON `mod_tr_id`=`mod_tb_rowId` LEFT JOIN `tbl_mod_pageTemplateBlocks` ON `mod_tb_blockId`=`mod_bl_id` WHERE `mod_tb_id`=? LIMIT 1", "i", array(
+				$data[3]
+			));
+			
+			// Set block ID
+			$blockId = $fetchBlock;
+			
+			// Add to static blockData array (if none existing)
+			if (! isset($this->staticBlocks[$fetchBlock[0]['mod_bl_frontTemplate'] . '_' . $fetchBlock[0]['mod_tb_id']]))
+				$this->staticBlocks[$fetchBlock[0]['mod_bl_frontTemplate'] . '_' . $fetchBlock[0]['mod_tb_id']] = $fetchBlock[0];
+				
+				$blockData .= $this->returnOutput("cms/blocks/" . $fetchBlock[0]['mod_bl_frontTemplate'] . ".php", $fetchBlock[0]['mod_tb_id'], '', array(
+					$fetchBlock[0]['mod_tr_type'],
+					$fetchBlock[0]['mod_tb_size']
+				)) . PHP_EOL;
+				
+				return $blockData;
+		}
 		elseif (isset($data[2]) && $data[2] == 'var') {
 			
 			// We're looking for a specific variable
