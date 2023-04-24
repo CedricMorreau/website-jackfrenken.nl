@@ -49,9 +49,9 @@
 .paging-wrapper {
 	display: flex;
 	align-items: center;
+	margin-bottom: 2rem;
 	@media only screen and (max-width: $container-size-m) {
 		flex-direction: column;
-		margin-bottom: 2rem;
 	}
 
 	.text-wrapper {

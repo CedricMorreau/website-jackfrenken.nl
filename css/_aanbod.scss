@@ -1,6 +1,8 @@
 
 /* Aanbod overzicht  -------------------------------------------  */
 .aanbod-overzicht {
+
+
 	.column-content {
 		
 		.content-wrapper {
@@ -9,6 +11,7 @@
 			@media only screen and (max-width: $container-size-m) {
 				padding-right: $margin-size-s;
 			}
+
 			.bar-alert {
 				background-color: $qua-col;
 				color: $lit-col;
@@ -28,8 +31,14 @@
 					}
 				}
 			}
+
 			.item-wrapper {
 				margin-right: 0;
+
+				.item-overlay-wrapper {
+					transform: translateY(-60%);
+				}
+
 				> a {
 					text-decoration: none;
 					&:hover {
@@ -211,9 +220,9 @@
 
 			// Arrow left
 			.rsArrowLeft {
-				right: 6rem;
-				height: 2.5rem;
-				width: 2.5rem;
+				right: 5rem;
+				height: 2rem;
+				width: 2rem;
 				bottom: 3px;
 
 				.rsArrowIcn {
@@ -236,7 +245,7 @@
 						text-align: center;
 						color: $sec-col;
 						display: block;
-						line-height:  2.8rem;
+						line-height:  2.3rem;
 						font-size: 3rem;
 						transform: rotate(180deg) rotateY(45deg);
 					}
@@ -246,9 +255,9 @@
 
 			// Arrow right
 			.rsArrowRight {
-				height: 2.5rem;
-				width: 2.5rem;
-				right: 3rem;
+				height: 2rem;
+				width: 2rem;
+				right: 2.5rem;
 				bottom: 3px;
 
 				.rsArrowIcn {
@@ -272,7 +281,7 @@
 						text-align: center;
 						color: $sec-col;
 						display: block;
-						line-height: 2.3rem;
+						line-height: 1.8rem;
 						font-size: 3rem;
 						transform: rotateY(45deg);
 					}
@@ -286,8 +295,8 @@
 				top: initial;
 				right: 0;
 				bottom: 3px;
-				height: 2.5rem;
-				width: 2.5rem;
+				height: 2rem;
+				width: 2rem;
 				background-color: $ter-col;
 				justify-content: center;
 
@@ -710,7 +719,7 @@ header.headerAanbod {
 }
 
 .filter-head {
-	font-family: $fon-fam-pri;
+	font-family: $fon-fam-sec;
 	font-weight: bold;
 	font-size: 1.2rem;
 	text-transform: uppercase;
@@ -969,7 +978,7 @@ header.headerAanbod {
 					width: 0;
 					height: 0;
 					border-style: solid;
-					border-width: 1.3rem 0 1.3rem 1.3rem;
+					border-width: 1.2rem 0 1.2rem 1.2rem;
 					border-color: transparent transparent transparent $lit-col;
 					transform: rotate(0deg);
 				}
