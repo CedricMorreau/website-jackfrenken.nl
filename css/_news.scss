@@ -1,10 +1,14 @@
 /* Actueel overzicht ------------------------------- */
 
 .actueel-overzicht {
+
 	.column-content {
+
 		.column-content {
+
 			.content-wrapper {
 				padding-right: 0;
+
 				@media only screen and (max-width: $container-size-m) {
 					padding-left: 0;
 				}
@@ -15,18 +19,67 @@
 					margin-top: 0;
 					margin-left: 0;
 					margin-right: 0;
+
 					@media only screen and (max-width: $container-size-m) {
 						margin-bottom: 2rem;
 					}
+
 					.items-container {
 						margin-left: 0;
 						margin-right: 0;
-						.item-container {
+						width: 100%;
+						@media only screen and (max-width: $container-size-m) {
+							padding-left: 1rem;
+							padding-right: 1rem;
+						}
 
-							margin-bottom: 3rem;
+						.item-image-content-wrapper {
+							@media only screen and (max-width: $container-size-m) {
+								padding-top: 1rem;
+								padding-bottom: 0;
+								margin-bottom: 2rem;
+							}
+						}
+
+						.item-container {
+							width: 100%;
+							margin-top: 2rem;
+							margin-bottom: 2rem;
+
+							.item-title {
+								font-size: 2rem;
+								line-height: 2.5rem;
+								@media only screen and (max-width: $container-size-s) {
+									font-size: 1.5rem;
+									line-height: 2rem;
+								}
+							}
+
+							.item-image-wrapper {
+								margin-right: 3rem;
+								@media only screen and (max-width: $container-size-m) {
+									margin-right: 0;
+								}
+							}
+
+							.item-content-except {
+								margin-bottom: 1rem;
+							}
+
+							.cta-button {
+								background-color: $pri-col;
+								font-size: 1.1rem;
+								line-height: 1.1rem;
+								padding-top: 0.4rem;
+								padding-bottom: 0.4rem;
+								padding-left: 1.5rem;
+								padding-right: 1.5rem;
+							}
+							
 							&:nth-child(even) {
 								margin-top: 4rem;
 							}
+
 							&:hover {
 								.item-button {
 									background-color: $qua-col;

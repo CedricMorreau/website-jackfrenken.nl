@@ -144,7 +144,6 @@ function isActive($name) {
 						<section class="items-wrapper">
 							
 							<div class="items-container">
-							
 								<?php
 								
 								if (count($actueel) > 0) {
@@ -162,17 +161,23 @@ function isActive($name) {
 											?>
 											
 											<div class="item-container">
-												<a href="<?php echo $values['wk_pdf']; ?>">
-													<div class="item-image-wrapper">
-														<div class="item-image" style="background-image: url(<?php echo $values['wk_overviewPhoto']; ?>);">
-															&nbsp;
-														</div>
-														<div class="hover-overlay"></div>
-														<div class="item-button">&xrarr;</div>
+
+												<div class="item-image-wrapper">
+													<div class="item-image" style="background-image: url(<?php echo $values['wk_overviewPhoto']; ?>);">
+														&nbsp;
 													</div>
+													<div class="hover-overlay"></div>
 													
+												</div>
+
+												<div class="item-image-content-wrapper">
 													<p class="item-title"><?php echo $values['wk_title']; ?></p>
-												</a>
+													<div class="item-content-except">
+														Lorem ipsum dolor sit amet test test test.
+													</div>
+													<?php echo $values['wk_pdf']; ?>
+													<div class="item-button">&xrarr;</div>
+												</div>
 											</div>
 											
 											<?php
@@ -194,19 +199,31 @@ function isActive($name) {
 											?>
 											
 											<div class="item-container">
-												<a href="<?php echo $url; ?>">
-													<div class="item-image-wrapper">
-														<div class="item-image" style="background-image: url(<?php echo $values['art_overviewPhoto']; ?>);">
-															
-														</div>
-														<div class="hover-overlay">
-															
-														</div>
-														<div href="<?php echo $url; ?>" class="item-button">&xrarr;</div>
+
+												<div class="item-image-wrapper">
+													<div class="item-image" style="background-image: url(<?php echo $values['art_overviewPhoto']; ?>);">
+														
 													</div>
-													
+													<div class="hover-overlay">
+														<a href="<?php echo $url; ?>" title="<?php echo $values['art_title']; ?>" alt="<?php echo $values['art_title']; ?>">
+														</a>
+
+													</div>
+
+												</div>
+
+
+												<div class="item-image-content-wrapper">
 													<p class="item-title"><?php echo $values['art_title']; ?></p>
-												</a>
+													
+													<div class="item-content-except">
+														Lorem ipsum dolor sit amet test test test.
+													</div>
+
+													<a href="<?php echo $url; ?>" class="cta-button item-button" title="Lees meer">Lees verder</a>
+												</div>
+												
+										
 											</div>
 											
 											<?php

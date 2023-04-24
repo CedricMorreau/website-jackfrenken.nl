@@ -42,7 +42,7 @@ if (count($actueel) > 0) {
 				</div>
 
 				<a href="<?php echo $url; ?>" class="cta-button item-button" title="Lees meer">Lees verder</a> 
-				<a href="<?php echo $url; ?>" class="cta-button item-button ghost" title="Meer artikelen">Meer artikelen</a>
+				<a href="<?php echo $template->findPermalink(59, 1); ?>" class="cta-button item-button ghost" title="Meer artikelen">Meer artikelen</a>
 			</div>
 
 		</div>

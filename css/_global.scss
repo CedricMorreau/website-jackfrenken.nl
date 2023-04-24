@@ -470,7 +470,7 @@ ul.ui-autocomplete {
 			display: flex;
 			flex-direction: row;
 			position: relative;
-			margin-bottom: 1.5rem;
+			margin-bottom: 1rem;
 
 			@media only screen and (max-width: $container-size-m) {
 				flex-direction: column;
@@ -559,7 +559,7 @@ ul.ui-autocomplete {
 			.item-title {
 				position: relative;
 				font-weight: bold;
-				font-size: 2rem;
+				font-size: 2.5rem;
 				font-weight: 400;
 				color: $pri-col;
 				text-transform: uppercase;
@@ -589,7 +589,7 @@ ul.ui-autocomplete {
 			}
 			
 			&:last-of-type{
-				margin-top: 3rem;
+				margin-top: 2rem;
 				@media only screen and (max-width: $container-size-m) {
 					margin-top: 0;
 				}
@@ -728,6 +728,12 @@ ul.ui-autocomplete {
 	width: 100%;
 	display: flex;
 	justify-content: center;
+	@media only screen and (max-width: $container-size-m) {
+		padding-top: 3rem;
+		padding-bottom: 3rem;
+		padding-left: 1rem;
+		padding-right: 1rem;
+	}
 
 		.content-wrapper {
 			display: flex;
@@ -742,6 +748,10 @@ ul.ui-autocomplete {
 			text-align: center;
 			text-transform: uppercase;
 			margin-top: 0;
+			@media only screen and (max-width: $container-size-m) {
+				font-size: 2rem;
+				line-height: 2.5rem;
+			}
 			strong {
 				font-weight: 600;
 			}
@@ -774,7 +784,7 @@ ul.ui-autocomplete {
 			justify-content: center;
 			width: 100%;
 			margin-bottom: 2.5rem;
-			
+
 			.input-wrapper {
 				margin-right: 2.5rem;
 				flex: 1;
@@ -795,8 +805,24 @@ ul.ui-autocomplete {
 					font-size: 1.1rem;
 					color: $pri-col;
 					width: 100%;
+
 					&::placeholder {
 						color: rgba($pri-col, 0.8);
+					}
+				}
+
+				&.textarea {
+					width: 100%;
+					textarea {
+						width: 100%;
+						background-color: transparent;
+						border: solid 1px $pri-col;
+						padding: 1rem;
+						min-height: 10rem;
+						color: $pri-col;
+						&::placeholder {
+							color: rgba($pri-col, 0.8);
+						}
 					}
 				}
 			}

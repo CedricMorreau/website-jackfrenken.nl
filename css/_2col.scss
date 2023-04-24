@@ -312,6 +312,7 @@
 		.sidebar-title {
 			font-size: 3rem;
 			margin-left: 1rem;
+			text-transform: uppercase;
 			@media only screen and (max-width: $container-size-l) {
 				font-size: 2rem;
 			}

@@ -27,6 +27,12 @@
 				</div>
 			</div>
 
+			<div class="form-row-wrapper">
+				<div class="input-wrapper textarea">
+					<textarea placeholder="Stel uw vraag"></textarea>
+				</div>
+			</div>
+
 			<div class="form-submit-wrapper">
 				<button type="submit" class="cta-button qua">Verstuur</button>
 			</div>
