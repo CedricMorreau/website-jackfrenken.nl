@@ -791,7 +791,6 @@ $ogType = 'bog';
 		<script type="text/javascript" src="<?php echo $dynamicRoot; ?>js/royalslider/royalslider/jquery.royalslider.min.js"></script>
 		<script type="text/javascript" src="https://maps.google.com/maps/api/js?key=AIzaSyATO501GwK6eyvxPwA6TIdbmc_PcfKvPAg"></script>
 		<script type="text/javascript" src="<?php echo $dynamicRoot; ?>js/google-maps.js"></script>
-		<script type="text/javascript" src="<?php echo $dynamicRoot; ?>js/jquery.validate.js"></script>
 		
 		<script type="text/javascript">
 		

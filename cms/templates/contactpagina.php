@@ -148,8 +148,6 @@ $locaties = $cms['database']->prepare("SELECT * FROM `tbl_cms_locaties` WHERE `c
 		include($documentRoot . 'inc/map-script.php');
 		
 		?>
-		
-		<script type="text/javascript" src="<?php echo $dynamicRoot; ?>js/jquery.validate.js"></script>
 
 		<!-- Contact overlay -->
 		<script>

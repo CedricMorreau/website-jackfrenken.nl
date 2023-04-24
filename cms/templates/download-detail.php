@@ -96,7 +96,6 @@ if (!empty($sfeerbeeld))
 		</div>
 		
 		<?php include($documentRoot . "inc/footer-scripting.php"); ?>
-		<script type="text/javascript" src="<?php echo $dynamicRoot; ?>js/jquery.validate.js"></script>
 
 		<script type="text/javascript">
 
