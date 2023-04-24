@@ -331,7 +331,7 @@
 
 		.sidebar-nav {
 			margin-left: 0;
-			margin-bottom: 0; 
+			margin-bottom: 3rem; 
 			font-weight: bold;
 			line-height: 2rem;
 			list-style: none;
@@ -438,6 +438,21 @@
 
 				a {
 					font-size: inherit;
+				}
+			}
+
+			&.ghost-white {
+				background-color: transparent;
+				border: solid 2px $sec-col;
+				color: $sec-col;
+				h3 {
+					color: inherit;
+				}
+				p {
+					color: inherit;
+				}
+				a {
+					color: inherit;
 				}
 			}
 
