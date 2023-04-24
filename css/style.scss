@@ -101,7 +101,6 @@
 		}
 
 		.previous {
-			margin-right: 1rem;
 			display: inline-block;
 			a {
 				display: block;
@@ -112,7 +111,7 @@
 				padding-right: 1rem;
 				padding-top: 0.7rem;
 				padding-bottom: 0.7rem;
-				transform: scaleX(0.7);
+				transform: scaleX(0.7) rotate(-180deg);
 				&:hover {
 					color: $sec-col;
 				}
@@ -120,7 +119,6 @@
 		}
 
 		.next {
-			margin-left: 1rem;
 			display: inline-block;
 			a {
 				display: block;

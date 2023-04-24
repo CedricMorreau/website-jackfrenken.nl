@@ -15,7 +15,7 @@ class PP_Paging {
 		$this->currentPage = $currentPage;
 		$this->pageUrl = $pageUrl;
 		
-		$this->templateData['left'] = '<div class="next"><a href="{{pageUrl}}" class="paging-button left{{hiddenClass}}" title="Vorige pagina">{{lang}}</a></div>';
+		$this->templateData['left'] = '<div class="previous"><a href="{{pageUrl}}" class="paging-button left{{hiddenClass}}" title="Vorige pagina">&#x25BA;</a></div>';
 		$this->templateData['right'] = '<div class="next"><a href="{{pageUrl}}" class="paging-button right{{hiddenClass}}" title="Volgende pagina">&#x25BA;</a></div>';
 		$this->templateData['pages'] = '{{pageData}}';
 	}
