@@ -37,7 +37,7 @@ class Breadcrumbs {
 		foreach ($singlePath as $key => $val) {
 
 			$start = ($key == 0) ? 'start' : '';
-			$current = ($val['id'] == $this->pageId && count($this->extraCrumb) == 0) ? 'current' : '';
+			$current = ($val['id'] == $this->pageId && count($this->extraCrumb) == 0) ? 'active' : '';
 
 			if ($val['id'] == $this->pageId && $this->ignore != 1) {
 
@@ -52,21 +52,28 @@ class Breadcrumbs {
 			if ($key == 0)
 				$url = '/';
 			else
-				$url = $this->template->findPermalink($val['id'], 1) . '.html';
+				$url = $this->template->findPermalink($val['id'], 1);
 			// END TEMP FIX
 
 			if ($val['id'] == 1) $val['id'] = 9;
 
 			$link = ($val['id'] == $this->pageId && $this->ignore == 0) ? 'javascript: void(0);' : $url;
 
-			$crumbReturn .= '<li><a href="' . $link . '" class="' . $start . ' ' . $current . '" title="' . $title .'" alt="' . $title . '">' . $title . '<span class="fa fa-angle-right"></span></a></li>' . PHP_EOL;
+			if ($val['id'] == $this->pageId && $this->ignore == 0) {
+
+				$crumbReturn .= '<li class="' . $current . '">' . $title . ' &rsaquo;</li>' . PHP_EOL;
+			}
+			else {
+
+				$crumbReturn .= '<li class="' . $current . '"><a href="' . $link . '" class="' . $start . '" title="' . $title .'" alt="' . $title . '">' . $title . ' &rsaquo;</a></li>' . PHP_EOL;	
+			}
 		}
 
 		if (count($this->extraCrumb) > 0) {
 
 			foreach ($this->extraCrumb as $key => $val) {
 
-				$crumbReturn .= '<li><a class="current" title="' . $key .'" alt="' . $key . '">' . $key . '<span class="fa fa-angle-right"></span></a></li>' . PHP_EOL;
+				$crumbReturn .= '<li class="active">' . $key . ' &rsaquo;</li>' . PHP_EOL;
 			}
 		}
 

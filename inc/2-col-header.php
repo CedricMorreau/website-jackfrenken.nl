@@ -55,12 +55,21 @@
 		<div class="breadcrumbs-row-wrapper">
 			<div class="breadcrumbs-spacer"></div>
 			<div class="breadcrumbs-wrapper">
-				<ul>
-					<li>home &rsaquo;</li>
-					<li>aanbod &rsaquo;</li>
-					<li>koopwoningen &rsaquo;</li>
-					<li class="active">adres straat met lange straatnaam 123 &rsaquo;</li>
-				</ul>
+
+				<?php
+
+				if (!isset($extraCrumbs))
+					$extraCrumbs = array();
+
+				if (!isset($ignoreCrumb))
+					$ignoreCrumb = 0;
+							
+				$breadCrumbs = new Breadcrumbs($template->getPageData('id'), $template->getPageData('nav'), $cms['database'], $template, $extraCrumbs, $ignoreCrumb);
+
+				echo $breadCrumbs->displayCrumbs();
+
+				?>
+
 			</div>
 
 		</div>

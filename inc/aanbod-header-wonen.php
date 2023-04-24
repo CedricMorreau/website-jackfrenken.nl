@@ -72,12 +72,19 @@
 			</div>	
 
 			<div class="breadcrumbs-wrapper">
-				<ul>
-					<li>home &rsaquo;</li>
-					<li>aanbod &rsaquo;</li>
-					<li>koopwoningen &rsaquo;</li>
-					<li class="active">adres straat met lange straatnaam 123 &rsaquo;</li>
-				</ul>
+
+				<?php
+
+				$extraCrumbs = array($val['objectDetails_Adres_NL_Woonplaats'] . ' - ' . obj_generateAddress($val['objectDetails_Adres_NL_Straatnaam'], $val['objectDetails_Adres_NL_Huisnummer'], $val['objectDetails_Adres_NL_HuisnummerToevoeging']) => 1);
+
+				$ignoreCrumb = 1;
+							
+				$breadCrumbs = new Breadcrumbs($template->getPageData('id'), $template->getPageData('nav'), $cms['database'], $template, $extraCrumbs, $ignoreCrumb);
+
+				echo $breadCrumbs->displayCrumbs();
+
+				?>
+
 			</div>
 
 		</div>
