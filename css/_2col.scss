@@ -403,6 +403,7 @@
 				text-decoration: none;
 				color: $lit-col;
 				text-decoration: none;
+				word-break: break-word;
 				&:hover {
 					text-decoration: underline;
 				}
@@ -416,6 +417,7 @@
 				line-height: 2rem;
 				text-transform: uppercase;
 				font-weight: 300;
+				word-break: break-word;
 				strong {
 					font-weight: 600;
 				}
