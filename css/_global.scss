@@ -101,6 +101,7 @@ ul.ui-autocomplete {
 	outline: none;
 	border: none;
 	letter-spacing: 1px;
+
 	@media only screen and (max-width: $container-size-s) {
 		width: 100%;
 		margin-bottom: 1rem;
@@ -148,6 +149,12 @@ ul.ui-autocomplete {
 			border-color: $sec-col;
 			color: $sec-col;
 		}
+	}
+
+	&.low {
+		padding-top: 0.3rem;
+		padding-bottom: 0.3rem;
+		line-height: 1.5rem;
 	}
 
 	
