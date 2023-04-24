@@ -20,3 +20,15 @@
 		<img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/955015409/?value=0&amp;guid=ON&amp;script=0"/>
 	</div>
 </noscript>
+
+<script>
+
+	$(document).ready(function() {
+
+		if ($('.sidebar-nav').children().length == 0) {
+
+			$('.sidebar-nav').remove();
+		}
+	});
+
+</script>
