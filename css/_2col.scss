@@ -59,7 +59,6 @@
 			z-index: 15;
 			background-color: rgba($pri-col, 0.8);
 			color: $lit-col;
-			text-transform: uppercase;
 			position: relative;
 			top: 50%;
 			transform: translateY(-50%);
@@ -332,7 +331,7 @@
 
 		.sidebar-nav {
 			margin-left: 0;
-			margin-bottom: 5rem;
+			margin-bottom: 0; 
 			font-weight: bold;
 			line-height: 2rem;
 			list-style: none;
@@ -378,6 +377,10 @@
 					margin-left: auto;
 				}
 			}
+
+			&+.sidebar-widget {
+				margin-top: 3rem;
+			}
 		}
 
 		.sidebar-widget {
@@ -389,6 +392,8 @@
 			padding-top: 1.5rem;
 			padding-bottom: 1.5rem;
 			color: $lit-col;
+			max-width: 17rem;
+
 			@media only screen and (max-width: $container-size-m) {
 				margin-left: 0;
 				padding-left: $margin-size-s;
@@ -398,6 +403,7 @@
 				text-decoration: none;
 				color: $lit-col;
 				text-decoration: none;
+				word-break: break-word;
 				&:hover {
 					text-decoration: underline;
 				}
@@ -410,6 +416,11 @@
 				font-size: 2rem;
 				line-height: 2rem;
 				text-transform: uppercase;
+				font-weight: 300;
+				word-break: break-word;
+				strong {
+					font-weight: 600;
+				}
 				a {
 					font-size: inherit;
 				}
