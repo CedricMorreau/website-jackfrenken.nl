@@ -50,7 +50,7 @@ if (!($url = $template->getBackUrl($template->findPermalink(59, 1)))) {
 				
 				<div class="column-sidebar">
 				
-					<a href="<?php echo $url; ?>" class="back-link ali-top">&xlarr; Terug naar overzicht</a>
+					<a href="<?php echo $url; ?>" class="back-link ali-top"><span>&#9658;</span> terug naar <strong>overzicht</strong></a>
 
 				</div>
 

@@ -471,6 +471,7 @@ ul.ui-autocomplete {
 			flex-direction: row;
 			position: relative;
 			margin-bottom: 1rem;
+			width: 100%;
 
 			@media only screen and (max-width: $container-size-m) {
 				flex-direction: column;
@@ -808,6 +809,13 @@ ul.ui-autocomplete {
 
 					&::placeholder {
 						color: rgba($pri-col, 0.8);
+					}
+
+					&.error {
+						border-bottom-color: $den-col;
+						&::placeholder {
+							color: $den-col;
+						}
 					}
 				}
 

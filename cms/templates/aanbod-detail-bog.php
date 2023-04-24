@@ -187,7 +187,7 @@ $ogType = 'bog';
 					
 					?>
 
-					<a href="<?php echo $url; ?>" class="back-link">&xlarr; Terug naar overzicht</a>
+					<a href="<?php echo $url; ?>" class="back-link">&xlarr; terug naar overzicht</a>
 
 				</div>
 
