@@ -11,17 +11,10 @@
 		<?php
 		
 		$textBlock = trim($template->cmsData('page][section/content'));
-		$optTitle = $template->getData('optionalTitle', 10);
 		
 		?>
 
 		<div class="medewerkers-wrapper">
-
-			<?php if (!empty($optTitle)) { ?>
-		
-			<h2><?php echo $optTitle; ?></h2>
-			
-			<?php } ?>
 
 			<?php echo $textBlock; ?>
 
