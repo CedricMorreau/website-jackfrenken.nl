@@ -153,25 +153,34 @@ $sfeerbeeld = trim($template->getCustomVar('sfeerbeeld'));
 
 			<section class="wide-block-wrapper bg-nth form-wrapper">
 				<div class="content-wrapper form-content-wrapper">
-					<form>
+
+					<form id="appointment-form">
 						<h4>Afspraak maken</h4>
+
+						<div class="form-message success" style="display: none;">
+							Het formulier is verzonden. We nemen zo snel mogelijk contact met u op.
+						</div>
+
+						<div class="form-message error" style="display: none;">
+							Er ging iets mis op de server. Probeer het nogmaals.
+						</div>
 
 						<div class="input-row-wrapper">
 							<div class="input-wrapper">
-								<input type="text" placeholder="Voornaam*">
+								<input name="first_name" type="text" placeholder="Voornaam*">
 							</div>
 							<div class="input-wrapper">
-								<input type="text" placeholder="Achternaam*">
+								<input name="last_name" type="text" placeholder="Achternaam*">
 							</div>
 							
 						</div>
 
 						<div class="input-row-wrapper">
 							<div class="input-wrapper">
-								<input type="email" placeholder="E-mailadres*">
+								<input name="email" type="email" placeholder="E-mailadres*">
 							</div>
 							<div class="input-wrapper">
-								<input type="tel" placeholder="Telefoon*">
+								<input name="phone" type="tel" placeholder="Telefoon*">
 							</div>
 							
 						</div>
@@ -195,5 +204,68 @@ $sfeerbeeld = trim($template->getCustomVar('sfeerbeeld'));
 
 		</script>
 	</body>
+
+	<script>
+
+		$(document).ready(function() {
+
+			// Form
+			$("#appointment-form").validate({
+				// focusInvalid: false,
+				errorPlacement: function(error, element) {},
+				rules: {
+					first_name: {
+						required: true,
+						minlength: 2
+					},
+					last_name: {
+						required: true
+					},
+					email: {
+						required: true,
+						email: true
+					},
+					phone: {
+						required: true
+					},
+					msg: {
+						required: true,
+						minlength: 4
+					}
+				},
+				submitHandler: function(form) {
+					return SubmitContactForm();
+				}
+			});
+		});
+
+		function SubmitContactForm() {
+
+			$.ajax({
+				type: 'POST',
+				url: '/inc/process-appointment-form.php',
+				data: $('#appointment-form').serialize(),
+				success: function(data) {
+
+					if (data == 0) {
+
+						$("#appointment-form .form-message.error").fadeIn();
+					} else {
+						dataLayer.push({
+							'event': 'contactformulier-submit'
+						});
+						$("#appointment-form .form-message.error").hide();
+						$("#appointment-form .input-row-wrapper").hide();
+						$("#appointment-form .button-wrapper").hide();
+						$("#appointment-form .form-message.success").fadeIn();
+					}
+				}
+
+			});
+
+			return false;
+		}
+
+	</script>
 
 </html>

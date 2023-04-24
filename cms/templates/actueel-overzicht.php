@@ -214,7 +214,7 @@ function isActive($name) {
 
 
 												<div class="item-image-content-wrapper">
-													<p class="item-title"><?php echo $values['art_title']; ?></p>
+													<p class="item-title"><?php echo $values['art_visibleTitle'] ?? $values['art_title']; ?></p>
 													
 													<div class="item-content-except">
 														Lorem ipsum dolor sit amet test test test.
