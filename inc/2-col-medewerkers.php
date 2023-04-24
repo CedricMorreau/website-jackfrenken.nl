@@ -74,12 +74,16 @@
 									<div class="mw-functie"><?php echo $values['mw_functie'] ?></div>
 									<div class="divider"></div>
 									<div class="social-icons">
-										<a href="#" class="icon mail" target="_blank">
+										<?php if (!empty($values['mw_email'])) { ?>
+										<a href="mailto:<?php echo $values['mw_email']; ?>" class="icon mail" target="_blank">
 											<?php include($documentRoot . "resources/icon-contact-email.svg"); ?>
 										</a>
-										<a href="#" class="icon linkedin" target="_blank">
+										<?php } ?>
+										<?php if (!empty($values['mw_linkedin'])) { ?>
+										<a href="<?php echo $values['mw_linkedin']; ?>" class="icon linkedin" target="_blank">
 											<?php include($documentRoot . "resources/icon-contact-linkedin.svg"); ?>
 										</a>
+										<?php } ?>
 									</div>
 								</div>
 							</div>
