@@ -152,7 +152,7 @@ $sfeerbeeld = trim($template->getCustomVar('sfeerbeeld'));
 
             <?php } ?>
 
-			<section class="wide-block-wrapper bg-nth image-banner" style="background-image: url('/resources/homepage-header.jpg')">
+			<section class="wide-block-wrapper bg-nth image-banner" style="background-image: url('/resources/fin-adv-team.jpg')">
 				<div class="content-wrapper">
 					<h3>
 						Jack Frenken<br>
