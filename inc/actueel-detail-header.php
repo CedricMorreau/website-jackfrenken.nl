@@ -14,13 +14,13 @@
 					<!-- <p class="title-category"><?php echo $navName[0]['mod_pa_nav']; ?></p> -->
 					<h1>
 					
-					<?php echo $values['art_title']; ?>
+					<?php echo $values['art_visibleTitle'] ?? $values['art_title']; ?>
 					
 					</h1>
 					
-					<!-- <?php
+					<?php
 					
-					if (!empty($values['art_intro'])) {
+					/*if (!empty($values['art_intro'])) {
 
 					?>
 					
@@ -28,7 +28,7 @@
 						<?php echo $values['art_visibleTitle'] ?? $values['art_title']; ?>
 					</p>
 					
-					<?php } ?> -->
+					<?php }*/ ?>
 				</div>
 			</div>
 
