@@ -63,7 +63,7 @@ function isActive($name) {
 							
 							?>
 							
-						<li<?php if (isActive($val)) { echo ' class="active"'; } ?>><a href="<?php echo $template->getPermalink(1); ?>?type=<?php echo $val; ?>"><?php echo ucfirst($val); ?><?php if (isActive($val)) { echo ' &xrarr;'; } ?></a></li>	
+						<li<?php if (isActive($val)) { echo ' class="active"'; } ?>><a href="<?php echo $template->getPermalink(1); ?>?type=<?php echo $val; ?>"><?php echo ucfirst($val); ?><?php if (isActive($val)) { echo '<span class="arrow">&rsaquo;</span>'; } ?></a></li>	
 							
 							<?php
 						}

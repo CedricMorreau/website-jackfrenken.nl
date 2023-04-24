@@ -336,14 +336,15 @@
 			font-weight: bold;
 			line-height: 2rem;
 			list-style: none;
-
+			max-width: 15rem;
+			
 			@media only screen and (max-width: $container-size-m) {
 				margin-left: 0;
 			}
 
 			li {
 				margin-bottom: 0.5rem;
-				
+
 				&.active {
 					color: $qua-col;
 					a {
