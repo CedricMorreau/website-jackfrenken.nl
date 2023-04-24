@@ -13,7 +13,7 @@
 			<p class="title-category"><?php echo $navName[0]['mod_pa_nav']; ?></p>
 			<h1>
 			
-			<?php echo $values['art_title']; ?>
+			<?php echo $values['art_visibleTitle'] ?? $values['art_title']; ?>
 			
 			</h1>
 			
