@@ -35,6 +35,30 @@
 			<div class="content-image" style="background-image: url(<?php echo $values['art_overviewPhoto']; ?>);">
 				<!-- bg img -->
 			</div>
+
+			
+		</div>
+
+		<div class="breadcrumbs-row-wrapper">
+			<div class="breadcrumbs-spacer"></div>
+			<div class="breadcrumbs-wrapper">
+
+				<?php
+
+				if (!isset($extraCrumbs))
+					$extraCrumbs = array();
+
+				if (!isset($ignoreCrumb))
+					$ignoreCrumb = 0;
+							
+				$breadCrumbs = new Breadcrumbs($template->getPageData('id'), $template->getPageData('nav'), $cms['database'], $template, $extraCrumbs, $ignoreCrumb);
+
+				echo $breadCrumbs->displayCrumbs();
+
+				?>
+
+			</div>
+
 		</div>
 	</div>
 </div>
