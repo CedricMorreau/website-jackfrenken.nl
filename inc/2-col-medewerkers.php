@@ -1,8 +1,6 @@
 <div class="column-content">
 	
 	<div class="column-sidebar">
-	
-		<?php echo $template->cmsData('page][navigation/2/subnav/' . $template->findHighestParent() . '/active/' . $template->getPageId()); ?>
 		
 		<?php echo $template->cmsData('page][section/widgets'); ?>
 
