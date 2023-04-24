@@ -105,12 +105,12 @@ $sfeerbeeld = trim($template->getCustomVar('sfeerbeeld'));
 				<div class="content-wrapper">
 					<h2>Hypotheek <strong>op maat</strong></h2>
 					<div class="square-blocks-wrapper">
-						<a href="#" title="Starter" class="square-option"><h5>Starter<span>.</span></h5></a>
-						<a href="#" title="Verhuizen" class="square-option"><h5>Verhuizen<span>.</span></h5></a>
-						<a href="#" title="Relatie beëindiging" class="square-option"><h5>Relatie <br>beëindiging<span>.</span></h5></a>
-						<a href="#" title="Senioren" class="square-option"><h5>Senioren<span>.</span></h5></a>
-						<a href="#" title="Verduurzamen" class="square-option"><h5>Verduurzamen<span>.</span></h5></a>
-						<a href="#" title="Ondernemer" class="square-option"><h5>Ondernemer<span>.</span></h5></a>
+						<a href="<?php echo $template->findPermalink(90, 1); ?>" title="Starter" class="square-option"><h5>Starter<span>.</span></h5></a>
+						<a href="<?php echo $template->findPermalink(90, 1); ?>" title="Verhuizen" class="square-option"><h5>Verhuizen<span>.</span></h5></a>
+						<a href="<?php echo $template->findPermalink(90, 1); ?>" title="Relatie beëindiging" class="square-option"><h5>Relatie <br>beëindiging<span>.</span></h5></a>
+						<a href="<?php echo $template->findPermalink(34, 1); ?>" title="Senioren" class="square-option"><h5>Senioren<span>.</span></h5></a>
+						<a href="<?php echo $template->findPermalink(34, 1); ?>" title="Verduurzamen" class="square-option"><h5>Verduurzamen<span>.</span></h5></a>
+						<a href="<?php echo $template->findPermalink(34, 1); ?>" title="Ondernemer" class="square-option"><h5>Ondernemer<span>.</span></h5></a>
 					</div>
 				</div>
 			</section>
@@ -131,12 +131,12 @@ $sfeerbeeld = trim($template->getCustomVar('sfeerbeeld'));
 			<section class="wide-block-wrapper square-sub-blocks-section">
 				<div class="content-wrapper">
 					<div class="square-sub-blocks-wrapper">
-						<a href="#" title="Uw maximale hypotheek (afspraak)" class="square-option">
+						<a href="<?php echo $template->findPermalink(65, 1); ?>" title="Uw maximale hypotheek (afspraak)" class="square-option">
 							<div class="label">Afspraak</div>
 							<h5>Uw maximale<br><strong>Hypotheek</strong></h5>
 						</a>
-						<a href="#" title="Hypotheek informatie" class="square-option"><h5>Hypotheek<br><strong>informatie</strong></h5></a>
-						<a href="#" title="Nieuwbouw financieringen" class="square-option"><h5><strong>Nieuwbouw</strong><br>Financieringen</h5></a>
+						<a href="<?php echo $template->findPermalink(62, 1); ?>" title="Hypotheek informatie" class="square-option"><h5>Hypotheek<br><strong>informatie</strong></h5></a>
+						<a href="<?php echo $template->findPermalink(34, 1); ?>" title="Nieuwbouw financieringen" class="square-option"><h5><strong>Nieuwbouw</strong><br>Financieringen</h5></a>
 					</div>
 
 					<h5 class="square-sub-block-title">De kracht van Jack Frenken<span>.</span></h5>
