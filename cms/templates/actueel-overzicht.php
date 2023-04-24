@@ -173,7 +173,7 @@ function isActive($name) {
 												<div class="item-image-content-wrapper">
 													<p class="item-title"><?php echo $values['wk_title']; ?></p>
 													<div class="item-content-except">
-														Lorem ipsum dolor sit amet test test test.
+														<!-- Lorem ipsum dolor sit amet test test test. -->
 													</div>
 													<?php echo $values['wk_pdf']; ?>
 													<div class="item-button">&xrarr;</div>
@@ -217,7 +217,14 @@ function isActive($name) {
 													<p class="item-title"><?php echo $values['art_visibleTitle'] ?? $values['art_title']; ?></p>
 													
 													<div class="item-content-except">
-														Lorem ipsum dolor sit amet test test test.
+														<?php
+														
+														if (!empty($values['art_intro'])) {
+
+															echo $values['art_intro'];
+														}
+
+														?>
 													</div>
 
 													<a href="<?php echo $url; ?>" class="cta-button item-button" title="Lees meer">Lees verder</a>

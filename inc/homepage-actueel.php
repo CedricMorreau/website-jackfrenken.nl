@@ -34,11 +34,18 @@ if (count($actueel) > 0) {
 			
 			<div class="item-image-content-wrapper">
 				<p class="item-title">
-					<a href="<?php echo $url; ?>" title="<?php echo $values['art_title']; ?>"><?php echo $values['art_title']; ?></a>
+					<a href="<?php echo $url; ?>" title="<?php echo $values['art_title']; ?>"><?php echo $values['art_visibleTitle'] ?? $values['art_title']; ?></a>
 				</p>
 
 				<div class="item-content-excerpt">
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eget porttitor velit. Integer et semper metus. Proin dignissim orci sodales, eleifend nunc in, porta est. Aliquam velit urna, accumsan eget turpis quis, pretium aliquet odio. Cras semper vestibulum felis non maximus.
+					<?php
+														
+					if (!empty($values['art_intro'])) {
+
+						echo $values['art_intro'];
+					}
+
+					?>
 				</div>
 
 				<a href="<?php echo $url; ?>" class="cta-button item-button" title="Lees meer">Lees verder</a> 
