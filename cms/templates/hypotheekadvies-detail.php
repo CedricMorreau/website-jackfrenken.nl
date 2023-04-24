@@ -58,7 +58,6 @@ $sfeerbeeld = trim($template->getCustomVar('sfeerbeeld'));
 							?>
 							</h1>
 
-							<a href="javascript:void(0);" onclick="javascript:$.scrollTo('#stappenplan', 1000)" class="scroll-link">Zie stappenplan</a>
 						</div>
 					</div>
 					

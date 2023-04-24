@@ -39,7 +39,7 @@ $sfeerbeeld = trim($template->getCustomVar('sfeerbeeld'));
 				<div class="column-content">
 
 					<div class="content-wrapper">
-						<h2>Schrijf u in als zoeker!</h2>
+						<h2><strong>Schrijf</strong> u in als <strong>zoeker!</strong></h2>
 						<p class="subtitle">De woning van uw dromen nog niet kunnen vinden? Wij zoeken graag met u mee.</p>
 
 						<?php include ($documentRoot . "inc/zoekersformulier-form.php"); ?>

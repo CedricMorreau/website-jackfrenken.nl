@@ -119,6 +119,13 @@ ul.ui-autocomplete {
 			margin-bottom: 0;
 		}
 	}
+	&.pri {
+		background-color: $pri-col;
+		color: $lit-col;
+		&:hover {
+			background-color: $sec-col;
+		}
+	}
 
 	&.sec {
 		background-color: $sec-col;
