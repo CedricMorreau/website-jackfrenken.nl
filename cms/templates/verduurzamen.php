@@ -146,7 +146,7 @@ $sfeerbeeld = trim($template->getCustomVar('sfeerbeeld'));
 								<li>Ook voor (startende) ondernemers (zie tegel ondernemer)</li>
 							</ul>
 
-							<a href="#" class="cta-button ghost inline">Zie stappenplan</a>
+							<a href="<?php echo $template->findPermalink(63, 1); ?>" class="cta-button ghost inline">Zie stappenplan</a>
 						</div>
 					</div>
 				</div>
