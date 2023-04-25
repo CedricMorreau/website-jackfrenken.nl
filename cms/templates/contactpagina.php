@@ -31,7 +31,9 @@ $locaties = $cms['database']->prepare("SELECT * FROM `tbl_cms_locaties` WHERE `c
 				<div class="column-sidebar">
 				
 					<?php include($documentRoot . "inc/contact-widget.php"); ?>
-
+					
+					
+					<!-- <a href="<?php echo $url; ?>" class="back-link ali-top"><span>&#9658;</span> terug naar <strong>overzicht</strong></a> -->
 
 				</div>
 
