@@ -144,7 +144,7 @@ $sfeerbeeld = trim($template->getCustomVar('sfeerbeeld'));
 							<img src="<?php echo $img_block; ?>" alt="">
 						</div>
 						<div class="flex col one column text-align-left">
-							<?php echo $textBlock; ?>
+							<?php echo $template->handlePlaceholders($textBlock); ?>
 						</div>
 					</div>
 				</div>
@@ -152,15 +152,21 @@ $sfeerbeeld = trim($template->getCustomVar('sfeerbeeld'));
 
             <?php } ?>
 
+			<?php
+
+			$textBlock = trim($template->cmsData('page][section/content/blockId/63'));
+
+			if (!empty($textBlock)) {
+
+			?>
+
 			<section class="wide-block-wrapper bg-nth image-banner" style="background-image: url('/resources/fin-adv-team.jpg')">
 				<div class="content-wrapper">
-					<h3>
-						Jack Frenken<br>
-						financieel Advies<br>
-						<strong>De kracht <br>van Frenken</strong>
-					</h3>
+					<?php echo $template->handlePlaceholders($textBlock); ?>
 				</div>
 			</section>
+
+			<?php } ?>
 
 			<section class="wide-block-wrapper bg-nth form-wrapper">
 				<div class="content-wrapper form-content-wrapper">
