@@ -888,6 +888,10 @@ ul.ui-autocomplete {
 	position: relative;
 	width: 100%;
 	align-items: center;
+	@media only screen and (max-width: $container-size-l) {
+		padding-left: 1rem;
+		padding-right: 1rem;
+	}
 
 	&:after {
 		content: "";
@@ -978,6 +982,10 @@ ul.ui-autocomplete {
 			flex-direction: column-reverse;
 			font-size: 1.3rem;
 		}
+
+		@media only screen and (max-width: $container-size-s) {
+			font-size: 1.1rem;
+		}
 		
 		.footer-links-wrapper {
 			width: 100%;
@@ -1020,6 +1028,9 @@ ul.ui-autocomplete {
 						@media only screen and (max-width: $container-size-m) {
 							font-size: 1.3rem;
 						}
+						@media only screen and (max-width: $container-size-s) {
+							font-size: 1.1rem;
+						}
 					}
 				}
 
@@ -1035,6 +1046,9 @@ ul.ui-autocomplete {
 
 					a {
 						font-size: 1.5rem;
+						@media only screen and (max-width: $container-size-s) {
+							font-size: 1.1rem;
+						}
 					}
 				}
 			}
@@ -1044,13 +1058,16 @@ ul.ui-autocomplete {
 				margin-right: 1.5rem;
 				flex: 1;
 				a {
-					color: $ter-col;
+					color: $lit-col;
 				}
 				@media only screen and (max-width: $container-size-m) {
 					margin-right: 0;
 
 					a {
 						font-size: 1.5rem;
+						@media only screen and (max-width: $container-size-s) {
+							font-size: 1.1rem;
+						}
 					}
 				}
 			}
@@ -1079,6 +1096,11 @@ ul.ui-autocomplete {
 						stroke: $lit-col;
 						top: 50%;
 						transform: translateY(-50%);
+						@media only screen and (max-width: $container-size-m) {
+							left: 0;
+							position: relative;
+							transform: none;
+						}
 					}
 
 					a {
@@ -1088,6 +1110,10 @@ ul.ui-autocomplete {
 						@media only screen and (max-width: $container-size-m) {
 							font-size: 2rem;
 							text-align: right;
+						}
+
+						@media only screen and (max-width: $container-size-s) {
+							font-size: 1.1rem;
 						}
 	
 						margin-bottom: 0.3rem;

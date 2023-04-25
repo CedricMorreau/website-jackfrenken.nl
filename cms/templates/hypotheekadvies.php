@@ -136,7 +136,7 @@ $sfeerbeeld = trim($template->getCustomVar('sfeerbeeld'));
 							<h5>Uw maximale<br><strong>Hypotheek</strong></h5>
 						</a>
 						<a href="<?php echo $template->findPermalink(62, 1); ?>" title="Hypotheek informatie" class="square-option"><h5>Hypotheek<br><strong>informatie</strong></h5></a>
-						<a href="<?php echo $template->findPermalink(34, 1); ?>" title="Nieuwbouw financieringen" class="square-option"><h5><strong>Nieuwbouw</strong><br>Financieringen</h5></a>
+						<a href="<?php echo $template->findPermalink(97, 1); ?>" title="Nieuwbouw financieringen" class="square-option"><h5><strong>Nieuwbouw</strong><br>Financieringen</h5></a>
 					</div>
 
 					<h5 class="square-sub-block-title">De kracht van Jack Frenken<span>.</span></h5>
