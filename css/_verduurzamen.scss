@@ -136,6 +136,10 @@
 		min-height: 27rem;
 		@include background-image;
 
+		@media only screen and (max-width: $container-size-m) {
+			background-position-x: 36%;
+		}
+
 		h3 {
 			margin-left: auto;
 			display: block;
