@@ -110,7 +110,7 @@ $sfeerbeeld = trim($template->getCustomVar('sfeerbeeld'));
 				<div class="content-wrapper">
 					<h2>Verduurzaamhypotheek afsluiten? <strong>Check je mogelijkheden</strong></h2>
 					<p>Wil je graag je eigen huis uitbreiden met een extra kamer of een grotere leefruimte? Of witje jouw wooncomfort verbeteren door bijvoorbeeld je woning goed te Isoleren of het renoveren van bijvoorbeeld je badkamer? Het verbouwen ven je huls helpt je jouw doel te bereiken. Kun je of wil je dit niet volledig met eigen geld betalen dan ken een lening de oplossing bieden. Welke mogelijkheden je hebt hangt af van je inkomen en eventuele overwaarde van je huis. Wil je weten hoeveel je kunt lenen voor het verbouwen van je woning?. </p>
-					<a href="<?php echo $template->findPermalink(70, 1); ?>" class="cta-button">Afspraak maken</a>
+					<p><a class="cta-button pri" href="javascript:void(0);" onclick="javascript:$.scrollTo('#appointment-form', 1000)">Afspraak maken</a></p>
 				</div>
 			</section>
 
