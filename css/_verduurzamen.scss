@@ -249,16 +249,32 @@
 	}
 
 	table {
+		@media only screen and (max-width: $container-size-m) {
+			width: 100%!important;
+		}
 		tr {
 			margin-bottom: 1rem;
-			
+			@media only screen and (max-width: $container-size-m) {
+				display: flex;
+				flex-direction: column;
+				margin-bottom: 0;
+			}
 		}
 
 		td {
 			margin-right: 1rem;
+			@media only screen and (max-width: $container-size-m) {
+				margin-right: 0;
+				padding-top: 0.2rem;
+				padding-bottom: 0.2rem;
+				margin-bottom: 0.3rem;
+			}
 		}
 		.cta-button {
 			width: 20rem;
+			@media only screen and (max-width: $container-size-m) {
+				width: 100%;
+			}
 		}
 	}
 

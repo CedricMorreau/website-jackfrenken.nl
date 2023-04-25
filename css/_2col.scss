@@ -250,13 +250,13 @@
 			flex: 1;
 			flex-basis: 22rem;
 			max-width: 23rem;
-			@media only screen and (max-width: $container-size-s) {
+			@media only screen and (max-width: $container-size-m) {
 				display: none;
 			}
 		}
 		.breadcrumbs-wrapper {
 			flex: 2;
-			@media only screen and (max-width: $container-size-s) {
+			@media only screen and (max-width: $container-size-m) {
 				padding-left: 1rem;
 				padding-right: 1rem;
 				margin-bottom: 1rem;
@@ -294,6 +294,7 @@
 	}
 
 }
+
 
 .column-content {	
 	display: flex;
