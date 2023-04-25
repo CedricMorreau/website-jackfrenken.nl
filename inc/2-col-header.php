@@ -38,7 +38,11 @@
 				}
 				
 				?>
-				</h1>
+			<img src="<?php echo $dynamicRoot; ?>resources/line-arrow-lit-short.svg">		
+
+			</h1>
+
+
 			</div>
 		</div>
 		

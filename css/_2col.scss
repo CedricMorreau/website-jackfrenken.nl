@@ -166,6 +166,14 @@
 					font-weight: 600;
 				}
 
+				img {
+					width: 9rem;
+					margin-left: 2rem;
+					@media only screen and (max-width: $container-size-m) {
+						display: none;
+					}
+				}
+
 			}
 
 			a {
