@@ -146,7 +146,6 @@
 			.title-price {
 				font-weight: 300;
 			}
-
 			&:after {
 				content: "";
 				left: 100%;
@@ -974,11 +973,11 @@ header.headerAanbod {
 					position: absolute;
 					display: block;
 					left: 0;
-					top: 3.9rem;
+					top: 4.3rem;
 					width: 0;
 					height: 0;
 					border-style: solid;
-					border-width: 1.2rem 0 1.2rem 1.2rem;
+					border-width: 1.1rem 0 1.1rem 1.1rem;
 					border-color: transparent transparent transparent $lit-col;
 					transform: rotate(0deg);
 				}

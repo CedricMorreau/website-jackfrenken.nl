@@ -11,7 +11,7 @@ if (($template->getPageId() == 40 && $val['id'] == 44) || ($template->getPageId(
 		Financieel meer ruimte dankzij de groenverklaring en NOM
 	</h3>
 	<p>
-		Meer weten? Neem contact op &xrarr;
+		Meer weten? Neem contact op
 	</p>
 	</a>
 </div>
@@ -29,7 +29,7 @@ if ($template->getPageId() == 42) {
 		Zoekt u een bedrijfspand?
 	</h3>
 	<p>
-		Lees meer over onze bedrijfsmakelaardij &xrarr;
+		Lees meer over onze bedrijfsmakelaardij
 	</p>
 	</a>
 </div>
@@ -46,7 +46,20 @@ else {
 		Schrijf u in als zoeker!
 	</h3>
 	<p>
-		De woning van uw dromen nog niet kunnen vinden? Wij zoeken graag met u mee &xrarr;
+		De woning van uw dromen nog niet kunnen vinden? Wij zoeken graag met u mee
+	</p>
+	</a>
+</div>
+
+<div class="sidebar-widget ghost-white">
+	<a href="<?php echo $template->findPermalink(64, 1); ?>">
+	<h3>
+		Maar wat <strong>betalen</strong>
+		We dan per maand aan<br>
+		<strong>hypotheek</strong>
+	</h3>
+	<p>
+		Bereken uw hypotheeklasten
 	</p>
 	</a>
 </div>
