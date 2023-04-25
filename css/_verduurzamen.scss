@@ -46,6 +46,7 @@
 		}
 
 	}
+
 	&.bg-nth {
 		&:nth-of-type(odd) {
 			background-color: darken($lit-col, 5%);
@@ -241,6 +242,20 @@
 			}
 		}
 
+	}
+
+	table {
+		tr {
+			margin-bottom: 1rem;
+			
+		}
+
+		td {
+			margin-right: 1rem;
+		}
+		.cta-button {
+			width: 20rem;
+		}
 	}
 }
 

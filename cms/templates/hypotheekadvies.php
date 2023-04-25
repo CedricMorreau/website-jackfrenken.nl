@@ -105,12 +105,12 @@ $sfeerbeeld = trim($template->getCustomVar('sfeerbeeld'));
 				<div class="content-wrapper">
 					<h2>Hypotheek <strong>op maat</strong></h2>
 					<div class="square-blocks-wrapper">
-						<a href="<?php echo $template->findPermalink(90, 1); ?>" title="Starter" class="square-option"><h5>Starter<span>.</span></h5></a>
-						<a href="<?php echo $template->findPermalink(90, 1); ?>" title="Verhuizen" class="square-option"><h5>Verhuizen<span>.</span></h5></a>
+						<a href="<?php echo $template->findPermalink(91, 1); ?>" title="Starter" class="square-option"><h5>Starter<span>.</span></h5></a>
+						<a href="<?php echo $template->findPermalink(94, 1); ?>" title="Verhuizen" class="square-option"><h5>Verhuizen<span>.</span></h5></a>
 						<a href="<?php echo $template->findPermalink(90, 1); ?>" title="Relatie beëindiging" class="square-option"><h5>Relatie <br>beëindiging<span>.</span></h5></a>
-						<a href="<?php echo $template->findPermalink(34, 1); ?>" title="Senioren" class="square-option"><h5>Senioren<span>.</span></h5></a>
-						<a href="<?php echo $template->findPermalink(34, 1); ?>" title="Verduurzamen" class="square-option"><h5>Verduurzamen<span>.</span></h5></a>
-						<a href="<?php echo $template->findPermalink(34, 1); ?>" title="Ondernemer" class="square-option"><h5>Ondernemer<span>.</span></h5></a>
+						<a href="<?php echo $template->findPermalink(93, 1); ?>" title="Senioren" class="square-option"><h5>Senioren<span>.</span></h5></a>
+						<a href="<?php echo $template->findPermalink(87, 1); ?>" title="Verduurzamen" class="square-option"><h5>Verduurzamen<span>.</span></h5></a>
+						<a href="<?php echo $template->findPermalink(92, 1); ?>" title="Ondernemer" class="square-option"><h5>Ondernemer<span>.</span></h5></a>
 					</div>
 				</div>
 			</section>
