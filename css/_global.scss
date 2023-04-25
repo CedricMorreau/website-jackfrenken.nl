@@ -233,7 +233,7 @@ ul.ui-autocomplete {
 			display: none;
 			margin-left: 0;
 			position: absolute;
-			background-color: $qua-col;
+			background-color: $sec-col;
 			width: 100%;
 			height: auto;
 			color: $lit-col;
@@ -338,6 +338,10 @@ ul.ui-autocomplete {
 					margin-top: 2.20rem;
 					@media only screen and (max-width: $container-size-l) {
 						margin-top: 2.15rem;
+					}
+
+					@media only screen and (max-width: $container-size-m) {
+						background-color: transparent;
 					}
 
 					margin-right: 4rem;
