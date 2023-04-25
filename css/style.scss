@@ -150,7 +150,8 @@
 	align-items: center;
 	font-weight: 300;
 	font-family: $fon-fam-sec;
-
+	white-space: nowrap;
+	
 	&:hover {
 		color: $sec-col;
 	}
@@ -164,6 +165,7 @@
 	strong {
 		font-weight: 600;
 		margin-left: 0.3rem;
+		white-space: nowrap;
 	}
 
 	&.ali-top {
