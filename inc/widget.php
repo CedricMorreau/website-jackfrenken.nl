@@ -11,7 +11,7 @@ if (($template->getPageId() == 40 && $val['id'] == 44) || ($template->getPageId(
 		Financieel meer ruimte dankzij de groenverklaring en NOM
 	</h3>
 	<p>
-		Meer weten? Neem contact op
+		Meer weten? Neem contact op &rsaquo;
 	</p>
 	</a>
 </div>
@@ -29,7 +29,7 @@ if ($template->getPageId() == 42) {
 		Zoekt u een bedrijfspand?
 	</h3>
 	<p>
-		Lees meer over onze bedrijfsmakelaardij
+		Lees meer over onze bedrijfsmakelaardij &rsaquo;
 	</p>
 	</a>
 </div>
@@ -54,12 +54,12 @@ else {
 <div class="sidebar-widget ghost-white">
 	<a href="<?php echo $template->findPermalink(64, 1); ?>">
 	<h3>
-		Maar wat <strong>betalen</strong>
+		Maar wat <strong>betalen</strong><br>
 		We dan per maand aan<br>
-		<strong>hypotheek</strong>
+		<strong>hypotheek?</strong>
 	</h3>
 	<p>
-		Bereken uw hypotheeklasten
+		Bereken uw hypotheeklasten &rsaquo;
 	</p>
 	</a>
 </div>
