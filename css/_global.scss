@@ -1006,6 +1006,7 @@ ul.ui-autocomplete {
 
 		@media only screen and (max-width: $container-size-s) {
 			font-size: 1.1rem;
+			max-width: none;
 		}
 		
 		.footer-links-wrapper {
@@ -1297,6 +1298,10 @@ ul.ui-autocomplete {
 		padding-left: 2rem;
 		align-items: baseline;
 		flex-direction: column-reverse;
+	}
+
+	@media only screen and (max-width: $container-size-s) {
+		padding-left: 1rem;
 	}
 
 	.content-container {

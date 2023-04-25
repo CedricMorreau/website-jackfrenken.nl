@@ -103,6 +103,10 @@
 				@media only screen and (max-width: $container-size-l) {
 					font-size: 2rem;
 				}
+
+				@media only screen and (max-width: $container-size-s) {
+					line-height: 2.5rem;
+				}
 				
 				strong {
 					font-weight: 600;
@@ -128,6 +132,11 @@
 				text-decoration: none;
 				font-weight: 300;
 				z-index: 4;
+
+				@media only screen and (max-width: $container-size-s) {
+					margin-bottom: 0.3rem;
+				}
+	
 				&:hover {
 					font-weight: bold;
 					color: $pri-col;
@@ -298,9 +307,10 @@
 					margin-left: 2rem;
 				}
 
-				@media only screen and (max-width: $container-size-m) {
+				@media only screen and (max-width: $container-size-s) {
 					margin-left: 0;
 					width: 50%;
+					margin-bottom: 0.5rem;
 				}
 
 				&:first-of-type {
