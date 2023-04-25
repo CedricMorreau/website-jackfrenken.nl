@@ -162,7 +162,8 @@
 	  			}
 
 	  			@media only screen and (max-width: $container-size-s) {
-					font-size: 1.3rem;
+					font-size: 1.7rem;
+					line-height: 1.9rem;
 				}
 
 				strong {
@@ -270,8 +271,7 @@
 			color: lighten($dar-col, 70%);
 			list-style: none;
 			@media only screen and (max-width: $container-size-m) {
-				padding-left: 1rem;
-				padding-right: 1rem;
+				
 			}
 			li {
 				display: inline;
@@ -517,6 +517,7 @@
 				padding-bottom: 0;
 				@media only screen and (max-width: $container-size-m) {
 					font-size: 2rem;
+					line-height: 2.5rem;
 					word-break: break-word;
 				}
 
