@@ -15,9 +15,9 @@
 					<h5>Navigatie</h5>
 					<p><a href="<
 					?php echo $template->findPermalink(33, 1); ?>">Aanbod</a></p>
-					<p><a href="<?php echo $template->findPermalink(34, 1); ?>">Over ons</a></p>
+					<p><a href="<?php echo $template->findPermalink(76, 1); ?>">Over ons</a></p>
 					<p><a href="<?php echo $template->findPermalink(35, 1); ?>">Diensten</a></p>
-					<p><a href="<?php echo $template->findPermalink(35, 1); ?>">Hypotheekadvies</a></p>
+					<p><a href="<?php echo $template->findPermalink(88, 1); ?>">Hypotheekadvies</a></p>
 					<p><a href="<?php echo $template->findPermalink(35, 1); ?>">Actualiteiten</a></p>
 					<p><a href="<?php echo $template->findPermalink(35, 1); ?>">Contact</a></p>
 				</div>
@@ -27,19 +27,19 @@
 					<p><a href="<?php echo $template->findPermalink(36, 1); ?>">Koopwoningen</a></p>
 					<p><a href="<?php echo $template->findPermalink(37, 1); ?>">Huurwoningen</a></p>
 					<p><a href="<?php echo $template->findPermalink(61, 1); ?>">Nieuwbouw</a></p>
-					<p><a href="<?php echo $template->findPermalink(61, 1); ?>">Bouwkavels</a></p>
-					<p><a href="<?php echo $template->findPermalink(61, 1); ?>">Bedrijfspanden</a></p>
-					<p><a href="<?php echo $template->findPermalink(61, 1); ?>">Hypotheken</a></p>
+					<p><a href="<?php echo $template->findPermalink(36, 1); ?>">Bouwkavels</a></p>
+					<p><a href="<?php echo $template->findPermalink(37, 1); ?>">Bedrijfspanden</a></p>
+					<p><a href="<?php echo $template->findPermalink(88, 1); ?>">Hypotheken</a></p>
 				</div>
 
 				<div class="footer-links-col footer-links-col-3">
 					<h5>Hypotheek</h5>
-					<p><a href="<?php echo $template->findPermalink(36, 1); ?>">Starter</a></p>
-					<p><a href="<?php echo $template->findPermalink(37, 1); ?>">Ondernemer</a></p>
-					<p><a href="<?php echo $template->findPermalink(61, 1); ?>">Gescheiden</a></p>
-					<p><a href="<?php echo $template->findPermalink(61, 1); ?>">Senioren</a></p>
-					<p><a href="<?php echo $template->findPermalink(61, 1); ?>">Verduurzamen</a></p>
-					<p><a href="<?php echo $template->findPermalink(61, 1); ?>">Doorstromen</a></p>
+					<p><a href="<?php echo $template->findPermalink(91, 1); ?>">Starter</a></p>
+					<p><a href="<?php echo $template->findPermalink(92, 1); ?>">Ondernemer</a></p>
+					<p><a href="<?php echo $template->findPermalink(90, 1); ?>">Gescheiden</a></p>
+					<p><a href="<?php echo $template->findPermalink(93, 1); ?>">Senioren</a></p>
+					<p><a href="<?php echo $template->findPermalink(87, 1); ?>">Verduurzamen</a></p>
+					<p><a href="<?php echo $template->findPermalink(74, 1); ?>">Verhuizen</a></p>
 				</div>
 
 				<div class="footer-links-col footer-links-col-4">

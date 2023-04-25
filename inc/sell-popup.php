@@ -12,7 +12,7 @@ if (!isset($_COOKIE['sellPopup']) || (isset($_COOKIE['sellPopup']) && $_COOKIE['
 	<h4>De woning van uw dromen <br>nog niet kunnen vinden?</h4>
 	<p>
 		<a href="<?php echo $template->findPermalink(58, 1); ?>">
-			Inschrijven als zoeker ⟶
+			Inschrijven als zoeker &rsaquo;
 		</a>
 	</p>
 </div>
