@@ -222,8 +222,7 @@
 	</div>
 
 	<div class="opmerkingen-row">
-		<input type="submit" name="submitSearchForm" value="Schrijf mij in als zoeker" class="size25">
-
+		<input type="submit" name="submitSearchForm" value="Schrijf mij in als zoeker" class="size30">
 	</div>
 
 

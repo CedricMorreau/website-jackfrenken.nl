@@ -386,9 +386,14 @@ ul.ui-autocomplete {
 							&:hover {
 								text-decoration: underline;
 							}
+
 							@media only screen and (max-width: $container-size-m) {
 								font-size: 1rem;
 								align-items: center;
+							}
+
+							strong {
+								font-weight: normal;
 							}
 						}
 					}
