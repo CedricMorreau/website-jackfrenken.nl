@@ -100,6 +100,9 @@ function isActive($name) {
 				}				
 				
 				$totalActueel = count($actueelCount);
+
+				if ($totalActueel > 16)
+					$totalActueel = 16;
 				
 				$page = 1;
 				$perPage = 8;
