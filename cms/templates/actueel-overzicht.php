@@ -1,6 +1,6 @@
 <?php
 
-$types = array('nieuws', 'columns', 'woonkrant');
+$types = array('nieuws');
 
 if (!isset($_GET['type']))
 	$_GET['type'] = 'nieuws';
