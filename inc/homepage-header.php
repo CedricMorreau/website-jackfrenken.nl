@@ -10,7 +10,7 @@
 
 		<a href="<?php echo $template->findPermalink(33, 1); ?>">Volledige aanbod <span>&rsaquo;</span></a>
 		<a href="<?php echo $template->findPermalink(55, 1); ?>">Uw woning verkopen <span>&rsaquo;</span></a>
-		<a href="<?php echo $template->findPermalink(88, 1); ?>">Op zoek naar een hypotheek <span>&rsaquo;</span></a>
+		<a href="<?php echo $template->findPermalink(88, 1); ?>">Hypotheek advies nodig? <span>&rsaquo;</span></a>
 		<a href="<?php echo $template->findPermalink(58, 1); ?>">Inschrijven als zoeker <span>&rsaquo;</span></a>
 
 		<a href="javascript:void(0);" onclick="javascript:$.scrollTo('#services', 1000)" class="meer-jack-frenken">Meer Jack Frenken</a>

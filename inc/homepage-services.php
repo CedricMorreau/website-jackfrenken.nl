@@ -44,7 +44,7 @@
 		
 		<a href="<?php echo $template->findPermalink(88, 1); ?>">
 			<div class="service-item">
-				<strong>Hypo</strong>theek
+				<strong>Hypo-</strong>theek
 			</div>
 		</a>
 

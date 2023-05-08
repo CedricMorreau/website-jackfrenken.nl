@@ -86,8 +86,9 @@ ul.ui-autocomplete {
 
 .cta-button {
 	font-size: 1.1rem;
-	padding-top: 0.4rem;
-	padding-bottom: 0.4rem;
+	font-weight: 400;
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
 	padding-left: 1.5rem;
 	padding-right: 1.5rem;
 	margin-right: 2rem;
@@ -611,6 +612,10 @@ ul.ui-autocomplete {
 				a {
 					color: inherit;
 					font-size: inherit;
+					font-weight: 300;
+					strong {
+						font-weight: 600;
+					}
 				}
 
 			}
@@ -619,6 +624,7 @@ ul.ui-autocomplete {
 				margin-bottom: 1.5rem;
 				font-size: 1.2rem;
 				line-height: 1.5rem;
+				font-weight: 300;
 
 			}
 
@@ -724,6 +730,43 @@ ul.ui-autocomplete {
 		font-size: 0.8rem;
 		text-transform: uppercase;
 	}
+
+	.slider-paging {
+		position: absolute;
+		bottom: 2rem;
+		width: 100%;
+
+		ul {
+			width: 100%;
+			display: flex;
+			list-style-type: none;
+			justify-content: center;
+
+			li {
+				width: 7rem;
+				height: 0.6rem;
+				background-color: rgba($lit-col, 0.7);
+				margin-right: 1.7rem;
+				cursor: pointer;
+				transition: 0.15s background-color ease-in-out;
+
+				&:last-of-type {
+					margin-right: 0;
+				}
+
+				&.active {
+					background-color: rgba($lit-col, 1);
+				}
+
+				&:hover {
+					background-color: $sec-col;
+				}
+			}
+
+		}
+
+	}
+
 }
 
 // References

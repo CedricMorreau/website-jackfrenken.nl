@@ -1,4 +1,5 @@
 <section class="parallax-banner">
+
 	<div class="parallax-image" style="background-image: url('<?php echo $dynamicRoot; ?>resources/homepage-parralax.jpg');">
 		<div class="content-wrapper">
 			<div class="review-emblem">
@@ -15,4 +16,13 @@
 			</div>
 		</div>
 	</div>
+
+	<!-- Paging -->
+	<div class="slider-paging">
+		<ul>
+			<li class="active"></li>
+			<li></li>
+		</ul>
+	</div>
+
 </section>
