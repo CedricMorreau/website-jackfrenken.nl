@@ -3,7 +3,7 @@
 		<div class="header-main-content">
 			<div class="header-title-wrapper animated fadeInLeft">
 				<div class="header-title">
-					<h1>Goed en vertrouwd <br>voor huis en hypotheek.</h1>
+					<h1><strong>Goed</strong> en <strong>vertrouwd</strong> <br>voor huis en hypotheek.</h1>
 					
 					<?php
 					

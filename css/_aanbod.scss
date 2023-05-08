@@ -727,7 +727,7 @@ header.headerAanbod {
 .filter-head {
 	font-family: $fon-fam-sec;
 	font-weight: bold;
-	font-size: 1.2rem;
+	font-size: 1rem;
 	text-transform: uppercase;
 	margin-top: 2rem;
 	cursor: pointer;
@@ -735,11 +735,13 @@ header.headerAanbod {
 		margin-top: 1rem;
 		margin-bottom: 1rem;
 	}
+
 	&.active {
 		a { 
 			color: $sec-col; 
 		}
 	}
+
 	&.toggle {
 		&:after {
 			@media only screen and (max-width: $container-size-m) {
@@ -778,13 +780,22 @@ header.headerAanbod {
 		text-transform: uppercase;
 		display: flex;
 
+		&.active {
+			a {
+				color: $sec-col;
+			}
+		}
+
 		a {
 			text-decoration: none;
 			width: 100%;
 			display: flex;
+			color: $pri-col;
+
+
 
 			&:hover {
-				color: $qua-col;
+				color: $sec-col;
 			}
 		}
 
@@ -855,6 +866,7 @@ header.headerAanbod {
 			.item-overlay-wrapper {	
 				background-color: $overlay-col;
 				color: $pri-col;
+				font-weight: 300;
 				padding-top: 3.5rem;
 				padding-bottom: 2rem;
 				padding-left: 3rem;

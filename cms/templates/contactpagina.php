@@ -126,13 +126,6 @@ $locaties = $cms['database']->prepare("SELECT * FROM `tbl_cms_locaties` WHERE `c
 
 						<div class="social-wrapper">
 							<div>Kvk-nummer: <?php echo $locaties[0]['cl_kvk']; ?></div>
-							<div class="social-items"><span>Volg ons:</span>
-								<a href="https://www.facebook.com/jackfrenken" title="Facebook"><img src="<?php echo $dynamicRoot; ?>resources/social_facebook.svg" alt="Facebook"></a>
-
-								<a href="https://twitter.com/JackFrenkenNVM"><img src="<?php echo $dynamicRoot; ?>resources/social_twitter.svg" alt="Twitter" title="Twitter"></a>
-								
-								<a href="https://www.linkedin.com/company/1680615?trk=tyah&trkInfo=tarId%3A1410275372935%2Ctas%3Ajack%20frenken%2Cidx%3A1-1-1"><img src="<?php echo $dynamicRoot; ?>resources/social_linkedin.svg" alt="LinkedIn" title="LinkedIn"></a>
-							</div>
 						</div>
 					</div>
 

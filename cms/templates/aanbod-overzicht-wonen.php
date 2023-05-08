@@ -773,9 +773,7 @@ elseif ($overviewType == 'verkocht')
 					}
 					
 					?>
-					
-					<?php include($documentRoot . "inc/aanbod-banner.php"); ?>
-					
+										
 					<?php
 					
 					$pagingUrl = $dynamicRoot . $template->getPermaLink($template->getCurrentLanguage()) . '.html?searchHash=' . $MD5;

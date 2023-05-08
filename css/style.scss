@@ -572,7 +572,7 @@
 	flex-wrap: wrap;
 	flex-direction: row;
 	margin-top: -14rem;
-	margin-bottom: 3rem;
+	margin-bottom: 5rem;
 	@media only screen and (max-width: $container-size-m) {
 		flex-direction: column;
 	}
@@ -653,7 +653,7 @@
 	text-transform: uppercase;
 	font-size: 3rem;
 	margin-top: 0;
-	margin-bottom: 4rem;
+	margin-bottom: 2rem;
 	@media only screen and (max-width: $container-size-m) {
 		font-size: 2rem;
 		line-height: 2.5rem;

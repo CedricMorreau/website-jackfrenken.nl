@@ -563,8 +563,6 @@ $mediaList = $cms['database']->prepare("SELECT `id`, `object_ObjectTiaraID`, `be
 						<h2>Locatie</h2>
 						<div id="map_canvas"></div>
 
-						<?php //include($documentRoot . "inc/aanbod-banner.php"); ?>
-
 					</div>
 					
 					<?php if (!empty($extraMedia['brochure'])) { ?>

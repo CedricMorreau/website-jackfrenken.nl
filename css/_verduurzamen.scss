@@ -147,7 +147,7 @@
 			width: max-content;
 			color: $lit-col;
 			text-transform: uppercase;
-			font-size: 2.6rem;
+			font-size: 2.4rem;
 			line-height: 2.6rem;
 			font-weight: 200;
 			@media only screen and (max-width: $container-size-s) {
@@ -195,6 +195,13 @@
 			}
 			@media only screen and (max-width: $container-size-s) {
 				padding: 1.5rem;
+			}
+
+			.button-wrapper {
+				width: 100%;
+				.cta-button {
+					width: 100%;
+				}
 			}
 		}
 

@@ -312,6 +312,7 @@
 		margin-bottom: 1rem;
 	}
 
+	// Left sidebar
 	.column-sidebar {
 		display: flex;
 		flex-direction: column;
@@ -387,6 +388,7 @@
 					font-family: $fon-fam-sec;
 					width: 100%;
 					display: flex;
+					color: $pri-col;
 
 					&:hover {
 						color: $qua-col;
@@ -414,6 +416,7 @@
 			padding-bottom: 1.5rem;
 			color: $lit-col;
 			max-width: 17rem;
+			font-weight: 300;
 
 			@media only screen and (max-width: $container-size-m) {
 				margin-left: 0;
@@ -434,7 +437,7 @@
 				margin-top: 0;
 				margin-bottom: 1.5rem;
 				color: $lit-col;
-				font-size: 1.8rem;
+				font-size: 1.6rem;
 				line-height: 2rem;
 				text-transform: uppercase;
 				font-weight: 300;
@@ -459,6 +462,7 @@
 
 				a {
 					font-size: inherit;
+					font-weight: 300;
 				}
 			}
 
@@ -481,6 +485,7 @@
 
 	}
 
+	// Main content
 	.column-content {
 		flex: 2;
 		line-height: 1.8rem;
@@ -491,8 +496,10 @@
 			padding-right: 13rem;
 			width: 100%;
 			max-width: 60rem;
+			font-weight: 300;
 			display: flex;
 			flex-direction: column;
+
 			@media only screen and (max-width: $container-size-l) {
 				padding-right: $margin-size-m;
 			}
@@ -512,7 +519,7 @@
 				line-height: 3rem;
 				text-transform: uppercase;
 				margin-top: 0;
-				margin-bottom: 0;
+				margin-bottom: 0.8rem;
 				padding-top: 0;
 				padding-bottom: 0;
 				@media only screen and (max-width: $container-size-m) {
@@ -548,15 +555,28 @@
 			}
 
 			p {
+				margin-top: 0;
+				margin-bottom: 0.5rem;
+
 				ul {
 					margin-left: 1.1rem;
 				}
+
 				a {
 					font-size: inherit;
 					&:hover {
 						color: $qua-col;
 					}
 				}
+
+				+h2 {
+					margin-top: 1rem;
+				}
+
+				+h3 {
+					margin-top: 1rem;
+				}
+
 			}
 			
 			ul {

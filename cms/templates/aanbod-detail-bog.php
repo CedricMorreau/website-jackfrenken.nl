@@ -777,8 +777,6 @@ $ogType = 'bog';
 				</div>
 			</div>
 
-			<?php include($documentRoot . "inc/aanbod-banner.php"); ?>
-
 			<?php include($documentRoot . "inc/footer.php"); ?>
 
 		</div>

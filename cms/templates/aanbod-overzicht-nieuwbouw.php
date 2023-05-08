@@ -451,9 +451,7 @@ $noFilters = '26588d98cdfcdf9e83c2b9bb4644f49b';
 					}
 					
 					?>
-					
-					<?php include($documentRoot . "inc/aanbod-banner.php"); ?>
-					
+										
 					<?php
 					
 					$pagingUrl = $dynamicRoot . $template->getPermaLink($template->getCurrentLanguage()) . '.html?searchHash=' . $MD5;

@@ -566,8 +566,6 @@ $mediaList = $cms['database']->prepare("SELECT `id`, `object_ObjectTiaraID`, `be
 				</div>
 			</div>
 
-			<?php include($documentRoot . "inc/aanbod-banner.php"); ?>
-
 			<?php include($documentRoot . "inc/footer.php"); ?>
 
 		</div>

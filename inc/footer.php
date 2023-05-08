@@ -13,20 +13,19 @@
 				
 				<div class="footer-links-col footer-links-col-1">
 					<h5>Navigatie</h5>
-					<p><a href="<
-					?php echo $template->findPermalink(33, 1); ?>">Aanbod</a></p>
+					<p><a href="<?php echo $template->findPermalink(33, 1); ?>">Aanbod</a></p>
 					<p><a href="<?php echo $template->findPermalink(76, 1); ?>">Over ons</a></p>
-					<p><a href="<?php echo $template->findPermalink(35, 1); ?>">Diensten</a></p>
+					<p><a href="<?php echo $template->findPermalink(53, 1); ?>">Diensten</a></p>
 					<p><a href="<?php echo $template->findPermalink(88, 1); ?>">Hypotheekadvies</a></p>
-					<p><a href="<?php echo $template->findPermalink(35, 1); ?>">Actualiteiten</a></p>
-					<p><a href="<?php echo $template->findPermalink(35, 1); ?>">Contact</a></p>
+					<p><a href="<?php echo $template->findPermalink(59, 1); ?>">Actualiteiten</a></p>
+					<p><a href="<?php echo $template->findPermalink(70, 1); ?>">Contact</a></p>
 				</div>
 
 				<div class="footer-links-col footer-links-col-2">
 					<h5>Aanbod</h5>
-					<p><a href="<?php echo $template->findPermalink(36, 1); ?>">Koopwoningen</a></p>
-					<p><a href="<?php echo $template->findPermalink(37, 1); ?>">Huurwoningen</a></p>
-					<p><a href="<?php echo $template->findPermalink(61, 1); ?>">Nieuwbouw</a></p>
+					<p><a href="<?php echo $template->findPermalink(33, 1); ?>">Koopwoningen</a></p>
+					<p><a href="<?php echo $template->findPermalink(34, 1); ?>">Huurwoningen</a></p>
+					<p><a href="<?php echo $template->findPermalink(35, 1); ?>">Nieuwbouw</a></p>
 					<p><a href="<?php echo $template->findPermalink(36, 1); ?>">Bouwkavels</a></p>
 					<p><a href="<?php echo $template->findPermalink(37, 1); ?>">Bedrijfspanden</a></p>
 					<p><a href="<?php echo $template->findPermalink(88, 1); ?>">Hypotheken</a></p>
