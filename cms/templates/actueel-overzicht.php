@@ -55,22 +55,6 @@ function isActive($name) {
 				
 				<div class="column-sidebar">
 					<h1 class="sidebar-title">Actualiteiten</h1>
-					<ul class="sidebar-nav">
-					
-						<?php
-						
-						foreach ($types as $key => $val) {
-							
-							?>
-							
-						<li<?php if (isActive($val)) { echo ' class="active"'; } ?>><a href="<?php echo $template->getPermalink(1); ?>?type=<?php echo $val; ?>"><?php echo ucfirst($val); ?><?php if (isActive($val)) { echo '<span class="arrow">&rsaquo;</span>'; } ?></a></li>	
-							
-							<?php
-						}
-						
-						?>
-					
-					</ul>
 	
 					<?php echo $template->cmsData('page][section/widgets'); ?>
 
