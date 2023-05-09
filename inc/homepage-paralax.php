@@ -1,6 +1,6 @@
 <section class="parallax-banner">
 
-	<div class="parallax-image slide" data-slide="1" style="background-image: url('<?php echo $dynamicRoot; ?>resources/homepage-parralax.jpg');">
+	<div class="parallax-image slide active animated fadeIn slow" data-slide="1" style="background-image: url('<?php echo $dynamicRoot; ?>resources/homepage-parralax.jpg');">
 		<div class="content-wrapper">
 			<div class="review-emblem">
 				<div class="review-container">
@@ -17,7 +17,7 @@
 		</div>
 	</div>
 
-	<div class="parallax-image slide" data-slide="2" style="display: none; background-image: url('<?php echo $dynamicRoot; ?>resources/homepage-parralax-2.webp');">
+	<div class="parallax-image slide active animated fadeIn slow" data-slide="2" style="display: none; background-image: url('<?php echo $dynamicRoot; ?>resources/homepage-parralax-2.webp');">
 		<div class="content-wrapper">
 			<div class="review-emblem">
 				<div class="review-container">
