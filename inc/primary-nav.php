@@ -1,11 +1,32 @@
 <div class="primary-nav content-wrapper">
 
+	<?php
+
+	if ($template->findHighestParent() == 88) {
+
+		?>
+
+	<div class="logo-container">
+		<a href="/">
+			<img src="<?php echo $dynamicRoot; ?>resources/logo_jf_finance_landscape.svg" alt="Jack Frenken logo" class="desktop-logo" />
+			<img src="<?php echo $dynamicRoot; ?>resources/logo_jf_finance_landscape.svg" alt="Jack Frenken beeldmerk" class="mobile-beeldmerk" />
+		</a>
+	</div>
+
+		<?php
+	}
+	else {
+
+	?>
+
 	<div class="logo-container">
 		<a href="/">
 			<img src="<?php echo $dynamicRoot; ?>resources/logo_jf_landscape.svg" alt="Jack Frenken logo" class="desktop-logo" />
 			<img src="<?php echo $dynamicRoot; ?>resources/logo_jf_landscape.svg" alt="Jack Frenken beeldmerk" class="mobile-beeldmerk" />
 		</a>
 	</div>
+
+	<?php } ?>
 
 	<a href="tel:0475335225" class="mobile-contact-icon">
 		<img src="/resources/icon-telefoon-small.svg" alt="Bel ons">
