@@ -54,19 +54,29 @@
 
 	$(document).ready(function() {
 
-		max_slides = $('.slide[data-slide]').length;
+max_slides = $('.slide[data-slide]').length;
 
-		$('.slider-paging ul li').click(function() {
+$('.slider-paging ul li').click(function() {
 
-			new_slide = $(this).attr('data-slide');
+	new_slide = $(this).attr('data-slide');
 
-			move_slide(new_slide);
-		});
+	// Clear the interval
+	clearInterval(slider_interval);
 
-		setInterval(() => {
-			next_slide();
-		}, timeout);
+	move_slide(new_slide);
+
+	// Start the interval again with the same timeout
+	slider_interval = setInterval(() => {
+		next_slide();
+	}, timeout);
 	});
+
+	// Start the interval
+	slider_interval = setInterval(() => {
+		next_slide();
+	}, timeout);
+	});
+
 
 	function move_slide(index) {
 
