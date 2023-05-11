@@ -52,7 +52,7 @@ else {
 </div>
 
 <div class="sidebar-widget ghost-white">
-	<a href="<?php echo $template->findPermalink(64, 1); ?>">
+	<a href="<?php echo $template->findPermalink(96, 1); ?>">
 	<h3>
 		Maar wat <strong>betalen</strong><br>
 		We dan per maand aan<br>
