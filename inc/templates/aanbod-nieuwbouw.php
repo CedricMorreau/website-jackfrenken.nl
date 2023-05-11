@@ -138,9 +138,9 @@ else
 					</td>
 					<?php } ?>
 
-				</table>
-
 				<?php } ?>
+
+				</table>
 			</div>
 		</div>
 	</a>
