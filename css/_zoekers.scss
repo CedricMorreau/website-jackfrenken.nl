@@ -310,12 +310,13 @@
 		}
 
 		input[type="submit"] {
-			height: 5rem;
+			height: 4rem;
 			background-color: $qua-col;
 			color: $lit-col;
 			cursor: pointer;
 			text-transform: uppercase;
 			font-weight: bold;
+			width: 100%;
 			@media only screen and (max-width: $container-size-m) {
 				width: 100%;
 				margin-bottom: 1rem;

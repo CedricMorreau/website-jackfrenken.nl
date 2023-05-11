@@ -17,7 +17,7 @@ if ($totalRows > 0) {
 	?>
 	
 	<div class="text-wrapper">
-		Objecten <span class="bold"><?php echo $current; ?> t/m <?php echo $last; ?></span> van <span class="bold"><?php echo $totalRows; ?></span>
+		<span class="bold"><?php echo $current; ?> T/M <?php echo $last; ?></span> van <span class="bold"><?php echo $totalRows; ?></span>
 	</div>
 	
 	<?php

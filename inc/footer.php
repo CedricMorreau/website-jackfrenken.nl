@@ -5,7 +5,7 @@
 		<!-- Scroll to top -->
 		<div class="scroll-to-top-wrapper" onclick="javascript:$.scrollTo('body', 1000)">
 			<div class="scroll-content-wrapper">
-				&rarr;
+				<img src="<?php echo $dynamicRoot; ?>resources/icon-arrow-up.svg" alt="">
 			</div>
 		</div>
 		<div class="footer-row-1">
@@ -38,7 +38,7 @@
 					<p><a href="<?php echo $template->findPermalink(90, 1); ?>">Gescheiden</a></p>
 					<p><a href="<?php echo $template->findPermalink(93, 1); ?>">Senioren</a></p>
 					<p><a href="<?php echo $template->findPermalink(87, 1); ?>">Verduurzamen</a></p>
-					<p><a href="<?php echo $template->findPermalink(74, 1); ?>">Verhuizen</a></p>
+					<p><a href="<?php echo $template->findPermalink(94, 1); ?>">Verhuizen</a></p>
 				</div>
 
 				<div class="footer-links-col footer-links-col-4">
