@@ -32,8 +32,6 @@
 			
 			break;
 	}
-
-	if ($overviewType != 'kavels') {
 		
 	?>
 
@@ -46,6 +44,7 @@
 	<p class="filter-head toggle">Locatie</p>
 	<div class="filter-wrapper">
 		<input src="<?php echo $dynamicRoot; ?>inc/ajax_searchAutoComplete.php" type="text" id="wonen_plaats" name="plaatsnaam" class="auto_complete" value="<?php echo $filter['plaatsnaam']; ?>" data-ogType="<?php echo $ogType; ?>" placeholder="Plaats">
+		<?php if ($overviewType != 'kavels') { ?>
 		<div class="select-wrapper">
 			<select name="radius" id="filter-straal">
 				<optgroup>
@@ -77,6 +76,7 @@
 			</select>
 			</optgroup>
 		</div>
+		<?php } ?>
 	</div>
 
 	<p class="filter-head toggle">Prijs</p>
@@ -137,6 +137,8 @@
 			</select>
 		</div>
 	</div>
+
+	<?php if ($overviewType != 'kavels') { ?>
 	
 	<p class="filter-head toggle">Objectkenmerken</p>
 	
@@ -272,12 +274,12 @@
 		</div>
 		
 	</div>
+
+	<?php } ?>
 	
 	</form>
 
 	<!-- <p class="more-filters"><a href="javascript:void(0);" id="more-filters">Meer zoekfilters &darr;</a></p> -->
-
-	<?php } ?>
 	
 	<?php
 	
@@ -285,12 +287,6 @@
 	
 	?>
 </div>
-
-<?php
-
-if ($overviewType != 'kavels') {
-	
-?>
 
 <script type="text/javascript">
 
@@ -327,5 +323,3 @@ if ($overviewType != 'kavels') {
 	}
 
 </script>
-
-<?php } ?>

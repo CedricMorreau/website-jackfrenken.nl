@@ -507,8 +507,8 @@ if ($overviewType != 'kavels') {
 }
 else {
 	
-	$sql = "
-		(SELECT 
+	$sql = "SELECT * FROM
+		((SELECT 
 			`tbl_OG_wonen`.id AS id, 
 			0 AS id_OG_nieuwbouw_projecten, 
 			0 AS id_OG_nieuwbouw_bouwTypes, 
@@ -586,7 +586,43 @@ else {
 				AND `tbl_OG_nieuwbouw_bouwNummers`.Wonen_Woonhuis_TypeWoning='' 
 				AND `tbl_OG_nieuwbouw_bouwNummers`.Wonen_Verdiepingen_Aantal=0 
 		
-				AND NOT `tbl_OG_nieuwbouw_projecten`.project_ProjectDetails_Status_ObjectStatus IN ('Ingetrokken') )
+				AND NOT `tbl_OG_nieuwbouw_projecten`.project_ProjectDetails_Status_ObjectStatus IN ('Ingetrokken') )) AS U WHERE 1=1";
+	
+	// Plaatsnaam / postcode
+	if (!empty($filter['plaatsnaam'])) {
+	
+		// Construct next query
+		$sql .= " AND (";
+
+		// Straat
+		$sql .= "lower(`straatnaam`) LIKE '%" . $cms['database']->escape(strtolower($filter['plaatsnaam'])) . "%' ";
+
+		// Plaatsnaam
+		$sql .= "OR lower(`woonplaats`) LIKE '%" . $cms['database']->escape(strtolower($filter['plaatsnaam'])) . "%' ";
+
+		// Close
+		$sql .= ')';
+	}
+	
+	// Prijs van
+	if (!empty($filter['prijsVan']) && $filter['prijsVan'] > 0 && is_numeric($filter['prijsVan'])) {
+	
+		if ($filter['saleType'] == 'rent')
+			$sql .= " AND `huurprijs`>=" . $cms['database']->escape($filter['prijsVan']) . " ";
+		else
+			$sql .= " AND `koopprijs`>=" . $cms['database']->escape($filter['prijsVan']) . " ";
+	}
+	
+	// Prijs tot
+	if (!empty($filter['prijsTot']) && $filter['prijsTot'] > 0 && is_numeric($filter['prijsTot'])) {
+	
+		if ($filter['saleType'] == 'rent')
+			$sql .= " AND `huurprijs`<=" . $cms['database']->escape($filter['prijsTot']) . " ";
+		else
+			$sql .= " AND `koopprijs`<=" . $cms['database']->escape($filter['prijsTot']) . " ";
+	}
+
+	$sql .= "
 		ORDER BY woonplaats ASC
 	";
 }
