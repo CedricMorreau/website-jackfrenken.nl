@@ -36,7 +36,7 @@
 				
 				<p class="title-price"><?php echo $priceText; ?></p>
 				
-				<a href="<?php echo $template->findPermalink(65, 1); ?>" class="title-link">Bereken hier uw hypotheeklasten &rsaquo;</a>
+				<!-- <a href="<?php echo $template->findPermalink(69, 1); ?>" class="title-link">Bereken hier uw hypotheeklasten &rsaquo;</a> -->
 			</div>
 		</div>
 		
