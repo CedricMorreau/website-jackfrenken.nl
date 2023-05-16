@@ -267,12 +267,17 @@
 
 	.breadcrumbs-wrapper {
 		font-family: $fon-fam-sec;
+		@media only screen and (max-width: $container-size-m) {
+			margin-left: 1rem;
+			margin-right: 1rem;
+		}
 		ul {
 			color: lighten($dar-col, 70%);
 			list-style: none;
 			@media only screen and (max-width: $container-size-m) {
 				
 			}
+
 			li {
 				display: inline;
 				text-transform: lowercase;
@@ -290,7 +295,9 @@
 					}
 				}
 			}
+
 		}
+
 	}
 
 }
@@ -491,7 +498,11 @@
 		line-height: 1.8rem;
 		margin-top: 0;
 		margin-bottom: 0;
-
+		
+		@media only screen and (max-width: $container-size-m) {
+			line-height: 1.6rem;
+		}
+		
 		.content-wrapper {
 			padding-right: 13rem;
 			width: 100%;

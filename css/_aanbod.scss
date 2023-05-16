@@ -37,6 +37,9 @@
 
 				.item-overlay-wrapper {
 					transform: translateY(-60%);
+					@media only screen and (max-width: $container-size-m) {
+						transform: none;
+					}
 				}
 
 				> a {
@@ -773,7 +776,7 @@ header.headerAanbod {
 
 	@media only screen and (max-width: $container-size-m) {
 		padding-top: 0;
-		margin-bottom: 1rem;
+		margin-bottom: 3rem;
 	}
 
 	.filter-head {
@@ -1002,6 +1005,10 @@ header.headerAanbod {
 					border-width: 1.1rem 0 1.1rem 1.1rem;
 					border-color: transparent transparent transparent $lit-col;
 					transform: rotate(0deg);
+
+					@media only screen and (max-width: $container-size-m) {
+						display: none;
+					}
 				}
 
 			}
