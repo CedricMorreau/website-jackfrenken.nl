@@ -102,8 +102,13 @@
 				$extraCrumbs = array($val['objectDetails_Adres_NL_Woonplaats'] . ' - ' . obj_generateAddress($val['objectDetails_Adres_NL_Straatnaam'], $val['objectDetails_Adres_NL_Huisnummer'], $val['objectDetails_Adres_NL_HuisnummerToevoeging']) => 1);
 
 				$ignoreCrumb = 1;
+
+				$use_id = $template->getPageData('id');
+
+				if ($val['objectDetails_Koop_Koopprijs'] < 1)
+					$use_id = 39;
 							
-				$breadCrumbs = new Breadcrumbs($template->getPageData('id'), $template->getPageData('nav'), $cms['database'], $template, $extraCrumbs, $ignoreCrumb);
+				$breadCrumbs = new Breadcrumbs($use_id, $template->getPageData('nav'), $cms['database'], $template, $extraCrumbs, $ignoreCrumb);
 
 				echo $breadCrumbs->displayCrumbs();
 
