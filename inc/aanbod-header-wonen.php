@@ -26,8 +26,12 @@
 				?>
 				
 				<p class="title-price"><?php echo $priceText; ?></p>
+
+				<?php if ($val['objectDetails_Koop_Koopprijs'] > 1) { ?>
 				
 				<a href="<?php echo $template->findPermalink(88, 1); ?>" class="title-link">Hypotheekmogelijkheden &rsaquo;</a>
+
+				<?php } ?>
 			</div>
 		</div>
 		
