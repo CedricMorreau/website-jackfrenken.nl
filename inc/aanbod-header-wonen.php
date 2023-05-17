@@ -43,8 +43,37 @@
 		<div class="content-image" style="background: none;">
 			<div class="image-container">
 
-				<div class="image-label status-soldsubject">Verkocht onder voorbehoud</div>
+			<?php
 
+			if (!empty($val['object_Web_OpenHuis_Vanaf']) && !empty($val['object_Web_OpenHuis_Tot']) && $val['object_Web_OpenHuis_Vanaf'] != '0000-00-00 00:00:00' && $val['object_Web_OpenHuis_Tot'] != '0000-00-00 00:00:00') {
+
+				$toTimeFrom = strtotime($val['object_Web_OpenHuis_Vanaf']);
+				$toTimeTill = strtotime($val['object_Web_OpenHuis_Tot']);
+
+				if (time() < $toTimeTill) {
+
+					// Open huis!
+					$shownDate = translateDay(date('l. j F', $toTimeFrom), 'short');
+					$shownTime = date('H:i', $toTimeFrom) . ' tot ' . date('H:i', $toTimeTill);
+
+					echo '<div class="image-label status-openhouse"><span>Open Huis!</span> <i>' . $shownDate . ' - ' . $shownTime . ' uur</i></div>';
+				}
+			}
+			elseif (strtolower($val['objectDetails_StatusBeschikbaarheid_Status']) == 'verkocht' || strtolower($val['objectDetails_StatusBeschikbaarheid_Status']) == 'verhuurd' || strtolower($val['objectDetails_StatusBeschikbaarheid_Status']) == 'onder optie') {
+
+				echo '<div class="image-label status-sold">' . $val['objectDetails_StatusBeschikbaarheid_Status'] . '</div>';
+			}
+			elseif (strtolower($val['objectDetails_StatusBeschikbaarheid_Status']) == 'verkocht onder voorbehoud' || strtolower($val['objectDetails_StatusBeschikbaarheid_Status']) == 'verhuurd onder voorbehoud') {
+
+				echo '<div class="image-label status-soldsubject">' . $val['objectDetails_StatusBeschikbaarheid_Status'] . '</div>';
+			}
+			elseif (isset($val['ood_alternativeStatus']) && !empty($val['ood_alternativeStatus'])) {
+
+			?>
+
+			<div class="image-label status-new"><?php echo $val['ood_alternativeStatus']; ?></div>
+
+			<?php } ?>
 
 				<?php if (isset($mediaList[0])): ?>
 
