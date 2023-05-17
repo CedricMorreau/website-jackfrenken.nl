@@ -22,15 +22,6 @@
 						echo '<p class="openhouse"><strong>Open Huis!</strong> <i>' . $shownDate . ' - ' . $shownTime . ' uur</i></p>';
 					}
 				}
-
-				if ($val['objectDetails_StatusBeschikbaarheid_Status'] == 'Verkocht' || $val['objectDetails_StatusBeschikbaarheid_Status'] == 'Verkocht onder voorbehoud') {
-
-					echo '<span class="label verkocht">' . $val['objectDetails_StatusBeschikbaarheid_Status'] . '</span>';
-				}
-				elseif ($val['objectDetails_StatusBeschikbaarheid_Status'] == 'Verhuurd' || $val['objectDetails_StatusBeschikbaarheid_Status'] == 'Verhuurd onder voorbehoud') {
-
-					echo '<span class="label verkocht">' . $val['objectDetails_StatusBeschikbaarheid_Status'] . '</span>';
-				}
 				
 				?>
 				
