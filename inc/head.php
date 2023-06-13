@@ -57,7 +57,7 @@ else {
 <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;500&family=Poppins:wght@300;700&display=swap" rel="stylesheet">
 
 <!-- custom styling -->
-<link rel="stylesheet" href="<?php echo $dynamicRoot; ?>css/style.css">
+<link rel="stylesheet" href="<?php echo $dynamicRoot; ?>css/style.css?v=1">
 
 <!-- Google Analytics 4 -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-42911090-22"></script>
