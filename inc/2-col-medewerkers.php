@@ -96,21 +96,3 @@
 		</div>
 	</div>
 </div>
-
-<section class="partners-banner-wrapper">
-	<div class="column-content">
-		<div class="column-sidebar"><!-- spacer --></div>
-		<div class="column-content flex column">
-			<h4>Partners</h4>
-			<div class="partner-logos-wrapper">
-				<a href="https://www.nvm.nl/" class="partner-logo" target="_blank">
-					<img src="/resources/partner-logo-funda_powered_by_nvm.png" alt="Funda">
-				</a>
-				<a href="https://www.funda.nl" class="partner-logo" target="_blank">
-					<img src="/resources/partner-logo-nvm.png" alt="Funda">
-				</a>
-			</div>
-		</div>
-		
-	</div>
-</section>

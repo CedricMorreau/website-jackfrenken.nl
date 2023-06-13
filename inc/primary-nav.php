@@ -2,7 +2,20 @@
 
 	<?php
 
-	if ($template->findHighestParent() == 88) {
+	if (in_array($template->getPageId(), [37, 42, 57])) {
+
+		?>
+
+	<div class="logo-container">
+		<a href="/">
+			<img src="<?php echo $dynamicRoot; ?>resources/logo_jf_bedrijfsmakelaars.svg" alt="Jack Frenken logo" class="desktop-logo" />
+			<img src="<?php echo $dynamicRoot; ?>resources/logo_jf_bedrijfsmakelaars.svg" alt="Jack Frenken beeldmerk" class="mobile-beeldmerk" />
+		</a>
+	</div>
+
+		<?php
+	}
+	elseif ($template->findHighestParent() == 88) {
 
 		?>
 
