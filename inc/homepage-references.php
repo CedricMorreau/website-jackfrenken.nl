@@ -11,7 +11,7 @@
 		</div>
 
 		<div class="references-button">
-			<a href="<?php echo $template->findPermalink(48, 1); ?>" class="cta-button ghost">Referenties</a>
+			<a href="<?php echo $template->findPermalink(48, 1); ?>" class="cta-button ghost">Beoordelingen</a>
 		</div>
 	</div>
 </section>
