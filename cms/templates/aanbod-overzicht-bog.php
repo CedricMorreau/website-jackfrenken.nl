@@ -107,6 +107,8 @@ $sql = "SELECT
 		`objectDetails_Winkelruimte_Oppervlakte`,
 		`object_Web_PrijsTonen`,
 		`tbl_OG_objectDetails`.`ood_alternativeStatus`,
+		`objectDetails_Lokatie_Liggingen`,
+		`objectDetails_Energieklasse`,
 
 
 		`tbl_OG_provincies`.`provincie`,

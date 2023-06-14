@@ -27,20 +27,68 @@ $image = (!is_null($val['mainImage'])) ? $dynamicRoot . 'og_media/bog_' . $val['
 				<p class="item-subtitle">
 					<?php echo $priceText; ?>
 
-					<?php if (!empty($val['objectDetails_Energielabel_Energieklasse'])) { ?>
+					<?php if (!empty($val['objectDetails_Energieklasse'])) { ?>
 
 					<p>Energielabel: 
-						<span class="energy-label energy-label-<?php echo strtolower($val['objectDetails_Energielabel_Energieklasse']); ?>">
-							<?php echo $val['objectDetails_Energielabel_Energieklasse']; ?>
+						<span class="energy-label energy-label-<?php echo strtolower($val['objectDetails_Energieklasse']); ?>">
+							<?php echo $val['objectDetails_Energieklasse']; ?>
 						</span>
 					</p>
 
 					<?php } ?>
 				</p>
 
-				<p class="item-bold-title">
+				<p class="item-type">
+
+					<?php echo $val['objectDetails_Bestemming_Hoofdbestemming']; ?>
 
 				</p>
+
+				<table>
+
+					<tbody>
+
+						<?php
+
+						if (!empty($val['objectDetails_Lokatie_Liggingen'])) { 
+
+							$process = explode(',', $val['objectDetails_Lokatie_Liggingen']);
+
+							foreach ($process as $s_key => $s_val) {
+
+								$process[$s_key] = str_replace(['[', ']'], ['', ''], $s_val);
+
+								if ($process[$s_key] == 'Overig')
+									unset($process[$s_key]);
+							}
+
+							$process = implode(', ', $process);
+							
+						?>
+
+						<tr>
+							<td>Ligging:</td>
+							<td><?php echo $process; ?></td>
+						</tr>
+
+						<?php } ?>
+
+						<?php
+
+						if (!empty($val['objectDetails_Energieklasse'])) { 
+							
+						?>
+
+						<tr>
+							<td>Ligging:</td>
+							<td><?php echo $val['objectDetails_Energieklasse']; ?></td>
+						</tr>
+
+						<?php } ?>
+
+					</tbody>
+
+				</table>
 				
 			</div>
 		</div>
