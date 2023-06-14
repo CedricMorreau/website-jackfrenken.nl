@@ -1,4 +1,6 @@
 <div class="column-header">
+
+	<div class="content-wrapper">
 	
 	<div class="header-title-wrapper">
 		<div class="header-title">
@@ -58,5 +60,7 @@
 	</div>
 	
 	<?php } ?>
+
+			</div>
 
 </div>
