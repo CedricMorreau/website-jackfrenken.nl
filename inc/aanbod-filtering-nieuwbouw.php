@@ -1,6 +1,6 @@
 <div class="sidebar-filtering">
 
-	<h1 class="filter-head"><?php echo $totalRows; ?> nieuwbouwprojecten</h1>
+	<h1 class="filter-head"><?php echo $totalRows; ?> nieuwbouw woningen</h1>
 
 	<?php if ($noFilters != $MD5None) { ?>
 	<a class="remove-filter" href="<?php echo $template->getPermalink(1, 1); ?>">Filtering wissen <span class="remove-icon">&#x2715;</span></a>
