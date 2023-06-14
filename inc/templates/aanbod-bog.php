@@ -26,16 +26,6 @@ $image = (!is_null($val['mainImage'])) ? $dynamicRoot . 'og_media/bog_' . $val['
 				
 				<p class="item-subtitle">
 					<?php echo $priceText; ?>
-
-					<?php if (!empty($val['objectDetails_Energieklasse'])) { ?>
-
-					<p>Energielabel: 
-						<span class="energy-label energy-label-<?php echo strtolower($val['objectDetails_Energieklasse']); ?>">
-							<?php echo $val['objectDetails_Energieklasse']; ?>
-						</span>
-					</p>
-
-					<?php } ?>
 				</p>
 
 				<p class="item-type">
@@ -69,6 +59,17 @@ $image = (!is_null($val['mainImage'])) ? $dynamicRoot . 'og_media/bog_' . $val['
 						<tr>
 							<td>Ligging:</td>
 							<td><?php echo $process; ?></td>
+						</tr>
+
+						<?php } ?>
+
+						<?php if (!empty($val['objectDetails_Energieklasse'])) { ?>
+
+						<tr>
+							<td>Energielabel:</td>
+							<td><span class="energy-label energy-label-<?php echo strtolower($val['objectDetails_Energieklasse']); ?>">
+							<?php echo str_replace(['P', '_'], ['+', ''], $val['objectDetails_Energieklasse']); ?>
+							</span></td>
 						</tr>
 
 						<?php } ?>

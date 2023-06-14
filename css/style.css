@@ -7062,6 +7062,19 @@ header.headerAanbod {
   line-height: 1.4rem;
 }
 
+.energy-label.energy-label-a_pppp,
+.energy-label.energy-label-a_ppp,
+.energy-label.energy-label-a_p {
+  background-color: #009342;
+  color: white;
+}
+
+.energy-label.energy-label-a_pppp:after,
+.energy-label.energy-label-a_ppp:after,
+.energy-label.energy-label-a_p:after {
+  border-left-color: #009342;
+}
+
 .energy-label.energy-label-a {
   background-color: #009342;
   color: white;

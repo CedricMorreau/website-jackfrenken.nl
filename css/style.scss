@@ -318,6 +318,17 @@
 	text-transform: uppercase;
 	
 	line-height: 1.4rem;
+
+	&.energy-label-a_pppp,
+	&.energy-label-a_ppp,
+	&.energy-label-a_p {
+		background-color: #009342;
+		color: $white;
+		&:after {
+			border-left-color: #009342;
+		}		
+	}
+	
 	// A label
 	&.energy-label-a {
 		background-color: #009342;
