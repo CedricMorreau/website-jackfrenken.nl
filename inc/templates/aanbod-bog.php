@@ -73,19 +73,6 @@ $image = (!is_null($val['mainImage'])) ? $dynamicRoot . 'og_media/bog_' . $val['
 
 						<?php } ?>
 
-						<?php
-
-						if (!empty($val['objectDetails_Energieklasse'])) { 
-							
-						?>
-
-						<tr>
-							<td>Ligging:</td>
-							<td><?php echo $val['objectDetails_Energieklasse']; ?></td>
-						</tr>
-
-						<?php } ?>
-
 					</tbody>
 
 				</table>
