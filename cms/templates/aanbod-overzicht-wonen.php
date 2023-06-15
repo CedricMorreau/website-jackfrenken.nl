@@ -653,7 +653,7 @@ if ($filter['p'] == 1) {
 }
 else {
 
-	$currentResult = $currentResult - 2;
+	// $currentResult = $currentResult - 2;
 }
 
 if ($totalRows > 0 && $filter['viewType'] != 'map')
