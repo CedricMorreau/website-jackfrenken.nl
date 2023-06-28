@@ -200,7 +200,8 @@
 }
 
 .error {
-	border-color: $den-col;
+	border-color: $den-col !important;
+	color: $den-col !important;
 }
 
 #bedankt-melding {
