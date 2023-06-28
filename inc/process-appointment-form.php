@@ -16,10 +16,10 @@ if(!empty($_POST['first_name']) && !empty($_POST['last_name']) && !empty($_POST[
 	// $mail_ontvanger = 'sander@pixelplus.nl';
 	$mail_ontvanger = 'info@jackfrenken.nl';
 	
-	$mail_subject = 'Verduurzamen Jackfrenken.nl';
+	$mail_subject = 'Hypotheek-lead';
 
 	$placeholders = array('{{placeHolder_title}}', '{{placeHolder_content}}');
-	$output = array('Contactformulier', 'Onderstaand bericht is binnengekomen via de pagina \'Verduurzamen\' op Jackfrenken.nl.<br><br><b>Naam:</b> ' . $first_name . ' ' . $last_name . '<br><b>E-mailadres:</b> ' . $email . '<br><b>Telefoonnummer:</b> ' . $phone);
+	$output = array('Contactformulier', 'Onderstaand bericht is binnengekomen via Jackfrenken.nl.<br><br><b>Naam:</b> ' . $first_name . ' ' . $last_name . '<br><b>E-mailadres:</b> ' . $email . '<br><b>Telefoonnummer:</b> ' . $phone);
 	$output	= str_replace($placeholders, $output, $mail_template);
 
 	if ($test) {
