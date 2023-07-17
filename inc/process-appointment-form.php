@@ -14,7 +14,7 @@ if(!empty($_POST['first_name']) && !empty($_POST['last_name']) && !empty($_POST[
 	$mail_template = file_get_contents($_SERVER['DOCUMENT_ROOT'] . '/inc/mailtemplates/algemeen/mail_template.txt');
 
 	// $mail_ontvanger = 'sander@pixelplus.nl';
-	$mail_ontvanger = 'info@jackfrenken.nl';
+	$mail_ontvanger = 'financieeladvies@jackfrenken.nl';
 	
 	$mail_subject = 'Hypotheek-lead';
 
