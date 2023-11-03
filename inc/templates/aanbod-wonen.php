@@ -98,12 +98,16 @@ $image = (!is_null($val['mainImage'])) ? $dynamicRoot . 'og_media/wonen_' . $val
 			
 			<?php
 
+			$is_open_house = false;
+
 			if (!empty($val['object_Web_OpenHuis_Vanaf']) && !empty($val['object_Web_OpenHuis_Tot']) && $val['object_Web_OpenHuis_Vanaf'] != '0000-00-00 00:00:00' && $val['object_Web_OpenHuis_Tot'] != '0000-00-00 00:00:00') {
 
 				$toTimeFrom = strtotime($val['object_Web_OpenHuis_Vanaf']);
 				$toTimeTill = strtotime($val['object_Web_OpenHuis_Tot']);
 
 				if (time() < $toTimeTill) {
+
+					$is_open_house = true;
 
 					// Open huis!
 					$shownDate = translateDay(date('l. j F', $toTimeFrom), 'short');
@@ -112,20 +116,24 @@ $image = (!is_null($val['mainImage'])) ? $dynamicRoot . 'og_media/wonen_' . $val
 					echo '<div class="image-label status-openhouse"><span>Open Huis!</span> <i>' . $shownDate . ' - ' . $shownTime . ' uur</i></div>';
 				}
 			}
-			elseif (strtolower($val['objectDetails_StatusBeschikbaarheid_Status']) == 'verkocht' || strtolower($val['objectDetails_StatusBeschikbaarheid_Status']) == 'verhuurd' || strtolower($val['objectDetails_StatusBeschikbaarheid_Status']) == 'onder optie') {
 
-				echo '<div class="image-label status-sold">' . $val['objectDetails_StatusBeschikbaarheid_Status'] . '</div>';
-			}
-			elseif (strtolower($val['objectDetails_StatusBeschikbaarheid_Status']) == 'verkocht onder voorbehoud' || strtolower($val['objectDetails_StatusBeschikbaarheid_Status']) == 'verhuurd onder voorbehoud') {
+			if (!$is_open_house) {
 
-				echo '<div class="image-label status-soldsubject">' . $val['objectDetails_StatusBeschikbaarheid_Status'] . '</div>';
-			}
-			elseif (isset($val['ood_alternativeStatus']) && !empty($val['ood_alternativeStatus'])) {
+				if (strtolower($val['objectDetails_StatusBeschikbaarheid_Status']) == 'verkocht' || strtolower($val['objectDetails_StatusBeschikbaarheid_Status']) == 'verhuurd' || strtolower($val['objectDetails_StatusBeschikbaarheid_Status']) == 'onder optie') {
+
+					echo '<div class="image-label status-sold">' . $val['objectDetails_StatusBeschikbaarheid_Status'] . '</div>';
+				}
+				elseif (strtolower($val['objectDetails_StatusBeschikbaarheid_Status']) == 'verkocht onder voorbehoud' || strtolower($val['objectDetails_StatusBeschikbaarheid_Status']) == 'verhuurd onder voorbehoud') {
+
+					echo '<div class="image-label status-soldsubject">' . $val['objectDetails_StatusBeschikbaarheid_Status'] . '</div>';
+				}
+				elseif (isset($val['ood_alternativeStatus']) && !empty($val['ood_alternativeStatus'])) {
 
 			?>
 
 			<div class="image-label status-new"><?php echo $val['ood_alternativeStatus']; ?></div>
 
+				<?php } ?>
 			<?php } ?>
 			
 			<div class="hover-overlay" title="<?php echo $val['objectDetails_Adres_NL_Woonplaats']; ?> - <?php echo obj_generateAddress($val['objectDetails_Adres_NL_Straatnaam'], $val['objectDetails_Adres_NL_Huisnummer'], $val['objectDetails_Adres_NL_HuisnummerToevoeging']); ?>">
