@@ -307,7 +307,7 @@ $mediaList = $cms['database']->prepare("SELECT `id`, `object_ObjectTiaraID`, `be
 												FROM tbl_OG_nieuwbouw_bouwNummers
 												WHERE id_OG_nieuwbouw_projecten=?
 													AND id_OG_nieuwbouw_bouwTypes=?
-													AND lower(`Status_ObjectStatus`) NOT IN ('ingetrokken', 'verkocht', 'verhuurd')
+													AND lower(`Status_ObjectStatus`) NOT IN ('ingetrokken')
 													ORDER BY bouwNummer_Nummer ASC ";
 		
 										$fetchObjects = $cms['database']->prepare($sql, "ii", array($val['id'], $tVal['id']));
