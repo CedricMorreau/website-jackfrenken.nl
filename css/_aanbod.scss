@@ -485,6 +485,20 @@
 	}
 
 	/* Nieuwbouw overzicht */
+	.open-dagen-container {
+		background-color: $qua-col;
+		color: white;
+		padding: 1.5rem 2rem;
+		font-family: "Poppins", sans-serif;
+		font-size: 1.2rem;
+		line-height: 1.2rem;
+		margin-bottom: 1rem;
+
+		p {
+			font-weight: bold;
+		}
+	}
+
 	.counter {
 		float: left;
 		width: 100%;
