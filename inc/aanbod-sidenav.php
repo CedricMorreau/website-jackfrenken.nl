@@ -22,7 +22,22 @@
 
 <?php
 
-// 33, 35
+// Huurwoningen overzicht
+if ($template->getPageId() == 34) {
+
+?>
+	<div class="sidebar-widget">	
+		<h3>
+			<a href="/aanbod/huurwoningen/werkwijze-toewijzing-huurwoningen">Toewijzing van<br><strong>huurwoningen</strong></a>
+		</h3>
+		<p>
+			<a href="/aanbod/huurwoningen/werkwijze-toewijzing-huurwoningen">Lees meer over onze werkwijze voor de toewijzing ›</a>
+		</p>
+	</div>
+
+<?php
+
+}
 
 if ($template->getPageId() == 33 || $template->getPageId() == 35) {
 
