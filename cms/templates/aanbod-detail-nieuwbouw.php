@@ -509,11 +509,12 @@ $mediaList = $cms['database']->prepare("SELECT `id`, `object_ObjectTiaraID`, `be
 								</div>
 		
 								<h2>Contact</h2>
-	
+
 								<form action="#" class="standard flex-row flex-wrap">
 									<?php // FIXIT SB: Values van deze 3 hidden inputs dynamisch vullen ?>
-									<input type="hidden" name="object_plaatsnaam" value="<?php echo $val['objectDetails_Adres_NL_Woonplaats']; ?>">
-									<input type="hidden" name="object_adres" value="<?php echo obj_generateAddress($val['objectDetails_Adres_NL_Straatnaam'], $val['objectDetails_Adres_NL_Huisnummer'], $val['objectDetails_Adres_NL_HuisnummerToevoeging']); ?>">
+									<?php // Skill issue. ?>
+									<input type="hidden" name="object_plaatsnaam" value="<?php echo $val['project_ProjectDetails_Adres_Woonplaats']; ?>">
+									<input type="hidden" name="object_adres" value="<?php echo $val['project_ProjectDetails_Projectnaam']; ?>">
 									<input type="hidden" name="object_url" value="<?php echo 'https://www.jackfrenken.nl/' . $template->getPermalink(1) . '.html'; ?>">
 									
 									<fieldset class="flex-col size50">
