@@ -132,7 +132,7 @@ else {
 	$headImage = $dynamicRoot . '/img/aanbod_geen-afbeelding_tn01.svg';
 }
 
-$injectTitle = utf8_encode_compat($val['project_ProjectDetails_Projectnaam']) . ', ' . $val['project_ProjectDetails_Adres_Woonplaats'] . ' - ' . $priceText . ' | Jack Frenken - Makelaars en Adviseurs';
+$injectTitle = utf8_encode($val['project_ProjectDetails_Projectnaam']) . ', ' . $val['project_ProjectDetails_Adres_Woonplaats'] . ' - ' . $priceText . ' | Jack Frenken - Makelaars en Adviseurs';
 
 if (isset($_GET['searchHash'])) {
 
@@ -298,7 +298,7 @@ $mediaList = $cms['database']->prepare("SELECT `id`, `object_ObjectTiaraID`, `be
 										?>
 		
 									<header class="headerAanbod group">
-										<div class="floatLeft"><span class="city"><?php echo utf8_encode_compat($tVal['bouwType_BouwTypeDetails_Naam']); ?></span></div>
+										<div class="floatLeft"><span class="city"><?php echo utf8_encode($tVal['bouwType_BouwTypeDetails_Naam']); ?></span></div>
 										<?php
 										if (strtolower($val['project_ProjectDetails_Status_ObjectStatus']) != 'verkocht') {
 										?>
@@ -339,7 +339,7 @@ $mediaList = $cms['database']->prepare("SELECT `id`, `object_ObjectTiaraID`, `be
 									<div class="projectinfo object group" title="Stad - Projectnaam">
 										<span class="image">
 											<div>
-												<img src="<?php echo $headImage; ?>" alt="<?php echo $val['project_ProjectDetails_Adres_Woonplaats']; ?>, <?php echo utf8_encode_compat($val['project_ProjectDetails_Projectnaam']); ?> - <?php echo $tVal['bouwType_BouwTypeDetails_Naam']; ?>" title="<?php echo $val['project_ProjectDetails_Adres_Woonplaats']; ?>, <?php echo utf8_encode_compat($val['project_ProjectDetails_Projectnaam']); ?> - <?php echo $tVal['bouwType_BouwTypeDetails_Naam']; ?>">
+												<img src="<?php echo $headImage; ?>" alt="<?php echo $val['project_ProjectDetails_Adres_Woonplaats']; ?>, <?php echo utf8_encode($val['project_ProjectDetails_Projectnaam']); ?> - <?php echo $tVal['bouwType_BouwTypeDetails_Naam']; ?>" title="<?php echo $val['project_ProjectDetails_Adres_Woonplaats']; ?>, <?php echo utf8_encode($val['project_ProjectDetails_Projectnaam']); ?> - <?php echo $tVal['bouwType_BouwTypeDetails_Naam']; ?>">
 											</div>
 										</span>
 										<span class="info">
@@ -482,7 +482,7 @@ $mediaList = $cms['database']->prepare("SELECT `id`, `object_ObjectTiaraID`, `be
 							if ($val['crmLeverancier'] == 'realworks-api') {
 								echo nl2br($val['project_ProjectDetails_Presentatie_Aanbiedingstekst']);
 							} else {
-								echo utf8_encode_compat(nl2br(Core::fixEncoding($val['project_ProjectDetails_Presentatie_Aanbiedingstekst'])));
+								echo utf8_encode(nl2br(Core::fixEncoding($val['project_ProjectDetails_Presentatie_Aanbiedingstekst'])));
 							}
 
 							?>
