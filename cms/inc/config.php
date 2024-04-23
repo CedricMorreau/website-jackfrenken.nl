@@ -1,5 +1,13 @@
 <?php
 
+function utf8_encode_compat($input) {
+	return mb_convert_encoding($input, 'UTF-8', 'ISO-8859-1');
+}
+
+function utf8_decode_compat($input) {
+	return mb_convert_encoding($input, 'ISO-8859-1', 'UTF-8');
+}
+
 // Start session
 session_start();
 
