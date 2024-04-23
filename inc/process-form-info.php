@@ -2,8 +2,8 @@
 
 include($_SERVER['DOCUMENT_ROOT'] . "/cms/classes/pp_mailer.class.php");
 
-var_dump($_POST);
-die();
+//var_dump($_POST);
+//die();
 
 if(!empty($_POST['name']) && !empty($_POST['email']) && !empty($_POST['phone']) && !empty($_POST['message'])) {
 	
