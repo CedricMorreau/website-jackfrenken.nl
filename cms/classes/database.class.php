@@ -9,12 +9,13 @@ class Database {
     private $queryCount = 0;
     private $queries = array();
     private $debug = false;
+    private $previous_charset;
     
     public function connection($user, $password, $host) {
     
         // Attempts to connect to the database
         $this->link = new mysqli($host, $user, $password);
-        
+
         // Any error?
         // Below would not work in 5.2.9 & 5.3.0, so only execute if we do not have those versions
         if (!Core::comparePHPVer('5.2.9') && !Core::comparePHPVer('5.3.0')) {
@@ -39,6 +40,15 @@ class Database {
         
         $this->debug = true;
     
+    }
+
+    public function set_charset($charset) {
+        $this->previous_charset = $this->link->character_set_name();
+        $this->link->set_charset($charset);
+    }
+
+    public function restore_charset() {
+        $this->link->set_charset($this->previous_charset);
     }
     
     /**

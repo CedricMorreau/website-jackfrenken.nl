@@ -18,8 +18,11 @@ function translateDay($val, $type = 'default') {
 
 $moduleId = $template->getModuleId();
 
+// Temporarily set charset to utf8 because I hate everyone
+$cms['database']->set_charset('utf8');
 // See if object even exists
 $objectData = $cms['database']->prepare("SELECT * FROM `tbl_OG_nieuwbouw_bouwNummers` WHERE `id`=? AND (NOT `Status_ObjectStatus` IN ('Ingetrokken', 'gearchiveerd', 'verkocht', 'verhuurd'))", "i", array($moduleId));
+$cms['database']->restore_charset();
 
 if (count($objectData) == 0)
 	Core::redirect($template->findPermalink(40, 1));
