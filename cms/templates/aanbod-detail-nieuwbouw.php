@@ -241,6 +241,13 @@ $mediaList = $cms['database']->prepare("SELECT `id`, `object_ObjectTiaraID`, `be
 	
 						<div class="content-wrapper" data-tab="1">
 
+							<?php if ($val['id'] == 94) { ?>
+								<div class="open-dagen-container">
+									<p>Interesse? Kom naar één van de open huizen dagen</p>
+									<span>6, 13, 20 en 27 juni van 16:00 tot 17:00 uur</span>
+								</div>
+							<?php } ?>
+							
 							<div class="counter">
 							
 								Dit project bestaat uit <?php echo $val['aantal_bouwNummers'] . (($val['aantal_bouwNummers'] == 1) ? ' woning' : ' woningen'); ?> verdeeld over <?php echo $val['aantal_bouwTypes'] . (($val['aantal_bouwTypes'] > 0) ? ' typen' : ' type'); ?>.
