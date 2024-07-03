@@ -409,10 +409,10 @@ $mediaList = $cms['database']->prepare("SELECT `id`, `object_ObjectTiaraID`, `be
 		
 													if (!empty($oVal['Wonen_Woonhuis_SoortWoning']) && !is_null($oVal['Wonen_Woonhuis_SoortWoning'])) {
 		
-														echo '<li>' . ucfirst($oVal['Wonen_Woonhuis_SoortWoning']);
+														echo '<li>' . ucfirst(strtolower(str_replace('_', ' ', $oVal['Wonen_Woonhuis_SoortWoning'])));
 		
 														if (!empty($oVal['Wonen_Woonhuis_TypeWoning']) && !is_null($oVal['Wonen_Woonhuis_TypeWoning']))
-															echo ', ' . $oVal['Wonen_Woonhuis_TypeWoning'];
+															echo ', ' . strtolower(str_replace('_', ' ', $oVal['Wonen_Woonhuis_TypeWoning']));
 		
 														echo '</li>';
 													}
