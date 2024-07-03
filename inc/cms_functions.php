@@ -25,7 +25,7 @@ function obj_splitValues($value) {
 		// if ($subKey != 0)
 		// 	echo ', ';
 
-		$return[] = utf8_encode(str_replace(array('[', ']'), array('',''), $subVal));
+		$return[] = utf8_encode_compat(str_replace(array('[', ']'), array('',''), $subVal));
 	}
 
 	return ucfirst(implode(', ', $return));
@@ -36,7 +36,7 @@ function obj_generateAddress($street, $number, $add) {
 	$tempAddress = '';
 	
 	if (!empty($street))
-		$tempAddress .= utf8_encode($street);
+		$tempAddress .= utf8_encode_compat($street);
 		
 		if (!empty($number))
 			$tempAddress .= ' ' . $number;

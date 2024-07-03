@@ -70,14 +70,14 @@ class Vablid {
 			if (Vablid::cp('voornaam', $data['mod_lid_id'])) {
 				
 				if (!empty($data['mod_lid_voornaam']))
-					$fullName .= ' (' . utf8_encode($data['mod_lid_voornaam']) . ')';
+					$fullName .= ' (' . utf8_encode_compat($data['mod_lid_voornaam']) . ')';
 			}
 
 			if (!empty($data['mod_lid_tussenvoegsels']))
-				$fullName .= ' ' . utf8_encode($data['mod_lid_tussenvoegsels']);
+				$fullName .= ' ' . utf8_encode_compat($data['mod_lid_tussenvoegsels']);
 
 			if (!empty($data['mod_lid_achternaam']))
-				$fullName .= ' ' . utf8_encode($data['mod_lid_achternaam']);
+				$fullName .= ' ' . utf8_encode_compat($data['mod_lid_achternaam']);
 
 			if (Vablid::cp('certificeringen', $data['mod_lid_id']) && !$noTitles) {
 
