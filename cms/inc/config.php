@@ -6,15 +6,6 @@ session_start();
 // OB
 ob_start();
 
-// UTF-8 compatibility functions
-function utf8_encode_compat($string) {
-	return mb_convert_encoding($string, 'UTF-8', 'ISO-8859-1');
-}
-
-function utf8_decode_compat($string) {
-	return mb_convert_encoding($string, 'ISO-8859-1', 'UTF-8');
-}
-
 // FIXIT SB: Implementeren? Nog uitzoeken.
 // include("cms/classes/bad-behavior/bad-behavior-generic.php");
 

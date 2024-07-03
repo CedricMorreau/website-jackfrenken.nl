@@ -200,7 +200,7 @@ $ogType = 'bog';
 						<?php if ($val['crmLeverancier'] == 'realworks-api') { ?>
 							<?php echo nl2br($val['objectDetails_Aanbiedingstekst']); ?>
 						<?php } else { ?>
-							<?php echo utf8_encode_compat(nl2br(Core::fixEncoding($val['objectDetails_Aanbiedingstekst']))); ?>
+							<?php echo utf8_encode(nl2br(Core::fixEncoding($val['objectDetails_Aanbiedingstekst']))); ?>
 						<?php } ?>
 					</div>
 

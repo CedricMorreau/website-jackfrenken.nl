@@ -221,7 +221,7 @@ $mediaList = $cms['database']->prepare("SELECT `id`, `object_ObjectTiaraID`, `be
 				
 					<?php include($documentRoot . "inc/widget.php"); ?>
 
-					<a href="<?php echo $hrefProject; ?>" class="back-link">&xlarr; Terug naar <?php echo utf8_encode_compat($objectData[0]['project_ProjectDetails_Projectnaam']); ?></a>
+					<a href="<?php echo $hrefProject; ?>" class="back-link">&xlarr; Terug naar <?php echo utf8_encode($objectData[0]['project_ProjectDetails_Projectnaam']); ?></a>
 
 				</div>
 
@@ -234,7 +234,7 @@ $mediaList = $cms['database']->prepare("SELECT `id`, `object_ObjectTiaraID`, `be
 						<?php if ($val['crmLeverancier'] == 'realworks-api') { ?>
 							<?php echo nl2br($val['Aanbiedingstekst']); ?>
 						<?php } else { ?>
-							<?php echo utf8_encode_compat(nl2br(Core::fixEncoding($val['Aanbiedingstekst']))); ?>
+							<?php echo utf8_encode(nl2br(Core::fixEncoding($val['Aanbiedingstekst']))); ?>
 						<?php } ?>
 					</div>
 
