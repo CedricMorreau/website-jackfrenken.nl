@@ -51,7 +51,7 @@ else {
 	</a>
 </div>
 
-<?php if ($val['objectDetails_Koop_Koopprijs'] > 1) { ?>
+<?php if (isset($val['objectDetails_Koop_Koopprijs']) && $val['objectDetails_Koop_Koopprijs'] > 1) { ?>
 
 <div class="sidebar-widget ghost-white">
 	<a href="<?php echo $template->findPermalink(96, 1); ?>">
