@@ -99,7 +99,7 @@ class Core {
 				
 			case 'permaLink':
 				
-				$text = utf8_encode($input);
+				$text = utf8_encode_compat($input);
 				$text = preg_replace('/[^\\pL0-9]+/u', '-', $text);
 				$text = trim($text, "-");
 				$text = iconv("utf-8", "us-ascii//TRANSLIT", $text);
