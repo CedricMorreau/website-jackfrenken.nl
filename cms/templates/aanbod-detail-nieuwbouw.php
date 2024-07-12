@@ -240,13 +240,6 @@ $mediaList = $cms['database']->prepare("SELECT `id`, `object_ObjectTiaraID`, `be
 						<a id="content" class="anchor"></a>
 	
 						<div class="content-wrapper" data-tab="1">
-
-							<?php if ($val['id'] == 98) { ?>
-								<div class="open-dagen-container">
-									<p>Interesse? Kom naar de open huizen dag op 11 juli van 15:30 tot 17:30 uur</p>
-									<span>Let op: Dit geldt niet voor de gezinswoningen</span>
-								</div>
-							<?php } ?>
 							
 							<div class="counter">
 							
